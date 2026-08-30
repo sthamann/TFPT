@@ -323,6 +323,27 @@ Unsigned Chebyshev/Mertens majorants exceed 1.
 Selected + core-42 stay pointwise living on the census
 (`q† < 1`); the mean bound is open.  Census unchanged
 at 5.  NO RH CLAIM.
+
+## r443 census (selected delta floor)
+
+One lemma, not proved: `liminf δ_k > 0` on Selected
+(`δ = 1-q† = -sch`).  Chart identities are SATZ;
+a floor is preferred only on the r421 k=5..9 slice
+(`δ_∞ ≈ 0.027`).  kz16 sits below.  k=10 locked.
+Census unchanged at 5.  NO RH CLAIM.
+
+## r444 census (signed border mean)
+
+Finite identities, no new sorry: the triple sum for
+`q†` and the pole/regular split of `(I-C)^{-1}`.
+The living mean is *not* a pole-weighted prime sum
+(pole share `≤ 0.003` on Selected).  The diagonal
+overflows from `k=7`; signed off-diagonal cancellation
+is load-bearing.  Dead χ die by a pole overshoot.
+The mean bound is circular: regular off-diagonal
+cancellation against a window-dependent OP kernel
+(second circularity verdict after r399).  Census
+unchanged at 5.  NO RH CLAIM.
 -/
 
 end RH

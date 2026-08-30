@@ -6439,6 +6439,46 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 are
 parallel and not dropped.
 
+**Selected delta floor (r443,
+PRIME.RDAGGER.DELTA\_FLOOR\_SELECTED.01).**
+Sealed probe
+`experiments/tfpt-discovery/delta_floor_probe.py`
+(17/17 full, 17/17 smoke, SPEC\_SHA `80a676a7c804bdc8`)
+plus `rh/problem/delta_floor.tex` (+ PDF +
+`verify_delta_floor.py`, 6/6, `DELTA FLOOR VERIFIED`).
+**Ausgang REDUZIERT / CHART\_EXACT / SLICE\_FLOOR\_PREFERRED / FULL\_SEQUENCE\_UNSETTLED / KZ16\_SELECTED\_SPECIFIC / DEEP\_LOCKED / COFINAL\_OPEN.**
+Chart SATZ: $\delta=R+\tau$-correction.
+Floor preferred only on the r421 $k=5..9$ slice
+($\delta_{\infty}=+0.0267$, EXT band $[0.0264,0.0452]$).
+Full selected $k=3..9$ prefers $M_3$ (the $k=5$ bump).
+$N$-abscissa killed (r427).  $k_z16$ sits at $0.00151\ll 0.027$.
+$k=8/10+$ not rebuilt (CG never reached).  Liminf OPEN.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442
+are parallel and not dropped.
+
+**Signed border mean (r444,
+PRIME.RDAGGER.SIGNED\_BORDER\_MEAN.01).**
+Sealed probe
+`experiments/tfpt-discovery/signed_border_mean_probe.py`
+(21/21 full, 21/21 smoke, SPEC\_SHA `16ac676cfc571660`)
+plus `rh/problem/signed_border_mean.tex` (+ PDF +
+`verify_signed_border.py`, 8/8, `SIGNED BORDER MEAN VERIFIED`).
+**Ausgang ZIRKULAER / TRIPLE\_SUM\_EXACT / POLE\_NOT\_CARRIER / DIAGONAL\_OVERFLOWS / OFFDIAG\_LOADBEARING / DEAD\_CHI\_POLE\_OVERSHOOT.**
+Triple sum SATZ.  Pole is not the living-mean carrier
+(share $\le 0.003$).  Diagonal overflows from $k=7$
+($40.8$ at $k=9$); signed off-diagonal is load-bearing.
+Dead $\chi$ die by a pole overshoot.  The mean bound is
+circular: regular off-diagonal cancellation against a
+window-dependent OP kernel (second circularity after r399).
+$k=8$ not rebuilt.  No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6771,6 +6811,14 @@ rh/
 │   │                     unsigned majorant REFUTED;
 │   │                     Selected living; mean OPEN.
 │   │                     REDUZIERT.  No RH claim
+│   ├── delta_floor.tex(+pdf) — r443: chart SATZ;
+│   │                     slice floor preferred;
+│   │                     kz16 below; liminf OPEN.
+│   │                     REDUZIERT.  No RH claim
+│   ├── signed_border_mean.tex(+pdf) — r444: triple-sum
+│   │                     SATZ; pole not carrier; diagonal
+│   │                     overflows; bound ZIRKULAER.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6945,6 +6993,12 @@ rh/
 │   └── verify_block_mean.py — machine check of
 │                         block_mean.tex (8/8,
 │                         BLOCK MEAN VERIFIED)
+│   └── verify_delta_floor.py — machine check of
+│                         delta_floor.tex (6/6,
+│                         DELTA FLOOR VERIFIED)
+│   └── verify_signed_border.py — machine check of
+│                         signed_border_mean.tex (8/8,
+│                         SIGNED BORDER MEAN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7302,7 +7356,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r442 from
+2. **Sealed probes** — the campaign probes r250–r444 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7706,6 +7760,19 @@ touch `experiments/next.txt`.  The Lean landing site
 proved (r430); this round does not add Lean.  Suite
 surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r443 coexistence.** Round 443 (`delta_floor_probe.py`)
+is additive on the r421/r442 floor lane (`\delta=1-q^{\dagger}`
+as the reserve floor in the last-pivot coordinate).
+It does not touch `experiments/next.txt` or add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r444 coexistence.** Round 444 (`signed_border_mean_probe.py`)
+is additive on the reviewer-R439 signed-mean lane after r442
+(triple sum; pole not carrier; circularity gate).  It does
+not touch `experiments/next.txt`.  The Lean landing site
+`exists_index_zero_of_block_mean_lt_one` is already proved
+(r430); this round does not add Lean.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

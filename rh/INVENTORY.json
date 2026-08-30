@@ -3356,6 +3356,66 @@
       "bytes": 225752
     },
     {
+      "path": "rh/problem/delta_floor.tex",
+      "role": "problem_statement",
+      "round": "r443 companion",
+      "ledger_ids": [],
+      "status": "lemma-first selected delta floor (round 443): chart SATZ; floor preferred on k=5..9 slice; full sequence unsettled; kz16 below.  REDUZIERT.  NO RH claim",
+      "pin": true,
+      "sha256": "cdd84bb25b787dea3830a09dd062af074456763bebf8d04ba995c3df8ec82774",
+      "bytes": 5924
+    },
+    {
+      "path": "rh/problem/verify_delta_floor.py",
+      "role": "problem_check",
+      "round": "r443 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in delta_floor.tex: standalone (Q P1/VAC charts, frozen slice AIC) plus construction pins (w9 chart, kz16 below, dead chi + k=10 lock).  6/6 gates, final line DELTA FLOOR VERIFIED",
+      "pin": true,
+      "sha256": "a381e175c03e6b1267f9883a2be9dd86dcb2b5d3ee72bd17a7ea9a2d827847c6",
+      "bytes": 3590
+    },
+    {
+      "path": "rh/problem/delta_floor.pdf",
+      "role": "problem_statement",
+      "round": "r443 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of delta_floor.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "14a3d7ba595657cba7903762382a98f049a21bddb32e45be6dd8f4ed46a912ef",
+      "bytes": 192575
+    },
+    {
+      "path": "rh/problem/signed_border_mean.tex",
+      "role": "problem_statement",
+      "round": "r444 companion",
+      "ledger_ids": [],
+      "status": "lemma-first signed border mean (round 444): triple-sum SATZ; pole not the carrier; diagonal overflows; off-diagonal load-bearing; bound ZIRKULAER (second circularity after r399).  NO RH claim",
+      "pin": true,
+      "sha256": "d73ecc22342530acf05b8f220229189ae7ab7c6566c096be4fa9f76f558733b2",
+      "bytes": 11299
+    },
+    {
+      "path": "rh/problem/verify_signed_border.py",
+      "role": "problem_check",
+      "round": "r444 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in signed_border_mean.tex: standalone (Q triple sum, pole split, diag not whole) plus construction pins (w9 identity+split, selected k=3..5, dead/live chi).  8/8 gates, final line SIGNED BORDER MEAN VERIFIED",
+      "pin": true,
+      "sha256": "f9f6e4374b6d5bcaf7b4be4fdcb4dbc1279f6519f0cb3dfab0dab9ee2a6711c2",
+      "bytes": 4158
+    },
+    {
+      "path": "rh/problem/signed_border_mean.pdf",
+      "role": "problem_statement",
+      "round": "r444 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of signed_border_mean.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "09a528c20420509fb7143fe0929dd608c058a1319742cd373ee5df0e752f5fb0",
+      "bytes": 242953
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3530,8 +3590,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "e0a45a1ae8ebc8ddf3dde559ef4df2b20edc6a1429b3d1707fb1f9c0b95461cf",
-      "bytes": 5501380
+      "sha256": "43f8cd0ac73a64c4e0bb7745a65d361f73dd6e9382e4900b793d3dd5cd2e91a0",
+      "bytes": 5505655
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4192,6 +4252,26 @@
       "pin": true,
       "sha256": "bd9bcf7f53cb4f24cb3ce48eee4bce0ef5f998e448473b13604be9d758bd5922",
       "bytes": 18654
+    },
+    {
+      "path": "experiments/tfpt-discovery/delta_floor_probe.py",
+      "role": "sealed_probe",
+      "round": "r443",
+      "ledger_ids": [],
+      "status": "selected delta floor (round 443, PRIME.RDAGGER.DELTA_FLOOR_SELECTED.01, r421 floor in the r442/r433 coordinate; experiments-side, NO ledger row): 17/17 full / 17/17 smoke; SPEC_SHA 80a676a7c804bdc8; CHART SATZ delta = R + tau-correction (Q P1 sch=-2/3 VAC -7/6; selected 6/6 residual 0).  k=6,7 VAC rest P1; tau^2 -> 0 so delta tracks R.  AIC k=5..9 no k8: M1 delta_inf=+0.02670 DeltaAIC 6.0 (R_inf=+0.02911; with k=8 pin 0.02982 r421 replay).  Full k=3..9 prefers M3 (k=5 bump).  vs N winner M2 (r427 illegal).  EXT-6 delta [0.02636, 0.04519].  kz16 delta=0.00151 << 0.027 (R<0).  Dead CHI3-15 delta=-0.023.  k=8/10+ not rebuilt (k=10 border_chain timeout 20s; CG never reached).  First measured in /tmp (r443_cal.py, r443_cal2.py) then sealed.  Full wall 30.7 s.  AUSGANG REDUZIERT / CHART_EXACT / SLICE_FLOOR_PREFERRED / FULL_SEQUENCE_UNSETTLED / KZ16_SELECTED_SPECIFIC / DEEP_LOCKED / COFINAL_OPEN.  Companion rh/problem/delta_floor.tex + verify_delta_floor.py 6/6 DELTA FLOOR VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "a22a5f3f280563c769c27729918a472db4ceb3b96aa66483b9bb9114ee66e156",
+      "bytes": 15218
+    },
+    {
+      "path": "experiments/tfpt-discovery/signed_border_mean_probe.py",
+      "role": "sealed_probe",
+      "round": "r444",
+      "ledger_ids": [],
+      "status": "signed border mean (round 444, PRIME.RDAGGER.SIGNED_BORDER_MEAN.01, last analytic object of the RH path after r442; experiments-side, NO ledger row): 21/21 full / 21/21 smoke; SPEC_SHA 16ac676cfc571660; TRIPLE SUM SATZ q^dagger = sum_{a,a'} (sigma_a sigma_a'/Bw) <phi(t_a),(I-C)^{-1} phi(t_a')> (Q 9=5+4; w9 recon 1.4e-16).  POLE/REG SATZ (Q 10/3=2+4/3; selected residual 1e-12).  POLE_NOT_CARRIER: selected pole share <= 0.0031, mean q_pole=8.6e-4; q_reg IS q (0.928->0.962); near-1 cluster k=9 n=65 share 0.008.  DIAGONAL_OVERFLOWS from k=7 (q_diag 2.27 / 40.78; mean 7.629>1); q_off load-bearing (-1.33 / -39.82).  corr(K_off, cos dlog)=0.026.  DEAD_CHI 6/6 pole overshoot (q_reg<1, q_pole>1-q_reg); drop-pole mutant false life.  Unsigned 38.49 / 2.10 / 87.1 r442 regression.  Bound inventory: diag/CS/MVT/Gallagher unconditional fail; pole-sum reduction REFUTED; missing signed strength is regular off-diagonal cancellation matching q_diag growth against a window-dependent OP kernel (not k(log n/n')) -- ZIRKULAER, second verdict after r399.  First measured in /tmp (r444_cal.py, r444_cal2.py) then sealed (disclosed).  Full wall 4.5 s.  Builder fallback NOT taken.  AUSGANG ZIRKULAER / TRIPLE_SUM_EXACT / POLE_NOT_CARRIER / DIAGONAL_OVERFLOWS / OFFDIAG_LOADBEARING / DEAD_CHI_POLE_OVERSHOOT.  Companion rh/problem/signed_border_mean.tex + verify_signed_border.py 8/8 SIGNED BORDER MEAN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "3cc782b0fed7a89957d19d8199684771d9ce36c332459022a85f8aa4d6186e25",
+      "bytes": 25160
     }
   ]
 }

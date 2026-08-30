@@ -1907,6 +1907,61 @@ _R442_STATUS = (
     "NO RH claim"
 )
 
+_R443_STATUS = (
+    "selected delta floor "
+    "(round 443, PRIME.RDAGGER.DELTA_FLOOR_SELECTED.01, "
+    "r421 floor in the r442/r433 coordinate; experiments-side, "
+    "NO ledger row): 17/17 full / 17/17 smoke; SPEC_SHA "
+    "80a676a7c804bdc8; CHART SATZ delta = R + tau-correction "
+    "(Q P1 sch=-2/3 VAC -7/6; selected 6/6 residual 0).  "
+    "k=6,7 VAC rest P1; tau^2 -> 0 so delta tracks R.  "
+    "AIC k=5..9 no k8: M1 delta_inf=+0.02670 DeltaAIC 6.0 "
+    "(R_inf=+0.02911; with k=8 pin 0.02982 r421 replay).  "
+    "Full k=3..9 prefers M3 (k=5 bump).  vs N winner M2 "
+    "(r427 illegal).  EXT-6 delta [0.02636, 0.04519].  "
+    "kz16 delta=0.00151 << 0.027 (R<0).  Dead CHI3-15 "
+    "delta=-0.023.  k=8/10+ not rebuilt (k=10 border_chain "
+    "timeout 20s; CG never reached).  First measured in "
+    "/tmp (r443_cal.py, r443_cal2.py) then sealed.  Full "
+    "wall 30.7 s.  AUSGANG REDUZIERT / CHART_EXACT / "
+    "SLICE_FLOOR_PREFERRED / FULL_SEQUENCE_UNSETTLED / "
+    "KZ16_SELECTED_SPECIFIC / DEEP_LOCKED / COFINAL_OPEN.  "
+    "Companion rh/problem/delta_floor.tex + "
+    "verify_delta_floor.py 6/6 DELTA FLOOR VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+_R444_STATUS = (
+    "signed border mean "
+    "(round 444, PRIME.RDAGGER.SIGNED_BORDER_MEAN.01, "
+    "last analytic object of the RH path after r442; "
+    "experiments-side, NO ledger row): "
+    "21/21 full / 21/21 smoke; SPEC_SHA 16ac676cfc571660; "
+    "TRIPLE SUM SATZ q^dagger = sum_{a,a'} (sigma_a sigma_a'/Bw) "
+    "<phi(t_a),(I-C)^{-1} phi(t_a')> (Q 9=5+4; w9 recon 1.4e-16).  "
+    "POLE/REG SATZ (Q 10/3=2+4/3; selected residual 1e-12).  "
+    "POLE_NOT_CARRIER: selected pole share <= 0.0031, mean "
+    "q_pole=8.6e-4; q_reg IS q (0.928->0.962); near-1 cluster "
+    "k=9 n=65 share 0.008.  DIAGONAL_OVERFLOWS from k=7 "
+    "(q_diag 2.27 / 40.78; mean 7.629>1); q_off load-bearing "
+    "(-1.33 / -39.82).  corr(K_off, cos dlog)=0.026.  "
+    "DEAD_CHI 6/6 pole overshoot (q_reg<1, q_pole>1-q_reg); "
+    "drop-pole mutant false life.  Unsigned 38.49 / 2.10 / 87.1 "
+    "r442 regression.  Bound inventory: diag/CS/MVT/Gallagher "
+    "unconditional fail; pole-sum reduction REFUTED; missing "
+    "signed strength is regular off-diagonal cancellation "
+    "matching q_diag growth against a window-dependent OP "
+    "kernel (not k(log n/n')) -- ZIRKULAER, second verdict "
+    "after r399.  First measured in /tmp (r444_cal.py, "
+    "r444_cal2.py) then sealed (disclosed).  Full wall 4.5 s.  "
+    "Builder fallback NOT taken.  AUSGANG ZIRKULAER / "
+    "TRIPLE_SUM_EXACT / POLE_NOT_CARRIER / DIAGONAL_OVERFLOWS / "
+    "OFFDIAG_LOADBEARING / DEAD_CHI_POLE_OVERSHOOT.  Companion "
+    "rh/problem/signed_border_mean.tex + "
+    "verify_signed_border.py 8/8 SIGNED BORDER MEAN VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
@@ -5051,6 +5106,49 @@ ENTRIES = [
      [],
      "compiled PDF of block_mean.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/delta_floor.tex", "problem_statement",
+     "r443 companion",
+     [],
+     "lemma-first selected delta floor (round 443): "
+     "chart SATZ; floor preferred on k=5..9 slice; "
+     "full sequence unsettled; kz16 below.  REDUZIERT.  "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_delta_floor.py", "problem_check",
+     "r443 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "delta_floor.tex: standalone (Q P1/VAC charts, "
+     "frozen slice AIC) plus construction pins (w9 "
+     "chart, kz16 below, dead chi + k=10 lock).  "
+     "6/6 gates, final line DELTA FLOOR VERIFIED", True),
+    ("rh/problem/delta_floor.pdf", "problem_statement",
+     "r443 companion",
+     [],
+     "compiled PDF of delta_floor.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/signed_border_mean.tex", "problem_statement",
+     "r444 companion",
+     [],
+     "lemma-first signed border mean (round 444): "
+     "triple-sum SATZ; pole not the carrier; diagonal "
+     "overflows; off-diagonal load-bearing; bound "
+     "ZIRKULAER (second circularity after r399).  "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_signed_border.py", "problem_check",
+     "r444 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "signed_border_mean.tex: standalone (Q triple sum, "
+     "pole split, diag not whole) plus construction pins "
+     "(w9 identity+split, selected k=3..5, dead/live chi).  "
+     "8/8 gates, final line SIGNED BORDER MEAN VERIFIED", True),
+    ("rh/problem/signed_border_mean.pdf", "problem_statement",
+     "r444 companion",
+     [],
+     "compiled PDF of signed_border_mean.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -5446,6 +5544,16 @@ ENTRIES = [
      "r442",
      [],
      _R442_STATUS,
+     True),
+    (f"{EXP}/delta_floor_probe.py", "sealed_probe",
+     "r443",
+     [],
+     _R443_STATUS,
+     True),
+    (f"{EXP}/signed_border_mean_probe.py", "sealed_probe",
+     "r444",
+     [],
+     _R444_STATUS,
      True),
 ]
 

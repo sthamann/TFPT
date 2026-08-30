@@ -960,6 +960,18 @@ site above is the only Lean object this round consumes.
 The frequency bound is open.  No new `sorry`; census
 stays 5.
 
+**r443 selected delta floor (no new Lean).**  The
+chart `δ = R + τ-correction` is machine-checked in
+`delta_floor_probe.py` / `delta_floor.tex`.  The
+liminf itself is open (slice census).  No new
+`sorry`; census stays 5.
+
+**r444 signed border mean (no new Lean).**  The
+triple sum and pole/regular split are machine-checked
+in `signed_border_mean_probe.py` / `signed_border_mean.tex`.
+The mean bound is circular (named missing signed
+strength).  No new `sorry`; census stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through
