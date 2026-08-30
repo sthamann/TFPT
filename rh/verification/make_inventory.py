@@ -1608,6 +1608,31 @@ _R429_STATUS = (
 )
 
 
+_R431_STATUS = (
+    "source Potapov factor "
+    "(round 431, PRIME.RDAGGER.SOURCE_POTAPOV_FACTOR.01, "
+    "reviewer discovery 1 of 2 after DCCXCVII; experiments-side, "
+    "NO ledger row): 17/17 full / 17/17 smoke; SPEC_SHA "
+    "64eabb7c2448dd48; unipotent Redheffer product of "
+    "point-mass 2x2 factors equals the Cauchy m-function of "
+    "X EXACT over Q (z=7/3 gives -7471/22950); Cauchy-pi "
+    "identity for Lagrange S0 at kdim=0 EXACT; Gate 3 "
+    "REFUTED: Pick(product) is PD (kappa=0) while "
+    "I-T0*T0 has nneg=1 on the kdim=0 toy (D11=-1744/2025) "
+    "and on w9/kz15/kz18 (||T||=1.08014/1.10672/1.24966).  "
+    "Source-order growing-Y Uvarov has 0 negative pivots "
+    "(min 3.25e-7); lag-local fold(c^P_p) nneg 18/19/15 "
+    "for p=2/3/5 -- NOT simpler (stop rule 3).  PERM 20 / "
+    "JIT 19 / SCR 21; twin nneg=1 bit-near.  First measured "
+    "in /tmp (r431_cal.py, r431_cal2.py, r431_cal3.py) then "
+    "sealed (disclosed).  Full wall 0.2 s.  AUSGANG "
+    "SOURCE_FACTOR_NOT_FOUND.  Companion "
+    "rh/problem/source_potapov.tex + "
+    "verify_source_potapov.py 7/7 SOURCE POTAPOV VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
 _R433_STATUS = (
     "edge as Redheffer / Schur step "
     "(round 433, PRIME.RDAGGER.EDGE_REDHEFFER_COMPLETION.01, "
@@ -4548,6 +4573,31 @@ ENTRIES = [
      [],
      "compiled PDF of zloc_head.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/source_potapov.tex", "problem_statement",
+     "r431 companion",
+     [],
+     "lemma-first source Potapov factorisation after "
+     "DCCXCVII (round 431): unipotent Redheffer product "
+     "equals Cauchy m_X SATZ; Cauchy-pi identity for "
+     "Lagrange S0 SATZ; Pick(product) congruent to "
+     "I-T0*T0 REFUTED (kappa 0 vs 1).  "
+     "SOURCE_FACTOR_NOT_FOUND.  Finite identities plus "
+     "a named refutation; NO RH claim",
+     True),
+    ("rh/problem/verify_source_potapov.py", "problem_check",
+     "r431 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "source_potapov.tex: standalone (Redheffer=Cauchy, "
+     "Cauchy-pi, Gate 3 fail, constructor audit) plus "
+     "construction pins (w9/kz15/kz18 Pick mismatch, "
+     "source-order Uvarov, permute/scramble/twin).  "
+     "7/7 gates, final line SOURCE POTAPOV VERIFIED", True),
+    ("rh/problem/source_potapov.pdf", "problem_statement",
+     "r431 companion",
+     [],
+     "compiled PDF of source_potapov.tex "
+     "(recompiled artefact, registered unpinned)", False),
     ("rh/problem/edge_redheffer.tex", "problem_statement",
      "r433 companion",
      [],
@@ -4917,6 +4967,11 @@ ENTRIES = [
      "r429",
      [],
      _R429_STATUS,
+     True),
+    (f"{EXP}/source_potapov_probe.py", "sealed_probe",
+     "r431",
+     [],
+     _R431_STATUS,
      True),
     (f"{EXP}/edge_redheffer_probe.py", "sealed_probe",
      "r433",

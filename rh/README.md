@@ -6178,6 +6178,38 @@ New Lean mincut: named Prop
 r431/r433 are the parallel discovery lanes; this round does
 not touch `experiments/next.txt`.
 
+**Source Potapov factor (r431,
+PRIME.RDAGGER.SOURCE\_POTAPOV\_FACTOR.01, reviewer
+discovery 1 of 2).**  Sealed probe
+`experiments/tfpt-discovery/source_potapov_probe.py`
+(17/17 full, 17/17 smoke, SPEC\_SHA `64eabb7c2448dd48`)
+plus `rh/problem/source_potapov.tex` (+ PDF +
+`verify_source_potapov.py`, 7/7, `SOURCE POTAPOV VERIFIED`).
+**Ausgang SOURCE\_FACTOR\_NOT\_FOUND.**
+The unipotent Redheffer product of point-mass $2\times 2$
+factors equals the Cauchy $m$-function of $X$ (exact over
+$\mathbb{Q}$; $z=7/3$ gives $-7471/22950$).
+Lagrange $S_0$ at kernel dimension $0$ is the Cauchy--$\pi$
+kernel of the $\pi_Y(X)^2$-dressed $X$-measure (exact).
+Gate 3 fails: that Pick is PD ($\kappa=0$) while
+$I-\mathfrak{T}_0^*\mathfrak{T}_0$ has one negative square
+on the $k_{\mathrm{dim}}=0$ toy ($D_{11}=-1744/2025$) and on
+$w_9$ / $k_z=15$ / $k_z=18$ ($\|\mathfrak{T}_0\|=1.08014$,
+$1.10672$, $1.24966$).
+Source-order growing-$Y$ Uvarov has $0$ negative pivots
+(min $3.25\cdot 10^{-7}$); lag-local $\mathrm{fold}(c^P_p)$
+has $\mathrm{ind}_-=18/19/15$ for $p=2,3,5$ --- not simpler
+(stop rule 3).  $\Lambda$-permute / jitter / scramble send
+target $\mathrm{ind}_-$ to $20/19/21$; the Euler product
+stays $\kappa=0$.  Twin keeps $\mathrm{ind}_-=1$.
+R432 (Krein--Langer index one) is blocked (contract:
+only if `FACTOR_EXACT`).
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.
+Coexistence: r374--r430 and r433 are parallel lemma-first
+/ Lean / edge-Redheffer lanes; this round is additive.
+
 **Edge as Redheffer step (r433,
 PRIME.RDAGGER.EDGE\_REDHEFFER\_COMPLETION.01).**  Sealed
 probe
@@ -6517,6 +6549,10 @@ rh/
 │   ├── top_mode_edge.tex(+pdf) — r415: chart identity
 │   │                     -sch=beta-alpha SATZ; v_top
 │   │                     is not the bulk defect.  No RH claim
+│   ├── source_potapov.tex(+pdf) — r431: source Potapov
+│   │                     factor; Redheffer = Cauchy SATZ;
+│   │                     Pick ≅ I-T*T REFUTED.
+│   │                     SOURCE_FACTOR_NOT_FOUND.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6664,6 +6700,9 @@ rh/
 │   └── verify_zloc_head.py — machine check of
 │                         zloc_head.tex (6/6,
 │                         ZLOC HEAD VERIFIED)
+│   └── verify_source_potapov.py — machine check of
+│                         source_potapov.tex (7/7,
+│                         SOURCE POTAPOV VERIFIED)
 │   └── verify_edge_redheffer.py — machine check of
 │                         edge_redheffer.tex (8/8,
 │                         EDGE REDHEFFER VERIFIED)
@@ -7343,6 +7382,11 @@ Prop `selected_augDualResolvent_gt_half` degraded to the
 stronger alternative.  Density corollary and mean-value
 trick **PROVED**.  Zero new `sorry`; census **stays 5**.
 NO RH CLAIM.
+**r431 coexistence.** Round 431 (`source_potapov.tex`) is
+additive on the reviewer Potapov discovery lane after
+DCCXCVII; it does not touch `rh/lean/`. Suite surface of
+this round: integrity + probes (`run_rh.py --fast --skip-lean`).
+Ausgang `SOURCE_FACTOR_NOT_FOUND`.  NO RH CLAIM.
 **r433 coexistence.** Round 433 (`edge_redheffer_probe.py`)
 is additive on the $R^{\dagger}$ Potapov lane after r362/r369
 and r429 (reviewer DCCXCVII Teil D: the border as an

@@ -209,6 +209,7 @@ PROBES = [
     ("r427", "campaign_audit_probe.py"),
     ("r428", "qn_reopened_probe.py"),
     ("r429", "zloc_head_probe.py"),
+    ("r431", "source_potapov_probe.py"),
     ("r433", "edge_redheffer_probe.py"),
 ]
 

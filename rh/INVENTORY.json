@@ -3056,6 +3056,36 @@
       "bytes": 211540
     },
     {
+      "path": "rh/problem/source_potapov.tex",
+      "role": "problem_statement",
+      "round": "r431 companion",
+      "ledger_ids": [],
+      "status": "lemma-first source Potapov factorisation after DCCXCVII (round 431): unipotent Redheffer product equals Cauchy m_X SATZ; Cauchy-pi identity for Lagrange S0 SATZ; Pick(product) congruent to I-T0*T0 REFUTED (kappa 0 vs 1).  SOURCE_FACTOR_NOT_FOUND.  Finite identities plus a named refutation; NO RH claim",
+      "pin": true,
+      "sha256": "b0d83c52065ee842af36b5bde19140c76438faa73c513b8f30b9d0650f299d9f",
+      "bytes": 7216
+    },
+    {
+      "path": "rh/problem/verify_source_potapov.py",
+      "role": "problem_check",
+      "round": "r431 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in source_potapov.tex: standalone (Redheffer=Cauchy, Cauchy-pi, Gate 3 fail, constructor audit) plus construction pins (w9/kz15/kz18 Pick mismatch, source-order Uvarov, permute/scramble/twin).  7/7 gates, final line SOURCE POTAPOV VERIFIED",
+      "pin": true,
+      "sha256": "e4eef3179c21c6aa2ae69f9188eebdf661b94ead26abb9c4d3a7f60afa5d0b05",
+      "bytes": 5643
+    },
+    {
+      "path": "rh/problem/source_potapov.pdf",
+      "role": "problem_statement",
+      "round": "r431 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of source_potapov.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "de9026ced66501340990c4f9e83db8ef0b7160b3e1c529fd9cf1c7770905ea14",
+      "bytes": 245711
+    },
+    {
       "path": "rh/problem/edge_redheffer.tex",
       "role": "problem_statement",
       "round": "r433 companion",
@@ -3260,8 +3290,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "9dfef9a2167702da6b4ffc6f4bdff5043ec4862b016b11950e9e9b96ad4b21db",
-      "bytes": 5472295
+      "sha256": "f94bef2614d4a080c9da814260262e85052e9b6bd1e27ff5c7e0c561cb454db0",
+      "bytes": 5474571
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -3822,6 +3852,16 @@
       "pin": true,
       "sha256": "4cbc24866c8ba04834e904b0973e72c2ba54784664606d38eda82be8696012f8",
       "bytes": 16143
+    },
+    {
+      "path": "experiments/tfpt-discovery/source_potapov_probe.py",
+      "role": "sealed_probe",
+      "round": "r431",
+      "ledger_ids": [],
+      "status": "source Potapov factor (round 431, PRIME.RDAGGER.SOURCE_POTAPOV_FACTOR.01, reviewer discovery 1 of 2 after DCCXCVII; experiments-side, NO ledger row): 17/17 full / 17/17 smoke; SPEC_SHA 64eabb7c2448dd48; unipotent Redheffer product of point-mass 2x2 factors equals the Cauchy m-function of X EXACT over Q (z=7/3 gives -7471/22950); Cauchy-pi identity for Lagrange S0 at kdim=0 EXACT; Gate 3 REFUTED: Pick(product) is PD (kappa=0) while I-T0*T0 has nneg=1 on the kdim=0 toy (D11=-1744/2025) and on w9/kz15/kz18 (||T||=1.08014/1.10672/1.24966).  Source-order growing-Y Uvarov has 0 negative pivots (min 3.25e-7); lag-local fold(c^P_p) nneg 18/19/15 for p=2/3/5 -- NOT simpler (stop rule 3).  PERM 20 / JIT 19 / SCR 21; twin nneg=1 bit-near.  First measured in /tmp (r431_cal.py, r431_cal2.py, r431_cal3.py) then sealed (disclosed).  Full wall 0.2 s.  AUSGANG SOURCE_FACTOR_NOT_FOUND.  Companion rh/problem/source_potapov.tex + verify_source_potapov.py 7/7 SOURCE POTAPOV VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "ff5bb44695606330c2fb585498caaedf88665773dd02d267e5a49ceaa591843f",
+      "bytes": 22171
     },
     {
       "path": "experiments/tfpt-discovery/edge_redheffer_probe.py",
