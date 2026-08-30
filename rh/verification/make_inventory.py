@@ -1800,6 +1800,35 @@ _R438_STATUS = (
 )
 
 
+_R439_STATUS = (
+    "interpolant residual Loewner/Bezout "
+    "(round 439, PRIME.RDAGGER.INTERPOLATION_RESIDUAL_LOEWNER_BEZOUT.01, "
+    "reviewer DCCCIV; experiments-side, NO ledger row): "
+    "25/25 full / 22/22 smoke; SPEC_SHA 7a0b53f06d2c7564; "
+    "rank(Y D0 - D0 Y)=2 EXACT on 5-atom and 6-node Q toys; "
+    "w9/kz15/kz18 sigma3/sigma2 = 9.42e-15 / 1.08e-14 / "
+    "4.41e-15 (mpmath dps40 w9 9.42e-15, sigma3=1.30e-15); "
+    "S0 = K_YY^{-1} EXACT (RKHS of P_<d0> on X); "
+    "kdim=0 dressed Loewner SATZ Delta D0 Delta = "
+    "L_{-m-tilde} + diag(w_Y (P_Y')^2); D0 itself is NOT "
+    "ones-Loewner at |Y|>=3 (ones-res 40073273/275164890); "
+    "nY=2 old trap documented (L_f nneg=0, diag carries "
+    "nneg=1).  B1 Bez(P_Y, Q=interp(m-tilde)) FAIL "
+    "(Cauchy-pi rational is m-like with P_X poles, not "
+    "P_Y); Sturm last -7466971/10681442 != 1-q^d=187/450.  "
+    "CInd of m-tilde/P' is 52 vs nneg(D0)=1 -- not P1.  "
+    "Worlds: MAIN nneg=1; CHI3-9 nneg=0; CHI3-15 nneg=1; "
+    "PERM/JIT/SCR 20/19/21 (rank-2 survives).  First "
+    "measured in /tmp (r439_cal.py .. r439_cal4_sturm.py) "
+    "then sealed (disclosed).  Full wall 2.9 s.  Builder "
+    "fallback NOT taken.  AUSGANG "
+    "RESIDUAL_LOEWNER_PLUS_CONTROLLED_DIAGONAL.  Companion "
+    "rh/problem/residual_loewner.tex + "
+    "verify_residual_loewner.py 7/7 RESIDUAL LOEWNER "
+    "VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+
 _R440_STATUS = (
     "mean tau index "
     "(round 440, PRIME.RDAGGER.MEAN_TAU_INDEX.01, "
@@ -4887,6 +4916,30 @@ ENTRIES = [
      [],
      "compiled PDF of evolutionary_certificate.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/residual_loewner.tex", "problem_statement",
+     "r439 companion",
+     [],
+     "lemma-first interpolant residual Loewner/Bezout "
+     "(round 439): disp rank 2 SATZ, S0=K_YY^{-1} SATZ, "
+     "kdim=0 dressed Loewner SATZ, B1 Bez(P_Y,Q) miss.  "
+     "RESIDUAL_LOEWNER_PLUS_CONTROLLED_DIAGONAL.  "
+     "NO RH claim",
+     True),
+    ("rh/problem/verify_residual_loewner.py", "problem_check",
+     "r439 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "residual_loewner.tex: standalone Q toys "
+     "(disp rank, Cauchy-pi, K^{-1}, dressed Loewner, "
+     "ones-residual, B1 miss, Sturm != 1-q^d) plus "
+     "construction pins (w9 disp+Kinv, permute/scramble/"
+     "chi census).  7/7 gates, final line "
+     "RESIDUAL LOEWNER VERIFIED", True),
+    ("rh/problem/residual_loewner.pdf", "problem_statement",
+     "r439 companion",
+     [],
+     "compiled PDF of residual_loewner.tex "
+     "(recompiled artefact, registered unpinned)", False),
     ("rh/problem/mean_tau_index.tex", "problem_statement",
      "r440 companion",
      [],
@@ -5286,6 +5339,11 @@ ENTRIES = [
      "r438",
      [],
      _R438_STATUS,
+     True),
+    (f"{EXP}/residual_loewner_probe.py", "sealed_probe",
+     "r439",
+     [],
+     _R439_STATUS,
      True),
     (f"{EXP}/mean_tau_index_probe.py", "sealed_probe",
      "r440",

@@ -300,6 +300,20 @@ It was NOT provable from L† ⟺ R† alone: `fullRead` is the
 three-channel Weil pairing, not the quadratic form of
 `A_cap`.  Census unchanged at 5 (no sorry closed).
 NO RH CLAIM.
+
+## r440 census (mean tau index)
+
+Finite identities, no analytic bound, no new sorry.
+T1 `κ† = ind₋(R† − ½I) = #{s ∈ (0,1): τ†(s)=0}` and
+T2/MI2 (argument principle + linearity of the integrand)
+are machine-checked; the Lean landing site
+`exists_index_zero_of_block_mean_lt_one` is already
+proved (r430).  The ½-cluster of `R†` maps to zeros of
+`τ†` in a shrinking collar of `s = 1` (the contour-approach
+cost).  Selected + core-42 have `κ† = 0` (block mean `0 < 1`);
+dead χ have `κ† = 1`.  Unconditional block-mean bound
+open (Reviewer-R439).  Census unchanged at 5.
+NO RH CLAIM.
 -/
 
 end RH

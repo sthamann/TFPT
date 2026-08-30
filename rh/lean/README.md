@@ -946,6 +946,13 @@ Loewner identities and the density / mean-value lemmas do not.
 
 Zero `sorry` in this file.  Census stays 5.
 
+**r440 mean tau index (no new Lean).**  T1/T2/MI2 are
+finite identities, machine-checked in
+`mean_tau_index_probe.py` / `mean_tau_index.tex`.  The
+landing site above is the only Lean object this round
+consumes.  The unconditional block-mean bound is open
+(Reviewer-R439).  No new `sorry`; census stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

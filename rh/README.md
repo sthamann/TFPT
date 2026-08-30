@@ -6347,7 +6347,55 @@ canonical-cut $n_{\mathrm{C}}\le 1$ beyond the already named
 r375/$\psi_{-}$ identity.  No Lean this round.
 Mincut unchanged (base 4 / refined 5).
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
-Coexistence: r434 / r435 / r436 are parallel and not dropped.
+Coexistence: r434 / r435 / r436 / r440 are parallel and not dropped.
+
+**Interpolant residual Loewner/Bezout (r439,
+PRIME.RDAGGER.INTERPOLATION\_RESIDUAL\_LOEWNER\_BEZOUT.01).**
+Sealed probe
+`experiments/tfpt-discovery/residual_loewner_probe.py`
+(25/25 full, 22/22 smoke, SPEC\_SHA `7a0b53f06d2c7564`)
+plus `rh/problem/residual_loewner.tex` (+ PDF +
+`verify_residual_loewner.py`, 7/7, `RESIDUAL LOEWNER VERIFIED`).
+**Ausgang RESIDUAL\_LOEWNER\_PLUS\_CONTROLLED\_DIAGONAL.**
+Displacement rank $2$ SATZ (exact $\mathbb{Q}$ on both toys;
+$\sigma_3/\sigma_2\sim 10^{-14}$ on $w_9/k_z15/k_z18$;
+survives permute).  $S_0=K_{YY}^{-1}$ SATZ.
+At $k_{\dim}=0$, dressed Loewner
+$\Delta D_0\Delta=L_{-\widetilde{m}}+\mathrm{diag}(w_Y(P_Y')^2)$
+SATZ; $D_0$ itself is not ones-Loewner for $\lvert Y\rvert\ge 3$.
+B1 $\mathrm{Bez}(P_Y,Q)$ miss (Cauchy--$\pi$ is $m$-like
+with $P_X$ poles).  CInd of $\widetilde{m}/P_Y'$ is not P1.
+P1 problem: $n_{-}(W_Y-K_{YY}^{-1})\le 1$.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 are parallel
+and not dropped.
+
+**Mean tau index (r440,
+PRIME.RDAGGER.MEAN\_TAU\_INDEX.01).**  Sealed probe
+`experiments/tfpt-discovery/mean_tau_index_probe.py`
+(28/28 full, 28/28 smoke, SPEC\_SHA `3807189a56e259da`)
+plus `rh/problem/mean_tau_index.tex` (+ PDF +
+`verify_mean_tau.py`, 8/8, `MEAN TAU INDEX VERIFIED`).
+**Ausgang IDENTITIES\_EXACT / COLLAR\_BOSS\_QUANTIFIED / BLOCK\_MEAN\_CENSUS / UNCONDITIONAL\_OPEN.**
+Three finite identities, no analytic bound:
+(T1)~$\kappa^{\dagger}=\mathrm{ind}_{-}(R^{\dagger}-\tfrac12 I)=\#\{s\in(0,1):\tau^{\dagger}(s)=0\}$
+(SATZ over $\mathbb{Q}$; w9 three-way at $2\cdot 10^{-14}$);
+(T2)~argument principle, integrand Jacobi SATZ, $\mathbb{Q}$ winding $1.000$;
+(MI2)~block-mean identity, linearity $4\cdot 10^{-15}$, Lean landing
+site `exists_index_zero_of_block_mean_lt_one` (r430).
+The $1/2$-cluster of $R^{\dagger}$ maps to zeros of $\tau^{\dagger}$
+in a shrinking collar of $s=1$ ($\mathrm{gap}_{+}$ $3.0\cdot 10^{-3}\to 1.9\cdot 10^{-8}$
+on selected $k=3..9$); a circle of radius $0.40$ winds $0$, radius $0.499$ is fractional.
+Source integrand: CD residual $2\cdot 10^{-12}$, cyclic $TT^{*}$ / Dirichlet diagonal.
+Census: selected $6/6$ and core-42 $42/42$ have $\kappa^{\dagger}=0$ (mean $0<1$, no dead trend);
+dead $\chi$ $6/6$ have $\kappa^{\dagger}=1$.
+Soft mutants (tr $G$, $M_2$) blind; $s$ is a counting variable (r265 no-go stays).
+$k=8$ not rebuilt.  No Lean this round (landing site already proved).
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 are parallel and not dropped.
 
 ## Folder guide
 
@@ -6668,6 +6716,12 @@ rh/
 │   ├── evolutionary_certificate.tex(+pdf) — r438:
 │   │                     GP/NNLS/cut search NOT_FOUND.
 │   │                     No RH claim
+│   ├── residual_loewner.tex(+pdf) — r439: D0 disp
+│   │                     rank 2 SATZ; S0=K^{-1} SATZ;
+│   │                     B1 Bez(P_Y,Q) miss.  No RH claim
+│   ├── mean_tau_index.tex(+pdf) — r440: T1/T2/MI2 SATZ;
+│   │                     s=1 collar is the contour boss;
+│   │                     selected+core mean 0<1.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6830,6 +6884,12 @@ rh/
 │   └── verify_evolutionary_cert.py — machine check of
 │                         evolutionary_certificate.tex (10/10,
 │                         EVOLUTIONARY CERT VERIFIED)
+│   └── verify_residual_loewner.py — machine check of
+│                         residual_loewner.tex (7/7,
+│                         RESIDUAL LOEWNER VERIFIED)
+│   └── verify_mean_tau.py — machine check of
+│                         mean_tau_index.tex (8/8,
+│                         MEAN TAU INDEX VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7187,7 +7247,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r438 from
+2. **Sealed probes** — the campaign probes r250–r440 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7557,6 +7617,24 @@ is additive on the search lane (A/B/C NOT_FOUND).
 It does not touch `experiments/next.txt` or `rh/lean/`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r439 coexistence.** Round 439 (`residual_loewner_probe.py`)
+is additive on the $R^{\dagger}$ interpolant-residual lane
+after r431/r431-audit/r433 (reviewer DCCCIV:
+Loewner/Bezout of $D_0=W_Y-S_0$).  It does not touch
+`experiments/next.txt` or `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r440 coexistence.** Round 440 (`mean_tau_index_probe.py`)
+is additive on the reviewer DCCCIV fallback lane (averaged
+tau-winding as an exact integer; identities first, no
+unconditional bound).  It does not touch
+`experiments/next.txt`.  The Lean landing site
+`exists_index_zero_of_block_mean_lt_one` is already proved
+(r430); this round does not add Lean.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`) after
+appending the sealed probe and the problem-document rows
+to the inventory.  r434 / r435 / r436 / r438 are parallel
+and are not dropped.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
