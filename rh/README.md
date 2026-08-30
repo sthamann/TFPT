@@ -6588,6 +6588,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449
 are parallel and not dropped.
 
+**n_stab transition (r451,
+PRIME.RDAGGER.NSTAB\_TRANSITION.01).**
+Sealed probe
+`experiments/tfpt-discovery/nstab_transition_probe.py`
+(smoke 19/19, SPEC\_SHA `dcda19ffb95b515b`)
+plus `rh/problem/nstab_transition.tex` (+ PDF +
+`verify_nstab_transition.py`, 6/6, `NSTAB TRANSITION VERIFIED`).
+**Ausgang TRANSITION\_SMOOTH / RES\_MISMATCH / PREFIX\_Q\_PLATEAU.**
+No universal cliff of conditioning, atom-Nyquist, or $q^{\dagger}_n$ at $n_{\mathrm{stab}}$.  $n_{\mathrm{stab}}/n_{\mathrm{res}}\in[0.010,0.094]$ (prefix is bandlimited).  $q^{\dagger}_n$ is constant and $<1$ on $n\le n_{\mathrm{stab}}$ of every measured window.  $n_{\mathrm{stab}}$ is a sufficient operational cut, not a unique mechanical cliff.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6952,6 +6965,10 @@ rh/
 │   │                     n_stab-compression named;
 │   │                     living split; chi prefix
 │   │                     lives.  No RH claim
+│   ├── nstab_transition.tex(+pdf) — r451: TRANSITION_SMOOTH;
+│   │                     RES_MISMATCH; PREFIX_Q_PLATEAU;
+│   │                     n_stab is a sufficient cut.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7147,6 +7164,12 @@ rh/
 │   └── verify_flip_vs_stab.py — machine check of
 │                         flip_vs_stab.tex (6/6,
 │                         FLIP VS STAB VERIFIED)
+│   └── verify_prefix_mincut.py — machine check of
+│                         prefix_mincut.tex (7/7,
+│                         PREFIX MINCUT VERIFIED)
+│   └── verify_nstab_transition.py — machine check of
+│                         nstab_transition.tex (6/6,
+│                         NSTAB TRANSITION VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7504,7 +7527,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r450 from
+2. **Sealed probes** — the campaign probes r250–r451 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7968,6 +7991,14 @@ It does not touch `experiments/next.txt`.  Lean
 names the prefix mincut by Iff.rfl; census stays 5.
 Suite surface: integrity + probes + Lean
 (`run_rh.py --fast`).
+**r451 coexistence.** Round 451 (`nstab_transition_probe.py`)
+is additive on the r449/r450 n_stab census
+(TRANSITION_SMOOTH: no universal cliff at
+n_stab; RES_MISMATCH; PREFIX_Q_PLATEAU).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

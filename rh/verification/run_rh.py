@@ -5,7 +5,7 @@
 Runs, in order:
   (1) INTEGRITY  -- SHA-256 of every pinned rh/INVENTORY.json entry
                     (pinned drift = FAIL; unpinned living documents = INFO),
-                    (2) PROBES     -- the sealed campaign probes r250-r450 from
+                    (2) PROBES     -- the sealed campaign probes r250-r451 from
                     experiments/tfpt-discovery/ in --smoke mode,
   (3) MODULES    -- the twenty RH verification modules v955/v956/v958/
                     v959/v960/v961/v962/v963/v964/v965/v966/v967/v968/
@@ -46,7 +46,7 @@ LEAN_DIR = os.path.join(REPO, "rh", "lean")
 VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
                        "bin", "python")
 
-# the sealed campaign probe list r250-r450 (order = round order); every
+# the sealed campaign probe list r250-r451 (order = round order); every
 # entry supports --smoke.  This list is frozen with the wave; extend it in
 # the same change that extends INVENTORY.json.
 # Lean-only rounds (no sealed probe): r305, r310, r310b, r320, C1,
@@ -227,6 +227,7 @@ PROBES = [
     ("r448", "exact_band_probe.py"),
     ("r449", "flip_vs_stab_probe.py"),
     ("r450", "prefix_mincut_probe.py"),
+    ("r451", "nstab_transition_probe.py"),
 ]
 
 MODULES = [
@@ -342,7 +343,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r450 + r431-audit, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r451 + r431-audit, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:
