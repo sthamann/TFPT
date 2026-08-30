@@ -3806,6 +3806,36 @@
       "bytes": 206752
     },
     {
+      "path": "rh/problem/cofinal_family.tex",
+      "role": "problem_statement",
+      "round": "r458 companion",
+      "ledger_ids": [],
+      "status": "lemma-first cofinal family (round 458): FAMILY_CANDIDATE; TABLE_CAP_ARTEFACT; RESIDUAL_DEEP_DEATH.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "1d3b05a394c63096e520def710a5ed11a6e0e4c2a4e5535704157e80b0ff132b",
+      "bytes": 5143
+    },
+    {
+      "path": "rh/problem/verify_cofinal_family.py",
+      "role": "problem_check",
+      "round": "r458 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in cofinal_family.tex: standalone (FAMILY_CANDIDATE, grid 76, a-wall, Lean mesh) plus construction pins (lean k=10, kz197 capped-dead).  6/6 gates, final line COFINAL FAMILY VERIFIED",
+      "pin": true,
+      "sha256": "a8d6357ea280abcc3d74c1a52a4c09e846d292bbe934c34d5bd32480a0ed6ce7",
+      "bytes": 2775
+    },
+    {
+      "path": "rh/problem/cofinal_family.pdf",
+      "role": "problem_statement",
+      "round": "r458 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of cofinal_family.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "79762b16dafda2bd9c4983f4c1cc6b8af2e6756d3976da024086b49c5060771b",
+      "bytes": 211521
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3980,8 +4010,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "8bdd14cc1666114416f2dc1ae46371fca58791daf2fe3a68363ebac6b260ce95",
-      "bytes": 5539617
+      "sha256": "fff01d04c5f7086f9af077206cdd44e737a3e771dbfcd94b56816f64dcf58fd2",
+      "bytes": 5541782
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4792,6 +4822,16 @@
       "pin": true,
       "sha256": "b9213f44fdf38151d281b6424484d4705fbccb047f9c5b52be9f6ce3f3a0cbd5",
       "bytes": 11035
+    },
+    {
+      "path": "experiments/tfpt-discovery/cofinal_family_probe.py",
+      "role": "sealed_probe",
+      "round": "r458",
+      "ledger_ids": [],
+      "status": "cofinal family (round 458, PRIME.RDAGGER.COFINAL_FAMILY.01; experiments-side, NO ledger row): lemma-first, three questions -- Lean-admissible (a,m) requirements, living census, candidate family.  VERDICT FAMILY_CANDIDATE / TABLE_CAP_ARTEFACT / RESIDUAL_DEEP_DEATH.  Selected.lean: any prime-power a_k->inf, m_k->inf covers; named a_k=2^k, m_k=k*2^{floor sqrt k}-1.  Sealed SCAN_KZ 76 windows BEFORE first pack: capped frame-A 55 live / 21 dead, wall a=631/641 (=sqrt TABLE_CAP).  Holdout a<=631 is 19/19 on the capped chart; N<=1641 fails (14/19).  Lean-native selectedMesh k=5..16 all cap-live (k=10 q=0.9319618718590412).  Full a^2 comb revives kz197 (2^10) and kz230 (exact dps=50 n_flip=0); Lean k=10 q unchanged.  kz137 stays dead at N=8300 (first 7308).  r329 EXT3 was F_A/cubic, not q^dagger.  First measured in /tmp then sealed.  Companion rh/problem/cofinal_family.tex + verify_cofinal_family.py COFINAL FAMILY VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "c7874ea69d60dfeed4915af005b029fcf8ab0ad76fc87b3c930cfc75edc42852",
+      "bytes": 10940
     }
   ]
 }

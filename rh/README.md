@@ -6679,6 +6679,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456
 are parallel and not dropped.
 
+**Cofinal family (r458,
+PRIME.RDAGGER.COFINAL\_FAMILY.01).**
+Sealed probe
+`experiments/tfpt-discovery/cofinal_family_probe.py`
+(smoke 13/13, SPEC\_SHA `a4aa21a54f33eace`)
+plus `rh/problem/cofinal_family.tex` (+ PDF +
+`verify_cofinal_family.py`, 6/6, `COFINAL FAMILY VERIFIED`).
+**Ausgang FAMILY\_CANDIDATE / TABLE\_CAP\_ARTEFACT / RESIDUAL\_DEEP\_DEATH.**
+Lean selected $(a_k,m_k)$ lives at the cap through $k=16$; $k=10$ is stable under the full $a^2$ comb.  The capped frame-A $a=631/641$ wall is $\sqrt{\mathrm{TABLE\_CAP}}$.  Completing the comb revives $k_z197$ and exact $k_z230$; $k_z137$ ($N=8300$) stays dead.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7070,6 +7083,9 @@ rh/
 │   │                     RACE_EATS_K10;
 │   │                     LEMMA_REDUCED.
 │   │                     No RH claim
+│   ├── cofinal_family.tex(+pdf) — r458: FAMILY_CANDIDATE;
+│   │                     TABLE_CAP_ARTEFACT;
+│   │                     residual kz137.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7646,7 +7662,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r457 from
+2. **Sealed probes** — the campaign probes r250–r458 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8162,6 +8178,15 @@ Suite surface: integrity + probes
 **r457 coexistence.** Round 457 (`jp_increment_probe.py`)
 accepts r456 and studies the J_P increment
 (INCREMENT_DRIFT; RACE_EATS_K10; LEMMA_REDUCED).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r458 coexistence.** Round 458 (`cofinal_family_probe.py`)
+is additive on the r456 full-cap retyping
+(FAMILY_CANDIDATE: Lean selectedMesh lives;
+TABLE_CAP_ARTEFACT on the frame-A 2^k deaths;
+residual deep death kz137).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
