@@ -972,6 +972,12 @@ in `signed_border_mean_probe.py` / `signed_border_mean.tex`.
 The mean bound is circular (named missing signed
 strength).  No new `sorry`; census stays 5.
 
+**r445 deep builder (no new Lean).**  The unused-Lanczos
+hotspot, $k=8$ live pin, and $k=10/11/12$ ABD-ok census
+are machine-checked in `deep_builder_probe.py` /
+`deep_builder.tex`.  Infra only; no new `sorry`; census
+stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

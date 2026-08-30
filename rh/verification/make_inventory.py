@@ -1963,6 +1963,40 @@ _R444_STATUS = (
 )
 
 
+
+_R445_STATUS = (
+    "deep builder "
+    "(round 445, PRIME.INFRA.DEEP_BUILDER.01, unlock "
+    "border_chain_pack for selected k=10/11/12; "
+    "experiments-side, NO ledger row): "
+    "25/25 full / 24/24 smoke; SPEC_SHA 57831e610b545e75; "
+    "HOTSPOT unused Lanczos in HS.window_data "
+    "(k=10 20.57 s = the r443 wall; slim atoms 0.18 s; "
+    "chain 0.29 s).  Bit-gate k=3..9 |dq|=0 at 1e-12 "
+    "(atoms bitwise vs HS.window_data; numpy canonical).  "
+    "numba ulp k=9 |dq|=5.6e-9 bar 1e-8.  "
+    "k=8 LIVE CROSS: R=0.047628 den=1.568548 Sig=0.383825 "
+    "P1, r421 pin CONFIRMED, r427 circularity closed; "
+    "delta=0.047488 q^dagger=0.952512 (8.2 s).  "
+    "k=10/11/12 NOT ABD-living: k=10 107 sign-flips from "
+    "n=3788 (formula-literal delta=0.000419, pos=0.031823); "
+    "k=11 839 flips, B_w explodes to 21434 "
+    "(delta=0.996548 not a sequence point); k=12 chain "
+    "aborts at n=12737 / N=45444.  AIC ABD-ok k=5..9 with "
+    "live k=8: M1 delta_inf=+0.02741 DeltaAIC 5.11 (r443 "
+    "without k=8: +0.02670 / 6.01) -- slice floor stands, "
+    "deep windows do not decide floor vs decay.  Full "
+    "k=3..9 still M3.  vs N M2 (r427 illegal).  Dead chi "
+    "new-builder delta=-0.023181.  mpmath kz17 1.1e-16.  "
+    "First measured in /tmp (r445_cal.py, r445_cal2.py) "
+    "then sealed.  AUSGANG INFRA_UNLOCKED / "
+    "K8_CROSS_CONFIRMED / DEEP_NOT_ABD_LIVING / "
+    "SLICE_FLOOR_PREFERRED / FULL_SEQUENCE_UNSETTLED / "
+    "COFINAL_OPEN.  Companion rh/problem/deep_builder.tex "
+    "+ verify_deep_builder.py 7/7 DEEP BUILDER VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -5149,6 +5183,28 @@ ENTRIES = [
      [],
      "compiled PDF of signed_border_mean.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/deep_builder.tex", "problem_statement",
+     "r445 companion",
+     [],
+     "lemma-first deep builder (round 445): unused "
+     "Lanczos hotspot; k=8 live pin; k=10/11/12 not "
+     "ABD-living; slice floor with live k=8.  "
+     "INFRA_UNLOCKED.  NO RH claim",
+     True),
+    ("rh/problem/verify_deep_builder.py", "problem_check",
+     "r445 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "deep_builder.tex: standalone (Q q^dagger formula, "
+     "frozen slice AIC with k=8) plus construction pins "
+     "(w9 skip-Lanczos, k=8 map, deep maps, dead chi).  "
+     "7/7 gates, final line DEEP BUILDER VERIFIED", True),
+    ("rh/problem/deep_builder.pdf", "problem_statement",
+     "r445 companion",
+     [],
+     "compiled PDF of deep_builder.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -5554,6 +5610,11 @@ ENTRIES = [
      "r444",
      [],
      _R444_STATUS,
+     True),
+    (f"{EXP}/deep_builder_probe.py", "sealed_probe",
+     "r445",
+     [],
+     _R445_STATUS,
      True),
 ]
 

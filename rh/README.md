@@ -6479,6 +6479,28 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443
 are parallel and not dropped.
 
+**Deep builder (r445,
+PRIME.INFRA.DEEP\_BUILDER.01).**
+Sealed probe
+`experiments/tfpt-discovery/deep_builder_probe.py`
+(25/25 full, 24/24 smoke, SPEC\_SHA `57831e610b545e75`)
+plus `rh/problem/deep_builder.tex` (+ PDF +
+`verify_deep_builder.py`, 7/7, `DEEP BUILDER VERIFIED`).
+**Ausgang INFRA\_UNLOCKED / K8\_CROSS\_CONFIRMED / DEEP\_NOT\_ABD\_LIVING / SLICE\_FLOOR\_PREFERRED / FULL\_SEQUENCE\_UNSETTLED / COFINAL\_OPEN.**
+Hotspot is unused Lanczos in `HS.window_data`
+($k=10$ $20.57\,\mathrm{s}$ = the r443 wall), not the
+chain.  Skip-Lanczos atoms are bitwise identical.
+$k=8$ live confirms the r421 pin (r427 circularity
+closed).  $k=10/11/12$ are not ABD-living (sign-flip /
+abort).  ABD-ok slice $k=5..9$ with live $k=8$ still
+prefers a floor ($\delta_{\infty}=+0.02741$,
+$\Delta\mathrm{AIC}=5.11$).  Deep windows do not
+decide floor vs decay.  No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6819,6 +6841,11 @@ rh/
 │   │                     SATZ; pole not carrier; diagonal
 │   │                     overflows; bound ZIRKULAER.
 │   │                     No RH claim
+│   ├── deep_builder.tex(+pdf) — r445: unused Lanczos
+│   │                     hotspot; k=8 live pin;
+│   │                     k=10/11/12 not ABD-living;
+│   │                     slice floor with live k=8.
+│   │                     INFRA_UNLOCKED.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6999,6 +7026,9 @@ rh/
 │   └── verify_signed_border.py — machine check of
 │                         signed_border_mean.tex (8/8,
 │                         SIGNED BORDER MEAN VERIFIED)
+│   └── verify_deep_builder.py — machine check of
+│                         deep_builder.tex (7/7,
+│                         DEEP BUILDER VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7356,7 +7386,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r444 from
+2. **Sealed probes** — the campaign probes r250–r445 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7769,6 +7799,13 @@ Suite surface: integrity + probes
 **r444 coexistence.** Round 444 (`signed_border_mean_probe.py`)
 is additive on the reviewer-R439 signed-mean lane after r442
 (triple sum; pole not carrier; circularity gate).  It does
+not touch `experiments/next.txt`.  The Lean landing site
+`exists_index_zero_of_block_mean_lt_one` is already proved
+(r430); this round does not add Lean.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`).
+**r445 coexistence.** Round 445 (`deep_builder_probe.py`)
+is additive on the r443 floor-fit infra lane (unlock
+`border_chain_pack` for selected $k=10/11/12$).  It does
 not touch `experiments/next.txt`.  The Lean landing site
 `exists_index_zero_of_block_mean_lt_one` is already proved
 (r430); this round does not add Lean.  Suite surface:

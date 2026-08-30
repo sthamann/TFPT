@@ -3416,6 +3416,36 @@
       "bytes": 242953
     },
     {
+      "path": "rh/problem/deep_builder.tex",
+      "role": "problem_statement",
+      "round": "r445 companion",
+      "ledger_ids": [],
+      "status": "lemma-first deep builder (round 445): unused Lanczos hotspot; k=8 live pin; k=10/11/12 not ABD-living; slice floor with live k=8.  INFRA_UNLOCKED.  NO RH claim",
+      "pin": true,
+      "sha256": "8924314616be52fccd3db40be38f28db96d55248dd0215bbdde88c6c50baafb0",
+      "bytes": 7182
+    },
+    {
+      "path": "rh/problem/verify_deep_builder.py",
+      "role": "problem_check",
+      "round": "r445 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in deep_builder.tex: standalone (Q q^dagger formula, frozen slice AIC with k=8) plus construction pins (w9 skip-Lanczos, k=8 map, deep maps, dead chi).  7/7 gates, final line DEEP BUILDER VERIFIED",
+      "pin": true,
+      "sha256": "da11b370a368e0ee86d9201c59ddb49574ba48c6bebde11002d5fbbf615c9467",
+      "bytes": 4703
+    },
+    {
+      "path": "rh/problem/deep_builder.pdf",
+      "role": "problem_statement",
+      "round": "r445 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of deep_builder.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "776a084d7f3d53cfedeff3e34913c6b9ded03f7a37e2b1fe3de355fe819e1270",
+      "bytes": 202805
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3570,8 +3600,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "162c7ff38125ac8c565612083cfd1e1d5f2e125eedf81230a2eaaacdff90a1b1",
-      "bytes": 3459377
+      "sha256": "39442b144449c5dbeb40a2ca3b77ae4d35dd6c5c081733e29e4b26a68312baf0",
+      "bytes": 3459408
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -3590,8 +3620,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "43f8cd0ac73a64c4e0bb7745a65d361f73dd6e9382e4900b793d3dd5cd2e91a0",
-      "bytes": 5505655
+      "sha256": "68e34b8a2bac3d563ab8a60965fca8366ae92f6ad096115b079596c9378cc540",
+      "bytes": 5510301
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4272,6 +4302,16 @@
       "pin": true,
       "sha256": "3cc782b0fed7a89957d19d8199684771d9ce36c332459022a85f8aa4d6186e25",
       "bytes": 25160
+    },
+    {
+      "path": "experiments/tfpt-discovery/deep_builder_probe.py",
+      "role": "sealed_probe",
+      "round": "r445",
+      "ledger_ids": [],
+      "status": "deep builder (round 445, PRIME.INFRA.DEEP_BUILDER.01, unlock border_chain_pack for selected k=10/11/12; experiments-side, NO ledger row): 25/25 full / 24/24 smoke; SPEC_SHA 57831e610b545e75; HOTSPOT unused Lanczos in HS.window_data (k=10 20.57 s = the r443 wall; slim atoms 0.18 s; chain 0.29 s).  Bit-gate k=3..9 |dq|=0 at 1e-12 (atoms bitwise vs HS.window_data; numpy canonical).  numba ulp k=9 |dq|=5.6e-9 bar 1e-8.  k=8 LIVE CROSS: R=0.047628 den=1.568548 Sig=0.383825 P1, r421 pin CONFIRMED, r427 circularity closed; delta=0.047488 q^dagger=0.952512 (8.2 s).  k=10/11/12 NOT ABD-living: k=10 107 sign-flips from n=3788 (formula-literal delta=0.000419, pos=0.031823); k=11 839 flips, B_w explodes to 21434 (delta=0.996548 not a sequence point); k=12 chain aborts at n=12737 / N=45444.  AIC ABD-ok k=5..9 with live k=8: M1 delta_inf=+0.02741 DeltaAIC 5.11 (r443 without k=8: +0.02670 / 6.01) -- slice floor stands, deep windows do not decide floor vs decay.  Full k=3..9 still M3.  vs N M2 (r427 illegal).  Dead chi new-builder delta=-0.023181.  mpmath kz17 1.1e-16.  First measured in /tmp (r445_cal.py, r445_cal2.py) then sealed.  AUSGANG INFRA_UNLOCKED / K8_CROSS_CONFIRMED / DEEP_NOT_ABD_LIVING / SLICE_FLOOR_PREFERRED / FULL_SEQUENCE_UNSETTLED / COFINAL_OPEN.  Companion rh/problem/deep_builder.tex + verify_deep_builder.py 7/7 DEEP BUILDER VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "317ceb11f66d86742381440abbc890fbfeb91c928291051c5c597d983c471a4f",
+      "bytes": 47798
     }
   ]
 }
