@@ -550,11 +550,25 @@ theorem polePotential_nonpos (t : ℝ) : polePotential t ≤ 0 := by
   have : 1 ≤ Real.cosh (t / 2) := by nlinarith
   nlinarith
 
-/-- the archimedean kernel read of a grid element at the canonical
-window (anchor, mesh level) -- Python
-`read_lags(arch_lags(M, D), D, F)`.  OPAQUE: tent-quadrature of
-`weilArchKernel` (Titchmarsh Ch. X; R325 S1 mesh-constancy 1.5e-15). -/
-opaque archRead : ℕ → ℕ → GridElement → ℝ
+/-- Production lag spacing for the selected-window builder:
+`Delta = log(a)/(m+1)`. -/
+noncomputable def productionArchDelta (a m : ℕ) : ℝ :=
+  Real.log a / (m + 1 : ℝ)
+
+/-- The exact archimedean lag value intended by Python
+`arch_lags(M, Delta)[i]`.  This is the remaining Gauss/Mellin value
+interface; unlike the old `archRead`, it exposes each coefficient
+consumed by the production builder. -/
+opaque productionArchLag : ℕ → ℕ → ℕ → ℝ
+
+/-- **Concrete arch read.**  This is Python `read_lags` literally:
+`c₀ F(0) + 2 Σ_{i=1}^{M-1} cᵢ F(i Delta)`, with `M=m+1`.
+Only the coefficient values `productionArchLag` remain external. -/
+noncomputable def archRead (a m : ℕ) (f : GridElement) : ℝ :=
+  productionArchLag a m 0 * f.toFun 0 +
+    2 * ∑ i ∈ Finset.Icc 1 m,
+      productionArchLag a m i *
+        f.toFun (i * productionArchDelta a m)
 
 /-- the archimedean side of the Weil form of a grid element (the
 exact kernel integral against `weilArchKernel`).  OPAQUE: named

@@ -6198,6 +6198,29 @@ that iff alone (`fullRead` is the three-channel Weil pairing)
 but **is** a theorem of the thinner remainder.  Zero new
 `sorry`; census **stays 5**.  NO RH CLAIM.
 
+**Lean fidelity repair (r463,
+PRIME.RDAGGER.LEAN\_FIDELITY\_REPAIR.01, Lean + sealed probe).**
+Sealed probe
+`experiments/tfpt-discovery/lean_fidelity_probe.py`
+(11/11 smoke/full, SPEC\_SHA `0ef28519b5969b8a`, k=5/9/10 pins)
+plus `rh/problem/lean_fidelity.tex` (+ PDF +
+`verify_lean_fidelity.py`, 9/9, `LEAN FIDELITY REPAIR VERIFIED`).
+**Ausgang FAITHFUL\_OBJECT\_PINNED / BRIDGES\_TYPED / CENSUS\_8.**
+`RH/FaithfulFold.lean` replaces the selected raw-atom cosine fold
+with the production pipeline (tent lags, circulant spectral density,
+grid fold, sign split); exported k=5/9/10 values pin the
+transcription against the Python builder.  `archRead` is a concrete
+lag pairing; only coefficient values remain external.  The FREQ
+endpoint is renamed
+`internal_weil_nonneg_of_frequently_selected` (not RH).
+`RH/ExternalBridges.lean` types dense extension, standard
+explicit-formula identification, and Mathlib
+`RiemannHypothesis` as three honest `sorry` candidates; Lean sorry
+census **5 → 8**.  The r462 gap-map diagnostic
+(`HIDDEN\_GAP\_FOUND`) is kept as sealed history only and is **not**
+rerun — r463 invalidates its old success condition.  Experiments-side,
+NO ledger row, NO L\* claim, NO RH CLAIM.
+
 **Source Potapov factor (r431,
 PRIME.RDAGGER.SOURCE\_POTAPOV\_FACTOR.01, reviewer
 discovery 1 of 2).**  Sealed probe
@@ -6843,22 +6866,34 @@ rh/
 │       │                    ExactBorder/ExactBudget total;
 │       │                    a_k=2^k, m_k=k·2^{⌊√k⌋}−1 with
 │       │                    Δ_k=2^{−r_k}·log 2, a_k→∞, Δ_k→0
-│       │                    PROVED; weil_nonneg_of_selected_windows;
-│       │                    r397 named Prop
+│       │                    PROVED; weil_nonneg_of_selected_windows
+│       │                    (selected windows; r463 mincut fold in
+│       │                    FaithfulFold); r397 named Prop
 │       │                    selected_augDualResolvent_gt_half is the
 │       │                    stronger alternative since r430).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
-│       ├── FrequentlySelected.lean — r430/r434: semidefinite + FREQ
+│       ├── FrequentlySelected.lean — r430/r434/r463: semidefinite + FREQ
 │       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
-│       │                    weil_nonneg_of_frequently_selected;
-│       │                    rh_of_frequently_selected; density and
+│       │                    internal_weil_nonneg_of_frequently_selected;
+│       │                    density and
 │       │                    mean-value PROVED; named mincut
 │       │                    frequently_selected_augDualResolvent_ge_half;
 │       │                    r434: real-window Loewner PROVED,
 │       │                    SelectedSemidefImpliesPlainReads theorem
 │       │                    of SelectedACapPsdImpliesPlainReads;
-│       │                    terminal_q_canonical OFF PATH).
-│       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       │                    terminal_q_canonical OFF PATH; r463: uses
+│       │                    FaithfulFold for the comb object).
+│       │                    Zero sorry in-file; project census 8 with
+│       │                    ExternalBridges.  NO RH CLAIM
+│       ├── FaithfulFold.lean — r463: production-faithful comb fold
+│       │                    (tent lags, L=2(m+1)-2, circulant spectral
+│       │                    density, grid fold, sign split; k=5/9/10
+│       │                    pins match lean_fidelity_probe).  Zero sorry;
+│       │                    NO RH CLAIM
+│       ├── ExternalBridges.lean — r463: three honest external bridges
+│       │                    (dense extension, explicit-formula id,
+│       │                    Mathlib RiemannHypothesis; each sorry).
+│       │                    Census contribution 5→8.  NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
 │       │                    oneDefect_update_posDef_iff,

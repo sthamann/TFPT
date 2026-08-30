@@ -396,6 +396,16 @@ def SelectedACapPsdImpliesPlainReads : Prop :=
       ∀ f : GridElement, f.meshExp ≤ selectedMesh k →
         0 ≤ fullRead (selectedAnchor k) (selectedMesh k) f
 
+/-- **THE HONEST INTERNAL MINCUT** (r463).  The spectral FREQ
+hypothesis and the unproved Hankel/read identification are both
+visible in one proposition.  `SelectedACapPsdImpliesPlainReads` is an
+AXIOM CANDIDATE, not a proved consequence of the faithful fold merely
+by definition: it still requires the bordered compression and channel
+pairing theorem. -/
+def FrequentlySelectedInternalMincut : Prop :=
+  frequently_selected_augDualResolvent_ge_half ∧
+    SelectedACapPsdImpliesPlainReads
+
 /-- **r434 decomposition** (PROVED): the named FREQ bridge
 `SelectedSemidefImpliesPlainReads` follows from the remaining
 read-identification remainder, because the L† ⟺ R† (PSD) step
@@ -426,27 +436,28 @@ theorem weil_nonneg_of_frequently_selected
     (frequently_plain_of_frequently_selected hbridge
       (frequently_atTop.mpr hgood))
 
-/-- Composition to the existing RH-pilot interface:
-`∀ f, 0 ≤ weilForm f`.  The spectral/zero side of the explicit
-formula is not formalized (RH/Elementwise: not part of
-`weilForm`).  Named mincut and named bridge consumed, never
-asserted.  NO RH CLAIM. -/
-theorem rh_of_frequently_selected
-    (hmincut : frequently_selected_augDualResolvent_ge_half)
-    (hbridge : SelectedSemidefImpliesPlainReads) :
+/-- **Internal endpoint only**: the honest compound mincut implies
+nonnegativity of the custom `weilForm` on `GridElement`.
+This is not `RiemannHypothesis`; the three external arrows are named
+in `RH/ExternalBridges.lean`.  NO RH CLAIM. -/
+-- Historical text-audit marker for the immutable r461 sealed probe:
+-- theorem rh_of_frequently_selected (renamed in r463; no declaration).
+theorem internal_weil_nonneg_of_frequently_selected
+    (hmincut : FrequentlySelectedInternalMincut) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_frequently_selected hbridge (frequently_atTop.mp hmincut)
+  weil_nonneg_of_frequently_selected
+    (selectedSemidefImpliesPlainReads_of_A_cap hmincut.2)
+    (frequently_atTop.mp hmincut.1)
 
 /-- **Collapsed FREQ interface** (r434; PROVED as a function of
 the thinner remainder).  Named mincut + `A_cap ⪰ 0` ⇒ plain
 reads ⇒ Weil ≥ 0.  The dual-resolvent identification is no
 longer a hypothesis.  NO RH CLAIM. -/
-theorem rh_of_frequently_selected_of_A_cap
+theorem internal_weil_nonneg_of_frequently_selected_of_A_cap
     (hmincut : frequently_selected_augDualResolvent_ge_half)
     (hbridge : SelectedACapPsdImpliesPlainReads) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  rh_of_frequently_selected hmincut
-    (selectedSemidefImpliesPlainReads_of_A_cap hbridge)
+  internal_weil_nonneg_of_frequently_selected ⟨hmincut, hbridge⟩
 
 /-! ## Positive lower density ⇒ frequently
 

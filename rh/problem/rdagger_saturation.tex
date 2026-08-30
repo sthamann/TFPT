@@ -660,8 +660,8 @@ dual-void / primal-saturated; a BKMM pinning argument at the
 right hard edge does not apply.
 \end{itemize}
 
-\paragraph{Lean landing pad.}
-Sorry census: five (two arithmetic holes
+\paragraph{Lean landing pad (historical state through r459).}
+At the r459 cut the sorry census was five (two arithmetic holes
 \texttt{lstar\_canonical}, \texttt{terminal\_q\_canonical}, now
 the alternative route; the named dictionary
 \texttt{pair\_terminal\_dictionary}; the opacity bridge
@@ -1347,10 +1347,9 @@ function instantiates only finitely many windows).  In
 particular, a subsequence of positive density of good windows
 suffices.  Named Lean targets:
 \texttt{weil\_nonneg\_of\_frequently\_selected},
-\texttt{rh\_of\_frequently\_selected}.
-The second name is historical: the statement is window-local
-positivity of the Weil form, not a claim about zeros of
-$\zeta$.
+\texttt{internal\_weil\_nonneg\_of\_frequently\_selected}.
+The second statement is internal window-local positivity, not a
+claim about zeros of $\zeta$.
 \end{problem}
 
 Fallback route, still \gr{open program}: if a block average of
@@ -1502,6 +1501,32 @@ $-\det K_{2}$ (nneg-$1$ family) & $[1.157,\,1126.389]$ \\
 \bottomrule
 \end{tabular}
 \end{table}
+
+\section{R463 Lean-fidelity repair}\label{sec:r463-fidelity}
+The r459 vitality statement is now qualified as
+\emph{Python object, fidelity comparison completed only in r463};
+before this repair the selected Lean object was a different raw-atom
+cosine fold.  The selected Lean path now uses the production sequence
+\[
+  \text{tent lags}\longrightarrow c_A+c_P
+  \longrightarrow\text{circulant spectral density}
+  \longrightarrow\text{grid fold and sign split},
+  \qquad L=2(m+1)-2.
+\]
+The exported k=5,9,10 pins reproduce the Python positive-measure
+Hankel entries and support/cap values.  The remaining archimedean
+lag coefficients, v958 border, and r243 budget are explicit typed
+interfaces rather than per-atom completion data.
+
+The endpoint is now
+\texttt{internal\_weil\_nonneg\_of\_frequently\_selected}.
+Its compound mincut visibly includes
+\texttt{SelectedACapPsdImpliesPlainReads}.  Three previously absent
+external links are named \texttt{sorry}s: dense extension to the full
+Weil class, identification with the standard explicit formula, and
+the standard Weil criterion against Mathlib's
+\texttt{RiemannHypothesis}.  Hence the honest census is $5\to8$.
+No statement in this section claims the Riemann hypothesis.
 
 \medskip\noindent
 \textbf{Claim boundary.}\enspace

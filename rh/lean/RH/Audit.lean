@@ -38,6 +38,7 @@ import RH.OneDefect
 import RH.GraphResolvent
 import RH.EdgeBalance
 import RH.FrequentlySelected
+import RH.ExternalBridges
 
 namespace RH
 
@@ -279,7 +280,8 @@ at 5.  NO RH CLAIM. -/
 Expected AND MEASURED: the Loewner identities and the FREQ
 extraction (plain) plus density / mean-value arithmetic are
 sorry-free except that `weil_nonneg_of_frequently_plain` /
-`weil_nonneg_of_frequently_selected` / `rh_of_frequently_selected`
+`weil_nonneg_of_frequently_selected` /
+`internal_weil_nonneg_of_frequently_selected`
 consume the existing classical arch-channel sorry through
 `elementwise_finite_stabilization`, so those three carry
 `[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
@@ -306,7 +308,7 @@ NO RH CLAIM. -/
 #print axioms weil_nonneg_of_frequently_plain
 #print axioms frequently_plain_of_frequently_selected
 #print axioms weil_nonneg_of_frequently_selected
-#print axioms rh_of_frequently_selected
+#print axioms internal_weil_nonneg_of_frequently_selected
 #print axioms frequently_of_pos_lower_density
 #print axioms frequently_selected_of_pos_lower_density
 #print axioms exists_index_zero_of_block_mean_lt_one
@@ -320,12 +322,12 @@ Expected AND MEASURED: the real-window Loewner identification
 (`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`).
 `selectedSemidefImpliesPlainReads_of_A_cap` is the same
 (a function of the named remainder, no hole).
-`rh_of_frequently_selected_of_A_cap` consumes the existing
+`internal_weil_nonneg_of_frequently_selected_of_A_cap` consumes the existing
 arch-channel sorry through the FREQ extraction, so
 `[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
 `sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
 
-MINCUT-PATH CENSUS (what `rh_of_frequently_selected` actually
+MINCUT-PATH CENSUS (what `internal_weil_nonneg_of_frequently_selected` actually
 consumes):
   ON PATH, sorry: `arch_elementwise_stabilization` (classical).
   ON PATH, named: `frequently_selected_augDualResolvent_ge_half`
@@ -349,6 +351,17 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms masterCap_posDef_iff_Rdagger_gt_half
 #print axioms selectedWindowConeSemidef_implies_A_cap_posSemidef
 #print axioms selectedSemidefImpliesPlainReads_of_A_cap
-#print axioms rh_of_frequently_selected_of_A_cap
+#print axioms internal_weil_nonneg_of_frequently_selected_of_A_cap
+
+/-! ## (q) The r463 explicit external-bridge census
+Exactly three new `sorry` declarations, replacing arrows that were
+absent at r462: dense extension, standard explicit-formula
+identification, and the standard Weil criterion against mathlib's
+`RiemannHypothesis`.  The internal endpoint is deliberately not named
+RH. -/
+
+#print axioms grid_dense_extension
+#print axioms standard_explicit_formula_identification
+#print axioms standard_weil_criterion_to_mathlib_rh
 
 end RH

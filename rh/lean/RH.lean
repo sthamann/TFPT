@@ -11,6 +11,7 @@ import RH.Open
 import RH.PairBound
 import RH.Counterexamples
 import RH.Elementwise
+import RH.FaithfulFold
 import RH.Augmented
 import RH.DualResolvent
 import RH.PivotCoordinate
@@ -21,4 +22,5 @@ import RH.OneDefect
 import RH.GraphResolvent
 import RH.EdgeBalance
 import RH.FrequentlySelected
+import RH.ExternalBridges
 import RH.Audit

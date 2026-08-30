@@ -1502,8 +1502,8 @@
       "ledger_ids": [],
       "status": "specialist dossier on the bordered dual resolvent R-dagger (reviewer priority 4; updated after r367-r373): definition of R-dagger as the rank-1 bordered dual hole kernel [[R^{-1}, Dv],[(Dv)^T, 1+gamma]]^{-1}; exact duality package (A1)-(A7); critical 3x3 Schur block; pair (2,4) straddles saturation-block edge 3|4; observed exponent alpha = 3.332; relative error-operator form.  PRIMARY question after the two-rank inertia cut is the MINIMAL form (P1) ind_-(R_{N-3}-1/2 I) <= 1 (census: overload 0/74, dichotomy 45 nneg-1 / 29 already-PD) and (P2) det K2 <= -c0 < 0 on the nneg-1 branch (-det K2 in [1.157, 1126.389], floor 0.50, corr -0.0064); Haynsworth (haynsworth_two_rank, haynsworth_mixed) and the R-dagger layer Lean sorry-free (census 7); mixed 3x3 form M-dagger = blkdiag(A0,-1/2)+U J U^T with J=diag(1,1,1/den); wedge-sign census, Phi-monotonicity, Pruefer dictionary; named dead ends (no 3x3 Jacobi Casoratian residual 3.615e-2, phase restatement, r366 O(1) mass buffer, r363 edge pinning). The older RHP/BKMM saturation question (BKMM 2007 Thm 2.7/Rem 2.8) is retained as the stronger variant.  Finite census, no asymptotics, no claim; a proof of (P1)+(P2) lands via the kernel-checked chain at window-local master positivity.  r426 adds the edge-balance chain (eight identities, P1/VAC/tot separators, floor R_inf~0.030, two open limits q_N<1 and Sigma_inf; Lean RH/EdgeBalance.lean sorry-free, census stays 5).  R-DOSSIER DCCXCVII: two cancellation cores (bulk four killed vectors + QD 1.357130 + min-norm 0.359 + r399 circularity; terminal Z_loc formula + selected margin 0.617 vs 0.0195); r427 audit 0 BUG/5 CLEAN/2 SUSPECT (kernel-Loewner definiteness hypothesis explicit); open Potapov program S_<=1 bulk / S_0 edge via Redheffer pivot 1/4-|Z_loc|^2, semidefinite+frequently quantifiers.  Refutation table 28 closed routes.  Explicitly NO RH claim -- L* and L-dagger stay [O]",
       "pin": true,
-      "sha256": "361671feb0d4bcc15abb5f8e9c1cbf97a326f550c89dcbd261fa1a1535c7aeb0",
-      "bytes": 64625
+      "sha256": "1f8bdd1c62047b88c57e1526fee74a302261e12cbd1de4eb3ad8005d55bb1ca6",
+      "bytes": 65892
     },
     {
       "path": "rh/problem/rdagger_saturation.pdf",
@@ -1512,8 +1512,8 @@
       "ledger_ids": [],
       "status": "compiled PDF of rdagger_saturation.tex (recompiled artefact, registered unpinned)",
       "pin": false,
-      "sha256": "0b5a3a51fe6190d206626511bfb8b2bfcbd199c5c0d584a096c191aa9c9f1d23",
-      "bytes": 442788
+      "sha256": "96fd7d9044e964241a0f951bce9c79c4def0c5f165dfc27fc4a7973cd32298d1",
+      "bytes": 444653
     },
     {
       "path": "rh/problem/medcap_lemma.tex",
@@ -1862,8 +1862,8 @@
       "ledger_ids": [],
       "status": "r397 exact selected domain: RealCanonicalWindow (R-fields, extends PrimeWindow) plus total construction W^R(a,m) = ExactFold(ExactPrimeSource, ExactArch, ExactBorder, ExactBudget); selected sequence a_k=2^k, m_k=k*2^floor(sqrt(k))-1 with Delta_k=2^{-r_k}*log 2, a_k->inf, Delta_k->0 PROVED; reduction weil_nonneg_of_selected_windows (plain fullRead along the sequence; consumes existing arch sorry); named mincut selected_augDualResolvent_gt_half.  lstar_canonical / terminal_q_canonical degraded to alternative route.  Zero sorry in this file; census stays 5.  NO RH claim",
       "pin": true,
-      "sha256": "970e0fed1f97ec57b2201efc8fdd412e750db62c7e94f46228a59209c0be6df0",
-      "bytes": 22668
+      "sha256": "0beb49aab6aefbda72858556a72e2970868bc9546968843f0ce7ba2f5951f233",
+      "bytes": 21002
     },
     {
       "path": "rh/lean/RH/OneDefect.lean",
@@ -4050,8 +4050,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "65ed5441187724b2c0893f9f74bb867acb60c80a20acd64d1f08ffea1ee3c5aa",
-      "bytes": 3463640
+      "sha256": "97db195467c68926fcc4301637e89f645dc2abccf5a0942d02749cb63c0338f2",
+      "bytes": 3469189
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -4070,8 +4070,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "6a83c3ed1e560f9a5086b5bf630d7d3df54ced2f6aed6a570859101f5d489118",
-      "bytes": 5545991
+      "sha256": "a2b395e5a8953e74161535d5afc0b7632ecf14026a2d7fce2f72c6f60e05a743",
+      "bytes": 5554964
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4922,6 +4922,26 @@
       "pin": true,
       "sha256": "29a03834b3689b9e63a852e96ad8a66d5308bfcb47bce3303098423ef475201d",
       "bytes": 10786
+    },
+    {
+      "path": "experiments/tfpt-discovery/gapmap_probe.py",
+      "role": "sealed_historical_probe",
+      "round": "r462",
+      "ledger_ids": [],
+      "status": "end-to-end gap map (historical sealed diagnostic) (round 462, PRIME.RDAGGER.ENDTOEND_GAPMAP.01; experiments-side, NO ledger row): VERDICT HIDDEN_GAP_FOUND.  Adversarial audit of the FrequentlySelected->RH route: the literal Lean ExactPrimeSource/ExactFold/combHankel object disagreed with the production Python builder at k=5,9,10 and the minimal proof-path declarations were misaligned.  First measured in /tmp then sealed (gapmap_probe.py smoke 15/15, SPEC_SHA 80439f55924ba591).  Companion rh/problem/endtoend_gapmap.tex + verify_gapmap.py.  NOT rerun in run_rh: r463 invalidates the old success condition by repairing the Lean object; row kept as sealed historical diagnostic only.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "d6b7cc99b2517deaee6cf55cc1150dfabfd4422169c79b12f0e5fea4205591d1",
+      "bytes": 7075
+    },
+    {
+      "path": "experiments/tfpt-discovery/lean_fidelity_probe.py",
+      "role": "sealed_probe",
+      "round": "r463",
+      "ledger_ids": [],
+      "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "b160b4b40e7fd4a4e517b09ff5fcb21a835021752724db228d27ff9d8e653579",
+      "bytes": 6820
     }
   ]
 }

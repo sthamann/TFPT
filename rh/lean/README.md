@@ -40,7 +40,7 @@
 > (`RH/FrequentlySelected.lean`) with **zero new `sorry`**:
 > Loewner face `Rdagger_ge_half_iff_augmented_posSemidef`,
 > FREQ extraction `weil_nonneg_of_frequently_selected` /
-> `rh_of_frequently_selected` (arch sorry consumed, not new),
+> `internal_weil_nonneg_of_frequently_selected` (arch sorry consumed, not new),
 > density corollary and mean-value trick proved; the new mincut
 > is `frequently_selected_augDualResolvent_ge_half`. Census
 > stays **five**.
@@ -78,6 +78,19 @@
 > form `free_window_positivity` and the pair closure
 > `pair_closes_main` are PROVED as corollaries. Historical narrative
 > (r305 four / r310 five / r326 eight / C1 seven / r376 five / r380 five / r384 five / r397 five / r406 five / r412 five / r426 five) in the blocks below.
+>
+> **r463 fidelity repair:** `RH/FaithfulFold.lean` replaces the
+> selected raw-atom cosine fold by the production pipeline
+> (tent lags, `L=2(m+1)-2`, circulant spectral density, grid fold,
+> sign split). Exported k=5/9/10 pins agree with the Python builder.
+> `archRead` is now a concrete lag pairing; only its coefficient
+> values remain external. The endpoint is renamed
+> `internal_weil_nonneg_of_frequently_selected`, and
+> `FrequentlySelectedInternalMincut` exposes
+> `SelectedACapPsdImpliesPlainReads` as an axiom candidate.
+> `RH/ExternalBridges.lean` adds three honest `sorry`s: dense
+> extension, standard explicit-formula identification, and Mathlib
+> `RiemannHypothesis`. Census **5 → 8**. NO RH CLAIM.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -190,7 +203,7 @@
 >
 > r426 proved theorems (not sorrys, census unchanged at 5): `schWoodbury_eq_oneDefectDelta`, `schWoodbury_one_neg_iff_update`, `schWoodbury_eq_phiBB_sub`, `phiBB_eq_cJ_add_selfEnergy`, `schChart_eq_eps`, `vacuous_sch_neg_iff`, `den_lt_two_iff`, `gamma_lt_one_of_le_S_lt_Bw`, `parseval_normSq` (`RH/EdgeBalance.lean`; finite algebra).  Named Props `BorderIsMuParseval`, `BorderLoewnerLeS`, `QNLtOne` (r424/r425 source identifications; same class as `P1EqCapInertia`).
 >
-> r434 proved theorems (not sorrys, census unchanged at 5): `masterCap_posSemidef_iff_Rdagger_ge_half`, `masterCap_posDef_iff_Rdagger_gt_half`, `selectedWindowConeSemidef_implies_A_cap_posSemidef`, `selectedSemidefImpliesPlainReads_of_A_cap`, `rh_of_frequently_selected_of_A_cap` (`RH/FrequentlySelected.lean`; real-window Loewner).  Named Prop `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead` remainder after the Loewner identification).  `SelectedSemidefImpliesPlainReads` is now a theorem of that remainder.
+> r434 proved theorems (not sorrys, census unchanged at 5): `masterCap_posSemidef_iff_Rdagger_ge_half`, `masterCap_posDef_iff_Rdagger_gt_half`, `selectedWindowConeSemidef_implies_A_cap_posSemidef`, `selectedSemidefImpliesPlainReads_of_A_cap`, now named `internal_weil_nonneg_of_frequently_selected_of_A_cap` (`RH/FrequentlySelected.lean`; real-window Loewner).  Named Prop `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead` remainder after the Loewner identification).  `SelectedSemidefImpliesPlainReads` is now a theorem of that remainder.
 >
 > Retired as sorries by C1: `lstar_subordination` → `lstar_canonical`
 > (retype), `terminal_positive_main` → `terminal_q_canonical` (retype,
@@ -349,7 +362,8 @@ lake build           # => "Build completed successfully"
   Inertia layer states matrix theorems against `Mathlib.LinearAlgebra.Matrix`.
   The proved layer touches only the algebra/tactic core of mathlib.
 - Build status on this machine: **builds green** (`Build completed
-  successfully`, **5 `sorry` warnings** since r376 (7 since r373, 8
+  successfully`, **8 `sorry` warnings** since r463: the previous five
+  plus the three external bridges; 5 since r376 (7 since r373, 8
   since r362 DualResolvent, 7 since C1, 8 since r326, 5 since r310),
   all intentional and typed — see the sorry table above:
   the two canonical arithmetic holes `lstar_canonical` +
@@ -936,15 +950,17 @@ Loewner identities and the density / mean-value lemmas do not.
 | `SelectedACapPsdImpliesPlainReads` | named Prop (r434 remainder) | `A_cap ⪰ 0` ⇒ plain `fullRead`.  Hankel/Weil-read identification (`BorderedCompressionBridge` + channel reads); NOT the dual-resolvent cone |
 | `selectedWindowConeSemidef_implies_A_cap_posSemidef` | **proved** (r434) | FREQ cone ⇒ `A_cap ⪰ 0` |
 | `selectedSemidefImpliesPlainReads_of_A_cap` | **proved** (r434) | thinner remainder ⇒ the r430 named bridge |
-| `rh_of_frequently_selected_of_A_cap` | **proved** (r434 collapsed interface) | named mincut + `SelectedACapPsdImpliesPlainReads` ⇒ `∀ f, 0 ≤ weilForm f` |
+| `FrequentlySelectedInternalMincut` | named Prop (r463) | FREQ cone + `SelectedACapPsdImpliesPlainReads`; both premises visible |
+| `internal_weil_nonneg_of_frequently_selected_of_A_cap` | **proved** (r463 rename) | named mincut + `SelectedACapPsdImpliesPlainReads` ⇒ `∀ f, 0 ≤ weilForm f` |
 | `weil_nonneg_of_frequently_plain` | **proved** (consumes the existing arch sorry) | FREQ of plain `fullRead` ⇒ `∀ f, 0 ≤ weilForm f`.  Coverage eventual, positivity frequent |
 | `weil_nonneg_of_frequently_selected` | **proved** (named bridge + arch sorry) | `∀ K ∃ k ≥ K, R_k† ⪰ ½I` ⇒ Weil ≥ 0 |
-| `rh_of_frequently_selected` | **proved** (composition) | named mincut + named bridge ⇒ the existing interface `∀ f, 0 ≤ weilForm f` |
+| `internal_weil_nonneg_of_frequently_selected` | **proved** (r463 honest name) | compound internal mincut ⇒ custom `GridElement` interface `∀ f, 0 ≤ weilForm f` |
 | `frequently_selected_of_eventually_gt_half` | **proved** | r397 strict tail ⇒ r430 mincut |
 | `frequently_of_pos_lower_density` | **proved** | density `≥ ε > 0` eventually ⇒ frequently |
 | `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
 
-Zero `sorry` in this file.  Census stays 5.
+Zero `sorry` in this file.  Repository census is 8 after r463
+(three external bridge sorries in `RH/ExternalBridges.lean`).
 
 **r440 mean tau index (no new Lean).**  T1/T2/MI2 are
 finite identities, machine-checked in
@@ -1022,14 +1038,15 @@ Mincut unchanged.  Census stays 5.  Machine-checked in
 `vacuity_redteam_probe.py` / `vacuity_redteam.tex`.
 Ausgang `VACUOUS_CONFIRMED`.  NO RH CLAIM.
 
-**r434 mincut-path graph** (what `rh_of_frequently_selected` /
-`rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
+**r463 mincut-path graph** (what
+`internal_weil_nonneg_of_frequently_selected` actually consumes).
+`#print axioms`
 on the extraction shows `sorryAx` only through
 `arch_elementwise_stabilization`; the two C1 holes do not appear.
 
 | Satz | konsumiert | Status |
 |---|---|---|
-| `rh_of_frequently_selected_of_A_cap` | mincut + `SelectedACapPsdImpliesPlainReads` + arch sorry | **proved** as a function of those |
+| `internal_weil_nonneg_of_frequently_selected` | compound mincut + arch sorry | **proved** as a function of those; internal Weil form only |
 | `frequently_selected_augDualResolvent_ge_half` | — | **named mincut** (`∃ᶠ`, `PosSemidef`) |
 | `SelectedACapPsdImpliesPlainReads` | — | **named remainder** (Hankel/`fullRead`) |
 | `SelectedSemidefImpliesPlainReads` | Loewner + `SelectedACapPsdImpliesPlainReads` | **proved** from the remainder (`selectedSemidefImpliesPlainReads_of_A_cap`) |
@@ -1041,6 +1058,12 @@ on the extraction shows `sorryAx` only through
 | `mainWindow_iff_builtFromPrimeSource` | — | sorry, **OFF PATH** (historical Alt-Last) |
 | `SelectedMasterImpliesPlainReads` | — | named, **OFF PATH** (eventual-strict master route) |
 | `GraphResolventIsLEnsembleInv` | — | named, **OFF PATH** (graph-resolvent face, not consumed by FREQ) |
+
+The three arrows beyond this internal endpoint are now declarations
+in `RH/ExternalBridges.lean`, each with one `sorry`:
+`grid_dense_extension`, `standard_explicit_formula_identification`,
+and `standard_weil_criterion_to_mathlib_rh`.  The last statement uses
+mathlib's actual `riemannZeta` / `RiemannHypothesis` interface.
 
 BYPASS VERDICT: yes — Selected-R† semidefiniteness bypasses
 `terminal_q_canonical` / `lstar_canonical`.  The remaining named

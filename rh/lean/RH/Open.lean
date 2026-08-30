@@ -261,7 +261,7 @@ Two quantifier wins, sorry-free except the existing
 arch-channel sorry consumed by the FREQ extraction:
 (1) `Rdagger_ge_half_iff_augmented_posSemidef` (A3 Loewner
 face); (2) `weil_nonneg_of_frequently_selected` /
-`rh_of_frequently_selected` (FREQ of `R† ⪰ ½I` plus the
+`internal_weil_nonneg_of_frequently_selected` (FREQ of `R† ⪰ ½I` plus the
 named bridge `SelectedSemidefImpliesPlainReads`).
 New mincut `frequently_selected_augDualResolvent_ge_half`;
 `selected_augDualResolvent_gt_half` degraded to the
@@ -272,8 +272,8 @@ NO RH CLAIM.
 ## r434 census (quantifier mincut audit)
 
 THE BYPASS HOLDS: `terminal_q_canonical` and
-`lstar_canonical` are NOT consumed by the FREQ RH-path
-(`rh_of_frequently_selected` / `_of_A_cap`).  They remain
+`lstar_canonical` are NOT consumed by the FREQ internal path
+(`internal_weil_nonneg_of_frequently_selected` / `_of_A_cap`). They remain
 typed `sorry`s as the alternative rational-certificate
 route `L† ⟺ L* ∧ Terminal` on all `CanonicalWindow`s
 (r397 degradation, now path-audited).  Also OFF PATH:
@@ -300,6 +300,22 @@ It was NOT provable from L† ⟺ R† alone: `fullRead` is the
 three-channel Weil pairing, not the quadratic form of
 `A_cap`.  Census unchanged at 5 (no sorry closed).
 NO RH CLAIM.
+
+## r463 census (Lean fidelity repair)
+
+The selected window now uses the production-faithful object in
+`RH/FaithfulFold.lean`: tent lags, `L=2(m+1)-2`, circulant
+spectral density, grid fold, and sign split.  k=5/9/10 values
+are pinned against Python.  `archRead` is a concrete lag read.
+`FrequentlySelectedInternalMincut` visibly includes both the
+FREQ cone and the AXIOM-CANDIDATE
+`SelectedACapPsdImpliesPlainReads`; the endpoint is named
+`internal_weil_nonneg_of_frequently_selected`.
+
+Three previously absent external arrows are explicit `sorry`s in
+`RH/ExternalBridges.lean`: dense extension, standard explicit-formula
+identification, and the Weil criterion to mathlib
+`RiemannHypothesis`. Census 5 -> 8. NO RH CLAIM.
 
 ## r440 census (mean tau index)
 

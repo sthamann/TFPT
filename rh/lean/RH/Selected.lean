@@ -71,6 +71,7 @@ the Riemann Hypothesis in either direction.  NO RH CLAIM.
 import RH.Canonical
 import RH.DualResolvent
 import RH.Elementwise
+import RH.FaithfulFold
 import Mathlib.Analysis.SpecificLimits.Basic
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Basic
@@ -100,15 +101,17 @@ def RepresentsRealCanonical (w : VonMangoldtWindow)
 
 /-! ## The four Exact blocks and the total construction
 
-`W^ℝ(a,m) = ExactFold(ExactPrimeSource(a), ExactArch(a,m),
-ExactBorder(a,m), ExactBudget(a,m))`.  Arithmetic channels are
-the r310 family (`log` / `Λ` / all prime powers `≤ a²`).
-Arch/border/budget are the named opaque completion (C1
-`canonicalCompletion`) -- TOTAL as a Lean object; the classical
-identification of those values with `arch_A` / v958 / r243 is the
-named Props below, never a `sorry`.  The fold is exact real
-arithmetic on the grid (`foldedWindow`, mass conservation
-PROVED). -/
+r463 replaces the old raw-atom cosine quotient by the production
+pipeline in `RH/FaithfulFold.lean`:
+
+`prime powers -> tent lags -> cA+cP -> circulant density ->
+ grid fold (L=2(m+1)-2) -> sign split`.
+
+`ExactArch`/`ExactBorder`/`ExactBudget` now expose the typed
+`ProductionCompletion` fields.  In particular no per-atom
+`canonicalCompletion` value enters the selected real window.
+The analytic values of the three external fields remain open, but
+their production roles are explicit in the type and documentation. -/
 
 /-- exact prime source at anchor `a`: the arithmetic layer of
 `specFamily` (atoms, derived `log`/`Λ`).  Mesh-independent. -/
@@ -116,67 +119,29 @@ noncomputable def ExactPrimeSource (a : ℕ) (ha : IsPrimePow a) :
     PrimeWindowSpec :=
   specFamily a 0 ha
 
-/-- exact archimedean masses at `(a, m)` (v563 `arch_A` intended;
-values = the named completion; mesh currently enters the window
-through `exactFoldMap`, matching r310b source theorem 4). -/
-noncomputable def ExactArch (a _m : ℕ) : ℕ → ℝ :=
-  (canonicalCompletion a).arch
+/-- Exact production archimedean lag vector
+`arch_lags(m+1, log(a)/(m+1))`. -/
+noncomputable def ExactArch (a m : ℕ) : ℕ → ℝ :=
+  productionArchLag a m
 
 /-- exact v958 border column at `(a, m)`. -/
-noncomputable def ExactBorder (a _m : ℕ) : ℕ → ℝ :=
-  (canonicalCompletion a).border
+noncomputable def ExactBorder (a m : ℕ) : ℕ → ℝ :=
+  (productionCompletion a m).border
 
 /-- exact r243 budget at `(a, m)`. -/
-noncomputable def ExactBudget (a _m : ℕ) : ℝ :=
-  (canonicalCompletion a).budget
-
-theorem ExactArch_nonneg (a m j : ℕ) : 0 ≤ ExactArch a m j :=
-  (canonicalCompletion a).arch_nonneg j
+noncomputable def ExactBudget (a m : ℕ) : ℝ :=
+  (productionCompletion a m).budget
 
 theorem ExactBudget_pos (a m : ℕ) : 0 < ExactBudget a m :=
-  (canonicalCompletion a).budget_pos
+  (productionCompletion a m).budget_pos
 
-/-- the completed unfolded spec: arithmetic source plus the three
-Exact kernel channels.  Definitionally `canonicalSpec a m ha`. -/
-noncomputable def exactCompletedSpec (a m : ℕ) (ha : IsPrimePow a) :
-    PrimeWindowSpec :=
-  canonicalSpec a m ha
-
-theorem exactCompletedSpec_eq_canonical (a m : ℕ) (ha : IsPrimePow a) :
-    exactCompletedSpec a m ha = canonicalSpec a m ha :=
-  rfl
-
-theorem ExactArch_eq_spec (a m : ℕ) (ha : IsPrimePow a) (j : Fin _) :
-    (exactCompletedSpec a m ha).archWeight j = ExactArch a m j :=
-  rfl
-
-theorem ExactBorder_eq_spec (a m : ℕ) (ha : IsPrimePow a) :
-    (exactCompletedSpec a m ha).border = ExactBorder a m :=
-  rfl
-
-theorem ExactBudget_eq_spec (a m : ℕ) (ha : IsPrimePow a) :
-    (exactCompletedSpec a m ha).budget = ExactBudget a m :=
-  rfl
-
-/-- corpus geometric fold map at mesh `Δ = log a / (m+1)` and grid
-length `L = 2(m+1)`: `u ↦ cos(2π u / (Δ L))`.  TOTAL: `0` if the
-denominator vanishes (never on the selected sequence: `a ≥ 2`). -/
-noncomputable def exactFoldMap (a m : ℕ) (u : ℝ) : ℝ :=
-  let Δ := Real.log a / (m + 1 : ℝ)
-  let L : ℝ := 2 * (m + 1 : ℝ)
-  if Δ * L = 0 then 0 else Real.cos (2 * Real.pi * u / (Δ * L))
-
-/-- unfolded completed window -- `buildPrimeWindow` of the Exact
-spec (nodes = `log`, comb = `Λ`, arch/border/budget = Exact). -/
-noncomputable def exactUnfoldedWindow (a m : ℕ) (ha : IsPrimePow a) :
-    PrimeWindow :=
-  buildPrimeWindow (exactCompletedSpec a m ha)
-
-/-- **ExactFold**: exact real aggregation of the Exact source on
-the grid (`foldedWindow` at `exactFoldMap`). -/
+/-- **ExactFold** is now the faithful production fold.  The primal
+prime-power inventory is used inside `exactPrimeLag`; the final
+support is the `m`-point spectral grid, and the positive/negative
+parts are the two Hankel channels. -/
 noncomputable def ExactFold (a m : ℕ) (ha : IsPrimePow a) :
     PrimeWindow :=
-  foldedWindow (exactUnfoldedWindow a m ha) (exactFoldMap a m)
+  productionFold a m
 
 theorem ExactFold_B (a m : ℕ) (ha : IsPrimePow a) :
     (ExactFold a m ha).B = ExactBudget a m :=
@@ -218,17 +183,16 @@ def ExactArchAgreesWithArchRead : Prop :=
       ∑ i, (realCanonicalWindow a m ha).archWeight i *
         f.toFun ((realCanonicalWindow a m ha).nodes i)
 
-/-- the Exact border passes through ExactFold definitionally
-(`foldedWindow` does not touch `u`).  The classical claim that
-those values ARE the v958 column is the intended content of
-`canonicalCompletion`, not a new hole. -/
+/-- the production border passes through ExactFold definitionally.
+The external value is the explicitly typed v958 field of
+`ProductionCompletion`. -/
 theorem ExactBorder_eq_window (a m : ℕ) (ha : IsPrimePow a) (k : ℕ) :
     (realCanonicalWindow a m ha).u k = ExactBorder a m k :=
   rfl
 
-/-- the Exact budget passes through ExactFold definitionally.
-The classical r243 drain-sum identity (not just positivity) is
-the intended content of `canonicalCompletion`. -/
+/-- the production budget passes through ExactFold definitionally.
+The external value is the explicitly typed r243 field of
+`ProductionCompletion`. -/
 theorem ExactBudget_eq_window (a m : ℕ) (ha : IsPrimePow a) :
     (realCanonicalWindow a m ha).B = ExactBudget a m :=
   rfl
