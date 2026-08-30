@@ -3776,6 +3776,36 @@
       "bytes": 229640
     },
     {
+      "path": "rh/problem/jp_increment.tex",
+      "role": "problem_statement",
+      "round": "r457 companion",
+      "ledger_ids": [],
+      "status": "lemma-first J_P increment (round 457): INCREMENT_DRIFT; RACE_EATS_K10; LEMMA_REDUCED.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "cb7e13b23b55a0fd35a1fbf7fbd2f2c3f9b2ed7f974945112578b918ad15f7cc",
+      "bytes": 5904
+    },
+    {
+      "path": "rh/problem/verify_jp_increment.py",
+      "role": "problem_check",
+      "round": "r457 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in jp_increment.tex: standalone (INCREMENT_DRIFT, RACE_EATS_K10, LEMMA_REDUCED, r456 accepted, cliff, Delta-rho drift) plus construction pins (kz17 race, k=10 eats margin, scramble).  6/6 gates, final line JP INCREMENT VERIFIED",
+      "pin": true,
+      "sha256": "db7457b8f2d14bd35731b734bb5968fd178af778a0c210fc81be04e00ba3f28a",
+      "bytes": 3562
+    },
+    {
+      "path": "rh/problem/jp_increment.pdf",
+      "role": "problem_statement",
+      "round": "r457 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of jp_increment.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "2ba00de591f5486018046769d69f77874d3e8a5cfcec0ceba58a5f2bfd24b8b0",
+      "bytes": 206752
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3950,8 +3980,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "4fb7351d0df4d947c9dba6feac07933f86bcfe5a2e5ad41baf92f8216236308a",
-      "bytes": 5537355
+      "sha256": "8bdd14cc1666114416f2dc1ae46371fca58791daf2fe3a68363ebac6b260ce95",
+      "bytes": 5539617
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4752,6 +4782,16 @@
       "pin": true,
       "sha256": "92932c8a8ffb5432bdfb4431219e41f0d8f53b45e60a53f9eb861c28a0266d76",
       "bytes": 15716
+    },
+    {
+      "path": "experiments/tfpt-discovery/jp_increment_probe.py",
+      "role": "sealed_probe",
+      "round": "r457",
+      "ledger_ids": [],
+      "status": "J_P increment (round 457, PRIME.RDAGGER.JP_INCREMENT.01; experiments-side, NO ledger row): accepts r456 VACUOUS_CONFIRMED; studies MAIN-ARCH from J_P to full cap.  VERDICT INCREMENT_DRIFT / RACE_EATS_K10 / LEMMA_REDUCED.  kz17 post-J_P Delta rho 77/77 positive (drift, not cancellation); cliff dq=0.05166.  ARCH full-cap signed pack is ill-conditioned; baseline is q* at J_P.  Race Delta q/(1-q*): 0.49..0.78 ALIVE on kz17/69/116/136; 0.996 EATS margin at k=10 (kz197); 2.16 overshoot kz230.  Death is accumulated (flip 3788 >> J_P=407).  Reduction is r453 at cap on j>=J_P; NOT r429 Z_loc alias.  Cofinal (1-eps) race REFUTED by k=10.  SCRAMBLE q(30)>1.  First measured in /tmp then sealed.  Companion rh/problem/jp_increment.tex + verify_jp_increment.py JP INCREMENT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "b9213f44fdf38151d281b6424484d4705fbccb047f9c5b52be9f6ce3f3a0cbd5",
+      "bytes": 11035
     }
   ]
 }

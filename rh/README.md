@@ -6666,6 +6666,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455
 are parallel and not dropped.
 
+**$J_P$ increment (r457,
+PRIME.RDAGGER.JP\_INCREMENT.01).**
+Sealed probe
+`experiments/tfpt-discovery/jp_increment_probe.py`
+(smoke 13/13, SPEC\_SHA `344995a565d5b94a`)
+plus `rh/problem/jp_increment.tex` (+ PDF +
+`verify_jp_increment.py`, 6/6, `JP INCREMENT VERIFIED`).
+**Ausgang INCREMENT\_DRIFT / RACE\_EATS\_K10 / LEMMA\_REDUCED.**
+Accepts r456.  Prime increment from $J_P$ drifts (no rho-cancellation).  Race eats the $k=10$ margin.  Reduction is r453 at cap; not r429.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7053,6 +7066,10 @@ rh/
 │   ├── vacuity_redteam.tex(+pdf) — r456: VACUOUS_CONFIRMED;
 │   │                     prefix prime-blind; Iff.rfl naming.
 │   │                     No RH claim
+│   ├── jp_increment.tex(+pdf) — r457: INCREMENT_DRIFT;
+│   │                     RACE_EATS_K10;
+│   │                     LEMMA_REDUCED.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7269,6 +7286,9 @@ rh/
 │   └── verify_vacuity_redteam.py — machine check of
 │                         vacuity_redteam.tex (6/6,
 │                         VACUITY REDTEAM VERIFIED)
+│   └── verify_jp_increment.py — machine check of
+│                         jp_increment.tex (6/6,
+│                         JP INCREMENT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7626,7 +7646,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r456 from
+2. **Sealed probes** — the campaign probes r250–r457 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8137,6 +8157,13 @@ is a red-team of the r450–r455 prefix-mincut
 It does not touch `experiments/next.txt`.  Lean census
 comments retract the compression reading of `Iff.rfl`;
 no new `sorry`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r457 coexistence.** Round 457 (`jp_increment_probe.py`)
+accepts r456 and studies the J_P increment
+(INCREMENT_DRIFT; RACE_EATS_K10; LEMMA_REDUCED).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
