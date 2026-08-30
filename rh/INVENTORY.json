@@ -3866,6 +3866,36 @@
       "bytes": 192694
     },
     {
+      "path": "rh/problem/race_proof.tex",
+      "role": "problem_statement",
+      "round": "r460 companion",
+      "ledger_ids": [],
+      "status": "full proof attempt at the selected-window race: OUTCOME PARTIAL; spectral reduction and two-band criterion proved; cofinal source-derived spectral-overlap estimate remains open.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "2a38f7877ded32817a356b216609a56c096460653d354ce2ea1bda4373a16d31",
+      "bytes": 11939
+    },
+    {
+      "path": "rh/problem/verify_race_proof.py",
+      "role": "problem_check",
+      "round": "r460 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered theorem in race_proof.tex: exact rational spectral/two-band wards plus full-comb k=5..12 construction pins.  10/10 gates, final line RACE PROOF ATTEMPT VERIFIED -- OUTCOME PARTIAL",
+      "pin": true,
+      "sha256": "7329a538abef9353f5bdf91c353ab9016bdadb58f2c1937d57470a82851c75c7",
+      "bytes": 6058
+    },
+    {
+      "path": "rh/problem/race_proof.pdf",
+      "role": "problem_statement",
+      "round": "r460 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of race_proof.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "cc656cc4477b9443e3020f25b387e1c2913b3e1c367618745b400fce76316490",
+      "bytes": 226291
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4872,6 +4902,16 @@
       "pin": true,
       "sha256": "0c5e3583c232b2fbc6578de1075c5f6b9fdbc293592daf00e5e77e99312378b9",
       "bytes": 16477
+    },
+    {
+      "path": "experiments/tfpt-discovery/race_proof_probe.py",
+      "role": "sealed_probe",
+      "round": "r460",
+      "ledger_ids": [],
+      "status": "race proof attempt (round 460, PRIME.RDAGGER.RACE_PROOF_ATTEMPT.01; experiments-side, NO ledger row): OUTCOME PARTIAL.  PROVED exact spectral race identity q=sum |<u,e_j>|^2/(1-lambda_j), Schur equivalence, two-band sufficient criterion, and fixed-r plateau cardinality 2r+1.  Full a^2 comb k=5..12: 29/29 full gates; race 0.607..0.758; raw norm upper bound 4.825..4991.649 and Gershgorin negative on all rows; optimized two-band certificate succeeds only at k=5 (0.910<1), fails k=6..12; full-depth ARCH chain flips 3..8 times.  Exact remaining gap: source-derived control of the normalized border vector's spectral measure near lambda=1 for infinitely many selected k.  Raw norm/Gershgorin acknowledged as r387/r429 majorant aliases, not new mechanisms.  First measured in /tmp then sealed.  Companion rh/problem/race_proof.tex + verify_race_proof.py RACE PROOF ATTEMPT VERIFIED -- OUTCOME PARTIAL.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "4af33d3b401a23f202f13aa2fd3863341255dc48d208a1cae6d0f5c286565003",
+      "bytes": 17368
     }
   ]
 }

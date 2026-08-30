@@ -236,6 +236,7 @@ PROBES = [
     ("r457", "jp_increment_probe.py"),
     ("r458", "cofinal_family_probe.py"),
     ("r459", "fullcomb_cleanup_probe.py"),
+    ("r460", "race_proof_probe.py"),
 ]
 
 MODULES = [

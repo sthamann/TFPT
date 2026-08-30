@@ -6705,6 +6705,27 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458
 are parallel and not dropped.
 
+**Selected race proof attempt (r460,
+PRIME.RDAGGER.RACE\_PROOF\_ATTEMPT.01).**
+Sealed probe
+`experiments/tfpt-discovery/race_proof_probe.py`
+(smoke 28/28, full 29/29, SPEC\_SHA `58dd22a425266c7b`)
+plus `rh/problem/race_proof.tex` (+ PDF +
+`verify_race_proof.py`, 10/10,
+`RACE PROOF ATTEMPT VERIFIED -- OUTCOME PARTIAL`).
+**Ausgang PARTIAL: SPECTRAL\_REDUCTION\_PROVED /
+NORM\_ROUTE\_REFUTED / PLATEAU\_ROUTE\_FINITE /
+SPECTRAL\_OVERLAP\_OPEN.**
+The exact spectral race identity and a two-band sufficient criterion
+are proved; the latter certifies only $k=5$.  Raw norm and Gershgorin
+fail on every complete $k=5..12$ row, and each fixed-$r$ plateau has
+only $2r+1$ members.  The exact remaining gap is a source-derived
+bound on the normalized border vector's spectral measure near
+$\lambda=1$ for infinitely many selected $k$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7102,6 +7123,10 @@ rh/
 │   ├── fullcomb_cleanup.tex(+pdf) — r459: RACE_TREND_BROKEN;
 │   │                     LEANFAM_EXACT_ALIVE(12);
 │   │                     KZ137_OUTSIDE_MINCUT.  No RH claim
+│   ├── race_proof.tex(+pdf) — r460: PARTIAL;
+│   │                     spectral reduction proved; norm route
+│   │                     refuted; spectral-overlap gap open.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7678,7 +7703,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r459 from
+2. **Sealed probes** — the campaign probes r250–r460 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8213,6 +8238,13 @@ cleans the TABLE_CAP-contaminated r457 race
 KZ137_OUTSIDE_MINCUT).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r460 coexistence.** Round 460 (`race_proof_probe.py`)
+is a PARTIAL proof attempt: exact spectral reduction and a finite
+two-band certificate, with the cofinal source-derived spectral-overlap
+estimate left open.  It does not touch `experiments/next.txt`, the
+ledger, or Lean, and makes no RH claim.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
