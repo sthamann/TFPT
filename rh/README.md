@@ -6397,6 +6397,48 @@ Mincut unchanged (base 4 / refined 5).
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 are parallel and not dropped.
 
+**Diagonal lifts Loewner (r441,
+PRIME.RDAGGER.DIAGONAL\_LIFTS\_LOEWNER.01).**
+Sealed probe
+`experiments/tfpt-discovery/diag_lifts_loewner_probe.py`
+(17/17 full, 13/13 smoke, SPEC\_SHA `1de031a3dbd907af`)
+plus `rh/problem/diag_lifts_loewner.tex` (+ PDF +
+`verify_diag_lifts.py`, 6/6, `DIAG LIFTS VERIFIED`).
+**Ausgang REDUZIERT.**
+$L_{\widetilde{m}}$ is the dressed Cauchy Gram (always
+PSD); $X$-between-$Y$ does not set $L$-inertia.
+Lift count SATZ
+$n_{-}(W_Y-K^{-1})=\#\{\lambda(W^{1/2}KW^{1/2})<1\}$.
+$d_{\min}>1\Rightarrow n_{-}\le 1$ REFUTED (6-node).
+Selected bound OPEN (census).  kz52 one slip.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r442 are
+parallel and not dropped.
+
+**Unconditional block mean (r442,
+PRIME.RDAGGER.UNCONDITIONAL\_BLOCK\_MEAN.01).**
+Sealed probe
+`experiments/tfpt-discovery/block_mean_probe.py`
+(19/19 full, 19/19 smoke, SPEC\_SHA `bc5644a9924f2eab`)
+plus `rh/problem/block_mean.tex` (+ PDF +
+`verify_block_mean.py`, 8/8, `BLOCK MEAN VERIFIED`).
+**Ausgang REDUZIERT / DICTIONARY\_EXACT / UNSIGNED\_MAJORANT\_REFUTED / SELECTED\_POINTWISE\_CENSUS / MEAN\_BOUND\_OPEN.**
+One lemma SATZ: $\kappa^{\dagger}=1\{q^{\dagger}>1\}$
+(so the block mean is the frequency of $q^{\dagger}>1$).
+Source double sum residual $1.2\cdot 10^{-15}$.
+Unsigned Chebyshev/Mertens majorant REFUTED
+($|b|$-envelope $38.5$; $|\sigma|$ $2.10$ / $87$ at $k=5,9$).
+Selected $6/6$ and core-42 $42/42$ pointwise living
+($q^{\dagger}<1$; mean $0.932$ / $0.961$; trend toward $1$,
+not falling).  Mean bound OPEN.  $k=8$ not rebuilt.
+No Lean this round (landing site already proved).
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 are
+parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6722,6 +6764,13 @@ rh/
 │   ├── mean_tau_index.tex(+pdf) — r440: T1/T2/MI2 SATZ;
 │   │                     s=1 collar is the contour boss;
 │   │                     selected+core mean 0<1.  No RH claim
+│   ├── diag_lifts_loewner.tex(+pdf) — r441: Gram SATZ;
+│   │                     lift count SATZ; d_min theorem
+│   │                     REFUTED.  REDUZIERT.  No RH claim
+│   ├── block_mean.tex(+pdf) — r442: kappa=1{q>1} SATZ;
+│   │                     unsigned majorant REFUTED;
+│   │                     Selected living; mean OPEN.
+│   │                     REDUZIERT.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -6890,6 +6939,12 @@ rh/
 │   └── verify_mean_tau.py — machine check of
 │                         mean_tau_index.tex (8/8,
 │                         MEAN TAU INDEX VERIFIED)
+│   └── verify_diag_lifts.py — machine check of
+│                         diag_lifts_loewner.tex (6/6,
+│                         DIAG LIFTS VERIFIED)
+│   └── verify_block_mean.py — machine check of
+│                         block_mean.tex (8/8,
+│                         BLOCK MEAN VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7247,7 +7302,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r440 from
+2. **Sealed probes** — the campaign probes r250–r442 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7635,6 +7690,22 @@ integrity + probes (`run_rh.py --fast --skip-lean`) after
 appending the sealed probe and the problem-document rows
 to the inventory.  r434 / r435 / r436 / r438 are parallel
 and are not dropped.
+**r441 coexistence.** Round 441 (`diag_lifts_loewner_probe.py`)
+is additive on the $R^{\dagger}$ interpolant-residual lane
+after r439 (reviewer DCCCX: DIAG_LIFTS / diagonal lift
+of $L_{-\widetilde{m}}$).  It does not touch
+`experiments/next.txt` or `rh/lean/`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r442 coexistence.** Round 442 (`block_mean_probe.py`)
+is additive on the reviewer-R439 unconditional-mean
+lane after r440 (dictionary $\kappa^{\dagger}=1\{q^{\dagger}>1\}$;
+unsigned majorant dead; mean bound open).  It does not
+touch `experiments/next.txt`.  The Lean landing site
+`exists_index_zero_of_block_mean_lt_one` is already
+proved (r430); this round does not add Lean.  Suite
+surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

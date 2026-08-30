@@ -1862,6 +1862,52 @@ _R440_STATUS = (
 )
 
 
+_R441_STATUS = (
+    "diagonal lifts Loewner "
+    "(round 441, PRIME.RDAGGER.DIAGONAL_LIFTS_LOEWNER.01, "
+    "reviewer DCCCX; experiments-side, NO ledger row): "
+    "17/17 full / 13/13 smoke; SPEC_SHA 1de031a3dbd907af; "
+    "L_m = C diag(w pi^2) C^T EXACT (5-atom L inertia "
+    "(0,2,0), 6-node (0,3,0)); X-between-Y does NOT set "
+    "L-inertia.  Lift count SATZ n_-(W-K^{-1}) = "
+    "#{lambda(W^{1/2} K W^{1/2})<1} (kdim=0: n_below_-1).  "
+    "d_min>1 => n_-<=1 REFUTED (6-node dmin=210157/57600 "
+    "and n_-=2).  Selected census: w9/kz15/18/52 n_lt1=1; "
+    "c22 gap_lo=0.99981; CHI3-9 n_lt1=0; CHI3-15 n_lt1=1; "
+    "PERM/JIT/SCR 20/19/21 dmin<1.  diag(D0) is not the "
+    "carrier.  Pair form fails at kdim>0.  First measured "
+    "in /tmp (r441_cal.py, r441_cal2.py) then sealed "
+    "(disclosed).  Full wall 0.4 s.  Builder fallback "
+    "NOT taken.  AUSGANG REDUZIERT.  Companion "
+    "rh/problem/diag_lifts_loewner.tex + "
+    "verify_diag_lifts.py 6/6 DIAG LIFTS VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
+_R442_STATUS = (
+    "unconditional block mean "
+    "(round 442, PRIME.RDAGGER.UNCONDITIONAL_BLOCK_MEAN.01, "
+    "reviewer-R439 after r440; experiments-side, NO ledger row): "
+    "19/19 full / 19/19 smoke; SPEC_SHA bc5644a9924f2eab; "
+    "LEMMA SATZ kappa^dagger = 1{q^dagger > 1} (Q q=263/450; "
+    "w9 three-way 0 at 1e-15; selected 6/6; dead chi 6/6).  "
+    "Source q^dagger = (1/Bw) b^T (I-C)^{-1} b residual 1.2e-15.  "
+    "Selected q^dagger 0.891..0.962 mean 0.931794 NOT falling "
+    "(k=5 dip then rise); EXT-6 mean 0.964; core-42 42/42 q<1 "
+    "mean 0.961 min 0.908 max 0.9985 (kz16), 4 near>0.99 still "
+    "living.  UNSIGNED |b|-envelope w9=38.5; |sigma| kz17=2.10 "
+    "kz116=87 REFUTED as <1 majorant.  MI2 4e-15; soft trG/M2 "
+    "blind.  k=8 not rebuilt.  First measured in /tmp "
+    "(r442_cal.py, r442_cal2.py) then sealed (disclosed).  "
+    "Full wall 39.1 s.  Builder fallback NOT taken.  AUSGANG "
+    "REDUZIERT / DICTIONARY_EXACT / UNSIGNED_MAJORANT_REFUTED / "
+    "SELECTED_POINTWISE_CENSUS / MEAN_BOUND_OPEN.  Companion "
+    "rh/problem/block_mean.tex + verify_block_mean.py 8/8 "
+    "BLOCK MEAN VERIFIED.  NO L* claim, NO R-dagger claim, "
+    "NO RH claim"
+)
+
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -4964,6 +5010,47 @@ ENTRIES = [
      [],
      "compiled PDF of mean_tau_index.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/diag_lifts_loewner.tex", "problem_statement",
+     "r441 companion",
+     [],
+     "lemma-first DIAG_LIFTS (round 441): Gram SATZ, "
+     "lift-count SATZ, interlacing-inertia REFUTED, "
+     "d_min=>n_-<=1 REFUTED.  REDUZIERT.  NO RH claim",
+     True),
+    ("rh/problem/verify_diag_lifts.py", "problem_check",
+     "r441 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "diag_lifts_loewner.tex: standalone Q toys "
+     "(Gram, L ND, lift count, 6-node refute) plus "
+     "construction pins (w9 WK, kz52, permute/chi).  "
+     "6/6 gates, final line DIAG LIFTS VERIFIED", True),
+    ("rh/problem/diag_lifts_loewner.pdf", "problem_statement",
+     "r441 companion",
+     [],
+     "compiled PDF of diag_lifts_loewner.tex "
+     "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/block_mean.tex", "problem_statement",
+     "r442 companion",
+     [],
+     "lemma-first unconditional block mean (round 442): "
+     "kappa^dagger = 1{q^dagger>1} SATZ; unsigned Chebyshev "
+     "majorant REFUTED; Selected+core pointwise living; "
+     "mean bound OPEN.  REDUZIERT.  NO RH claim",
+     True),
+    ("rh/problem/verify_block_mean.py", "problem_check",
+     "r442 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "block_mean.tex: standalone (Q pivot dictionary, "
+     "living toy, MI2) plus construction pins (w9 "
+     "dictionary+source, selected k=3..5, dead/live chi).  "
+     "8/8 gates, final line BLOCK MEAN VERIFIED", True),
+    ("rh/problem/block_mean.pdf", "problem_statement",
+     "r442 companion",
+     [],
+     "compiled PDF of block_mean.tex "
+     "(recompiled artefact, registered unpinned)", False),
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -5349,6 +5436,16 @@ ENTRIES = [
      "r440",
      [],
      _R440_STATUS,
+     True),
+    (f"{EXP}/diag_lifts_loewner_probe.py", "sealed_probe",
+     "r441",
+     [],
+     _R441_STATUS,
+     True),
+    (f"{EXP}/block_mean_probe.py", "sealed_probe",
+     "r442",
+     [],
+     _R442_STATUS,
      True),
 ]
 

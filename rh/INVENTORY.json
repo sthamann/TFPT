@@ -3296,6 +3296,66 @@
       "bytes": 244082
     },
     {
+      "path": "rh/problem/diag_lifts_loewner.tex",
+      "role": "problem_statement",
+      "round": "r441 companion",
+      "ledger_ids": [],
+      "status": "lemma-first DIAG_LIFTS (round 441): Gram SATZ, lift-count SATZ, interlacing-inertia REFUTED, d_min=>n_-<=1 REFUTED.  REDUZIERT.  NO RH claim",
+      "pin": true,
+      "sha256": "e7bd85b17f022e0ff8bf6aff9dbc7efa4b3566bd04e950b99c727b8993d14dbb",
+      "bytes": 7118
+    },
+    {
+      "path": "rh/problem/verify_diag_lifts.py",
+      "role": "problem_check",
+      "round": "r441 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in diag_lifts_loewner.tex: standalone Q toys (Gram, L ND, lift count, 6-node refute) plus construction pins (w9 WK, kz52, permute/chi).  6/6 gates, final line DIAG LIFTS VERIFIED",
+      "pin": true,
+      "sha256": "f79af2c1a0a6d6f7ea772b9031003ff562f80a9cb1a547accb959cbe95cda99c",
+      "bytes": 5422
+    },
+    {
+      "path": "rh/problem/diag_lifts_loewner.pdf",
+      "role": "problem_statement",
+      "round": "r441 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of diag_lifts_loewner.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "f22d763508ba0ed901cb89f0a612c9b7bc20d542f6e53e335b4fd062c525385c",
+      "bytes": 239676
+    },
+    {
+      "path": "rh/problem/block_mean.tex",
+      "role": "problem_statement",
+      "round": "r442 companion",
+      "ledger_ids": [],
+      "status": "lemma-first unconditional block mean (round 442): kappa^dagger = 1{q^dagger>1} SATZ; unsigned Chebyshev majorant REFUTED; Selected+core pointwise living; mean bound OPEN.  REDUZIERT.  NO RH claim",
+      "pin": true,
+      "sha256": "9a9aba10d13e8365f53e40b71aa04eaa3971d879107bb5dcb6d4aa3468fde95e",
+      "bytes": 7809
+    },
+    {
+      "path": "rh/problem/verify_block_mean.py",
+      "role": "problem_check",
+      "round": "r442 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in block_mean.tex: standalone (Q pivot dictionary, living toy, MI2) plus construction pins (w9 dictionary+source, selected k=3..5, dead/live chi).  8/8 gates, final line BLOCK MEAN VERIFIED",
+      "pin": true,
+      "sha256": "c809a92492dc3cd17a07e1fd87a18a819d7faf629325c816c9e5f6c44b17760c",
+      "bytes": 4280
+    },
+    {
+      "path": "rh/problem/block_mean.pdf",
+      "role": "problem_statement",
+      "round": "r442 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of block_mean.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "90c077460d043a1a6cf05a2f83cc3517becbc708b4816fea57b0c517306f8ac5",
+      "bytes": 225752
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3450,8 +3510,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "7f7b7c7327a786dbb2ead4aaae7fb8b658656108a528b04d0cba3a8d8036af8c",
-      "bytes": 3456438
+      "sha256": "162c7ff38125ac8c565612083cfd1e1d5f2e125eedf81230a2eaaacdff90a1b1",
+      "bytes": 3459377
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -3470,8 +3530,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "1e6020461d53bbca915705249ff6cc8f88a9f10c5bd6a4ceb8cd09006981f668",
-      "bytes": 5490631
+      "sha256": "e0a45a1ae8ebc8ddf3dde559ef4df2b20edc6a1429b3d1707fb1f9c0b95461cf",
+      "bytes": 5501380
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4112,6 +4172,26 @@
       "pin": true,
       "sha256": "09237a410cfe904013c88226fec720b6dcb729ce57c6bde29da31b1d4aba2cfa",
       "bytes": 25064
+    },
+    {
+      "path": "experiments/tfpt-discovery/diag_lifts_loewner_probe.py",
+      "role": "sealed_probe",
+      "round": "r441",
+      "ledger_ids": [],
+      "status": "diagonal lifts Loewner (round 441, PRIME.RDAGGER.DIAGONAL_LIFTS_LOEWNER.01, reviewer DCCCX; experiments-side, NO ledger row): 17/17 full / 13/13 smoke; SPEC_SHA 1de031a3dbd907af; L_m = C diag(w pi^2) C^T EXACT (5-atom L inertia (0,2,0), 6-node (0,3,0)); X-between-Y does NOT set L-inertia.  Lift count SATZ n_-(W-K^{-1}) = #{lambda(W^{1/2} K W^{1/2})<1} (kdim=0: n_below_-1).  d_min>1 => n_-<=1 REFUTED (6-node dmin=210157/57600 and n_-=2).  Selected census: w9/kz15/18/52 n_lt1=1; c22 gap_lo=0.99981; CHI3-9 n_lt1=0; CHI3-15 n_lt1=1; PERM/JIT/SCR 20/19/21 dmin<1.  diag(D0) is not the carrier.  Pair form fails at kdim>0.  First measured in /tmp (r441_cal.py, r441_cal2.py) then sealed (disclosed).  Full wall 0.4 s.  Builder fallback NOT taken.  AUSGANG REDUZIERT.  Companion rh/problem/diag_lifts_loewner.tex + verify_diag_lifts.py 6/6 DIAG LIFTS VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "675d23b37623fe256292c415e43321f52a57a6e50818e556cb54302da52e375e",
+      "bytes": 17315
+    },
+    {
+      "path": "experiments/tfpt-discovery/block_mean_probe.py",
+      "role": "sealed_probe",
+      "round": "r442",
+      "ledger_ids": [],
+      "status": "unconditional block mean (round 442, PRIME.RDAGGER.UNCONDITIONAL_BLOCK_MEAN.01, reviewer-R439 after r440; experiments-side, NO ledger row): 19/19 full / 19/19 smoke; SPEC_SHA bc5644a9924f2eab; LEMMA SATZ kappa^dagger = 1{q^dagger > 1} (Q q=263/450; w9 three-way 0 at 1e-15; selected 6/6; dead chi 6/6).  Source q^dagger = (1/Bw) b^T (I-C)^{-1} b residual 1.2e-15.  Selected q^dagger 0.891..0.962 mean 0.931794 NOT falling (k=5 dip then rise); EXT-6 mean 0.964; core-42 42/42 q<1 mean 0.961 min 0.908 max 0.9985 (kz16), 4 near>0.99 still living.  UNSIGNED |b|-envelope w9=38.5; |sigma| kz17=2.10 kz116=87 REFUTED as <1 majorant.  MI2 4e-15; soft trG/M2 blind.  k=8 not rebuilt.  First measured in /tmp (r442_cal.py, r442_cal2.py) then sealed (disclosed).  Full wall 39.1 s.  Builder fallback NOT taken.  AUSGANG REDUZIERT / DICTIONARY_EXACT / UNSIGNED_MAJORANT_REFUTED / SELECTED_POINTWISE_CENSUS / MEAN_BOUND_OPEN.  Companion rh/problem/block_mean.tex + verify_block_mean.py 8/8 BLOCK MEAN VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "bd9bcf7f53cb4f24cb3ce48eee4bce0ef5f998e448473b13604be9d758bd5922",
+      "bytes": 18654
     }
   ]
 }
