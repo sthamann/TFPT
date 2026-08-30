@@ -3536,6 +3536,36 @@
       "bytes": 199398
     },
     {
+      "path": "rh/problem/flip_vs_stab.tex",
+      "role": "problem_statement",
+      "round": "r449 companion",
+      "ledger_ids": [],
+      "status": "lemma-first flip vs stabilization (round 449): TAIL_ONLY; every measured chain flip sits past n_stab; prefix-R^dagger lives.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "9618312443f1a8b029696e6d3477e89858a2d627c4d45325bc857ed581477226",
+      "bytes": 5507
+    },
+    {
+      "path": "rh/problem/verify_flip_vs_stab.py",
+      "role": "problem_check",
+      "round": "r449 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in flip_vs_stab.tex: standalone (TAIL_ONLY, flip>n_stab, slice floor) plus construction pins (kz17 n_stab, kz197 prefix-80, dead chi).  6/6 gates, final line FLIP VS STAB VERIFIED",
+      "pin": true,
+      "sha256": "2042ae683989eeadb6723c82795a7b563e3a956f9abfccc4ae55fd7a9dc91020",
+      "bytes": 3447
+    },
+    {
+      "path": "rh/problem/flip_vs_stab.pdf",
+      "role": "problem_statement",
+      "round": "r449 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of flip_vs_stab.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9fd527e10ebef73d61904b03c23ff79671821d1f7068d3a7357d8291a2531583",
+      "bytes": 217076
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3710,8 +3740,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "a00febde8d540b652fb385b824871351b60f1c6a80ea6c7ac1a8923fcdfabb5e",
-      "bytes": 5518747
+      "sha256": "ff5da8848536c25b3b662a009de1e37e3c4962639318c6788f07446e0b8ecf73",
+      "bytes": 5521371
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4427,11 +4457,30 @@
       "path": "experiments/tfpt-discovery/exact_band_probe.py",
       "role": "sealed_probe",
       "round": "r448",
-      "ledger_ids": [],
+      "ledger_ids": [
+        [
+          "experiments/tfpt-discovery/flip_vs_stab_probe.py",
+          "sealed_probe",
+          "r449",
+          [],
+          "flip vs stabilization (round 449, PRIME.INFRA.FLIP_VS_STABILIZATION.01; experiments-side, NO ledger row): lemma-first, exactly one question -- do the deep-window chain flips sit inside or beyond n_stab?  VERDICT TAIL_ONLY.  n_stab via Chebyshev-moment Fenster-Vergleich (skip m0/m1; eps-robust 1e-6..1e-2): kz136:175 live, kz137:175 flip 8283, kz170:194 flip 5515, kz197:406 flip 3788, kz230:194 flip 1818, kz500:1525 flip 9564.  ALL flips past n_stab. Prefix-80 q^dagger living, delta in [0.093,0.129]; r445 slice floor stands.  Dead CHI3-15 n_flip=0 q=1.023 (edge, no prefix-hit).  Mincut already consumes stabilized fullRead; Python ABD-dead is a tail statement.  First measured in /tmp then sealed.  Companion rh/problem/flip_vs_stab.tex + verify_flip_vs_stab.py FLIP VS STAB VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+          true
+        ]
+      ],
       "status": "exact living band (round 448, PRIME.INFRA.EXACT_LIVING_BAND.01; experiments-side, NO ledger row): lemma-first, exactly one question -- does the EXACT band live cofinally, and is kz197 a 2^k resonance?  VERDICT NOT_COFINAL / COMMENSURABILITY_REFUTED / NEXT_ODD_FAILS / ZETA_CHAIN_DEATH / LAST_LIVE_136_EXACT.  Float mesh: kz136 lives; every sampled kz>=137 is float-dead.  Exact kz230 (generic a=1259) dies at n=1818 = float, dps 50=70 bit-identical -- 2^k anchors are not special.  Exact kz170 dies at n=5515 = float.  Exact kz137 dies at n=8283 (n/N=0.998), not float 7511 (location-lie).  kz197 is an in-chain zeta death (q_N=-1.682, |Z_loc|=0.033 living-small, |Z|=1.132, n/N=0.931), not a dead-chi pole overshoot.  Predefined next-odd-after-2^k lives k<=9, dies k=10; 3*2^{k-1} dies at k=9; 3^k dies at k=6.  r445 slice floor stands.  First measured in /tmp then sealed.  Companion rh/problem/exact_band.tex + verify_exact_band.py EXACT BAND VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
       "pin": true,
       "sha256": "a71c7553e7079a968332c5780f3098cf2fa4c9d2115eca471e0d354e31cd25c3",
       "bytes": 15073
+    },
+    {
+      "path": "experiments/tfpt-discovery/flip_vs_stab_probe.py",
+      "role": "sealed_probe",
+      "round": "r449",
+      "ledger_ids": [],
+      "status": "flip vs stabilization (round 449, PRIME.INFRA.FLIP_VS_STABILIZATION.01; experiments-side, NO ledger row): lemma-first, exactly one question -- do the deep-window chain flips sit inside or beyond n_stab?  VERDICT TAIL_ONLY.  n_stab via Chebyshev-moment Fenster-Vergleich (skip m0/m1; eps-robust 1e-6..1e-2): kz136:175 live, kz137:175 flip 8283, kz170:194 flip 5515, kz197:406 flip 3788, kz230:194 flip 1818, kz500:1525 flip 9564.  ALL flips past n_stab. Prefix-80 q^dagger living, delta in [0.093,0.129]; r445 slice floor stands.  Dead CHI3-15 n_flip=0 q=1.023 (edge, no prefix-hit).  Mincut already consumes stabilized fullRead; Python ABD-dead is a tail statement.  First measured in /tmp then sealed.  Companion rh/problem/flip_vs_stab.tex + verify_flip_vs_stab.py FLIP VS STAB VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "1a5dcda0369b5104701ba97c9fb21cc90767208b350bfa43746c6033c40492af",
+      "bytes": 11816
     }
   ]
 }

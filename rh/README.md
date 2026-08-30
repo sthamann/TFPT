@@ -6560,6 +6560,21 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447
 are parallel and not dropped.
 
+**Flip versus stabilization (r449,
+PRIME.INFRA.FLIP\_VS\_STABILIZATION.01).**
+Sealed probe
+`experiments/tfpt-discovery/flip_vs_stab_probe.py`
+(smoke 14/14, SPEC\_SHA `84ba4e6a83a627b9`)
+plus `rh/problem/flip_vs_stab.tex` (+ PDF +
+`verify_flip_vs_stab.py`, 6/6, `FLIP VS STAB VERIFIED`).
+**Ausgang TAIL\_ONLY / PREFIX\_LIVE / SLICE\_FLOOR\_STANDS / MINCUT\_IS\_PREFIX.**
+Every measured chain flip sits past $n_{\mathrm{stab}}$ (Chebyshev Fenster-Vergleich, $\varepsilon$-robust).  Prefix-$80$ $q^{\dagger}$ lives ($\delta\in[0.093,0.129]$).  The r430/r434 mincut already consumes the stabilized prefix.  No anti-RH candidate.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6917,6 +6932,9 @@ rh/
 │   │                     2^k commensurability refuted;
 │   │                     kz197 zeta-chain death;
 │   │                     next-odd fails.  No RH claim
+│   ├── flip_vs_stab.tex(+pdf) — r449: TAIL_ONLY;
+│   │                     flips past n_stab; prefix
+│   │                     R^dagger lives.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7109,6 +7127,9 @@ rh/
 │   └── verify_exact_band.py — machine check of
 │                         exact_band.tex (7/7,
 │                         EXACT BAND VERIFIED)
+│   └── verify_flip_vs_stab.py — machine check of
+│                         flip_vs_stab.tex (6/6,
+│                         FLIP VS STAB VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7466,7 +7487,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r448 from
+2. **Sealed probes** — the campaign probes r250–r449 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7910,6 +7931,14 @@ Suite surface: integrity + probes
 is additive on the r447 exact-atom builder
 (NOT_COFINAL: the exact band ends at kz136;
 2^k commensurability refuted; next-odd fails).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r449 coexistence.** Round 449 (`flip_vs_stab_probe.py`)
+is additive on the r448 band census
+(TAIL_ONLY: chain flips sit past n_stab;
+prefix-R^dagger lives; mincut already is prefix).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes

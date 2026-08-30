@@ -999,6 +999,14 @@ family fails) is machine-checked in
 `exact_band_probe.py` / `exact_band.tex`.
 Infra only; no new `sorry`; census stays 5.
 
+**r449 flip vs stabilization (no new Lean).**  The
+TAIL_ONLY census (every measured chain flip sits
+past $n_{\mathrm{stab}}$; prefix-$R^{\dagger}$ lives)
+is machine-checked in `flip_vs_stab_probe.py` /
+`flip_vs_stab.tex`.  Infra only; no new `sorry`;
+census stays 5.  The existing mincut already
+consumes the stabilized `fullRead` prefix.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through
