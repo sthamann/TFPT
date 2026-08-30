@@ -3836,6 +3836,36 @@
       "bytes": 211521
     },
     {
+      "path": "rh/problem/fullcomb_cleanup.tex",
+      "role": "problem_statement",
+      "round": "r459 companion",
+      "ledger_ids": [],
+      "status": "lemma-first fullcomb cleanup (round 459): RACE_TREND_BROKEN; LEANFAM_EXACT_ALIVE(12); KZ137_OUTSIDE_MINCUT.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "3b109580157e13c1a2b85fa0422e11f45e87ed221c3d5ea19a513b8015376d64",
+      "bytes": 6465
+    },
+    {
+      "path": "rh/problem/verify_fullcomb_cleanup.py",
+      "role": "problem_check",
+      "round": "r459 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in fullcomb_cleanup.tex: standalone (verdicts, frame-A race break, Lean band, Lean mesh) plus construction pins (kz17 race, lean k=10, lean a=641).  7/7 gates, final line FULLCOMB CLEANUP VERIFIED",
+      "pin": true,
+      "sha256": "e905ab3ec23845f2dae1b0c1c0234dc1be153f5ebbabe78475e7f105ea02dd11",
+      "bytes": 3421
+    },
+    {
+      "path": "rh/problem/fullcomb_cleanup.pdf",
+      "role": "problem_statement",
+      "round": "r459 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of fullcomb_cleanup.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "46654d93818d803b435ff1947a4b8071ff5175edb6a27fa06e19ccd5987dc553",
+      "bytes": 192694
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4010,8 +4040,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "fff01d04c5f7086f9af077206cdd44e737a3e771dbfcd94b56816f64dcf58fd2",
-      "bytes": 5541782
+      "sha256": "4f3ffbe77d56df7291aca710b90804d3c49538faebac1a6cdedb42d33bfa3267",
+      "bytes": 5543932
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4832,6 +4862,16 @@
       "pin": true,
       "sha256": "c7874ea69d60dfeed4915af005b029fcf8ab0ad76fc87b3c930cfc75edc42852",
       "bytes": 10940
+    },
+    {
+      "path": "experiments/tfpt-discovery/fullcomb_cleanup_probe.py",
+      "role": "sealed_probe",
+      "round": "r459",
+      "ledger_ids": [],
+      "status": "fullcomb cleanup (round 459, PRIME.RDAGGER.FULLCOMB_CLEANUP.01; experiments-side, NO ledger row): lemma-first, three contaminated findings.  VERDICT RACE_TREND_BROKEN / LEANFAM_EXACT_ALIVE(12) / KZ137_OUTSIDE_MINCUT.  r457 race at kz197/230 ran on TABLE_CAP=4e5; full a^2 comb: 17=0.493 69=0.539 116=0.713 136=0.784 138=0.759 197=0.724 230=0.770 (all <1, monotone broken after 136; fit M2; only-old M1).  Lean selectedMesh k=5..12 race in 0.607..0.758, not to 1; exact dps=50 n_flip=0 at k=10,11,12; k=14 a^2 budget limit.  kz137 inventory complete ka=34856/34856 still dead (pack n_flip=103, mass-chain first 7308); Lean a=641 selectedMesh k=9/10 lives (race 0.453/0.534) -- death is frame-A gap-coupling, outside the mincut.  First measured in /tmp then sealed.  Companion rh/problem/fullcomb_cleanup.tex + verify_fullcomb_cleanup.py FULLCOMB CLEANUP VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "0c5e3583c232b2fbc6578de1075c5f6b9fdbc293592daf00e5e77e99312378b9",
+      "bytes": 16477
     }
   ]
 }

@@ -6692,6 +6692,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457
 are parallel and not dropped.
 
+**Full-comb cleanup (r459,
+PRIME.RDAGGER.FULLCOMB\_CLEANUP.01).**
+Sealed probe
+`experiments/tfpt-discovery/fullcomb_cleanup_probe.py`
+(smoke 18/18, SPEC\_SHA `a34f8d17d767d4d1`)
+plus `rh/problem/fullcomb_cleanup.tex` (+ PDF +
+`verify_fullcomb_cleanup.py`, 7/7, `FULLCOMB CLEANUP VERIFIED`).
+**Ausgang RACE\_TREND\_BROKEN / LEANFAM\_EXACT\_ALIVE(12) / KZ137\_OUTSIDE\_MINCUT.**
+r457 RACE\_EATS\_K10 was a TABLE\_CAP echo: completed races stay below 1 and the monotone climb breaks after $k_z136$.  Lean selectedMesh race stays in $0.61$--$0.76$ through exact $k=12$.  $k_z137$ dies on frame-A with a complete comb; the Lean window at $a=641$ lives.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7086,6 +7099,9 @@ rh/
 │   ├── cofinal_family.tex(+pdf) — r458: FAMILY_CANDIDATE;
 │   │                     TABLE_CAP_ARTEFACT;
 │   │                     residual kz137.  No RH claim
+│   ├── fullcomb_cleanup.tex(+pdf) — r459: RACE_TREND_BROKEN;
+│   │                     LEANFAM_EXACT_ALIVE(12);
+│   │                     KZ137_OUTSIDE_MINCUT.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7662,7 +7678,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r458 from
+2. **Sealed probes** — the campaign probes r250–r459 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8187,6 +8203,14 @@ is additive on the r456 full-cap retyping
 (FAMILY_CANDIDATE: Lean selectedMesh lives;
 TABLE_CAP_ARTEFACT on the frame-A 2^k deaths;
 residual deep death kz137).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r459 coexistence.** Round 459 (`fullcomb_cleanup_probe.py`)
+cleans the TABLE_CAP-contaminated r457 race
+(RACE_TREND_BROKEN; LEANFAM_EXACT_ALIVE(12);
+KZ137_OUTSIDE_MINCUT).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
