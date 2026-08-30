@@ -6523,6 +6523,26 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445
 are parallel and not dropped.
 
+**Exact-atom adjudication (r447,
+PRIME.INFRA.EXACT\_ATOM\_ADJUDICATION.01).**
+Sealed probe
+`experiments/tfpt-discovery/exact_atom_probe.py`
+(smoke 14/14, SPEC\_SHA `b84310d5668a0d4c`)
+plus `rh/problem/exact_atom.tex` (+ PDF +
+`verify_exact_atom.py`, 7/7, `EXACT ATOM VERIFIED`).
+**Ausgang EXACT\_DEAD / ATOM\_ULP\_ONLY / FLIP\_STABLE\_3788 / BAND\_ENDS / SLICE\_FLOOR\_STANDS / THIS\_FAMILY\_FREQUENTLY\_FALSIFIED.**
+Exact $k=10$ atoms agree with float64 to one ulp
+($\mathrm{rel}_x=4.4\cdot 10^{-16}$).  The chain
+still flips at $n=3788$, bit-identical at dps 50 and 70.
+float64-log is not the cause.  This $2^k$ family does
+not feed the frequently-quantifier; other cofinal
+families are a reviewer fork.  r445 slice floor stands.
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6872,6 +6892,10 @@ rh/
 │   │                     breaks are REAL; mesh does
 │   │                     not repair; last live kz=136.
 │   │                     COFINAL_ABD_OPEN.  No RH claim
+│   ├── exact_atom.tex(+pdf) — r447: k=10 EXACT_DEAD;
+│   │                     atoms ulp-close; this 2^k
+│   │                     family does not feed frequently.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7058,6 +7082,9 @@ rh/
 │   └── verify_deep_abd.py — machine check of
 │                         deep_abd.tex (7/7,
 │                         DEEP ABD VERIFIED)
+│   └── verify_exact_atom.py — machine check of
+│                         exact_atom.tex (7/7,
+│                         EXACT ATOM VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7415,7 +7442,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r446 from
+2. **Sealed probes** — the campaign probes r250–r447 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7842,6 +7869,14 @@ integrity + probes (`run_rh.py --fast --skip-lean`).
 **r446 coexistence.** Round 446 (`deep_abd_probe.py`)
 is additive on the r445 ABD-living / floor-fit infra
 lane (REAL vs FLOAT adjudication of the deep breaks).
+It does not touch `experiments/next.txt`.  The Lean
+landing site `exists_index_zero_of_block_mean_lt_one`
+is already proved (r430); this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r447 coexistence.** Round 447 (`exact_atom_probe.py`)
+is additive on the r446 exact-vs-float atom fork
+(EXACT_DEAD: the true k=10 window still flips).
 It does not touch `experiments/next.txt`.  The Lean
 landing site `exists_index_zero_of_block_mean_lt_one`
 is already proved (r430); this round does not add Lean.

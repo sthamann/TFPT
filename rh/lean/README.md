@@ -985,6 +985,13 @@ machine-checked in `deep_abd_probe.py` /
 `deep_abd.tex`.  Infra only; no new `sorry`; census
 stays 5.
 
+**r447 exact-atom adjudication (no new Lean).**  The
+EXACT_DEAD verdict on the true $k=10$ window
+(mpmath atoms from exact integer sources) is
+machine-checked in `exact_atom_probe.py` /
+`exact_atom.tex`.  Infra only; no new `sorry`; census
+stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

@@ -3476,6 +3476,36 @@
       "bytes": 201188
     },
     {
+      "path": "rh/problem/exact_atom.tex",
+      "role": "problem_statement",
+      "round": "r447 companion",
+      "ledger_ids": [],
+      "status": "lemma-first exact-atom adjudication (round 447): k=10 is EXACT_DEAD; atoms are ulp-close to float64; this 2^k family does not feed frequently.  NO RH claim",
+      "pin": true,
+      "sha256": "fbc95150f4bf1367af1809cc57d45d97081a17226857d574c53bea08c4dac1fa",
+      "bytes": 5020
+    },
+    {
+      "path": "rh/problem/verify_exact_atom.py",
+      "role": "problem_check",
+      "round": "r447 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in exact_atom.tex: standalone (EXACT_DEAD pins, atom-ulp, slice floor) plus construction pins (k=5 exact atoms/chain, k=10 float flip, dead chi).  7/7 gates, final line EXACT ATOM VERIFIED",
+      "pin": true,
+      "sha256": "e52a2bd1b4b9ebc7b9c36e9bba6ea0bd33ed861f23e4b8b8811399f12ada3394",
+      "bytes": 4076
+    },
+    {
+      "path": "rh/problem/exact_atom.pdf",
+      "role": "problem_statement",
+      "round": "r447 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of exact_atom.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c42ee2aac5e66d32d824ff3fca66238ff28a69d666aa27695b89e354989781ba",
+      "bytes": 186391
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3630,8 +3660,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "39442b144449c5dbeb40a2ca3b77ae4d35dd6c5c081733e29e4b26a68312baf0",
-      "bytes": 3459408
+      "sha256": "b9b671e008585d865bd27c98cd743319c1142bbe85c170af40266a7d6b89ebce",
+      "bytes": 3463308
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -3650,8 +3680,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "21849a4a27a3f2a64ae5ec874dbfe5b4535659fde470c9d36d02759704c3dd22",
-      "bytes": 5512509
+      "sha256": "badcf4cddf744af1f7f0b9bc8bee65b7e37e5b50c9026045d56991a76424be12",
+      "bytes": 5516607
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4352,6 +4382,16 @@
       "pin": true,
       "sha256": "fe6f2b330269cf2bc7b08120b4cf8bde15fd402d4de0e4ad131a8212cc02063c",
       "bytes": 28725
+    },
+    {
+      "path": "experiments/tfpt-discovery/exact_atom_probe.py",
+      "role": "sealed_probe",
+      "round": "r447",
+      "ledger_ids": [],
+      "status": "exact-atom adjudication (round 447, PRIME.INFRA.EXACT_ATOM_ADJUDICATION.01; experiments-side, NO ledger row): lemma-first, exactly one question -- does the TRUE k=10 window live when atoms are built in mpmath from exact integer sources?  VERDICT EXACT_DEAD.  Exact vs float64 atoms: positions rel 4.44e-16 (1 ulp), k=10 weights rel 6.33e-15 -- float64-log / fold are NOT the source.  k=10 exact-atom chain dps 50 (530 s): first flip STILL n=3788, eta=-8.853149582220489e-14 rel=1.255988618504423e-6, n_flip=115 pos_ok=False.  dps 70 to n=3793: first n and eta BIT-IDENTICAL.  Divergence vs float chain rel>1e-8 at n=218 (abs ~1e-15, same sign); no sign-split.  k=9 exact-atom prefix 80 confirms float.  kz=137 atoms rel 4.44e-16.  n/N=0.931.  THIS 2^k family does not feed the frequently quantifier; other cofinal families are a reviewer fork.  r445 slice floor stands (no delta_10).  First measured in /tmp (r447_k10.json, r447_dps70.json) then sealed.  AUSGANG EXACT_DEAD / ATOM_ULP_ONLY / FLIP_STABLE_3788 / BAND_ENDS / SLICE_FLOOR_STANDS / THIS_FAMILY_FREQUENTLY_FALSIFIED.  Companion rh/problem/exact_atom.tex + verify_exact_atom.py EXACT ATOM VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "a01ebf203c5f946d611d4ffb71ecf00fbd75c0ece7f32e14e69f1aad2586eca7",
+      "bytes": 27044
     }
   ]
 }
