@@ -6178,6 +6178,46 @@ New Lean mincut: named Prop
 r431/r433 are the parallel discovery lanes; this round does
 not touch `experiments/next.txt`.
 
+**Edge as Redheffer step (r433,
+PRIME.RDAGGER.EDGE\_REDHEFFER\_COMPLETION.01).**  Sealed
+probe
+`experiments/tfpt-discovery/edge_redheffer_probe.py`
+(27/27 full, 24/24 smoke, SPEC\_SHA `8371b954f4d56847`)
+plus `rh/problem/edge_redheffer.tex` (+ PDF +
+`verify_edge_redheffer.py`, 8/8, `EDGE REDHEFFER VERIFIED`).
+**Ausgang REDHEFFER\_EXACT / PIVOT\_IS\_ONE\_MINUS\_QDAG / QUARTER\_NOT\_UNIVERSAL.**
+The r362/r369 augmentation $R\to R^{\dagger}$ **is** the
+terminating $2\times 2$-block Redheffer star of the bulk
+colligation $\Theta=[[A,U],[U^{T},0_{3}]]$ with edge factor
+$E=J=\mathrm{diag}(I_{2},1/\mathrm{den})$ (SATZ: $\mathbb{Q}$
+residual $0$, $\mathrm{den}=23/30$; w9 residual $1.9\cdot 10^{-15}$;
+sequential CD-then-border equals the packed $3\times 3$).
+Last Potapov pivot extracted from the border of
+$M^{\dagger}$ (r362 $\mathrm{sch}_{b}/q^{\dagger}$), **not**
+defined from $\mathrm{sch}$:
+$\delta:=1-q^{\dagger}=4\,\mathrm{sch}_{b}/(1+2\,\mathrm{sch}_{b})=-\mathrm{sch}$
+with $c'=1$ ($\mathbb{Q}$: $\mathrm{sch}=-187/450$,
+$\mathrm{sch}_{b}=187/1426$, $\delta=187/450$).
+Energy form $\delta=1-\lvert\alpha_{\mathrm{edge}}\rvert^{2}$
+with $\lvert\alpha_{\mathrm{edge}}\rvert^{2}=q^{\dagger}$.
+The companion $\delta=c(\tfrac14-\lvert Z_{\mathrm{loc}}\rvert^{2})$
+is **not** world-blind (selected $c\in[0.155,5.51]$; living
+$\chi_{3}$-$9$ and vacuous MAIN $\mathrm{kz}\,12/16$:
+$\delta>0$ but quarter $<0$).
+Dead $\chi$ $6/6$ via $\delta<0$; living MAIN+$\chi$ $\delta>0$;
+scramble $\mathrm{nneg}(A_{0})=21$ (bulk already dead).
+$k=3$: $\lvert Z_{\mathrm{loc}}\rvert=0.486846$, air $0.013154$,
+$\delta=0.071564>0$.
+Kills: drop-border (no $3\times 3$ pivot); ones-Woodbury
+$\Delta=2.11\cdot 10^{-3}\neq\delta$; r263 $q_{N}=(7/5)Z^{2}$
+on the full $Z$, not $Z_{\mathrm{loc}}$.
+No Lean this round (Cayley mixed-form bridge not in Lean).
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row,
+NO L\* claim, NO RH CLAIM.
+Coexistence: r374--r430 are parallel lemma-first / Lean
+lanes; this round is additive.
+
 ## Folder guide
 
 ```
@@ -6624,6 +6664,9 @@ rh/
 │   └── verify_zloc_head.py — machine check of
 │                         zloc_head.tex (6/6,
 │                         ZLOC HEAD VERIFIED)
+│   └── verify_edge_redheffer.py — machine check of
+│                         edge_redheffer.tex (8/8,
+│                         EDGE REDHEFFER VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -6981,7 +7024,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r429 from
+2. **Sealed probes** — the campaign probes r250–r433 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7300,6 +7343,17 @@ Prop `selected_augDualResolvent_gt_half` degraded to the
 stronger alternative.  Density corollary and mean-value
 trick **PROVED**.  Zero new `sorry`; census **stays 5**.
 NO RH CLAIM.
+**r433 coexistence.** Round 433 (`edge_redheffer_probe.py`)
+is additive on the $R^{\dagger}$ Potapov lane after r362/r369
+and r429 (reviewer DCCXCVII Teil D: the border as an
+identifiable Redheffer/Schur step).  It does not touch
+`experiments/next.txt` and does not touch `rh/lean/`
+(the Cayley mixed-form bridge is not in Lean).  Suite
+surface of this round: integrity + probes
+(`run_rh.py --fast --skip-lean`) after appending the
+sealed probe and the problem-document rows to the
+inventory.  r430 is the parallel Lean quantifier lane
+and is not dropped.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
