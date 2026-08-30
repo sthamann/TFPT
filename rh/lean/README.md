@@ -978,6 +978,13 @@ are machine-checked in `deep_builder_probe.py` /
 `deep_builder.tex`.  Infra only; no new `sorry`; census
 stays 5.
 
+**r446 deep ABD adjudication (no new Lean).**  The
+REAL verdict on the $k=10/11/12$ ABD breaks and the
+failed mesh repair at the $2^k$ anchors are
+machine-checked in `deep_abd_probe.py` /
+`deep_abd.tex`.  Infra only; no new `sorry`; census
+stays 5.
+
 **r434 mincut-path graph** (what `rh_of_frequently_selected` /
 `rh_of_frequently_selected_of_A_cap` actually consume).  `#print axioms`
 on the extraction shows `sorryAx` only through

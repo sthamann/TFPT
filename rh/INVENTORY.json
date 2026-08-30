@@ -3446,6 +3446,36 @@
       "bytes": 202805
     },
     {
+      "path": "rh/problem/deep_abd.tex",
+      "role": "problem_statement",
+      "round": "r446 companion",
+      "ledger_ids": [],
+      "status": "lemma-first deep ABD adjudication (round 446): k=10/11/12 breaks are REAL; mesh repair at the 2^k anchors fails; last living kz=136.  COFINAL_ABD_OPEN.  NO RH claim",
+      "pin": true,
+      "sha256": "b8979ad5e385a4dfe935704b025fa62ff58fa2c05347259ff5d99ef064b05de1",
+      "bytes": 6037
+    },
+    {
+      "path": "rh/problem/verify_deep_abd.py",
+      "role": "problem_check",
+      "round": "r446 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in deep_abd.tex: standalone (REAL pins, slice floor stands) plus construction pins (k=10 float flip, k=12 class, last-live, dead chi).  7/7 gates, final line DEEP ABD VERIFIED",
+      "pin": true,
+      "sha256": "b63a79f0d74b480dacbee1c1f1e0b08a6b628a9360582e6934fd975e909f01e4",
+      "bytes": 4532
+    },
+    {
+      "path": "rh/problem/deep_abd.pdf",
+      "role": "problem_statement",
+      "round": "r446 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of deep_abd.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c2d89a1ad38b0b10d4b7748f2b2a67f43788e5e9731603633c80b8dcacef6c84",
+      "bytes": 201188
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3620,8 +3650,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "68e34b8a2bac3d563ab8a60965fca8366ae92f6ad096115b079596c9378cc540",
-      "bytes": 5510301
+      "sha256": "21849a4a27a3f2a64ae5ec874dbfe5b4535659fde470c9d36d02759704c3dd22",
+      "bytes": 5512509
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4312,6 +4342,16 @@
       "pin": true,
       "sha256": "317ceb11f66d86742381440abbc890fbfeb91c928291051c5c597d983c471a4f",
       "bytes": 47798
+    },
+    {
+      "path": "experiments/tfpt-discovery/deep_abd_probe.py",
+      "role": "sealed_probe",
+      "round": "r446",
+      "ledger_ids": [],
+      "status": "deep ABD adjudication (round 446, PRIME.INFRA.DEEP_ABD_ADJUDICATION.01; experiments-side, NO ledger row): lemma-first, exactly one question -- are the r445 ABD breaks at selected k=10/11/12 REAL or FLOAT?  VERDICT REAL.  mpmath k=10 dps 40 full (503 s): first flip still n=3788, eta=-7.938908159491412e-14 rel=1.150853124516389e-6, n_flip=115 pos_ok=False.  dps 60 to n=3793: first pivot BIT-IDENTICAL.  Sign stable under dps raise -- not a float64 recurrence artefact (r427 ward does not rescue).  k=11 first flip same near-null class (rel 4.81e-8); B_w explosion is signed rho after flips.  k=12 class ETA_UNDERFLOW (eta=0 at n=12737 after first flip n=12654).  Mesh: no ABD-living neighbour of kz197 (193..201) or kz339 (337..341); last observed living kz=136 (N=1641); kz=137 already dead.  pp_kz rounding does not move k=10/11/12 (exact 2^k on U-grid).  Sequence definition is NOT repairable by small m-variation at the 2^k anchors -- construction finding.  r397 cofinality (a_k->inf, Delta_k->0) is not ABD-cofinality.  r445 slice floor stands (no new deep delta point).  Dead chi -0.023181.  k=5/k=8/k=9 mpmath prefix confirms float.  First measured in /tmp (r446_k10_mp.log, r446_k10_dps60.json) then sealed.  AUSGANG REAL / MESH_DOES_NOT_REPAIR / LAST_LIVE_KZ_136 / K12_ETA_UNDERFLOW / SLICE_FLOOR_STANDS / COFINAL_ABD_OPEN.  Companion rh/problem/deep_abd.tex + verify_deep_abd.py DEEP ABD VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim",
+      "pin": true,
+      "sha256": "fe6f2b330269cf2bc7b08120b4cf8bde15fd402d4de0e4ad131a8212cc02063c",
+      "bytes": 28725
     }
   ]
 }

@@ -1997,6 +1997,41 @@ _R445_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim"
 )
 
+_R446_STATUS = (
+    "deep ABD adjudication "
+    "(round 446, PRIME.INFRA.DEEP_ABD_ADJUDICATION.01; "
+    "experiments-side, NO ledger row): "
+    "lemma-first, exactly one question -- are the r445 "
+    "ABD breaks at selected k=10/11/12 REAL or FLOAT?  "
+    "VERDICT REAL.  mpmath k=10 dps 40 full (503 s): "
+    "first flip still n=3788, "
+    "eta=-7.938908159491412e-14 rel=1.150853124516389e-6, "
+    "n_flip=115 pos_ok=False.  dps 60 to n=3793: first "
+    "pivot BIT-IDENTICAL.  Sign stable under dps raise "
+    "-- not a float64 recurrence artefact (r427 ward "
+    "does not rescue).  k=11 first flip same near-null "
+    "class (rel 4.81e-8); B_w explosion is signed rho "
+    "after flips.  k=12 class ETA_UNDERFLOW (eta=0 at "
+    "n=12737 after first flip n=12654).  Mesh: no "
+    "ABD-living neighbour of kz197 (193..201) or kz339 "
+    "(337..341); last observed living kz=136 (N=1641); "
+    "kz=137 already dead.  pp_kz rounding does not move "
+    "k=10/11/12 (exact 2^k on U-grid).  Sequence "
+    "definition is NOT repairable by small m-variation "
+    "at the 2^k anchors -- construction finding.  "
+    "r397 cofinality (a_k->inf, Delta_k->0) is not "
+    "ABD-cofinality.  r445 slice floor stands "
+    "(no new deep delta point).  Dead chi -0.023181.  "
+    "k=5/k=8/k=9 mpmath prefix confirms float.  "
+    "First measured in /tmp (r446_k10_mp.log, "
+    "r446_k10_dps60.json) then sealed.  AUSGANG REAL / "
+    "MESH_DOES_NOT_REPAIR / LAST_LIVE_KZ_136 / "
+    "K12_ETA_UNDERFLOW / SLICE_FLOOR_STANDS / "
+    "COFINAL_ABD_OPEN.  Companion rh/problem/deep_abd.tex "
+    "+ verify_deep_abd.py DEEP ABD VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -5204,6 +5239,28 @@ ENTRIES = [
      [],
      "compiled PDF of deep_builder.tex "
      "(recompiled artefact, registered unpinned)", False),
+    ("rh/problem/deep_abd.tex", "problem_statement",
+     "r446 companion",
+     [],
+     "lemma-first deep ABD adjudication (round 446): "
+     "k=10/11/12 breaks are REAL; mesh repair at the "
+     "2^k anchors fails; last living kz=136.  "
+     "COFINAL_ABD_OPEN.  NO RH claim",
+     True),
+    ("rh/problem/verify_deep_abd.py", "problem_check",
+     "r446 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "deep_abd.tex: standalone (REAL pins, slice "
+     "floor stands) plus construction pins "
+     "(k=10 float flip, k=12 class, last-live, "
+     "dead chi).  7/7 gates, final line "
+     "DEEP ABD VERIFIED", True),
+    ("rh/problem/deep_abd.pdf", "problem_statement",
+     "r446 companion",
+     [],
+     "compiled PDF of deep_abd.tex "
+     "(recompiled artefact, registered unpinned)", False),
 
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
@@ -5615,6 +5672,11 @@ ENTRIES = [
      "r445",
      [],
      _R445_STATUS,
+     True),
+    (f"{EXP}/deep_abd_probe.py", "sealed_probe",
+     "r446",
+     [],
+     _R446_STATUS,
      True),
 ]
 

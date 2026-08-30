@@ -6501,6 +6501,28 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444
 are parallel and not dropped.
 
+**Deep ABD adjudication (r446,
+PRIME.INFRA.DEEP\_ABD\_ADJUDICATION.01).**
+Sealed probe
+`experiments/tfpt-discovery/deep_abd_probe.py`
+(smoke 17/17, SPEC\_SHA `a48e0aa443689acd`)
+plus `rh/problem/deep_abd.tex` (+ PDF +
+`verify_deep_abd.py`, 7/7, `DEEP ABD VERIFIED`).
+**Ausgang REAL / MESH\_DOES\_NOT\_REPAIR / LAST\_LIVE\_KZ\_136 / K12\_ETA\_UNDERFLOW / SLICE\_FLOOR\_STANDS / COFINAL\_ABD\_OPEN.**
+$k=10$ first flip at $n=3788$ is bit-identical
+in mpmath dps 40 and 60
+($\eta=-7.938908159491412\cdot 10^{-14}$).
+The r445 breaks are REAL (not float64 recurrence
+artefacts).  Legal $m$-neighbours of the $2^k$
+anchors are ABD-dead; last observed living window
+is $k_z136$.  r397 cofinality is not ABD-cofinality.
+r445 slice floor stands (no new deep $\delta$-point).
+No Lean this round.
+Mincut unchanged (base 4 / refined 5).
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6846,6 +6868,10 @@ rh/
 │   │                     k=10/11/12 not ABD-living;
 │   │                     slice floor with live k=8.
 │   │                     INFRA_UNLOCKED.  No RH claim
+│   ├── deep_abd.tex(+pdf) — r446: k=10/11/12 ABD
+│   │                     breaks are REAL; mesh does
+│   │                     not repair; last live kz=136.
+│   │                     COFINAL_ABD_OPEN.  No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7029,6 +7055,9 @@ rh/
 │   └── verify_deep_builder.py — machine check of
 │                         deep_builder.tex (7/7,
 │                         DEEP BUILDER VERIFIED)
+│   └── verify_deep_abd.py — machine check of
+│                         deep_abd.tex (7/7,
+│                         DEEP ABD VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7386,7 +7415,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r445 from
+2. **Sealed probes** — the campaign probes r250–r446 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -7810,6 +7839,14 @@ not touch `experiments/next.txt`.  The Lean landing site
 `exists_index_zero_of_block_mean_lt_one` is already proved
 (r430); this round does not add Lean.  Suite surface:
 integrity + probes (`run_rh.py --fast --skip-lean`).
+**r446 coexistence.** Round 446 (`deep_abd_probe.py`)
+is additive on the r445 ABD-living / floor-fit infra
+lane (REAL vs FLOAT adjudication of the deep breaks).
+It does not touch `experiments/next.txt`.  The Lean
+landing site `exists_index_zero_of_block_mean_lt_one`
+is already proved (r430); this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
