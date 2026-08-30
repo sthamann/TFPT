@@ -6130,6 +6130,54 @@ NO L\* claim, NO RH CLAIM.
 Coexistence: r374--r428 are parallel lemma-first / Lean
 lanes; this round is additive.
 
+**Dossier update (R-DOSSIER, reviewer DCCXCVII).**
+Consolidation of `rh/problem/rdagger_saturation.tex` (+ PDF)
+to the DCCXCVI campaign close.  No new probe, no new claim.
+Adds: (i) section "The two cancellation cores" — bulk
+$\lambda_2(C)\ge 1$ with the four killed candidate vectors
+(ones-mode $|\langle v,1\rangle|=0.007$; centred difference
+cosine $0.0075$; Fourier/Nyquist overlap $0.386$; $v_{\mathrm{top}}$
+leftover $\sigma=1.024$), QD mass $1.357130$, min-norm save
+$\|\mathfrak{T}_0 v_1\|=0.359$, r399 circularity; terminal
+$Z_{\mathrm{loc}}$ identity (r429: $Z=t_{N-2}+\mathrm{chain}$,
+hull-edge sum, pins $10^{-14}$, cancellation factor
+$0.013$--$0.145$, triangle $2.24$--$19\times$ slope $+0.719$)
+and the selected location change (r428: margin $0.617$ vs
+$0.0195$, old ladder a quantifier artefact); (ii) section
+"Audit" — r427 verdict table ($0$ BUG / $5$ CLEAN / $2$
+disclosed SUSPECT; kernel-Loewner definiteness hypothesis
+explicit); (iii) section "Current architecture (Potapov
+program)" — open-program problem statements
+$\mathcal{S}_{\le 1}$ bulk, $\mathcal{S}_0$ edge via Redheffer
+pivot $\tfrac14-|Z_{\mathrm{loc}}|^2$, two quantifier
+weakenings (semidefinite; frequently; positive-density
+fallback with averaged index).  Refutation table extended to
+$28$ entries (r413/r415/r416/r429 and the r409 graph-factor
+closures).  NO ledger row, NO L\* claim, NO RH CLAIM.
+Mincut unchanged (base 4 / refined 5).
+Lean named-Prop mincut (r430):
+`frequently_selected_augDualResolvent_ge_half`;
+the r397 Prop `selected_augDualResolvent_gt_half` is the
+stronger alternative.
+
+**Semidefinite frequently selected (r430,
+PRIME.RH.SEMIDEFINITE_FREQUENT_SELECTED.01, Lean-only,
+reviewer quantifier correction).**  `RH/FrequentlySelected.lean`:
+(1) **semidefinite suffices** —
+`Rdagger_ge_half_iff_augmented_posSemidef` (`R† ⪰ ½I` ⟺
+augmented form PSD; same spectral comparison as A3 with
+`PosSemidef`); (2) **infinitely often suffices** —
+`weil_nonneg_of_frequently_selected` / `rh_of_frequently_selected`
+(`∃ᶠ k, R_k† ⪰ ½I` plus the named bridge
+`SelectedSemidefImpliesPlainReads` ⇒ `∀ f, 0 ≤ weilForm f`;
+onset/mesh by `selected_covers`; arch sorry consumed, not
+new).  Density corollary and mean-value trick **PROVED**.
+New Lean mincut: named Prop
+`frequently_selected_augDualResolvent_ge_half`.  Zero new
+`sorry`; census **stays 5**.  NO RH CLAIM.  Coexistence:
+r431/r433 are the parallel discovery lanes; this round does
+not touch `experiments/next.txt`.
+
 ## Folder guide
 
 ```
@@ -6226,8 +6274,16 @@ rh/
 │       │                    a_k=2^k, m_k=k·2^{⌊√k⌋}−1 with
 │       │                    Δ_k=2^{−r_k}·log 2, a_k→∞, Δ_k→0
 │       │                    PROVED; weil_nonneg_of_selected_windows;
-│       │                    named mincut
-│       │                    selected_augDualResolvent_gt_half).
+│       │                    r397 named Prop
+│       │                    selected_augDualResolvent_gt_half is the
+│       │                    stronger alternative since r430).
+│       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       ├── FrequentlySelected.lean — r430: semidefinite + FREQ
+│       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
+│       │                    weil_nonneg_of_frequently_selected;
+│       │                    rh_of_frequently_selected; density and
+│       │                    mean-value PROVED; named mincut
+│       │                    frequently_selected_augDualResolvent_ge_half).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
@@ -6266,12 +6322,17 @@ rh/
 │   │                     r367–r373 the PRIMARY question is the
 │   │                     minimal inertia form (P1)+(P2); r412
 │   │                     records the graph-resolvent coordinates
-│   │                     of (P1) and the seventeen closed
-│   │                     languages; r426 records the edge-balance
+│   │                     of (P1); r426 records the edge-balance
 │   │                     chain (eight identities, branch map,
-│   │                     floor, two open limits).  The older
-│   │                     RHP/BKMM saturation question is the
-│   │                     stronger variant).
+│   │                     floor, two open limits); r427–r429 plus
+│   │                     DCCXCVII add the two cancellation cores,
+│   │                     the campaign-audit table, and the open
+│   │                     Potapov program (S_{≤1} / S_0, Redheffer
+│   │                     pivot, semidefinite + frequently
+│   │                     quantifiers).  Refutation table: 28 named
+│   │                     closed routes.  The older RHP/BKMM
+│   │                     saturation question is the stronger
+│   │                     variant).
 │   │                     No RH claim
 │   ├── medcap_lemma.tex(+pdf) — proof attempt for the r361
 │   │                     MED-CAP inequality med_i ≤ (8/3) sep_i
@@ -6617,8 +6678,9 @@ decision; see the lane status update above); the sections of the
 original problem statement are unchanged.
 
 A second standalone note, `rh/problem/rdagger_saturation.pdf`
-(August 28, 2026; updated the same day after r367–r373), is a
-9-page specialist dossier.  The R360+R362 complex remains:
+(August 30, 2026; updated after r367–r373, r412, r426, and
+the DCCXCVII dossier consolidation), is a 17-page specialist
+dossier.  The R360+R362 complex remains:
 definition of the bordered dual resolvent
 `R† = [[R⁻¹, Dv], [(Dv)ᵀ, 1+γ]]⁻¹`, the exact duality package
 `(A1)–(A7)`, the critical 3×3 Schur block, the census that the
@@ -7229,6 +7291,15 @@ $\|b\|^2\le S<B_w\Rightarrow\gamma<1$).  Named Props
 `BorderIsMuParseval` / `BorderLoewnerLeS` / `QNLtOne`.
 `#print axioms` = `propext/Classical.choice/Quot.sound` only.
 Zero new `sorry`; census **stays 5**.  NO RH CLAIM.
+**r430 semidefinite / frequently-selected round.**
+`RH/FrequentlySelected.lean`: Loewner A3 and the FREQ
+extraction **PROVED** (the latter consumes the existing
+arch sorry).  Named mincut
+`frequently_selected_augDualResolvent_ge_half`.  The r397
+Prop `selected_augDualResolvent_gt_half` degraded to the
+stronger alternative.  Density corollary and mean-value
+trick **PROVED**.  Zero new `sorry`; census **stays 5**.
+NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

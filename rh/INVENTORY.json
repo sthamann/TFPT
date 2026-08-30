@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-08-29",
+  "generated": "2026-08-30",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -1498,12 +1498,12 @@
     {
       "path": "rh/problem/rdagger_saturation.tex",
       "role": "problem_statement",
-      "round": "r360+r362 companion, updated r367-r373",
+      "round": "r360+r362 companion, updated r367-r373 / r412 / r426 / R-DOSSIER DCCXCVII",
       "ledger_ids": [],
-      "status": "specialist dossier on the bordered dual resolvent R-dagger (reviewer priority 4; updated after r367-r373): definition of R-dagger as the rank-1 bordered dual hole kernel [[R^{-1}, Dv],[(Dv)^T, 1+gamma]]^{-1}; exact duality package (A1)-(A7); critical 3x3 Schur block; pair (2,4) straddles saturation-block edge 3|4; observed exponent alpha = 3.332; relative error-operator form.  PRIMARY question after the two-rank inertia cut is the MINIMAL form (P1) ind_-(R_{N-3}-1/2 I) <= 1 (census: overload 0/74, dichotomy 45 nneg-1 / 29 already-PD) and (P2) det K2 <= -c0 < 0 on the nneg-1 branch (-det K2 in [1.157, 1126.389], floor 0.50, corr -0.0064); Haynsworth (haynsworth_two_rank, haynsworth_mixed) and the R-dagger layer Lean sorry-free (census 7); mixed 3x3 form M-dagger = blkdiag(A0,-1/2)+U J U^T with J=diag(1,1,1/den); wedge-sign census, Phi-monotonicity, Pruefer dictionary; named dead ends (no 3x3 Jacobi Casoratian residual 3.615e-2, phase restatement, r366 O(1) mass buffer, r363 edge pinning). The older RHP/BKMM saturation question (BKMM 2007 Thm 2.7/Rem 2.8) is retained as the stronger variant.  Finite census, no asymptotics, no claim; a proof of (P1)+(P2) lands via the kernel-checked chain at window-local master positivity.  r426 adds the edge-balance chain (eight identities, P1/VAC/tot separators, floor R_inf~0.030, two open limits q_N<1 and Sigma_inf; Lean RH/EdgeBalance.lean sorry-free, census stays 5).  Explicitly NO RH claim -- L* and L-dagger stay [O]",
+      "status": "specialist dossier on the bordered dual resolvent R-dagger (reviewer priority 4; updated after r367-r373): definition of R-dagger as the rank-1 bordered dual hole kernel [[R^{-1}, Dv],[(Dv)^T, 1+gamma]]^{-1}; exact duality package (A1)-(A7); critical 3x3 Schur block; pair (2,4) straddles saturation-block edge 3|4; observed exponent alpha = 3.332; relative error-operator form.  PRIMARY question after the two-rank inertia cut is the MINIMAL form (P1) ind_-(R_{N-3}-1/2 I) <= 1 (census: overload 0/74, dichotomy 45 nneg-1 / 29 already-PD) and (P2) det K2 <= -c0 < 0 on the nneg-1 branch (-det K2 in [1.157, 1126.389], floor 0.50, corr -0.0064); Haynsworth (haynsworth_two_rank, haynsworth_mixed) and the R-dagger layer Lean sorry-free (census 7); mixed 3x3 form M-dagger = blkdiag(A0,-1/2)+U J U^T with J=diag(1,1,1/den); wedge-sign census, Phi-monotonicity, Pruefer dictionary; named dead ends (no 3x3 Jacobi Casoratian residual 3.615e-2, phase restatement, r366 O(1) mass buffer, r363 edge pinning). The older RHP/BKMM saturation question (BKMM 2007 Thm 2.7/Rem 2.8) is retained as the stronger variant.  Finite census, no asymptotics, no claim; a proof of (P1)+(P2) lands via the kernel-checked chain at window-local master positivity.  r426 adds the edge-balance chain (eight identities, P1/VAC/tot separators, floor R_inf~0.030, two open limits q_N<1 and Sigma_inf; Lean RH/EdgeBalance.lean sorry-free, census stays 5).  R-DOSSIER DCCXCVII: two cancellation cores (bulk four killed vectors + QD 1.357130 + min-norm 0.359 + r399 circularity; terminal Z_loc formula + selected margin 0.617 vs 0.0195); r427 audit 0 BUG/5 CLEAN/2 SUSPECT (kernel-Loewner definiteness hypothesis explicit); open Potapov program S_<=1 bulk / S_0 edge via Redheffer pivot 1/4-|Z_loc|^2, semidefinite+frequently quantifiers.  Refutation table 28 closed routes.  Explicitly NO RH claim -- L* and L-dagger stay [O]",
       "pin": true,
-      "sha256": "694ad9cfdbeffa4d16374f0e1101c5f6e8eed9fb7fa95e9157725a9b2ecac7ad",
-      "bytes": 49731
+      "sha256": "361671feb0d4bcc15abb5f8e9c1cbf97a326f550c89dcbd261fa1a1535c7aeb0",
+      "bytes": 64625
     },
     {
       "path": "rh/problem/rdagger_saturation.pdf",
@@ -1512,8 +1512,8 @@
       "ledger_ids": [],
       "status": "compiled PDF of rdagger_saturation.tex (recompiled artefact, registered unpinned)",
       "pin": false,
-      "sha256": "473bf6250d5a8ab4e6e32d5af005fce90351134c263626b991805d245af1b853",
-      "bytes": 404106
+      "sha256": "0b5a3a51fe6190d206626511bfb8b2bfcbd199c5c0d584a096c191aa9c9f1d23",
+      "bytes": 442788
     },
     {
       "path": "rh/problem/medcap_lemma.tex",

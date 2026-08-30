@@ -3061,7 +3061,7 @@ ENTRIES = [
      "compiled PDF of lstar_problem.tex (recompiled artefact, "
      "registered unpinned)", False),
     ("rh/problem/rdagger_saturation.tex", "problem_statement",
-     "r360+r362 companion, updated r367-r373",
+     "r360+r362 companion, updated r367-r373 / r412 / r426 / R-DOSSIER DCCXCVII",
      [],
      "specialist dossier on the bordered dual resolvent R-dagger "
      "(reviewer priority 4; updated after r367-r373): definition of "
@@ -3088,6 +3088,14 @@ ENTRIES = [
      "P1/VAC/tot separators, floor R_inf~0.030, two open "
      "limits q_N<1 and Sigma_inf; Lean RH/EdgeBalance.lean "
      "sorry-free, census stays 5).  "
+     "R-DOSSIER DCCXCVII: two cancellation cores (bulk four "
+     "killed vectors + QD 1.357130 + min-norm 0.359 + r399 "
+     "circularity; terminal Z_loc formula + selected margin "
+     "0.617 vs 0.0195); r427 audit 0 BUG/5 CLEAN/2 SUSPECT "
+     "(kernel-Loewner definiteness hypothesis explicit); "
+     "open Potapov program S_<=1 bulk / S_0 edge via Redheffer "
+     "pivot 1/4-|Z_loc|^2, semidefinite+frequently quantifiers.  "
+     "Refutation table 28 closed routes.  "
      "Explicitly NO RH claim -- L* and L-dagger stay [O]", True),
     ("rh/problem/rdagger_saturation.pdf", "problem_statement",
      "r360+r362 companion, updated r367-r373",

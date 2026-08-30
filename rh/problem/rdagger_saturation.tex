@@ -28,15 +28,17 @@
 \newcommand{\half}{\tfrac12}
 \newcommand{\dd}{\,\mathrm{d}}
 \newcommand{\Tfrak}{\mathfrak{T}}
+\newcommand{\Zloc}{Z_{\mathrm{loc}}}
+\newcommand{\Sk}{\mathcal{S}}
 % Grade marks: exact / theorem-grade / lean-verified / census /
-% hypothesis / refuted.
+% hypothesis / refuted / open program.
 \newcommand{\gr}[1]{\textnormal{\small[#1]}}
 
 \title{\bfseries The saturated dual resolvent\\[2mm]
 \large A specialist dossier on the critical bordered block
 $\boldsymbol{R^{\dagger}}$}
 \author{Stefan Hamann}
-\date{August 29, 2026}
+\date{August 30, 2026}
 
 \begin{document}
 \maketitle
@@ -53,14 +55,19 @@ problem on the same dual weight places the binding pair of nodes
 astride a saturated hard-edge block.  All identities below are finite
 linear algebra; all numerical values are a frozen census on a finite
 family.  No asymptotic theorem is proved.  After the two-rank inertia
-cut and the matrix-Weyl sequence (rounds 367--373) the one open
-question is the \emph{minimal inertia form}
-Problem~\ref{prob:minimal}: an integer mode count and the sign of an
-$O(1)$ $2\times2$ source, not a margin asymptotic.  The older
-saturation/RHP question is retained as the stronger variant
-Problem~\ref{prob:rhp}.  This document is a problem statement for
-specialists, not a claim, and nothing in it is evidence for or
-against the Riemann hypothesis.
+cut, the graph-resolvent dictionary, and the edge-balance chain,
+the two remaining holes close at the same kind of object: an
+unsigned cancellation of von~Mangoldt data
+(Section~\ref{sec:cores}).  Round 427 audited the campaign
+numbers (Section~\ref{sec:audit}).  The current architecture is
+an \emph{open program} in the Krein--Langer class $\Sk_{\kappa}$
+(Section~\ref{sec:potapov}): bulk membership $\Sk_{\le 1}$ and
+edge membership $\Sk_{0}$ via a Redheffer pivot, with two
+quantifier weakenings.  The older minimal-inertia and
+saturation/RHP questions are retained as
+Problems~\ref{prob:minimal} and~\ref{prob:rhp}.  This document is
+a problem statement for specialists, not a claim, and nothing in
+it is evidence for or against the Riemann hypothesis.
 \end{abstract}
 
 \medskip\noindent
@@ -71,8 +78,9 @@ Every assertion is marked
 \textsc{lean-verified} (sorry-free in \texttt{rh/lean/}, kernel-checked),
 \textsc{census} (measured on a frozen finite family; no
 extrapolation),
-\textsc{hypothesis} (unproved analytic statement), or
-\textsc{refuted} (named internal route closed by a sealed probe).
+\textsc{hypothesis} (unproved analytic statement),
+\textsc{refuted} (named internal route closed by a sealed probe),
+or \textsc{open program} (named target, no existence proof).
 The construction of the underlying measures $(\mu,\nu)$ is given in
 full in the companion note~\cite{lstar-note}; the present dossier
 does not repeat it.  Uvarov-transform language, the discrete-hard-edge
@@ -85,7 +93,11 @@ duplicated.  Machine records: sealed probes of rounds
 graph-resolvent consolidation round 412
 (\texttt{RH/GraphResolvent.lean});
 edge-balance consolidation round 426
-(\texttt{RH/EdgeBalance.lean}).
+(\texttt{RH/EdgeBalance.lean});
+campaign audit round 427; selected-sequence reopening round 428;
+head-identity round 429.  Companion notes:
+\texttt{campaign\_audit.tex}, \texttt{qn\_reopened.tex},
+\texttt{zloc\_head.tex}.
 
 \section{Setup}\label{sec:setup}
 
@@ -720,7 +732,9 @@ control in relative/projective form, with rest-block theorem only
 at $c=1$.  The AC/Bessel class is the wrong class
 \cite{Lubinsky2008}.  A Gamma-class derivation at saturation
 adjacency remains a candidate for the \emph{stronger} form and is
-open.  The cheaper target is (P1)--(P2).
+open.  Relative to that stronger form the cheaper target remains
+(P1)--(P2).  The current externalisable architecture is the
+open program of Section~\ref{sec:potapov}.
 
 \section{The graph-resolvent form (rounds 407--412)}\label{sec:graph}
 
@@ -821,20 +835,21 @@ These numbers certify the dictionary; they do not prove (P1)
 off the certified head.
 
 \paragraph{Closed internal languages.}
-Table~\ref{tab:seventeen} lists seventeen named routes to (P1)
-closed between DCCXLVI and DCCLXXVIII.  Each line is a sealed
-probe record, not an extrapolation.  Two further r409 closures
-(literal $\Theta=C^{T}\Phi_{N}C$; unfitted Krein) sit in the same
-bin and are omitted from the count only because they attack the
-graph factor, not (P1) itself.
+Table~\ref{tab:closed} lists twenty-eight named routes closed
+between DCCXLVI and DCCXCVI: the original seventeen languages
+for (P1), the two r409 graph-factor closures previously omitted
+from the count, and the r413--r429 bulk and terminal kills.
+Each line is a sealed probe record, not an extrapolation.
+Nothing in the table is a family theorem.
 
 \begin{table}[ht]
 \centering
-\caption{Seventeen closed languages for (P1), DCCXLVI--DCCLXXVIII.
-Verdicts are probe-local.  No family theorem is claimed.}
-\label{tab:seventeen}
+\caption{Twenty-eight named closed routes (bulk and terminal),
+DCCXLVI--DCCXCVI.  Verdicts are probe-local.  No family
+theorem is claimed.}
+\label{tab:closed}
 {\small
-\begin{tabular}{@{}llp{5.6cm}@{}}
+\begin{tabular}{@{}llp{5.4cm}@{}}
 \toprule
 Language & Round & Verdict \\
 \midrule
@@ -855,7 +870,7 @@ Three-gap mask
 Isolation of the fold mask
   & r396, DCCLXI & pair count does not $\to0$ \\
 Source Weyl energy decay
-  & r399, DCCLXV & $E^{\mathrm{bulk}}$ grows \\
+  & r399, DCCLXV & $E^{\mathrm{bulk}}$ grows; RH-near \\
 Bulk FORM\_T / FORM\_P
   & r400, DCCLXVII & rank-$1$ / phase predictor \\
 (P1) as construction class
@@ -868,10 +883,32 @@ $\nu$-rank one / Loewner sandwich
   & r407, DCCLXXIII & $N_{\nu}=104$ \\
 Nyquist density $\half$ / $\mathrm{diag}\,C\approx1$
   & r408, DCCLXXV & density $0.283$ \\
+Literal $\Theta=C^{T}\Phi_{N}C$
+  & r409, DCCLXXVI & Haynsworth template, not the Schur \\
+Unfitted Krein transport
+  & r409, DCCLXXVI & not a (P1) proof \\
 Testpoly / Fourier / Bernstein / SEQ
   & r410, DCCLXXVII & factor $90$; off-fraction $0.968$ \\
 Identity saturation $\|\Tfrak_{0}\|=1$
   & r411, DCCLXXVIII & $C_{\min}-1=+4.57\cdot10^{-8}$ \\
+Hole top mode $v_{\mathrm{top}}$
+  & r413, DCCLXXXII & leftover $\sigma=1.024$ \\
+Top-mode as edge defect
+  & r415, DCCLXXXI & $\cos0.6766/0.058$; $H$ PD $18/42$ \\
+de~Branges phase dominance $\kappa\le1$
+  & r416, DCCLXXXIII & $\mathrm{yy}_{A}=3$; $\mathrm{corr}=-0.17$ \\
+Uniform $\varphi_{bb}<0$
+  & r418, DCCLXXXV & vacuous overflow $6/14$ \\
+Hoped $O(1)$ den-gap as SATZ
+  & r420, DCCLXXXVII & reserve shrinks $0.105\to0.038$ \\
+Razor-overlap as global death coordinate
+  & r428, DCCXCIV & vacuous-chart only \\
+$C_{\min}$ Nyquist face
+  & r428, DCCXCIV & $\cos=-0.007$ on VAC \\
+Unsigned $|\Zloc|$ triangle
+  & r429, DCCXCVI & $[2.240,19.245]$; slope $+0.719$ \\
+Chebyshev $\psi$ / left--right Abel
+  & r429, DCCXCVI & $\mathrm{pair}_{c}=1$; no $k_{0}$ \\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -1087,6 +1124,311 @@ Named Props \texttt{BorderIsMuParseval}, \texttt{BorderLoewnerLeS},
 \texttt{QNLtOne} are hypotheses, not holes: they name the
 window transcription of items 7--8 and Problem~\ref{prob:qn}.
 The pilot \texttt{sorry} census stays five.
+Rounds 428--429 retype the cheapest remaining terminal
+statement on the selected sequence
+(Section~\ref{sec:cores}); cofinality stays open.
+
+\section{The two cancellation cores (rounds 413--429)}
+\label{sec:cores}
+
+The graph dictionary reduces the bulk hole to
+$\lambda_{2}(C)\ge1$; the edge chain reduces the terminal hole
+to $q_{N}<1$, equivalently $|\Zloc|\le\half$ on the selected
+sequence once COMPOSE$^{-}$ is applied.  After r429 both
+remainders are the same kind of object: an unsigned
+cancellation of explicit von~Mangoldt data that has survived
+every majorant, structure, phase, sampling, kernel, and
+interpolation language of the campaign.  The identities below
+are finite; the bounds are not.  This is a consolidation, not
+a claim.
+
+\paragraph{Bulk: window-emergent one-defect.}
+On the flagship window $z=16$,
+$C_{\min}=0.85712$, $\lambda_{2}(C)=1.00018$,
+$\|\Tfrak_{0}\|=1.08014$.  Four candidate vectors for the
+single excess direction are named and closed:
+\begin{center}
+\small
+\begin{tabular}{@{}llp{6.4cm}@{}}
+\toprule
+Candidate & Round & Independent numbers \\
+\midrule
+ones-mode $v\equiv 1$
+  & r408 & $|\langle v,1\rangle|=0.007$ \\
+centred mass difference of $A_{0}$
+  & r400 & cosine $0.0075$ with the genuine negative mode \\
+Fourier / hole-Nyquist face $v_{F}$
+  & r410 & overlap $0.386$ with $C$-ev$_{0}$;
+           $\|\Tfrak_{0}v_{\mathrm{Nyq}}\|<\|\Tfrak_{0}\|$ \\
+hole top OP $v_{\mathrm{top}}$
+  & r413 & $\mathrm{corr}(v_{\mathrm{top}},C\text{-ev}_{0})=0.6766$;
+           leftover $\sigma=1.02354$;
+           $\lambda_{\min}(Q(I-\Tfrak_{0}^{*}\Tfrak_{0})Q)=-0.0476$ \\
+\bottomrule
+\end{tabular}
+\end{center}
+Quadrature dominance already fails for $p\equiv1$: the mass
+asymmetry of a single full-carrier dual is
+$\sum_{X}u^{\vee}/\sum_{Y}u^{\vee}=1.357130$
+(r413; r427 route A $=$ route B at $3.9\cdot10^{-12}$; a
+hypothetical subset-$P'$ bug would have given $1.525$ and is
+not live).  The min-norm interpolant \emph{does} save the
+constant direction, $\|\Tfrak_{0}v_{1}\|=0.359<1$, and does
+\emph{not} save the leftover excess.  Round 415: $v_{\mathrm{top}}$
+is not the bulk defect at depth either
+($\cos=0.6766$ at $k_{z}=9$, $0.058$ at $k_{z}=18$).
+Round 416: Hermite--Biehler interlacing holds, but phase
+dominance with Potapov index $\le1$ fails
+($\mathrm{yy}_{A}=3\not\le1$, $\mathrm{corr}=-0.17$ with the
+$\Tfrak_{0}$-index).  The defect is window-emergent: no
+source-pure vector known before the Gram is built is the
+excess.  Circularity verdict of r399: $E^{\mathrm{bulk}}$
+grows as $N_{w}^{0.54}$ and sits at quadratic-mean; a bound
+forcing decay below that level is RH-near, hence circular as a
+strategy for $\Rd\succ\half I$, and is in any case contradicted
+by the census.
+
+\paragraph{Terminal: the $\Zloc$ formula.}
+On a canonical window the terminal drive splits
+\gr{exact, Lean \texttt{canonical\_split}}
+\begin{equation}\label{eq:zloc}
+Z \;=\; t_{N-2}+\mathrm{chain},
+\qquad
+\Zloc \;=\; t_{\mathrm{loc}}+\mathrm{chain},
+\end{equation}
+with $t_{\mathrm{loc}}$ the hull-edge sum at geometric mask
+$F=1/5$ (not the set of small prime powers)
+\cite{zloc-head}.  Reconstruction
+residual $10^{-14}$.  Live pins $k=3,4,5$ reproduce
+$0.486846$, $0.157211$, $0.227187$.  Edge cardinalities on
+selected occupy $85$--$1691$.  The formula exhibits death of
+the $\chi$ mutants ($1.021$ and $0.892$, both $>M$) and
+reproduces the old $k_{z}=16$ razor $0.756$.
+Unsigned triangle, Chebyshev $\psi$, and left--right Abel are
+all closed on selected: the triangle occupies
+$[2.240,\,19.245]$ with two-point slope $+0.719$; cancellation
+of the signed head against that triangle is a factor
+$0.013$--$0.145$.  Selected is not milder for majorants than
+the old $42$-rung ladder.  There is no explicit $k_{0}$.
+
+\paragraph{Selected location change.}
+On the selected sequence $a_{k}=2^{k}$ ($k=3..9$, builder pin
+at $k=8$) one has
+$q_{N}\in\{0.3828,0.2143,0.0228,0.00176,0.00151,\text{[pin]},0.00070\}$,
+falling in $k$, with minimum margin to $1$ equal to $0.617$
+against $0.0195$ on the old $42$-rung ladder
+($k_{z}=16$: $q_{N}=0.9805$)
+\cite{qn-reopened}.  The razor rungs of the old
+ladder are a quantifier artefact: the minimal quantifier of
+round 397 skips them.  COMPOSE$^{-}$ premises on selected are
+comfortable ($R=S_{F}/D\le1.40\ll4$, $L_{1}\le0.63\ll3$,
+$|\Zloc|\le0.487<\half$).  The sharpest remaining sublemma is
+$|\Zloc(W_{k})|\le\half$ on MAIN-selected (air $0.013$ at
+$k=3$, scramble-unstable at $0.524$).  Hoped $L_{1}\le3/5$
+fails at $k=9$ ($0.628$); $2/3$ still holds as census.
+Honest terminal balance: identity \eqref{eq:zloc} and
+COMPOSE$^{-}$ are theorems; $|\Zloc|\le\half$, $R\le3/2$,
+$L_{1}\le2/3$ are finite censuses; $k=8$ is a disclosed pin;
+$k\to\infty$ is open.
+
+\section{Audit (round 427)}\label{sec:audit}
+
+Round 427 re-computed seven load-bearing campaign numbers of
+R397--R426 on independent code paths (r367 block
+$A_{0}+\half I$ versus dense Chebyshev--Hankel $C$;
+full-carrier product dual; KKT $\|\Tfrak_{0}\|$; truncated
+positive-definite Grams; AIC re-fit; Woodbury-sch).  Search
+raster: truncation/depth mismatch, signed versus occupied
+chain mix-up, shared-builder bugs, pin circularity, float64
+on $10^{-8}$ razors.  Ausgang:
+\textbf{0 BUG / 2 SUSPECT / 5 CLEAN}.
+No round verdict of R397--R426 changes.  This is an audit of
+recorded numbers, not a theorem of the wall
+\cite{campaign-audit}.
+
+\begin{table}[ht]
+\centering
+\caption{Round-427 verdict per target.  Independent
+re-computation, then CLEAN / BUG / SUSPECT.}
+\label{tab:audit}
+{\small
+\begin{tabular}{@{}clp{8.2cm}@{}}
+\toprule
+T & Verdict & Independent numbers \\
+\midrule
+1 & CLEAN
+  & $R=C(I+C)^{-1}$ on $k_{z}=9,17,12$;
+    $\|R_{f}-R\|_{\mathrm{w9}}=3.38\cdot10^{-12}$;
+    $\mathrm{ind}_{-}=\#\{\lambda(C)<1\}$ ($1,1,0$);
+    mpmath dps-$40$ relative $\le1.5\cdot10^{-14}$. \\
+2 & CLEAN
+  & $\sum_{X}u^{\vee}/\sum_{Y}u^{\vee}=1.357130$ from one
+    full-carrier dual; subset-$P'$ would have given $1.525$. \\
+3 & CLEAN
+  & $\|\Tfrak_{0}\|_{\mathrm{w9}}=1.080138437324$;
+    $\kappa(C)=2.086\cdot10^{3}$ so the
+    $4.57\cdot10^{-8}$ razor is $56\times$ eigvalsh noise;
+    r409 print $1.00000$ is display rounding. \\
+4 & CLEAN
+  & $K^{\mu-\nu}\succeq K^{\mu}$ on truncated PD Grams $n=16$
+    (evmin $\sim-10^{-9}$).
+    \emph{Definiteness hypothesis:} inversion monotonicity
+    holds only when the tilde form is positive definite;
+    an indefinite $\mathbb{Q}$-toy
+    ($\mu=(3,1)$ at $(0,1)$, $\nu=(2)$ at $1$, depth $2$)
+    has $\lambda_{\min}(G(\mu-\nu))=-1.30$ and
+    $\lambda_{\min}(K_{t}-K_{\mu})=-2$.  The campaign states
+    the tilde chain is definite; the implication then holds.
+    The hypothesis is part of the recorded theorem, not a
+    silent extra. \\
+5 & SUSPECT
+  & vs.\ $k$: M1 $R_{\infty}=+0.02983$ (r421 $+0.02982$);
+    vs.\ $N$: winner M3 ($N=5690$ at $k=8$, $N=1433$ at $k=9$);
+    $k=8$ is a disclosed builder pin (r421$\to$r425
+    circularity).  Floor remains a census. \\
+6 & CLEAN
+  & $6/6$ dead:
+    $q_{N}>1\Leftrightarrow|\Zloc|_{\mathrm{term}}\ge\sqrt{5/7}
+    \Leftrightarrow\mathrm{sch}>0$;
+    live $\chi_{3}$-$9$ does not fire.
+    $C_{\min}-1$ is \emph{not} a death coordinate
+    (three dead windows have $C_{\min}>1$ and die at the
+    edge). \\
+7 & SUSPECT
+  & no $n_{\mathrm{ref}}$/float32 in the $17$ campaign probes;
+    razor $C_{\min}$ in float64 \texttt{eigvalsh};
+    precision ward: a window with $\kappa(C)\gtrsim10^{8}$
+    would make a $10^{-8}$ gap undecidable
+    (has not occurred; $k_{z}=42$ was not native-Hankel
+    rebuilt). \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The two historical artefact classes (r395 $n_{\mathrm{ref}}=60$;
+r381 signed versus occupied Fej\'er) are absent from the
+campaign probes.  The r428 location change (selected margin
+$0.617$) stands on audited numbers.
+
+\section{Current architecture (Potapov program)}
+\label{sec:potapov}
+
+After the symmetric closing line of Section~\ref{sec:cores}
+the remaining work is not a further lemma-first grind on
+$\lambda_{2}(C)$ or $\Zloc$.  Both holes are restated as two
+steps of one generalised Schur process in the Krein--Langer
+class $\Sk_{\kappa}$ ($\kappa=$ number of negative squares of
+the kernel $K_{\Theta}$).  Status of every statement in this
+section: \gr{open program}.  Nothing below is proved on the
+unbounded family, and nothing is a claim about the Riemann
+hypothesis.
+
+\paragraph{Two quantifier weakenings.}
+Elementwise extraction from a selected window does not need a
+strict spectral gap.
+
+\begin{problem}[Semidefinite extraction]
+\label{prob:semidef}
+Prove that $\Rd_{k}\succeq\half I$ (equivalently, the
+augmented dual form is positive \emph{semidefinite}: the
+window pairing is nonnegative) already yields the window
+contribution of that $k$.
+A strict free-window margin is not required.
+Named Lean target:
+\texttt{Rdagger\_ge\_half\_iff\_augmented\_posSemidef}.
+\end{problem}
+
+\begin{problem}[Frequently selected]
+\label{prob:freq}
+Prove: $\forall K\,\exists k\ge K$ with
+$\Rd_{k}\succeq\half I$ implies that the Weil quadratic form
+is nonnegative on every admissible test function (each test
+function instantiates only finitely many windows).  In
+particular, a subsequence of positive density of good windows
+suffices.  Named Lean targets:
+\texttt{weil\_nonneg\_of\_frequently\_selected},
+\texttt{rh\_of\_frequently\_selected}.
+The second name is historical: the statement is window-local
+positivity of the Weil form, not a claim about zeros of
+$\zeta$.
+\end{problem}
+
+Fallback route, still \gr{open program}: if a block average of
+Potapov indices satisfies
+\[
+\frac1K\sum_{k=1}^{K}\kappa(\Theta_{k}^{\dagger})
+\;<\;1,
+\]
+then some window in the block has index $0$.  Mean-value
+theorems for Dirichlet polynomials apply to this averaged
+index in a way the pointwise r399 majorant could not (that
+majorant was circular).
+
+\paragraph{Bulk and edge as Schur steps.}
+
+\begin{problem}[Bulk in $\Sk_{\le1}$]
+\label{prob:sleq1}
+On every selected window, construct a rational transfer
+matrix $\Theta_{k}$ with $\Theta_{k}\in\Sk_{\le1}$.  The
+defect vector need not be known in advance: at index $1$ one
+has $\Theta=B_{\alpha}^{-1}S$ with a wandering Blaschke
+location $\alpha_{k}$.  This is the language in which
+window-emergent, collective, birth-at-$k=37$, and
+Nyquist-face-without-eigenvector are the same statement.
+\end{problem}
+
+\begin{problem}[Edge in $\Sk_{0}$ via Redheffer]
+\label{prob:s0}
+Given Problem~\ref{prob:sleq1}, prove
+$\Theta_{k}^{\dagger}\in\Sk_{0}$ by a Redheffer completion
+whose pivot is
+\begin{equation}\label{eq:delta}
+\delta_{k}
+ \;=\;
+ c\bigl(\tfrac14-|\Zloc|^{2}\bigr)
+ \;=\;
+ c'(-\mathrm{sch}).
+\end{equation}
+The sought identity is the Schur-parameter law
+$\delta=1-|\alpha_{\mathrm{edge}}|^{2}$
+(energy conservation, not a triangle inequality; the
+$2.2$--$19\times$ unsigned loss of r429 is the wrong
+currency).
+\end{problem}
+
+\paragraph{Source Potapov completion (target form).}
+A construction
+$\Theta_{k}=\Theta_{\infty}\star\prod_{p}\Theta_{p,k}$
+(Redheffer product; elementary factors from $p^{r}$,
+$r\log p$, $\Lambda=\log p$; $\Theta_{\infty}$ the
+Gamma/pole/completion factor) is an open program if it
+satisfies all four:
+\begin{enumerate}
+\item[(A)] Pick matrix of $\Theta$ isomorphic to
+  $I-\Tfrak_{0}^{*}\Tfrak_{0}$;
+\item[(B)] source-pure constructor (forbidden inputs:
+  eigenvalues of $C$, SVD of $\Tfrak$, target Schur
+  complement, $\Zloc$ as a constructor);
+\item[(C)] $\kappa(\Theta)\le1$ read from the factorisation,
+  before the target matrix is assembled;
+\item[(D)] edge Redheffer with the $\delta$-identity
+  \eqref{eq:delta} $\Rightarrow$ $\kappa(\Theta^{\dagger})=0$
+  $\Rightarrow$ $\Rd\succeq\half I$.
+\end{enumerate}
+The index is counted from the source factorisation, not
+after the target is built (the r416 de~Branges route counted
+afterwards).  Permutation is allowed to jump the index
+($1\to20$--$100$) by breaking the
+$p^{r}\leftrightarrow r\log p\leftrightarrow\log p$ pairing;
+a $\chi$-mutant may keep the elementary phases (bulk budget
+$1$ survives, the edge factor dies).  That pattern matches
+the sealed census.  Round 399 is not reopened: the statement
+is a topological product, not an absolute-value majorant.
+
+These four problems, together with
+Problems~\ref{prob:qn} and~\ref{prob:siginf}, are the
+externalisable remainder.  They are not theorems, not
+landing pads, and not claims.
 
 \section{What a proof would give, and what it would not}\label{sec:status}
 
@@ -1104,9 +1446,13 @@ positivity of every bordered window matrix through the cap
 \gr{Lean, sorry-free on the reconstruction layer, axiom audit
 \texttt{RH/Audit.lean}}.  That is window-local master positivity.
 A proof of the stronger form \eqref{eq:target} would give the same
-chain without a separate terminal input.  Neither is an asymptotic
-law, a bound on the Riemann $\xi$-function, or a statement about
-the Riemann hypothesis in either direction.
+chain without a separate terminal input.  A proof of the open
+program of Section~\ref{sec:potapov} would give the same chain
+with the two quantifier weakenings (semidefinite; frequently)
+and without identifying the defect vector in advance.
+None of these is an asymptotic law, a bound on the Riemann
+$\xi$-function, or a statement about the Riemann hypothesis in
+either direction.
 
 What is on the table now is a finite census (at most $85$ windows
 for the hole kernel, $75$ plus one deep row for the border, four
@@ -1117,6 +1463,9 @@ sorry-free R$^{\dagger}$ Lean layer.  No Riemann--Hilbert
 steepest-descent analysis has been carried out.  The
 equilibrium-measure limit, the Gamma parametrix, and the error
 operator $E$ are open, and they are no longer the cheapest target.
+The cheapest remaining targets are the four open-program
+statements of Section~\ref{sec:potapov} together with
+Problems~\ref{prob:qn} and~\ref{prob:siginf}.
 Comparison inputs show that the identities survive source
 destruction while positivity and the saturated partition do not
 --- so an existence proof for (P1)--(P2) must consume the
@@ -1157,11 +1506,12 @@ $-\det K_{2}$ (nneg-$1$ family) & $[1.157,\,1126.389]$ \\
 \medskip\noindent
 \textbf{Claim boundary.}\enspace
 Research documentation.  Not a proof of $\Ls$, of $\Ld$, of
-\textup{(P1)}--\textup{(P2)}, or of $\Rd\succ\half I$ for the
+\textup{(P1)}--\textup{(P2)}, of $\Rd\succ\half I$, or of
+Problems~\ref{prob:semidef}--\ref{prob:s0} for the
 unbounded family.  Not evidence for or against the Riemann
 hypothesis in either direction.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 
 \bibitem{Borodin2002}
 A.~Borodin,
@@ -1184,6 +1534,24 @@ S.~Hamann,
 \emph{A strict polynomial subordination inequality for two explicit
 prime-generated discrete measures (open problem)},
 TFPT research repository, \texttt{rh/problem/lstar\_problem.tex},
+August 2026.
+
+\bibitem{campaign-audit}
+S.~Hamann,
+\emph{Campaign audit R397--R426},
+TFPT research repository, \texttt{rh/problem/campaign\_audit.tex},
+August 2026.
+
+\bibitem{qn-reopened}
+S.~Hamann,
+\emph{$q_{N}$ reopened on the selected sequence},
+TFPT research repository, \texttt{rh/problem/qn\_reopened.tex},
+August 2026.
+
+\bibitem{zloc-head}
+S.~Hamann,
+\emph{The selected head bound},
+TFPT research repository, \texttt{rh/problem/zloc\_head.tex},
 August 2026.
 
 \end{thebibliography}
