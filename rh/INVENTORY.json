@@ -3656,6 +3656,36 @@
       "bytes": 221146
     },
     {
+      "path": "rh/problem/border_mass.tex",
+      "role": "problem_statement",
+      "round": "r453 companion",
+      "ledger_ids": [],
+      "status": "lemma-first border-mass inequality (round 453): BOUND_PROVED; MASS_CLASSICAL_REDUCED_GROWING; RACE_WON.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "f8e07e341609c7d44b63c660a9e02954ebf78f806ac10c71bd0c2b1b821462b8",
+      "bytes": 5972
+    },
+    {
+      "path": "rh/problem/verify_border_mass.py",
+      "role": "problem_check",
+      "round": "r453 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in border_mass.tex: standalone (BOUND_PROVED, MASS_CLASSICAL_REDUCED_GROWING, RACE_WON, sister g-cliff) plus construction pins (M_d vs N, race n=20, scramble).  6/6 gates, final line BORDER MASS VERIFIED",
+      "pin": true,
+      "sha256": "e815f2e2e43ba8edd2e366fb334c6d92aadaf62d409bd9de13b7a7247784a654",
+      "bytes": 3965
+    },
+    {
+      "path": "rh/problem/border_mass.pdf",
+      "role": "problem_statement",
+      "round": "r453 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of border_mass.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "c356cb72f7c3efebe321db640e80e082392a46b39021ce6deb8e679aa4936d1d",
+      "bytes": 200302
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3830,8 +3860,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "30339c14389bda4a5cdbe1fbae6ee490521eaa1616cb8a0c9ee10c3bb283fbeb",
-      "bytes": 5529445
+      "sha256": "ebea27aa350fcc2100cf732207acbdc50e198ab97cf1beff5badf1a2b4a2665b",
+      "bytes": 5531467
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4592,6 +4622,16 @@
       "pin": true,
       "sha256": "5b96c0f30dcb6ad5564a23b4cc31d3ed78e14aa1e2f8286fd3aad55188cf1898",
       "bytes": 15680
+    },
+    {
+      "path": "experiments/tfpt-discovery/border_mass_probe.py",
+      "role": "sealed_probe",
+      "round": "r453",
+      "ledger_ids": [],
+      "status": "border mass inequality (round 453, PRIME.RDAGGER.BORDER_MASS_INEQUALITY.01; experiments-side, NO ledger row): lemma-first, the r452 SATZ turns the prefix mincut into err(rho) <= (5/7)/(M_d+5/7).  VERDICT BOUND_PROVED / MASS_CLASSICAL_REDUCED_GROWING / RACE_WON.  Exact pack identity q_n = S_{n-1}/B_w and delta = (5/7-rho_n)/B_w (residual <=5e-14), hence q_n<1 <=> rho_n<5/7 and the first-leak increment is g = rho_n/B_w (sister CLIFF predicted exactly; 137 CONTINUES).  M_d is the signed folded m_0 (MAIN equality on kz>=69), grows with log N (corr 0.992; sister is N not a).  At fixed n in {20,40,80,160} err/margin <= 3e-5 on the plateau (RACE_WON).  First measured in /tmp then sealed.  Companion rh/problem/border_mass.tex + verify_border_mass.py BORDER MASS VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "1f1088a1765dbe658dd7debc7b11c2c3e15a928cd1e2b15d7a437756aebf51dc",
+      "bytes": 10998
     }
   ]
 }
