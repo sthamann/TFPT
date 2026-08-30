@@ -2232,6 +2232,36 @@ _R453_STATUS = (
     "NO anti-RH claim"
 )
 
+_R454_STATUS = (
+    "limit object "
+    "(round 454, PRIME.RDAGGER.LIMIT_OBJECT.01; "
+    "experiments-side, NO ledger row): "
+    "lemma-first, the r453 cofinal collapse "
+    "(prefix h>0 and rho_n<5/7) is a property "
+    "of a limit object once the folded moments "
+    "converge degreewise.  "
+    "VERDICT LIMIT_CLASSICAL / "
+    "LIMITCHAIN_ALIVE_200 / CHAIN_DOCUMENTED.  "
+    "For j>=2, m_inf[j] = m_ARCH[j] (MAIN-ARCH "
+    "break == n_stab on kz17/116/136; deep "
+    "windows agree through the computed prefix).  "
+    "PNT-world (same fold, comb -> dpsi~e^u du) "
+    "agrees at 7.7e-6 (kz17) / 5.9e-11 (kz137); "
+    "ARCH agrees at 1e-15.  m0,m1 have no finite "
+    "limit (arch mass grows).  rho_j(inf)=0 +/- "
+    "1e-4 through j=200 (worst measured 7.3e-6 "
+    "on kz197); mu-chain h0>0 min b>0 through "
+    "200 on kz500.  [L1] MEASURED, [L2] MEASURED "
+    "(Lipschitz dq/dm_2 ~ 0.09), [L3] MEASURED "
+    "for j<=200 / OPEN as a theorem.  First "
+    "measured in /tmp then sealed.  Companion "
+    "rh/problem/limit_object.tex + "
+    "verify_limit_object.py LIMIT OBJECT "
+    "VERIFIED.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -5630,6 +5660,31 @@ ENTRIES = [
      "compiled PDF of border_mass.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/limit_object.tex", "problem_statement",
+     "r454 companion",
+     [],
+     "lemma-first folded-moment limit object (round 454): "
+     "LIMIT_CLASSICAL; LIMITCHAIN_ALIVE_200; "
+     "CHAIN_DOCUMENTED.  "
+     "NO RH claim, NO anti-RH claim",
+     True),
+    ("rh/problem/verify_limit_object.py", "problem_check",
+     "r454 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "limit_object.tex: standalone "
+     "(LIMIT_CLASSICAL, LIMITCHAIN_ALIVE_200, "
+     "CHAIN_DOCUMENTED, m_inf pins, MAIN=ARCH) plus "
+     "construction pins (rho_16, Lipschitz, "
+     "drop-500).  "
+     "6/6 gates, final line LIMIT OBJECT VERIFIED",
+     True),
+    ("rh/problem/limit_object.pdf", "problem_statement",
+     "r454 companion",
+     [],
+     "compiled PDF of limit_object.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -6080,6 +6135,11 @@ ENTRIES = [
      "r453",
      [],
      _R453_STATUS,
+     True),
+    (f"{EXP}/limit_object_probe.py", "sealed_probe",
+     "r454",
+     [],
+     _R454_STATUS,
      True),
 ]
 

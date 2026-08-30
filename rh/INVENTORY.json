@@ -3686,6 +3686,36 @@
       "bytes": 200302
     },
     {
+      "path": "rh/problem/limit_object.tex",
+      "role": "problem_statement",
+      "round": "r454 companion",
+      "ledger_ids": [],
+      "status": "lemma-first folded-moment limit object (round 454): LIMIT_CLASSICAL; LIMITCHAIN_ALIVE_200; CHAIN_DOCUMENTED.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "a79cab0446c574ca4296d7568fa9ae5f2634162743ef1726277faac00388109a",
+      "bytes": 8287
+    },
+    {
+      "path": "rh/problem/verify_limit_object.py",
+      "role": "problem_check",
+      "round": "r454 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in limit_object.tex: standalone (LIMIT_CLASSICAL, LIMITCHAIN_ALIVE_200, CHAIN_DOCUMENTED, m_inf pins, MAIN=ARCH) plus construction pins (rho_16, Lipschitz, drop-500).  6/6 gates, final line LIMIT OBJECT VERIFIED",
+      "pin": true,
+      "sha256": "b99d8878312685e84d019962ae04e46090a46b44085ad1a07161c03e664200b0",
+      "bytes": 3684
+    },
+    {
+      "path": "rh/problem/limit_object.pdf",
+      "role": "problem_statement",
+      "round": "r454 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of limit_object.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "319ce221ff798c451847d241e58b406d851e0fd250945a6403cb95997991a4b8",
+      "bytes": 221496
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -3860,8 +3890,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ebea27aa350fcc2100cf732207acbdc50e198ab97cf1beff5badf1a2b4a2665b",
-      "bytes": 5531467
+      "sha256": "6b451b8522a36fc450828cca08c8bea5c119a4188d8317e4feea22691981053d",
+      "bytes": 5533388
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4632,6 +4662,16 @@
       "pin": true,
       "sha256": "1f1088a1765dbe658dd7debc7b11c2c3e15a928cd1e2b15d7a437756aebf51dc",
       "bytes": 10998
+    },
+    {
+      "path": "experiments/tfpt-discovery/limit_object_probe.py",
+      "role": "sealed_probe",
+      "round": "r454",
+      "ledger_ids": [],
+      "status": "limit object (round 454, PRIME.RDAGGER.LIMIT_OBJECT.01; experiments-side, NO ledger row): lemma-first, the r453 cofinal collapse (prefix h>0 and rho_n<5/7) is a property of a limit object once the folded moments converge degreewise.  VERDICT LIMIT_CLASSICAL / LIMITCHAIN_ALIVE_200 / CHAIN_DOCUMENTED.  For j>=2, m_inf[j] = m_ARCH[j] (MAIN-ARCH break == n_stab on kz17/116/136; deep windows agree through the computed prefix).  PNT-world (same fold, comb -> dpsi~e^u du) agrees at 7.7e-6 (kz17) / 5.9e-11 (kz137); ARCH agrees at 1e-15.  m0,m1 have no finite limit (arch mass grows).  rho_j(inf)=0 +/- 1e-4 through j=200 (worst measured 7.3e-6 on kz197); mu-chain h0>0 min b>0 through 200 on kz500.  [L1] MEASURED, [L2] MEASURED (Lipschitz dq/dm_2 ~ 0.09), [L3] MEASURED for j<=200 / OPEN as a theorem.  First measured in /tmp then sealed.  Companion rh/problem/limit_object.tex + verify_limit_object.py LIMIT OBJECT VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "7f64e8a4b8ae385f403bc3eab1384fc2f562b9a4eed7760c15c1257f053265dc",
+      "bytes": 13577
     }
   ]
 }

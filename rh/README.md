@@ -6627,6 +6627,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452
 are parallel and not dropped.
 
+**Limit object (r454,
+PRIME.RDAGGER.LIMIT\_OBJECT.01).**
+Sealed probe
+`experiments/tfpt-discovery/limit_object_probe.py`
+(smoke 20/20, SPEC\_SHA `1f4abe0f66e470e6`)
+plus `rh/problem/limit_object.tex` (+ PDF +
+`verify_limit_object.py`, 6/6, `LIMIT OBJECT VERIFIED`).
+**Ausgang LIMIT\_CLASSICAL / LIMITCHAIN\_ALIVE\_200 / CHAIN\_DOCUMENTED.**
+For $j\ge 2$, $m_\infty=m_{\mathrm{ARCH}}$ (comb in the rate, not the limit).  $\rho_j(\infty)=0\pm 10^{-4}$ through $j=200$.  [L1] MEASURED, [L2] MEASURED, [L3] MEASURED($j\le 200$)/OPEN.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7003,6 +7016,10 @@ rh/
 │   │                     MASS_CLASSICAL_REDUCED_GROWING;
 │   │                     RACE_WON.
 │   │                     No RH claim
+│   ├── limit_object.tex(+pdf) — r454: LIMIT_CLASSICAL;
+│   │                     LIMITCHAIN_ALIVE_200;
+│   │                     CHAIN_DOCUMENTED.
+│   │                     No RH claim
 │   ├── verify_lstar_instance.py — machine check that the standalone
 │   │                     L* definition IS the campaign object
 │   ├── verify_medcap_steps.py — machine check of every numbered
@@ -7210,6 +7227,9 @@ rh/
 │   └── verify_border_mass.py — machine check of
 │                         border_mass.tex (6/6,
 │                         BORDER MASS VERIFIED)
+│   └── verify_limit_object.py — machine check of
+│                         limit_object.tex (6/6,
+│                         LIMIT OBJECT VERIFIED)
 └── verification/
     ├── make_inventory.py — regenerates INVENTORY.json
     └── run_rh.py         — the RH suite (see below)
@@ -7567,7 +7587,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r453 from
+2. **Sealed probes** — the campaign probes r250–r454 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -8051,6 +8071,14 @@ Suite surface: integrity + probes
 is additive on the r452 plateau SATZ
 (BOUND_PROVED: q_n = S_{n-1}/B_w;
 MASS_CLASSICAL_REDUCED_GROWING; RACE_WON).
+It does not touch `experiments/next.txt`.  The Lean
+landing site is unchanged; this round does not add Lean.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r454 coexistence.** Round 454 (`limit_object_probe.py`)
+is additive on the r453 cofinal collapse
+(LIMIT_CLASSICAL: m_inf = m_ARCH for j>=2;
+LIMITCHAIN_ALIVE_200; CHAIN_DOCUMENTED).
 It does not touch `experiments/next.txt`.  The Lean
 landing site is unchanged; this round does not add Lean.
 Suite surface: integrity + probes
