@@ -61,9 +61,13 @@ unsigned cancellation of von~Mangoldt data
 (Section~\ref{sec:cores}).  Round 427 audited the campaign
 numbers (Section~\ref{sec:audit}).  The current architecture is
 an \emph{open program} in the Krein--Langer class $\Sk_{\kappa}$
-(Section~\ref{sec:potapov}): bulk membership $\Sk_{\le 1}$ and
-edge membership $\Sk_{0}$ via a Redheffer pivot, with two
-quantifier weakenings.  The older minimal-inertia and
+(Section~\ref{sec:potapov}), but rounds 445--463 sharpen its
+external form.  A table-cap failure was exposed and repaired, a
+prime-blind prefix was killed by a two-world red team, the full
+selected windows survived through $k=12$, and the remaining
+mincut was translated into cofinal compact-window Weil positivity
+(Sections~\ref{sec:methodology}--\ref{sec:r463-fidelity}).  The
+older minimal-inertia and
 saturation/RHP questions are retained as
 Problems~\ref{prob:minimal} and~\ref{prob:rhp}.  This document is
 a problem statement for specialists, not a claim, and nothing in
@@ -95,9 +99,15 @@ graph-resolvent consolidation round 412
 edge-balance consolidation round 426
 (\texttt{RH/EdgeBalance.lean});
 campaign audit round 427; selected-sequence reopening round 428;
-head-identity round 429.  Companion notes:
-\texttt{campaign\_audit.tex}, \texttt{qn\_reopened.tex},
-\texttt{zloc\_head.tex}.
+head-identity round 429; adversarial selected-window campaign
+rounds 445--459; spectral race reduction round 460; classical
+translation round 461; end-to-end gap map round 462; faithful
+Lean-object repair round 463.  Companion notes:
+\path{campaign_audit.tex}, \path{qn_reopened.tex},
+\path{zloc_head.tex}, \path{vacuity_redteam.tex},
+\path{fullcomb_cleanup.tex}, \path{race_proof.tex},
+\path{narrowband_weil.tex}, \path{endtoend_gapmap.tex},
+and \path{lean_fidelity.tex}.
 
 \section{Setup}\label{sec:setup}
 
@@ -835,17 +845,18 @@ These numbers certify the dictionary; they do not prove (P1)
 off the certified head.
 
 \paragraph{Closed internal languages.}
-Table~\ref{tab:closed} lists twenty-eight named routes closed
-between DCCXLVI and DCCXCVI: the original seventeen languages
+Table~\ref{tab:closed} lists thirty-one named routes closed
+between DCCXLVI and DCCCXXX: the original seventeen languages
 for (P1), the two r409 graph-factor closures previously omitted
-from the count, and the r413--r429 bulk and terminal kills.
+from the count, the r413--r429 bulk and terminal kills, and the
+three r456/r460 quantifier and majorant closures.
 Each line is a sealed probe record, not an extrapolation.
 Nothing in the table is a family theorem.
 
 \begin{table}[ht]
 \centering
-\caption{Twenty-eight named closed routes (bulk and terminal),
-DCCXLVI--DCCXCVI.  Verdicts are probe-local.  No family
+\caption{Thirty-one named closed routes (bulk and terminal),
+DCCXLVI--DCCCXXX.  Verdicts are probe-local.  No family
 theorem is claimed.}
 \label{tab:closed}
 {\small
@@ -909,6 +920,12 @@ Unsigned $|\Zloc|$ triangle
   & r429, DCCXCVI & $[2.240,19.245]$; slope $+0.719$ \\
 Chebyshev $\psi$ / left--right Abel
   & r429, DCCXCVI & $\mathrm{pair}_{c}=1$; no $k_{0}$ \\
+Prime-blind prefix as mincut
+  & r456, DCCCXXVI & world-blind; \texttt{Iff.rfl} was only a naming \\
+Raw resolvent norm / Gershgorin
+  & r460, DCCCXXX & $4.825\to4991.649$; destroys border alignment \\
+Fixed-$r$ selected blocks
+  & r460, DCCCXXX & only $2r+1$ indices; cannot prove FREQ \\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -1426,8 +1443,10 @@ is a topological product, not an absolute-value majorant.
 
 These four problems, together with
 Problems~\ref{prob:qn} and~\ref{prob:siginf}, are the
-externalisable remainder.  They are not theorems, not
-landing pads, and not claims.
+pre-r445 externalisable remainder.  They remain possible attack
+languages for the sharper post-r461 problem, not the final
+statement itself.  They are not theorems, not landing pads, and
+not claims.
 
 \section{What a proof would give, and what it would not}\label{sec:status}
 
@@ -1462,9 +1481,13 @@ sorry-free R$^{\dagger}$ Lean layer.  No Riemann--Hilbert
 steepest-descent analysis has been carried out.  The
 equilibrium-measure limit, the Gamma parametrix, and the error
 operator $E$ are open, and they are no longer the cheapest target.
-The cheapest remaining targets are the four open-program
-statements of Section~\ref{sec:potapov} together with
-Problems~\ref{prob:qn} and~\ref{prob:siginf}.
+After the r445--r463 audit, the clean external target is the
+frequently-selected semidefinite lemma, classically translated as
+cofinal compact-window Weil positivity in
+Section~\ref{sec:r461}.  The four open-program statements of
+Section~\ref{sec:potapov}, together with
+Problems~\ref{prob:qn} and~\ref{prob:siginf}, are candidate routes
+to that target rather than competing formulations.
 Comparison inputs show that the identities survive source
 destruction while positivity and the saturated partition do not
 --- so an existence proof for (P1)--(P2) must consume the
@@ -1502,16 +1525,161 @@ $-\det K_{2}$ (nneg-$1$ family) & $[1.157,\,1126.389]$ \\
 \end{tabular}
 \end{table}
 
-\section{R463 Lean-fidelity repair}\label{sec:r463-fidelity}
-The r459 vitality statement is now qualified as
+\section{Weekend red team: rounds 445--459}\label{sec:methodology}
+
+This episode is retained because it records the method, not merely
+the eventual positive census.  Round 445 first made the deep builder
+fast enough to evaluate the selected windows $k=10,11,12$.  On the
+then-current atom table the associated frame-A chains flipped or
+aborted, apparently killing the cofinal family.  Round 458 isolated
+the wall:
+\[
+\mathrm{TABLE\_CAP}=4\cdot10^{5},\qquad
+631^{2}<\mathrm{TABLE\_CAP}<641^{2}.
+\]
+Completing the von~Mangoldt comb through the mathematically required
+$a^{2}$ revived the named selected family through $k=16$ in the
+finite census; the apparent $a\approx640$ death was therefore an
+implementation artefact \gr{census, r445/r458}.  A residual death on
+a different frame-A mesh remained and was not relabelled.
+
+The more serious red team concerned logical vacuity.  Rounds
+450--455 had isolated a stable prefix below
+$J_{P}=2^{\lfloor\sqrt{k}\rfloor}-1$.  Round 456 compared two worlds
+with identical fold geometry and border: MAIN retained the
+von~Mangoldt comb and ARCH deleted it.  Below the first prime tent
+their prefix values agreed to $3.33\cdot10^{-16}$ and
+$2.22\cdot10^{-16}$ on the sealed controls.  Thus the prefix was
+prime-blind and could not be the frequently-selected mincut.
+The Lean declaration had never truncated the cone:
+\texttt{Iff.rfl} only renamed the full-cap condition.  This is a
+methodological success: a numerically stable, formally convenient
+object was discarded because it could not distinguish primes from
+no primes \gr{refuted, r456, commit \texttt{166df680}}.
+
+Round 459 then rebuilt the honest full-cap object with the complete
+comb.  The selected values
+\[
+0.675060,\ 0.694907,\ 0.628736,\ 0.606566,\
+0.635369,\ 0.757783,\ 0.715782,\ 0.693564
+\]
+for $k=5,\ldots,12$ all lie below $1$; their range is
+$[0.606566,0.757783]$ and the sequence is nonmonotone
+\gr{census, r459, commit \texttt{43ea44ba}}.  These are finite
+survival data, not an infinite-subsequence theorem.
+
+\section{Spectral compression: round 460}\label{sec:r460}
+
+Let $C_{k}=B_{k}^{T}B_{k}$ be the negative-measure sampling Gram
+in the positive-measure orthonormal frame and let
+$u_{k}=b_{k}/\sqrt{B_{k}^{\rm bud}}$ be the normalized production
+border.  If $C_{k}\prec I$ and
+$C_{k}e_{k,j}=\lambda_{k,j}e_{k,j}$, then the full race is exactly
+\begin{equation}\label{eq:r460spectral}
+ q_{k}^{\dagger}
+ =u_{k}^{T}(I-C_{k})^{-1}u_{k}
+ =\sum_{j}\frac{|\langle u_{k},e_{k,j}\rangle|^{2}}
+                    {1-\lambda_{k,j}},
+\qquad
+\begin{pmatrix}I-C_{k}&u_{k}\\u_{k}^{T}&1\end{pmatrix}\succ0
+\iff q_{k}^{\dagger}<1 .
+\end{equation}
+This is finite spectral and Schur-complement algebra
+\gr{exact, r460, commit \texttt{f915dd5e}}.  It is the best internal
+form of the open problem: control the spectral measure of the
+explicit border near the saturating edge $\lambda=1$.
+
+The associated norm attack is closed.  The raw upper bound
+$\|u_{k}\|^{2}/(1-\lambda_{\max}(C_{k}))$ grows from $4.825$ to
+$4991.649$ on $k=5,\ldots,12$, although the top-eigenvector overlap
+is only $1.54\cdot10^{-6}$--$9.53\cdot10^{-3}$.  Even the optimal
+two-band estimate certifies only $k=5$ ($0.910<1$).  Operator norms
+erase the alignment that matters.  Nor can one remain on a fixed
+$r=\lfloor\sqrt{k}\rfloor$: that block has exactly $2r+1$ indices.
+The surviving target is a source-derived border-overlap estimate
+across infinitely many $r$-blocks \gr{open, r460}.
+
+\section{Classical centre: cofinal Weil positivity}\label{sec:r461}
+
+The selected sequence is
+\[
+a_{k}=2^{k},\qquad r_{k}=\lfloor\sqrt{k}\rfloor,\qquad
+m_{k}=k2^{r_{k}}-1,\qquad
+\Delta_{k}=2^{-r_{k}}\log2 .
+\]
+At the production cap
+$N_{k}=(m_{k}+1)/2=k2^{r_{k}-1}$, hence the autocorrelation support
+half-width and the centred base-function half-width are
+\[
+U_{k}=N_{k}\Delta_{k}=\frac{k\log2}{2},
+\qquad L_{k}=\frac{U_{k}}2=\frac{k\log2}{4}.
+\]
+Consequently $U_{5}=1.732868>1.6$, and every measured member
+$k=5,\ldots,12$ lies beyond both the classical prime-blind regime
+$U<\log2$ and the recent computational certificate $U\le1.6$
+\gr{exact geometry and literature boundary, r461,
+commit \texttt{6f5ea563}}.  The r459 race is therefore evidence
+inside the genuinely conditional tail; no narrow-band theorem
+explains it.
+
+For a centred base function $h$ define
+$Q_{\rm W}(h)=W(h*\widetilde h)$ and
+\[
+\lambda_{*}(L)=
+\inf_{\substack{0\ne h\in L^{2}(\R)\\
+\operatorname{supp}h\subset[-L,L]}}
+\frac{Q_{\rm W}(h)}{\|h\|_{2}^{2}}.
+\]
+After the finite window/read dictionary is proved, the mincut says
+$\lambda_{*}(L_{k})\ge0$ for an unbounded selected subsequence.
+The support spaces are nested, so $\lambda_{*}$ is nonincreasing;
+positivity on an unbounded cofinal subsequence then implies
+positivity at every finite $L$.  The completed statement is not a
+weak density fragment: it is \emph{cofinal compact-window Weil
+positivity}.
+
+The six-step route and its honest status are:
+\begin{enumerate}
+\item identify the faithful fold, cap, and Hankel form
+      \gr{completed in r463 on the production object};
+\item prove the selected $A_{\rm cap}$-to-\texttt{fullRead} bridge
+      \gr{open, named Prop};
+\item prove the archimedean lag/digamma identification
+      \gr{open formalization of classical analysis};
+\item extend the native dyadic autocorrelations by density and
+      continuity and identify the standard explicit formula
+      \gr{three external obligations named in r463};
+\item certify additional fixed compact windows
+      \gr{finite and unconditional, but not a cofinal result};
+\item prove nonnegativity on unbounded $L_{k}$
+      \gr{open-hard; after Steps 1--4 this is equivalent to the full
+      Weil criterion}.
+\end{enumerate}
+
+\section{R462/R463 end-to-end Lean state}\label{sec:r463-fidelity}
+
+Round 462 deliberately audited the entire advertised path and found
+three independent gaps: the selected Lean object was a raw-atom
+cosine fold rather than the production tent/spectral fold; the path
+consumed the unproved
+\texttt{SelectedACapPsdImpliesPlainReads} and the
+\texttt{arch\_elementwise\_stabilization} \texttt{sorry}; and the
+endpoint was a custom three-channel form with no density, zero-side,
+or zeta interface \gr{historical diagnostic, r462,
+commit \texttt{561b490d}}.
+
+Round 463 repaired the first defect rather than suppressing the
+diagnostic.  The r459 vitality statement is now qualified as
 \emph{Python object, fidelity comparison completed only in r463};
 before this repair the selected Lean object was a different raw-atom
 cosine fold.  The selected Lean path now uses the production sequence
 \[
+  \begin{gathered}
   \text{tent lags}\longrightarrow c_A+c_P
-  \longrightarrow\text{circulant spectral density}
-  \longrightarrow\text{grid fold and sign split},
+  \longrightarrow\text{circulant spectral density}\\
+  {}\longrightarrow\text{grid fold and sign split},
   \qquad L=2(m+1)-2.
+  \end{gathered}
 \]
 The exported k=5,9,10 pins reproduce the Python positive-measure
 Hankel entries and support/cap values.  The remaining archimedean
@@ -1526,7 +1694,10 @@ external links are named \texttt{sorry}s: dense extension to the full
 Weil class, identification with the standard explicit formula, and
 the standard Weil criterion against Mathlib's
 \texttt{RiemannHypothesis}.  Hence the honest census is $5\to8$.
-No statement in this section claims the Riemann hypothesis.
+The finite Loewner, whitening, filter, and internal endpoint
+implications are proved; the compound premise and the three external
+bridges are not.  No statement in this section claims the Riemann
+hypothesis \gr{r463, commit \texttt{8f81005f}}.
 
 \medskip\noindent
 \textbf{Claim boundary.}\enspace
