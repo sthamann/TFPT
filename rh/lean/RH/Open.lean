@@ -1113,6 +1113,24 @@ the ζ-assembly (`g = F/Π`, r510 on Re>δ, gap
 sum `O(log² T)`) is the next cut.  Census stays 7
 (external 2).  NO RH CLAIM.
 
+## r520 census (outer bridges 27, [2d] Landau assembly)
+
+Contour revision: r510 needs `Re > δ > 0`, so
+`D(2+iT, R)` cannot cover `σ = -1/4` without FE.
+`contour_identity_fixed_T` is hardcoded at
+`σ₁ = -1/4` but the same hypotheses hold for every
+`σ₁ ∈ (-1/4, 0)` (r518 zero-free).  Intended
+contour `[-1/16, 2]`.  PROVED, sorry-free: the
+logDeriv dictionary `ζ'/ζ = F'/F − 1/(s−1)`,
+r510 poly bound on the inner disk `D(2+iT, 13/8)`,
+`landauPoly` and its logDeriv, Jensen-weighted
+`Σ m_ρ ≪ log T`, and the gap sum
+`|Σ m_ρ/(s−ρ)| ≪ log² T`.  The Prop is weakened
+to `σ ∈ [1/2, 2]` and `(1+log T)³`.  Remaining
+clamp: holomorphic `g = F/Π` (dslope fold) +
+r519 kernel, then the sliver `[-1/16, 1/2]`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

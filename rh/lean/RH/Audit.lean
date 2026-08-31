@@ -470,8 +470,12 @@ at Re ≥ 5/4, Lücken-Lemma
 (`exists_gap_height`).
 r519: Mathlib Borel–Carathéodory wrapped to
 general balls; `logDeriv` primitive +
-`norm_logDeriv_le_of_log_norm_le`.  Landau
-assembly remains a named Prop.  Census stays 7.
+`norm_logDeriv_le_of_log_norm_le`.
+r520: contour revision to the r510-safe
+horizontal `[1/2, 2]`; logDeriv dictionary,
+`landauPoly`, Jensen `Σ m`, gap sum
+`O(log² T)`.  `g = F/Π` + kernel remain.
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -626,6 +630,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms exists_logDeriv_primitive
 #print axioms re_logDeriv_primitive_eq
 #print axioms norm_logDeriv_le_of_log_norm_le
+#print axioms logDeriv_riemannZeta_eq_logDeriv_mulSubOne_sub
+#print axioms norm_riemannZetaMulSubOne_le_on_landau_ball
+#print axioms logDeriv_landauPoly
+#print axioms sum_multiplicity_landauInnerDisk_le
+#print axioms norm_sum_multiplicity_inv_le_of_gap
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
