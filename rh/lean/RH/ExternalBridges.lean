@@ -18,6 +18,8 @@ import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Topology.Order.Basic
+import Mathlib.MeasureTheory.Integral.Bochner.Set
+import Mathlib.MeasureTheory.Function.LocallyIntegrable
 
 namespace RH
 
@@ -79,6 +81,831 @@ theorem dyadicSampleGrid_supportBound_le
       (R * (2 : ℝ) ^ m) * (1 / (2 : ℝ) ^ m) :=
         mul_le_mul_of_nonneg_right hfloor (by positivity)
     _ = R := by field_simp
+
+/-- `D(m) = 2^{-m} → 0`.  Mesh of the r491 left-sampled grid. -/
+lemma meshWidth_tendsto_zero :
+    Filter.Tendsto meshWidth Filter.atTop (nhds 0) := by
+  have h : Filter.Tendsto (fun m : ℕ => ((1 : ℝ) / 2) ^ m)
+      Filter.atTop (nhds 0) :=
+    tendsto_pow_atTop_nhds_zero_of_lt_one (by positivity) (by norm_num)
+  convert h using 1
+  funext m
+  unfold meshWidth
+  exact (one_div_pow (2 : ℝ) m).symm
+
+/-- Compactly supported continuous functions on `ℝ` are uniformly
+continuous (Heine on a 1-neighbourhood of the support, both sides
+vanish outside). -/
+lemma FullWeilTest.uniformContinuous_toFun (F : FullWeilTest) :
+    UniformContinuous F.toFun := by
+  rw [Metric.uniformContinuous_iff]
+  intro ε hε
+  have hcpt :
+      IsCompact (Set.Icc (-(F.supportRadius + 1)) (F.supportRadius + 1)) :=
+    isCompact_Icc
+  have hUC :=
+    hcpt.uniformContinuousOn_of_continuous F.continuous_toFun.continuousOn
+  rw [Metric.uniformContinuousOn_iff] at hUC
+  obtain ⟨δ', hδ', hδu⟩ := hUC ε hε
+  refine ⟨min δ' 1, lt_min hδ' (by norm_num), fun x y hdxy => ?_⟩
+  have hd1 : dist x y < 1 := lt_of_lt_of_le hdxy (min_le_right _ _)
+  have hdδ : dist x y < δ' := lt_of_lt_of_le hdxy (min_le_left _ _)
+  have hmem {z : ℝ} (hz : |z| ≤ F.supportRadius + 1) :
+      z ∈ Set.Icc (-(F.supportRadius + 1)) (F.supportRadius + 1) :=
+    abs_le.mp hz
+  by_cases hx : |x| ≤ F.supportRadius + 1
+  · by_cases hy : |y| ≤ F.supportRadius + 1
+    · exact hδu x (hmem hx) y (hmem hy) hdδ
+    · have hyR : F.supportRadius < |y| :=
+        lt_of_lt_of_le' (not_le.mp hy)
+          (le_add_of_nonneg_right (by norm_num : (0 : ℝ) ≤ 1))
+      have hxR : F.supportRadius < |x| := by
+        have habs : |(|y| - |x|)| ≤ dist y x := abs_abs_sub_abs_le_abs_sub y x
+        have : |(|y| - |x|)| < 1 :=
+          lt_of_le_of_lt habs (by rwa [dist_comm, Real.dist_eq] at hd1)
+        rw [abs_lt] at this
+        linarith
+      rw [F.support_toFun x hxR, F.support_toFun y hyR, dist_self]
+      exact hε
+  · have hxR : F.supportRadius < |x| :=
+      lt_of_lt_of_le' (not_le.mp hx)
+        (le_add_of_nonneg_right (by norm_num : (0 : ℝ) ≤ 1))
+    have hyR : F.supportRadius < |y| := by
+      have habs : |(|x| - |y|)| ≤ dist x y := abs_abs_sub_abs_le_abs_sub x y
+      have : |(|x| - |y|)| < 1 :=
+        lt_of_le_of_lt habs (by rwa [Real.dist_eq] at hd1)
+      rw [abs_lt] at this
+      linarith
+    rw [F.support_toFun x hxR, F.support_toFun y hyR, dist_self]
+    exact hε
+
+lemma FullWeilTest.toFun_zero_at_radius (F : FullWeilTest) :
+    F.toFun F.supportRadius = 0 := by
+  have hs : Filter.Tendsto (fun n : ℕ => F.supportRadius + 1 / (n + 1 : ℝ))
+      Filter.atTop (nhds F.supportRadius) := by
+    simpa using
+      (tendsto_const_nhds (x := F.supportRadius)).add
+        tendsto_one_div_add_atTop_nhds_zero_nat
+  have hval : ∀ n : ℕ, F.toFun (F.supportRadius + 1 / (n + 1 : ℝ)) = 0 :=
+    fun n => by
+      apply F.support_toFun
+      rw [abs_of_nonneg
+        (add_nonneg F.supportRadius_nonneg (by positivity))]
+      exact lt_add_of_pos_right _ (by positivity)
+  have hseq : Filter.Tendsto
+      (fun n : ℕ => F.toFun (F.supportRadius + 1 / (n + 1 : ℝ)))
+      Filter.atTop (nhds 0) := by
+    have : (fun n : ℕ => F.toFun (F.supportRadius + 1 / (n + 1 : ℝ))) =
+        fun _ => (0 : ℝ) := funext hval
+    rw [this]
+    exact tendsto_const_nhds
+  exact tendsto_nhds_unique
+    ((F.continuous_toFun.tendsto F.supportRadius).comp hs) hseq
+
+lemma lipschitz_witness_zero_left {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0) :
+    h a = 0 := by
+  have hs : Filter.Tendsto (fun n : ℕ => a - 1 / (n + 1 : ℝ))
+      Filter.atTop (nhds a) := by
+    simpa using
+      (tendsto_const_nhds (x := a)).sub tendsto_one_div_add_atTop_nhds_zero_nat
+  have hval : ∀ n : ℕ, h (a - 1 / (n + 1 : ℝ)) = 0 := fun n =>
+    hsupp _ (Or.inl (sub_lt_self a (by positivity)))
+  have hseq : Filter.Tendsto (fun n : ℕ => h (a - 1 / (n + 1 : ℝ)))
+      Filter.atTop (nhds 0) := by
+    have : (fun n : ℕ => h (a - 1 / (n + 1 : ℝ))) = fun _ => (0 : ℝ) :=
+      funext hval
+    rw [this]
+    exact tendsto_const_nhds
+  exact tendsto_nhds_unique ((hK.continuous.tendsto a).comp hs) hseq
+
+lemma lipschitz_witness_zero_right {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0) :
+    h (a + R) = 0 := by
+  have hs : Filter.Tendsto (fun n : ℕ => a + R + 1 / (n + 1 : ℝ))
+      Filter.atTop (nhds (a + R)) := by
+    simpa using
+      (tendsto_const_nhds (x := a + R)).add tendsto_one_div_add_atTop_nhds_zero_nat
+  have hval : ∀ n : ℕ, h (a + R + 1 / (n + 1 : ℝ)) = 0 := fun n =>
+    hsupp _ (Or.inr (lt_add_of_pos_right _ (by positivity)))
+  have hseq : Filter.Tendsto (fun n : ℕ => h (a + R + 1 / (n + 1 : ℝ)))
+      Filter.atTop (nhds 0) := by
+    have : (fun n : ℕ => h (a + R + 1 / (n + 1 : ℝ))) = fun _ => (0 : ℝ) :=
+      funext hval
+    rw [this]
+    exact tendsto_const_nhds
+  exact tendsto_nhds_unique ((hK.continuous.tendsto (a + R)).comp hs) hseq
+
+lemma lipschitz_witness_abs_le {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (t : ℝ) :
+    |h t| ≤ K * R := by
+  rcases lt_or_ge t a with hlt | hge
+  · rw [hsupp t (Or.inl hlt), abs_zero]
+    exact mul_nonneg (NNReal.coe_nonneg _) hR
+  rcases lt_or_ge (a + R) t with hgt | _hle
+  · rw [hsupp t (Or.inr hgt), abs_zero]
+    exact mul_nonneg (NNReal.coe_nonneg _) hR
+  · have ha : h a = 0 := lipschitz_witness_zero_left hK hsupp
+    have hdist := hK.dist_le_mul t a
+    rw [Real.dist_eq, Real.dist_eq, ha, sub_zero] at hdist
+    have ht : t - a ≤ R := by linarith
+    have ht0 : 0 ≤ t - a := sub_nonneg.mpr hge
+    rw [abs_of_nonneg ht0] at hdist
+    exact le_trans hdist (mul_le_mul_of_nonneg_left ht (NNReal.coe_nonneg _))
+
+lemma autocorrelation_eq_intervalIntegral
+    {h : ℝ → ℝ} {a R u : ℝ}
+    (hc : Continuous h) (hs : HasCompactSupport h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) :
+    ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume =
+      intervalIntegral (fun t : ℝ => h t * h (t + u))
+        a (a + R) MeasureTheory.volume := by
+  set φ : ℝ → ℝ := fun t => h t * h (t + u)
+  have _hint :
+      MeasureTheory.Integrable φ MeasureTheory.volume :=
+    (hc.mul (hc.comp (by fun_prop))).integrable_of_hasCompactSupport
+      (by simpa [φ, Pi.mul_apply] using
+        hs.mul_right (f' := fun t => h (t + u)))
+  have h0 : ∀ t : ℝ, t ∉ Set.Icc a (a + R) → φ t = 0 := fun t ht => by
+    have hout : t < a ∨ a + R < t := by
+      rw [Set.mem_Icc, not_and_or] at ht
+      rcases ht with hta | htR
+      · exact Or.inl (lt_of_not_ge hta)
+      · exact Or.inr (lt_of_not_ge htR)
+    change h t * h (t + u) = 0
+    rw [hsupp t hout, zero_mul]
+  have hab : a ≤ a + R := le_add_of_nonneg_right hR
+  rw [← MeasureTheory.setIntegral_eq_integral_of_forall_compl_eq_zero h0]
+  rw [MeasureTheory.integral_Icc_eq_integral_Ioc]
+  exact (intervalIntegral.integral_of_le hab).symm
+
+lemma autocorrelation_integrand_abs_le
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (t u : ℝ) :
+    |h t * h (t + u)| ≤ (K * R) ^ 2 := by
+  have hb := lipschitz_witness_abs_le hK hsupp hR
+  have hKR : 0 ≤ (K : ℝ) * R :=
+    mul_nonneg (NNReal.coe_nonneg _) hR
+  calc
+    |h t * h (t + u)| = |h t| * |h (t + u)| := abs_mul _ _
+    _ ≤ (K * R) * (K * R) :=
+      mul_le_mul (hb t) (hb (t + u)) (abs_nonneg _) hKR
+    _ = (K * R) ^ 2 := by ring
+
+lemma autocorrelation_integrand_lip
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (u x y : ℝ) :
+    |h x * h (x + u) - h y * h (y + u)| ≤
+      (2 * (K : ℝ) * K * R) * |x - y| := by
+  have hb := lipschitz_witness_abs_le hK hsupp hR
+  have hdx := hK.dist_le_mul x y
+  have hdu := hK.dist_le_mul (x + u) (y + u)
+  rw [Real.dist_eq, Real.dist_eq] at hdx
+  rw [Real.dist_eq, Real.dist_eq, add_sub_add_right_eq_sub] at hdu
+  have hKR : 0 ≤ (K : ℝ) * R :=
+    mul_nonneg (NNReal.coe_nonneg _) hR
+  have hK0 : 0 ≤ (K : ℝ) := NNReal.coe_nonneg _
+  calc
+    |h x * h (x + u) - h y * h (y + u)| =
+        |(h x - h y) * h (x + u) + h y * (h (x + u) - h (y + u))| := by
+      congr 1
+      ring
+    _ ≤ |(h x - h y) * h (x + u)| + |h y * (h (x + u) - h (y + u))| :=
+      abs_add_le _ _
+    _ = |h x - h y| * |h (x + u)| + |h y| * |h (x + u) - h (y + u)| := by
+      rw [abs_mul, abs_mul]
+    _ ≤ (K * |x - y|) * (K * R) + (K * R) * (K * |x - y|) :=
+      add_le_add
+        (mul_le_mul hdx (hb (x + u)) (abs_nonneg _) (mul_nonneg hK0 (abs_nonneg _)))
+        (mul_le_mul (hb y) hdu (abs_nonneg _) hKR)
+    _ = (2 * (K : ℝ) * K * R) * |x - y| := by ring
+
+lemma intervalIntegral_lipschitz_left_riemann
+    {φ : ℝ → ℝ} {L D α : ℝ}
+    (hL : ∀ x y : ℝ, |φ x - φ y| ≤ L * |x - y|)
+    (hL0 : 0 ≤ L) (hD : 0 ≤ D)
+    (hint : IntervalIntegrable φ MeasureTheory.volume α (α + D)) :
+    |intervalIntegral φ α (α + D) MeasureTheory.volume - φ α * D| ≤
+      L * D ^ 2 := by
+  have hα : α ≤ α + D := le_add_of_nonneg_right hD
+  have hconst : IntervalIntegrable (fun _ : ℝ => φ α)
+      MeasureTheory.volume α (α + D) :=
+    intervalIntegrable_const
+  have hsub := intervalIntegral.integral_sub hint hconst
+  have hφconst :
+      intervalIntegral (fun _ : ℝ => φ α) α (α + D)
+        MeasureTheory.volume = φ α * D := by
+    rw [intervalIntegral.integral_const, smul_eq_mul]
+    ring
+  have hrew :
+      intervalIntegral φ α (α + D) MeasureTheory.volume - φ α * D =
+        intervalIntegral (fun t : ℝ => φ t - φ α) α (α + D)
+          MeasureTheory.volume := by
+    rw [← hφconst, hsub]
+  rw [hrew]
+  have habs :=
+    intervalIntegral.abs_integral_le_integral_abs
+      (f := fun t : ℝ => φ t - φ α) (μ := MeasureTheory.volume) hα
+  refine le_trans habs ?_
+  have hbound : ∀ t ∈ Set.uIcc α (α + D),
+      |(φ t - φ α)| ≤ L * D := by
+    intro t ht
+    rw [Set.uIcc_of_le hα] at ht
+    have htα : |t - α| ≤ D := by
+      have h1 : α ≤ t := ht.1
+      have h2 : t ≤ α + D := ht.2
+      rw [abs_of_nonneg (sub_nonneg.mpr h1)]
+      linarith
+    exact le_trans (hL t α) (mul_le_mul_of_nonneg_left htα hL0)
+  have hintabs : IntervalIntegrable (fun t : ℝ => |φ t - φ α|)
+      MeasureTheory.volume α (α + D) :=
+    (hint.sub hconst).abs
+  have hmono :=
+    intervalIntegral.integral_mono_on hα hintabs
+      (intervalIntegrable_const (c := L * D))
+      (fun t ht => by
+        have : t ∈ Set.uIcc α (α + D) := by
+          rw [Set.uIcc_of_le hα]
+          exact ht
+        exact hbound t this)
+  refine le_trans hmono ?_
+  rw [intervalIntegral.integral_const, smul_eq_mul]
+  ring_nf
+  nlinarith
+
+lemma dyadicSampleGrid_D0_eq (h : ℝ → ℝ) (a R : ℝ) (m : ℕ) :
+    (dyadicSampleGrid h a R m).D0 = meshWidth m := rfl
+
+lemma dyadicSampleGrid_supportBound_tail_lt
+    (h : ℝ → ℝ) (a R : ℝ) (m : ℕ) (hR : 0 ≤ R) :
+    R - (dyadicSampleGrid h a R m).supportBound < meshWidth m := by
+  unfold dyadicSampleGrid GridElement.supportBound GridElement.D0
+  dsimp
+  have hpow : 0 < (2 : ℝ) ^ m := by positivity
+  have hlt : R * (2 : ℝ) ^ m <
+      ((Nat.floor (R * (2 : ℝ) ^ m) : ℕ) : ℝ) + 1 :=
+    Nat.lt_floor_add_one _
+  have : R - ((Nat.floor (R * (2 : ℝ) ^ m) : ℕ) : ℝ) * (1 / (2 : ℝ) ^ m) <
+      1 / (2 : ℝ) ^ m := by
+    have hgoal : R < ((Nat.floor (R * (2 : ℝ) ^ m) : ℕ) : ℝ) *
+        (1 / (2 : ℝ) ^ m) + 1 / (2 : ℝ) ^ m := by
+      field_simp
+      linarith
+    linarith
+  simpa [meshWidth] using this
+
+lemma lipschitz_witness_abs_le_mesh
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ} {m i : ℕ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R)
+    (hi : (dyadicSampleGrid h a R m).steps ≤ i) :
+    |h (a + (i : ℝ) * meshWidth m)| ≤ K * meshWidth m := by
+  set D := meshWidth m
+  set n := (dyadicSampleGrid h a R m).steps
+  have hD : 0 < D := meshWidth_pos m
+  have hnR : (n : ℝ) * D ≤ R := by
+    simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+      dyadicSampleGrid_supportBound_le h a R m hR
+  have htail : R - (n : ℝ) * D ≤ D :=
+    le_of_lt (by
+      simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+        dyadicSampleGrid_supportBound_tail_lt h a R m hR)
+  have haR : h (a + R) = 0 := lipschitz_witness_zero_right hK hsupp
+  rcases le_or_gt ((i : ℝ) * D) R with hle | hgt
+  · have hdist := hK.dist_le_mul (a + (i : ℝ) * D) (a + R)
+    rw [Real.dist_eq, Real.dist_eq, haR, sub_zero, add_sub_add_left_eq_sub] at hdist
+    have hid : 0 ≤ R - (i : ℝ) * D := sub_nonneg.mpr hle
+    rw [abs_sub_comm, abs_of_nonneg hid] at hdist
+    have hile : (n : ℝ) * D ≤ (i : ℝ) * D :=
+      mul_le_mul_of_nonneg_right (Nat.cast_le.mpr hi) hD.le
+    have hrest : R - (i : ℝ) * D ≤ R - (n : ℝ) * D := by linarith
+    exact le_trans hdist
+      (mul_le_mul_of_nonneg_left (le_trans hrest htail) (NNReal.coe_nonneg _))
+  · rw [hsupp _ (Or.inr (by linarith)), abs_zero]
+    exact mul_nonneg (NNReal.coe_nonneg _) hD.le
+
+lemma dyadicSampleGrid_acf_eq
+    (h : ℝ → ℝ) (a R : ℝ) (m d : ℕ) :
+    (dyadicSampleGrid h a R m).acf d =
+      meshWidth m *
+        ∑ i : Fin (dyadicSampleGrid h a R m).steps,
+          if hi : (i : ℕ) + d < (dyadicSampleGrid h a R m).steps then
+            h (a + (i : ℕ) * meshWidth m) *
+              h (a + (i : ℕ) * meshWidth m + (d : ℝ) * meshWidth m)
+          else 0 := by
+  unfold GridElement.acf
+  rw [dyadicSampleGrid_D0_eq]
+  congr 1
+  refine Finset.sum_congr rfl fun i _ => ?_
+  dsimp [dyadicSampleGrid]
+  split_ifs with hi
+  · have harg : a + ((↑i + d : ℕ) : ℝ) * meshWidth m =
+        a + (i : ℕ) * meshWidth m + (d : ℝ) * meshWidth m := by
+      have hcast : ((↑i + d : ℕ) : ℝ) = (i : ℕ) + (d : ℝ) :=
+        Nat.cast_add (i : ℕ) d
+      rw [hcast]
+      ring
+    rw [harg]
+  · rfl
+
+lemma dyadicSampleGrid_acf_riemann_gap
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (m d : ℕ) :
+    let D := meshWidth m
+    let n := (dyadicSampleGrid h a R m).steps
+    let φ : ℝ → ℝ := fun t => h t * h (t + (d : ℝ) * D)
+    |D * ∑ i : Fin n,
+          (if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+        D * ∑ i : Fin n, φ (a + (i : ℕ) * D)| ≤
+      ((K : ℝ) * R) ^ 2 * D := by
+  intro D n φ
+  have hD : 0 < D := meshWidth_pos m
+  have hK0 : 0 ≤ (K : ℝ) := NNReal.coe_nonneg _
+  have hKR : 0 ≤ (K : ℝ) * R := mul_nonneg hK0 hR
+  have hnR : (n : ℝ) * D ≤ R := by
+    simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+      dyadicSampleGrid_supportBound_le h a R m hR
+  have hfac :
+      |D * ∑ i : Fin n,
+            (if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+          D * ∑ i : Fin n, φ (a + (i : ℕ) * D)| =
+        D * |∑ i : Fin n,
+            ((if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+              φ (a + (i : ℕ) * D))| := by
+    rw [← mul_sub, abs_mul, abs_of_pos hD]
+    congr 2
+    exact (Finset.sum_sub_distrib (s := Finset.univ)
+      (f := fun i : Fin n =>
+        if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0)
+      (g := fun i : Fin n => φ (a + (i : ℕ) * D))).symm
+  rw [hfac]
+  have hterm (i : Fin n) :
+      |(if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+          φ (a + (i : ℕ) * D)| ≤ (K * R) * (K * D) := by
+    by_cases hi : (i : ℕ) + d < n
+    · rw [dif_pos hi, sub_self, abs_zero]
+      exact mul_nonneg hKR (mul_nonneg hK0 hD.le)
+    · rw [dif_neg hi, zero_sub, abs_neg]
+      have hge : n ≤ (i : ℕ) + d := Nat.le_of_not_gt hi
+      have htailv :=
+        lipschitz_witness_abs_le_mesh (m := m) (i := (i : ℕ) + d)
+          hK hsupp hR (by simpa [n] using hge)
+      have hb := lipschitz_witness_abs_le hK hsupp hR (a + (i : ℕ) * D)
+      have hφ : |φ (a + (i : ℕ) * D)| =
+          |h (a + (i : ℕ) * D)| *
+            |h (a + (i : ℕ) * D + (d : ℝ) * D)| := by
+        simp [φ, abs_mul]
+      have harg : a + (i : ℕ) * D + (d : ℝ) * D =
+          a + ((↑i + d : ℕ) : ℝ) * D := by
+        have hcast : ((↑i + d : ℕ) : ℝ) = (i : ℕ) + (d : ℝ) :=
+          Nat.cast_add (i : ℕ) d
+        rw [hcast]
+        ring
+      rw [hφ, harg]
+      exact mul_le_mul hb htailv (abs_nonneg _) hKR
+  have hsumle :=
+    Finset.abs_sum_le_sum_abs
+      (s := (Finset.univ : Finset (Fin n)))
+      (f := fun i : Fin n =>
+        (if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+          φ (a + (i : ℕ) * D))
+  refine le_trans (mul_le_mul_of_nonneg_left hsumle hD.le) ?_
+  have hsumb :
+      ∑ i : Fin n,
+          |(if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0) -
+            φ (a + (i : ℕ) * D)| ≤
+        (n : ℝ) * ((K * R) * (K * D)) := by
+    refine le_trans (Finset.sum_le_sum fun i _ => hterm i) ?_
+    simp [Finset.sum_const, nsmul_eq_mul]
+  refine le_trans (mul_le_mul_of_nonneg_left hsumb hD.le) ?_
+  calc
+    D * ((n : ℝ) * ((K * R) * (K * D))) =
+        ((n : ℝ) * D) * ((K * R) * (K * D)) := by ring
+    _ ≤ R * ((K * R) * (K * D)) :=
+      mul_le_mul_of_nonneg_right hnR (mul_nonneg hKR (mul_nonneg hK0 hD.le))
+    _ = ((K : ℝ) * R) ^ 2 * D := by ring
+
+lemma dyadicSampleGrid_riemann_cell_error
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (m d : ℕ) :
+    let D := meshWidth m
+    let n := (dyadicSampleGrid h a R m).steps
+    let φ : ℝ → ℝ := fun t => h t * h (t + (d : ℝ) * D)
+    |D * ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) -
+        intervalIntegral φ a (a + (n : ℝ) * D)
+          MeasureTheory.volume| ≤
+      2 * ((K : ℝ) * R) ^ 2 * D := by
+  intro D n φ
+  have hD : 0 < D := meshWidth_pos m
+  have hK0 : 0 ≤ (K : ℝ) := NNReal.coe_nonneg _
+  have hL0 : 0 ≤ 2 * (K : ℝ) * K * R := by positivity
+  have hnR : (n : ℝ) * D ≤ R := by
+    simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+      dyadicSampleGrid_supportBound_le h a R m hR
+  have hφc : Continuous φ :=
+    hK.continuous.mul (hK.continuous.comp (by fun_prop))
+  have hφint (b c : ℝ) : IntervalIntegrable φ MeasureTheory.volume b c :=
+    hφc.intervalIntegrable _ _
+  have hφlip (x y : ℝ) :
+      |φ x - φ y| ≤ (2 * (K : ℝ) * K * R) * |x - y| :=
+    autocorrelation_integrand_lip hK hsupp hR ((d : ℝ) * D) x y
+  have hadj :=
+    intervalIntegral.sum_integral_adjacent_intervals
+      (f := φ) (μ := MeasureTheory.volume) (n := n)
+      (a := fun k : ℕ => a + (k : ℝ) * D)
+      (fun k _ => hφint _ _)
+  have hadj' :
+      ∑ k ∈ Finset.range n,
+          intervalIntegral φ (a + (k : ℝ) * D)
+            (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume =
+        intervalIntegral φ a (a + (n : ℝ) * D)
+          MeasureTheory.volume := by
+    convert hadj
+    · simp
+  have hcell (k : ℕ) (_hk : k ∈ Finset.range n) :
+      |intervalIntegral φ (a + (k : ℝ) * D)
+          (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume -
+        φ (a + (k : ℝ) * D) * D| ≤
+        (2 * (K : ℝ) * K * R) * D ^ 2 := by
+    have hcell' : a + ((k + 1 : ℕ) : ℝ) * D = (a + (k : ℝ) * D) + D := by
+      rw [Nat.cast_succ]
+      ring
+    rw [hcell']
+    exact intervalIntegral_lipschitz_left_riemann hφlip hL0 hD.le (hφint _ _)
+  have hsumcells :
+      |∑ k ∈ Finset.range n,
+            intervalIntegral φ (a + (k : ℝ) * D)
+              (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume -
+          ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) * D| ≤
+        ∑ k ∈ Finset.range n, (2 * (K : ℝ) * K * R) * D ^ 2 := by
+    have hsub :
+        ∑ k ∈ Finset.range n,
+              intervalIntegral φ (a + (k : ℝ) * D)
+                (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume -
+            ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) * D =
+          ∑ k ∈ Finset.range n,
+            (intervalIntegral φ (a + (k : ℝ) * D)
+              (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume -
+              φ (a + (k : ℝ) * D) * D) :=
+      (Finset.sum_sub_distrib
+        (s := Finset.range n)
+        (fun k => intervalIntegral φ (a + (k : ℝ) * D)
+          (a + ((k + 1 : ℕ) : ℝ) * D) MeasureTheory.volume)
+        (fun k => φ (a + (k : ℝ) * D) * D)).symm
+    rw [hsub]
+    exact le_trans (Finset.abs_sum_le_sum_abs _ _)
+      (Finset.sum_le_sum fun k hk => hcell k hk)
+  have hrewsum :
+      ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) * D =
+        D * ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) := by
+    simp [mul_comm, Finset.mul_sum]
+  rw [hadj', hrewsum, abs_sub_comm] at hsumcells
+  refine le_trans hsumcells ?_
+  have hcard :
+      ∑ _k ∈ Finset.range n, (2 * (K : ℝ) * K * R) * D ^ 2 =
+        (n : ℝ) * ((2 * (K : ℝ) * K * R) * D ^ 2) := by
+    simp [Finset.sum_const, nsmul_eq_mul]
+  rw [hcard]
+  calc
+    (n : ℝ) * ((2 * (K : ℝ) * K * R) * D ^ 2) =
+        ((n : ℝ) * D) * (2 * (K : ℝ) * K * R) * D := by ring
+    _ ≤ R * (2 * (K : ℝ) * K * R) * D :=
+      mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_right hnR (by positivity)) hD.le
+    _ = 2 * ((K : ℝ) * R) ^ 2 * D := by ring
+
+lemma dyadicSampleGrid_tail_integral_le
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (m d : ℕ) :
+    let D := meshWidth m
+    let n := (dyadicSampleGrid h a R m).steps
+    let φ : ℝ → ℝ := fun t => h t * h (t + (d : ℝ) * D)
+    |intervalIntegral φ a (a + (n : ℝ) * D) MeasureTheory.volume -
+        intervalIntegral φ a (a + R) MeasureTheory.volume| ≤
+      ((K : ℝ) * R) ^ 2 * D := by
+  intro D n φ
+  have hD : 0 < D := meshWidth_pos m
+  have hnR : (n : ℝ) * D ≤ R := by
+    simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+      dyadicSampleGrid_supportBound_le h a R m hR
+  have htail : R - (n : ℝ) * D < D := by
+    simpa [GridElement.supportBound, dyadicSampleGrid_D0_eq] using
+      dyadicSampleGrid_supportBound_tail_lt h a R m hR
+  have hφc : Continuous φ :=
+    hK.continuous.mul (hK.continuous.comp (by fun_prop))
+  have hφint (b c : ℝ) : IntervalIntegrable φ MeasureTheory.volume b c :=
+    hφc.intervalIntegrable _ _
+  have hsplit :=
+    intervalIntegral.integral_add_adjacent_intervals
+      (hφint a (a + (n : ℝ) * D)) (hφint (a + (n : ℝ) * D) (a + R))
+  have hrew :
+      intervalIntegral φ a (a + R) MeasureTheory.volume -
+          intervalIntegral φ a (a + (n : ℝ) * D) MeasureTheory.volume =
+        intervalIntegral φ (a + (n : ℝ) * D) (a + R)
+          MeasureTheory.volume := by
+    linarith [hsplit]
+  rw [abs_sub_comm, hrew]
+  have hle : a + (n : ℝ) * D ≤ a + R := by linarith
+  have habs :=
+    intervalIntegral.abs_integral_le_integral_abs
+      (f := φ) (μ := MeasureTheory.volume) hle
+  refine le_trans habs ?_
+  have hmono :=
+    intervalIntegral.integral_mono_on hle
+      (hφint (a + (n : ℝ) * D) (a + R)).abs
+      (intervalIntegrable_const (c := (K * R) ^ 2))
+      (fun t _ht =>
+        autocorrelation_integrand_abs_le hK hsupp hR t ((d : ℝ) * D))
+  refine le_trans hmono ?_
+  rw [intervalIntegral.integral_const, smul_eq_mul]
+  have hlen : (a + R) - (a + (n : ℝ) * D) = R - (n : ℝ) * D := by ring
+  rw [hlen, mul_comm]
+  exact mul_le_mul_of_nonneg_left (le_of_lt htail) (sq_nonneg _)
+
+lemma dyadicSampleGrid_sum_sample_eq
+    (h : ℝ → ℝ) (a : ℝ) (m d n : ℕ) :
+    let D := meshWidth m
+    let φ : ℝ → ℝ := fun t => h t * h (t + (d : ℝ) * D)
+    ∑ i : Fin n, φ (a + (i : ℕ) * D) =
+      ∑ k ∈ Finset.range n, φ (a + (k : ℝ) * D) := by
+  intro D φ
+  rw [Finset.sum_fin_eq_sum_range]
+  refine Finset.sum_congr rfl fun k hk => ?_
+  rw [dif_pos (Finset.mem_range.mp hk)]
+
+lemma dyadicSampleGrid_acf_sub_toFun_le
+    {F : FullWeilTest} {h : ℝ → ℝ} {K : NNReal} {a : ℝ}
+    (hK : LipschitzWith K h) (hhKs : HasCompactSupport h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + F.supportRadius < t → h t = 0)
+    (hac : ∀ u : ℝ, F.toFun u =
+      ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume)
+    (m d : ℕ) :
+    |(dyadicSampleGrid h a F.supportRadius m).acf d -
+        F.toFun ((d : ℝ) * meshWidth m)| ≤
+      4 * ((K : ℝ) * F.supportRadius) ^ 2 * meshWidth m := by
+  set R := F.supportRadius
+  set D := meshWidth m
+  set n := (dyadicSampleGrid h a R m).steps
+  set φ : ℝ → ℝ := fun t => h t * h (t + (d : ℝ) * D)
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  have hD : 0 < D := meshWidth_pos m
+  rw [dyadicSampleGrid_acf_eq, hac,
+    autocorrelation_eq_intervalIntegral hK.continuous hhKs hsupp hR]
+  have hgap := dyadicSampleGrid_acf_riemann_gap hK hsupp hR m d
+  have hsum := dyadicSampleGrid_sum_sample_eq h a m d n
+  have hcells := dyadicSampleGrid_riemann_cell_error hK hsupp hR m d
+  have htailI := dyadicSampleGrid_tail_integral_le hK hsupp hR m d
+  have hmid :
+      |D * ∑ i : Fin n, φ (a + (i : ℕ) * D) -
+          intervalIntegral φ a (a + (n : ℝ) * D)
+            MeasureTheory.volume| ≤
+        2 * ((K : ℝ) * R) ^ 2 * D := by
+    simp only [D, φ] at hsum hcells ⊢
+    rw [hsum]
+    exact hcells
+  refine le_trans
+    (abs_sub_le (D * ∑ i : Fin n,
+        (if hi : (i : ℕ) + d < n then φ (a + (i : ℕ) * D) else 0))
+      (D * ∑ i : Fin n, φ (a + (i : ℕ) * D))
+      (intervalIntegral φ a (a + R) MeasureTheory.volume)) ?_
+  refine le_trans (add_le_add hgap
+      (le_trans
+        (abs_sub_le (D * ∑ i : Fin n, φ (a + (i : ℕ) * D))
+          (intervalIntegral φ a (a + (n : ℝ) * D) MeasureTheory.volume)
+          (intervalIntegral φ a (a + R) MeasureTheory.volume))
+        (add_le_add hmid htailI))) ?_
+  ring_nf
+  nlinarith [sq_nonneg ((K : ℝ) * R), hD.le]
+
+lemma dyadicSampleGrid_toFun_uniform
+    {F : FullWeilTest} {h : ℝ → ℝ} {K : NNReal} {a : ℝ}
+    (hK : LipschitzWith K h) (hhKs : HasCompactSupport h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + F.supportRadius < t → h t = 0)
+    (hac : ∀ u : ℝ, F.toFun u =
+      ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume)
+    {ε : ℝ} (hε : 0 < ε) :
+    ∀ᶠ m in Filter.atTop, ∀ u : ℝ, |u| ≤ F.supportRadius →
+      |(dyadicSampleGrid h a F.supportRadius m).toFun u - F.toFun u| < ε := by
+  have hUC := F.uniformContinuous_toFun
+  rw [Metric.uniformContinuous_iff] at hUC
+  obtain ⟨δ, hδ, hδu⟩ := hUC (ε / 6) (by positivity)
+  have hDδ : ∀ᶠ m in Filter.atTop, meshWidth m < δ := by
+    have h := meshWidth_tendsto_zero
+    rw [Metric.tendsto_atTop] at h
+    obtain ⟨N, hN⟩ := h δ hδ
+    refine Filter.eventually_atTop.2 ⟨N, fun m hm => ?_⟩
+    have := hN m hm
+    rwa [Real.dist_eq, sub_zero, abs_of_nonneg (meshWidth_pos m).le] at this
+  have hknot : ∀ᶠ m in Filter.atTop,
+      4 * ((K : ℝ) * F.supportRadius) ^ 2 * meshWidth m < ε / 6 := by
+    have htend :
+        Filter.Tendsto
+          (fun m : ℕ => 4 * ((K : ℝ) * F.supportRadius) ^ 2 * meshWidth m)
+          Filter.atTop (nhds 0) := by
+      simpa using meshWidth_tendsto_zero.const_mul
+        (4 * ((K : ℝ) * F.supportRadius) ^ 2)
+    rw [Metric.tendsto_atTop] at htend
+    obtain ⟨N, hN⟩ := htend (ε / 6) (by positivity)
+    refine Filter.eventually_atTop.2 ⟨N, fun m hm => ?_⟩
+    have := hN m hm
+    have hnn : 0 ≤ 4 * ((K : ℝ) * F.supportRadius) ^ 2 * meshWidth m :=
+      mul_nonneg (mul_nonneg (by norm_num) (sq_nonneg _))
+        (meshWidth_pos m).le
+    rwa [Real.dist_eq, sub_zero, abs_of_nonneg hnn] at this
+  filter_upwards [hDδ, hknot] with m hDm hkm
+  intro u hu
+  set R := F.supportRadius
+  set D := meshWidth m
+  set f := dyadicSampleGrid h a R m
+  have hD : 0 < D := meshWidth_pos m
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  have hFeven : F.toFun u = F.toFun |u| := by
+    rcases le_total 0 u with hu0 | hu0
+    · rw [abs_of_nonneg hu0]
+    · rw [abs_of_nonpos hu0, F.even_toFun]
+  have hω {x y : ℝ} (hxy : dist x y < δ) :
+      |F.toFun x - F.toFun y| < ε / 6 := by
+    have := hδu hxy
+    rwa [Real.dist_eq] at this
+  have hknotu (k : ℕ) :
+      |f.acf k - F.toFun ((k : ℝ) * D)| < ε / 6 :=
+    lt_of_le_of_lt (dyadicSampleGrid_acf_sub_toFun_le hK hhKs hsupp hac m k) hkm
+  set q : ℕ := ⌊|u| / D⌋₊
+  have hqle : (q : ℝ) ≤ |u| / D := Nat.floor_le (div_nonneg (abs_nonneg _) hD.le)
+  have hqt : |u| / D < (q : ℝ) + 1 := Nat.lt_floor_add_one _
+  have hqD : (q : ℝ) * D ≤ |u| := (le_div_iff₀ hD).mp hqle
+  have hqD' : |u| < ((q + 1 : ℕ) : ℝ) * D := by
+    have : |u| / D < ((q + 1 : ℕ) : ℝ) := by
+      rw [Nat.cast_succ]
+      exact hqt
+    exact (div_lt_iff₀ hD).mp this
+  have hqd : dist ((q : ℝ) * D) |u| < δ := by
+    rw [Real.dist_eq, abs_sub_comm, abs_of_nonneg (sub_nonneg.mpr hqD)]
+    have : |u| - (q : ℝ) * D < D := by
+      have hsucc : ((q + 1 : ℕ) : ℝ) = (q : ℝ) + 1 := Nat.cast_succ q
+      have hqD'' := hqD'
+      rw [hsucc] at hqD''
+      linarith
+    exact lt_trans this hDm
+  have hFe : |F.toFun ((q : ℝ) * D) - F.toFun u| < ε / 6 := by
+    rw [hFeven]
+    exact hω hqd
+  by_cases hq : q < f.steps
+  · have hθ : 0 ≤ |u| / D - q := sub_nonneg.mpr hqle
+    have hθ1 : |u| / D - q < 1 := by linarith
+    have hD0 : f.D0 = D := dyadicSampleGrid_D0_eq h a R m
+    have hto : f.toFun u =
+        f.acf q + (|u| / D - q) * (f.acf (q + 1) - f.acf q) := by
+      unfold GridElement.toFun
+      rw [hD0]
+    rw [hto]
+    have hconv :
+        f.acf q + (|u| / D - q) * (f.acf (q + 1) - f.acf q) =
+          (1 - (|u| / D - q)) * f.acf q + (|u| / D - q) * f.acf (q + 1) := by
+      ring
+    rw [hconv]
+    have hqd1 : dist (((q + 1 : ℕ) : ℝ) * D) |u| < δ := by
+      rw [Real.dist_eq, abs_of_nonneg (sub_nonneg.mpr hqD'.le)]
+      have : ((q + 1 : ℕ) : ℝ) * D - |u| ≤ D := by
+        have : |u| ≥ (q : ℝ) * D := hqD
+        have hsucc : ((q + 1 : ℕ) : ℝ) = (q : ℝ) + 1 := Nat.cast_succ q
+        rw [hsucc]
+        linarith
+      exact lt_of_le_of_lt this hDm
+    have hFe1 : |F.toFun (((q + 1 : ℕ) : ℝ) * D) - F.toFun u| < ε / 6 := by
+      rw [hFeven]
+      exact hω hqd1
+    set θ := |u| / D - (q : ℝ)
+    have hθ01 : 0 ≤ θ := hθ
+    have hθle : θ ≤ 1 := le_of_lt hθ1
+    have habs :
+        |(1 - θ) * f.acf q + θ * f.acf (q + 1) - F.toFun u| ≤
+          (1 - θ) * |f.acf q - F.toFun u| + θ * |f.acf (q + 1) - F.toFun u| := by
+      have : (1 - θ) * f.acf q + θ * f.acf (q + 1) - F.toFun u =
+          (1 - θ) * (f.acf q - F.toFun u) + θ * (f.acf (q + 1) - F.toFun u) := by
+        ring
+      rw [this]
+      refine le_trans (abs_add_le _ _) ?_
+      rw [abs_mul, abs_mul, abs_of_nonneg (sub_nonneg.mpr hθle), abs_of_nonneg hθ01]
+    refine lt_of_le_of_lt habs ?_
+    have h0 : |f.acf q - F.toFun u| < ε / 3 :=
+      lt_of_le_of_lt
+        (abs_sub_le (f.acf q) (F.toFun ((q : ℝ) * D)) (F.toFun u))
+        (by linarith [hknotu q, hFe])
+    have h1 : |f.acf (q + 1) - F.toFun u| < ε / 3 :=
+      lt_of_le_of_lt
+        (abs_sub_le (f.acf (q + 1))
+          (F.toFun (((q + 1 : ℕ) : ℝ) * D)) (F.toFun u))
+        (by linarith [hknotu (q + 1), hFe1])
+    have hcomb :
+        (1 - θ) * |f.acf q - F.toFun u| +
+            θ * |f.acf (q + 1) - F.toFun u| ≤ ε / 3 := by
+      have := add_le_add
+        (mul_le_mul_of_nonneg_left (le_of_lt h0) (sub_nonneg.mpr hθle))
+        (mul_le_mul_of_nonneg_left (le_of_lt h1) hθ01)
+      refine le_trans this ?_
+      ring_nf
+      linarith
+    exact lt_of_le_of_lt hcomb (by linarith)
+  · have hsup : f.supportBound ≤ |u| := by
+      have hqge : f.steps ≤ q := Nat.le_of_not_gt hq
+      have : (f.steps : ℝ) * D ≤ (q : ℝ) * D :=
+        mul_le_mul_of_nonneg_right (Nat.cast_le.mpr hqge) hD.le
+      unfold GridElement.supportBound
+      rw [dyadicSampleGrid_D0_eq]
+      exact le_trans this hqD
+    rw [f.toFun_eq_zero_of_supportBound_le hsup, zero_sub, abs_neg]
+    have hFR : F.toFun R = 0 := F.toFun_zero_at_radius
+    have hRu : dist |u| R < δ := by
+      rw [Real.dist_eq, abs_sub_comm, abs_of_nonneg (sub_nonneg.mpr hu)]
+      have htail : R - f.supportBound < D :=
+        dyadicSampleGrid_supportBound_tail_lt h a R m hR
+      have : R - |u| ≤ R - f.supportBound := by linarith
+      exact lt_of_le_of_lt this (lt_trans htail hDm)
+    have : |F.toFun u| < ε / 6 := by
+      have hωu : |F.toFun |u| - F.toFun R| < ε / 6 := hω hRu
+      rw [hFR, sub_zero] at hωu
+      rwa [hFeven]
+    linarith
+
+lemma dyadicSampleGrid_l1_tendsto
+    {F : FullWeilTest} {h : ℝ → ℝ} {K : NNReal} {a : ℝ}
+    (hK : LipschitzWith K h) (hhKs : HasCompactSupport h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + F.supportRadius < t → h t = 0)
+    (hac : ∀ u : ℝ, F.toFun u =
+      ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume) :
+    Filter.Tendsto
+      (fun m => intervalIntegral
+        (fun u : ℝ =>
+          |(dyadicSampleGrid h a F.supportRadius m).toFun u - F.toFun u|)
+        (-F.supportRadius) F.supportRadius MeasureTheory.volume)
+      Filter.atTop (nhds 0) := by
+  rw [Metric.tendsto_atTop]
+  intro ε hε
+  have hR : 0 ≤ F.supportRadius := F.supportRadius_nonneg
+  have hε' : 0 < ε / (2 * F.supportRadius + 1) := by positivity
+  have huni :=
+    dyadicSampleGrid_toFun_uniform hK hhKs hsupp hac hε'
+  obtain ⟨N, hN⟩ := Filter.eventually_atTop.1 huni
+  refine ⟨N, fun m hm => ?_⟩
+  have hpt := hN m hm
+  have hgrid :
+      IntervalIntegrable
+        (dyadicSampleGrid h a F.supportRadius m).toFun
+        MeasureTheory.volume (-F.supportRadius) F.supportRadius :=
+    (dyadicSampleGrid h a F.supportRadius m).intervalIntegrable_toFun _ _
+  have hFint : IntervalIntegrable F.toFun MeasureTheory.volume
+      (-F.supportRadius) F.supportRadius :=
+    F.continuous_toFun.intervalIntegrable _ _
+  have habs :
+      IntervalIntegrable
+        (fun u =>
+          |(dyadicSampleGrid h a F.supportRadius m).toFun u - F.toFun u|)
+        MeasureTheory.volume (-F.supportRadius) F.supportRadius :=
+    (hgrid.sub hFint).abs
+  have hle : -F.supportRadius ≤ F.supportRadius := neg_le_self hR
+  have hmono :=
+    intervalIntegral.integral_mono_on hle habs
+      (intervalIntegrable_const (c := ε / (2 * F.supportRadius + 1)))
+      (fun u hu => by
+        have huabs : |u| ≤ F.supportRadius := abs_le.mpr ⟨hu.1, hu.2⟩
+        exact le_of_lt (hpt u huabs))
+  have hbound :
+      intervalIntegral
+          (fun _ : ℝ => ε / (2 * F.supportRadius + 1))
+          (-F.supportRadius) F.supportRadius MeasureTheory.volume =
+        (2 * F.supportRadius) * (ε / (2 * F.supportRadius + 1)) := by
+    rw [intervalIntegral.integral_const, smul_eq_mul]
+    ring
+  rw [Real.dist_eq, sub_zero]
+  have hnn : 0 ≤ intervalIntegral
+      (fun u : ℝ =>
+        |(dyadicSampleGrid h a F.supportRadius m).toFun u - F.toFun u|)
+      (-F.supportRadius) F.supportRadius MeasureTheory.volume :=
+    intervalIntegral.integral_nonneg hle fun u hu => abs_nonneg _
+  rw [abs_of_nonneg hnn]
+  refine lt_of_le_of_lt (le_trans hmono (le_of_eq hbound)) ?_
+  have hden : 0 < 2 * F.supportRadius + 1 := by positivity
+  have : (2 * F.supportRadius) * (ε / (2 * F.supportRadius + 1)) < ε := by
+    rw [mul_div_assoc']
+    exact (div_lt_iff₀ hden).2 (by linarith)
+  exact this
 
 /-- Full-class regularized u-space arch integrand, with the same
 normalization as r475 `weilArchUIntegrand`. -/
@@ -312,6 +1139,28 @@ def FullWeilDyadicSampleConvergence : Prop :=
       F.FixedSupportGridApproximation
         (fun m => dyadicSampleGrid h a F.supportRadius m)
 
+/-- r493d: the explicit left-sampled grid converges uniformly in the
+autocorrelation and in `L¹` on the fixed support.  The witness is
+already Lipschitz with interval support, so Heine plus a Lipschitz
+Riemann-sum comparison of the ACF knots close both limits. -/
+theorem fullWeil_dyadic_sample_convergence :
+    FullWeilDyadicSampleConvergence := by
+  intro F _hF
+  obtain ⟨h, hhLp, hhKs, hhLip, hhSupp, hac⟩ := F.autocorrelation
+  obtain ⟨K, hK⟩ := hhLip
+  obtain ⟨a, hsupp⟩ := hhSupp
+  refine ⟨h, K, a, hhLp, hhKs, hK, hsupp, hac, ?_⟩
+  refine ⟨fun m =>
+      dyadicSampleGrid_supportBound_le h a F.supportRadius m
+        F.supportRadius_nonneg,
+    ?unif, fun m =>
+      (dyadicSampleGrid h a F.supportRadius m).intervalIntegrable_toFun
+        (-F.supportRadius) F.supportRadius,
+    ?l1⟩
+  · intro ε hε
+    exact dyadicSampleGrid_toFun_uniform hK hhKs hsupp hac hε
+  · exact dyadicSampleGrid_l1_tendsto hK hhKs hsupp hac
+
 /-- The explicit sampled-grid convergence target implies the
 existential fixed-support density interface. -/
 theorem fullWeilFixedSupportGridDensity_of_dyadicSample
@@ -442,15 +1291,13 @@ theorem fullWeilChannelContinuity_of_components
   rw [heq]
   exact fullWeilPoleIntegral_tendsto happrox
 
-/-- **Single remaining dense-completion package (r489; r493c2 shrink).**
+/-- **Single remaining dense-completion package (r493d shrink).**
 
-The r376 native-grid pole hat dictionary is now a proved theorem
-(`gridPoleHatIntegralIdentity`).  Remaining components:
-compactly-supported dyadic `L²` step density and autocorrelation
-uniform convergence; r475 u-space / Dini arch continuity. -/
+The r376 pole hat dictionary and the r493d dyadic sampled-grid
+`L²`/ACF transfer are proved theorems.  The remaining component is
+r475 u-space / Dini arch continuity. -/
 def FullWeilFixedSupportCompletion : Prop :=
-  FullWeilDyadicSampleConvergence ∧
-    FullWeilArchContinuity
+  FullWeilArchContinuity
 
 /-- Form convergence assembled from the three channel limits. -/
 theorem fullWeilForm_tendsto_of_channels
@@ -499,12 +1346,12 @@ theorem fullWeil_fixedSupport_completion :
     FullWeilFixedSupportCompletion := by
   sorry
 
-/-- Grid density is the first component of the single completion
-package. -/
+/-- Grid density is the proved r493d dyadic sampled-grid transfer.
+Formerly the first projection `fullWeil_fixedSupport_completion.1`. -/
 theorem fullWeil_fixedSupport_grid_density :
     FullWeilFixedSupportGridDensity :=
   fullWeilFixedSupportGridDensity_of_dyadicSample
-    fullWeil_fixedSupport_completion.1
+    fullWeil_dyadic_sample_convergence
 
 /-- All channel limits follow from the remaining arch completion
 component, the proved pole hat identity, and the proved comb and
@@ -512,7 +1359,7 @@ polar-integral continuity theorems. -/
 theorem fullWeil_channel_continuity :
     FullWeilChannelContinuity :=
   fullWeilChannelContinuity_of_components
-    fullWeil_fixedSupport_completion.2
+    fullWeil_fixedSupport_completion
     (gridPoleIntegralIdentification_of_hat gridPoleHatIntegralIdentity)
 
 /-- Bridge 1 now consumes exactly the two named bricks above; its

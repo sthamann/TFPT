@@ -499,6 +499,34 @@ directly.  Remaining density-bridge: dyadic `L²` / ACF transfer
 and Dini / u-space arch continuity.  The pole piece of the
 density bridge is closed.  NO RH CLAIM.
 
+## r493d census (dyadic L² / ACF transfer)
+
+PROVED, sorry-free: `fullWeil_dyadic_sample_convergence` (the Prop
+`FullWeilDyadicSampleConvergence`).  The class question is closed
+by the existing witness: `FullWeilTest.autocorrelation` already
+requires `MemLp 2`, compact support, `LipschitzWith K`, and
+vanishing off an interval of length `supportRadius`.  No
+continuous-dense-in-`L²` detour.
+
+Wörtlich the sampled-grid approximation
+`FixedSupportGridApproximation (dyadicSampleGrid h a R)`:
+
+  (i) knot error
+  `|acf d − F.toFun (d · D)| ≤ 4 (K R)² D`
+  by left-Riemann comparison of the Lipschitz product
+  `φ(t)=h(t)h(t+d D)` (cell error `O(D)`, extra tail samples
+  `O(D)`, integral tail `O(D)`);
+  (ii) uniform ACF: Heine on `F.toFun` plus the piecewise-linear
+  interpolant of the knots, so
+  `|(grid m).toFun u − F.toFun u| → 0` uniformly on `|u|≤R`;
+  (iii) `L¹` on `[-R,R]` from the uniform bound times `2R`.
+
+`FullWeilFixedSupportCompletion` shrinks to
+`FullWeilArchContinuity` alone.  Density and channel wrappers
+consume the proved dyadic theorem and the remaining arch sorry.
+Census remains 8 (external 3): the completion `sorry` is now
+exactly Dini / u-space arch continuity (R493e).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

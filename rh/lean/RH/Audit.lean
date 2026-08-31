@@ -398,6 +398,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms sum_cellCoshIncrement_eq_one_sided
 #print axioms weilPoleSide_eq_two_mul_sum_cellCoshIncrement
 #print axioms gridPoleHatIntegralIdentity
+#print axioms meshWidth_tendsto_zero
+#print axioms FullWeilTest.uniformContinuous_toFun
+#print axioms FullWeilTest.toFun_zero_at_radius
+#print axioms dyadicSampleGrid_acf_sub_toFun_le
+#print axioms dyadicSampleGrid_toFun_uniform
+#print axioms dyadicSampleGrid_l1_tendsto
+#print axioms fullWeil_dyadic_sample_convergence
 #print axioms fullWeilFixedSupportGridDensity_of_dyadicSample
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
