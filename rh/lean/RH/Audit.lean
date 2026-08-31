@@ -413,7 +413,12 @@ exposes `spectralPartialSum` as a finite rectangle sum
 r501 scopes the zero-count (Jensen yes, `N(T)` / Hadamard
 product no) and proves the spectral kernel
 `FullWeilTest.hat` with exponential-type envelope
-(`norm_hat_le_exp`).  Strip `1/t²` decay is the next cut.
+(`norm_hat_le_exp`).  r503 proves the ACF second
+difference `O(δ²)` bound
+(`autocorrelation_second_diff_le`,
+`FullWeilTest.abs_second_diff_le`) and hat
+translation (`hat_comp_sub`).  Strip `1/t²`
+(`norm_hat_le_inv_sq`) remains the next cut.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -478,6 +483,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.hat_eq_setIntegral
 #print axioms FullWeilTest.integrable_hat_integrand
 #print axioms FullWeilTest.norm_hat_le_exp
+#print axioms autocorrelation_second_diff_eq
+#print axioms autocorrelation_second_diff_le
+#print axioms FullWeilTest.abs_second_diff_le
+#print axioms FullWeilTest.hat_comp_sub
+#print axioms FullWeilTest.integrable_hat_comp_sub
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

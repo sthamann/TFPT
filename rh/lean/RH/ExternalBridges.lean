@@ -2782,8 +2782,210 @@ lemma FullWeilTest.norm_hat_le_exp (F : FullWeilTest) :
   ring_nf
   rfl
 
--- The first-difference / `1/t` strip bound, and the autocorrelation
--- `1/t²` upgrade, are the next [2c] cut.
+/-- Pair `h(·+α) h(·+β)` is integrable: continuous, compact support. -/
+lemma autocorrelation_pair_integrable
+    {h : ℝ → ℝ} (hc : Continuous h) (hs : HasCompactSupport h) (α β : ℝ) :
+    Integrable fun t : ℝ => h (t + α) * h (t + β) :=
+  ((hc.comp (continuous_add_const α)).mul
+    (hc.comp (continuous_add_const β))).integrable_of_hasCompactSupport
+    ((hs.comp_homeomorph (Homeomorph.addRight α)).mul_right
+      (f' := fun t => h (t + β)))
+
+/-- Translation invariance of the autocorrelation integral. -/
+lemma autocorrelation_integral_shift
+    {h : ℝ → ℝ} (_hc : Continuous h) (_hs : HasCompactSupport h) (w ε : ℝ) :
+    ∫ t : ℝ, h (t + (-ε)) * h (t + (-ε) + w) = ∫ t : ℝ, h t * h (t + w) :=
+  integral_add_right_eq_self (fun t : ℝ => h t * h (t + w)) (-ε)
+
+/-- Second difference of an autocorrelation:
+`Δ²_δ I(u) = -∫ (h-τ_δ h)(τ_{u-δ}h - τ_{u-2δ}h)`. -/
+lemma autocorrelation_second_diff_eq
+    {h : ℝ → ℝ} (hc : Continuous h) (hs : HasCompactSupport h)
+    (u δ : ℝ) :
+    (∫ t : ℝ, h t * h (t + u))
+        - 2 * (∫ t : ℝ, h t * h (t + (u - δ)))
+        + (∫ t : ℝ, h t * h (t + (u - 2 * δ)))
+      = -∫ t : ℝ,
+          (h t - h (t + (-δ))) *
+            (h (t + (u - δ)) - h (t + (u - 2 * δ))) := by
+  have I : ∀ α β : ℝ, Integrable fun t : ℝ => h (t + α) * h (t + β) :=
+    fun α β => autocorrelation_pair_integrable hc hs α β
+  have hA : Integrable fun t : ℝ => h t * h (t + (u - δ)) := by
+    simpa using I 0 (u - δ)
+  have hB : Integrable fun t : ℝ => h t * h (t + (u - 2 * δ)) := by
+    simpa using I 0 (u - 2 * δ)
+  have hC : Integrable fun t : ℝ => h (t + (-δ)) * h (t + (u - δ)) :=
+    I (-δ) (u - δ)
+  have hD : Integrable fun t : ℝ => h (t + (-δ)) * h (t + (u - 2 * δ)) :=
+    I (-δ) (u - 2 * δ)
+  set f1 : ℝ → ℝ := fun t => h t * h (t + (u - δ))
+  set f2 : ℝ → ℝ := fun t => h t * h (t + (u - 2 * δ))
+  set f3 : ℝ → ℝ := fun t => h (t + (-δ)) * h (t + (u - δ))
+  set f4 : ℝ → ℝ := fun t => h (t + (-δ)) * h (t + (u - 2 * δ))
+  have hφ :
+      (fun t : ℝ =>
+        (h t - h (t + (-δ))) * (h (t + (u - δ)) - h (t + (u - 2 * δ)))) =
+        ((f1 - f2) - (f3 - f4)) := by
+    ext t
+    simp [f1, f2, f3, f4, Pi.sub_apply]
+    ring
+  have hAB : Integrable (f1 - f2) := hA.sub hB
+  have hCD : Integrable (f3 - f4) := hC.sub hD
+  have hshift1 :
+      ∫ t : ℝ, h (t + (-δ)) * h (t + (u - δ)) =
+        ∫ t : ℝ, h t * h (t + u) := by
+    have hpt : ∀ t : ℝ,
+        h (t + (-δ)) * h (t + (u - δ)) =
+          h (t + (-δ)) * h (t + (-δ) + u) := fun t => by ring
+    simp_rw [hpt]
+    exact autocorrelation_integral_shift hc hs u δ
+  have hshift2 :
+      ∫ t : ℝ, h (t + (-δ)) * h (t + (u - 2 * δ)) =
+        ∫ t : ℝ, h t * h (t + (u - δ)) := by
+    have hpt : ∀ t : ℝ,
+        h (t + (-δ)) * h (t + (u - 2 * δ)) =
+          h (t + (-δ)) * h (t + (-δ) + (u - δ)) := fun t => by ring
+    simp_rw [hpt]
+    exact autocorrelation_integral_shift hc hs (u - δ) δ
+  have hRHS :
+      ∫ t : ℝ,
+          (h t - h (t + (-δ))) *
+            (h (t + (u - δ)) - h (t + (u - 2 * δ))) =
+        (∫ t : ℝ, h t * h (t + (u - δ)))
+          - (∫ t : ℝ, h t * h (t + (u - 2 * δ)))
+          - ((∫ t : ℝ, h (t + (-δ)) * h (t + (u - δ)))
+            - ∫ t : ℝ, h (t + (-δ)) * h (t + (u - 2 * δ))) := by
+    rw [hφ]
+    refine (integral_sub hAB hCD).trans ?_
+    simp_rw [Pi.sub_apply]
+    rw [integral_sub hA hB, integral_sub hC hD]
+  rw [hRHS, hshift1, hshift2]
+  ring
+
+/-- **r503 brick [2c], Δ² lemma.**  Lipschitz of the witness gives
+`|Δ²_δ g(u)| ≤ K² δ² (R + 2|δ|)`. -/
+lemma autocorrelation_second_diff_le
+    {h : ℝ → ℝ} {K : NNReal} {a R : ℝ}
+    (hc : Continuous h) (hs : HasCompactSupport h)
+    (hK : LipschitzWith K h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + R < t → h t = 0)
+    (hR : 0 ≤ R) (u δ : ℝ) :
+    |(∫ t : ℝ, h t * h (t + u))
+        - 2 * (∫ t : ℝ, h t * h (t + (u - δ)))
+        + (∫ t : ℝ, h t * h (t + (u - 2 * δ)))|
+      ≤ (K : ℝ) ^ 2 * δ ^ 2 * (R + 2 * |δ|) := by
+  have heq := autocorrelation_second_diff_eq hc hs u δ
+  rw [heq, abs_neg]
+  set φ : ℝ → ℝ := fun t =>
+    (h t - h (t + (-δ))) * (h (t + (u - δ)) - h (t + (u - 2 * δ)))
+  set S := Icc (a - |δ|) (a + R + |δ|)
+  have h0 : ∀ t : ℝ, t ∉ S → φ t = 0 := by
+    intro t ht
+    have hI : ¬ (a - |δ| ≤ t ∧ t ≤ a + R + |δ|) := mt mem_Icc.mpr ht
+    rw [not_and_or] at hI
+    rcases hI with hlt | hgt
+    · have ht0 : t < a := by linarith [abs_nonneg δ]
+      have ht1 : t + (-δ) < a := by linarith [neg_le_abs δ]
+      change (h t - h (t + (-δ))) *
+        (h (t + (u - δ)) - h (t + (u - 2 * δ))) = 0
+      rw [hsupp t (Or.inl ht0), hsupp (t + (-δ)) (Or.inl ht1),
+        sub_zero, zero_mul]
+    · have ht0 : a + R < t := by linarith [abs_nonneg δ]
+      have ht1 : a + R < t + (-δ) := by linarith [le_abs_self δ]
+      change (h t - h (t + (-δ))) *
+        (h (t + (u - δ)) - h (t + (u - 2 * δ))) = 0
+      rw [hsupp t (Or.inr ht0), hsupp (t + (-δ)) (Or.inr ht1),
+        sub_zero, zero_mul]
+  have hIeq :
+      ∫ t : ℝ, φ t = ∫ t in S, φ t :=
+    (setIntegral_eq_integral_of_forall_compl_eq_zero (μ := volume) h0).symm
+  have hμ : volume S < ⊤ := isCompact_Icc.measure_lt_top
+  have hC : ∀ t ∈ S, ‖φ t‖ ≤ (K : ℝ) ^ 2 * δ ^ 2 := by
+    intro t _ht
+    change ‖(h t - h (t + (-δ))) *
+      (h (t + (u - δ)) - h (t + (u - 2 * δ)))‖ ≤ _
+    rw [Real.norm_eq_abs, abs_mul]
+    have h1 : |h t - h (t + (-δ))| ≤ (K : ℝ) * |δ| := by
+      simpa [Real.dist_eq, abs_sub_comm, sub_eq_add_neg] using
+        hK.dist_le_mul t (t + (-δ))
+    have h2 : |h (t + (u - δ)) - h (t + (u - 2 * δ))| ≤ (K : ℝ) * |δ| := by
+      have hd := hK.dist_le_mul (t + (u - δ)) (t + (u - 2 * δ))
+      rw [Real.dist_eq, Real.dist_eq] at hd
+      have hlen : |(t + (u - δ)) - (t + (u - 2 * δ))| = |δ| := by
+        ring_nf
+      rwa [hlen] at hd
+    have hmul := mul_le_mul h1 h2 (abs_nonneg _) (by positivity)
+    have hsq : ((K : ℝ) * |δ|) * ((K : ℝ) * |δ|) = (K : ℝ) ^ 2 * δ ^ 2 :=
+      calc (K : ℝ) * |δ| * ((K : ℝ) * |δ|)
+          = (K : ℝ) ^ 2 * (|δ| ^ 2) := by ring
+        _ = (K : ℝ) ^ 2 * δ ^ 2 := by rw [sq_abs]
+    rwa [hsq] at hmul
+  have hvol : volume.real S = R + 2 * |δ| := by
+    have hle : a - |δ| ≤ a + R + |δ| := by linarith [hR, abs_nonneg δ]
+    rw [Measure.real, Real.volume_Icc,
+      ENNReal.toReal_ofReal (by linarith [hR, abs_nonneg δ])]
+    ring
+  have hle :=
+    norm_setIntegral_le_of_norm_le_const (μ := volume) hμ hC
+  rw [← hIeq, Real.norm_eq_abs, hvol] at hle
+  exact hle
+
+lemma FullWeilTest.abs_second_diff_le (F : FullWeilTest) :
+    ∃ K : ℝ, 0 ≤ K ∧ ∀ u δ : ℝ,
+      |F.toFun u - 2 * F.toFun (u - δ) + F.toFun (u - 2 * δ)| ≤
+        K * δ ^ 2 * (F.supportRadius + 2 * |δ|) := by
+  obtain ⟨h, _, hcs, ⟨Kh, hKh⟩, ⟨a, hsupp⟩, hac⟩ := F.autocorrelation
+  refine ⟨(Kh : ℝ) ^ 2, by positivity, fun u δ => ?_⟩
+  have hc : Continuous h := hKh.continuous
+  have hΔ :=
+    autocorrelation_second_diff_le hc hcs hKh hsupp F.supportRadius_nonneg u δ
+  rw [hac u, hac (u - δ), hac (u - 2 * δ)]
+  exact hΔ
+
+lemma FullWeilTest.hat_comp_sub (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    ∫ t : ℝ, (F.toFun (t + (-δ)) : ℂ) * exp (s * t) =
+      exp (s * δ) * F.hat s := by
+  have hφ :
+      (fun t : ℝ => (F.toFun (t + (-δ)) : ℂ) * exp (s * t)) =
+        fun t =>
+          (fun u : ℝ => (F.toFun u : ℂ) * exp (s * (u + δ))) (t + (-δ)) := by
+    ext t
+    simp
+  rw [hφ, integral_add_right_eq_self
+      (fun u : ℝ => (F.toFun u : ℂ) * exp (s * (u + δ))) (-δ)]
+  have hmul :
+      (fun u : ℝ => (F.toFun u : ℂ) * exp (s * (u + δ))) =
+        fun u => exp (s * δ) • ((F.toFun u : ℂ) * exp (s * u)) := by
+    ext u
+    have hadd : s * ((u : ℂ) + (δ : ℂ)) = s * u + s * δ := mul_add _ _ _
+    rw [hadd, exp_add, smul_eq_mul]
+    ring
+  rw [hmul, integral_smul]
+  rfl
+
+lemma FullWeilTest.integrable_hat_comp_sub (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    Integrable fun t : ℝ => (F.toFun (t + (-δ)) : ℂ) * exp (s * t) := by
+  have hc : Continuous fun t : ℝ => (F.toFun (t + (-δ)) : ℂ) * exp (s * t) :=
+    (continuous_ofReal.comp
+      (F.continuous_toFun.comp (continuous_add_const (-δ)))).mul
+      (continuous_exp.comp (continuous_const.mul continuous_ofReal))
+  refine hc.integrable_of_hasCompactSupport ?_
+  refine HasCompactSupport.of_support_subset_isCompact
+      (isCompact_Icc : IsCompact
+        (Icc (-(F.supportRadius + |δ| + 1)) (F.supportRadius + |δ| + 1)))
+      (fun t ht => ?_)
+  have hg : F.toFun (t + (-δ)) ≠ 0 := by
+    intro h0
+    apply mem_support.mp ht
+    change (F.toFun (t + (-δ)) : ℂ) * exp (s * t) = 0
+    rw [h0, ofReal_zero, zero_mul]
+  have hm := F.support_subset_Icc (mem_support.mpr hg)
+  constructor
+  · linarith [hm.1, neg_le_abs δ, F.supportRadius_nonneg]
+  · linarith [hm.2, le_abs_self δ, F.supportRadius_nonneg]
+
+-- The Weierstrass identity `hat * (1-e^{sδ})² = ∫ Δ²g e^{st}` and the
+-- strip bound `‖hat s‖ ≤ C/(1+|Im s|²)` are the next [2c] cut.
 
 end WeilHatGrowth
 

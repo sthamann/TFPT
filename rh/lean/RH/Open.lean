@@ -698,17 +698,18 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
   is a larger missing library (10+ rounds).
 
   Round estimate (not extra sorries):
-    r502  `1/t²` strip decay of `hat` from the
-          autocorrelation second difference
-          (Lipschitz of the witness `h`);
-    r503--r505  `|ζ|` convexity via three-lines
+    r503  Δ² of the ACF (this plan; Fourier
+          strip translation may slip a cut);
+    r504  Weierstrass → `1/t²` strip of `hat`;
+    r505--r507  `|ζ|` convexity via three-lines
           (~3 rounds);
-    r506  Jensen → `N(R) ≪ R log R`;
-    r507  Stieltjes / `∑ 1/|ρ|² < ∞` and
+    r508  Jensen → `N(R) ≪ R log R`;
+    r509  Stieltjes / `∑ 1/|ρ|² < ∞` and
           `T → ∞` of `spectralPartialSum`;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
-  matching the original 4--8 band if r502 lands.
+  matching the original 4--8 band if the strip
+  bound lands on the next cut.
 
 PROVED this cut, sorry-free: spectral kernel
 `FullWeilTest.hat s = ∫ g(t) e^{s t} dt` and the
@@ -723,6 +724,36 @@ Remaining named pieces of [2] (not extra sorries):
   [2c] `1/t²` strip bound, then zero-count /
       `∑ 1/|ρ|²`, then abs. conv. of
       `spectralPartialSum`;
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r503 census (outer bridges 10, [2c] Δ² of ACF)
+
+PROVED this cut, sorry-free: the second difference
+of an autocorrelation with Lipschitz-compact
+witness is classically O(δ²),
+`|Δ²_δ g(u)| ≤ K² δ² (R + 2|δ|)`
+(`autocorrelation_second_diff_eq`,
+`autocorrelation_second_diff_le`,
+`FullWeilTest.abs_second_diff_le`),
+and the Laplace translation
+`∫ g(t-δ) e^{st} dt = e^{sδ} hat`
+(`FullWeilTest.hat_comp_sub`).
+The consumer strip bound
+`FullWeilTest.norm_hat_le_inv_sq` is NOT landed:
+the Weierstrass identity
+`hat · (1 - e^{sδ})² = ∫ Δ²g e^{st}`
+(δ = π/|τ|) stuck on ℂ-coercion of
+`s * (2δ)` vs `2*(s*δ)` and the
+`exp (I * ±π) = -1` wiring.
+
+ĥ-side of [2c] is therefore still missing
+the `1/t²` decay (r501 exp-type is in).
+Remaining named pieces of [2] (not extra sorries):
+  [2c] Weierstrass → `‖hat s‖ ≤ C/(1+|Im s|²)`
+      on `0 ≤ Re s ≤ 1`;
+  [2c] `|ζ|` convexity → Jensen → `N(T)` →
+      `∑ 1/|ρ|²`;
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
