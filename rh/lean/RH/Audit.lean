@@ -459,6 +459,9 @@ r515 wraps one and many simple poles
 (`rectangleIntegral_simple_pole`,
 `rectangleIntegral_sum_simple_poles`) and
 bounds `|ζ'/ζ|` on `Re ≥ 2`.
+r516 glues the punched `(ζ'/ζ)·F` remainder
+(`exists_analyticAt_update_of_meromorphicOrderAt_nonneg`,
+`logDerivHatRemainder`).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -588,6 +591,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms rectangleIntegral_sum_simple_poles
 #print axioms logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt
 #print axioms norm_logDeriv_riemannZeta_le_at_two
+#print axioms exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+#print axioms exists_analytic_logDeriv_mul_sub
+#print axioms exists_analytic_logDeriv_mul_sub_one
+#print axioms meromorphicOrderAt_logDerivHatRemainder_at_zero
+#print axioms meromorphicOrderAt_logDerivHatRemainder_at_one
+#print axioms exists_analyticAt_update_logDerivHatRemainder_at_zero
+#print axioms exists_analyticAt_update_logDerivHatRemainder_at_one
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

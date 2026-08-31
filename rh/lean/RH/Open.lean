@@ -1040,8 +1040,26 @@ is the same split plus one Cauchy call on `h`.
 On `Re s ≥ 2`, `‖ζ'/ζ(s)‖ ≤ ‖ζ'/ζ(2)‖` from
 `ζ'/ζ = -L(Λ)` and termwise `n^{-Re s} ≤ n^{-2}`.
 Remaining [2d]: assemble `∮ (ζ'/ζ) ĥ` on `Q_T`
-(left-edge FE fold, horizontals, `T→∞`).
+(remainder glue is r516; apply r515 on `Q_T`,
+then left-edge FE fold, horizontals, `T→∞`).
 Census stays 7 (external 2).  NO RH CLAIM.
+
+## r516 census (outer bridges 23, [2d] glue)
+
+[2d] remainder glue, sorry-free.  The technical
+core is `exists_analyticAt_update_of_meromorphicOrderAt_nonneg`:
+meromorphic of order `≥ 0` fills by `update`
+(`MeromorphicAt.analyticAt` + the r500 pattern).
+r498/r500 × an analytic factor give the local
+split `(ζ'/ζ)·F = r_p/(·-p) + H`; the punched
+product has order `≥ 0`.  Product rule:
+`ĥ(p) ≠ 0` keeps order `-1`; `ĥ(p) = 0`
+cancels the pole.  Global `logDerivHatRemainder`
+on the r499 Finset plus `s = 1` agrees with an
+analytic germ at every pole, so it fills.
+`ĥ` entire and `rectangleIntegral_sum_simple_poles`
+on `Q_T` remain (r517).  Census stays 7
+(external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)
 

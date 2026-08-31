@@ -6797,6 +6797,298 @@ lemma rectangleIntegral_sum_simple_poles (h : ℂ → ℂ) (z w : ℂ)
 
 end RectangleContour
 
+/-! ### r516: residue identity on a fixed rectangle ([2d] assembly)
+
+The remainder `f − Σ r_p/(·−p)` of `(ζ′/ζ)·ĥ` is meromorphic of
+nonnegative order at every point of the closed rectangle (local
+r498/r500 split times an analytic factor, then cancel the principal
+part).  Mathlib fills a nonnegative-order germ by `update`.
+-/
+
+section ContourRemainder
+
+open Complex Filter Function Set
+open scoped Topology
+
+/-- Nonnegative meromorphic order is a removable singularity:
+updating the value at the point yields an analytic germ
+(the r500 `update` pattern, abstracted). -/
+lemma exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+    {f : ℂ → ℂ} {x : ℂ}
+    (hf : MeromorphicAt f x) (ho : 0 ≤ meromorphicOrderAt f x) :
+    ∃ c : ℂ, AnalyticAt ℂ (update f x c) x := by
+  obtain ⟨c, hc⟩ := tendsto_nhds_of_meromorphicOrderAt_nonneg hf ho
+  refine ⟨c, ?_⟩
+  have hcont : ContinuousAt (update f x c) x :=
+    continuousAt_update_same.mpr hc
+  have hmer : MeromorphicAt (update f x c) x :=
+    hf.congr (by
+      filter_upwards [self_mem_nhdsWithin] with z hz
+      exact (update_of_ne hz _ _).symm)
+  exact hmer.analyticAt hcont
+
+/-- `dslope` of an analytic germ is analytic (open-ball form of
+`Complex.differentiableOn_dslope`). -/
+lemma analyticAt_dslope {F : ℂ → ℂ} {s : ℂ} (hF : AnalyticAt ℂ F s) :
+    AnalyticAt ℂ (dslope F s) s := by
+  obtain ⟨r, hr, hball⟩ := hF.exists_ball_analyticOnNhd
+  have hU : Metric.ball s r ∈ 𝓝 s := Metric.ball_mem_nhds s hr
+  have hdiff : DifferentiableOn ℂ F (Metric.ball s r) :=
+    fun z hz => (hball z hz).differentiableAt.differentiableWithinAt
+  have hds : DifferentiableOn ℂ (dslope F s) (Metric.ball s r) :=
+    (Complex.differentiableOn_dslope (s := Metric.ball s r) hU).mpr hdiff
+  exact hds.analyticAt hU
+
+/-- r498 × analytic factor: at a non-polar zero the principal part of
+`(ζ′/ζ)·F` is `m_s·F(s)/(z−s)`, with analytic remainder.  If `F s = 0`
+the principal part vanishes and the product is already analytic. -/
+lemma exists_analytic_logDeriv_mul_sub {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1)
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F s) :
+    ∃ H : ℂ → ℂ, AnalyticAt ℂ H s ∧
+      ∀ᶠ z in 𝓝[≠] s,
+        logDeriv riemannZeta z * F z =
+          (riemannZetaMultiplicity s : ℂ) * F s / (z - s) + H z := by
+  obtain ⟨h, hh, heq⟩ :=
+    logDeriv_riemannZeta_eq_multiplicity_div_add_analytic hz hs
+  refine ⟨fun z =>
+      (riemannZetaMultiplicity s : ℂ) * dslope F s z + h z * F z, ?_, ?_⟩
+  · exact ((analyticAt_const.mul (analyticAt_dslope hF)).add
+      (hh.mul hF))
+  · filter_upwards [heq, self_mem_nhdsWithin] with z hzlog hzne
+    have hz0 : z - s ≠ 0 := sub_ne_zero.mpr hzne
+    rw [hzlog, dslope_of_ne F hzne]
+    have hslope :
+        slope F s z = (z - s)⁻¹ * (F z - F s) := rfl
+    rw [hslope]
+    field_simp [hz0]
+    ring
+
+/-- r500 × analytic factor: at `s = 1` the principal part of
+`(ζ′/ζ)·F` is `−F(1)/(z−1)`. -/
+lemma exists_analytic_logDeriv_mul_sub_one
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F 1) :
+    ∃ H : ℂ → ℂ, AnalyticAt ℂ H 1 ∧
+      ∀ᶠ z in 𝓝[≠] 1,
+        logDeriv riemannZeta z * F z = -F 1 / (z - 1) + H z := by
+  obtain ⟨h, hh, heq⟩ := logDeriv_riemannZeta_eq_neg_one_div_add_analytic
+  refine ⟨fun z => -dslope F 1 z + h z * F z, ?_, ?_⟩
+  · exact ((analyticAt_dslope hF).neg.add (hh.mul hF))
+  · filter_upwards [heq, self_mem_nhdsWithin] with z hzlog hzne
+    have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hzne
+    rw [hzlog, dslope_of_ne F hzne]
+    have hslope :
+        slope F 1 z = (z - 1)⁻¹ * (F z - F 1) := rfl
+    rw [hslope]
+    field_simp [hz0]
+    ring
+
+/-- The punched product has nonnegative meromorphic order at a
+non-polar zero (principal parts cancel). -/
+lemma meromorphicOrderAt_logDeriv_mul_sub_nonneg {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1)
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F s) :
+    0 ≤ meromorphicOrderAt
+      (fun z => logDeriv riemannZeta z * F z
+        - (riemannZetaMultiplicity s : ℂ) * F s / (z - s)) s := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDeriv_mul_sub hz hs hF
+  have hcong :
+      (fun z => logDeriv riemannZeta z * F z
+        - (riemannZetaMultiplicity s : ℂ) * F s / (z - s))
+        =ᶠ[𝓝[≠] s] H := by
+    filter_upwards [heq] with z hz
+    rw [hz, add_comm, add_sub_cancel_right]
+  rw [meromorphicOrderAt_congr hcong]
+  exact hH.meromorphicOrderAt_nonneg
+
+/-- The punched product has nonnegative meromorphic order at `s = 1`. -/
+lemma meromorphicOrderAt_logDeriv_mul_sub_one_nonneg
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F 1) :
+    0 ≤ meromorphicOrderAt
+      (fun z => logDeriv riemannZeta z * F z - (-F 1) / (z - 1)) 1 := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDeriv_mul_sub_one hF
+  have hcong :
+      (fun z => logDeriv riemannZeta z * F z - (-F 1) / (z - 1))
+        =ᶠ[𝓝[≠] 1] H := by
+    filter_upwards [heq] with z hz
+    rw [hz, add_comm, add_sub_cancel_right]
+  rw [meromorphicOrderAt_congr hcong]
+  exact hH.meromorphicOrderAt_nonneg
+
+/-- Analytic filling of the punched product at a non-polar zero. -/
+lemma exists_analyticAt_update_logDeriv_mul_sub {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1)
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F s) :
+    ∃ c : ℂ, AnalyticAt ℂ
+      (update (fun z => logDeriv riemannZeta z * F z
+        - (riemannZetaMultiplicity s : ℂ) * F s / (z - s)) s c) s := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDeriv_mul_sub hz hs hF
+  have hf : MeromorphicAt
+      (fun z => logDeriv riemannZeta z * F z
+        - (riemannZetaMultiplicity s : ℂ) * F s / (z - s)) s :=
+    hH.meromorphicAt.congr (by
+      filter_upwards [heq] with z hz
+      rw [hz, add_comm, add_sub_cancel_right])
+  exact exists_analyticAt_update_of_meromorphicOrderAt_nonneg hf
+    (meromorphicOrderAt_logDeriv_mul_sub_nonneg hz hs hF)
+
+/-- Product rule: a non-vanishing analytic factor does not change
+the meromorphic order of `ζ'/ζ`. -/
+lemma meromorphicOrderAt_logDeriv_mul_of_ne_zero {s : ℂ}
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F s) (hFne : F s ≠ 0) :
+    meromorphicOrderAt (fun z => logDeriv riemannZeta z * F z) s =
+      meromorphicOrderAt (logDeriv riemannZeta) s := by
+  have hmul :=
+    meromorphicOrderAt_mul_of_ne_zero (f := logDeriv riemannZeta) hF hFne
+  refine (meromorphicOrderAt_congr ?_).trans hmul
+  filter_upwards with z
+  exact mul_comm _ _
+
+/-- If the analytic factor vanishes, `(ζ'/ζ)·F` has nonnegative order
+at a non-polar zero (the pole is cancelled). -/
+lemma meromorphicOrderAt_logDeriv_mul_of_eq_zero {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1)
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F s) (hF0 : F s = 0) :
+    0 ≤ meromorphicOrderAt (fun z => logDeriv riemannZeta z * F z) s := by
+  simpa [hF0, div_zero] using
+    meromorphicOrderAt_logDeriv_mul_sub_nonneg hz hs hF
+
+/-- Analytic filling of the punched product at `s = 1`. -/
+lemma exists_analyticAt_update_logDeriv_mul_sub_one
+    {F : ℂ → ℂ} (hF : AnalyticAt ℂ F 1) :
+    ∃ c : ℂ, AnalyticAt ℂ
+      (update (fun z => logDeriv riemannZeta z * F z - (-F 1) / (z - 1)) 1 c) 1 := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDeriv_mul_sub_one hF
+  have hf : MeromorphicAt
+      (fun z => logDeriv riemannZeta z * F z - (-F 1) / (z - 1)) 1 :=
+    hH.meromorphicAt.congr (by
+      filter_upwards [heq] with z hz
+      rw [hz, add_comm, add_sub_cancel_right])
+  exact exists_analyticAt_update_of_meromorphicOrderAt_nonneg hf
+    (meromorphicOrderAt_logDeriv_mul_sub_one_nonneg hF)
+
+/-- Punched integrand on a closed strip rectangle. -/
+noncomputable def logDerivHatRemainder (F : ℂ → ℂ) (σ₁ σ₂ T : ℝ) : ℂ → ℂ :=
+  fun z => logDeriv riemannZeta z * F z
+    - ∑ ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T,
+        (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ)
+    - (-F 1) / (z - 1)
+
+lemma analyticAt_inv_sub {s p : ℂ} (hp : p ≠ s) :
+    AnalyticAt ℂ (fun z => (z - p)⁻¹) s :=
+  ((analyticAt_id.sub analyticAt_const).inv (sub_ne_zero.mpr hp.symm))
+
+lemma analyticAt_sum_inv_sub (s : Finset ℂ) (r : ℂ → ℂ) {x : ℂ}
+    (hx : ∀ p ∈ s, p ≠ x) :
+    AnalyticAt ℂ (fun z => ∑ p ∈ s, r p / (z - p)) x := by
+  classical
+  revert hx
+  refine s.induction_on ?empty ?insert
+  · intro _hx
+    simp; exact analyticAt_const
+  · intro p s hps ih hx
+    have hp : p ≠ x := hx p (Finset.mem_insert_self p s)
+    have hs : ∀ q ∈ s, q ≠ x :=
+      fun q hq => hx q (Finset.mem_insert_of_mem hq)
+    simp_rw [Finset.sum_insert hps]
+    exact ((analyticAt_const.mul (analyticAt_inv_sub hp)).add (ih hs))
+
+lemma exists_analytic_logDerivHatRemainder_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    ∃ H : ℂ → ℂ, AnalyticAt ℂ H s ∧
+      logDerivHatRemainder F σ₁ σ₂ T =ᶠ[𝓝[≠] s] H := by
+  have hs' := mem_riemannZetaZerosOnClosedRect.mp hs
+  obtain ⟨H0, hH0, heq⟩ :=
+    exists_analytic_logDeriv_mul_sub hs'.2.1 hs'.2.2 (hF s (mem_univ s))
+  let zeros := riemannZetaZerosOnClosedRect σ₁ σ₂ T
+  have hrest : AnalyticAt ℂ
+      (fun z =>
+        ∑ ρ ∈ zeros.erase s,
+            (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ)
+          + (-F 1) / (z - 1)) s :=
+    (analyticAt_sum_inv_sub (zeros.erase s)
+        (fun ρ => (riemannZetaMultiplicity ρ : ℂ) * F ρ)
+        (fun ρ hρ => Finset.ne_of_mem_erase hρ)).add
+      (analyticAt_const.mul (analyticAt_inv_sub hs'.2.2.symm))
+  refine ⟨fun z => H0 z -
+      (∑ ρ ∈ zeros.erase s,
+          (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ)
+        + (-F 1) / (z - 1)), hH0.sub hrest, ?_⟩
+  filter_upwards [heq] with z hz
+  unfold logDerivHatRemainder
+  have hsum := Finset.sum_erase_add (s := zeros) (f := fun ρ : ℂ =>
+      (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ)) hs
+  rw [← hsum, hz]
+  ring
+
+lemma meromorphicOrderAt_logDerivHatRemainder_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    0 ≤ meromorphicOrderAt (logDerivHatRemainder F σ₁ σ₂ T) s := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDerivHatRemainder_at_zero hF hs
+  rw [meromorphicOrderAt_congr heq]
+  exact hH.meromorphicOrderAt_nonneg
+
+lemma exists_analytic_logDerivHatRemainder_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    (σ₁ σ₂ T : ℝ) :
+    ∃ H : ℂ → ℂ, AnalyticAt ℂ H 1 ∧
+      logDerivHatRemainder F σ₁ σ₂ T =ᶠ[𝓝[≠] 1] H := by
+  obtain ⟨H0, hH0, heq⟩ :=
+    exists_analytic_logDeriv_mul_sub_one (hF 1 (mem_univ 1))
+  let zeros := riemannZetaZerosOnClosedRect σ₁ σ₂ T
+  have hrest : AnalyticAt ℂ
+      (fun z => ∑ ρ ∈ zeros,
+          (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ)) 1 :=
+    analyticAt_sum_inv_sub zeros
+      (fun ρ => (riemannZetaMultiplicity ρ : ℂ) * F ρ)
+      (fun ρ hρ => (mem_riemannZetaZerosOnClosedRect.mp hρ).2.2)
+  refine ⟨fun z => H0 z -
+      ∑ ρ ∈ zeros, (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ),
+      hH0.sub hrest, ?_⟩
+  filter_upwards [heq] with z hz
+  unfold logDerivHatRemainder
+  rw [hz]
+  ring
+
+lemma meromorphicOrderAt_logDerivHatRemainder_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    (σ₁ σ₂ T : ℝ) :
+    0 ≤ meromorphicOrderAt (logDerivHatRemainder F σ₁ σ₂ T) 1 := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDerivHatRemainder_at_one hF σ₁ σ₂ T
+  rw [meromorphicOrderAt_congr heq]
+  exact hH.meromorphicOrderAt_nonneg
+
+lemma exists_analyticAt_update_logDerivHatRemainder_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    ∃ c : ℂ, AnalyticAt ℂ
+      (update (logDerivHatRemainder F σ₁ σ₂ T) s c) s := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDerivHatRemainder_at_zero hF hs
+  exact exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+    (hH.meromorphicAt.congr (by
+      filter_upwards [heq] with z hz
+      exact hz.symm))
+    (meromorphicOrderAt_logDerivHatRemainder_at_zero hF hs)
+
+lemma exists_analyticAt_update_logDerivHatRemainder_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F Set.univ)
+    (σ₁ σ₂ T : ℝ) :
+    ∃ c : ℂ, AnalyticAt ℂ
+      (update (logDerivHatRemainder F σ₁ σ₂ T) 1 c) 1 := by
+  obtain ⟨H, hH, heq⟩ := exists_analytic_logDerivHatRemainder_at_one hF σ₁ σ₂ T
+  exact exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+    (hH.meromorphicAt.congr (by
+      filter_upwards [heq] with z hz
+      exact hz.symm))
+    (meromorphicOrderAt_logDerivHatRemainder_at_one hF σ₁ σ₂ T)
+
+end ContourRemainder
+
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
 def StandardExplicitFormulaIdentification : Prop :=
