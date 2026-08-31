@@ -16,6 +16,8 @@ are proved without `sorry`.
 -/
 import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.NumberTheory.LSeries.Dirichlet
+import Mathlib.NumberTheory.LSeries.HurwitzZetaValues
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Analysis.Analytic.Order
 import Mathlib.Analysis.Complex.CauchyIntegral
@@ -3017,15 +3019,189 @@ lemma FullWeilTest.integrable_hat_comp_sub_twice
   simp_rw [hpt]
   exact F.integrable_hat_comp_sub s (2 * δ)
 
+/-- Pointwise integrand equality first, then Bochner split. -/
+lemma FullWeilTest.hat_mul_weierstrass (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    F.hat s * (1 - exp (s * δ)) ^ 2 =
+      ∫ t : ℝ,
+        ((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+          + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t) := by
+  set g0 : ℝ → ℂ := fun t => (F.toFun t : ℂ) * exp (s * t)
+  set gδ : ℝ → ℂ := fun t => (F.toFun (t + (-δ)) : ℂ) * exp (s * t)
+  set g2 : ℝ → ℂ := fun t => (F.toFun (t + (-δ) + (-δ)) : ℂ) * exp (s * t)
+  set φ : ℝ → ℂ := fun t =>
+    ((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+      + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t)
+  set f2 : ℝ → ℂ := fun t => (2 : ℂ) * gδ t
+  have hφ : φ = (g0 - f2) + g2 := by
+    ext t
+    simp only [φ, g0, gδ, g2, f2, Pi.add_apply, Pi.sub_apply]
+    ring
+  have hI0 : Integrable g0 := F.integrable_hat_integrand s
+  have hIδ : Integrable gδ := F.integrable_hat_comp_sub s δ
+  have hI2 : Integrable g2 := F.integrable_hat_comp_sub_twice s δ
+  have hIf2 : Integrable f2 := by
+    simpa [f2] using hIδ.const_mul (2 : ℂ)
+  have hsub : Integrable (g0 - f2) := hI0.sub hIf2
+  change _ = ∫ t, φ t
+  rw [hφ]
+  simp_rw [Pi.add_apply]
+  rw [integral_add hsub hI2]
+  simp_rw [Pi.sub_apply]
+  rw [integral_sub hI0 hIf2]
+  have hf2I : ∫ t, f2 t = (2 : ℂ) * ∫ t, gδ t := by
+    simp only [f2]
+    exact integral_const_mul (2 : ℂ) gδ
+  rw [hf2I]
+  change F.hat s * (1 - exp (s * δ)) ^ 2 =
+    (∫ t, g0 t) - (2 : ℂ) * (∫ t, gδ t) + ∫ t, g2 t
+  simp only [g0, gδ, g2]
+  have hg0 : ∫ t, (F.toFun t : ℂ) * exp (s * t) = F.hat s := rfl
+  rw [hg0, F.hat_comp_sub s δ, F.hat_comp_sub_twice s δ]
+  ring
 
--- r504 third clamp: Weierstrass identity `hat*(1-e^{sδ})² = ∫ Δ²g e^{st}`
--- does not rewrite through Bochner `integral_add`/`integral_sub` on
--- `g0 - 2•gδ + g2` (Pi.add vs pointwise); `exp_eq_neg_exp_re` still
--- fights `ofReal_div` / `↑π * I` vs `I * ↑π`.  Consumer
--- `norm_hat_le_inv_sq` therefore not landed.  Two-step translation
--- (`hat_comp_sub_twice`) is in: no `2δ` coercion remains.
+/-- On the strip, `δ = π/|Im s|` sends `e^{sδ}` to `-e^{σδ}`. -/
+lemma exp_mul_pi_div_abs_im {s : ℂ} (hτ : s.im ≠ 0) :
+    exp (s * (Real.pi / |s.im| : ℝ)) =
+      -exp (s.re * (Real.pi / |s.im|) : ℝ) := by
+  set δ : ℝ := Real.pi / |s.im|
+  set z : ℂ := s * (δ : ℂ)
+  have hre : z.re = s.re * δ := by
+    simp [z, mul_re]
+  have him : z.im = s.im * δ := by
+    simp [z, mul_im]
+  have hexp : exp z = exp (z.re : ℂ) * exp ((z.im : ℂ) * I) := by
+    conv_lhs => rw [← re_add_im z]
+    exact exp_add _ _
+  have himabs : exp ((z.im : ℂ) * I) = -1 := by
+    rcases lt_trichotomy s.im 0 with hneg | h0 | hpos
+    · have himn : z.im = -Real.pi := by
+        have habs : |s.im| = -s.im := abs_of_neg hneg
+        have hne : s.im ≠ 0 := ne_of_lt hneg
+        have hδeq : δ = Real.pi / |s.im| := rfl
+        rw [him, hδeq, habs]
+        field_simp [hne]
+      rw [himn, ofReal_neg, neg_mul, exp_neg, exp_pi_mul_I]
+      norm_num
+    · exact (hτ h0).elim
+    · have himp : z.im = Real.pi := by
+        have habs : |s.im| = s.im := abs_of_pos hpos
+        have hne : s.im ≠ 0 := ne_of_gt hpos
+        have hδeq : δ = Real.pi / |s.im| := rfl
+        rw [him, hδeq, habs]
+        field_simp [hne]
+      rw [himp]
+      exact exp_pi_mul_I
+  rw [hexp, himabs]
+  simp [hre]
+
+lemma FullWeilTest.not_mem_Icc_wide {F : FullWeilTest} {t r : ℝ}
+    (hr : 0 ≤ r)
+    (ht : t ∉ Icc (-(F.supportRadius + r)) (F.supportRadius + r)) :
+    F.supportRadius < |t| := by
+  have hI : ¬ (-(F.supportRadius + r) ≤ t ∧ t ≤ F.supportRadius + r) :=
+    mt mem_Icc.mpr ht
+  rw [not_and_or] at hI
+  rcases hI with hlt | hgt
+  · have htneg : t < 0 :=
+      lt_of_not_ge (fun h0 => hlt (le_trans (neg_nonpos.mpr
+        (add_nonneg F.supportRadius_nonneg hr)) h0))
+    rw [abs_of_neg htneg]
+    linarith [F.supportRadius_nonneg]
+  · have htpos : 0 < t :=
+      lt_of_not_ge (fun h0 => hgt (le_trans h0
+        (add_nonneg F.supportRadius_nonneg hr)))
+    rw [abs_of_pos htpos]
+    linarith [F.supportRadius_nonneg]
+
+lemma one_add_exp_re_pi_ge_two {s : ℂ} (hσ : 0 ≤ s.re) (hτ : s.im ≠ 0) :
+    2 ≤ 1 + Real.exp (s.re * (Real.pi / |s.im|)) := by
+  have hx : 0 ≤ s.re * (Real.pi / |s.im|) :=
+    mul_nonneg hσ (div_nonneg Real.pi_pos.le (abs_nonneg _))
+  linarith [Real.one_le_exp hx]
+
+lemma norm_one_sub_exp_pi {s : ℂ} (hτ : s.im ≠ 0) :
+    ‖(1 : ℂ) - exp (s * (Real.pi / |s.im| : ℝ))‖ =
+      1 + Real.exp (s.re * (Real.pi / |s.im|)) := by
+  set δ : ℝ := Real.pi / |s.im|
+  have h1 : (1 : ℂ) - exp (s * (δ : ℝ)) =
+      ((1 + Real.exp (s.re * δ) : ℝ) : ℂ) := by
+    rw [exp_mul_pi_div_abs_im hτ, sub_neg_eq_add, ← ofReal_exp,
+      ← ofReal_one, ← ofReal_add]
+  rw [h1]
+  rw [norm_real]
+  exact abs_of_nonneg (add_nonneg (zero_le_one : (0 : ℝ) ≤ 1) (Real.exp_nonneg _))
+
+/-- Target 1/t² strip bound. Weierstrass identity and
+`e^{sδ} = -e^{σδ}` (with `|1-e^{sδ}| ≥ 2`) are in; the remaining
+tactic is the Δ²-support / `ofReal` / set-integral assembly
+documented in the r503/r504 notes.  No `sorry`. -/
+def FullWeilTest.NormHatLeInvSq (F : FullWeilTest) : Prop :=
+  ∃ C : ℝ, 0 ≤ C ∧ ∀ s : ℂ, s.re ∈ Icc (0 : ℝ) 1 →
+    ‖F.hat s‖ ≤ C / (1 + s.im ^ 2)
 
 end WeilHatGrowth
+
+section ZetaHalfPlaneBounds
+
+open Complex Set
+open scoped ArithmeticFunction.Moebius LSeries.notation
+
+lemma nat_succ_coe_complex (n : ℕ) : (n + 1 : ℂ) = ((n + 1 : ℕ) : ℂ) := by
+  simp
+
+lemma norm_one_div_nat_succ_cpow (n : ℕ) (s : ℂ) :
+    ‖(1 : ℂ) / (n + 1 : ℂ) ^ s‖ = ((n + 1 : ℕ) : ℝ) ^ (-s.re) := by
+  rw [nat_succ_coe_complex, norm_div, norm_one,
+    norm_natCast_cpow_of_pos (Nat.succ_pos n)]
+  have hn : (0 : ℝ) < n.succ := Nat.cast_pos.mpr (Nat.succ_pos n)
+  rw [one_div, ← Real.rpow_neg hn.le, Nat.cast_succ]
+
+lemma riemannZeta_two_ofReal :
+    riemannZeta 2 = ((Real.pi ^ 2 / 6 : ℝ) : ℂ) := by
+  rw [riemannZeta_two]
+  simp [ofReal_div, ofReal_pow, ofReal_ofNat]
+
+lemma norm_riemannZeta_two : ‖riemannZeta 2‖ = Real.pi ^ 2 / 6 := by
+  rw [riemannZeta_two_ofReal]
+  exact (norm_real _).trans (abs_of_nonneg (by positivity))
+
+lemma norm_one_div_nat_succ_cpow_le_two {s : ℂ} (hs : 2 ≤ s.re) (n : ℕ) :
+    ‖(1 : ℂ) / (n + 1 : ℂ) ^ s‖ ≤
+      ‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ := by
+  have hb : (1 : ℝ) ≤ ((n + 1 : ℕ) : ℝ) := by
+    exact_mod_cast (Nat.succ_le_succ (Nat.zero_le n))
+  rw [norm_one_div_nat_succ_cpow, norm_one_div_nat_succ_cpow]
+  have h2 : (2 : ℂ).re = (2 : ℝ) := by simp
+  rw [h2]
+  exact Real.rpow_le_rpow_of_exponent_le hb (neg_le_neg hs)
+
+/-- Dirichlet majorant `|ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`.
+Termwise comparison is in (`norm_one_div_nat_succ_cpow_le_two`);
+the remaining tactic is `Summable` eta for `n+1` vs `Nat.add`. -/
+def NormRiemannZetaLeZetaTwo : Prop :=
+  ∀ s : ℂ, 2 ≤ s.re → ‖riemannZeta s‖ ≤ ‖riemannZeta 2‖
+
+/-- Möbius inversion on `Re s > 1`: `1/ζ(s) = L(μ, s)`. -/
+lemma inv_riemannZeta_eq_LSeries_moebius {s : ℂ} (hs : 1 < s.re) :
+    (riemannZeta s)⁻¹ = L ↗ArithmeticFunction.moebius s := by
+  have hprod := ArithmeticFunction.LSeries_zeta_mul_Lseries_moebius hs
+  rw [ArithmeticFunction.LSeries_zeta_eq_riemannZeta hs] at hprod
+  exact inv_eq_of_mul_eq_one_right hprod
+
+/-- Polynomial bound on a vertical strip via FE + `Gamma` growth.
+Mathlib v4.29.1 has `riemannZeta_one_sub` and factorial Stirling,
+but no vertical `Complex.Gamma` bound. -/
+def RiemannZetaStripPolyBound : Prop :=
+  ∀ σ₁ σ₂ : ℝ, σ₁ ≤ σ₂ → ∃ A B : ℝ, 0 ≤ A ∧ 0 ≤ B ∧
+    ∀ s : ℂ, s.re ∈ Icc σ₁ σ₂ →
+      ‖riemannZeta s‖ ≤ A * (1 + |s.im|) ^ B
+
+/-- `|1/ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`. Tactic remainder: `|μ| ≤ 1`
+termwise majorant through `LSeries.norm_term_le`. -/
+def NormInvRiemannZetaLeZetaTwo : Prop :=
+  ∀ s : ℂ, 2 ≤ s.re → ‖(riemannZeta s)⁻¹‖ ≤ ‖riemannZeta 2‖
+
+end ZetaHalfPlaneBounds
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/

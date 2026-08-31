@@ -418,10 +418,13 @@ difference `O(δ²)` bound
 (`autocorrelation_second_diff_le`,
 `FullWeilTest.abs_second_diff_le`) and hat
 translation (`hat_comp_sub`).  r504 adds the
-two-step translation (`hat_comp_sub_twice`);
-the consumer strip bound `norm_hat_le_inv_sq`
-is still open (Bochner Pi.add split /
-`ofReal` Weierstrass wiring).
+two-step translation (`hat_comp_sub_twice`).
+r505 lands the Weierstrass identity
+(`hat_mul_weierstrass`) and `e^{sδ} = -e^{σδ}`
+(`exp_mul_pi_div_abs_im`); the `1/t²` consumer is
+parked as `FullWeilTest.NormHatLeInvSq`.  ζ-side:
+termwise Dirichlet comparison and `1/ζ = L(μ)`
+are in; `|ζ| ≤ |ζ(2)|` remains a named Prop.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -493,6 +496,14 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.integrable_hat_comp_sub
 #print axioms FullWeilTest.hat_comp_sub_twice
 #print axioms FullWeilTest.integrable_hat_comp_sub_twice
+#print axioms FullWeilTest.hat_mul_weierstrass
+#print axioms exp_mul_pi_div_abs_im
+#print axioms norm_one_sub_exp_pi
+#print axioms one_add_exp_re_pi_ge_two
+#print axioms norm_one_div_nat_succ_cpow
+#print axioms norm_riemannZeta_two
+#print axioms norm_one_div_nat_succ_cpow_le_two
+#print axioms inv_riemannZeta_eq_LSeries_moebius
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -780,6 +780,37 @@ Remaining named pieces of [2] (not extra sorries):
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r505 census (outer bridges 12, strip parked + zeta)
+
+STRIP PARKED as `FullWeilTest.NormHatLeInvSq` (named
+Prop, no sorry).  Weierstrass identity
+`hat*(1-e^{sδ})² = ∫ Δ²g e^{st}`
+(`hat_mul_weierstrass`) and
+`e^{sδ} = -e^{σδ}` / `|1-e^{sδ}| ≥ 2`
+(`exp_mul_pi_div_abs_im`, `norm_one_sub_exp_pi`)
+are sorry-free.  Remaining strip tactic: Δ²-support
+width / `ofReal` second-diff / set-integral assembly.
+
+ζ-side cut 1: termwise Dirichlet comparison
+`|(n+1)^{-s}| ≤ |(n+1)^{-2}|` on Re s ≥ 2
+(`norm_one_div_nat_succ_cpow_le_two`),
+`‖ζ(2)‖ = π²/6` (`norm_riemannZeta_two`),
+and `1/ζ = L(μ)` (`inv_riemannZeta_eq_LSeries_moebius`).
+The tsum-consumer `|ζ| ≤ |ζ(2)|` and the Möbius
+`|1/ζ| ≤ |ζ(2)|` are named Props
+(`NormRiemannZetaLeZetaTwo`,
+`NormInvRiemannZetaLeZetaTwo`).  Strip polynomial
+bound parked: no vertical `Complex.Gamma`
+(`RiemannZetaStripPolyBound`).
+
+ĥ-side of [2c] still missing the `1/t²` consumer.
+Remaining named pieces of [2] (not extra sorries):
+  [2c] Δ²-assembly → `‖hat s‖ ≤ C/(1+|Im s|²)`;
+  [2c] tsum-consumer `|ζ| ≤ |ζ(2)|`, then
+      `|ζ|` convexity → Jensen → `N(T)`;
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
