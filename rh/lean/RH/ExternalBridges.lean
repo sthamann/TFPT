@@ -4429,7 +4429,6 @@ lemma riemannZeta_eq_zetaNOneRHS_of_re_gt_im_pos {δ : ℝ} (hδ : 0 < δ)
   have h1 : (1 : ℂ) ∉ U := by intro h; simp [U] at h
   have hz0 : ((δ + 2 : ℝ) : ℂ) + I ∈ U := by
     simp [U, add_re, add_im, I_re, I_im]
-    exact ⟨by linarith, by norm_num⟩
   have heq : riemannZeta =ᶠ[𝓝 (((δ + 2 : ℝ) : ℂ) + I)] zetaNOneRHS := by
     have hopen : IsOpen {z : ℂ | (1 : ℝ) < z.re} := isOpen_re_gt 1
     have hmem : (1 : ℝ) < (((δ + 2 : ℝ) : ℂ) + I).re := by
@@ -4455,7 +4454,6 @@ lemma riemannZeta_eq_zetaNOneRHS_of_re_gt_im_neg {δ : ℝ} (hδ : 0 < δ)
   have h1 : (1 : ℂ) ∉ U := by intro h; simp [U] at h
   have hz0 : ((δ + 2 : ℝ) : ℂ) - I ∈ U := by
     simp [U, sub_re, sub_im, I_re, I_im]
-    exact ⟨by linarith, by norm_num⟩
   have heq : riemannZeta =ᶠ[𝓝 (((δ + 2 : ℝ) : ℂ) - I)] zetaNOneRHS := by
     have hopen : IsOpen {z : ℂ | (1 : ℝ) < z.re} := isOpen_re_gt 1
     have hmem : (1 : ℝ) < (((δ + 2 : ℝ) : ℂ) - I).re := by
@@ -4501,13 +4499,17 @@ lemma riemannZeta_eq_zetaNOneRHS_of_re_Ioo {δ : ℝ} (hδ : 0 < δ) (hδ1 : δ 
       have him : |z.im - 1| < r := by
         simpa [sub_im, add_im, I_im] using him'
       constructor
-      · have : (δ + 1) / 2 - r < z.re := by linarith [(abs_lt.mp hre).1]
+      · have hzre : (δ + 1) / 2 - r < z.re := by linarith [(abs_lt.mp hre).1]
         have hrle : r ≤ (δ + 1) / 2 - δ :=
-          (min_le_left _ _).trans (min_le_left _ _)
-        linarith [hrle]
-      · have : 1 - r < z.im := by linarith [(abs_lt.mp him).1]
-        have hrle : r ≤ (1 / 2 : ℝ) := min_le_right _ _
-        linarith [hrle]
+          (min_le_left (min ((δ + 1) / 2 - δ) (1 - (δ + 1) / 2)) (1 / 2 : ℝ)).trans
+            (min_le_left _ _)
+        have hδle : δ ≤ (δ + 1) / 2 - r := by linarith
+        exact hδle.trans_lt hzre
+      · have hzim : 1 - r < z.im := by linarith [(abs_lt.mp him).1]
+        have hrle : r ≤ (1 / 2 : ℝ) :=
+          min_le_right (min ((δ + 1) / 2 - δ) (1 - (δ + 1) / 2)) (1 / 2 : ℝ)
+        have hpos : (0 : ℝ) < 1 - r := by linarith
+        exact hpos.trans hzim
     refine eventually_of_mem (Metric.isOpen_ball.mem_nhds (Metric.mem_ball_self hr)) ?_
     intro z hz
     have hz' := hball hz

@@ -433,6 +433,12 @@ Dirichlet majorants `‖ζ(s)‖ ≤ ‖ζ(2)‖`,
 (`riemannZeta_one_sub_eq_zero_of`) and the
 Γ-free Euler–Maclaurin skeleton (FTC cell,
 telescoping, `{x}`-cells, cell majorant).
+r508 assembles the N=1 formula on `Re s>1`
+and the poly bound there.  r509 fills
+`ζ = s/(s-1) − s·I` to `{Re s>0, s≠1}`
+by Weierstrass + identity theorem, and
+extends the poly bound to `{Re>δ}`.
+Jensen counting remains a named Prop.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -530,6 +536,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms summable_zetaFractCell
 #print axioms norm_zetaFractIntegral_le_zeta_two
 #print axioms norm_riemannZeta_le_of_re_gt_one
+#print axioms hasDerivAt_zetaFractCell
+#print axioms differentiable_zetaFractCell
+#print axioms differentiableOn_zetaFractIntegral_re_gt
+#print axioms differentiableOn_zetaFractIntegral_re_pos
+#print axioms riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos
+#print axioms norm_zetaFractIntegral_le_of_re_gt
+#print axioms norm_riemannZeta_le_of_re_gt
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

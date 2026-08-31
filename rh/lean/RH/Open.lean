@@ -704,7 +704,8 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
     r505--r507  `|ζ|` convexity via three-lines
           (~3 rounds);
     r508  N=1 EM + `|ζ|` poly on `Re s>1`;
-    r509  identity fill + Jensen → `N(R)`;
+    r509  identity fill + `|ζ|` poly on `Re>δ`;
+    r510  Jensen → `N(R)` on `D(2+iT, 1.5)`;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
   matching the original 4--8 band if the strip
@@ -877,6 +878,34 @@ derivative majorant independent of `s`.  Prop
 (`norm_riemannZeta_le_of_re_gt_one`).
 `RiemannZetaStripPolyBound` on `{Re s≥δ>0}` remains
 parked until (3).  Jensen / `N(T)` = r509.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r509 census (outer bridges 16, identity fill)
+
+(1) Id-Fill KOMPLETT, sorry-free:
+`ζ(s) = s/(s-1) − s·zetaFractIntegral(s)` on
+`{Re s>0, s≠1}`
+(`riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos`).
+Path: each cell is entire (parametric FTC);
+Weierstrass M-test
+(`differentiableOn_tsum_of_summable_norm`) gives
+holomorphy of `I` on every `{Re>δ}`; identity
+theorem on three convex charts that avoid `s=1`
+(upper/lower half of `{Re>δ}`, then the strip
+`{δ<Re<1}` via a ball in the upper half).
+
+(2) Γ-free poly bound KOMPLETT on the filled
+region: `|ζ(s)| ≤ C(δ)(1+|s|)` on
+`{Re s>δ} ∩ {|s-1|≥1/2}`
+(`norm_riemannZeta_le_of_re_gt`), with
+`C(δ) = 2 + ∑ (n+1)^{-δ-1}`.
+
+(3) Jensen-Einstieg ehrlich geschnitten:
+`JensenDiskZeroCountBound` is a named Prop
+(no sorry).  Wiring
+`MeromorphicOn.circleAverage_log_norm` plus
+the poly bound and the r506 centre lower
+bound `|ζ(2+iT)| ≥ 1/|ζ(2)|` is r510.
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)
