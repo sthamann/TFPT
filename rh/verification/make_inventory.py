@@ -2640,6 +2640,49 @@ _R473_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R474_STATUS = (
+    "classical Weil modulus upgrade "
+    "(round 474, PRIME.RDAGGER.MODULUS_UPGRADE.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT PARTIAL.  F2b of the r469 U3 directive.  "
+    "Lemmas PROVED: C_P=2 S_eff(L) with S_eff exact and "
+    "zero at L=0.3; C_Pi=8 sinh(L); Jackson 1/pi^2 and "
+    "1/pi on H^2 interpolants; combination implication "
+    "R_grid > omega => Q >= (R-omega)||h||^2 on the first "
+    "Dirichlet H^2 ball.  Quantitative close STUCK: every "
+    "sealed mesh is SHORT, including YB L=0.3 "
+    "(omega 0.140 vs R_grid 0.0083).  Modulus too crude "
+    "(arch 1/w on the first-order cross term).  "
+    "Smoke 11/11, full 21/21, SPEC_SHA 45db1c92384913e8.  "
+    "Companion rh/problem/modulus_upgrade.tex + "
+    "verify_modulus_upgrade.py MODULUS UPGRADE VERIFIED -- "
+    "PARTIAL.  NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
+_R475_STATUS = (
+    "arch identity isolation and tent rate "
+    "(round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2.  F1(ii) not closed "
+    "as exact equality: productionArchDelta_tendsto_atTop proved "
+    "(Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 "
+    "still lists Gauss integral as TODO, isolated as named Prop "
+    "GaussDigammaIntegralRepresentation (not a sorry).  "
+    "weilArchSide is now the concrete u-space pairing.  "
+    "Selected-path rate O(Delta_k^2) named "
+    "SelectedArchErrorQuadraticRate; "
+    "selectedArchError_tendsto_zero_of_rate proved (fixed-f "
+    "convergence, not infinitely-many-k positivity).  "
+    "Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 "
+    "(k=5..8, err/D2=3.9893) and err=0.028876619985 at "
+    "Delta=0.0866433976 (k=9..12, err/D2=3.8466).  "
+    "Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census "
+    "remains 8.  Companion rh/problem/arch_rate.tex + "
+    "verify_arch_rate.py ARCH RATE VERIFIED (6/6).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -6334,6 +6377,45 @@ ENTRIES = [
      "compiled PDF of extraction_joint.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/modulus_upgrade.tex", "problem_statement",
+     "r474",
+     [],
+     _R474_STATUS,
+     True),
+    ("rh/problem/verify_modulus_upgrade.py", "problem_check",
+     "r474 companion",
+     [],
+     "machine check of modulus_upgrade.tex: note tokens "
+     "(PARTIAL, SHORT, F2b, scramble, S_eff, Jackson), "
+     "smoke run, S_eff(YB)=0, omega pins.  6/6 gates, "
+     "final line MODULUS UPGRADE VERIFIED -- PARTIAL",
+     True),
+    ("rh/problem/modulus_upgrade.pdf", "problem_statement",
+     "r474",
+     [],
+     "compiled PDF of modulus_upgrade.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
+    ("rh/problem/arch_rate.tex", "problem_statement",
+     "r475",
+     [],
+     _R475_STATUS,
+     True),
+    ("rh/problem/verify_arch_rate.py", "problem_check",
+     "r475 companion",
+     [],
+     "machine check of r475 arch rate: weilArchSide concrete, "
+     "Gauss named not sorry, O(Delta^2) rate named, tendsto "
+     "proved, exact-identity sorry retained, artefact pins, "
+     "sorry census 8, numeric probe.  6/6 gates, final line "
+     "ARCH RATE VERIFIED",
+     True),
+    ("rh/problem/arch_rate.pdf", "problem_statement",
+     "r475",
+     [],
+     "compiled PDF of arch_rate.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -6864,6 +6946,16 @@ ENTRIES = [
      "r473",
      [],
      _R473_STATUS,
+     True),
+    (f"{EXP}/modulus_upgrade_probe.py", "sealed_probe",
+     "r474",
+     [],
+     _R474_STATUS,
+     True),
+    (f"{EXP}/arch_rate_probe.py", "sealed_probe",
+     "r475",
+     [],
+     _R475_STATUS,
      True),
 ]
 

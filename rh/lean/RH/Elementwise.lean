@@ -613,13 +613,51 @@ noncomputable def archRead (a m : ℕ) (f : GridElement) : ℝ :=
       productionArchLag a m i *
         f.toFun (i * productionArchDelta a m)
 
-/-- the archimedean side of the Weil form of a grid element (the
-exact kernel integral against `weilArchKernel`).  OPAQUE: named
-classical pairing TODO.  r376: unlike the pole channel, the lag-domain
-tent integrals `arch_A` (v563) are NOT a second difference of a named
-elementary antiderivative in mathlib v4.29.1, so this read stays
-opaque. -/
-opaque weilArchSide : GridElement → ℝ
+/-- Regularized u-space weight
+`w(u) = 2 e^{-u/2} / (1 - e^{-2u})` of the classical arch pairing
+(relay T93/T95; r473 diagnosis). -/
+noncomputable def weilArchUWeight (u : ℝ) : ℝ :=
+  2 * Real.exp (-u / 2) / (1 - Real.exp (-2 * u))
+
+/-- Regularized integrand of the u-space identity; the u = 0 value
+is a removable/integrable singularity for Lipschitz even `g`. -/
+noncomputable def weilArchUIntegrand (f : GridElement) (u : ℝ) : ℝ :=
+  if u = 0 then 0
+  else weilArchUWeight u *
+    (Real.exp (-(3 / 2 : ℝ) * u) * f.toFun 0 - f.toFun u)
+
+/-- **Classical archimedean pairing (r475).**  The u-space digamma
+identity
+`A = C_b g(0) + ∫_0^b w(u)(e^{-3u/2} g(0) - g(u)) du`
+with `C_b = -γ - log π - log(1 - e^{-2b})`.  This replaces the
+r376 opaque symbol: the pairing is now a concrete integral, not
+an unidentified kernel.  The Gauss/Mellin identification of this
+integral with `weilArchKernel` remains the named Prop
+`GaussDigammaIntegralRepresentation` (Mathlib v4.29.1 still lists
+Gauss's integral as TODO). -/
+noncomputable def weilArchSide (f : GridElement) : ℝ :=
+  if 0 < f.supportBound then
+    let b := f.supportBound
+    let g0 := f.toFun 0
+    let Cb := -(Real.eulerMascheroniConstant + Real.log Real.pi)
+      - Real.log (1 - Real.exp (-2 * b))
+    Cb * g0 +
+      intervalIntegral (weilArchUIntegrand f) 0 b MeasureTheory.volume
+  else 0
+
+/-- **Isolated Mathlib brick (r475, not a sorry).**  Gauss's
+integral representation of digamma, exactly the TODO on Mathlib
+v4.29.1 `Digamma.lean`.  The u-space pairing `weilArchSide` does
+not depend on this lemma; the quadrature rate lives on that
+integral. -/
+def GaussDigammaIntegralRepresentation : Prop :=
+  ∀ z : ℂ, 0 < z.re →
+    Complex.digamma (z + 1) =
+      (-Real.eulerMascheroniConstant : ℂ) +
+        ∫ t in Set.Ioi (0 : ℝ),
+          (Complex.exp (-t) - Complex.exp (-(z + 1) * t))
+            / (1 - Complex.exp (-t))
+
 
 /-! ### Pole channel: transcribed tent-read (r376)
 
@@ -729,21 +767,25 @@ def PoleDyadicIndependence : Prop :=
   ∀ f : GridElement, ∀ m, f.meshExp ≤ m →
     poleEvenRead m f = poleEvenRead f.meshExp f
 
-/-- **The one analytical remainder (r464).**
-The now-concrete Gauss tent integrals, assembled by the literal
-finite `archRead`, equal the critical-line digamma kernel pairing.
-Mathlib v4.29.1 explicitly lists Gauss's integral representation of
-digamma as TODO; it supplies the functional equation and special
-values but not the integral theorem or the required Mellin
-identification. -/
+/-- **The one analytical remainder (r464; r475 diagnosis).**
+Exact eventual equality `archRead = weilArchSide` for every
+`a ≥ a₀` and every `m ≥ meshExp`.  This quantifier is too strong:
+at fixed `m`, `productionArchDelta a m = log a / (m+1) → ∞` as
+`a → ∞`, so the tent mesh gets coarser, not finer.  r473 already
+exhibits a mesh-and-onset-compatible witness with a genuine
+positive arch tent error.  The correct remnant is the
+selected-path `O(Δ²)` rate in `RH/InnerBridges.lean`.  The
+theorem is retained (FREQ extraction still consumes it) and
+remains a `sorry`.  Mathlib's Gauss integral is isolated as
+`GaussDigammaIntegralRepresentation`, not a second `sorry`. -/
 def ArchGaussMellinDigammaIdentity : Prop :=
   ∀ f : GridElement,
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       archRead a m f = weilArchSide f
 
-/-- The named classical Gauss/Mellin/digamma seam.  This replaces the
-former opaque-lag stabilization sorry one-for-one; the coefficient
-construction itself is now fully transcribed. -/
+/-- Historical exact-equality seam.  Not closed in r475: the
+quantifier is incompatible with tent refinement, and Mathlib
+still lacks Gauss's integral.  Census keeps this one `sorry`. -/
 theorem arch_gauss_mellin_digamma_identity :
     ArchGaussMellinDigammaIdentity := by
   sorry

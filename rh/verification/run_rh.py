@@ -247,6 +247,8 @@ PROBES = [
     ("r470", "quadrep_probe.py"),
     ("r471", "classical_cert_probe.py"),
     ("r473", "extraction_joint_probe.py"),
+    ("r474", "modulus_upgrade_probe.py"),
+    ("r475", "arch_rate_probe.py"),
 ]
 
 MODULES = [

@@ -30,10 +30,22 @@ and pole channels).  The polynomial-to-GridElement gap is the
 named outer bridge `SelectedPolynomialApproximatesGrid`.
 No infinitely-many-`k` statement.  No new `sorry`.
 
+r475 isolates F1(ii) and seals the arch tent rate.  The exact
+eventual identity is the wrong quantifier (`Δ = log a/(m+1)`
+grows at fixed `m`) and Mathlib still lacks Gauss's integral
+(`GaussDigammaIntegralRepresentation`, named, not a sorry).
+The selected-path remainder is `O(Δ_k²)` for each fixed `f`
+(`SelectedArchErrorQuadraticRate`); the implication
+`err(k,f) → 0` as `k → ∞` at fixed `f` is proved from that
+named rate and `selectedDelta_tendsto_zero`.  This is a
+fixed-`f` convergence statement, not an infinitely-many-`k`
+positivity claim.
+
 Claim boundary: research documentation.  NO RH CLAIM.
 -/
 import RH.Selected
 import Mathlib.Algebra.Polynomial.Basic
+import Mathlib.Topology.Order.Basic
 
 namespace RH
 
@@ -321,7 +333,8 @@ theorem selectedACapPsdImpliesPolynomialReads_poly
   selectedACapPsdImpliesPolynomialReads hk hA _
 
 /-- Arch tent discrepancy of a selected window against the
-classical (opaque) digamma pairing. -/
+classical u-space pairing `weilArchSide` (r475: no longer
+opaque). -/
 noncomputable def selectedArchError (k : ℕ) (f : GridElement) : ℝ :=
   |archRead (selectedAnchor k) (selectedMesh k) f - weilArchSide f|
 
@@ -395,5 +408,83 @@ theorem weilForm_ge_neg_two_archError_of_approx
     have := abs_le.mp (le_of_eq hgap)
     linarith
   linarith
+
+/-! ## r475: arch tent rate at fixed `f`
+
+`productionArchDelta a m = log a / (m+1)` grows in `a` at fixed
+`m`, so the r464 exact-equality quantifier cannot be a
+refinement statement.  Along the selected sequence
+`Δ_k = 2^{-⌊√k⌋} log 2 → 0`, the tent error is `O(Δ_k²)`
+(numerical seal: err/Δ² ≈ 3.99 at k=5 and ≈ 3.85 at k=9 for
+the r470 witness).  The named rate plus the proved
+`selectedDelta_tendsto_zero` give `err(k,f) → 0` at each
+fixed `f`.  No infinitely-many-`k` positivity.  NO RH CLAIM. -/
+
+open Filter
+open scoped Topology
+
+/-- Selected lag equals the production arch spacing. -/
+theorem productionArchDelta_selected (k : ℕ) :
+    productionArchDelta (selectedAnchor k) (selectedMesh k) =
+      selectedDelta k :=
+  rfl
+
+/-- **Why the exact identity cannot close at fixed mesh (r475,
+PROVED).**  For each fixed `m`, the production spacing
+`log a / (m+1)` tends to `+∞` as `a → ∞`.  The inner
+quantifier of `ArchGaussMellinDigammaIdentity` therefore
+asks for exact tent/integral equality on meshes that become
+arbitrarily coarse. -/
+theorem productionArchDelta_tendsto_atTop (m : ℕ) :
+    Tendsto (fun a : ℕ => productionArchDelta a m) atTop atTop := by
+  have hden : (0 : ℝ) < (m + 1 : ℝ) := by positivity
+  have hlog : Tendsto (fun a : ℕ => Real.log (a : ℝ)) atTop atTop :=
+    Real.tendsto_log_atTop.comp tendsto_natCast_atTop_atTop
+  unfold productionArchDelta
+  simpa [div_eq_mul_inv] using
+    hlog.atTop_mul_const (inv_pos.mpr hden)
+
+/-- Explicit majorant used by the named `O(Δ²)` rate.
+Nonnegative by construction. -/
+noncomputable def archRateConst (f : GridElement) : ℝ :=
+  (1 + f.supportBound) ^ 2 *
+    (1 + ∑ i : Fin f.steps, |f.x i|) ^ 2
+
+theorem archRateConst_nonneg (f : GridElement) : 0 ≤ archRateConst f := by
+  unfold archRateConst
+  positivity
+
+/-- **Named `O(Δ²)` rate (r475).**  For each fixed `f` there is a
+finite onset `k₀` past which the selected arch tent error is
+bounded by `archRateConst f · Δ_k²`.  Sealed numerically on
+the r470 witness (`err/Δ² = 3.9893` at k=5, `3.8466` at k=9).
+Not a `sorry`.  Fixed-`f` only. -/
+def SelectedArchErrorQuadraticRate : Prop :=
+  ∀ f : GridElement, ∃ k0 : ℕ,
+    ∀ k : ℕ, k0 ≤ k → ∀ hk : 0 < k,
+      f.meshExp ≤ selectedMesh k →
+      f.elementAnchor ≤ selectedAnchor k →
+        selectedArchError k f ≤ archRateConst f * selectedDelta k ^ 2
+
+/-- **Fixed-`f` convergence (r475, PROVED as a function of the
+named rate).**  `err_arch(k,f) → 0` as `k → ∞` for each fixed
+`f`.  Uses `selectedDelta_tendsto_zero`.  This is not a
+positivity statement and not a statement that infinitely many
+windows lie in the cone.  NO RH CLAIM. -/
+theorem selectedArchError_tendsto_zero_of_rate
+    (hrate : SelectedArchErrorQuadraticRate) (f : GridElement) :
+    Tendsto (fun k : ℕ => selectedArchError k f) atTop (nhds 0) := by
+  obtain ⟨k0, hk0⟩ := hrate f
+  have hΔ2 : Tendsto (fun k : ℕ => selectedDelta k ^ 2) atTop (nhds 0) := by
+    simpa [pow_two] using selectedDelta_tendsto_zero.mul selectedDelta_tendsto_zero
+  have hC : Tendsto (fun k : ℕ => archRateConst f * selectedDelta k ^ 2)
+      atTop (nhds 0) := by
+    convert hΔ2.const_mul (archRateConst f) using 1
+    ring
+  have hcov := selected_covers f.elementAnchor f.meshExp
+  refine squeeze_zero' (Eventually.of_forall fun _ => abs_nonneg _) ?_ hC
+  filter_upwards [eventually_ge_atTop k0, hcov] with k hk0' hcovk
+  obtain ⟨hkpos, ha, hm⟩ := hcovk
+  exact hk0 k hk0' hkpos hm ha
 
 end RH

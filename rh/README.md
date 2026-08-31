@@ -6827,6 +6827,17 @@ plus `rh/problem/classical_cert.tex` (+ PDF +
 Dictionary-free Guinand--Weil form $Q=A-P+\Pi$ on piecewise-constant $h$ supported in $[-L,L]$.  Calibration $L=0.8$ green; then $L_5$ through $L_{16}$.  Type is never $\lambda_*(L)\ge 0$; the discretization gap is named F2b.  Scramble-sensitive (literal $\log n$).  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Modulus upgrade (r474,
+PRIME.RDAGGER.MODULUS\_UPGRADE.01).**
+Sealed probe
+`experiments/tfpt-discovery/modulus_upgrade_probe.py`
+(smoke 11/11, full 21/21, SPEC\_SHA `45db1c92384913e8`)
+plus `rh/problem/modulus_upgrade.tex` (+ PDF +
+`verify_modulus_upgrade.py`, 6/6, `MODULUS UPGRADE VERIFIED -- PARTIAL`).
+**Ausgang PARTIAL.**
+F2b lemmas proved ($C_P=2S_{\mathrm{eff}}$, $C_\Pi=8\sinh L$, Jackson $1/\pi^2$).  Every sealed mesh is SHORT, including YB $L=0.3$ (modulus too crude).  No $\lambda_*(L)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 **Extraction-joint redesign (r473,
 PRIME.RDAGGER.EXTRACTION\_JOINT\_REDESIGN.01).**
 Sealed probe
@@ -6844,6 +6855,25 @@ tent error $0.1197932783230478$ ($\hat g\ge0$).  Lean proves
 `FrequentlySelectedPolynomialJoint` with fixed-$k$ readout
 $\mathrm{weilForm}\ge-2\,\mathrm{err}_{\mathrm{arch}}$.
 Sorry census stays **8**.  No infinitely-many-$k$ statement.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
+**Arch identity and tent rate (r475,
+PRIME.RDAGGER.ARCH\_IDENTITY\_AND\_RATE.01).**
+Sealed probe
+`experiments/tfpt-discovery/arch_rate_probe.py`
+(smoke 9/9, SPEC\_SHA `e8a49c5895d3d382`)
+plus `rh/problem/arch_rate.tex` (+ PDF +
+`verify_arch_rate.py`, 6/6, `ARCH RATE VERIFIED`).
+**Ausgang IDENTITY\_ISOLATED + RATE\_O\_DELTA2.**
+F1(ii) not closed as exact equality (`Delta -> +infty` at fixed
+mesh, proved; Mathlib Gauss TODO isolated as a named Prop).
+`weilArchSide` is the concrete $u$-space pairing.  Selected-path
+rate $O(\Delta_k^2)$ named; `err(k,f) -> 0` at fixed $f$ proved
+from the named rate.  Witness: $0.119793278323$ at $k=5$
+($\mathrm{err}/\Delta^2=3.9893$) and $0.028876619985$ at $k=9$
+($3.8466$).  Sorry census stays **8**.  No infinitely-many-$k$
+positivity.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 ## Folder guide
@@ -7275,9 +7305,16 @@ rh/
 │   │                     (L_max=2.7726); dictionary-free
 │   │                     Guinand--Weil grid family; F2b open.
 │   │                     No RH claim
+│   ├── modulus_upgrade.tex(+pdf) — r474: PARTIAL;
+│   │                     F2b lemmas proved; mu-omega SHORT
+│   │                     at every L including YB.  No RH claim
 │   ├── extraction_joint.tex(+pdf) — r473: ARTEFACT +
 │   │                     POLY_BRIDGE_PROVED; Q>0>fullRead
 │   │                     at k=5; poly-class A_cap bridge.
+│   │                     No RH claim
+│   ├── arch_rate.tex(+pdf) — r475: IDENTITY_ISOLATED +
+│   │                     RATE_O_DELTA2; Gauss named;
+│   │                     err O(Delta^2) at fixed f.
 │   │                     No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
@@ -8432,9 +8469,22 @@ File domain is the probe, `classical_cert.tex`, the verifier,
 INVENTORY, `run_rh.py`, and these status lines.  It does not
 touch Lean or `experiments/next.txt`.  Suite surface: integrity
 + probes (`run_rh.py --fast --skip-lean`).
+**r474 coexistence.** Round 474 (`modulus_upgrade_probe.py`) seals
+F2b as PARTIAL (lemmas proved, quantitative close STUCK).
+File domain is the probe, `modulus_upgrade.tex`, the verifier,
+INVENTORY, `run_rh.py`, and these status lines.  It does not
+touch Lean or `experiments/next.txt`.  Suite surface: integrity
++ probes (`run_rh.py --fast --skip-lean`).
 **r473 coexistence.** Round 473 (`extraction_joint_probe.py`) seals
 F1-joint redesign as ARTEFACT + POLY_BRIDGE_PROVED.  File domain
 is InnerBridges.lean, FrequentlySelected.lean, Open.lean,
+Audit.lean, the probe, the problem note, INVENTORY, and these
+status lines.  It does not touch `experiments/next.txt`.
+Census stays 8.  Suite surface: integrity + probes + Lean
+(`run_rh.py --fast`).
+**r475 coexistence.** Round 475 (`arch_rate_probe.py`) isolates
+F1(ii) and seals the $O(\Delta^2)$ tent rate at fixed $f$.
+File domain is Elementwise.lean, InnerBridges.lean, Open.lean,
 Audit.lean, the probe, the problem note, INVENTORY, and these
 status lines.  It does not touch `experiments/next.txt`.
 Census stays 8.  Suite surface: integrity + probes + Lean

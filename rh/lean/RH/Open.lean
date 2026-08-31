@@ -351,6 +351,22 @@ sorry).  Named outer bridge
 endpoint retained.  Census stays 8.  No infinitely-many-`k`
 statement.  NO RH CLAIM.
 
+## r475 census (arch identity and rate)
+
+F1(ii) not closed as exact equality: the r464 quantifier forces
+`Δ = log a/(m+1) → ∞` at fixed mesh (proved
+`productionArchDelta_tendsto_atTop`), and Mathlib v4.29.1 still
+lists Gauss's integral as TODO.  Isolated as the named Prop
+`GaussDigammaIntegralRepresentation` (not a sorry).
+`weilArchSide` is now the concrete u-space pairing.
+Selected-path rate `O(Δ_k²)` named
+(`SelectedArchErrorQuadraticRate`);
+`selectedArchError_tendsto_zero_of_rate` proved (fixed-`f`
+convergence, not infinitely-many-`k` positivity).  Numerical
+seal: err/Δ² = 3.9893 at k=5 and 3.8466 at k=9 on the r470
+witness.  Census stays 8 (the exact-identity sorry is retained
+for the historical FREQ consumer).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
