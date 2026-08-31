@@ -4306,6 +4306,36 @@
       "bytes": 434467
     },
     {
+      "path": "rh/problem/carleson_edgeband.tex",
+      "role": "problem_statement",
+      "round": "r482",
+      "ledger_ids": [],
+      "status": "classical Weil Carleson anatomy at the spectral edge (round 482, PRIME.RDAGGER.CARLESON_EDGEBAND.01; experiments-side, NO ledger row): VERDICT STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE).  Finite uniform envelope F_k(t)<=0.666528 t^1.25 for k=5..16, t<=1/2 (all exact jumps; not cofinal).  Pooled log-log F~0.019002 t^1.274663 (Delta-AIC=-23.70); individual exponent excess -0.631..+2.765.  Optimized SR 1.055..2.700 closes NONE of the twelve windows with q_k<1 already.  Christoffel overshoot 105..7.64e7; local Plancherel 5.52e3..3.59e4.  Restricted large sieve is TARGET after MAIN-dependent orthogonalization.  Strict F scramble premise FALSE (reverses 2/12); danger mass scramble-sensitive 12/12.  Not a Carleson law, not lambda_*.  Smoke 15/15, full 29/29, SPEC_SHA c007a877653449ee.  Companion rh/problem/carleson_edgeband.tex + verify_carleson_edgeband.py VERIFIED carleson_edgeband -- STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "5519e76a697070699ddbc6fb9440410c2828a3f6c02e5223c27a90697beba913",
+      "bytes": 18616
+    },
+    {
+      "path": "rh/problem/verify_carleson_edgeband.py",
+      "role": "problem_check",
+      "round": "r482 companion",
+      "ledger_ids": [],
+      "status": "machine check of carleson_edgeband.tex: note tokens (STUCK, 0.666528, 0.274663, STRICT_F_SCRAMBLE_PREMISE_FALSE, RESTRICTED_LARGE_SIEVE_IS_TARGET, No RH claim), curve seal, SR pins.  final line VERIFIED carleson_edgeband -- STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE)",
+      "pin": true,
+      "sha256": "a295d91d4e6b8b12e6a2b140568b96c72a33cee2c50d20407430f0aeacf4b1fb",
+      "bytes": 3799
+    },
+    {
+      "path": "rh/problem/carleson_edgeband.pdf",
+      "role": "problem_statement",
+      "round": "r482",
+      "ledger_ids": [],
+      "status": "compiled PDF of carleson_edgeband.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "75efebfb50be6b1d3e4ad400b28e40ee7ffc70705783846c61a966177daee1b1",
+      "bytes": 241820
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4480,8 +4510,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "b0dccc1cc11c8ffc9f099cb492cbd8b00aa1f29ce05e3d72de8af17ddc7b4b48",
-      "bytes": 5588589
+      "sha256": "71b0bd81f188d317c85d27406ef35e194d1a6dce785b15a1023c95f95f97b78a",
+      "bytes": 5592176
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5492,6 +5522,16 @@
       "pin": true,
       "sha256": "9883aab17a056f9b4367ea7d71a2e6e1fb20ceef3b078f119cf6361f7408bd83",
       "bytes": 10204
+    },
+    {
+      "path": "experiments/tfpt-discovery/carleson_edgeband_probe.py",
+      "role": "sealed_probe",
+      "round": "r482",
+      "ledger_ids": [],
+      "status": "classical Weil Carleson anatomy at the spectral edge (round 482, PRIME.RDAGGER.CARLESON_EDGEBAND.01; experiments-side, NO ledger row): VERDICT STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE).  Finite uniform envelope F_k(t)<=0.666528 t^1.25 for k=5..16, t<=1/2 (all exact jumps; not cofinal).  Pooled log-log F~0.019002 t^1.274663 (Delta-AIC=-23.70); individual exponent excess -0.631..+2.765.  Optimized SR 1.055..2.700 closes NONE of the twelve windows with q_k<1 already.  Christoffel overshoot 105..7.64e7; local Plancherel 5.52e3..3.59e4.  Restricted large sieve is TARGET after MAIN-dependent orthogonalization.  Strict F scramble premise FALSE (reverses 2/12); danger mass scramble-sensitive 12/12.  Not a Carleson law, not lambda_*.  Smoke 15/15, full 29/29, SPEC_SHA c007a877653449ee.  Companion rh/problem/carleson_edgeband.tex + verify_carleson_edgeband.py VERIFIED carleson_edgeband -- STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "17b0866114bb272da05feadb16bc6bed92a0ffca02b7b6128f0abd34ce0bcd3b",
+      "bytes": 21777
     }
   ]
 }

@@ -6942,6 +6942,17 @@ plus `rh/problem/schur_cert.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge0$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Carleson edgeband (r482,
+PRIME.RDAGGER.CARLESON\_EDGEBAND.01).**
+Sealed probe
+`experiments/tfpt-discovery/carleson_edgeband_probe.py`
+(smoke 15/15, full 29/29, SPEC\_SHA `c007a877653449ee`)
+plus `rh/problem/carleson_edgeband.tex` (+ PDF +
+`verify_carleson_edgeband.py`, `VERIFIED carleson_edgeband -- STUCK(SR_FAILS_FINITE_CENSUS;RESTRICTED_LARGE_SIEVE_IS_TARGET;STRICT_F_SCRAMBLE_PREMISE_FALSE)`).
+**Regime STUCK: SR fails the finite census; restricted large sieve is TARGET; strict-$F$ scramble premise false.**
+Not a Carleson law, not $\lambda_*$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7400,6 +7411,10 @@ rh/
 │   │                     killed@0.30); not lambda_*.  No RH claim
 │   ├── schur_cert.tex(+pdf) — r481: REDUCED
 │   │                     (interval-FT+IBP-tail);
+│   │                     not lambda_*.  No RH claim
+│   ├── carleson_edgeband.tex(+pdf) — r482: STUCK
+│   │                     (SR_FAILS_FINITE_CENSUS;
+│   │                     large-sieve=TARGET);
 │   │                     not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
@@ -8618,6 +8633,14 @@ the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r482 coexistence.** Round 482 (`carleson_edgeband_probe.py`)
+shows the Carleson sufficient rule fails the finite census
+and the restricted large sieve is the target
+(not a Carleson law).  File domain is the probe,
+`carleson_edgeband.tex`, the verifier, INVENTORY,
+`run_rh.py`, and these status lines.  It does not
+touch Lean or `experiments/next.txt`.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
