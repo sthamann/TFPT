@@ -2811,6 +2811,32 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R485_STATUS = (
+    "classical Weil weighted Schur at L=0.3 "
+    "(round 485, PRIME.RDAGGER.WEIGHTED_SCHUR.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT REDUCED(A-GO; finite-S_w-PD; "
+    "operator-M_inf-open)+CHECKPOINT.  "
+    "A-FIRST GO: leftover C of {psi_0..psi_8} into "
+    "orthocomplement on n=96 has hi-frac [30,150] vs "
+    "[8,30] = 0.991; C[0,8] F=2.74e-10 (epsilon edge); "
+    "top-SV Q_A[0,150]/c_tail=4.49.  "
+    "Finite S_w=B-C D^{-1} C^T PD: T=150 lmin=6.38e-3 "
+    "(Higham mu>=2.59e-3) vs S_flat=5.18e-3; "
+    "dmin(D)=0.152 < c_tail (T=150 undershoot); "
+    "T=400 dmin=1.49, S_w=7.23e-3.  "
+    "Operator M_inf on true L2 complement OPEN "
+    "(same leftover species as r483/r484).  "
+    "Last structurally new 0.3 idea; keystone frozen.  "
+    "Smoke 15/15, full 21/21, SPEC_SHA 1d61f8c270a38c6a.  "
+    "Companion rh/problem/weighted_schur.tex + "
+    "verify_weighted_schur.py WEIGHTED_SCHUR VERIFIED -- "
+    "REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)"
+    "+CHECKPOINT.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R484_STATUS = (
     "classical Weil block completion at L=0.3 "
     "(round 484, PRIME.RDAGGER.BLOCK_COMPLETION.01; "
@@ -6804,6 +6830,29 @@ ENTRIES = [
      "compiled PDF of block_completion.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/weighted_schur.tex", "problem_statement",
+     "r485",
+     [],
+     _R485_STATUS,
+     True),
+    ("rh/problem/verify_weighted_schur.py", "problem_check",
+     "r485 companion",
+     [],
+     "machine check of weighted_schur.tex: note tokens "
+     "(REDUCED+CHECKPOINT, A-GO, e^{2L}, weighted, "
+     "orthocomplement, Fourier-HS not reused, "
+     "Yoshida--Bombieri), smoke run, A-GO and S_w pins.  "
+     "6/6 gates, "
+     "final line WEIGHTED_SCHUR VERIFIED -- "
+     "REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)"
+     "+CHECKPOINT",
+     True),
+    ("rh/problem/weighted_schur.pdf", "problem_statement",
+     "r485",
+     [],
+     "compiled PDF of weighted_schur.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7389,6 +7438,11 @@ ENTRIES = [
      "r484",
      [],
      _R484_STATUS,
+     True),
+    (f"{EXP}/weighted_schur_probe.py", "sealed_probe",
+     "r485",
+     [],
+     _R485_STATUS,
      True),
 ]
 

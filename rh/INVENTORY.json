@@ -4396,6 +4396,36 @@
       "bytes": 360787
     },
     {
+      "path": "rh/problem/weighted_schur.tex",
+      "role": "problem_statement",
+      "round": "r485",
+      "ledger_ids": [],
+      "status": "classical Weil weighted Schur at L=0.3 (round 485, PRIME.RDAGGER.WEIGHTED_SCHUR.01; experiments-side, NO ledger row): VERDICT REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT.  A-FIRST GO: leftover C of {psi_0..psi_8} into orthocomplement on n=96 has hi-frac [30,150] vs [8,30] = 0.991; C[0,8] F=2.74e-10 (epsilon edge); top-SV Q_A[0,150]/c_tail=4.49.  Finite S_w=B-C D^{-1} C^T PD: T=150 lmin=6.38e-3 (Higham mu>=2.59e-3) vs S_flat=5.18e-3; dmin(D)=0.152 < c_tail (T=150 undershoot); T=400 dmin=1.49, S_w=7.23e-3.  Operator M_inf on true L2 complement OPEN (same leftover species as r483/r484).  Last structurally new 0.3 idea; keystone frozen.  Smoke 15/15, full 21/21, SPEC_SHA 1d61f8c270a38c6a.  Companion rh/problem/weighted_schur.tex + verify_weighted_schur.py WEIGHTED_SCHUR VERIFIED -- REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "9dd3001dfb6bc98b76a28f48717a77dc9d7afee5eb359e8f372ea29cdc803bef",
+      "bytes": 15752
+    },
+    {
+      "path": "rh/problem/verify_weighted_schur.py",
+      "role": "problem_check",
+      "round": "r485 companion",
+      "ledger_ids": [],
+      "status": "machine check of weighted_schur.tex: note tokens (REDUCED+CHECKPOINT, A-GO, e^{2L}, weighted, orthocomplement, Fourier-HS not reused, Yoshida--Bombieri), smoke run, A-GO and S_w pins.  6/6 gates, final line WEIGHTED_SCHUR VERIFIED -- REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT",
+      "pin": true,
+      "sha256": "91a3701786537247767db17131e8dff294b44523161ee2ed34a8a1453acb2ce8",
+      "bytes": 3291
+    },
+    {
+      "path": "rh/problem/weighted_schur.pdf",
+      "role": "problem_statement",
+      "round": "r485",
+      "ledger_ids": [],
+      "status": "compiled PDF of weighted_schur.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "7d1ca3c062161993b077aa5f7fef0ddaa629ae18368b5dacea56f3e2ac5e43f1",
+      "bytes": 453575
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4570,8 +4600,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "85546e55138e47ef0b76f2d36098c08ebd9b411c2a5a0f9e6056bce79a1894b9",
-      "bytes": 5595315
+      "sha256": "0d811cb63f8e70def5c0fb7b163b1f0415245b6aa510486985a464135ac5bfa8",
+      "bytes": 5597126
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5612,6 +5642,16 @@
       "pin": true,
       "sha256": "bf6e4d324c313422380ee737139ea2165b7628c9e277c42d173d94fd4cefab7f",
       "bytes": 13640
+    },
+    {
+      "path": "experiments/tfpt-discovery/weighted_schur_probe.py",
+      "role": "sealed_probe",
+      "round": "r485",
+      "ledger_ids": [],
+      "status": "classical Weil weighted Schur at L=0.3 (round 485, PRIME.RDAGGER.WEIGHTED_SCHUR.01; experiments-side, NO ledger row): VERDICT REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT.  A-FIRST GO: leftover C of {psi_0..psi_8} into orthocomplement on n=96 has hi-frac [30,150] vs [8,30] = 0.991; C[0,8] F=2.74e-10 (epsilon edge); top-SV Q_A[0,150]/c_tail=4.49.  Finite S_w=B-C D^{-1} C^T PD: T=150 lmin=6.38e-3 (Higham mu>=2.59e-3) vs S_flat=5.18e-3; dmin(D)=0.152 < c_tail (T=150 undershoot); T=400 dmin=1.49, S_w=7.23e-3.  Operator M_inf on true L2 complement OPEN (same leftover species as r483/r484).  Last structurally new 0.3 idea; keystone frozen.  Smoke 15/15, full 21/21, SPEC_SHA 1d61f8c270a38c6a.  Companion rh/problem/weighted_schur.tex + verify_weighted_schur.py WEIGHTED_SCHUR VERIFIED -- REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "ed777458bfad005a2f9ac29f1ae33b02539e6f60bae30ac2cf9707e278dbb9df",
+      "bytes": 11082
     }
   ]
 }

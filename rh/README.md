@@ -6977,6 +6977,18 @@ plus `rh/problem/block_completion.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge c$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Weighted Schur (r485,
+PRIME.RDAGGER.WEIGHTED\_SCHUR.01).**
+Sealed probe
+`experiments/tfpt-discovery/weighted_schur_probe.py`
+(smoke 15/15, full 21/21, SPEC\_SHA `1d61f8c270a38c6a`)
+plus `rh/problem/weighted_schur.tex` (+ PDF +
+`verify_weighted_schur.py`, 6/6, `WEIGHTED_SCHUR VERIFIED -- REDUCED(A-GO; finite-S_w-PD; operator-M_inf-open)+CHECKPOINT`).
+**Regime REDUCED+CHECKPOINT: $A$-GO (hi-frac $0.991$); finite $S_w$ interval-PD; operator $M_\infty$ on the true complement open.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
 ## Folder guide
 
 ```
@@ -7439,6 +7451,10 @@ rh/
 │   ├── carleson_edgeband.tex(+pdf) — r482: STUCK
 │   ├── filon_enclosure.tex(+pdf) — r483: REDUCED
 │   ├── block_completion.tex(+pdf) — r484: STUCK
+│   ├── weighted_schur.tex(+pdf) — r485: REDUCED
+│   │                     (A-GO; finite-S_w-PD;
+│   │                     operator-M_inf-open)+CHECKPOINT;
+│   │                     not lambda_*.  No RH claim
 │   │                     (20x-drop-falsified;
 │   │                     jets>=10 garbage; QR-IBP kills S);
 │   │                     not lambda_*.  No RH claim
@@ -8685,6 +8701,15 @@ Suite surface: integrity + probes
 falsifies the 20x leftover drop and records garbage jets
 plus QR-IBP killing S
 (not lambda_*).  File domain is the probe, `block_completion.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r485 coexistence.** Round 485 (`weighted_schur_probe.py`)
+measures the frequency of leftover C (A-GO) and
+records a finite weighted Schur that is PD, with
+operator M_inf on the true complement left open
+(not lambda_*).  File domain is the probe, `weighted_schur.tex`,
 the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes
