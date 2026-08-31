@@ -6965,6 +6965,18 @@ plus `rh/problem/filon_enclosure.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge c$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+
+**Block completion (r484,
+PRIME.RDAGGER.BLOCK\_COMPLETION.01).**
+Sealed probe
+`experiments/tfpt-discovery/block_completion_probe.py`
+(smoke 12/12, full 24/24, SPEC\_SHA `cd69a3e49978cf55`)
+plus `rh/problem/block_completion.tex` (+ PDF +
+`verify_block_completion.py`, 6/6, `BLOCK_COMPLETION VERIFIED -- STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S)`).
+**Regime STUCK: $20\times$ drop falsified at $n=96$; jets $\ge\psi_{10}$ garbage at $n=128$; QR--IBP kills $S$.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7426,6 +7438,10 @@ rh/
 │   │                     not lambda_*.  No RH claim
 │   ├── carleson_edgeband.tex(+pdf) — r482: STUCK
 │   ├── filon_enclosure.tex(+pdf) — r483: REDUCED
+│   ├── block_completion.tex(+pdf) — r484: STUCK
+│   │                     (20x-drop-falsified;
+│   │                     jets>=10 garbage; QR-IBP kills S);
+│   │                     not lambda_*.  No RH claim
 │   │                     (finite-S-interval-PD;
 │   │                     leftover-C-HS vs budget);
 │   │                     not lambda_*.  No RH claim
@@ -8661,6 +8677,14 @@ integrity + probes (`run_rh.py --fast --skip-lean`).
 encloses the two integral classes of the refined Schur
 and records the leftover-$C$ deficit
 (not lambda_*).  File domain is the probe, `filon_enclosure.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r484 coexistence.** Round 484 (`block_completion_probe.py`)
+falsifies the 20x leftover drop and records garbage jets
+plus QR-IBP killing S
+(not lambda_*).  File domain is the probe, `block_completion.tex`,
 the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes

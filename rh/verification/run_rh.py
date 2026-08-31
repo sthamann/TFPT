@@ -257,6 +257,7 @@ PROBES = [
     ("r481", "schur_cert_probe.py"),
     ("r482", "carleson_edgeband_probe.py"),
     ("r483", "filon_enclosure_probe.py"),
+    ("r484", "block_completion_probe.py"),
 ]
 
 MODULES = [

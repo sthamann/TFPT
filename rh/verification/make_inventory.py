@@ -2811,6 +2811,30 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R484_STATUS = (
+    "classical Weil block completion at L=0.3 "
+    "(round 484, PRIME.RDAGGER.BLOCK_COMPLETION.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT STUCK(20x-drop-falsified@n96; "
+    "jets>=10-garbage@n128; QR-IBP-kills-S).  "
+    "Garbage criterion: |u(L)| n vs 2n; psi_0..6 certified, "
+    "psi_8 marginal, psi_10+ O(1) at n<=128 "
+    "(lambda_10 at binary64 floor).  "
+    "n=96 leftover after psi_10/18/20 = 1.38e-1 / 9.60e-2 / "
+    "4.40e-2 (drop 10->18 is 1.43x, not 20x); factor ~183 "
+    "vs budget 2.4e-4.  r483 leftover 2.76e-2 was n=48 "
+    "undercount.  QR even-Legendre leftover O(0.08); "
+    "sinc-IBP of QR kills S (lmin~-0.065).  Enlarge-B "
+    "recovers kappa_high~0.29.  Not lambda_*(0.3)>=c.  "
+    "Smoke 12/12, full 24/24, SPEC_SHA cd69a3e49978cf55.  "
+    "Companion rh/problem/block_completion.tex + "
+    "verify_block_completion.py BLOCK_COMPLETION VERIFIED -- "
+    "STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; "
+    "QR-IBP-kills-S).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R483_STATUS = (
     "classical Weil Filon enclosure of the two integral "
     "classes at L=0.3 "
@@ -6759,6 +6783,27 @@ ENTRIES = [
      "compiled PDF of filon_enclosure.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+
+    ("rh/problem/block_completion.tex", "problem_statement",
+     "r484",
+     [],
+     _R484_STATUS,
+     True),
+    ("rh/problem/verify_block_completion.py", "problem_check",
+     "r484 companion",
+     [],
+     "machine check of block_completion.tex: note tokens "
+     "(STUCK, e^{2L}, garbage, QR, leftover, Fourier-HS not reused, "
+     "Yoshida--Bombieri), smoke run, deficit pins.  6/6 gates, "
+     "final line BLOCK_COMPLETION VERIFIED -- "
+     "STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S)",
+     True),
+    ("rh/problem/block_completion.pdf", "problem_statement",
+     "r484",
+     [],
+     "compiled PDF of block_completion.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7339,6 +7384,11 @@ ENTRIES = [
      "r483",
      [],
      _R483_STATUS,
+     True),
+    (f"{EXP}/block_completion_probe.py", "sealed_probe",
+     "r484",
+     [],
+     _R484_STATUS,
      True),
 ]
 

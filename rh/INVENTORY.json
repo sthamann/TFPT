@@ -4366,6 +4366,36 @@
       "bytes": 434029
     },
     {
+      "path": "rh/problem/block_completion.tex",
+      "role": "problem_statement",
+      "round": "r484",
+      "ledger_ids": [],
+      "status": "classical Weil block completion at L=0.3 (round 484, PRIME.RDAGGER.BLOCK_COMPLETION.01; experiments-side, NO ledger row): VERDICT STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S).  Garbage criterion: |u(L)| n vs 2n; psi_0..6 certified, psi_8 marginal, psi_10+ O(1) at n<=128 (lambda_10 at binary64 floor).  n=96 leftover after psi_10/18/20 = 1.38e-1 / 9.60e-2 / 4.40e-2 (drop 10->18 is 1.43x, not 20x); factor ~183 vs budget 2.4e-4.  r483 leftover 2.76e-2 was n=48 undercount.  QR even-Legendre leftover O(0.08); sinc-IBP of QR kills S (lmin~-0.065).  Enlarge-B recovers kappa_high~0.29.  Not lambda_*(0.3)>=c.  Smoke 12/12, full 24/24, SPEC_SHA cd69a3e49978cf55.  Companion rh/problem/block_completion.tex + verify_block_completion.py BLOCK_COMPLETION VERIFIED -- STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "d1a6e385410a707936eea8c844db2c4570fe814927abfb5d172bf38120f1f558",
+      "bytes": 8002
+    },
+    {
+      "path": "rh/problem/verify_block_completion.py",
+      "role": "problem_check",
+      "round": "r484 companion",
+      "ledger_ids": [],
+      "status": "machine check of block_completion.tex: note tokens (STUCK, e^{2L}, garbage, QR, leftover, Fourier-HS not reused, Yoshida--Bombieri), smoke run, deficit pins.  6/6 gates, final line BLOCK_COMPLETION VERIFIED -- STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S)",
+      "pin": true,
+      "sha256": "8a7c338d7e0388ad4bd92cc664f05e368733fa159e92aa24c0410e1066572e37",
+      "bytes": 3225
+    },
+    {
+      "path": "rh/problem/block_completion.pdf",
+      "role": "problem_statement",
+      "round": "r484",
+      "ledger_ids": [],
+      "status": "compiled PDF of block_completion.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "11ef4281aad8d14d86f0e091fb0a3e4b23ca571300ef3719899a63b551f11697",
+      "bytes": 360787
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4520,8 +4550,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "97db195467c68926fcc4301637e89f645dc2abccf5a0942d02749cb63c0338f2",
-      "bytes": 3469189
+      "sha256": "ee00c05c41b5bf20678e68044b9b731fb1cf99a721ebc36ea9e016cd962aa285",
+      "bytes": 3472152
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -4540,8 +4570,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "71b0bd81f188d317c85d27406ef35e194d1a6dce785b15a1023c95f95f97b78a",
-      "bytes": 5592176
+      "sha256": "85546e55138e47ef0b76f2d36098c08ebd9b411c2a5a0f9e6056bce79a1894b9",
+      "bytes": 5595315
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5572,6 +5602,16 @@
       "pin": true,
       "sha256": "56a3594d0e7b003155eefebbc9cc6ef824de6c70d7302d39070de9554b1c541f",
       "bytes": 17741
+    },
+    {
+      "path": "experiments/tfpt-discovery/block_completion_probe.py",
+      "role": "sealed_probe",
+      "round": "r484",
+      "ledger_ids": [],
+      "status": "classical Weil block completion at L=0.3 (round 484, PRIME.RDAGGER.BLOCK_COMPLETION.01; experiments-side, NO ledger row): VERDICT STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S).  Garbage criterion: |u(L)| n vs 2n; psi_0..6 certified, psi_8 marginal, psi_10+ O(1) at n<=128 (lambda_10 at binary64 floor).  n=96 leftover after psi_10/18/20 = 1.38e-1 / 9.60e-2 / 4.40e-2 (drop 10->18 is 1.43x, not 20x); factor ~183 vs budget 2.4e-4.  r483 leftover 2.76e-2 was n=48 undercount.  QR even-Legendre leftover O(0.08); sinc-IBP of QR kills S (lmin~-0.065).  Enlarge-B recovers kappa_high~0.29.  Not lambda_*(0.3)>=c.  Smoke 12/12, full 24/24, SPEC_SHA cd69a3e49978cf55.  Companion rh/problem/block_completion.tex + verify_block_completion.py BLOCK_COMPLETION VERIFIED -- STUCK(20x-drop-falsified@n96; jets>=10-garbage@n128; QR-IBP-kills-S).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "bf6e4d324c313422380ee737139ea2165b7628c9e277c42d173d94fd4cefab7f",
+      "bytes": 13640
     }
   ]
 }
