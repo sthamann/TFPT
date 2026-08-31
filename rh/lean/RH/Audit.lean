@@ -398,7 +398,11 @@ r497 scopes the remaining lane: [2] before [3], because [3] is
 stated on the opaque `standardExplicitFormula`.  Brick [2a] is
 the proved finite-positive analytic order of `riemannZeta` at
 every non-polar zero
-(`riemannZeta_analyticOrderAt_finite_pos`).  Census stays 7.
+(`riemannZeta_analyticOrderAt_finite_pos`).  r498 proves the
+[2b] residue calculus at non-polar zeros
+(`logDeriv_riemannZeta_eq_multiplicity_div_add_analytic`,
+`tendsto_mul_logDeriv_riemannZeta`, meromorphy on `ℂ \ {1}`).
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -431,6 +435,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms analyticOrderAt_riemannZeta_ne_top
 #print axioms riemannZeta_analyticOrderAt_finite_pos
 #print axioms riemannZetaMultiplicity_pos
+#print axioms logDeriv_sub_const_pow
+#print axioms exists_analytic_logDeriv_eq_order_div
+#print axioms logDeriv_riemannZeta_eq_multiplicity_div_add_analytic
+#print axioms meromorphicAt_logDeriv_riemannZeta
+#print axioms meromorphicOn_logDeriv_riemannZeta_compl_one
+#print axioms meromorphicOrderAt_logDeriv_riemannZeta
+#print axioms tendsto_mul_logDeriv_riemannZeta
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

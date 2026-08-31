@@ -591,6 +591,31 @@ the off-critical sign, ~4--8 rounds.
 
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r498 census (outer bridges 6, [2b] first cut)
+
+PROVED brick [2b] lemma (1), sorry-free: at every non-polar
+zero, `ζ'/ζ = m/(z-s) + analytic` with
+`m = riemannZetaMultiplicity s` (simple pole, residue = order).
+Named lemmas:
+  `exists_analytic_logDeriv_eq_order_div` (local calculus),
+  `logDeriv_riemannZeta_eq_multiplicity_div_add_analytic`,
+  `meromorphicAt_logDeriv_riemannZeta`,
+  `meromorphicOn_logDeriv_riemannZeta_compl_one`
+    (contour carrier on `ℂ \ {1}`; a strip rectangle is a
+    subset),
+  `meromorphicOrderAt_logDeriv_riemannZeta` (`= -1`),
+  `tendsto_mul_logDeriv_riemannZeta` (`(z-s)·ζ'/ζ → m`).
+The polar point `s = 1` (intended `ζ'/ζ = -1/(s-1) + analytic`)
+is not in this cut; Mathlib supplies only
+`riemannZeta_residue_one` as a punctured limit.
+
+Remaining named pieces of [2] (not extra sorries):
+  [2c] local finiteness of zeros and absolute convergence of
+      the spectral pairing (needs the residue just proved so
+      a contour of `ĥ·ζ'/ζ` picks up `∑ m_ρ ĥ(ρ)`),
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

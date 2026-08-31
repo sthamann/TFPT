@@ -24,6 +24,9 @@ import Mathlib.LinearAlgebra.Complex.FiniteDimensional
 import Mathlib.Topology.Order.Basic
 import Mathlib.MeasureTheory.Integral.Bochner.Set
 import Mathlib.MeasureTheory.Function.LocallyIntegrable
+import Mathlib.Analysis.Calculus.LogDeriv
+import Mathlib.Analysis.Calculus.FDeriv.Analytic
+import Mathlib.Analysis.Meromorphic.Order
 
 namespace RH
 
@@ -2161,6 +2164,157 @@ lemma riemannZetaMultiplicity_pos {s : ℂ}
   refine Nat.pos_of_ne_zero ?_
   intro h0
   exact (not_or.mpr ⟨hfin.1, hfin.2⟩) (ENat.toNat_eq_zero.mp h0)
+
+/-! ### r498: meromorphic `ζ'/ζ` at non-polar zeros (bridge [2b], first cut)
+
+Standard local calculus, specialised to `riemannZeta`.  If `f` is
+analytic of finite order `m` at `s`, then
+`f'/f = m/(z-s) + analytic` on a punctured neighbourhood.  At a
+genuine non-polar zero this is a simple pole whose residue equals
+`riemannZetaMultiplicity`.  The polar point `s = 1` (intended
+residue `-1`) is not in this cut.  Meromorphy on `ℂ \ {1}` is the
+carrier a later contour ([2d]) will restrict to a strip rectangle.
+-/
+
+section LogDerivZeta
+
+open Filter
+
+open scoped Topology
+
+/-- Logarithmic derivative of a translated monomial.  Used only on
+`z ≠ s`; the identity is algebraic. -/
+lemma logDeriv_sub_const_pow (s : ℂ) (n : ℕ) (z : ℂ) :
+    logDeriv (fun w : ℂ => (w - s) ^ n) z = n / (z - s) := by
+  have hcomp :
+      (fun w : ℂ => (w - s) ^ n) =
+        (fun y : ℂ => y ^ n) ∘ fun w : ℂ => w - s := rfl
+  rw [hcomp, logDeriv_comp (by fun_prop) (by fun_prop)]
+  simp [logDeriv_pow]
+
+/-- Local factorization of the logarithmic derivative of a
+non-identically-vanishing analytic germ: finite order `m` gives
+`f'/f = m/(z-s) + h` with `h` analytic at `s`.  Harmless at regular
+points (`m = 0`). -/
+lemma exists_analytic_logDeriv_eq_order_div
+    {f : ℂ → ℂ} {s : ℂ} (hf : AnalyticAt ℂ f s)
+    (hfin : analyticOrderAt f s ≠ ⊤) :
+    ∃ h : ℂ → ℂ, AnalyticAt ℂ h s ∧
+      ∀ᶠ z in 𝓝[≠] s,
+        logDeriv f z = (analyticOrderNatAt f s : ℂ) / (z - s) + h z := by
+  obtain ⟨g, hg_an, hg_ne, hg_eq⟩ := hf.analyticOrderAt_ne_top.mp hfin
+  set m := analyticOrderNatAt f s
+  have hg_log : AnalyticAt ℂ (logDeriv g) s :=
+    (hg_an.deriv).div hg_an hg_ne
+  refine ⟨logDeriv g, hg_log, ?_⟩
+  have hg_nz : ∀ᶠ z in 𝓝 s, g z ≠ 0 :=
+    hg_an.continuousAt.preimage_mem_nhds
+      (isOpen_compl_singleton.mem_nhds hg_ne)
+  have hprod : f =ᶠ[𝓝 s] fun z => (z - s) ^ m * g z := by
+    filter_upwards [hg_eq] with z hz
+    simpa [smul_eq_mul] using hz
+  obtain ⟨r, hr, hball⟩ := hg_an.exists_ball_analyticOnNhd
+  rw [eventually_nhdsWithin_iff]
+  filter_upwards [hprod.eventually_nhds, hg_nz,
+    Metric.ball_mem_nhds s hr] with z hf_nhds hgz hzball hzne
+  have hz : z ≠ s := hzne
+  have hf_eq : f =ᶠ[𝓝 z] fun w => (w - s) ^ m * g w := hf_nhds
+  have hpow_ne : (z - s) ^ m ≠ 0 :=
+    pow_ne_zero _ (sub_ne_zero.mpr hz)
+  have hlog :
+      logDeriv f z = logDeriv (fun w => (w - s) ^ m * g w) z := by
+    simp [logDeriv_apply, hf_eq.deriv_eq, hf_eq.eq_of_nhds]
+  have hdf : DifferentiableAt ℂ (fun w : ℂ => (w - s) ^ m) z := by
+    fun_prop
+  have hdg : DifferentiableAt ℂ g z :=
+    (hball z hzball).differentiableAt
+  rw [hlog, logDeriv_mul z hpow_ne hgz hdf hdg,
+    logDeriv_sub_const_pow s m z]
+
+/-- **r498 brick [2b], lemma (1).**  At a non-polar zero,
+`ζ'/ζ = m/(z-s) + analytic`, with `m = riemannZetaMultiplicity s`. -/
+lemma logDeriv_riemannZeta_eq_multiplicity_div_add_analytic {s : ℂ}
+    (_hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    ∃ h : ℂ → ℂ, AnalyticAt ℂ h s ∧
+      ∀ᶠ z in 𝓝[≠] s,
+        logDeriv riemannZeta z =
+          (riemannZetaMultiplicity s : ℂ) / (z - s) + h z :=
+  exists_analytic_logDeriv_eq_order_div
+    (analyticAt_riemannZeta hs) (analyticOrderAt_riemannZeta_ne_top hs)
+
+/-- The logarithmic derivative is meromorphic at every non-polar
+point (zeros and regular points of `ζ`). -/
+lemma meromorphicAt_logDeriv_riemannZeta {s : ℂ} (hs : s ≠ 1) :
+    MeromorphicAt (logDeriv riemannZeta) s := by
+  obtain ⟨h, hh, heq⟩ :=
+    exists_analytic_logDeriv_eq_order_div
+      (analyticAt_riemannZeta hs) (analyticOrderAt_riemannZeta_ne_top hs)
+  refine MeromorphicAt.iff_eventuallyEq_zpow_smul_analyticAt.mpr ?_
+  refine ⟨-1,
+    fun z => (analyticOrderNatAt riemannZeta s : ℂ) + (z - s) * h z,
+    by fun_prop, ?_⟩
+  filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+  have hz0 : z - s ≠ 0 := sub_ne_zero.mpr hzne
+  rw [hz, zpow_neg_one, smul_eq_mul]
+  field_simp [hz0]
+
+/-- Carrier for a later strip-rectangle contour: `ζ'/ζ` is meromorphic
+on `ℂ \ {1}`. -/
+lemma meromorphicOn_logDeriv_riemannZeta_compl_one :
+    MeromorphicOn (logDeriv riemannZeta) ({1}ᶜ) :=
+  fun _s hs => meromorphicAt_logDeriv_riemannZeta hs
+
+/-- At a genuine non-polar zero the meromorphic order of `ζ'/ζ` is
+exactly `-1` (simple pole). -/
+lemma meromorphicOrderAt_logDeriv_riemannZeta {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    meromorphicOrderAt (logDeriv riemannZeta) s = (-1 : ℤ) := by
+  have hm : 0 < riemannZetaMultiplicity s :=
+    riemannZetaMultiplicity_pos hz hs
+  obtain ⟨h, hh, heq⟩ :=
+    logDeriv_riemannZeta_eq_multiplicity_div_add_analytic hz hs
+  set G : ℂ → ℂ :=
+    fun z => (riemannZetaMultiplicity s : ℂ) + (z - s) * h z
+  have hGan : AnalyticAt ℂ G s := by fun_prop
+  have hGne : G s ≠ 0 := by
+    simp [G]
+    exact_mod_cast hm.ne'
+  have hfmer : MeromorphicAt (logDeriv riemannZeta) s :=
+    meromorphicAt_logDeriv_riemannZeta hs
+  rw [meromorphicOrderAt_eq_int_iff hfmer]
+  refine ⟨G, hGan, hGne, ?_⟩
+  filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+  have hz0 : z - s ≠ 0 := sub_ne_zero.mpr hzne
+  rw [hz, zpow_neg_one, smul_eq_mul]
+  field_simp [hz0]
+  rfl
+
+/-- Residue form of lemma (1): `(z-s)·ζ'/ζ → m` at a non-polar zero. -/
+lemma tendsto_mul_logDeriv_riemannZeta {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    Tendsto (fun z => (z - s) * logDeriv riemannZeta z)
+      (𝓝[≠] s) (𝓝 (riemannZetaMultiplicity s : ℂ)) := by
+  obtain ⟨h, hh, heq⟩ :=
+    logDeriv_riemannZeta_eq_multiplicity_div_add_analytic hz hs
+  set G : ℂ → ℂ :=
+    fun z => (riemannZetaMultiplicity s : ℂ) + (z - s) * h z
+  have hagree :
+      (fun z => (z - s) * logDeriv riemannZeta z) =ᶠ[𝓝[≠] s] G := by
+    filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+    have hz0 : z - s ≠ 0 := sub_ne_zero.mpr hzne
+    rw [hz]
+    field_simp [hz0]
+    rfl
+  have hcont : ContinuousAt G s := by
+    unfold G
+    exact continuousAt_const.add
+      ((continuousAt_id.sub continuousAt_const).mul hh.continuousAt)
+  have hGs : G s = (riemannZetaMultiplicity s : ℂ) := by simp [G]
+  rw [← hGs]
+  exact Tendsto.congr' (EventuallyEq.symm hagree)
+    (hcont.tendsto.mono_left nhdsWithin_le_nhds)
+
+end LogDerivZeta
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
