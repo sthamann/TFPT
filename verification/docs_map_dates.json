@@ -32,8 +32,8 @@
   "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "83ca03e7569e",
-  "date": "2026-08-30"
+  "hash": "2345e9f5457e",
+  "date": "2026-08-31"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "d7ace62c85ab",
@@ -624,8 +624,8 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "271d805d2df0",
-  "date": "2026-08-30"
+  "hash": "912ec80bb370",
+  "date": "2026-08-31"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "e3aaf64f6d07",
@@ -760,8 +760,8 @@
   "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.MIRROR.DET16.01} (DET16 rank-one projector, finite cluster)::1": {
-  "hash": "2c39fcbf51f7",
-  "date": "2026-08-30"
+  "hash": "4f387c752d04",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Firewall Contract --- \\texttt{GRAV.NONCIRCULAR.01} (the Bisognano--Wichmann direction discipline)::1": {
   "hash": "f330002d2689",
@@ -808,16 +808,16 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.SK.RHO0.01} (Schwinger--Keldysh completion: cosmological transfers need $(S,\\rho_0)$)::1": {
-  "hash": "294aa6ef04ff",
-  "date": "2026-08-30"
+  "hash": "a20712810f59",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MMST.TYPEIII.CHARGED.01} (one scaling-limit theorem)::1": {
-  "hash": "b2889cf4fe36",
-  "date": "2026-08-30"
+  "hash": "cf6c369841e4",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
-  "hash": "d13f456a3b13",
-  "date": "2026-08-30"
+  "hash": "c6965960063e",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)::1": {
   "hash": "d08015c7ace7",
@@ -828,16 +828,16 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MILNOR.LOCALRING.01} (canonical identification of the seam collar with the reduced Milnor algebra)::1": {
-  "hash": "63156e2279ff",
-  "date": "2026-08-30"
+  "hash": "935e060a1f29",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{GRAV.WEINBERG.WITTEN.01} (Weinberg--Witten firewall before any spin-2 marker move)::1": {
   "hash": "bf648abfdd8b",
   "date": "2026-08-28"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{SEAM.EQUIV.01} (the seam scaling-limit theorem, packaged for external specialists)::1": {
-  "hash": "061b075f187c",
-  "date": "2026-08-28"
+  "hash": "3ecacc2c41e2",
+  "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Externalization Contract --- \\texttt{ALPHA.QUILLEN.EXACT.01} (the determinant-line variation theorem, packaged for external specialists)::1": {
   "hash": "65e08c56c3e8",

@@ -192,7 +192,7 @@ const TRUNK_AFTER: StepNode[] = [
       "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",
     input: "The compiler closure",
     fixed:
-      "One flavor wall-selection (v_geo, [O]); the ambient quantum-gravity measure now discharged as a redundancy [C] (v369+v379; the local field equation is itself parameter-free, v358/v359); and a set of typed runnable frontier solvers (F_transfer, v371–v375) — the whole boundary-QFT layer collapses onto the G_metric keystone (step 7), closed modulo cited theorems, adding no new open item",
+      "One flavor wall-selection (v_geo, [O]); the ambient quantum-gravity measure now discharged as a redundancy [C] (v369+v379; the classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises [C], v358/v359); and a set of typed runnable frontier solvers (F_transfer, v371–v375) — the whole boundary-QFT layer collapses onto the G_metric keystone (step 7), closed modulo cited theorems, adding no new open item",
     notClaimed: "No strict physical TOE certified end-to-end (the keystone SEAM.EQUIV.01 is closed only on its MMST route SEAM.EQUIV.MMST.01, modulo a cited published theorem, v336 — extension leg crossed-product certified, v469; stays [O] — and v_geo stays the one unit). The ambient measure G6 is not an open hole — it is discharged as a redundancy [C]",
     fail: "A gate's closing theorem asserted before its lemma chain completes",
     status: "conditional",

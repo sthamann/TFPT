@@ -18,21 +18,22 @@ wolframscript -file tfpt_readouts.wl
 
 ### Local engine status (this machine)
 
-`wolframscript` is installed (`brew install --cask wolfram-engine`, 14.3.0.0),
-the kernel path is configured, and the free Wolfram Engine license is
-**activated** (re-activated and both files re-verified on 2026-07-21).
-`wolframscript -file tfpt_readouts.wl` runs clean:
+`wolframscript` is installed (`brew install --cask wolfram-engine`, 14.3.0.0)
+and the kernel path is configured. Last **verified** run (license active)
+was 2026-07-21:
 
 ```
 --- Wolfram readouts: 116 passed, 0 failed ---
 ALL WOLFRAM CHECKS PASSED
 ```
 
-So the independent Wolfram path is **verified to reproduce** the Python suite's
-headline readouts (`α⁻¹`, E8 glue, `M=41`, K/Q ladder `1920=|W(D5)|`, lepton
-`c=(16/7,4/3,7/6)`, solar `sin²θ12=1/3−φ0/2`, the G2 heat-kernel coefficients,
-the anchor-plane Plücker apparatus, and the `(U_wall)` selectors) on a different
-engine.
+On 2026-08-28 the same binary is present but the free Wolfram Engine
+license is **not activated** (`wolframscript -file tfpt_readouts.wl`
+exits immediately with a license-related error). The 2026-08-28
+v974–v997 exact catch-up (20 `checkExact` blocks in `tfpt_readouts.wl`)
+is therefore **DEFERRED_NO_ENGINE**: implemented and syntax-reviewed,
+not counted in the verified 116/116 until the next activated engine run
+(same convention as the 2026-07-20 unactivated-license deferral).
 
 To reproduce on another machine: get a free license at
 <https://www.wolfram.com/engine/free-license>, run `wolframscript -activate`
@@ -79,10 +80,66 @@ once (Wolfram ID + password), then `wolframscript -file tfpt_readouts.wl`.
 | residual resolved: Seeley-DeWitt `a₂=−d/(192π²)R`, `1/G` UV-sensitive ⟹ `k=c3/2` is normalization | symbolic | `v68_seeley_dewitt_residual.py` |
 | D4-equivariant Q: Z4 eigenphases, `Q₊=3w+1=diag(1,2,3)`, `Q₋` E-coupling `√3` ⟹ `t(t²−3)` | exact | `v69_d4_q_geometry.py` |
 | Q integer-lift: `R` unimodular (`{-1,i,-i}`), `det Q=3=N_fam`, SNF `diag(1,1,3)` | exact | `v70_q_integer_lift.py` |
+| glue vector `λ=(ω_s,ω_f)`: norms `5/4+3/4=2`, order 4, isotropy, census `{52,64,60,64}` | exact (20 checks ADDED 2026-08-28; engine run DEFERRED_NO_ENGINE) | `v983_simple_current_generator.py` |
+| μ4 circulant spectra `{0,2,4,2}`/`{4,-2,0,-2}`, deck-swap, graded `log(ln2/4)`, ratio `4/ln2` | exact | `v985_quillen_channel_swap.py` |
+| `B=P1+(2/3)P2+(1/3)P3`, `H=-log B` eigs, Wick `U(-in)=B^n`, congruence positivity | exact | `v987_os_dilation_package.py` |
+| SNF ADE disc groups, unique rank-8 `(D5,A3)` glue, `[λ]^2=[v]`, CE dims `0` / kernel `36/720` | exact | `v993_minimal_defect_selector.py` |
+| `Θ_{E8}/η^8` coeffs `{1,248,4124,34752}` from Jacobi `EllipticTheta` / `DedekindEta` | exact | `v994_mmst_criteria_battery.py` |
+| Barnes–Rivers projector ranks `(5,3,1,1)` on `Sym²(ℝ⁴)` | exact | `v997_spin2_smg_witnesses.py` |
 
 The numerical `(U_wall)` results (kill-switch sampling `v38`, harmonic-metric
 unitarisation `v40`, leg test `v41`) rest on `scipy` ODE/linear-algebra and are
 the Python path; the Wolfram path mirrors their **algebraic** content (`v39`).
+
+### 2026-08-28 catch-up (v974–v997 exact debt)
+
+The v974–v997 waves deferred all Wolfram mirroring (`Python-only per
+recent-wave convention`). The **exact** subset is now in
+`tfpt_readouts.wl` (dated 2026-08-28 section, 20 `checkExact` blocks).
+Verified GATE.WOLFRAM.01 count stays **116/116** until an activated engine
+run reports `136 passed` (116+20).
+
+**Mirrored (exact):**
+
+- `v983` — norms `5/4+3/4=2`, `h=1`, order 4, isotropy, unimodular `det=1`,
+  coset census `{52,64,60,64}` (same search windows as Python), odd-power
+  `128`, kill norms `7/4` and `9/4`, `det Cartan(D8)=4`.
+- `v985` — fully mirrored (spectra, deck swap + odd-swap must-fail,
+  graded `log(ln2/4)`, uniform `4/ln2`).
+- `v987` — spectral decomposition, `H=-log B` eigenvalues, Wick
+  `n=1..6`, congruence positivity + negative-kernel `det<0`.
+- `v993` — SNF textbook disc groups, unique ADE rank-8 census `(D5,A3)`,
+  mutant kills, `[λ]^2=[v]`, unique-CE dimension counts `n_free=0` and
+  kernels `36/720`.
+- `v994` — `Θ_{E8}/η^8` coefficients `{1,248,4124,34752}` from the Jacobi
+  `EllipticTheta` lattice series (cross-check vs `E4=1+240∑σ₃`).
+- `v997` — Barnes–Rivers block ranks `(5,3,1,1)` at `p=(0,0,0,1)`.
+
+**Python-only (numerical / search / structural, not mirrored):**
+
+- `v974–v982`, `v984`, `v986`, `v988–v992`, `v995`, `v996` — ODE / QCA /
+  entropy / HS / KMS / gauge-grammar / likelihood, no compact exact
+  identity for a second engine.
+- `v987` legs B–D (size-uniform D2/LR numeric, interacting gap plateau,
+  quantum SWAP).
+- `v993` random CE axiom sampling on `M_d^{Z4}` / crossed product.
+- `v994` C1 entropy, C2 QWZ spectrum, C4 two-point numeric, C5 beyond
+  `det`, C6 cited, C7 open.
+- `v997` Weyl² ghost residues, random-`p` numeric, SMG N=8 Fidkowski–Kitaev
+  toy.
+
+**2026-08-30 late-evening harvest (v1013–v1014).** Still
+`DEFERRED_NO_ENGINE` (license check failed; zero files executed).  v1013 is
+numerical (Lieb–Robinson cone / nested-volume twin) plus an analytic
+memorandum; v1014 mixes a numerical QWZ detline with exact sympy W-bridge
+identities.  No Wolfram exact-check count change; GATE.WOLFRAM.01 stays
+116/116 pending an activated engine run.
+
+**2026-08-31 Monday-morning harvest (v1015–v1016).** Still
+`DEFERRED_NO_ENGINE`.  v1015 is sympy-exact (character-blind response +
+mutants) but the engine is deferred; v1016 is numerical (euclidean cap /
+TEL-B remainder / CAR nuclearity / DFP series roots).  No Wolfram
+exact-check count change; GATE.WOLFRAM.01 stays 116/116.
 
 ## Provenance note
 

@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`1005` registered scripts · `1173` ledger claims · `10` clusters.
+`1009` registered scripts · `1173` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -30,7 +30,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v66_e8_casimir_degrees** [E] `ARCH.E8DEG.01` — compiler atoms = E₈ Casimir degrees; Σ = 128 = 2⁷
   - deps: v37, v10, v55, v56, h(E8)=30 · cited: 3 e8 audit bootstrap, 5 redteam
 - **v219_icosahedral_mckay** [E/C/O] `MCKAY.E8.01` — McKay bedrock: WHY the atoms are 2,3,5. E₈ is the exceptional TOP of the McKay tower of finite SU(2) subgroups (2T→Ê₆, 2O→Ê₇, 2I→Ê₈). The McKay graph is BUILT from the group: the 1
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v1_e8_glue, v53_compiler_core · cited: introduction, origin theory, 1 architecture e8, 5 redteam
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v1_e8_glue, v53_compiler_core · cited: introduction, origin theory, 1 architecture e8, 5 redteam
 - **v222_cm_norm_duality** [E/C] `CMNORM.DUAL.01` — CM-norm duality: the two exceptional moduli give 41 and 7. SQUARE (Gaussian ℤ[i], j=1728): N(g_car+i|μ₄|)=5²+4²=41=10b₁ (the EM index IS the Gaussian norm of the carrier-glue vecto
   - deps: v23_anchor_generator, EM.B1.01, v73_k_c3_half · cited: origin theory, 1 architecture e8, 2 standard model
 - **v227_degree_exponent_channel_split** [-] `(no ledger claim)` — 248=120+128 as a magnitude/phase channel typing (replaces the over-strong S⁻-dark-matter reading). E₈ exponents {1,7,11,13,17,19,23,29} sum 120=|R⁺(E₈)| (MAGNITUDE channel); E₈ deg
@@ -106,9 +106,9 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v483_pillowcase_exact_traces** [E/O] `HYP.PHI0.GEOM.01` — HYP.PHI0.GEOM.01: the GEOMETRIC side of the phi0 puncture target (HYP.PHI0.PUNCTURE.01/v408) is EXACT -- every twisted/orbifold heat trace of the flat tau = i pillowcase is a t-IND
   - deps: v408_phi0_puncture_heatkernel, v396_phi0_icosahedral, v106_review_validation, v342_em_ward_heatkernel, v37, v216, v396, v408 · cited: origin theory
 - **v484_seam_contact_unit** [E/C/O] `SEAM.CONTACT.UNIT.01` — SEAM.CONTACT.UNIT.01: the shared 'c3 per boundary insertion' rule of the two open analytic targets (ALPHA.QUILLEN.EXACT.01 c3-ladder {0,3,6}; HYP.PHI0.PUNCTURE.01 per-mark weight c
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v60_lambda_metrology_branch, v3, v37 · cited: origin theory, 1 architecture e8, research contracts
 - **v485_contact_diagonal_closed** [E/C/O] `SEAM.CONTACT.UNIT.02` — SEAM.CONTACT.UNIT.02: the diagonal channel of the merged analytic target (v484) settled at the computable level -- the merged residual collapses onto the keystone. [E] diagonal zer
-  - deps: v484_seam_contact_unit, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8, research contracts
+  - deps: v484_seam_contact_unit, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v408_phi0_puncture_heatkernel, v483_pillowcase_exact_traces, v342_em_ward_heatkernel, v239_kms_thermal_time, v3, v151 · cited: origin theory, 1 architecture e8, research contracts
 - **v486_transfer_full_rule** [E/O] `HYP.REWRITE.02` — HYP.REWRITE.02: the FULL physical transfer spectrum {1, (2/3)^6, (1/3)^6} now has ONE local recursive generator -- the lazy Z2-pair walk. [E] uniqueness: the symmetric 3-channel ru
   - deps: v327_hypergraph_rewrite, v324_hypergraph_fiber, v312_hypergraph_substrate, v238_modular_lindblad_dynamics, v54, v76, v221, v312 · cited: origin theory
 - **v487_transfer_clock_rungs** [E/O] `HYP.REWRITE.03` — HYP.REWRITE.03: the lazy split (1/2, 1/6) is FORCED by the resummed clock -- the v486 [O] 'split selection' closes onto v124 structure. [E] rung reading: the lazy rule's one-step s
@@ -118,9 +118,9 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v490_seam_parity_census** [E/C/O] `SEAM.MU.01` — SEAM.MU.01: the T^2 spin-structure fermion-parity census for the v367 seam lattice model -- the lattice ground-state witness of 'mu_pre = 4 before condensation' (step 1 of the v378
   - deps: v286_seam_equivalence_contract, v489_seam_modular_commutator, v367_seam_s3_lattice, v378_seam_s3_modular, v336, v351, v367, v378 · cited: research contracts
 - **v491_p2_partition_corollary** [E/C/O] `P2.PARTITION.01` — P2.PARTITION.01: g_car = 5 as a COROLLARY of the four marks -- the partition sharpening of v53 (sympy exact). The lemma: exactly 3 positive integers summing to 4 = uniquely {1,1,2}
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v23, v53, v115, v137 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v23, v53, v115, v137 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 - **v499_p2_weights_deligne_bg** [E/C/O] `P2.TYPING.01` — P2.TYPING.01: the P2 weight-typing postulate HARDENED (the v491 check-9 residual) -- the anchor a = (1,1,2) typed as the Birkhoff-Grothendieck splitting exponents of the DELIGNE CA
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v491_p2_partition_corollary, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v181_clock_is_conformal_symmetry, v33, v40 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v491_p2_partition_corollary, v53_compiler_core, v23_anchor_generator, MARKS.GB.01, v181_clock_is_conformal_symmetry, v33, v40 · cited: introduction, origin theory, 1 architecture e8, 2 standard model
 - **v506_seam_clock_rigidity** [E/C/O] `SEAM.CLOCK.RIGIDITY.01` — SEAM.CLOCK.RIGIDITY.01: clock rigidity, Route B of the v503 classification -- two exact theorems reducing the order-4 clock input to ONE alignment bit (Part A Moebius + Part B Fock
   - deps: v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v507_seam_bit_origin, v117, v168, v214, v215 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v507_seam_bit_origin** [E/C] `SEAM.BIT.ORIGIN.01` — SEAM.BIT.ORIGIN.01: the tautology attack on the v506 alignment bit, executed and refuted -- where do the marks AND the deck come from, and does their common origin force the centra
@@ -128,7 +128,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v510_seam_bit_freedom** [E/C] `SEAM.BIT.FREEDOM.01` — SEAM.BIT.FREEDOM.01: the freedom attack on the v506/v507 alignment bit -- the POSITION half of the bit is topology (Part A dihedral/Fock + Part B Moebius/RP in one module; NO marke
   - deps: v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v176_seam_collar_realisation, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v216, v264 · cited: introduction, origin theory, 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v512_seam_tau_flag** [E/C] `SEAM.TAU.FLAG.01` — SEAM.TAU.FLAG.01: the flag-transitivity equivalence web -- the tau = i attack executed on the free RP seam circle: which ESTABLISHED seam datum excludes the free-but-non-harmonic c
-  - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
+  - deps: v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v168_qgeo_rigidity, v503_qgeo_emergence_light, v499_p2_weights_deligne_bg, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v117 · cited: introduction, 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v521_seam_bit_rp_blind** [E/C/O/X] `SEAM.BIT.RPBLIND.01` — SEAM.BIT.RPBLIND.01: the RP/Theta attack on the alignment bit DECIDED -- 'free OS positivity does NOT see delta', an honest, decided NEGATIVE result (v508 style; 25 checks, ~25 s):
   - deps: v512_seam_tau_flag, v510_seam_bit_freedom, v507_seam_bit_origin, v506_seam_clock_rigidity, v519_woit_theta_rp_free, v506, v507, v510 · cited: 3 e8 audit bootstrap, 5 redteam, research contracts
 - **v532_e8_degree_modular_checksum** [E] `E8.DEGREE.MODULAR.01` — Dual-degree checksum: (60,192,240,252) → 744=3·248, |W(E8)|, gcd 12; j = q⁻¹+744+…; D16 control 1488=3·496; primes<30 fingerprint [audit]
@@ -290,7 +290,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v623_covered_seam** [E/C/X] `QGEO.COVERSEAM.01` — **DAS GITTER-SKELETT DER COVERING-EBENE** (der benannte v622-Rest, erste ausgeführte Scheibe): der auf den μ₃-Cover gehobene Seam ist **EIN 48-Site-NS-Kreis** für die uniformen Gew
   - deps: v622_seam_identification, v617_seam_cover_forcing, v620_cyclic_n_census, v613_canonical_periods, v597, v613, v614, v617 · cited: 3 e8 audit bootstrap
 - **v624_external_lattice_audit** [E/C/X] `EXTREV.LATTICE.01` — drei behauptete Ableitungen maschinell geprüft, ein Folgetest ehrlich umgetypt: **(A) DER VIERMARKEN-ABSCHLUSS [E, konditional]: unter der D_{d+1}+A_{d−1}-Glue-Architektur erzwinge
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v604_equivariant_order, v602_duality_forms, v618_uniform_constant, v47, v602, v604, v618 · cited: 3 e8 audit bootstrap, research contracts
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v604_equivariant_order, v602_duality_forms, v618_uniform_constant, v47, v602, v604, v618 · cited: 3 e8 audit bootstrap, research contracts
 - **v625_prime_shadow** [E/C] `PRIME.SHADOW.01` — **DER PRÜFBARE KERN DER „PRIMZAHLEN ALS SCHATTEN DER FERTIGEN GEOMETRIE-LESART IST EXAKT**, verifiziert auf der Compiler-eigenen Glue-Kette (μ₄ → D5⊕A3 → E8; Theta-Ebene E8 = D8 ∪ 
   - deps: v624_external_lattice_audit, v618_uniform_constant, v1, v47, v624 · cited: 3 e8 audit bootstrap
 - **v626_e8_code** [E/C] `E8.CODE.01` — **E8 IST EIN FEHLERKORRIGIERENDER CODE** (Theorem, nicht Metapher). [E] Der erweiterte Hamming-Code [8,4,4]: 16 Codewörter, Gewichte {0:1, 4:14, 8:1}, selbst-dual; Construction A l
@@ -584,11 +584,11 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v773_qf_cell_cocycle** [E] `PRIME.QFCOCYCLE.01` — der geordnete Möbius/Redheffer-Zell-Kozykel auf dem tiefenabhängigen Band d(X), unter den eingefrorenen STAKES (stirbt dieses Modul, schließt die Gram-Route ohne weitere Varianten)
   - deps: v772_qf_feshbach_effective, v770_qf_spectral_bundle, PRIME.GRAM.DIAGONAL.01, PRIME.Z1.OPERATOR.01, v563, v755, v758, v766 · cited: 3 e8 audit bootstrap, research contracts
 - **v774_arf_spinor_compiler** [E/C/X] `ARF.SPINORCOMPILER.01` — **ARF-SPINOR-EXACT (46/46, ~2 s, null Kills, beide Must-fail-Kontrollen feuern): der Paritäts-Lift iota: V ≅ C_even(5) trägt beta = hbar EXAKT in allen 256 Zellen (Crosslink 1); Br
-  - deps: v752_projective_hamming_incidence, v753_ramified_polarity, v2_carrier_pascal, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v752, v753, v2, v310 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
+  - deps: v752_projective_hamming_incidence, v753_ramified_polarity, v2_carrier_pascal, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v752, v753, v2, v310 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
 - **v775_gaussian_class_d5_purity** [E/C/X] `ARF.ROOTCLASS.01` — **ROOTCLASS-MIXED (18/18, alle 3 Kontrollen feuern; FROZEN_SPEC SHA-256 58d9be9b… gehasht VOR allen Wurzeldaten): KEINE D5⊕A3/SU(5)-Konvention macht auch nur EINEN vollen Satz von 
   - deps: v774_arf_spinor_compiler, v752_projective_hamming_incidence, v753_ramified_polarity, v752, v1, v47, v310 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap
 - **v776_boundary_hamming_uniqueness** [E/O] `ARF.BOUNDARY.CODE.01` — **BOUNDARY-CODE-UNIQUE (31/31): die nicht-zirkuläre Kette Rand -> Code -> E8 -> F2^4 -> 5 Slots SCHLIESST mit g_car = 5 als OUTPUT — Zensus 135 -> 30 -> 14 -> 2 -> 1 ohne Hamming/E
-  - deps: v774_arf_spinor_compiler, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v689_gaussian_code_bridge, v752_projective_hamming_incidence, v689, v736, v638, v752 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+  - deps: v774_arf_spinor_compiler, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v689_gaussian_code_bridge, v752_projective_hamming_incidence, v689, v736, v638, v752 · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v777_ftransfer_clock_jets** [C/O/X] `FTRANSFER.CLOCKS.01` — **NO-COMMON-CONNECTION + FTRANSFER-FIBERED-CARRIES (24 + 14 Checks, 0 Fails): der präregistrierte K1-Kill EXAKT wie der eingefrorene Prior erwartet (Prereg-YAML 880224f7… byte-veri
   - deps: v213_ftransfer_functor, v578_native_jets, v632_ftransfer_pgl2, v723_phys_modular_clock, v724_phys_t3b_modular_flows, v578, v632, v723 · cited: 3 e8 audit bootstrap, 4 frontier, research contracts
 - **v778_qgeo_gridsup_logsum** [E/O] `QGEO.GRIDSUP.01` — **GRIDSUP-SPLIT-CLOSED-LOG-LAW + FOURIER-LOGSUM-CLOSED (19/19 + 19/19): der v745-Rest (a) spaltet vierfach — (a1) das Kontinuums-Supremum GESCHLOSSEN (Taylor 5/8 symbolisch + Hüllk
@@ -634,7 +634,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v798_seam_clifford_modular_s** [E] `SEAM.CLIFFORD.MODULAR_S.01` — **MODULAR-S-PARTIAL (27/27): COSET POSITIV — der Pro-Binärfaktor-Hadamard K1 = H ⊗ I IST der Weil-Lift von S bei τ = i und landet exakt in der fehlenden Nebenklasse ζ₈ G31 (exakte 
   - deps: v783_two_qubit_clifford, v776_boundary_hamming_uniqueness, v774_arf_spinor_compiler, v783, v774, v752, v689, v775_gaussian_class_d5_purity · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v799_seam_code_typeii** [E/C/O] `SEAM.CODE.TYPEII.01` — der direkte Angriff auf Residual R1 von ARF.BOUNDARY.CODE.01 — **TYPEII-FORCED (19/19): erschöpfend über ALLE 308.993 Unterräume von F2⁸ (dim 0..4, Gauß-Binomiale; dim > 4 per Rang
-  - deps: v776_boundary_hamming_uniqueness, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v774_arf_spinor_compiler, v776, v752, v689_gaussian_code_bridge · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
+  - deps: v776_boundary_hamming_uniqueness, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v774_arf_spinor_compiler, v776, v752, v689_gaussian_code_bridge · cited: 1 architecture e8, 2 standard model, 3 e8 audit bootstrap, research contracts
 - **v800_e8_torsor_fourier** [E] `E8.TORSOR.FOURIER.01` — Träger-Reinheit auf CHARAKTER-Niveau mit der wechselseitig-unverzerrten Kappe — **TORSOR-FOURIER-PARTIAL (30/30): 120 kanonische projektive Strahlen (Phasengesetz exakt auf 960 Urs
   - deps: v782_e8_transition_bus, v783_two_qubit_clifford, v775_gaussian_class_d5_purity, v791_positive_descent, v782, v783, v775, v752 · cited: 1 architecture e8, 3 e8 audit bootstrap
 - **v801_prime_cp_intertwiner** [E/O] `PRIME.CP.INTERTWINER.01` — Forderung (3) von PRIME.POSITIVE_DESCENT.01 endlich-Niveau GELÖST — **CP-INTERTWINER-EXISTS (29/29): Φ(a) = V* π(a) V aus den 105 Kraus-Beinen (Unitalität Σ E_{x_e x_e} = 7 I exakt
@@ -726,7 +726,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v844_message_doily_rank** [E] `MESSAGE.LADDER.01` — zwei exakte Korpus-Kompressionen, EIN Modul aus zwei Probes — **MESSAGE-LADDER-EXACT + DOILY-PASCAL-RANK-EXACT (23/23 + 16/16): TEIL A: M_n = 15·Δp_n = 15·2^n gegen die TATSÄCHLICH
   - deps: v832, v833, v774, v814, v330, v486, v327, v775 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v845_cfin_normal_form** [E/C/X] `NORMALFORM.CFIN.01` — **NORMAL-FORM-ASSEMBLED (28/28, SPEC v2): V = L/(1+i)L (Zensus 240 = 15×16, Nullklasse LEER); ħ = die Bit-Form (GEFUNDENE Familien/Anker-Basis (F1,F2,F3,A) mit Gram J − I, auf alle
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v752, v774, v775, v799, v776, v833, v844_message_doily_rank · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v752, v774, v775, v799, v776, v833, v844_message_doily_rank · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v846_schur_spectral_mother** [E] `PRIME.SCHUR.GRAM.01` — die manifest positive relationale Gram existiert, aber die Ecken-Identität scheitert in Spur UND Form an exakt dem erzwungenen Cauchy-Schwarz-Diagonalpreis, und der Preis ist GEOME
   - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v843_margin_law_excess_lean, v841_relation_carrier_ladder, v831_prime_alias_second_moment, v563, v583, v841, v842 · cited: 3 e8 audit bootstrap, research contracts
 - **v847_wedge_cellcone_transport** [-] `PRIME.WEDGE.LAGRANGE.01` — **WEDGE-PARTIAL + CONE-BROKEN + RAY-EDGE-CONFIRMED (13 + 9 Checks; die ZWEI eingefrorenen ehrlichen FAILS S5.SCR und S5.C3 BEHALTEN und pattern-gated, NICHT nachjustiert): TEIL A (
@@ -734,7 +734,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v848_extraction_chain** [O] `PRIME.EXTRACTION.CHAIN.01` — die Implikationskette 'kofinale endliche Positivität (H) ⇒ Weil-Positivität ⇒ (Weil-Kriterium) das Ziel' ist gemessen/zitiert theorem-fähig mit QUANTOR-REDUKTION, und die arithmeti
   - deps: v818_sector_floor_attack.py;v823_prime_lagrange_floor.py;v824_prime_floor_skeleton.py;v829_prime_floor_depth.py;v830_prime_float_budget.py;v831_prime_alias_second_moment.py;v843_margin_law_excess_lean, v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v841_relation_carrier_ladder, v563, v630, v643, v655, v716 · cited: 3 e8 audit bootstrap, research contracts
 - **v849_cfin_unique_cofinal_lean** [E] `CFIN.UNIQUE.01` — jedes zulässige Compiler-Objekt ist isomorph zu C_fin; Aut(C_fin) ≅ C₆ (Ordnungen [1,2,3,3,6,6], treu in Sp(4,2), die S₅-Slot-Permutation durch den symplektischen Teil bestimmt); d
-  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v845_cfin_normal_form, v844_message_doily_rank, v774, v833, v844, v845 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
+  - deps: v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v845_cfin_normal_form, v844_message_doily_rank, v774, v833, v844, v845 · cited: 1 architecture e8, 3 e8 audit bootstrap, research contracts
 - **v850_completion_tax_flow** [E] `PRIME.PSD.COMPLETION.TAX.01` — die zwei No-Go-Schließungen auf KLASSEN-Ebene: JEDE positive 2-Sektor-Dilatation, die die Arithmetik durch den fixierten Kamm-Kopplungsblock routet, zahlt Diagonalsteuer tr P + tr 
   - deps: v842_excess_certified_skeleton.py;v843_margin_law_excess_lean.py;v846_schur_spectral_mother.py;v847_wedge_cellcone_transport, v846_schur_spectral_mother, v843_margin_law_excess_lean, v831_prime_alias_second_moment, v563, v818, v843, v846 · cited: 3 e8 audit bootstrap, research contracts
 - **v851_cluster_kernel_field** [O] `PRIME.CELLCONE.KERNELFIELD.01, PRIME.CELLCONE.GRADEDKERNEL.01` — die Cluster-Entwicklung existiert und resummiert EXAKT (sympy-Teleskopierung auf dem Booleschen Verband; Möbius-Elimination: getrennte Paare tragen identisch Null; 2^16-Subset-Ward
@@ -978,7 +978,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v973_seam_route_narrowing** [E] `SEAM.EQUIV.SKELETON.01` — drei Probes byte-exakt eingebettet (19/19 + 20/20 + 19/19; SPEC e6f392cbcd0d3ae1 / 0875f39fe1d0fa0f / 451bd470b98a9d6d), plus die modul-eigene Exaktsektion S0** — (1) MMST-ABDECKUN
   - deps: v286_seam_equivalence_contract, v366_mmst_seam_collar.py; v994_mmst_criteria_battery.py; v998_seam_modular_closure, v492_celestial_z4_orbifold, v519_woit_theta_rp_free · cited: research contracts
 - **v974_alpha_faces_computed** [E/C/O] `ALPHA.QUILLEN.FACES.01` — drei Probes byte-exakt eingebettet, sha256-gepinnt und wörtlich ausgeführt (21/21 MATCH_MODULO_LOCAL_FACTOR + 20/20 PUMP_QUANTIZED_MATCHES_CHERN + 18/18 CHAIN_SHADOW_OK) plus die m
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v484_seam_contact_unit, v485_contact_diagonal_closed, v48_em_ward, v470_alpha_inflow_level, v972_seam_interaction_front.py; v995_kms_subnet_rigidity · cited: origin theory, 1 architecture e8, research contracts, safeguards
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v484_seam_contact_unit, v485_contact_diagonal_closed, v48_em_ward, v470_alpha_inflow_level, v972_seam_interaction_front.py; v995_kms_subnet_rigidity · cited: origin theory, 1 architecture e8, research contracts, safeguards
 - **v975_dimension_selector_4d** [C/O] `DIMENSION.SELECTOR.4D.01` — 16/16 sympy-exakt. Unter dem benannten TFPT-kompatiblen Axiomensatz A1 (d > 2: propagierende lokale Eichfelder), A2 (dimensionslose Yang-Mills-Kopplung), A3 (reelle selbstduale/ant
   - deps: DIMENSION.UPLIFT.FIREWALL.01, SEAM.BULK4D.RECON.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector · cited: research contracts
 - **v978_terminal_density_martingale** [E] `PRIME.TERMINAL.DENSITY_MARTINGALE.01` — die Dichte pro verbleibendem Nachkommen X(v) = d(v)/d(root) ist ein nichtnegatives Martingal ALLEIN aus Massenerhaltung (symbolisch am generischen Knoten + bit-exakt in Fractions a
@@ -1006,13 +1006,13 @@ _The fine-structure constant as the unique root of the boundary U(1) Ward identi
 - **v382_alpha_quillen_exact** [-] `(no ledger claim)` — Names the Quillen determinant-line VARIATION delta_tau(log det_zeta Delta_U(1) + 8 b1 c3^6 log phi_seam)=0 as a tracked target (review Point 10), elevating EM.WARD.01's residual to
   - cited: 1 architecture e8, research contracts
 - **v391_alpha_quillen_progress** [E/O] `ALPHA.QUILLEN.PROGRESS.01` — ALPHA.QUILLEN.PROGRESS.01: an HONEST attempt at the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it REDUCES the open step to a sharper named sub-target via a solvable model but
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v382 · cited: 1 architecture e8, research contracts
 - **v433_alpha_quillen_heatkernel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.02` — ALPHA.QUILLEN.PROGRESS.02: a SECOND honest step on the external target ALPHA.QUILLEN.EXACT.01 (v382) -- it GROUNDS and CONNECTS, it does NOT close it; ALPHA.QUILLEN.EXACT.01 stays 
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v391_alpha_quillen_progress, v286_seam_equivalence_contract, v48_em_ward, v336, v341, v342, v382 · cited: 1 architecture e8, research contracts
 - **v434_alpha_quillen_betafunction** [E/C/O] `ALPHA.QUILLEN.PROGRESS.03` — ALPHA.QUILLEN.PROGRESS.03: a THIRD honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it settles the three residuals named after v433 and shows they are NOT three independent problems
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v48_em_ward, v342_em_ward_heatkernel, v159, v216, v246 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v48_em_ward, v342_em_ward_heatkernel, v159, v216, v246 · cited: 1 architecture e8, research contracts
 - **v435_alpha_quillen_chernlevel** [E/C/O] `ALPHA.QUILLEN.PROGRESS.04` — ALPHA.QUILLEN.PROGRESS.04: a FOURTH honest step on ALPHA.QUILLEN.EXACT.01 (v382) -- it attacks the SINGLE remaining [O] after v434 (residual (2), the cubic alpha^3 Chern level) and
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v391_alpha_quillen_progress, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v48_em_ward, v342_em_ward_heatkernel, v48, v342 · cited: 1 architecture e8, research contracts
 
 ### `flavor` — Flavor matrix & operators  (23 scripts)
 _The integer operator ladder (R, K, Q, L) and its spectral invariants — the flavor signature._
@@ -1054,9 +1054,9 @@ _The integer operator ladder (R, K, Q, L) and its spectral invariants — the fl
 - **v564_cp_fiber_pin** [E/C] `CP.FIBER.PIN.01` — R1 decided, R2 selected, the degeneracy explained (verdict FIBER-PINNED; no CP derivation anywhere): (1) the EULER FACTORISATION — the fiber acts on the frame by a scalar on the n-
   - deps: v561_cp_channel_identities, redteam/rt_D_upoint.py; v561_cp_channel_identities, v227_degree_exponent_channel_split.py; v561_cp_channel_identities, v220_cp_hexagonal_modulus.py; v561_cp_channel_identities, v225_dual_normal_frame.py; v561_cp_channel_identities, v231_cp_mu6_phases, v84_frozen_registry, v88 · cited: 5 redteam
 - **v566_parabolic_anchor_selfcode** [E/C/O] `DIAMOND.PARA.SELFCODE.01` — the v218 sheet-diamond direction operators U = Q·diag(1,0,0), V = Q·diag(0,1,1) generate the FULL 2|1 parabolic (line-stabiliser) algebra A (dim 7, word determinant −81, multiplica
-  - deps: v218_diamond_axis_geometry, v23_anchor_generator, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v13_open_gates, v213_ftransfer_functor, v521_seam_bit_rp_blind, FORM.LADDER.01, v23 · cited: 1 architecture e8, 2 standard model, research contracts
+  - deps: v218_diamond_axis_geometry, v23_anchor_generator, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v13_open_gates, v213_ftransfer_functor, v521_seam_bit_rp_blind, FORM.LADDER.01, v23 · cited: 1 architecture e8, 2 standard model, research contracts
 - **v567_carrier_free_q_reconstruction** [E/C/O] `QGEO.QRECON.01` — can Q (hence V and the v566 anchor self-code) be reconstructed WITHOUT carrier/anchor inputs? The circularity located: v11's uniqueness certificate uses row sums (4,5,6), column su
-  - deps: v566_parabolic_anchor_selfcode, v13_open_gates, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v23_anchor_generator, v10, v11 · cited: 1 architecture e8, 2 standard model
+  - deps: v566_parabolic_anchor_selfcode, v13_open_gates, v13_open_gates.py;v19_monodromy_moduli.py;v22_open_gates_audit, v10_projection_involution.py;v11_unique_KQ.py;v12_mass_generation_polynomials, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v23_anchor_generator, v10, v11 · cited: 1 architecture e8, 2 standard model
 - **v568_bit_selector_ladder** [E/C/O] `DIAMOND.BIT.SELECT.01` — the two 81-twins of the v567 audit (q32 = 2 = |Z2| vs 0) generate DIFFERENT integral orders (equal index 81, different lattices: the bit is integrally visible where every classical
   - deps: v567_carrier_free_q_reconstruction, v566_parabolic_anchor_selfcode, v218_diamond_axis_geometry, v521_seam_bit_rp_blind, FORM.LADDER.01, v10, v218, v528 · cited: 1 architecture e8, 2 standard model
 - **v572_rp_bit_form** [E/O] `DIAMOND.BIT.RPFORM.01` — spectrally BLIND, integrally ANCHOR-VISIBLE: with the corpus reflection θ(X) = ΣXᵀΣ and the declared states (trace, anchor (1,1,2), ladder (1,2,4), unit), the RP kernel has identic
@@ -1176,7 +1176,7 @@ _The seam as the universal horizon code, the order-30 Coxeter cycle, and the gap
 - **v221_seam_qecc** [E/C] `QEC.SEAM.01` — The seam as a FINITE recoverability code (recovery rate (2/3)⁶=64/729). Code dimension dim S⁺=16=2^(g_car−1); the gapped transport T on the cusp-weight 3-space (deviations (1,−1,0)
   - deps: SEAM.ATTRACT.01, SEAM.TRANSFER.01, HOR.PAGE.01 · cited: origin theory, horizon readouts
 - **v223_coxeter_totative_clock** [E/C] `COX.CLOCK.01` — The μ₄ clock is the order-4 character of the E₈ Coxeter cycle. (ℤ/30)ˣ={1,7,11,13,17,19,23,29}=the E₈ exponents=live Coxeter phases; φ(30)=8=rank E₈, 30=2·3·5. (ℤ/30)ˣ≅ℤ/4×ℤ/2 with
-  - deps: SEAM.COX.01, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census · cited: introduction, origin theory, 1 architecture e8
+  - deps: SEAM.COX.01, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure · cited: introduction, origin theory, 1 architecture e8
 - **v232_e8_kleinian_seam** [E/C/O] `TOPO.E8.01` — The seam as the E8 Kleinian singularity -- a canonical algebraic-geometric MODEL for the open seam-realisation premise QGEO.REALIZE.01 (the du Val side of the McKay correspondence,
   - deps: v219_icosahedral_mckay, v181_clock_is_conformal_symmetry, v1_e8_glue · cited: introduction, origin theory
 - **v236_brieskorn_capstone** [E] `TOPO.BRIESKORN.01` — The (2,3,5) Brieskorn singularity x^2+y^3+z^5 is the ONE generator of the discrete skeleton -- the capstone of the icosahedral round (v55/v219/v223/v232/v233). Its exponents ARE th
@@ -1218,7 +1218,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (232 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (236 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -1418,7 +1418,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v383_dynamics_universal** [E/C] `DYNAMICS.UNIVERSAL.01` — DYNAMICS.UNIVERSAL.01: the UNIVERSAL spectral-gap / Perron-Frobenius principle -- every TFPT sector is the SAME object (a gapped operator with a UNIQUE leading attractor = the phys
   - deps: v56, v82, v303, v312, v313, v314, v337, v358 · cited: origin theory
 - **v384_residual_certification** [E/C/O] `RESIDUAL.CERTIFICATION.01` — RESIDUAL.CERTIFICATION.01: the residual matrix is CERTIFICATION, not CONSTRUCTION -- after v369/v381/v382 there is NO open TFPT physics MECHANISM left; every residual is an externa
-  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts, safeguards
+  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts, safeguards
 - **v386_grav_amplitude** [E/C] `GRAV.AMPLITUDE.01` — GRAV.AMPLITUDE.01: the entire-form-factor graviton-exchange AMPLITUDE is finite, UV-softened and tree-unitary -- perturbative gravity as an explicit scattering problem, extending v
   - deps: v259, v304, v370, v380, v253, v369 · cited: 4 frontier
 - **v387_corrections_gap** [E/C] `CORRECTIONS.GAP.01` — CORRECTIONS.GAP.01: the practical harvest of v383 -- the same spectral gap that makes each sector parameter-free ALSO sets the SIZE of its first correction (correction_n ~ (lambda_
@@ -1526,9 +1526,9 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v469_seam_crossedproduct_route** [E/C/O] `SEAM.EQUIV.CROSSEDPRODUCT.01` — SEAM.EQUIV.CROSSEDPRODUCT.01: the net-level crossed-product certification of the 128-spinor extension + the R1 -> R1' invariant reduction. [E] LR LOCALITY INTEGER: h_s(SO(16)_1) = 
   - deps: v286_seam_equivalence_contract, v458_seam_mmst_citation_audit, v459_seam_lattice_voa_route, v463_seam_c8_holomorphic_uniqueness, v464_seam_oneparticle_rigidity, FORM.SEAM.RESIDUAL.01, v125, v154 · cited: 1 architecture e8, 5 redteam, research contracts, safeguards
 - **v470_alpha_inflow_level** [E/C/O] `ALPHA.QUILLEN.INFLOW.01` — ALPHA.QUILLEN.INFLOW.01: the alpha^3 level = the COMPUTED bulk Chern invariant + the seam F-normalisation = the affine embedding index k_Y = 5/3. [E] target re-verified: alpha^-1 =
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v433_alpha_quillen_heatkernel, v434_alpha_quillen_betafunction, v435_alpha_quillen_chernlevel, v48_em_ward, v469_seam_crossedproduct_route, v341, v367 · cited: 1 architecture e8, research contracts
 - **v472_quillen_detline_moduli** [E/C/O] `ALPHA.QUILLEN.DETLINE.01` — ALPHA.QUILLEN.DETLINE.01: the determinant line over the U(1)-twist moduli of the collar model carries curvature = the inflow level -- the finite Quillen/Dai-Freed shadow of the v47
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8, research contracts
+  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v470_alpha_inflow_level, v48_em_ward, v367, v460, v461, v470, v471 · cited: 1 architecture e8, research contracts
 - **v473_entropic_action_bridge** [E/C/O/X] `GRAV.ENTROPIC.ACTION.01` — GRAV.ENTROPIC.ACTION.01: the entropic-action bridge -- Bianconi's 'Gravity from entropy' (Phys. Rev. D 111, 066001 (2025); arXiv:2408.14391) quantified as an EXTERNAL CANDIDATE for
   - deps: v359_grav_nonlinear_einstein, v361_grav_backreaction, QG.AMB.01, v2, v36, v44, v58, v60 · cited: research contracts
 - **v474_entropic_hodge_carrier** [E/C/O/X] `GRAV.ENTROPIC.HODGE.01` — GRAV.ENTROPIC.HODGE.01: the OPERATOR level of the entropic-action bridge (work packages 1 + 4-algebra of v473). [E] CAR => Clifford: ten Gamma's on the carrier Fock space Lambda^* 
@@ -1641,8 +1641,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: DIMENSION.UPLIFT.FIREWALL.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector, v984_markov_qca_dilation.py; v987_os_dilation_package.py; v999_weak_collision_hp, v975_dimension_selector_4d, SEAM.BULK4D.RECON.01 · cited: 4 frontier, research contracts
 - **v990_wj_transduction_mechanism** [E/O] `OBS.TRANSDUCTION.01, FTRANSFER.GENERATING.01` — FTRANSFER.GENERATING.01 + OBS.TRANSDUCTION.01 [O-Update: Inhalts-Schatten + endliches W[J] + Transduktions-Schatten; Kontrakte bleiben offen] (Promote-Runde 2026-08-28): **Z6-Zentr
   - deps: v221 (kernel), FO.01 (exploration minimal model), FRB/GW scorecard rows (readout typing), v187_ftransfer_laws, v989_lattice_gate_battery, QFT4D.OS.RECON.01 · cited: research contracts
-- **v991_detline_bulk_edge** [E/O] `SEAM.DETLINE.UNIFICATION.01` — SEAM.DETLINE.UNIFICATION.01 [O-Update: endlicher Bulk-Kante-Schatten [E]; Kontinuum Bismut-Freed bleibt offen] (Promote-Runde 2026-08-28): **Bulk-Twist-Torus-Kruemmung 2 pi * (+1) 
-  - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v974_alpha_faces_computed, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector, v983_simple_current_generator.py; v988_psi_lambda_reduction.py; v993_minimal_defect_selector.py; v994_mmst_criteria_battery.py; v998_seam_modular_closure, v989_lattice_gate_battery · cited: research contracts
+- **v991_detline_bulk_edge** [-] `(no ledger claim)` — SEAM.DETLINE.UNIFICATION.01 [O-Update: endlicher Bulk-Kante-Schatten [E]; Kontinuum Bismut-Freed bleibt offen] (Promote-Runde 2026-08-28): **Bulk-Twist-Torus-Kruemmung 2 pi * (+1) 
+  - cited: research contracts
 - **v992_joint_likelihood_v1** [E/O] `PRED.JOINTLIKELIHOOD.01` — PRED.JOINTLIKELIHOOD.01 [O-Update: v1 ausgefuehrt [N]; Promotionsbedingungen typisiert; Kontrakt bleibt offen] (Promote-Runde 2026-08-28): **9-Observable-Joint-Likelihood** -- chi2
   - deps: v84 (frozen registry), v100 (null MC, reinterpreted), v375 (scorecard), v990_wj_transduction_mechanism · cited: research contracts
 - **v993_minimal_defect_selector** [-] `(no ledger claim)` — AX.P2.01 / AX.P1.01 / SEAM.SIMPLECURRENT.GENERATOR.01 [O-Update: Zensus hebt die v624-Architektur-Bedingtheit auf Gitterebene; Axiom-Typisierung UNVERAENDERT] (Externe Review-Welle
@@ -1671,8 +1671,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - cited: introduction, 4 frontier, research contracts
 - **v1005_relative_pencil_bridges** [-] `(no ledger claim)` — Relative-Pencil-Bruecken (Review-Welle 6, 2026-08-30; Zirkularitaets-Flag): EXAKT [E-finite] Hankel p_n p_{n+2}-p_{n+1}^2=2^{n+1} + Jacobi-Spec {1,2} Diag (4/3,5/3) (v106/v119); Wi
   - cited: introduction, 4 frontier, research contracts
-- **v1006_mmst_lemma_battery** [O] `SEAM.MMST.TYPEIII.CHARGED.01` — SEAM.MMST.TYPEIII.CHARGED.01 [O] (Review-Welle 7, 2026-08-30): fuenf Lemmata in-house (L3, UGF K_G=pi^2/4 Plateau ~1.023, TEL-a N^{-2} Isometrien A_TEL=5120(1+pi/2), ganzzahlige D5
-  - deps: v983_simple_current_generator.py; v988_psi_lambda_reduction.py; v993_minimal_defect_selector.py; v994_mmst_criteria_battery.py; v998_seam_modular_closure, v972_seam_interaction_front.py; v995_kms_subnet_rigidity, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, AX.P1.01 · cited: introduction, 4 frontier, research contracts
+- **v1006_mmst_lemma_battery** [-] `(no ledger claim)` — SEAM.MMST.TYPEIII.CHARGED.01 [O] (Review-Welle 7, 2026-08-30): fuenf Lemmata in-house (L3, UGF K_G=pi^2/4 Plateau ~1.023, TEL-a N^{-2} Isometrien A_TEL=5120(1+pi/2), ganzzahlige D5
+  - cited: introduction, 4 frontier, research contracts
 - **v1007_det16_stability_battery** [-] `(no ledger claim)` — CHIRAL4D.MIRROR.DET16.01 Kandidat [C] (Review-Welle 7, 2026-08-30): T1/T2 bewiesen (v1002); T3 Michalakis-Zwolak zitiert-verifiziert (LTQO, t*>0, Gap>=1/2). [N] Zaehlgerade n=2,3; 
   - cited: introduction, 4 frontier, research contracts
 - **v1008_master_assembly_scaffold** [-] `(no ledger claim)` — QFT4D.LATTICE.FUNDAMENTAL.01 Decision / GAUGE.DETLINE.FIXPOINT.01 [O] (Review-Welle 7, 2026-08-30; 2+1D-Scaffold kohaerent): Prototyp K=0 Plaquette-Exponenten; Materie frozen-link 
@@ -1683,8 +1683,16 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - cited: introduction, 4 frontier, research contracts
 - **v1011_3p1d_ladder_battery** [-] `(no ledger claim)` — 3+1D-Leiter B6-B9 (Nachmittag 2026-08-30): minimales 3+1D viable (Gauss 32768, Confinement, exakte Isotropie, g*~1.915); exaktes Tree-Fixing 524288 -> 4096, Tree-Unabhaengigkeit, D
   - cited: introduction, 4 frontier, research contracts
-- **v1012_toe_gate_witnesses** [O] `TFPT.TOE.COMPLETE.01` — Abend-TOE-Gatter-Welle (2026-08-30): T5 IR-Zeugen + getypter SPLIT (physikalisches c->1, xi*gap~1.089 vs Power 2.034, v_LR=5/3, Kruemmung->1/6; Holonomie+Uhr keine propagierenden M
-  - deps: AX.P1.01, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v352_framework_irreducible, v975_dimension_selector_4d, v286_seam_equivalence_contract, v366_mmst_seam_collar.py; v994_mmst_criteria_battery.py; v998_seam_modular_closure, v492_celestial_z4_orbifold, v983_simple_current_generator.py; v988_psi_lambda_reduction.py; v993_minimal_defect_selector.py; v994_mmst_criteria_battery.py; v998_seam_modular_closure · cited: introduction, 4 frontier, research contracts
+- **v1012_toe_gate_witnesses** [-] `(no ledger claim)` — Abend-TOE-Gatter-Welle (2026-08-30): T5 IR-Zeugen + getypter SPLIT (physikalisches c->1, xi*gap~1.089 vs Power 2.034, v_LR=5/3, Kruemmung->1/6; Holonomie+Uhr keine propagierenden M
+  - cited: introduction, 4 frontier, research contracts
+- **v1013_thermodynamic_dynamics** [-] `(no ledger claim)` — Thermodynamische Dynamik (Spaetabend 2026-08-30): Pflicht-Dynamik-Bein auf Hamiltonian-Klasse GESCHLOSSEN (Theorem-Memo). Uniforme LR-Schranke J=12/5, R=2, z=4, kappa=16043/450, v_
+  - cited: introduction, 4 frontier, research contracts
+- **v1014_bridge_refinements** [-] `(no ledger claim)` — Bruecken-Verfeinerungen (Spaetabend 2026-08-30): Detline-Einschraenkungsisomorphismus endlich VERIFIZIERT (c_phase 3.7e-16, Orientierung 2->1, Restanker U(1)/A0). W-Bruecke: P-anch
+  - cited: introduction, 4 frontier, research contracts
+- **v1015_axiom_core_closure** [-] `(no ledger claim)` — Axiomkern-Abschluss (Montagmorgen 2026-08-31): charakterblinde P-dem-Antwort ABGELEITET (r=(1,1,1) exakt bei Kragen 12 und 16, Demokratie-Residuum 0; Mutanten (1,0,0) und (5/4,1,5/
+  - cited: introduction, 4 frontier, research contracts
+- **v1016_state_gap_batteries** [-] `(no ledger claim)` — Zustands-/Luecken-Batterien (Montagmorgen 2026-08-31): R4 Naht-Modular-Kappe einzigartiger endlicher nicht-entropischer Selektor (D_tr 0.1434, SK-RMS 3.038e-3, Sattel erhalten; Fin
+  - cited: introduction, 4 frontier, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (184 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -1884,7 +1892,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v180_clock_is_mobius** [E/O] `QGEO.ISO.01` — the conformal-realisation premise is REPLACED, via three classical theorems, by a strictly MILDER, non-circular premise QGEO.ISO.01: 'the carrier clock is an order-4 orientation-pr
   - deps: v179_conformal_realisation, v177_seam_marking_kernel, AX.P1.01, v117_monodromy_weyl_a3, v179_conformal_realisation · cited: 3 e8 audit bootstrap, research contracts
 - **v181_clock_is_conformal_symmetry** [E/O] `QGEO.SYM.01` — to a CONFORMAL-symmetry premise QGEO.SYM.01 — via equivariant uniformisation (Nielsen realisation, finite cyclic on genus-0): a CONFORMAL automorphism (strictly weaker than an isom
-  - deps: v286_seam_equivalence_contract, v323_bw_geometric_modular, v180_clock_is_mobius, v179_conformal_realisation, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v117_monodromy_weyl_a3, v180_clock_is_mobius · cited: research contracts
+  - deps: v286_seam_equivalence_contract, v323_bw_geometric_modular, v180_clock_is_mobius, v179_conformal_realisation, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v117_monodromy_weyl_a3, v180_clock_is_mobius · cited: research contracts
 - **v182_reviewer_residual_map** [E/C] `REVIEW.MAP.01` — a unification of the concern structure, NOT a closure (premises stay [O]/[C]).
   - deps: v181_clock_is_conformal_symmetry, v99_koide_flow_time, v169_etaB_boltzmann_interface, v100_numerology_null_mc, v84_frozen_registry, v174_seam_fock_readings, v101_horizon_anchor, v55_coxeter_cycle · cited: 5 redteam
 - **v183_koide_f_corner_transfer** [E/C] `FR.KOIDE.07` — the Koide source→pole factor 53/54 has an OPERATOR origin (external-review proposal, validated): u_pole/u_source = aᵀ(R+Q)𝟙 / (2·𝟙ᵀRa) = 53/(2·27) = 53/54. (1) 𝟙ᵀRa=27 is the E6×A2
@@ -1898,7 +1906,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v188_frontier_wording_guard** [E] `AUDIT.WORDING.01` — 'leptogenesis interface (mE)' (v184 retyped Route B to [C]), 'closed branch also fixes the leptogenesis inputs' (M_R is the seesaw scale, not a compiler power), 'relic scale f_a,m_
   - deps: v184_etaB_anchored_boltzmann, v185_axion_relic_solver, v183_koide_f_corner_transfer, v187_ftransfer_laws · cited: 4 frontier, safeguards
 - **v189_riemann_roch_carrier** [E/C] `ARCH.RRCAR.01` — a fourth, geometric reading. h⁰ and rank H₁ are both fixed by deg=4 (one object, two invariants).
-  - deps: v53_compiler_core, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, QGEO.COHOM.01, v1_e8_glue, v177_seam_marking_kernel, v1_e8_glue · cited: introduction, origin theory
+  - deps: v53_compiler_core, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, QGEO.COHOM.01, v1_e8_glue, v177_seam_marking_kernel, v1_e8_glue · cited: introduction, origin theory
 - **v190_nariai_entropy_bound** [E] `HOR.NARIAI.02` — a variation-free proof of the entropy floor (global minimum on x>0 is 2/3=|Z₂|/N_fam).
   - deps: v101_horizon_anchor, v101_horizon_anchor, v8_horizon · cited: horizon readouts
 - **v191_universal_branch_line** [C] `HOR.BRANCHLINE.01` — an exact affine RELABELING, not a theorem. The map q=7/2+(N_fam²/2)m carries the SdS branch points m=±1/N_fam onto the flavor branch points {2,5}={|Z₂|,g_car} (m=0→7/2). [E] arithm
@@ -1914,7 +1922,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v196_seam_energy_functional** [E/O] `QGEO.VARI.01` — the E_fail variational functional (review path 1), a numerically-testable sharpening of the v194/ENERGY.02 target: E_fail = ‖[ρ,Λ_Σ]‖²_HS + ‖ρ⁴−1‖² + ‖ΘρΘ−ρ⁻¹‖², with E_fail=0 ⇔ th
   - deps: v193_qgeo_energy_commutator, v194_raw_seam_dtn_rp, v181_clock_is_conformal_symmetry, v193_qgeo_energy_commutator, v194_raw_seam_dtn_rp · cited: research contracts
 - **v197_rr_carrier_clifford_d5** [E/C] `ARCH.RRCAR.02` — hardening the Riemann–Roch carrier from g_car to D5 itself (review point 7): the 5-dim carrier mode space C_car:=H⁰(P¹,O(µ4)) generates the so(10)=D5 half-spinor by its even Cliffo
-  - deps: v189_riemann_roch_carrier, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census, v1_e8_glue, v189_riemann_roch_carrier, v1_e8_glue · cited: introduction, origin theory
+  - deps: v189_riemann_roch_carrier, v1005_relative_pencil_bridges.py; v1010_simplicity_bridge_census.py; v1014_bridge_refinements.py; v1015_axiom_core_closure, v1_e8_glue, v189_riemann_roch_carrier, v1_e8_glue · cited: introduction, origin theory
 - **v198_modular_commutator_reduction** [O] `QGEO.MODULAR.01` — cracking the bedrock to a state-invariance. The v194 residual ([ρ,Λ_Σ]=0 on full L², framed as Bisognano–Wichmann with a circularity worry) is (a) made EXACT at the principal-symbo
   - deps: v194_raw_seam_dtn_rp, v193_qgeo_energy_commutator, v181_clock_is_conformal_symmetry, v196_seam_energy_functional, v194_raw_seam_dtn_rp, v177_seam_marking_kernel · cited: horizon readouts, research contracts
 - **v199_seam_state_invariance** [E/O] `QGEO.STATE.01` — attacking ω∘ρ=ω directly on the raw seam: a further localising reduction, not a closure. [E] setup non-circular (ρ = Coxeter of W(A3)=S4, ρ⁴=1, an automorphism of the raw CAR algeb
@@ -2044,9 +2052,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v431_e8_degree_ladder** [E/C/O] `E8.DEGREE.LADDER.01` — E8.DEGREE.LADDER.01: the reverse-audit 'unmapped' E8 Casimir degrees are NOT diffuse overhead but the forced two-family decomposition deg(E8) = 6·spine{2,3,4,5} (+) ({2} U flavor-d
   - deps: v354_e8_reverse_audit, v355_e8_unmapped_bandwidth, v430_other_side_reverse_audit, E8.CAS.01, v91, v135 · cited: 5 redteam
 - **v432_overdet_floor** [E/C] `OVERDET.FLOOR.01` — OVERDET.FLOOR.01: the UNCONDITIONAL improbability floor + the L1<->L2 bridge -- the defensible number that survives even if a skeptic REJECTS the declared formula grammar, compleme
-  - deps: v427_overdet_witness_map, v428_overdet_reclass, v100, v305, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v187 · cited: safeguards
+  - deps: v427_overdet_witness_map, v428_overdet_reclass, v100, v305, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v187 · cited: safeguards
 - **v436_overdet_floor2** [E/C] `OVERDET.FLOOR.02` — OVERDET.FLOOR.02: HARDENS OVERDET.FLOOR.01 (v432) -- the 'is it numerology?' floor does NOT rest on v432's subjective chance assignments. [E] ASSUMPTION-MINIMAL FLOOR: the α cubic-
-  - deps: v432_overdet_floor, v100, v305, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill, v187 · cited: safeguards
+  - deps: v432_overdet_floor, v100, v305, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v187 · cited: safeguards
 - **v437_e8_degree_joint** [E] `E8.DEGREE.JOINT.01` — E8.DEGREE.JOINT.01: a CONSOLIDATION of v6/v66/v355/v431 deriving more from the E8 Casimir degrees WITHOUT crossing the v354/v355 anti-numerology line -- no new per-degree coinciden
   - deps: v354_e8_reverse_audit, v431_e8_degree_ladder, v6, v66, v355, v431 · cited: 5 redteam
 - **v465_seed_crosssector_joint** [E] `SEED.CROSSSECTOR.01` — SEED.CROSSSECTOR.01: the cross-sector one-parameter seed test -- the theta13-independent, externally-runnable slice of v306. TFPT says a CMB EB/TB birefringence angle beta and a qu
@@ -2081,16 +2089,16 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v1001_nu_pentagon_chain** — `(no claim)`
-- **v1002_spin10_mirror_projector** — `(no claim)`
-- **v1003_nu_structural_nulls** — `(no claim)`
-- **v1004_milnor_frobenius_gray** — `(no claim)`
 - **v1005_relative_pencil_bridges** — `(no claim)`
-- **v1006_mmst_lemma_battery** — `SEAM.MMST.TYPEIII.CHARGED.01`
+- **v1006_mmst_lemma_battery** — `(no claim)`
 - **v1007_det16_stability_battery** — `(no claim)`
 - **v1008_master_assembly_scaffold** — `(no claim)`
 - **v1009_rho0_minimizer** — `(no claim)`
 - **v1010_simplicity_bridge_census** — `(no claim)`
 - **v1011_3p1d_ladder_battery** — `(no claim)`
-- **v1012_toe_gate_witnesses** — `TFPT.TOE.COMPLETE.01`
+- **v1012_toe_gate_witnesses** — `(no claim)`
+- **v1013_thermodynamic_dynamics** — `(no claim)`
+- **v1014_bridge_refinements** — `(no claim)`
+- **v1015_axiom_core_closure** — `(no claim)`
+- **v1016_state_gap_batteries** — `(no claim)`
 

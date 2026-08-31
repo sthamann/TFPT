@@ -11,7 +11,7 @@ import { REPO_URL, SITE_URL } from "@/lib/utils";
 import { SITE_VERSION } from "@/lib/version";
 
 const SITE_NAME = "TFPT — Topological Fixed-Point Theory";
-const SITE_DESCRIPTION = `Topological Fixed-Point Theory (TFPT) is a parameter-free physics framework that derives the Standard Model and the fine-structure constant α⁻¹ = 137.0359992 (1.9σ from CODATA-2022) from just two numbers — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5. A discrete compiler reads off the gauge group, three fermion generations, the flavor sector and the scale grammar: ${predictions.length} falsifiable test surfaces, zero fitted constants, only π irreducible. The physics theory by Hamann & Rizzo — distinct from the Brouwer–Lefschetz fixed-point theory of mathematics.`;
+const SITE_DESCRIPTION = `Topological Fixed-Point Theory (TFPT) derives the discrete Standard-Model structure (charges, families, flavor operators) under two axioms — the seam constant c₃ = 1/(8π) and the carrier rank g_car = 5 — together with the fine-structure constant α⁻¹ = 137.0359992 (1.9σ from CODATA-2022). 4D existence, chiral measure, mirror gap, couplings and neutrino dynamics remain open. A discrete compiler reads off the gauge group, three fermion generations, the flavor sector and the scale grammar: ${predictions.length} falsifiable test surfaces. The physics theory by Hamann & Rizzo — distinct from the Brouwer–Lefschetz fixed-point theory of mathematics.`;
 
 export const viewport: Viewport = {
   themeColor: [
@@ -39,14 +39,14 @@ export const metadata: Metadata = {
     "derivation of the fine-structure constant",
     "where does 137 come from",
     "why is alpha 1/137",
-    "Standard Model from first principles",
-    "parameter-free Standard Model",
+    "Standard Model structure from first principles",
+    "discrete Standard Model structure",
     "deriving the constants of nature",
     "fundamental constants from topology",
     "Compiler closure",
     "E8 audit hull",
     "Two axioms",
-    "Standard Model derivation",
+    "Standard Model structure",
     "Fine-structure constant",
     "Strong CP problem",
     "θ_eff = 0",
@@ -172,7 +172,7 @@ const researchProjectJsonLd = {
     "Discrete compiler",
     "D5 A3 E8 glue",
     "Coxeter–cyclotomic compiler",
-    "Standard Model derivation",
+    "Standard Model structure",
     "Strong-CP closure",
   ],
 };

@@ -17,7 +17,7 @@ against the value quoted in the papers.
 cd verification
 python3 -m venv .venv && source .venv/bin/activate   # or reuse an existing venv
 pip install mpmath numpy sympy
-python run_all.py            # runs v1..v13, exits 0 iff all pass
+python run_all.py            # runs all 1009 modules, exits 0 iff all pass
 python v1_e8_glue.py         # any single module also runs standalone
 ```
 

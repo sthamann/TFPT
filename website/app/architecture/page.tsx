@@ -11,13 +11,13 @@ import { SITE_URL } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Architecture — Compiler Pipeline, Horizon & Gravity",
   description:
-    "The TFPT compiler pipeline (reconstruction chain), the seam=horizon story, and the parameter-free gravity emergence — narrative architecture pages moved off the homepage archive.",
+    "The TFPT compiler pipeline (reconstruction chain), the seam=horizon story, and gravity emergence under the named QFT/entanglement premises — narrative architecture pages moved off the homepage archive.",
   alternates: { canonical: `${SITE_URL}/architecture` },
   openGraph: {
     type: "website",
     title: "Architecture — TFPT",
     description:
-      "Compiler pipeline, seam=horizon story, and parameter-free gravity emergence.",
+      "Compiler pipeline, seam=horizon story, and gravity emergence (no free dimensionless Newton coupling under the named QFT/entanglement premises [C]).",
     url: `${SITE_URL}/architecture`,
     siteName: "TFPT — Topological Fixed-Point Theory",
     locale: "en_US",
@@ -39,7 +39,7 @@ export default function ArchitecturePage() {
           <SectionHeader
             eyebrow="Architecture"
             title="How the pieces lock"
-            description="The dependency chain from two axioms to the Standard-Model skeleton, the seam=horizon identification, and the parameter-free Einstein equation — archived here so the homepage stays a narrative, not a museum."
+            description="The dependency chain from two axioms to the Standard-Model skeleton, the seam=horizon identification, and the classical covariant field equation that carries no free dimensionless Newton coupling under the named QFT/entanglement premises [C] — archived here so the homepage stays a narrative, not a museum."
           />
         </div>
       </div>
@@ -53,8 +53,8 @@ export default function ArchitecturePage() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
           <SectionHeader
             id="gravity-heading"
-            eyebrow="Gravity, parameter-free"
-            title="The Einstein equation falls out — with no free dial"
+            eyebrow="Gravity [C]"
+            title="The Einstein equation falls out — no free dimensionless Newton coupling"
             description="The entanglement first law, run with TFPT's atoms, gives the full covariant Einstein equation Gₐᵦ + Λgₐᵦ = c₃⁻¹Tₐᵦ; the seam constant c₃ arrives by three independent routes that all agree — and its temperature leg is now measured on the seam itself (T_seam = 4c₃, v526)."
           />
           <GravityEmergence />

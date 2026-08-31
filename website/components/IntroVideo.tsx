@@ -9,66 +9,46 @@ const VIDEO_SRC = "/intro/tfpt-intro.mp4";
 const POSTER_SRC = "/intro/tfpt-intro-poster.jpeg";
 const CAPTIONS_SRC = "/intro/tfpt-intro.en.vtt";
 
-/** Chapter markers — seconds match the video's ten beats (script.ts). */
+/** Chapter markers — rounded display seconds match the film's six scene starts. */
 const CHAPTERS: { t: number; label: string }[] = [
-  { t: 0, label: "Is reality compiled?" },
-  { t: 20, label: "What comes out" },
-  { t: 65, label: "From how little" },
-  { t: 95, label: "The proof layer (E₈)" },
-  { t: 135, label: "It computes itself" },
-  { t: 165, label: "The beauty" },
-  { t: 195, label: "Not numerology" },
-  { t: 245, label: "Five breakthroughs" },
-  { t: 302, label: "Honest gaps" },
-  { t: 316, label: "The honest answer" },
+  { t: 0, label: "Compiler" },
+  { t: 39, label: "Alpha fixed point" },
+  { t: 83, label: "Dual status" },
+  { t: 140, label: "August structural wave" },
+  { t: 231, label: "Falsification" },
+  { t: 269, label: "Predictions" },
 ];
 
 /**
  * The transcript, grouped by chapter. Mirrored from the video's caption track
- * (captions.json). Rendered as visible (collapsible) text so it is accessible to
+ * (tfpt-intro.en.vtt). Rendered as visible (collapsible) text so it is accessible to
  * screen readers and indexable by search/answer engines (the video pixels are
  * not). Keep in sync with /intro/tfpt-intro.en.vtt.
  */
 const TRANSCRIPT: { heading: string; body: string }[] = [
   {
-    heading: "Is reality compiled? (0:00)",
-    body: "A program begins as a few lines of source code — and unfolds into something huge and detailed. Here's an honest question, not a claim: could reality work the same way? Could the rules of our universe be the output of something tiny — compiled, not chosen? Let's look at where that idea leads — and how it could fail.",
+    heading: "Compiler (0:00)",
+    body: "What if the laws of nature are not a list of fitted constants but the output of a tiny compiler? Topological Fixed-Point Theory begins with two declared axioms. The boundary constant c₃ equals one over eight pi and a five slot carrier. From them, it builds D₅ plus A₃, joins the two through a cyclic μ₄ glue and reaches E₈. Then it reads off the discrete standard model structure, the gauge group, three families, hypercharges, and the flavor operators together with dimensionless fixed point readouts. The claim is not that every physical detail is solved, it is narrower and testable. A small machine constructs a large rigid skeleton then names every bridge it still needs.",
   },
   {
-    heading: "What comes out (0:20)",
-    body: "Start at the end — with what this one idea actually produces. Almost the whole Standard Model — our rulebook for every known particle and force: the forces, why matter comes in three families, the single Higgs, the masses, how they mix. Gravity — Einstein's equation, with its constants fixed instead of assumed. Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy. The strength of light — the famous one over one-thirty-seven — is just one line among many. And twenty-seven concrete, testable predictions. That's the output. The real question: from how much input?",
+    heading: "Alpha fixed point (0:39)",
+    body: "The flagship line is alpha inverse, 137.0359992168. The verifier finds it as the unique positive stationary root of the boundary U(1) Ward identity. It is not fitted to the measured value, mutate the permitted terms and the root does not survive. E₈ is the checksum behind the discrete construction, 240 roots lock the D₅ and A₃ sectors into one even, unimodular rank eight lattice. In the current corpus, 1009 machine-checked verification modules test this architecture, its numerical identities, its reductions and its failures. Every load-bearing claim has a script and a claim identifier. The status ledger, not the rhetoric, decides whether a line is exact, conditional, open or a kill test.",
   },
   {
-    heading: "From how little (1:05)",
-    body: "Here's the surprising part: almost nothing goes in. Two numbers. A tempo — set by the edge of space. And a width: how many slots the building block has — five. And those two aren't even truly free. Strip it down, and what's left is one small whole-number pattern — and π. A huge, detailed result from a tiny source. That gap — between almost nothing and all of this — is the whole story.",
+    heading: "Dual status (1:23)",
+    body: "That discipline forces two status cards to sit side by side. The first is the compiler rest. It has three named interfaces. v_geo, the one dimensionful calibration that pure numbers cannot supply. G_net, the seam-to-E₈ net identification, conditionally closed on its MMST route, but open as an unconditional parent claim. And F_transfer, the typed interfaces that carry selected compiler structures into masses, QCD, baryogenesis and cosmology. Beside it sits a stricter card, the physical theory of everything rest. Its master contract is the AND of eight gates. None is fully closed. They demand the seam continuum, a complete three plus one dimensional local quantum theory, a chiral measure and uniform mirror gap, controlled infrared physics, internally fixed couplings and neutrino dynamics, emergent gravity and the physical state. So the honest sentence is precise. TFPT closes a discrete compiler. It does not yet certify a strict physical theory of everything.",
   },
   {
-    heading: "The proof layer — E₈ (1:35)",
-    body: "How can two numbers carry that much? Because they don't just get plugged in — they have to pass a test. The parts they build must fit into one rigid mathematical object: E₈. E₈ isn't a force of nature. It's a proof layer — the referee that certifies the pieces fit only one way. Two hundred and forty points, one perfect pattern. If anything were off, nothing would lock. Most possible universes simply don't compile.",
+    heading: "August structural wave (2:20)",
+    body: "The August wave did not erase that frontier. It compressed it. First, the seam boundary theory was reduced to one external charged scaling limit theorem. Five supporting lemmas were proved in-house. The cross product step, a uniform growth bound, the first telescoping estimate, the integer D₅ plus A₃ pairings and the order-four outer action. The remaining analytic target is isolated in a 20 plus page memorandum and a send-ready specialist package. Second, the DET16 mirror mechanism is exact on the full 2¹⁶ cluster. A rank one projector, a gap exactly equal to one and all 45 Spin(10) commutators vanishing. A cited stability theorem now supplies a volume uniform finite chain leg. The full dynamical four-dimensional claim remains conditional. Third, the first 3+1-dimensional lattice scaffold now lets gauge content, a chiral wall mirror gapping and the seam clock coexist. The Hamiltonian-class dynamics has a Lieb–Robinson bound, a norm-convergent time evolution, a gauge-invariant quasilocal algebra and ground and thermal states. Phase uniqueness, the limiting gap and infrared universality remain open. Finally, the finite axiom core premises now derive in-house. The remainder is zero modulo the same external MMST identification. P2 remains typed as an axiom and the genuine four-dimensional functional is still a gate. The gain is not a victory slogan, it is convergence. Many vague gaps have become one external theorem, one physical unit and a short list of explicit four-dimensional obligations.",
   },
   {
-    heading: "It computes itself — the fixed point (2:15)",
-    body: "Now turn it around. If the proof closes for only one tempo and one width… then the proof decides them. The inputs are forced by the structure they build. The thing works out its own starting point. The loop closes on itself. That's the fixed point the theory is named after. Not a model you tune until it fits — a structure that has to be what it is.",
+    heading: "Falsification (3:51)",
+    body: "A serious compiler must also record what does not compile. The number-preserving Casimir projector does not isolate the mirror state, its multiplicities explode instead. Eight preregistered Schur-texture constructions all fail because the even seam data forces the wrong degeneracy and the naive extension of the alpha grammar to the strong and weak couplings fails in all 64 tested conventions while the U(1) control survives. These routes are not quietly deleted, they become permanent constraints. The future mechanism must evade the exact reason each one died. That is how the project protects itself from numerology. A failed pattern is evidence, not decoration.",
   },
   {
-    heading: "The beauty (2:45)",
-    body: "Once you see it, the elegance is hard to miss. The same small numbers — two, three, five — run through every part, because it's all one object. And it isn't frozen. A simple clock gives the whole thing a single resting state. So the constants aren't dialled in by hand — they're where it settles. Almost no free choices, one connected picture.",
-  },
-  {
-    heading: "Is this just numerology? (3:15)",
-    body: "Now the fair objection: small whole numbers that fit reality — isn't that just numerology, like seeing faces in clouds? We took it seriously. Nobody drew this picture top-down. It assembled itself — out of hundreds of small, independent checks, each verified by computer, that slowly clicked into one whole. E₈ proves the pieces can fit. These checks prove we're not fooling ourselves — every load-bearing claim machine-verified twice, with a team tasked to break it. We froze predictions before the data, then ran two hundred thousand random look-alikes. They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero.",
-  },
-  {
-    heading: "Five breakthroughs (4:05)",
-    body: "And it hasn't stopped. Five new results — each machine-checked, each honestly labelled. One. The calculating engine of the deepest route used to be declared. Now it is derived — its key number, sixty-four, is computed three independent ways instead of put in. One global integral stays open. Two. The bridge from timeless Euclidean math back to real, physical time now stands — at the free level: the reflection structure exists, and the little clock returns as a genuine time operator. Three. The seam has a temperature — exactly the black-hole value its founding constant demands. Geometry, anomaly, and now temperature — all from c₃ = 1/(8π). The seam is a miniature horizon. Four. Ten blind tests prove the one remaining input bit cannot be derived — it is a genuine choice. But it is now physically defined — in principle readable by an interferometer. One axiom becomes one measurement. And five — reported just as loudly: the first interacting toy model fails one of our own kill tests. A real threat — and the first constructive filter for the one construction site left.",
-  },
-  {
-    heading: "Honest gaps (5:02)",
-    body: "So what's still open? The interacting seam. One global integral. One unit no pure number can give. Every gap labelled — and still killable: neutrino mass, proton decay, dark energy. One clean miss, and it's wrong.",
-  },
-  {
-    heading: "The honest answer (5:16)",
-    body: "So — is reality compiled? We still don't know. That's the honest answer. But the version you can test keeps getting sharper — more derived, less declared; every gap marked, every test named. Maybe the constants were never arbitrary. Maybe they simply had to add up.",
+    heading: "Predictions (4:29)",
+    body: "The newest neutrino chain shows how the live frontier is meant to work. As a candidate, it gives a normal-ordering mass sum near 0.0599 electron volts, a leptonic CP phase near 287.7 degrees and a pentagon-class misalignment with phase 288 degrees and angle two pi over 35. At finite level, all three mixing angles land within 0.56 sigma. But the mechanism that turns the seam operator into the flavor operator is still open. There is no seesaw closure. The labels stay candidate and numerical, not exact physics. DESI can press on the mass floor. DUNE can separate 287.7 degrees from the older 240 degree branch. JUNO can test the reactor-angle structure. So is reality compiled? We still do not know. What exists now is more disciplined than an answer by proclamation. A machine-checked compiler with a sharpened map of what remains. Every closed line has a proof object. Every gap has a name. Every prediction has a kill switch.",
   },
 ];
 
@@ -79,10 +59,10 @@ const videoJsonLd = {
   "@type": "VideoObject",
   name: "TFPT — Is reality compiled?",
   description:
-    "A short film on Topological Fixed-Point Theory (TFPT) built around one honest question: is reality compiled? It opens with the output — almost the whole Standard Model (forces, three generations, one Higgs, the masses and mixings, strong-CP = 0), gravity (Einstein's equation with fixed constants), pieces of cosmology, the fine-structure constant α⁻¹ = 137.0359992 as just one line among many, and 27 testable predictions — including the derived measure chain and the thermal seam — then shows how little goes in: two numbers that reduce to one small whole-number pattern and π. E₈ is the proof layer: the referee (240-root projection) where the parts fit only one way, so the inputs are forced — a fixed point. The same 2·3·5 runs through every part, and a spectral-gap clock settles on one attractor (constants selected, not tuned). On numerology: hundreds of machine-checks assembled the picture bottom-up, verified twice (Wolfram + Lean) with a red team; 13 predictions were frozen before the data and beat 200,000 random look-alikes (≤5/13), odds below 10⁻³⁰. Five machine-checked breakthroughs sharpen the picture; the remaining gaps stay labelled and killable (neutrino mass, proton decay, dark energy). The verdict is humble: we still don't know — but here is a version you can test.",
+    "A film on Topological Fixed-Point Theory as a machine-checked discrete compiler, not a completed Theory of Everything. Six scenes cover the two-axiom compiler to E₈, the stationary alpha fixed point, the separate compiler and strict-physical-TOE status cards, the August structural wave, permanently recorded falsifications, and candidate neutrino predictions with DESI, DUNE, and JUNO kill switches.",
   thumbnailUrl: [`${SITE_URL}${POSTER_SRC}`],
-  uploadDate: "2026-07-23",
-  duration: "PT5M30S",
+  uploadDate: "2026-08-31",
+  duration: "PT5M29S",
   contentUrl: `${SITE_URL}${VIDEO_SRC}`,
   inLanguage: "en",
   isFamilyFriendly: true,
@@ -140,7 +120,7 @@ export function IntroVideo() {
           align="center"
           eyebrow="Start here"
           title="Is reality compiled?"
-          description="A short film: the whole Standard Model, gravity and 27 predictions out of almost nothing — why E₈ is the proof layer, how the two inputs fix themselves, the beauty of one connected object, and how we keep it honest rather than numerology."
+          description="A 5:29 film on TFPT's machine-checked discrete compiler, its separate open physical-TOE gates, the August structural wave, documented falsifications, and candidate predictions with live kill switches."
         />
 
         <figure className="mt-10">

@@ -97,11 +97,12 @@ const LAYERS: Layer[] = [
     key: "open",
     marker: "[O]",
     kicker: "Open interfaces",
-    title: "v_geo · G_net · F_transfer",
+    title: "v_geo · G_net · F_transfer · Rest_TOE",
     items: [
       "v_geo — one dimensionful scale anchor (metrology primitive) [O]",
       "G_net — metric-sector inclusion (algebra [E]; seam coupling [C] closed modulo cited theorems, v367/v368 + v376–v379, ground-state witnesses v489/v490; crossed-product certified extension (v469))",
       "F_transfer — typed runnable solver suite (v371–v375), each with a kill test [C]",
+      "Rest_TOE / T1–T8 — named AND TFPT.TOE.COMPLETE.01 [O] (ten-component rest; not a closure)",
     ],
     kill: "Declared honestly, not hidden — v_geo is the one genuine [O] unit; G_net and F_transfer are [C], written up as numbered research contracts.",
     link: { href: "/verification#open-gates", label: "The research contracts" },

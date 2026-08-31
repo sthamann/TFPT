@@ -116,3 +116,7 @@ experiments/frb-tfpt-signatures/new-data/
 # local-only, not part of the published record. NB: anchored "/wolfram/" so it does
 # NOT match the tracked verification/wolfram mirror.
 /wolfram/
+# Agent routing telemetry (local cost forensics, per-machine)
+.cursor/agent-runs/*.jsonl
+
+experiments/ccc-crossover-disc/data/*.fits

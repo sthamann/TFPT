@@ -1,0 +1,75 @@
+{
+  "_comment": "Routing policy for TFPT subagents. Rule: .cursor/rules/agent-economics.mdc, skill: .cursor/skills/agent-routing/. Enforced by .cursor/hooks/route-subagent.py.",
+  "tiers": {
+    "L0": ["composer-2.5-fast"],
+    "L1": ["cursor-grok-4.6-xhigh", "gpt-5.3-codex", "claude-4.5-sonnet-thinking", "glm-5.2-high"],
+    "L2": ["gpt-5.6-sol-high", "gemini-3.1-pro"],
+    "L3": [
+      "claude-opus-5-thinking-high",
+      "claude-4.6-opus-high-thinking",
+      "claude-4.5-opus-high-thinking",
+      "claude-fable-5-thinking-high",
+      "gpt-5.4-xhigh-fast"
+    ]
+  },
+  "tier_default_model": {
+    "L0": "composer-2.5-fast",
+    "L1": "cursor-grok-4.6-xhigh",
+    "L2": "gpt-5.6-sol-high",
+    "L3": "claude-opus-5-thinking-high"
+  },
+  "subagent_policy": {
+    "explore": { "default": "L0", "cap": "L1" },
+    "shell": { "default": "L0", "cap": "L1" },
+    "generalPurpose": { "default": "L1", "cap": "L2" },
+    "best-of-n-runner": { "default": "L1", "cap": "L2" },
+    "*": { "default": "L1", "cap": "L2" }
+  },
+  "untouched_subagents": [
+    "bugbot",
+    "security-review",
+    "ci-investigator",
+    "cursor-guide",
+    "browser-use"
+  ],
+  "fast_downgrade": {
+    "cursor-grok-4.5-high-fast": "cursor-grok-4.6-xhigh",
+    "gpt-5.4-xhigh-fast": "gpt-5.6-sol-high"
+  },
+  "escalation_signals": [
+    "tests-still-failing",
+    "same-hypothesis-failed-twice",
+    "review-rejected",
+    "proof-gap",
+    "numeric-disagreement",
+    "architecture-decision",
+    "audit-red-after-two-fixes",
+    "user-requested"
+  ],
+  "handoff_char_budget": 60000,
+  "read_budget": {
+    "log_chars": 40000,
+    "warn_chars": 120000,
+    "deny_chars": 400000
+  },
+  "_price_comment": "Estimated input USD per 1M tokens, Cursor list price. Third-party models carry the +0.25 Cursor token fee; Cursor-native models (grok, composer) do not. Longest-prefix match on the model name.",
+  "input_usd_per_mtok": {
+    "claude-fable-5": 10.25,
+    "claude-opus-5": 5.25,
+    "claude-4.6-opus": 5.25,
+    "claude-4.5-opus": 5.25,
+    "claude-sonnet-5": 2.25,
+    "claude-4.5-sonnet": 2.25,
+    "gpt-5.6-sol": 4.25,
+    "gpt-5.6": 2.25,
+    "gpt-5.4": 4.25,
+    "gpt-5.3": 2.25,
+    "gemini-3.1-pro": 2.25,
+    "glm-5.2": 2.25,
+    "cursor-grok-4.6-xhigh": 2.0,
+    "cursor-grok": 4.0,
+    "grok-4.6": 2.0,
+    "composer-2.5": 0.5,
+    "default": 3.0
+  }
+}

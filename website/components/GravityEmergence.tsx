@@ -7,7 +7,8 @@ import { Math } from "./Math";
  * GravityEmergence -- animated visual for v358 (GRAV.ENTROPY.EQUILIBRIUM.01):
  * the three independent origins of c3 converge to 1/(8pi), the thermodynamic and
  * geometric origins coincide via |mu4| = |Z2|*chi = 4, and the entanglement first
- * law delta S = delta<K> yields the parameter-free linearised Einstein equation.
+ * law delta S = delta<K> yields the linearised Einstein equation with no free
+ * dimensionless Newton coupling under the named QFT/entanglement premises [C].
  */
 
 const ORIGINS = [
@@ -48,10 +49,10 @@ export function GravityEmergence() {
     <div className="mt-8 overflow-hidden rounded-2xl border border-slate-700/40 bg-slate-950/40 p-4 sm:p-6">
       <div className="flex flex-wrap items-center justify-between gap-2">
         <h4 className="font-serif text-base font-semibold text-slate-50">
-          Gravity is parameter-free — three origins of <span className="font-mono">c₃</span> converge
+          The classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises [C] — three origins of <span className="font-mono">c₃</span> converge
         </h4>
-        <span className="rounded-full bg-emerald-500/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-emerald-200 ring-1 ring-emerald-400/30">
-          v358 / v359 · [E]
+        <span className="rounded-full bg-orange-500/15 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-orange-200 ring-1 ring-orange-400/30">
+          v358 / v359 · [C]
         </span>
       </div>
 
@@ -59,7 +60,7 @@ export function GravityEmergence() {
         The entanglement first law <Math>{"\\delta S = \\delta\\langle K\\rangle"}</Math> (Jacobson;
         Faulkner et al.), run with TFPT&rsquo;s atoms, gives the <em>full covariant</em> Einstein equation
         (fixed-volume stationarity → the Einstein tensor, v359) with <strong className="text-slate-200">both
-        coefficients fixed</strong> — no free dimensionless dial. The seam constant{" "}
+        coefficients fixed</strong> under the named QFT/entanglement premises [C] — no free dimensionless Newton coupling. The seam constant{" "}
         <span className="font-mono">c₃ = 1/(8π)</span> arrives by{" "}
         <strong className="text-slate-200">three independent routes</strong> that all agree.
       </p>
@@ -138,20 +139,22 @@ export function GravityEmergence() {
         className="mt-4 rounded-xl border border-blue-400/30 bg-blue-500/5 p-4 text-center"
       >
         <div className="text-[10px] font-semibold uppercase tracking-widest text-blue-200/90">
-          parameter-free Einstein equation (full covariant)
+          classical covariant field equation [C]
         </div>
         <div className="mt-1 text-lg text-blue-50">
           <Math>{"G_{ab} + \\Lambda g_{ab} = c_3^{-1}\\, T_{ab} = 8\\pi\\, T_{ab}"}</Math>
         </div>
         <div className="mt-1 text-[11px] text-blue-100/75">
-          no free dimensionless Newton dial — <span className="font-mono">G</span> is the one unit{" "}
+          no free dimensionless Newton coupling under the named QFT/entanglement premises [C];{" "}
+          <span className="font-mono">G</span> is the one unit{" "}
           <span className="font-mono">v_geo</span>
         </div>
       </motion.div>
 
       <div className="mt-4 rounded-md border border-slate-700/40 bg-slate-950/60 p-3 text-[11px] leading-relaxed text-slate-300">
         <strong className="text-slate-100">Honest residual.</strong> This closes the{" "}
-        <em>full covariant</em> equation parameter-free (v359: fixed-volume → the Einstein tensor, with
+        <em>full covariant</em> equation with no free dimensionless Newton coupling under the named
+        QFT/entanglement premises [C] (v359: fixed-volume → the Einstein tensor, with
         Lovelock making matter conservation an output); the matter flux is assembled (the Casini–Huerta–Myers
         ball modular Hamiltonian, boost via Bisognano–Wichmann, <span className="font-mono">v323</span>) and
         the entropy density is atom-fixed (<span className="font-mono">1/4 = 1/|μ₄|</span>, central charge{" "}

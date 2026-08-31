@@ -21,7 +21,7 @@ const GATES: Gate[] = [
     tag: "Interface 1",
     marker: "[O]",
     title: "v_geo — the one scale anchor",
-    body: "Quark ratios are closed (Readout Rigidity, c_u/c_d = 55/117); only the absolute scale v_geo remains. The No-Unit theorem (v153) makes it an irreducible metrology primitive — the same unit as gravity's 1/G, over-determined to 0.11% by gravity vs dark energy (v274). A unit, not a gap. The interface is now structurally closed as an R₊ scale torsor in calibration form (v725: complete export table, dimension-matrix rank 1, all conditions λ-homogeneous; one external reference selects the point, everything else is prediction) — no scale derivation, the [O] typing stands; the one remaining dimensionless ratio is named: H_EW = ln(M̄_Pl/v_EW) = 37.1776.",
+    body: "Quark ratios are closed (Readout Rigidity, c_u/c_d = 55/117); only the absolute scale v_geo remains. CLOSED METROLOGY STRUCTURE (R₊ unit torsor; one dimensionful calibration necessary by dimensional analysis — the No-Unit theorem v153/v725): the same unit as gravity's 1/G, over-determined to 0.11% by gravity vs dark energy (v274). A unit, not a gap; display stays [O], no physical [E]. The interface is structurally closed as an R₊ scale torsor in calibration form (v725: complete export table, dimension-matrix rank 1, all conditions λ-homogeneous; one external reference selects the point, everything else is prediction) — no scale derivation; the one remaining dimensionless ratio is named: H_EW = ln(M̄_Pl/v_EW) = 37.1776. Unit choice closed; dimensionless hierarchies (M_Pl/v_EW, M_R/M_scal, Λ_QCD/v_EW, T_reh/M_scal) remain predictive obligations.",
     formula: "\\det R = 8,\\ \\operatorname{Spec}(Q_+)=\\{1,2,3\\};\\ U_{\\mathrm{point}} \\to v_{\\mathrm{geo}}",
     tone: "border-amber-400/30 bg-amber-500/5",
   },
@@ -37,7 +37,7 @@ const GATES: Gate[] = [
     tag: "Interface 3",
     marker: "[C]",
     title: "F_transfer — one typed runnable solver suite",
-    body: "One typed, runnable solver suite — Koide (v371), η_B (v372), axion relic (v373), m_p/m_e (v374) — each with a kill test, folded into a prediction-observatory CI (v375). A guard (v187) keeps them [C] bridges, never compiler outputs. The external-clock typing is now confirmed from the inside: both thermal-time routes for internalizing the four clocks are machine-killed (v723 STT-KILLED, v724 T3B-DEAD) — the anchor census sharpens to {one unit (v_geo-class), one angle θᵢ, one lattice O(1) C_p} — and the frozen external-clock contract is now EXECUTED on its expected K1 kill (v777, NO-COMMON-CONNECTION: no common continuous clock exists; the fibered functor with the constant seam cocycle {0, ±Δ²/2} survives). The coset assignment of the fibered functor's clock fibers is now a theorem from KMS/modular typing (v792, KMS-COSET-THEOREM: S = −(ln λ)²/2 from the time-1 holonomy multiplier; blind protocol, exact unblinding).",
+    body: "One typed, runnable solver suite — Koide (v371), η_B (v372), axion relic (v373), m_p/m_e (v374) — each with a kill test, folded into a prediction-observatory CI (v375). A guard (v187) keeps them [C] bridges, never compiler outputs. The external-clock typing is now confirmed from the inside: both thermal-time routes for internalizing the four clocks are machine-killed (v723 STT-KILLED, v724 T3B-DEAD) — the anchor census sharpens to {one unit (v_geo-class), one angle θᵢ, one lattice O(1) C_p} — and the frozen external-clock contract is now EXECUTED on its expected K1 kill (v777, NO-COMMON-CONNECTION: no common continuous clock exists; the fibered functor with the constant seam cocycle {0, ±Δ²/2} survives). The coset assignment of the fibered functor's clock fibers is now a theorem from KMS/modular typing (v792, KMS-COSET-THEOREM: S = −(ln λ)²/2 from the time-1 holonomy multiplier; blind protocol, exact unblinding). Honest residual (wave 3, FTRANSFER.SK.RHO0.01 [O]; mechanism executed wave 4, v1000): cosmological transfers need the pair (S, ρ₀), not W[J] alone — FTRANSFER.GENERATING.01 covers equilibrium correlators; KMS/FDT ~10⁻¹⁷, ρ₀-contrast 3.550×10⁻³ vs static 10⁻¹⁶; the typed candidate is θ_i = 3π/5 unique in the μ₄ lift [C] (no cosmological solve).",
     tone: "border-slate-500/30 bg-slate-500/5",
   },
 ];
@@ -46,7 +46,7 @@ const RESIDUAL: { label: string; marker: string; blurb: string; tone: string }[]
   {
     label: "v_geo",
     marker: "[O]",
-    blurb: "One dimensionful scale — irreducible by the No-Unit theorem and over-determined (gravity = dark energy = M̄_Pl to 0.11%, v274); the same primitive as gravity's 1/G.",
+    blurb: "Closed metrology structure (R₊ unit torsor; one dimensionful calibration necessary by dimensional analysis — No-Unit v153/v725), over-determined (gravity = dark energy = M̄_Pl to 0.11%, v274); the same unit as gravity's 1/G. Display stays [O], no physical [E].",
     tone: "from-amber-500/15 to-amber-500/[0.03] border-amber-400/30",
   },
   {
@@ -74,12 +74,15 @@ function ResidualTreemap() {
   return (
     <figure
       className="mt-8 rounded-2xl border border-slate-700/40 bg-slate-950/30 p-4 sm:p-5"
-      aria-label="The complete open residual: v_geo, G_net and F_transfer"
+      aria-label="The complete open residual: compiler Rest = v_geo ⊕ G_net ⊕ F_transfer, beside Rest_TOE"
     >
       <figcaption className="mb-3 text-center font-mono text-sm text-slate-300">
         Rest = <span className="text-amber-200">v_geo</span> ⊕{" "}
         <span className="text-amber-200">G_net</span> ⊕{" "}
         <span className="text-slate-200">F_transfer</span>
+        <span className="block mt-1 text-[11px] font-sans text-slate-400">
+          compiler rest · beside it Rest_TOE (ten named [O] contracts / eight TFPT.TOE.COMPLETE.01 gates; nothing claimed closed)
+        </span>
       </figcaption>
       <div className="grid gap-3 sm:grid-cols-3">
         {RESIDUAL.map((r) => (
@@ -221,7 +224,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live residual is just three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer. Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways — and the entire boundary-QFT layer (Dirac, cutoff, gauging, glue) now collapses onto that same condition via the Modular Spectral Closure. Nothing is hidden, nothing is overclaimed."
+          description="After the compiler closure the live residual is three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer — plus the strict-physical-TOE accounting Rest_TOE of the 2026-08-27/28 contract wave (ten named [O] summands; nothing claimed closed). Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways — and the entire boundary-QFT layer (Dirac, cutoff, gauging, glue) now collapses onto that same condition via the Modular Spectral Closure. Nothing is hidden, nothing is overclaimed."
         />
 
         <ClosingCondition />

@@ -25,10 +25,13 @@ wo mit welchem Ergebnis gesucht".
 | Ordner | Zweck | Status |
 | --- | --- | --- |
 | `lean4-carrier-rigidity/` | Maschineller Beweis des Carrier-Polynoms `6Y² − Y − 1 = 0` und der Hyperladungs-Spur in Lean 4. Zentrales Theorem aus Paper 2 als formal verifiziertes Computer-Theorem. | aktiv |
+| `tfpt-discovery/` | Standalone Theorie-Probes. Der DET16-Dynamiklink-Probe auditiert jetzt die Fröhlich--Pizzo-Lie--Schwinger-Hypothesen für endliche Z₂/Z₄-Offenketten (149/149 Checks), einschließlich parametischem volumenuniformem Gap-Fenster und Langstrecken-Mutant; keine numerische Schwelle wird erfunden. | aktiv |
 | `frb-tfpt-signatures/` | Preregistrierte, multi-Source, surrogat-kalibrierte FRB-Suche (FRB.01–FRB.09 + FRB.02b). **(search.txt §1,2,6)** Verdict: `not_confirmed_not_refuted`. | aktiv |
-| `cmb-birefringence-seed/` | Cross-Domain-Seed-Linie: ein `φ₀` → `β` **und** `Ω_b`; **Shared-Seed-Erweiterung** φ₀→β+Ω_b+θ13+Cabibbo (χ²/dof=1.23, kanonisch wie `seed-consistency`). **(search.txt §3, Prio 1)** | aktiv |
-| `cmb-inflation-scalaron/` | Starobinsky/Scalaron `n_s, r, A_s` aus `c₃` vs Planck/BICEP-Keck/DESI/CMB-S4; **scharf falsifizierbar** (`r≈0.0045`). | aktiv |
+| `cmb-birefringence-seed/` | Cross-Domain-Seed-Linie: ein `φ₀` → `β` **und** `Ω_b`; **Shared-Seed-Erweiterung** φ₀→β+Ω_b+θ13+Cabibbo (χ²/dof=1.23, kanonisch wie `seed-consistency`); **Rotation-Fingerprint** (TB/TE=tan2β, 2EB/(EE−BB)=tan4β, Frequenz-/Anisotropie-/Cross-Nulls — 5 Beine konsistent, 2 offen). **(search.txt §3, Prio 1)** | aktiv |
+| `cmb-inflation-scalaron/` | Starobinsky/Scalaron `n_s, r, A_s` aus `c₃` vs Planck/BICEP-Keck/DESI/CMB-S4; **scharf falsifizierbar** (`r≈0.0045`); **N⋆-freier Closure-Invariant** `6π²A_s(1−n_s)²/c₃⁷ = 1` (Planck: −0.13σ; Kill: robustes `r < 0.0037`). | aktiv |
+| `cmb-eb-logcomb/` | **Erste Kamm-Suche im paritäts-ungeraden EB-Kanal** (Faithful-Class-Positivkanal per Sheetflip-Brücken-Satz): `ω₊ = 2.5827` gefroren+gehasht vor Datenkontakt, PR4/NPIPE-HFI-Stacked-EB. Verdict: `null` (p = 0.81; ω₋-Kill-Leg überlebt, p = 0.74); Decider: LiteBIRD/SO-Klasse-EB. | aktiv |
 | `neutrino-mixing/` | PMNS `θ12/θ13/θ23` + CKM `δ` vs NuFIT 6.0/JUNO/LHCb — **prediction_of_record** (θ12 −0.02σ). | aktiv |
+| `nu-scalaron-falsification/` | **Falsifikationsprojekt für die Skalaron-Spur-Sprosse** `M_R = 3c₃^{7/2}M̄` (FLAV.NUSCALE.05/v986, Mechanismus [O]): eingefrorene Kette (SHA `4941b396`) → `m₃ = 0.0512 eV`, `Σm_ν = 0.0600 eV`, `m_β = 9.2 meV`, `m_ββ ∈ [1.4, 3.8] meV` (NO, Phasenintervall), Leptogenese-Leg reported. Verdict: `consistent` (DESI-UL-Marge +0.004 eV; LCDM-Posterior-Squeeze = modellabhängige Tension wie die Σm_ν-Zeile). **Ein DESI-Klasse-Update entscheidet.** | aktiv |
 | `eht-achromatic-residual/` | Achromatischer dyonischer Residual-Test `β_BH(r) ∝ 1/r²` (3 Null-Tests). **(search.txt §4)** **Echte EHT-M87-2017-Polarimetrie ingestiert** (`tfpt-eht realdata`); **Injection-Recovery-Suite** (`tfpt-eht inject`, 4/4 korrekt klassifiziert); GRMHD-Residual-Nulls datenlimitiert. | aktiv |
 | `seed-consistency/` | Shared-Seed-Stresstest: β/Ω_b/Cabibbo/θ13 → φ₀, Joint-Fit + LOO + Dominant-Pull. **v2** GLS/PPC; **v3** reactor-only aus Daya Bay/RENO/Double Chooz (komb. `sin²θ13=0.02204`, χ²/dof=1.00, θ13 −1.62σ), NuFIT-global nur Shadow. **v4 NEU (2026-07-06) — Decoder-Test:** EIN latentes u fittet alle vier Rohkanäle (χ²=4.10, dof 3, p=0.25), **AIC bevorzugt den 1-Parameter-Decoder über das saturierte Modell**, **0/14 Single-Swap-Nachbar-Decoder** schlagen die TFPT-Links, **0.0tes Perzentil von 2000 Random-Placebo-Decodern** (Median-χ²≈1200) — die Cross-Kanal-Ratios sind architekturspezifisch (Konsistenz, kein Beweis). | aktiv |
 | `gw-ringdown-echo/` | Ringdown-Echo-Amplitudenquotient `≤ (2/3)⁶`, Katalog-Feasibility auf GWTC-5.0 **(search.txt §5)**; **alle Templates rotverschiebungskorrigiert** (Detektor-Frame `M(1+z)`; vorher GW190521 ~1.6× daneben); **Stage 1** statische Echo-Suche auf echtem Strain, **die 10 lautesten Ringdowns inkl. GW250114 (SNR 78.6, O4b)** = kein Kernel-Echo; **Stage 1b** gestackte Suche über 23 Detektor-Streams = **STACKED NULL** (p=0.262, kernel-konsistent 0/23); **Stage 1c** Signatur-Battery (Energie-Lesart `(2/3)³`, Step `2/3`, μ₄-Bounce-Phasen {0,π/2,π,3π/2} = Boundary-Birefringenz-Analogon, Lags 0.5–350 ms inkl. Planck-Fenster, Joint-220+221-Subtraktion, **Off-Source-PSD**, Bonferroni ×12) = **NO_VARIANT_ECHO**; **Stage 1d v2** Punkt-Test am Theorie-Lag `2.288 M_det` (Spin-Scan, Skip-First, **Joint-QNM+Zug-Fit** gegen Kurz-Lag-Selbstabsorption) = **NO_POINT_ECHO** (best p_bonf 0.052); **Stage 1e NEU** Flächenquant-Spektralkamm (Bekenstein–Mukhanov, `ΔA=4ln3` ⇒ `f_n=n·ln3/(16π²M_det)`, Spacing-Battery-Kontrolle) = **NO_BM_COMB** (power-limitiert); **Stage 2** dynamischer Walled-Clock-MF (Bend 2.7095) inkl. GW250114 = `NO_KERNEL_RECOVERY` + Bend in EINER Recovery entartet → die unterscheidende Signatur ist der Kaskaden-Kamm (`ω=2.58`); **16-kHz-Re-Run NEU** (`point --hires`, `fetch_strain_16k.py`; 4 Events, ~12–13 Samples pro Lag-Step statt ~3) = **NO_POINT_ECHO unverändert** (best p_bonf 0.053) → der Null ist **kein** Lag-Auflösungs-Artefakt; **Stage 1h NEU** ε₉₀-**Injektions-Limits** (kalibrierte ABSOLUTE Obergrenzen, First-Echo/A220, 90% CL, Off-Source-Injektionen mit exakter Stage-1d-Pipeline): GW200129 **0.63**, GW150914 **0.69**, GW190521 1.86, GW250114 15.9 (schwacher A220-Fit); Stack konservativ **0.63** (4 kHz)/0.85 (16 kHz) — die Kernel-Decke `(2/3)⁶=0.088` liegt ~7× unter der aktuellen Single-Event-Reichweite. | aktiv (Stage 1h/2) |
@@ -109,14 +112,14 @@ Live-σ-Watchdog dafür existiert bereits in der Verifikations-Suite als
 CODATA/NuFIT/Planck; θ13 (+2.0σ) ist dort der dokumentierte Druckpunkt.)
 
 <!-- SCORECARD_STATS:START (generated by build_evidence_scorecard.py; do not edit) -->
-**Scorecard (auto-generated from `evidence_scorecard.json`): 121 Zeilen — 47 consistent, 9 tension, 27 null, 33 data_limited, 1 kill_channel, 4 parked.**
+**Scorecard (auto-generated from `evidence_scorecard.json`): 127 Zeilen — 50 consistent, 9 tension, 30 null, 33 data_limited, 1 kill_channel, 4 parked.**
 
-- nach `evidence_class`: 20 downstream_bridge, 30 external_data, 12 internal_consistency, 3 parked, 56 search_target
-- nach `leakage_class`: 3 architecture_core, 2 core_operator, 2 detector_control, 20 downstream_bridge, 27 external_data, 10 internal_kernel, 3 parked, 13 search_target, 41 surface_leakage
+- nach `evidence_class`: 20 downstream_bridge, 32 external_data, 12 internal_consistency, 3 parked, 60 search_target
+- nach `leakage_class`: 3 architecture_core, 2 core_operator, 2 detector_control, 20 downstream_bridge, 29 external_data, 10 internal_kernel, 3 parked, 17 search_target, 41 surface_leakage
 - nach `signature_code`: 3 S1, 1 S1/S10, 2 S1/S2b/S3, 1 S1/S7, 2 S10, 1 S10e, 1 S12, 1 S12/S5, 2 S13, 2 S1e, 1 S2a, 1 S2a/S4/S5/S6/S7/S8-proxy, 1 S2a/S5, 10 S2b, 1 S2b/S11, 2 S2b/S14, 1 S2b/S3, 2 S3, 1 S3/S2b, 2 S4, 1 S4/S5, 2 S5, 2 S7, 1 S8, 1 S8-data/S15, 1 S9, 2 detector-control
-- nach `independence_group`: 6 N_star_reheating, 4 alpha_em, 1 c3_topform_horizon, 2 carrier_ps_so10_uv_branch, 2 cp_mu6_phase, 2 hfqpo_ladder_tooth, 86 independent, 2 koide_q_pole, 2 nu_mass_floor, 14 phi0_seed
-- `alternative_group` (eine Frage, mehrere Lesarten — *nicht* doppelt zählen): 2 HVP_baseline, 3 Nstar_branch, 5 axion_branch, 3 w_de_eos
-- `watch_flag`: 5 (schärfster nicht-roter Kanal: dunkle Energie `w`)
+- nach `independence_group`: 7 N_star_reheating, 4 alpha_em, 1 c3_topform_horizon, 2 carrier_ps_so10_uv_branch, 2 cp_mu6_phase, 2 hfqpo_ladder_tooth, 88 independent, 2 koide_q_pole, 2 nu_mass_floor, 15 phi0_seed, 2 smica_pr3_map
+- `alternative_group` (eine Frage, mehrere Lesarten — *nicht* doppelt zählen): 2 HVP_baseline, 4 Nstar_branch, 5 axion_branch, 3 w_de_eos
+- `watch_flag`: 6 (schärfster nicht-roter Kanal: dunkle Energie `w`)
 - _Korrelierte `phi0_seed`-Beine, `alternative_group`-Lesarten und `internal_consistency`-Checks zählen NICHT als unabhängige externe Treffer._
 <!-- SCORECARD_STATS:END -->
 
@@ -808,6 +811,19 @@ nie doppelt gefüttert. JUNO-θ13 wird ergänzt, sobald stabil.
 ### 7b.8 EHT-Real-Data-Lauf — `eht-achromatic-residual/` (P1, echte Daten)
 Voll dokumentiert in **§4** (echte 2023-D01-01-Polarimetrie, 4 Tage × 2 Bänder,
 Band-zu-Band-EVPA +0.9°, RM~5×10⁵ rad/m²; Residual-Nulls `data_limited` bis GRMHD-Imaging).
+
+### 7b.9 CCC-Crossover-Disc — `ccc-crossover-disc/` (preregistriert, **kein Datenpass**)
+**Frozen 2026-08-24** (CCC.SEAM.CROSSOVER-Thread, Runden DLIII–DLV; drei Freeze-Hashes
+`1df51166…`/`a795401a…`/`4cafe045…`, Guards in `tests/`). Suche nach Crossover-Relikt-Scheiben
+in CMB-Karten unter der zyklischen **[C]**-Lesart: Template = **kausale Top-Hat-Scheibe**,
+Radius `θ_max = η_rec/(η₀−η_rec) ≈ 1.16°` (eingefrorene Formel, Scan-Band 1.0–1.3°),
+Kantenprofil-Kontrast ≤ 3.3×10⁻⁴ (κ aus der v526-KMS-Normierung `β_angle=2π=1/(4c₃)`
+hergeleitet, Konventionsband deklariert). Diskriminatoren: scharfe Kausalkante (vs. der
+von HawkingNet leer gescannten Gauss-Klasse), Vorzeichen-Paarungs-Statistik
+(Sheet-Paritätsbit), Radiusband. Kill-Kriterien K1–K6, Null-Batterie und Entscheidungsregel
+in `hypotheses/ccc_disc_v1.yaml`. **Verdikt: `data_limited (preregistered — no data pass yet)`**;
+kein Scorecard-Row bis `results/results.json` existiert. Firewall: Search-Target der
+[C]-Lesart — ein Null beschädigt den Compiler-Kern nicht; kein direkter Hawking-Fluss.
 
 ---
 

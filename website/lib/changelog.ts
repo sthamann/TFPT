@@ -42,6 +42,387 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-08-31",
+    "dateLabel": "2026-08-31 · CXLIX",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(Monday-morning harvest — axiom-core closure "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " state/gap batteries graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1015"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1016"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1007 \\to 1009"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173"
+      },
+      {
+        "k": "t",
+        "v": " no new rows, existing contract rows updated, NO status-marker upgrades; Python-only / Wolfram mirror deferred as for v974–v1014, engine still "
+      },
+      {
+        "k": "c",
+        "v": "DEFERRED_NO_ENGINE"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1015_ axiom_ core_ closure.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "11/11"
+      },
+      {
+        "k": "t",
+        "v": "): character-blind P-dem response DERIVED — "
+      },
+      {
+        "k": "m",
+        "v": "r=(1,1,1)"
+      },
+      {
+        "k": "t",
+        "v": " exactly at collar sizes "
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": ", democracy residual "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": "; mutants split "
+      },
+      {
+        "k": "m",
+        "v": "(1,0,0)"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "(5/4,1,5/4)"
+      },
+      {
+        "k": "t",
+        "v": ". Together with P-anch (v1014) BOTH W-bridge premises are derived at finite level; the axiom-core remainder is ZERO modulo the externalized MMST identification. "
+      },
+      {
+        "k": "c",
+        "v": "AX.P2.01"
+      },
+      {
+        "k": "t",
+        "v": " stays an axiom (finite shadows; continuum identification is the same external leg). T1 note on "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": ": the structure-postulate route is now fully premise-supported at finite level. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1016_ state_ gap_ batteries.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "31/31"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "R_4"
+      },
+      {
+        "k": "t",
+        "v": " seam-modular cap is the unique finite-level non-entropic selector ("
+      },
+      {
+        "k": "m",
+        "v": "D_{\\mathrm{tr}}=0.1434"
+      },
+      {
+        "k": "t",
+        "v": ", SK RMS "
+      },
+      {
+        "k": "m",
+        "v": "3.038{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "3\\pi/5"
+      },
+      {
+        "k": "t",
+        "v": " saddle preserved; finite-proxy caveat; "
+      },
+      {
+        "k": "c",
+        "v": "FTRANSFER.SK.RHO0.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "). TEL-B certified-tail BLOCKED ("
+      },
+      {
+        "k": "m",
+        "v": "N^2 D_N"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "530\\to19032"
+      },
+      {
+        "k": "t",
+        "v": ", UV-supported remainder); strictly smaller external target "
+      },
+      {
+        "k": "m",
+        "v": "A_R<43"
+      },
+      {
+        "k": "t",
+        "v": " with factor-"
+      },
+      {
+        "k": "m",
+        "v": "\\sim350"
+      },
+      {
+        "k": "t",
+        "v": " measured headroom; "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": "-uniform CAR nuclearity PROVED ("
+      },
+      {
+        "k": "m",
+        "v": "C_\\beta=(67.97,29.73,12.15)"
+      },
+      {
+        "k": "t",
+        "v": ") as ALG specialist input; ALG-EXH unchanged ("
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MMST.TYPEIII.CHARGED.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "). DFP volume-uniform gap cited-verified for "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z_2/\\mathbb Z_4"
+      },
+      {
+        "k": "t",
+        "v": " open chains ("
+      },
+      {
+        "k": "m",
+        "v": "a=0.0233"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "a/16=0.00146"
+      },
+      {
+        "k": "t",
+        "v": "); dynamical-link leg closed at that level; remaining rotor/wall/"
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D ("
+      },
+      {
+        "k": "c",
+        "v": "CHIRAL4D.MIRROR.DET16.01"
+      },
+      {
+        "k": "t",
+        "v": " stays "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "). Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " executed-update paragraphs (five items "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " L1 nuclearity note); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction Monday-morning note; MMST handoff HTML update-2026-08-31 block; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-30",
     "dateLabel": "2026-08-30 · CXLVIII",
     "heading": [

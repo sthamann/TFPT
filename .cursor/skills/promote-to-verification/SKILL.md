@@ -119,6 +119,7 @@ python verification/make_manifest.py
 - Root `README.md` (highlights, open gates, reproduce commands)
 - `experiments/next.txt` (research notes — German OK)
 - `zenodo_description.html` if deposit scope/status/repro counts changed
+- **PRIME.\* promotions:** additionally run skill **`rh-sync`** (rh/INVENTORY, paper, Lean layer)
 
 ## Full checklist
 

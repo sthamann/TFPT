@@ -1,0 +1,61 @@
+---
+description: Model routing, escalation gates and context budget for all TFPT agent work. Cheap models work, expensive models decide.
+alwaysApply: true
+---
+
+# Agent economics
+
+Standing user directive (cost review 2026-08-28): **cheap models work, expensive models decide.**
+89 % of spend came from four frontier lanes running as production workers, on multi-100k-token contexts.
+
+**Enforced, not advisory** — `.cursor/hooks/`, policy in `model-tiers.json`, decisions in
+`.cursor/agent-runs/routing.jsonl`:
+
+- `route-subagent.py` (preToolUse on `Task`) rewrites the subagent model to the allowed tier
+- `guard-read.py` (beforeReadFile) blocks reads ≥ 400k chars and prices the large ones
+- `log-subagent.py` (subagentStart) records the model each subagent really started with
+
+Policy edits go in the JSON, never in the hook code.
+
+## Ladder
+
+| Tier | Model | Work |
+|---|---|---|
+| **L0** | `composer-2.5-fast` | grep/read/classify, run suite, summarise diffs, lint & type fixes, mechanical edits |
+| **L1** | `cursor-grok-4.6-xhigh` | normal implementation, log analysis, multi-file refactor, audit-fix loop |
+| **L2** | `gpt-5.6-sol-high` | non-obvious debugging, physics/math reasoning, load-bearing paper prose |
+| **L3** | `claude-opus-5-thinking-high` | **judge only** — adjudicate `[E]` claims, contradictory numbers, architecture calls. Fable only after Opus failed. |
+
+Spawn defaults: `explore`/`shell` → L0, everything else → L1. **`inherit` is banned** — the parent is the expensive lane.
+
+## Parent role
+
+The parent is **router and judge**, not the worker. Anything mechanical (search, enumeration, log parsing,
+suite runs, mirror edits) is delegated to L0/L1 — doing it in the parent's own context is the single most
+expensive way to get it done.
+
+## Escalation
+
+One tier per step, never skip. A frontier model requires the subagent prompt to carry `ESCALATE: <signal>`:
+
+`tests-still-failing` · `same-hypothesis-failed-twice` · `review-rejected` · `proof-gap` ·
+`numeric-disagreement` · `architecture-decision` · `audit-red-after-two-fixes` · `user-requested`
+
+No valid signal → the hook downgrades and states why. Invented signals do not pass.
+
+## Context budget
+
+- **Handoff = STATE block, never conversation history.** Hard flag above 60k prompt chars.
+- `grep → select → read`. ≤ 20 files per task; large files with `offset`/`limit` — a whole-file read is
+  charged again on every later turn of the session, which is what made the context spiral compound.
+- **Never paste raw suite/audit/LaTeX output.** Reduce first
+  (`… 2>&1 | rg -n "FAIL|ERROR|WARN|ALL CHECKS|AUDIT"`); exact numbers come from running the single
+  `vN_*.py` module standalone — that still satisfies *summary before edits* (`tfpt-core` rule 1).
+- Checkpoint at ~100k tokens: write STATE, continue with a fresh agent.
+
+## Stop rules
+
+- ≥ 3 escalations, or the same hypothesis failing twice → stop, write STATE, ask the user. Never grind.
+- `*-fast` slugs cost 2× and are interactive-only; the hook rewrites them for spawned agents.
+
+Detail, templates, per-task tier table: skill **`agent-routing`**.

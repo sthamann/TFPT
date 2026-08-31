@@ -1,222 +1,477 @@
 WEBVTT
 
 1
-00:00:00.600 --> 00:00:04.800
-A program begins as a few lines of source code — and unfolds into something huge and detailed.
+00:00:00.010 --> 00:00:01.390
+What if the laws of nature are not a
 
 2
-00:00:04.800 --> 00:00:09.000
-Here's an honest question, not a claim: could reality work the same way?
+00:00:01.390 --> 00:00:03.870
+list of fitted constants but the output of a
 
 3
-00:00:09.000 --> 00:00:14.500
-Could the rules of our universe be the output of something tiny — compiled, not chosen?
+00:00:03.870 --> 00:00:07.180
+tiny compiler? Topological Fixed-Point Theory begins with two
 
 4
-00:00:14.500 --> 00:00:19.600
-Let's look at where that idea leads — and how it could fail.
+00:00:07.180 --> 00:00:10.440
+declared axioms. The boundary constant c₃ equals one over
 
 5
-00:00:20.400 --> 00:00:24.500
-Start at the end — with what this one idea actually produces.
+00:00:10.490 --> 00:00:12.500
+eight pi and a five slot carrier.
 
 6
-00:00:24.500 --> 00:00:31.000
-Almost the whole Standard Model — our rulebook for every known particle and force:
+00:00:12.510 --> 00:00:14.540
+From them, it builds D₅ plus A₃,
 
 7
-00:00:31.000 --> 00:00:37.000
-the forces, why matter comes in three families, the single Higgs, the masses, how they mix.
+00:00:14.550 --> 00:00:17.030
+joins the two through a cyclic μ₄ glue and
 
 8
-00:00:37.000 --> 00:00:43.000
-Gravity — Einstein's equation, with its constants fixed instead of assumed.
+00:00:17.120 --> 00:00:20.050
+reaches E₈. Then it reads off the discrete standard
 
 9
-00:00:43.000 --> 00:00:49.500
-Pieces of cosmology — the early universe, how much ordinary matter there is, dark energy.
+00:00:20.050 --> 00:00:22.740
+model structure, the gauge group, three families,
 
 10
-00:00:49.500 --> 00:00:56.000
-The strength of light — the famous one over one-thirty-seven — is just one line among many.
+00:00:22.740 --> 00:00:27.000
+hypercharges, and the flavor operators together with dimensionless fixed
 
 11
-00:00:56.000 --> 00:01:04.600
-And twenty-seven concrete, testable predictions. That's the output. The real question: from how much input?
+00:00:27.000 --> 00:00:30.190
+point readouts. The claim is not that every physical
 
 12
-00:01:05.400 --> 00:01:09.500
-Here's the surprising part: almost nothing goes in.
+00:00:30.190 --> 00:00:33.280
+detail is solved, it is narrower and testable.
 
 13
-00:01:09.500 --> 00:01:15.500
-Two numbers. A tempo — set by the edge of space. And a width: how many slots the building block has — five.
+00:00:33.290 --> 00:00:36.780
+A small machine constructs a large rigid skeleton then
 
 14
-00:01:15.500 --> 00:01:22.000
-And those two aren't even truly free. Strip it down, and what's left is one small whole-number pattern — and π.
+00:00:36.780 --> 00:00:38.880
+names every bridge it still needs.
 
 15
-00:01:22.000 --> 00:01:28.000
-A huge, detailed result from a tiny source.
+00:00:38.890 --> 00:00:40.990
+The flagship line is alpha inverse,
 
 16
-00:01:28.000 --> 00:01:34.600
-That gap — between almost nothing and all of this — is the whole story.
+00:00:40.990 --> 00:00:45.170
+137.0359992168. The verifier
 
 17
-00:01:35.400 --> 00:01:40.000
-How can two numbers carry that much? Because they don't just get plugged in —
+00:00:45.170 --> 00:00:48.310
+finds it as the unique positive stationary root of
 
 18
-00:01:40.000 --> 00:01:44.500
-they have to pass a test.
+00:00:48.310 --> 00:00:50.360
+the boundary U(1) Ward identity.
 
 19
-00:01:44.500 --> 00:01:50.500
-The parts they build must fit into one rigid mathematical object: E₈.
+00:00:50.370 --> 00:00:52.320
+It is not fitted to the measured value,
 
 20
-00:01:50.500 --> 00:01:57.500
-E₈ isn't a force of nature. It's a proof layer — the referee that certifies the pieces fit only one way.
+00:00:52.330 --> 00:00:54.810
+mutate the permitted terms and the root does not
 
 21
-00:01:57.500 --> 00:02:04.000
-Two hundred and forty points, one perfect pattern.
+00:00:55.130 --> 00:00:58.680
+survive. E₈ is the checksum behind the discrete construction,
 
 22
-00:02:04.000 --> 00:02:14.200
-If anything were off, nothing would lock. Most possible universes simply don't compile.
+00:00:58.690 --> 00:01:01.850
+240 roots lock the D₅ and A₃ sectors into
 
 23
-00:02:15.400 --> 00:02:20.500
-Now turn it around. If the proof closes for only one tempo and one width…
+00:01:01.990 --> 00:01:04.520
+one even, unimodular rank eight lattice.
 
 24
-00:02:20.500 --> 00:02:26.500
-…then the proof decides them. The inputs are forced by the structure they build.
+00:01:04.530 --> 00:01:08.210
+In the current corpus, 1009 machine-checked verification modules
 
 25
-00:02:26.500 --> 00:02:33.000
-The thing works out its own starting point. The loop closes on itself.
+00:01:08.290 --> 00:01:11.240
+test this architecture, its numerical identities,
 
 26
-00:02:33.000 --> 00:02:38.500
-That's the fixed point the theory is named after.
+00:01:11.250 --> 00:01:13.500
+its reductions and its failures.
 
 27
-00:02:38.500 --> 00:02:44.600
-Not a model you tune until it fits — a structure that has to be what it is.
+00:01:13.510 --> 00:01:15.730
+Every load-bearing claim has a script and a
 
 28
-00:02:45.400 --> 00:02:51.500
-Once you see it, the elegance is hard to miss.
+00:01:15.730 --> 00:01:19.080
+claim identifier. The status ledger, not the rhetoric,
 
 29
-00:02:51.500 --> 00:02:58.500
-The same small numbers — two, three, five — run through every part, because it's all one object.
+00:01:19.090 --> 00:01:21.800
+decides whether a line is exact, conditional,
 
 30
-00:02:58.500 --> 00:03:05.000
-And it isn't frozen. A simple clock gives the whole thing a single resting state.
+00:01:21.810 --> 00:01:23.380
+open or a kill test.
 
 31
-00:03:05.000 --> 00:03:14.600
-So the constants aren't dialled in by hand — they're where it settles. Almost no free choices, one connected picture.
+00:01:23.390 --> 00:01:26.100
+That discipline forces two status cards to sit side
 
 32
-00:03:15.400 --> 00:03:20.500
-Now the fair objection: small whole numbers that fit reality —
+00:01:26.100 --> 00:01:28.820
+by side. The first is the compiler rest.
 
 33
-00:03:20.500 --> 00:03:24.500
-isn't that just numerology, like seeing faces in clouds?
+00:01:28.890 --> 00:01:30.640
+It has three named interfaces.
 
 34
-00:03:24.500 --> 00:03:31.000
-We took it seriously. Nobody drew this picture top-down. It assembled itself —
+00:01:30.650 --> 00:01:34.170
+v_geo, the one dimensionful calibration that pure numbers cannot
 
 35
-00:03:31.000 --> 00:03:38.000
-out of hundreds of small, independent checks, each verified by computer, that slowly clicked into one whole.
+00:01:34.170 --> 00:01:37.000
+supply. G_net, the seam-to-E₈ net identification,
 
 36
-00:03:38.000 --> 00:03:45.500
-E₈ proves the pieces can fit. These checks prove we're not fooling ourselves —
+00:01:37.010 --> 00:01:39.460
+conditionally closed on its MMST route,
 
 37
-00:03:45.500 --> 00:03:51.500
-every load-bearing claim machine-verified twice, with a team tasked to break it.
+00:01:39.470 --> 00:01:41.840
+but open as an unconditional parent claim.
 
 38
-00:03:51.500 --> 00:03:58.000
-We froze predictions before the data, then ran two hundred thousand random look-alikes.
+00:01:41.850 --> 00:01:45.270
+And F_transfer, the typed interfaces that carry selected compiler
 
 39
-00:03:58.000 --> 00:04:04.600
-They get at most five right; this gets all thirteen. By luck? Below one in 10³⁰ — effectively zero.
+00:01:45.270 --> 00:01:50.020
+structures into masses, QCD, baryogenesis and cosmology.
 
 40
-00:04:05.400 --> 00:04:10.200
-And it hasn't stopped. Five new results — each machine-checked, each honestly labelled.
+00:01:50.030 --> 00:01:51.600
+Beside it sits a stricter card,
 
 41
-00:04:10.400 --> 00:04:15.500
-One. The calculating engine of the deepest route used to be declared. Now it is derived —
+00:01:51.610 --> 00:01:53.640
+the physical theory of everything rest.
 
 42
-00:04:15.500 --> 00:04:20.400
-its key number, sixty-four, is computed three independent ways instead of put in. One global integral stays open.
+00:01:53.650 --> 00:01:56.130
+Its master contract is the AND of eight gates.
 
 43
-00:04:20.600 --> 00:04:26.000
-Two. The bridge from timeless Euclidean math back to real, physical time now stands — at the free level:
+00:01:56.270 --> 00:01:57.720
+None is fully closed.
 
 44
-00:04:26.000 --> 00:04:30.900
-the reflection structure exists, and the little clock returns as a genuine time operator.
+00:01:57.730 --> 00:02:00.320
+They demand the seam continuum, a complete three plus
 
 45
-00:04:31.100 --> 00:04:36.500
-Three. The seam has a temperature — exactly the black-hole value its founding constant demands.
+00:02:00.320 --> 00:02:03.550
+one dimensional local quantum theory, a chiral measure and
 
 46
-00:04:36.500 --> 00:04:41.400
-Geometry, anomaly, and now temperature — all from c₃ = 1/(8π). The seam is a miniature horizon.
+00:02:03.550 --> 00:02:06.310
+uniform mirror gap, controlled infrared physics,
 
 47
-00:04:41.600 --> 00:04:47.000
-Four. Ten blind tests prove the one remaining input bit cannot be derived — it is a genuine choice.
+00:02:06.410 --> 00:02:09.280
+internally fixed couplings and neutrino dynamics,
 
 48
-00:04:47.000 --> 00:04:51.900
-But it is now physically defined — in principle readable by an interferometer. One axiom becomes one measurement.
+00:02:09.280 --> 00:02:11.540
+emergent gravity and the physical state.
 
 49
-00:04:52.100 --> 00:04:57.000
-And five — reported just as loudly: the first interacting toy model fails one of our own kill tests.
+00:02:11.550 --> 00:02:13.910
+So the honest sentence is precise.
 
 50
-00:04:57.000 --> 00:05:01.600
-A real threat — and the first constructive filter for the one construction site left.
+00:02:13.930 --> 00:02:16.800
+TFPT closes a discrete compiler.
 
 51
-00:05:02.400 --> 00:05:08.900
-So what's still open? The interacting seam. One global integral. One unit no pure number can give.
+00:02:16.810 --> 00:02:19.380
+It does not yet certify a strict physical theory
 
 52
-00:05:08.900 --> 00:05:15.600
-Every gap labelled — and still killable: neutrino mass, proton decay, dark energy. One clean miss, and it's wrong.
+00:02:19.380 --> 00:02:21.910
+of everything. The August wave did not erase that
 
 53
-00:05:16.400 --> 00:05:20.800
-So — is reality compiled? We still don't know. That's the honest answer.
+00:02:22.010 --> 00:02:23.650
+frontier. It compressed it.
 
 54
-00:05:20.800 --> 00:05:26.200
-But the version you can test keeps getting sharper — more derived, less declared; every gap marked, every test named.
+00:02:23.670 --> 00:02:26.130
+First, the seam boundary theory was reduced to one
 
 55
-00:05:26.200 --> 00:05:30.000
-Maybe the constants were never arbitrary. Maybe they simply had to add up.
+00:02:26.130 --> 00:02:28.320
+external charged scaling limit theorem.
 
+56
+00:02:28.470 --> 00:02:30.660
+Five supporting lemmas were proved in-house.
+
+57
+00:02:30.690 --> 00:02:33.280
+The cross product step, a uniform growth bound,
+
+58
+00:02:33.290 --> 00:02:36.670
+the first telescoping estimate, the integer D₅ plus A₃
+
+59
+00:02:36.770 --> 00:02:39.160
+pairings and the order-four outer action.
+
+60
+00:02:39.170 --> 00:02:41.840
+The remaining analytic target is isolated in a 20
+
+61
+00:02:41.840 --> 00:02:45.280
+plus page memorandum and a send-ready specialist package.
+
+62
+00:02:45.290 --> 00:02:48.830
+Second, the DET16 mirror mechanism is exact on the
+
+63
+00:02:48.830 --> 00:02:50.550
+full 2¹⁶ cluster.
+
+64
+00:02:50.690 --> 00:02:53.180
+A rank one projector, a gap exactly equal to
+
+65
+00:02:53.490 --> 00:02:56.700
+one and all 45 Spin(10) commutators vanishing.
+
+66
+00:02:56.710 --> 00:02:59.590
+A cited stability theorem now supplies a volume uniform
+
+67
+00:02:59.690 --> 00:03:02.720
+finite chain leg. The full dynamical four-dimensional claim
+
+68
+00:03:02.730 --> 00:03:06.400
+remains conditional. Third, the first 3+1-dimensional
+
+69
+00:03:06.400 --> 00:03:09.270
+lattice scaffold now lets gauge content,
+
+70
+00:03:09.270 --> 00:03:12.120
+a chiral wall mirror gapping and the seam clock
+
+71
+00:03:12.120 --> 00:03:15.760
+coexist. The Hamiltonian-class dynamics has a Lieb–Robinson bound,
+
+72
+00:03:15.770 --> 00:03:19.230
+a norm-convergent time evolution, a gauge-invariant quasilocal
+
+73
+00:03:19.330 --> 00:03:21.600
+algebra and ground and thermal states.
+
+74
+00:03:21.610 --> 00:03:25.470
+Phase uniqueness, the limiting gap and infrared universality remain
+
+75
+00:03:25.470 --> 00:03:28.970
+open. Finally, the finite axiom core premises now derive
+
+76
+00:03:29.010 --> 00:03:31.750
+in-house. The remainder is zero modulo the same
+
+77
+00:03:31.750 --> 00:03:35.770
+external MMST identification. P2 remains typed as
+
+78
+00:03:35.770 --> 00:03:38.550
+an axiom and the genuine four-dimensional functional is
+
+79
+00:03:38.640 --> 00:03:41.380
+still a gate. The gain is not a victory
+
+80
+00:03:41.380 --> 00:03:43.390
+slogan, it is convergence.
+
+81
+00:03:43.430 --> 00:03:46.400
+Many vague gaps have become one external theorem,
+
+82
+00:03:46.410 --> 00:03:49.390
+one physical unit and a short list of explicit
+
+83
+00:03:49.390 --> 00:03:53.200
+four-dimensional obligations. A serious compiler must also record
+
+84
+00:03:53.200 --> 00:03:54.640
+what does not compile.
+
+85
+00:03:54.650 --> 00:03:57.490
+The number-preserving Casimir projector does not isolate the
+
+86
+00:03:57.490 --> 00:04:00.360
+mirror state, its multiplicities explode instead.
+
+87
+00:04:00.370 --> 00:04:04.010
+Eight preregistered Schur-texture constructions all fail because the even
+
+88
+00:04:04.010 --> 00:04:06.880
+seam data forces the wrong degeneracy and the naive
+
+89
+00:04:06.880 --> 00:04:08.970
+extension of the alpha grammar to the strong and
+
+90
+00:04:09.010 --> 00:04:13.010
+weak couplings fails in all 64 tested conventions while
+
+91
+00:04:13.010 --> 00:04:14.680
+the U(1) control survives.
+
+92
+00:04:14.690 --> 00:04:16.600
+These routes are not quietly deleted,
+
+93
+00:04:16.610 --> 00:04:18.640
+they become permanent constraints.
+
+94
+00:04:18.650 --> 00:04:22.020
+The future mechanism must evade the exact reason each
+
+95
+00:04:22.020 --> 00:04:24.680
+one died. That is how the project protects itself
+
+96
+00:04:24.680 --> 00:04:27.840
+from numerology. A failed pattern is evidence,
+
+97
+00:04:27.840 --> 00:04:30.760
+not decoration. The newest neutrino chain shows how the
+
+98
+00:04:30.760 --> 00:04:32.660
+live frontier is meant to work.
+
+99
+00:04:32.670 --> 00:04:34.960
+As a candidate, it gives a normal-ordering mass
+
+100
+00:04:34.960 --> 00:04:39.290
+sum near 0.0599 electron volts, a leptonic
+
+101
+00:04:39.330 --> 00:04:43.450
+CP phase near 287.7 degrees and a pentagon-class
+
+102
+00:04:43.450 --> 00:04:47.410
+misalignment with phase 288 degrees and angle two pi
+
+103
+00:04:47.460 --> 00:04:51.000
+over 35. At finite level, all three mixing angles
+
+104
+00:04:51.000 --> 00:04:53.360
+land within 0.56 sigma.
+
+105
+00:04:53.370 --> 00:04:55.590
+But the mechanism that turns the seam operator into
+
+106
+00:04:55.680 --> 00:04:57.600
+the flavor operator is still open.
+
+107
+00:04:57.610 --> 00:04:59.110
+There is no seesaw closure.
+
+108
+00:04:59.130 --> 00:05:01.250
+The labels stay candidate and numerical,
+
+109
+00:05:01.250 --> 00:05:04.000
+not exact physics. DESI can press on the mass
+
+110
+00:05:04.000 --> 00:05:08.030
+floor. DUNE can separate 287.7 degrees from the
+
+111
+00:05:08.030 --> 00:05:10.040
+older 240 degree branch.
+
+112
+00:05:10.050 --> 00:05:12.370
+JUNO can test the reactor-angle structure.
+
+113
+00:05:12.390 --> 00:05:14.260
+So is reality compiled?
+
+114
+00:05:14.270 --> 00:05:15.320
+We still do not know.
+
+115
+00:05:15.330 --> 00:05:17.970
+What exists now is more disciplined than an answer
+
+116
+00:05:17.970 --> 00:05:21.680
+by proclamation. A machine-checked compiler with a sharpened map
+
+117
+00:05:21.890 --> 00:05:24.870
+of what remains. Every closed line has a proof
+
+118
+00:05:24.970 --> 00:05:27.170
+object. Every gap has a name.
+
+119
+00:05:27.210 --> 00:05:29.238
+Every prediction has a kill switch.

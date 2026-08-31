@@ -149,7 +149,13 @@ spectrum, the CP phase structure ($\delta_{\mathrm{CKM}}$, $\delta^\nu_{\mathrm{
 \emph{plausible washout anchor} $\tilde m_1=m_3/A_\Lambda\approx5$ meV. The heavy-mass input, however,
 remains scenario-level: $M_1=M_R\varphi_0^4$ is viable but does \emph{not} close $M_R$ --- $M_R$ is the
 seesaw scale $\sim v^2/m_3$, not a compiler power, so the relation \emph{relocates} the free scale rather
-than pinning it (\veri{v184\_etaB\_anchored\_boltzmann.py}). The numerical $\eta_B$ then follows from the
+than pinning it (\veri{v184\_etaB\_anchored\_boltzmann.py}; a structured \emph{candidate} point
+$M_R=3c_3^{7/2}\bar M_{\mathrm{Pl}}$, $-1.8\%$ from the carrier-normalised requirement, is meanwhile registered as
+\texttt{FLAV.NUSCALE.05} \mC\ with the mechanism \mO, \veri{v986\_nu\_scalaron\_rung.py} --- a candidate,
+not a closure; a second candidate \texttt{FLAV.NUSCALE.06} \mC, the pentagon-class
+misalignment, is registered beside it
+(\veri{v1001\_\allowbreak nu\_\allowbreak pentagon\_\allowbreak chain.py}; no closure,
+\texttt{FLAV.NUSCALE.05} unmoved)). The numerical $\eta_B$ then follows from the
 \emph{standard} flavored-leptogenesis Boltzmann solve --- an independent consistency route, sharpened from
 two free inputs to one, not to zero. \textbf{Honest caveat:} that Boltzmann network (the
 washout/efficiency $\kappa_f$, the flavored density-matrix equations) is the standard leptogenesis
@@ -717,7 +723,7 @@ the \emph{holomorphic} $|\det K|{=}1$ point that selects $(E_8)_1$; the central 
 certification object rather than missing dynamics; we do
 \emph{not} claim it is physically irrelevant (that would itself be a physical interpretation), only that it is
 decoupled from the admissible IR sector under the stated assumptions. \veri{v36\_spectral\_action\_g2.py}
-\textbf{(iii) The classical field equation is parameter-free (\veri{v358\_grav\_entropy\_equilibrium.py}).} Beyond
+\textbf{(iii) The classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises \mC\ (\veri{v358\_grav\_entropy\_equilibrium.py}).} Beyond
 the $R{+}R^2$ \emph{action}, the metric-sector \emph{field equation} is supplied directly by the entanglement first
 law $\delta S=\delta\langle K\rangle$ (Jacobson 2015; Faulkner et al.), carried out with TFPT's atoms: equilibrium
 gives the \emph{linearised} Einstein equation $G_{ab}=\cthree^{-1}T_{ab}$ with $\cthree^{-1}=8\pi$ \emph{fixed} ---
@@ -737,7 +743,7 @@ the EINSTEIN TENSOR $G_{ab}$ (not just $R_{ab}$; trace $g^{ab}G_{ab}=(1-d/2)R=-R
 divergence-free metric tensor (Lovelock), so the equilibrium yields the \emph{full} covariant
 $G_{ab}+\Lambda g_{ab}=\cthree^{-1}T_{ab}$ with $\nabla^aT_{ab}{=}0$ an output, and TFPT fixes \emph{both}
 coefficients ($8\pi{=}1/\cthree$ from (iii); $\Lambda$ from $\alpha$, $\rho_\Lambda=(3/4\pi^2)e^{-2\alpha^{-1}}$,
-\vref{v60}). So B6's full covariant field equation is now parameter-free at the \emph{local} level. \textbf{Residual:}
+\vref{v60}). So B6's full covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises \mC. \textbf{Residual:}
 only the equation-of-state status (Jacobson framing, not a from-action quantisation; an \emph{external} candidate
 for the missing action level --- Bianconi's entropic action, Phys.\ Rev.\ D 111, 066001 (2025) --- is quantified in
 \vref{v473}: $\beta'_{\mathrm B}=\cthree/6$ pinned, $R^2$ gap $3(8\pi)^9$ pre-registered as kill test, typing
@@ -745,7 +751,7 @@ unchanged) and the absolute scale
 $v_{\mathrm{geo}}$ remain \mO --- the global ambient measure (C7\,$=$\,\texttt{QG.AMB.01}) is now a \mC\ redundancy
 (\vref{v369}), a certification object rather than missing dynamics; no free dimensionless parameter survives in the
 gravity coupling. So the metric sector now reads: $R{+}R^2$ action (i), gap-decoupled measure (ii), and a
-\emph{parameter-free} full covariant classical field equation (iii); the ambient nonperturbative measure is a
+full covariant classical field equation with no free dimensionless Newton coupling under the named QFT/entanglement premises \mC\ (iii); the ambient nonperturbative measure is a
 \mC\ redundancy, not an open structural hole.
 \textbf{(iv) The gap-induced GR correction --- the disciplined result (\veri{v360\_grav\_gap\_corrections.py}).} Does
 the seam transfer gap give a \emph{new} forced near-term deviation from GR beyond the $R^2$ scalaron? Run with the
@@ -797,6 +803,160 @@ transitive link is architectural, not numerical: of the frozen readouts only $\t
 coherence edge from living inside the unified spectral-action construction, not an input to its value
 $\sin^2\theta_{13}=\phiz\,e^{-5/6}$ (\vref{v268}). Honest scope: this kills \texttt{QG.AMB.01}
 specifically; it does \emph{not} discharge \texttt{SEAM.EQUIV.01}, on which the readouts still depend.
+\smallskip\\
+\noindent\emph{Registered decision (2026-08-28, \texttt{QFT4D.LATTICE.FUNDAMENTAL.01}):
+the lattice-fundamental reading --- typed route/typing, not an \mE\ claim.}
+The $4$D/continuum residual on this spine is retyped: TFPT's \emph{physical} completeness
+criterion is the finite local unitary lattice quantum theory (Hamiltonian route: Gauss-law
+Hilbert space, hermitian local $H$, $T=e^{-aH}$ positive by construction,
+Lieb--Robinson cone; \veri{v989\_\allowbreak lattice\_\allowbreak gate\_\allowbreak battery.py}
+--- Euclidean overlap killed at T2, $N_t$-exact, Hamiltonian route clears T2).  The exact
+continuum Osterwalder--Schrader limit (\texttt{QFT4D.OS.RECON.01}) is \emph{mathematical
+reinforcement}, no longer the physical bottleneck; Poincar\'e invariance is an IR fixed-point
+property.  Display stays honest: this is a named decision, nothing closes, the OS contract
+stays \mO\ as the math programme.  Full prose: research-contracts document,
+\texttt{QFT4D.OS.RECON.01} and \texttt{TFPT4D.LATTICE.ACTION.01}.
+Amendment (2026-08-29, review wave~4): the reviewer's precision is accepted ---
+``a single finite box is not a world.''
+The fundamental object is the quasilocal consistent family $\{H_\Lambda\}$ with
+$\tau_t=\lim e^{itH_\Lambda}A e^{-itH_\Lambda}$.
+Binding: continuum ($a\to0$) optional (mathematical reinforcement); thermodynamic
+limit ($|\Lambda|\to\infty$) and controlled IR universality mandatory.
+Decision typing UNCHANGED; no \mE\ claim, no marker move.
+\smallskip\\
+\noindent\emph{Dual rest (2026-08-28; the same short form as the introduction status card).}
+The compiler residual on this spine remains $\mathrm{Rest}=v_{\mathrm{geo}}\oplus G_{\mathrm{net}}\oplus F_{\mathrm{transfer}}$.
+Beside it sits the strict-physical-TOE accounting of the 2026-08-27/28 contract wave
+\[
+  \begin{aligned}
+  \mathrm{Rest}_{\mathrm{TOE}}
+    &=\mathrm{SeamContinuum}\oplus\mathrm{4DAction}\oplus\mathrm{ChiralMeasure}\\
+    &\quad\oplus\mathrm{MirrorGap}\oplus\mathrm{UnitaryDynamics}\oplus\mathrm{IR/continuum}\\
+    &\quad\oplus\mathrm{BulkSeam}\oplus\mathrm{QuantumGravity}\\
+    &\quad\oplus\mathrm{GeneratingFunctional}\oplus\mathrm{InitialState},
+  \end{aligned}
+\]
+every summand a named \mO\ (or standing-rule) contract --- nothing claimed closed
+(\texttt{tfpt\_research\_contracts}; three new rows of wave~3:
+\texttt{GAUGE.DETLINE.FIXPOINT.01}, \texttt{GRAV.SPIN2.EMERGENCE.01},
+\texttt{FTRANSFER.SK.RHO0.01}).  The rank-8 ADE census of
+\veri{v993\_\allowbreak minimal\_\allowbreak defect\_\allowbreak selector.py} lifts the
+architecture conditionality of v624 at lattice level; axiom typing UNCHANGED.
+Completeness wave (same day, no marker moves):
+\veri{v994\_mmst\_criteria\_battery.py} executes $5/7$ MMST identification criteria
+(character $[1,0,248,0,4124,0,34752]$; C6 written out in
+\texttt{articles/2026-08-28/psi\_lambda\_convergence\_theorem\_en.tex});
+\veri{v995\_kms\_subnet\_rigidity.py} kills all $33$ mixing directions by finite KMS
+($196608\to 0$);
+\veri{v996\_gauge\_grammar\_kill.py} excludes the naive $\alpha$-grammar extension
+($64/0$ hits; $U(1)$ control survives);
+\veri{v997\_spin2\_smg\_witnesses.py} types the quadratic spin-2 witnesses and the SMG toy
+(gap $14$ at $N=8$).  Contracts stay \mO.
+Review wave~4 (2026-08-29; suite $990\to994$, ledger $1166\to1168$, no marker moves):
+\veri{v998\_\allowbreak seam\_\allowbreak modular\_\allowbreak closure.py} makes the C7
+arithmetic shadow exact ($\Theta_{E_8}=E_4$ through $q^8$; net-level C7 stays cited);
+\veri{v999\_\allowbreak weak\_\allowbreak collision\_\allowbreak hp.py} completes the finite
+dilation ladder through continuous time (open $=$ thermodynamic field limit);
+\veri{v1000\_\allowbreak spin2\_\allowbreak sk\_\allowbreak witnesses.py} executes the
+quadratic Hamiltonian half and the SK $\rho_0$ mechanism;
+\veri{v1001\_\allowbreak nu\_\allowbreak pentagon\_\allowbreak chain.py} registers the
+pentagon-class candidate \texttt{FLAV.NUSCALE.06} \mC\ (no seesaw closure).
+The named AND of eight completeness gates is now the master contract
+\texttt{TFPT.TOE.COMPLETE.01} \mO\
+($\mathrm{TOE}_{\mathrm{Complete}}:=\mathrm{AND}(\mathrm{T1}{..}\mathrm{T8})$ vs
+$\mathrm{TOE}_{\mathrm{Validated}}:=\mathrm{Complete}$ AND independent holdouts) --- it
+names the AND, it does not close it.
+Review wave~5 (2026-08-29; suite $994\to996$, ledger $1168\to1171$, no marker moves):
+\veri{v1002\_\allowbreak spin10\_\allowbreak mirror\_\allowbreak projector.py} executes the
+DET16 finite-cluster hit ($P_\phi$ rank-one, gap $1$, $45$ commutators $0$) and permanently
+excludes the number-preserving Casimir projector (census $N{=}8{:}0$, $k{=}2{:}27$,
+$k{=}3{:}1463$); \texttt{CHIRAL4D.MIRROR.DET16.01} \mC, \texttt{CHIRAL4D.NOMIRROR.01} stays \mO.
+\veri{v1003\_\allowbreak nu\_\allowbreak structural\_\allowbreak nulls.py} records both
+neutrino-texture nulls as binding constraints (\texttt{FLAV.NU.TEXTURE.MECHANISM.01} \mO:
+D4-odd \emph{and} a $\sim2{\times}10^{-4}$ even-odd cancellation; pure seam data excluded).
+The master scaling-limit theorem \texttt{SEAM.MMST.TYPEIII.CHARGED.01} \mO\ is named (one
+$\Psi_{\lambda,N}\to\Psi_\lambda$ theorem; KMS uniqueness given identification written out in
+\texttt{articles/2026-08-29/holomorphic\_kms\_extension\_en.tex}, $13$~pp).
+\texttt{GAUGE.DETLINE.FIXPOINT.01} has a unique fixed-volume stiffness point (contraction
+$-0.632$) but divergent thermodynamic step-scaling --- the $1{+}1$D toy has no plaquette
+self-interaction.  Unit choice for $v_{\mathrm{geo}}$ is closed; dimensionless hierarchies
+remain predictive obligations.
+Review wave~6 (2026-08-30; suite $996\to998$, ledger $1171\to1173$, no marker moves):
+the day's structural find is the Milnor--Gray finite algebra
+(\veri{v1004\_\allowbreak milnor\_\allowbreak frobenius\_\allowbreak gray.py}):
+classical cite (Milnor algebra of $x^2+y^3+z^5$ dimension $8$, spectral numbers $=$ $E_8$
+exponents) plus new-in-corpus exact rank clock / Galois--Gray / socle-CP / integral $D^4$
+bridge \mE-finite, with $PG(3,2)$ interpretive \mC; the corpus identification
+\texttt{SEAM.MILNOR.LOCALRING.01} stays \mO.
+\veri{v1005\_\allowbreak relative\_\allowbreak pencil\_\allowbreak bridges.py} keeps the
+Hankel and winding identities \mE-finite but flags the relative pencil as circular
+(carrier $5$ already in the column sums of $Q_2$ and $C$; not a P2 selector;
+\texttt{AX.P2.01} unmoved).
+\texttt{GRAV.WEINBERG.WITTEN.01} \mO\ is the binding Weinberg--Witten firewall before any
+spin-2 marker move.
+Review wave~7 (2026-08-30; suite $998\to1002$, ledger $1173$ no new rows, no marker moves):
+five MMST lemmas in-house
+(\veri{v1006\_\allowbreak mmst\_\allowbreak lemma\_\allowbreak battery.py};
+\texttt{SEAM.MMST.TYPEIII.CHARGED.01} stays \mO; residual TEL-B-EXTERNAL $+$ ALG-EXH boxed;
+cited \texttt{articles/2026-08-30/mmst\_charged\_scaling\_limit\_en.tex}).
+DET16 T1/T2 proved and T3 Michalakis--Zwolak cited-verified
+(\veri{v1007\_\allowbreak det16\_\allowbreak stability\_\allowbreak battery.py};
+\texttt{CHIRAL4D.MIRROR.DET16.01} stays \mC; $1/192$ and BDL boxed).
+The $2{+}1$D master-object scaffold is coherent
+(\veri{v1008\_\allowbreak master\_\allowbreak assembly\_\allowbreak scaffold.py};
+combinatorial $K=0$, unique-contractive selector, QWZ wall $+$ DET4 mirror, $\mathbb Z_6$
+assembly; lattice-fundamental Decision and \texttt{GAUGE.DETLINE.FIXPOINT.01} unmoved).
+$\rho_0$ uniqueness is finite-closed with two typed review corrections
+(\veri{v1009\_\allowbreak rho0\_\allowbreak minimizer.py};
+\texttt{V1000\_CONSEQUENCE\_MISMATCH} $+$ \texttt{CENTER\_FLATNESS\_PREMISE\_FALSE};
+\texttt{FTRANSFER.SK.RHO0.01} stays \mO).
+Afternoon harvest (2026-08-30; suite $1002\to1004$, ledger $1173$ no new rows, no marker moves):
+the simplicity campaign finds no smaller axiom core
+(\veri{v1010\_\allowbreak simplicity\_\allowbreak bridge\_\allowbreak census.py}) ---
+remainder minimum $S_4=2$, the simplicity lives in the theorems; the relative-pencil
+circularity flag is rehabilitated as forced provenance (ladder forces $Q$ sums $(9,5,1)$;
+$W$ remains conditionally unique $1078\to1$ given two directional premises);
+the Milnor strong all-structure bridge is finitely obstructed at $\mathbb F_2$ and every
+upstairs home (only the coarse $D$+pairing bridge exists;
+\texttt{SEAM.MILNOR.LOCALRING.01} stays \mO).
+The $3{+}1$D ladder is complete at scaffold level
+(\veri{v1011\_\allowbreak 3p1d\_\allowbreak ladder\_\allowbreak battery.py}):
+minimal object viable, fully coupled link--wall, Kronecker limitation removed;
+matching scale of the coupling functional must sit in the deconfined/weak regime
+(\texttt{GAUGE.DETLINE.FIXPOINT.01} stays \mO).
+Evening TOE-gate wave (2026-08-30; suite $1004\to1005$, ledger $1173$ no new rows, no marker moves):
+four executed witnesses in one battery
+(\veri{v1012\_\allowbreak toe\_\allowbreak gate\_\allowbreak witnesses.py}) ---
+T5 IR universality on the physical QWZ edge ($c\to1$, clustering dichotomy, Lieb--Robinson cone, curvature $\to1/6$) with a typed SPLIT (gauge holonomy $+$ seam clock are not propagating modes; common-$c$ needs dynamical gauge excitations);
+T8 $\rho_0$ selection-principle vacuity (hard sectors response-dead, KMS-affine sets selection-vacuous; a non-entropic principle is required);
+T6 $\kappa$ six-fold NULL completing the scaffold-level neutrino-mechanism bound (the $1.885{\times}10^{-4}$ cancellation needs the true $4$D functional);
+T7 interacting TT stress mechanism (conservation, positivity, sum rules, $Z$-persistence under $\phi^4$; gapped, as expected for massive generic matter; missing TFPT content, $k\to0$ volume scaling, Ward identities).
+\texttt{TFPT.TOE.COMPLETE.01}, \texttt{FTRANSFER.SK.RHO0.01},
+\texttt{FLAV.NU.TEXTURE.MECHANISM.01} and \texttt{GRAV.SPIN2.EMERGENCE.01} stay \mO.
+Late-evening harvest (2026-08-30; suite $1005\to1007$, ledger $1173$ no new rows, no marker moves):
+the thermodynamic-dynamics theorem closes the \emph{mandatory} T3 dynamics leg at
+Hamiltonian-class level
+(\veri{v1013\_\allowbreak thermodynamic\_\allowbreak dynamics.py}) ---
+uniform Lieb--Robinson bound $v_{\mathrm{LR}}=32086e/225\sim387.64$, norm-convergent $\tau_t$,
+gauge-invariant quasilocal $\mathcal A^G$, existence of ground/KMS states; uniqueness, the
+limit gap and IR universality remain open; Decision typing UNCHANGED.
+The finite detline restriction isomorphism is verified and W-bridge P-anch is derived
+(\veri{v1014\_\allowbreak bridge\_\allowbreak refinements.py}) ---
+orientation fixes the conjugate branch, the residual constant phase is the $A_0$
+reference normalization; P-dem narrows to the character-blind determinant-response map.
+Every remaining axiom-core and continuum gap now runs through \emph{one} externalized
+theorem (MMST/Quillen: TEL-B/ALG-EXH/P1 $+$ that response map $+$ Bismut--Freed/$A_0$).
+Monday-morning harvest (2026-08-31; suite $1007\to1009$, ledger $1173$ no new rows, no marker moves):
+the axiom core is now fully premise-derived at finite level
+(\veri{v1015\_\allowbreak axiom\_\allowbreak core\_\allowbreak closure.py}) ---
+P-dem $r=(1,1,1)$ exactly, both W-bridge premises derived, remainder $0$ modulo the
+externalized MMST identification; \texttt{AX.P2.01} stays an axiom.
+The first viable canonical-state principle is the $R_4$ seam-modular cap; TEL-B narrows
+to the scalar dyadic increment $A_R<43$; $N$-uniform CAR nuclearity is proved as compactness
+input; the third-route volume theorem is cited-verified for finite-group DET chains
+(\veri{v1016\_\allowbreak state\_\allowbreak gap\_\allowbreak batteries.py}).
+Every remaining fundamental gap of the theory routes through the \emph{one} externalized
+MMST theorem or the $4$D functional.
 \smallskip\\
 \noindent\emph{Tier B made concrete (\veri{v277\_seam\_calderon\_e8\_match.py}).} The
 seam-Calder\'on $\to(E_8)_1$ identification is reduced to a \emph{single} bit. \mE\ the full $(E_8)_1$ matching
@@ -933,7 +1093,7 @@ $m_p/m_e$ & \mC & cross-sector (QCD scale / closed $m_e$); typed runnable solver
 Koide $Q$ & \mC & source ratio $Q=0.664$ near $2/3$; the source$\to$pole factor $53/54$ is an \emph{exact operator readout} of the missing $F{=}R{+}Q$ Sheet-Diamond corner \mE; the physical pole transfer ($F_{\mathrm{pole}}$) stays \mC \\
 dark matter & \mC & determinant-line axion: $f_a{=}M_{\mathrm{scal}}/128$, $m_a\approx23.8\,\mu$eV. \emph{Post-inflationary} ($H_{\mathrm{inf}}/f_a{\approx}66$, isocurvature): the misalignment angle is a horizon average (\emph{not} observable), the relic follows from $f_a$ (in the post-inflationary window), domain-wall-safe via $N_{\mathrm{DW}}{=}|C|{=}1$ (\vref{v470}/\vref{v472}); the $3\pi/5$ spine value is retained as a structural rational, not a relic prediction --- branch-level kill test, not a theory closure \\
 muon $a_\mu$ & \mX & seam vertex $a_\mu^{\mathrm{seam}}{=}\delta_2/(2\pi){=}45/(524288\pi^9){=}2.879{\times}10^{-9}$; exact \emph{value} \mE, but the vertex-projection bridge is \textbf{dissolved} (dated kill fired 2026-08-04: WP25$+$BMW lattice-HVP consensus, experiment$-$SM $=0.5\sigma$); compiler core untouched \\
-quantum gravity & \mE/\mC & local field eq.\ parameter-free ($G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$, \vref{v358}/\vref{v359}); $R+R^2$ heat-kernel grounded (G2); perturbative graviton unitarity established (Stelle ghost a truncation artefact, \vref{v304}/\vref{v370}/\vref{v380}); ambient measure (G6) a \mC\ redundancy (\vref{v369}) \\
+quantum gravity & \mE/\mC & local field eq.\ carries no free dimensionless Newton coupling under named QFT/entanglement premises \mC\ ($G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$, \vref{v358}/\vref{v359}); $R+R^2$ heat-kernel grounded (G2); perturbative graviton unitarity established (Stelle ghost a truncation artefact, \vref{v304}/\vref{v370}/\vref{v380}); ambient measure (G6) a \mC\ redundancy (\vref{v369}) \\
 \bottomrule
 \end{tabularx}
 \end{center}
@@ -943,7 +1103,7 @@ quantum gravity & \mE/\mC & local field eq.\ parameter-free ($G_{ab}{+}\Lambda g
 the data ($\eta_B=6.1\times10^{-10}$ via the closed $\Omega_b$; the axion DM candidate with a closed
 misalignment angle). One is a computed \emph{near}-miss reported without tuning (Koide $0.664$ vs $2/3$).
 One is a typed runnable transfer ($m_p/m_e$ as a cross-sector ratio, \vref{v374}); quantum gravity has been
-sharpened --- its local field equation is now \emph{parameter-free} (the full covariant
+sharpened --- its local field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises \mC\ (the full covariant
 $G_{ab}{+}\Lambda g_{ab}{=}\cthree^{-1}T_{ab}$ from fixed-volume entanglement equilibrium, \vref{v358}/\vref{v359}),
 its $R+R^2$ form heat-kernel grounded (G2), its physical sector gap-decoupled
 (G5), and \emph{perturbative} graviton unitarity established (the Stelle ghost a truncation artefact,

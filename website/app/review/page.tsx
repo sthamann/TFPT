@@ -89,7 +89,7 @@ const BLOCKS: Block[] = [
         published theorem (the cited continuum scaling-limit existence, v336;
         extension leg on the peer-reviewed crossed-product package, realisation
         at invariant level, v469; the twistor route SEAM.EQUIV.TWISTOR.01 and
-        the unconditional parent stay [O]). The local Einstein equation is parameter-free,
+        the unconditional parent stay [O]). The classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises [C],
         and the ambient, non-perturbative quantum-gravity measure is discharged as
         a redundancy [C] (a certification object, not missing dynamics), not an
         open hole. The absolute mass scale is a single declared dimensionful

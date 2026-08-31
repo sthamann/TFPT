@@ -37,15 +37,18 @@ Launch parallel subagents when **any** of:
 
 ## Parallel launch pattern
 
-| # | Role | subagent_type | readonly | Task |
-|---|------|---------------|----------|------|
-| 1 | Paper surfaces | `explore` | `true` | `grep vN_* verification/docs_map.csv`; list every `\veri{}`, status marker, keybox, related prose; flag sections with narrative but no citation |
-| 2 | Website mirrors | `explore` | `true` | `grep vN_* verification/website_map.csv`; enumerate `papers.ts`, `VerificationDag.tsx`, `StatusPyramid.tsx`, `StatusMatrix.tsx`, `predictions.ts`, `README.md`, `next.txt` |
-| 3 | Stale wording | `explore` | `true` | Grep `*.tex`, `website/`, `README.md`, `next.txt` for superseded phrases: "remaining input", "stays open", "one missing", old gate ids |
+| # | Role | subagent_type | model | readonly | Task |
+|---|------|---------------|-------|----------|------|
+| 1 | Paper surfaces | `explore` | `composer-2.5-fast` | `true` | `grep vN_* verification/docs_map.csv`; list every `\veri{}`, status marker, keybox, related prose; flag sections with narrative but no citation |
+| 2 | Website mirrors | `explore` | `composer-2.5-fast` | `true` | `grep vN_* verification/website_map.csv`; enumerate `papers.ts`, `VerificationDag.tsx`, `StatusPyramid.tsx`, `StatusMatrix.tsx`, `predictions.ts`, `README.md`, `next.txt` |
+| 3 | Stale wording | `explore` | `composer-2.5-fast` | `true` | Grep `*.tex`, `website/`, `README.md`, `next.txt` for superseded phrases: "remaining input", "stays open", "one missing", old gate ids |
+
+Enumeration is L0 work — the parent merges and does the load-bearing edits. Prompts carry the STATE
+block from skill **`agent-routing`**, never conversation history.
 
 **Status moves** affecting intro/frontier/contracts/origin: add fourth `explore` subagent scoped to `introduction.tex`, `tfpt_4_frontier.tex`, `tfpt_research_contracts.tex`, `origin_theory.tex` + website mirrors.
 
-After failed audit: launch **`shell`** subagent to run audit, parse failures, iterate until green.
+After failed audit: launch **`shell`** subagent (`cursor-grok-4.6-xhigh`) to run audit, parse failures, iterate until green. Two failed rounds → `ESCALATE: audit-red-after-two-fixes`.
 
 ## Subagent prompt template
 
@@ -64,10 +67,12 @@ Both **generated** — never hand-edit. Re-run `bash build.sh gen` after paper/w
 
 - Root `README.md` — highlights, open gates, reproduce commands
 - `experiments/next.txt` — running research notes (German allowed)
+- `rh/` — additional sync surface for PRIME.\* topics: skill **`rh-sync`** (INVENTORY, run_rh.py, README, paper, Lean)
 
 ## Subagents must NOT
 
 - Fabricate script results or upgrade markers without ledger backing
+- Receive whole papers or raw suite logs — they read via the maps, with `offset`/`limit`
 - Hand-edit generated files (`verification.tex`, `ScriptIndex.tsx`, `changelog.ts`, maps, `version.ts`)
 - Mark complete without `bash build.sh audit` → AUDIT OK
 - Skip README, next.txt, changelog when user-visible

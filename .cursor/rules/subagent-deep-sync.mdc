@@ -26,7 +26,9 @@ Launch parallel subagents when **any** of:
 
 1. Run script → **summarise concrete output first**
 2. `bash build.sh gen`
-3. Launch subagents in **one message** (paper · website · stale wording; +status-scope if needed)
+3. Launch subagents in **one message** (paper · website · stale wording; +status-scope if needed) —
+   enumeration roles L0 `composer-2.5-fast`, audit-fix `shell` L1 `cursor-grok-4.6-xhigh`, STATE-block
+   prompts only (rule `agent-economics`)
 4. Merge checklists → apply edits coherently
 5. `bash build.sh gen` → compile/sync
 6. **`bash build.sh audit` → AUDIT OK**

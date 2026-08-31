@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "hooks": {
+    "preToolUse": [
+      {
+        "command": ".cursor/hooks/route-subagent.py",
+        "matcher": "Task",
+        "timeout": 10
+      }
+    ],
+    "beforeReadFile": [
+      {
+        "command": ".cursor/hooks/guard-read.py",
+        "timeout": 10
+      }
+    ],
+    "subagentStart": [
+      {
+        "command": ".cursor/hooks/log-subagent.py",
+        "timeout": 10
+      }
+    ]
+  }
+}

@@ -46,7 +46,7 @@ const DECODERS: DecoderEntry[] = [
     tex: "\\Lambda,\\ A_s",
     role: "Gravity & cosmos",
     bullets: [
-      "Gₐᵦ+Λgₐᵦ = c₃⁻¹Tₐᵦ (parameter-free)",
+      "Gₐᵦ+Λgₐᵦ = c₃⁻¹Tₐᵦ (no free dimensionless Newton coupling under named QFT/entanglement premises [C])",
       "scalaron M = c₃^(7/2) M̄",
       "n_s = 0.965, r ≈ 0.004",
       "Λ ∼ e⁻²ᵅ⁻¹, H₀ ∼ √Λ",

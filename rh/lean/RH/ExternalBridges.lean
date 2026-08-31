@@ -41,6 +41,10 @@ import Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts
 import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
 import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
 import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
+import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
+import Mathlib.Analysis.Complex.LocallyUniformLimit
+import Mathlib.Analysis.Analytic.Uniqueness
+import Mathlib.Analysis.Complex.Convex
 
 namespace RH
 
@@ -4234,17 +4238,361 @@ lemma norm_riemannZeta_le_of_re_gt_one {s : ℂ} (hs : 1 < s.re)
   refine (add_le_add hleft hright).trans ?_
   nlinarith [norm_nonneg s, norm_nonneg (riemannZeta 2)]
 
-/-- r508 (3) clamp: the cell majorant `|cell n s| ≤ (n+1)^{-σ-1}`
-holds on `{Re s > 0}` (`norm_zetaFractCell_le_rpow` +
-`summable_zetaFractCell`), but the identity-theorem fill of
-`riemannZeta_eq_s_div_sub_s_mul_fractIntegral` from `{Re s > 1}`
-to `{Re s > 0, s ≠ 1}` needs locally-uniform holomorphy of
-`zetaFractIntegral`.  Mathlib `differentiable_tsum'` wants a
-**global** derivative majorant independent of `s`; a locally
-uniform + `AnalyticOnNhd.eqOn_of_preconnected` argument is left
-for r509 (needed: Jensen radius 1.75 reaches `Re = 0.25`). -/
-def ZetaFractIntegralHolomorphicOnRePos : Prop :=
-  DifferentiableOn ℂ zetaFractIntegral {s | 0 < s.re}
+/-- **r509 (a).** `s ↦ x^{-s-1}` is entire for `x > 0`. -/
+lemma hasDerivAt_ofReal_cpow_neg_succ {x : ℝ} (hx : 0 < x) (s : ℂ) :
+    HasDerivAt (fun z : ℂ => (x : ℂ) ^ (-z - 1))
+      (-Complex.log (x : ℂ) * (x : ℂ) ^ (-s - 1)) s := by
+  have hx0 : (x : ℂ) ≠ 0 := ofReal_ne_zero.mpr hx.ne'
+  simpa [mul_comm, mul_neg, sub_eq_add_neg] using
+    (((hasDerivAt_id' s).neg).sub_const (1 : ℂ)).const_cpow (Or.inl hx0)
+
+lemma hasDerivAt_zetaFractCellIntegrand (n : ℕ) {x : ℝ} (hx : 0 < x)
+    (s : ℂ) :
+    HasDerivAt (fun z : ℂ => zetaFractCellIntegrand n z x)
+      (-Complex.log (x : ℂ) * zetaFractCellIntegrand n s x) s := by
+  simpa [zetaFractCellIntegrand, mul_comm, mul_left_comm, mul_neg] using
+    (hasDerivAt_ofReal_cpow_neg_succ hx s).const_mul ((x - (n + 1 : ℝ) : ℂ))
+
+lemma norm_log_ofReal_of_one_le {x : ℝ} (hx : 1 ≤ x) :
+    ‖Complex.log (x : ℂ)‖ = Real.log x := by
+  have hx0 : 0 < x := zero_lt_one.trans_le hx
+  rw [← ofReal_log hx0.le, Complex.norm_real, Real.norm_eq_abs,
+    abs_of_nonneg (Real.log_nonneg hx)]
+
+/-- Integrand derivative majorant on a cell: `|∂_s cellIntegrand| ≤ log x · x^{-σ-1}`. -/
+lemma norm_hasDeriv_zetaFractCellIntegrand (n : ℕ) (s : ℂ) {x : ℝ}
+    (hx : x ∈ Icc (n + 1 : ℝ) (n + 2)) :
+    ‖-Complex.log (x : ℂ) * zetaFractCellIntegrand n s x‖ ≤
+      Real.log x * x ^ (-s.re - 1) := by
+  have hx1 : 1 ≤ x := by
+    have : (1 : ℝ) ≤ n + 1 := by exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+    exact this.trans hx.1
+  rw [norm_mul, norm_neg, norm_log_ofReal_of_one_le hx1]
+  exact mul_le_mul_of_nonneg_left (norm_zetaFractCellIntegrand_le n s hx)
+    (Real.log_nonneg hx1)
+
+lemma intervalIntegrable_log_rpow (n : ℕ) (p : ℝ) :
+    IntervalIntegrable (fun x : ℝ => Real.log x * x ^ (-p - 1)) volume
+      (n + 1 : ℝ) (n + 2) := by
+  have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+  have hpos : (0 : ℝ) < n + 1 := by exact_mod_cast Nat.succ_pos n
+  refine ContinuousOn.intervalIntegrable_of_Icc hle ?_
+  refine ContinuousOn.mul ?_
+    (continuousOn_id.rpow_const fun x hx => Or.inl (hpos.trans_le hx.1).ne')
+  exact Real.continuousOn_log.mono fun x hx => (hpos.trans_le hx.1).ne'
+
+lemma mem_Icc_of_mem_uIoc {n : ℕ} {t : ℝ}
+    (ht : t ∈ Ι (n + 1 : ℝ) (n + 2)) : t ∈ Icc (n + 1 : ℝ) (n + 2) := by
+  have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+  exact Ioc_subset_Icc_self (by rwa [uIoc_of_le hle] at ht)
+
+/-- **r509 (a).** Parametric FTC: each cell is entire. -/
+lemma hasDerivAt_zetaFractCell (n : ℕ) (s₀ : ℂ) :
+    HasDerivAt (zetaFractCell n)
+      (∫ x in (n + 1 : ℝ)..(n + 2),
+        -Complex.log (x : ℂ) * zetaFractCellIntegrand n s₀ x) s₀ := by
+  let δ : ℝ := s₀.re - 1
+  let r : ℝ := (1 : ℝ) / 2
+  have hr : 0 < r := by norm_num
+  have hs : Metric.ball s₀ r ∈ 𝓝 s₀ := Metric.ball_mem_nhds s₀ hr
+  have hF_meas : ∀ᶠ z in 𝓝 s₀,
+      AEStronglyMeasurable (zetaFractCellIntegrand n z)
+        (volume.restrict (Ι (n + 1 : ℝ) (n + 2))) :=
+    Filter.Eventually.of_forall fun z =>
+      (intervalIntegrable_zetaFractCellIntegrand n z).aestronglyMeasurable_restrict_uIoc
+  have hF_int := intervalIntegrable_zetaFractCellIntegrand n s₀
+  have hF'_meas :
+      AEStronglyMeasurable
+        (fun x : ℝ => -Complex.log (x : ℂ) * zetaFractCellIntegrand n s₀ x)
+        (volume.restrict (Ι (n + 1 : ℝ) (n + 2))) := by
+    have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+    have hpos : (0 : ℝ) < n + 1 := by exact_mod_cast Nat.succ_pos n
+    have hcont : ContinuousOn
+        (fun x : ℝ => -Complex.log (x : ℂ) * zetaFractCellIntegrand n s₀ x)
+        (Icc (n + 1 : ℝ) (n + 2)) := by
+      refine ContinuousOn.mul ?_ (continuousOn_zetaFractCellIntegrand n s₀)
+      refine ContinuousOn.neg ?_
+      refine ContinuousOn.congr
+        (continuous_ofReal.comp_continuousOn
+          (Real.continuousOn_log.mono fun x hx =>
+            (hpos.trans_le hx.1).ne'))
+        fun x hx => (ofReal_log (hpos.trans_le hx.1).le).symm
+    exact (hcont.intervalIntegrable_of_Icc hle).aestronglyMeasurable_restrict_uIoc
+  have h_bound : ∀ᵐ t ∂volume, t ∈ Ι (n + 1 : ℝ) (n + 2) →
+      ∀ z ∈ Metric.ball s₀ r,
+        ‖-Complex.log (t : ℂ) * zetaFractCellIntegrand n z t‖ ≤
+          Real.log t * t ^ (-δ - 1) := by
+    refine Filter.Eventually.of_forall ?_
+    intro t ht z hz
+    have hIcc := mem_Icc_of_mem_uIoc ht
+    refine (norm_hasDeriv_zetaFractCellIntegrand n z hIcc).trans ?_
+    have hx1 : 1 ≤ t := by
+      have : (1 : ℝ) ≤ n + 1 := by exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+      exact this.trans hIcc.1
+    have hzball : ‖z - s₀‖ < r := by
+      simpa [dist_eq_norm] using Metric.mem_ball.mp hz
+    have habs : |z.re - s₀.re| < r :=
+      (abs_re_le_norm (z - s₀)).trans_lt hzball
+    have hre : δ < z.re := by
+      have : s₀.re - r < z.re := by linarith [(abs_lt.mp habs).1]
+      dsimp [δ, r] at *
+      linarith
+    exact mul_le_mul_of_nonneg_left
+      (Real.rpow_le_rpow_of_exponent_le hx1 (by linarith : -z.re - 1 ≤ -δ - 1))
+      (Real.log_nonneg hx1)
+  have bound_int := intervalIntegrable_log_rpow n δ
+  have h_diff : ∀ᵐ t ∂volume, t ∈ Ι (n + 1 : ℝ) (n + 2) →
+      ∀ z ∈ Metric.ball s₀ r,
+        HasDerivAt (fun w : ℂ => zetaFractCellIntegrand n w t)
+          (-Complex.log (t : ℂ) * zetaFractCellIntegrand n z t) z := by
+    refine Filter.Eventually.of_forall ?_
+    intro t ht z _hz
+    have hx0 : 0 < t :=
+      (show (0 : ℝ) < n + 1 by exact_mod_cast Nat.succ_pos n).trans_le
+        (mem_Icc_of_mem_uIoc ht).1
+    exact hasDerivAt_zetaFractCellIntegrand n hx0 z
+  exact (intervalIntegral.hasDerivAt_integral_of_dominated_loc_of_deriv_le
+    hs hF_meas hF_int hF'_meas h_bound bound_int h_diff).2
+
+lemma differentiable_zetaFractCell (n : ℕ) : Differentiable ℂ (zetaFractCell n) :=
+  fun s => (hasDerivAt_zetaFractCell n s).differentiableAt
+
+lemma isOpen_re_gt (δ : ℝ) : IsOpen {s : ℂ | δ < s.re} :=
+  isOpen_lt continuous_const continuous_re
+
+lemma norm_zetaFractCell_le_rpow_of_re_gt (n : ℕ) {s : ℂ} {δ : ℝ}
+    (hδ : 0 < δ) (hs : δ < s.re) :
+    ‖zetaFractCell n s‖ ≤ ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) :=
+  (norm_zetaFractCell_le_rpow n (by linarith : -1 < s.re)).trans <| by
+    have hb : (1 : ℝ) ≤ ((n + 1 : ℕ) : ℝ) := by
+      exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+    exact Real.rpow_le_rpow_of_exponent_le hb (by linarith : -s.re - 1 ≤ -δ - 1)
+
+/-- **r509 (b).** Weierstrass M-test: `zetaFractIntegral` is holomorphic on `{Re > δ}`. -/
+lemma differentiableOn_zetaFractIntegral_re_gt {δ : ℝ} (hδ : 0 < δ) :
+    DifferentiableOn ℂ zetaFractIntegral {s | δ < s.re} := by
+  have hu := summable_rpow_neg_succ (p := δ + 1) (by linarith)
+  have hu' : Summable fun n : ℕ => ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+    refine (summable_congr fun n => ?_).mp hu
+    congr 1
+    ring
+  refine differentiableOn_tsum_of_summable_norm hu'
+    (fun n => (differentiable_zetaFractCell n).differentiableOn)
+    (isOpen_re_gt δ) ?_
+  intro n s hs
+  exact norm_zetaFractCell_le_rpow_of_re_gt n hδ hs
+
+lemma differentiableOn_zetaFractIntegral_re_pos :
+    DifferentiableOn ℂ zetaFractIntegral {s | 0 < s.re} := by
+  intro s hs
+  have hδ : 0 < s.re / 2 := half_pos hs
+  have hsU : s.re / 2 < s.re := half_lt_self hs
+  exact ((differentiableOn_zetaFractIntegral_re_gt hδ).differentiableAt
+    ((isOpen_re_gt (s.re / 2)).mem_nhds hsU)).differentiableWithinAt
+
+/-- Convex open charts that avoid the pole `s = 1`. -/
+lemma isOpen_re_gt_im_pos (δ : ℝ) :
+    IsOpen ({s : ℂ | δ < s.re} ∩ {s | (0 : ℝ) < s.im}) :=
+  (isOpen_re_gt δ).inter (isOpen_lt continuous_const continuous_im)
+
+lemma isOpen_re_gt_im_neg (δ : ℝ) :
+    IsOpen ({s : ℂ | δ < s.re} ∩ {s | s.im < (0 : ℝ)}) :=
+  (isOpen_re_gt δ).inter (isOpen_lt continuous_im continuous_const)
+
+lemma isOpen_re_mem_Ioo (δ : ℝ) :
+    IsOpen {s : ℂ | δ < s.re ∧ s.re < (1 : ℝ)} :=
+  (isOpen_re_gt δ).inter (isOpen_lt continuous_re continuous_const)
+
+noncomputable def zetaNOneRHS (s : ℂ) : ℂ :=
+  s / (s - 1) - s * zetaFractIntegral s
+
+lemma differentiableOn_zetaNOneRHS_re_gt {δ : ℝ} (hδ : 0 < δ)
+    {U : Set ℂ} (hU : U ⊆ {s | δ < s.re}) (h1 : 1 ∉ U) :
+    DifferentiableOn ℂ zetaNOneRHS U := by
+  have hI := (differentiableOn_zetaFractIntegral_re_gt hδ).mono hU
+  refine DifferentiableOn.sub ?_ ?_
+  · intro s hs
+    have hs1 : s ≠ 1 := fun h => h1 (h ▸ hs)
+    exact ((differentiableAt_id (x := s)).div
+      (differentiableAt_id.sub_const (1 : ℂ))
+      (sub_ne_zero.mpr hs1)).differentiableWithinAt
+  · exact differentiable_id.differentiableOn.mul hI
+
+/-- Identity on the upper open half of `{Re > δ}`. -/
+lemma riemannZeta_eq_zetaNOneRHS_of_re_gt_im_pos {δ : ℝ} (hδ : 0 < δ)
+    {s : ℂ} (hs : δ < s.re) (him : 0 < s.im) :
+    riemannZeta s = zetaNOneRHS s := by
+  let U : Set ℂ := {z | δ < z.re} ∩ {z | (0 : ℝ) < z.im}
+  have hUo : IsOpen U := isOpen_re_gt_im_pos δ
+  have hUc : IsPreconnected U :=
+    ((convex_halfSpace_re_gt δ).inter (convex_halfSpace_im_gt (0 : ℝ))).isPreconnected
+  have h1 : (1 : ℂ) ∉ U := by intro h; simp [U] at h
+  have hz0 : ((δ + 2 : ℝ) : ℂ) + I ∈ U := by
+    simp [U, add_re, add_im, I_re, I_im]
+    exact ⟨by linarith, by norm_num⟩
+  have heq : riemannZeta =ᶠ[𝓝 (((δ + 2 : ℝ) : ℂ) + I)] zetaNOneRHS := by
+    have hopen : IsOpen {z : ℂ | (1 : ℝ) < z.re} := isOpen_re_gt 1
+    have hmem : (1 : ℝ) < (((δ + 2 : ℝ) : ℂ) + I).re := by
+      simp [add_re, I_re]; linarith
+    refine eventually_of_mem (hopen.mem_nhds hmem) ?_
+    intro z hz
+    simpa [zetaNOneRHS] using riemannZeta_eq_s_div_sub_s_mul_fractIntegral hz
+  have hf : AnalyticOnNhd ℂ riemannZeta U :=
+    analyticOnNhd_riemannZeta_compl_one.mono fun z hz => by
+      intro h; exact h1 (h ▸ hz)
+  have hg : AnalyticOnNhd ℂ zetaNOneRHS U :=
+    (differentiableOn_zetaNOneRHS_re_gt hδ (fun z hz => hz.1) h1).analyticOnNhd hUo
+  exact hf.eqOn_of_preconnected_of_eventuallyEq hg hUc hz0 heq ⟨hs, him⟩
+
+/-- Identity on the lower open half of `{Re > δ}`. -/
+lemma riemannZeta_eq_zetaNOneRHS_of_re_gt_im_neg {δ : ℝ} (hδ : 0 < δ)
+    {s : ℂ} (hs : δ < s.re) (him : s.im < 0) :
+    riemannZeta s = zetaNOneRHS s := by
+  let U : Set ℂ := {z | δ < z.re} ∩ {z | z.im < (0 : ℝ)}
+  have hUo : IsOpen U := isOpen_re_gt_im_neg δ
+  have hUc : IsPreconnected U :=
+    ((convex_halfSpace_re_gt δ).inter (convex_halfSpace_im_lt (0 : ℝ))).isPreconnected
+  have h1 : (1 : ℂ) ∉ U := by intro h; simp [U] at h
+  have hz0 : ((δ + 2 : ℝ) : ℂ) - I ∈ U := by
+    simp [U, sub_re, sub_im, I_re, I_im]
+    exact ⟨by linarith, by norm_num⟩
+  have heq : riemannZeta =ᶠ[𝓝 (((δ + 2 : ℝ) : ℂ) - I)] zetaNOneRHS := by
+    have hopen : IsOpen {z : ℂ | (1 : ℝ) < z.re} := isOpen_re_gt 1
+    have hmem : (1 : ℝ) < (((δ + 2 : ℝ) : ℂ) - I).re := by
+      simp [sub_re, I_re]; linarith
+    refine eventually_of_mem (hopen.mem_nhds hmem) ?_
+    intro z hz
+    simpa [zetaNOneRHS] using riemannZeta_eq_s_div_sub_s_mul_fractIntegral hz
+  have hf : AnalyticOnNhd ℂ riemannZeta U :=
+    analyticOnNhd_riemannZeta_compl_one.mono fun z hz => by
+      intro h; exact h1 (h ▸ hz)
+  have hg : AnalyticOnNhd ℂ zetaNOneRHS U :=
+    (differentiableOn_zetaNOneRHS_re_gt hδ (fun z hz => hz.1) h1).analyticOnNhd hUo
+  exact hf.eqOn_of_preconnected_of_eventuallyEq hg hUc hz0 heq ⟨hs, him⟩
+
+/-- Identity on the open strip `{δ < Re s < 1}` (no pole). -/
+lemma riemannZeta_eq_zetaNOneRHS_of_re_Ioo {δ : ℝ} (hδ : 0 < δ) (hδ1 : δ < 1)
+    {s : ℂ} (hs : δ < s.re) (hs1 : s.re < 1) :
+    riemannZeta s = zetaNOneRHS s := by
+  let U : Set ℂ := {z | δ < z.re ∧ z.re < (1 : ℝ)}
+  have hUo : IsOpen U := isOpen_re_mem_Ioo δ
+  have hUc : IsPreconnected U :=
+    ((convex_halfSpace_re_gt δ).inter (convex_halfSpace_re_lt (1 : ℝ))).isPreconnected
+  have h1 : (1 : ℂ) ∉ U := by intro h; simp [U] at h
+  have hz0 : (((δ + 1) / 2 : ℝ) : ℂ) + I ∈ U := by
+    refine ⟨?_, ?_⟩
+    · simp; linarith
+    · simp; linarith
+  have hr : 0 < min (min ((δ + 1) / 2 - δ) (1 - (δ + 1) / 2)) (1 / 2 : ℝ) := by
+    refine lt_min (lt_min ?_ ?_) (by norm_num) <;> linarith
+  let r := min (min ((δ + 1) / 2 - δ) (1 - (δ + 1) / 2)) (1 / 2 : ℝ)
+  have heq : riemannZeta =ᶠ[𝓝 ((((δ + 1) / 2 : ℝ) : ℂ) + I)] zetaNOneRHS := by
+    have hball : Metric.ball ((((δ + 1) / 2 : ℝ) : ℂ) + I) r ⊆
+        {z | δ < z.re} ∩ {z | (0 : ℝ) < z.im} := by
+      intro z hz
+      have hd : ‖z - ((((δ + 1) / 2 : ℝ) : ℂ) + I)‖ < r := by
+        simpa [dist_eq_norm] using Metric.mem_ball.mp hz
+      have hre' : |(z - ((((δ + 1) / 2 : ℝ) : ℂ) + I)).re| < r :=
+        (abs_re_le_norm _).trans_lt hd
+      have him' : |(z - ((((δ + 1) / 2 : ℝ) : ℂ) + I)).im| < r :=
+        (abs_im_le_norm _).trans_lt hd
+      have hre : |z.re - (δ + 1) / 2| < r := by
+        simpa [sub_re, add_re, I_re] using hre'
+      have him : |z.im - 1| < r := by
+        simpa [sub_im, add_im, I_im] using him'
+      constructor
+      · have : (δ + 1) / 2 - r < z.re := by linarith [(abs_lt.mp hre).1]
+        have hrle : r ≤ (δ + 1) / 2 - δ :=
+          (min_le_left _ _).trans (min_le_left _ _)
+        linarith [hrle]
+      · have : 1 - r < z.im := by linarith [(abs_lt.mp him).1]
+        have hrle : r ≤ (1 / 2 : ℝ) := min_le_right _ _
+        linarith [hrle]
+    refine eventually_of_mem (Metric.isOpen_ball.mem_nhds (Metric.mem_ball_self hr)) ?_
+    intro z hz
+    have hz' := hball hz
+    exact riemannZeta_eq_zetaNOneRHS_of_re_gt_im_pos hδ hz'.1 hz'.2
+  have hf : AnalyticOnNhd ℂ riemannZeta U :=
+    analyticOnNhd_riemannZeta_compl_one.mono fun z hz => by
+      intro h; exact h1 (h ▸ hz)
+  have hg : AnalyticOnNhd ℂ zetaNOneRHS U :=
+    (differentiableOn_zetaNOneRHS_re_gt hδ (fun z hz => hz.1) h1).analyticOnNhd hUo
+  exact hf.eqOn_of_preconnected_of_eventuallyEq hg hUc hz0 heq ⟨hs, hs1⟩
+
+lemma riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos
+    {s : ℂ} (hs : 0 < s.re) (h1 : s ≠ 1) :
+    riemannZeta s = s / (s - 1) - s * zetaFractIntegral s := by
+  by_cases hgt : 1 < s.re
+  · exact riemannZeta_eq_s_div_sub_s_mul_fractIntegral hgt
+  · have hδ : 0 < s.re / 2 := half_pos hs
+    have hδ1 : s.re / 2 < 1 := by
+      have : s.re ≤ 1 := le_of_not_gt hgt
+      linarith
+    have hs' : s.re / 2 < s.re := half_lt_self hs
+    by_cases him : 0 < s.im
+    · simpa [zetaNOneRHS] using
+        riemannZeta_eq_zetaNOneRHS_of_re_gt_im_pos hδ hs' him
+    · by_cases himn : s.im < 0
+      · simpa [zetaNOneRHS] using
+          riemannZeta_eq_zetaNOneRHS_of_re_gt_im_neg hδ hs' himn
+      · have him0 : s.im = 0 := le_antisymm (not_lt.mp him) (not_lt.mp himn)
+        have hs1 : s.re < 1 := lt_of_le_of_ne (not_lt.mp hgt) ?_
+        · simpa [zetaNOneRHS] using
+            riemannZeta_eq_zetaNOneRHS_of_re_Ioo hδ hδ1 hs' hs1
+        · intro hre
+          exact h1 (Complex.ext hre him0)
+
+lemma norm_zetaFractIntegral_le_of_re_gt {δ : ℝ} (hδ : 0 < δ) {s : ℂ}
+    (hs : δ < s.re) :
+    ‖zetaFractIntegral s‖ ≤ ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+  have hle : ∀ n, ‖zetaFractCell n s‖ ≤ ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) :=
+    fun n => norm_zetaFractCell_le_rpow_of_re_gt n hδ hs
+  have hu : Summable fun n : ℕ => ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+    refine (summable_congr fun n => ?_).mp
+      (summable_rpow_neg_succ (p := δ + 1) (by linarith))
+    congr 1
+    ring
+  have hnorm : Summable fun n : ℕ => ‖zetaFractCell n s‖ :=
+    Summable.of_nonneg_of_le (fun _ => norm_nonneg _) hle hu
+  refine (norm_tsum_le_tsum_norm (f := fun n => zetaFractCell n s) hnorm).trans ?_
+  exact hnorm.tsum_mono hu hle
+
+/-- **r509 (4).** Γ-free polynomial bound on `{Re s > δ} ∩ {|s-1| ≥ 1/2}`. -/
+lemma norm_riemannZeta_le_of_re_gt {δ : ℝ} (hδ : 0 < δ) {s : ℂ}
+    (hs : δ < s.re) (h1 : s ≠ 1)
+    (hsep : (1 / 2 : ℝ) ≤ ‖s - 1‖) :
+    ‖riemannZeta s‖ ≤
+      (2 + ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1)) * (1 + ‖s‖) := by
+  have hform := riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos
+    (lt_trans hδ hs) h1
+  rw [hform]
+  have hI := norm_zetaFractIntegral_le_of_re_gt hδ hs
+  have hleft : ‖s / (s - 1)‖ ≤ 2 * ‖s‖ := by
+    rw [norm_div]
+    refine (div_le_div_of_nonneg_left (norm_nonneg s)
+      (by positivity : (0 : ℝ) < 1 / 2) hsep).trans ?_
+    field_simp
+    exact le_rfl
+  have hright : ‖s * zetaFractIntegral s‖ ≤
+      ‖s‖ * ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+    rw [norm_mul]
+    exact mul_le_mul_of_nonneg_left hI (norm_nonneg s)
+  refine (norm_sub_le _ _).trans ?_
+  refine (add_le_add hleft hright).trans ?_
+  have hz : 0 ≤ ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) :=
+    tsum_nonneg fun _ => Real.rpow_nonneg (Nat.cast_nonneg _) _
+  nlinarith [norm_nonneg s]
+
+/-- r509 Teil 2 landing site: Jensen counting on disks `D(2+iT, 1.5)`.
+The circle-average identity is Mathlib
+`MeromorphicOn.circleAverage_log_norm`; wiring the poly bound and
+the r506 centre lower bound `|ζ(2+iT)| ≥ 1/|ζ(2)|` is r510. -/
+def JensenDiskZeroCountBound : Prop :=
+  ∃ C : ℝ, 0 < C ∧
+    ∀ T : ℝ, 4 ≤ |T| →
+      (riemannZetaZerosOnClosedRect (2 - (3 / 2 : ℝ)) (2 + 3 / 2)
+          (|T| + 3 / 2)).card ≤
+        C * Real.log (2 + |T|)
 
 end ZetaEulerMaclaurin
 

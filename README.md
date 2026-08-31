@@ -33,6 +33,12 @@ frozen before the data), three independent
 verification engines (Python + Wolfram + Lean), and a versioned status ledger that types every
 claim — including its **explicit open problems and falsification criteria**.
 
+## Video
+
+[![TFPT in 5½ minutes](website/public/intro/tfpt-intro-poster.jpeg)](https://www.fixpoint-theory.com/#intro-video)
+
+The 5½-minute film — updated 2026-08-31: compiler, alpha fixed point, dual status card, the August structural wave, falsification discipline, live predictions.
+
 ---
 
 ## Start here
@@ -156,7 +162,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 975 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 1009 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,

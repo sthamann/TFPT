@@ -160,8 +160,8 @@ const PHASES: Phase[] = [
   },
   {
     range: "v303–v407",
-    title: "Solvers + parameter-free gravity + closure",
-    body: "Typed F_transfer solvers (Koide/η_B/m_p-m_e/axion, v371–v375/v402); the parameter-free Einstein equation, full nonlinear (v359); QG.AMB a [C] redundancy (v369).",
+    title: "Solvers + gravity equation (no free Newton dial [C]) + closure",
+    body: "Typed F_transfer solvers (Koide/η_B/m_p-m_e/axion, v371–v375/v402); the classical covariant Einstein equation under the named QFT/entanglement premises, full nonlinear (v359) [C]; QG.AMB a [C] redundancy (v369).",
     tone: "green",
     scripts: ["v359_grav_nonlinear_einstein.py", "v371_ftransfer_pole.py", "v384_residual_certification.py"],
   },

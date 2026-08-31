@@ -374,7 +374,11 @@ diagonal/scale channel exactly --- but against the \vref{v484} mark matrix there
 proportionality: the two kernels sit in \emph{swapped} $\mu_4$ channels (gauge zero mode vs.\ sign rep),
 channel-wise exactly matched (same $\mu_4$ Fourier eigenbasis, $|\mathrm{spec}|$ multisets $\{0,2,2,4\}$,
 doublet ratio $4/\ln2$ with $c_3$ cancelling). The remaining \mO\ is thereby \emph{sharpened}, not
-closed: the channel-swap question plus the abstract-seam identification.
+closed: the channel-swap question plus the abstract-seam identification --- and the swap half is
+meanwhile resolved at the \emph{finite} level by $\mu_4$-character grading (deck swap $r\to r{+}2$,
+graded $\det'$ difference $c_3$-free $=\log(\ln2/4)$, uniform channel ratio $4/\ln2$;
+\veri{v985\_quillen\_channel\_swap.py}), leaving the abstract-seam/continuum identification as the
+open residual.
 
 \par\smallskip\noindent\textbf{Static vs.\ dynamic rates: a number-field split}
 (\veri{v314\_rate\_translation.py}). The discrete kernel and the dynamic recovery sit in \emph{different number
@@ -786,7 +790,10 @@ exactly); and the fully reversible lift $U$, whose classically invisible datum i
 $\operatorname{sgn}J=\pm$ of the exact Jarlskog invariant $J=\pm1/27$.  The recoverability-code reading
 above is untouched; what is added is the honest boundary: populations alone cannot decide whether the seam
 is a classical relaxation channel or the measurement shadow of a coherent system --- that selection is the
-open dilation contract (\texttt{DYN.UNITARY.DILATION.01}, the research-contracts document).
+open dilation contract (\texttt{DYN.UNITARY.DILATION.01}, the research-contracts document; its
+\emph{discrete} collision/QCA leg is meanwhile realized exactly --- $B^n$ as the reduced dynamics of a
+strictly local unitary collision band, \veri{v984\_markov\_qca\_dilation.py} --- while the continuous
+Hamiltonian/OS legs and the branch selection stay \mO).
 
 \begin{keybox}[If the seam is a horizon: four completion routes, and where they converge \mE/\mC/\mO\ (\veri{v343\_four\_routes\_analysis.py})]
 Taking the black-hole-birth reading seriously changes the \emph{nature} of the two structural residuals, and
