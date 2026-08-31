@@ -2811,6 +2811,33 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R490_STATUS = (
+    "classical Weil operator residual at L=0.3 "
+    "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT STUCK(off/s=5.86-eats-1000x; "
+    "GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  "
+    "r488 G-certificate (N=5, s=0.05, BS=0.99439) "
+    "is Galerkin-level; operator leftover "
+    "(1-P_5)A+ u_1 / s = 5.86 vs margin 5.6e-3 "
+    "(eats ~1000x).  Even ground already 8.1e-2.  "
+    "Raising M does not help; [T,inf) tail grows.  "
+    "Full-space GL leftover of truncated A+ is "
+    "tiny at n>=96 (3e-6) but is NOT the "
+    "certificate residual.  B1 (dps-Nyström) "
+    "does not help: off-space is float-visible.  "
+    "Round 10 of the 0.3 keystone; no eleventh "
+    "form.  Smoke 11/11, full 16/16, "
+    "SPEC_SHA 162707324dc6b05c.  Companion "
+    "rh/problem/operator_residual.tex + "
+    "verify_operator_residual.py "
+    "OPERATOR_RESIDUAL VERIFIED -- "
+    "STUCK(off/s=5.86-eats-1000x; "
+    "GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R489_STATUS = (
     "outer bridges fixed-support channel reduction "
     "(round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; "
@@ -7021,6 +7048,29 @@ ENTRIES = [
      "compiled PDF of outer_bridges2.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/operator_residual.tex", "problem_statement",
+     "r490",
+     [],
+     _R490_STATUS,
+     True),
+    ("rh/problem/verify_operator_residual.py", "problem_check",
+     "r490 companion",
+     [],
+     "machine check of operator_residual.tex: note tokens "
+     "(STUCK, FINAL_CHECKPOINT, off/s, 5.86, Birman, "
+     "e^{2L}, Fourier-HS not reused, Yoshida--Bombieri, "
+     "r488, B1, ideas), smoke run, A-nogo and r488 "
+     "midpoint pins.  6/6 gates, final line "
+     "OPERATOR_RESIDUAL VERIFIED -- "
+     "STUCK(off/s=5.86-eats-1000x; "
+     "GL-tiny-not-the-certificate;+FINAL_CHECKPOINT)",
+     True),
+    ("rh/problem/operator_residual.pdf", "problem_statement",
+     "r490",
+     [],
+     "compiled PDF of operator_residual.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7631,6 +7681,11 @@ ENTRIES = [
      "r489",
      [],
      _R489_STATUS,
+     True),
+    (f"{EXP}/operator_residual_probe.py", "sealed_probe",
+     "r490",
+     [],
+     _R490_STATUS,
      True),
 ]
 

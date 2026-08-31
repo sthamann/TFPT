@@ -263,6 +263,7 @@ PROBES = [
     ("r487", "outer_bridges_probe.py"),
     ("r488", "resolvent_solve_probe.py"),
     ("r489", "outer_bridges2_probe.py"),
+    ("r490", "operator_residual_probe.py"),
 ]
 
 MODULES = [

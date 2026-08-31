@@ -7041,6 +7041,24 @@ L2.  Common-anchor finite-comb and bounded-cosh polar-integral
 continuity are proved.  Census **9 → 8**.  Experiments-side structural
 seal, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Operator residual (r490,
+PRIME.RDAGGER.OPERATOR\_RESIDUAL.01).**
+Sealed probe
+`experiments/tfpt-discovery/operator_residual_probe.py`
+(smoke 11/11, full 16/16, SPEC\_SHA `162707324dc6b05c`)
+plus `rh/problem/operator_residual.tex` (+ PDF +
+`verify_operator_residual.py`, 6/6,
+`OPERATOR\_RESIDUAL VERIFIED -- STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT)`).
+**Regime STUCK+FINAL\_CHECKPOINT: certificate
+off/s $=5.86$ eats the $5.6\cdot10^{-3}$ margin
+$\sim1000\times$; GL leftover of truncated $A^+$
+is tiny at $n\ge96$ but is not the certificate
+residual.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+The $0.3$ keystone is frozen.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
 ## Folder guide
 
 ```
@@ -7511,6 +7529,11 @@ rh/
 │   │                     (R-not-coercive; s=0.05
 │   │                     G-cert-N5-BS=0.994;
 │   │                     operator-R-gap-open);
+│   │                     not lambda_*.  No RH claim
+│   ├── operator_residual.tex(+pdf) — r490: STUCK
+│   │                     (off/s=5.86-eats-1000x;
+│   │                     GL-tiny-not-the-certificate)
+│   │                     +FINAL_CHECKPOINT;
 │   │                     not lambda_*.  No RH claim
 │   │                     (enemy-3dim-BS<1; Q_E-Higham;
 │   │                     operator-Rinv-open);
@@ -8809,6 +8832,18 @@ dense bridge to one completion sorry.  File domain is
 RH READMEs, the probe, `outer_bridges2.tex`, verifier, INVENTORY, and
 `run_rh.py`.  It does not touch `experiments/next.txt`.
 Suite surface: integrity + probes + Lean (`run_rh.py --fast`).
+**r490 coexistence.** Round 490 (`operator_residual_probe.py`)
+measures the operator leftover of the r488
+certificate solves, records off/s $=5.86$
+against the $5.6\cdot10^{-3}$ margin, and
+freezes the $0.3$ keystone
+(not lambda_*).  File domain is the probe,
+`operator_residual.tex`, the verifier,
+INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or
+`experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

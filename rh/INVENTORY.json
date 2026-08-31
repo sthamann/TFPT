@@ -4546,6 +4546,36 @@
       "bytes": 212327
     },
     {
+      "path": "rh/problem/operator_residual.tex",
+      "role": "problem_statement",
+      "round": "r490",
+      "ledger_ids": [],
+      "status": "classical Weil operator residual at L=0.3 (round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; experiments-side, NO ledger row): VERDICT STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  r488 G-certificate (N=5, s=0.05, BS=0.99439) is Galerkin-level; operator leftover (1-P_5)A+ u_1 / s = 5.86 vs margin 5.6e-3 (eats ~1000x).  Even ground already 8.1e-2.  Raising M does not help; [T,inf) tail grows.  Full-space GL leftover of truncated A+ is tiny at n>=96 (3e-6) but is NOT the certificate residual.  B1 (dps-Nyström) does not help: off-space is float-visible.  Round 10 of the 0.3 keystone; no eleventh form.  Smoke 11/11, full 16/16, SPEC_SHA 162707324dc6b05c.  Companion rh/problem/operator_residual.tex + verify_operator_residual.py OPERATOR_RESIDUAL VERIFIED -- STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "5fae7575e556fbbf1b5a8709752c05e784804672acc454f8ef140aeaaf444f7d",
+      "bytes": 14258
+    },
+    {
+      "path": "rh/problem/verify_operator_residual.py",
+      "role": "problem_check",
+      "round": "r490 companion",
+      "ledger_ids": [],
+      "status": "machine check of operator_residual.tex: note tokens (STUCK, FINAL_CHECKPOINT, off/s, 5.86, Birman, e^{2L}, Fourier-HS not reused, Yoshida--Bombieri, r488, B1, ideas), smoke run, A-nogo and r488 midpoint pins.  6/6 gates, final line OPERATOR_RESIDUAL VERIFIED -- STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT)",
+      "pin": true,
+      "sha256": "2291f5f70db01553484d544fc953457d1cf9fdb134b7be41cb9aeb1a4ebb1e7e",
+      "bytes": 3341
+    },
+    {
+      "path": "rh/problem/operator_residual.pdf",
+      "role": "problem_statement",
+      "round": "r490",
+      "ledger_ids": [],
+      "status": "compiled PDF of operator_residual.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "744187bb016a951478f115f67a295292848f49c76c9ee29198e305daec62718c",
+      "bytes": 462526
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4720,8 +4750,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "32f6d64ab0bcf19bdb206aecd9c1df0cea794c4c71ba4fc19fbf84c42a14fc48",
-      "bytes": 5602056
+      "sha256": "7d97fbe4d9d616a1def9988409dfa87216e4fec95fa9bccdb04bf6cb134ea966",
+      "bytes": 5603770
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5812,6 +5842,16 @@
       "pin": true,
       "sha256": "192e3bf61ebe7b867590cac50bb9546701aefe1420b1a63237a24dfcdc0c1b45",
       "bytes": 4190
+    },
+    {
+      "path": "experiments/tfpt-discovery/operator_residual_probe.py",
+      "role": "sealed_probe",
+      "round": "r490",
+      "ledger_ids": [],
+      "status": "classical Weil operator residual at L=0.3 (round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; experiments-side, NO ledger row): VERDICT STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  r488 G-certificate (N=5, s=0.05, BS=0.99439) is Galerkin-level; operator leftover (1-P_5)A+ u_1 / s = 5.86 vs margin 5.6e-3 (eats ~1000x).  Even ground already 8.1e-2.  Raising M does not help; [T,inf) tail grows.  Full-space GL leftover of truncated A+ is tiny at n>=96 (3e-6) but is NOT the certificate residual.  B1 (dps-Nyström) does not help: off-space is float-visible.  Round 10 of the 0.3 keystone; no eleventh form.  Smoke 11/11, full 16/16, SPEC_SHA 162707324dc6b05c.  Companion rh/problem/operator_residual.tex + verify_operator_residual.py OPERATOR_RESIDUAL VERIFIED -- STUCK(off/s=5.86-eats-1000x; GL-tiny-not-the-certificate;+FINAL_CHECKPOINT).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "fbd7d6413546cfafa1459ffeba59028504ea4f763f8d5cb9dc53bf0429d7617c",
+      "bytes": 10211
     }
   ]
 }
