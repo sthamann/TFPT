@@ -52,6 +52,8 @@ import Mathlib.MeasureTheory.Integral.CircleAverage
 import Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic
 import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.Topology.Algebra.InfiniteSum.ENNReal
+import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
 
 namespace RH
 
@@ -6140,6 +6142,312 @@ lemma summable_inv_sq_zetaZeros :
 
 end ZetaZeroInvSq
 
+/-! ### r514: rectangle contour, one simple pole ([2d] entry)
+
+Mathlib scoping (A): Cauchy-Goursat on rectangles is
+`Complex.integral_boundary_rect_eq_zero_of_differentiableOn`
+(four interval integrals, no `RectangleIntegral` type). Residues
+live on circles (`circleIntegral.integral_sub_inv_of_mem_ball`,
+Cauchy formula). There is no meromorphic residue theorem on
+rectangles. Cheapest formalism: keep Mathlib's four-side sum,
+punch the pole by the r498 split `f = r/(z-p)+h`, apply rectangle
+Cauchy to `h`, and compute the rectangle integral of `1/(z-p)`
+as `2πi` by an elementary arctan/log primitive
+(no winding-number library).
+
+[2d] contour design (C): rectangle `[-1/4, 2] × [-T, T]`.
+Right edge `Re = 2` uses the Dirichlet series `ζ'/ζ = -Σ Λ(n)n^{-s}`.
+Left edge `Re = -1/4` is folded by the functional equation onto
+`Re = 5/4 > 1` (same Dirichlet bound) plus an explicit `χ'/χ`
+(digamma). Keeping the left edge at `Re > 0` would miss
+`0 < β < ε` zeros; pairing of test-function hats does not replace
+enclosure. Horizontal edges die from `ĥ` decay (r506) times a
+log-type `ζ'/ζ` bound. The residue identity on `Q_T` is
+`∮ (ζ'/ζ) ĥ = spectralPartialSum ĥ - ĥ(1)`.
+-/
+
+section RectangleContour
+
+open Complex intervalIntegral MeasureTheory Set
+open scoped Interval
+
+/-- Four-side rectangle contour, Mathlib Cauchy-Goursat convention
+(bottom − top + `I`·right − `I`·left). -/
+noncomputable def rectangleIntegral (f : ℂ → ℂ) (z w : ℂ) : ℂ :=
+  (∫ x : ℝ in z.re..w.re, f (x + z.im * I)) -
+    (∫ x : ℝ in z.re..w.re, f (x + w.im * I)) +
+    I • (∫ y : ℝ in z.im..w.im, f (w.re + y * I)) -
+    I • (∫ y : ℝ in z.im..w.im, f (z.re + y * I))
+
+lemma rectangleIntegral_eq_zero_of_differentiableOn
+    (f : ℂ → ℂ) (z w : ℂ)
+    (hf : DifferentiableOn ℂ f ([[z.re, w.re]] ×ℂ [[z.im, w.im]])) :
+    rectangleIntegral f z w = 0 :=
+  integral_boundary_rect_eq_zero_of_differentiableOn f z w hf
+
+lemma add_I_mul_ne_zero {x γ : ℝ} (hγ : γ ≠ 0) :
+    (x : ℂ) + γ * I ≠ 0 := by
+  intro h
+  apply hγ
+  simpa using congrArg Complex.im h
+
+lemma inv_add_I_mul {x γ : ℝ} (hγ : γ ≠ 0) :
+    ((x : ℂ) + γ * I)⁻¹ =
+      ((x : ℂ) - γ * I) / (x ^ 2 + γ ^ 2) := by
+  have hden : (x ^ 2 + γ ^ 2 : ℝ) ≠ 0 :=
+    (add_pos_of_nonneg_of_pos (sq_nonneg x) (sq_pos_of_ne_zero hγ)).ne'
+  have hmul : ((x : ℂ) + γ * I) * ((x : ℂ) - γ * I) = ↑(x ^ 2 + γ ^ 2) := by
+    calc ((x : ℂ) + γ * I) * ((x : ℂ) - γ * I)
+        = (x : ℂ) ^ 2 - (γ : ℂ) ^ 2 * I ^ 2 := by ring
+      _ = (x : ℂ) ^ 2 - (γ : ℂ) ^ 2 * (-1) := by rw [I_sq]
+      _ = (x : ℂ) ^ 2 + (γ : ℂ) ^ 2 := by ring
+      _ = ↑(x ^ 2 + γ ^ 2) := by norm_cast
+  have hdenC : (x : ℂ) ^ 2 + (γ : ℂ) ^ 2 ≠ 0 := by exact_mod_cast hden
+  rw [eq_div_iff hdenC, inv_mul_eq_iff_eq_mul₀ (add_I_mul_ne_zero hγ)]
+  exact (hmul.trans (by norm_cast)).symm
+
+lemma inv_add_I_mul' {x γ : ℝ} (hγ : γ ≠ 0) :
+    ((x : ℂ) + γ * I)⁻¹ =
+      (↑(x / (x ^ 2 + γ ^ 2)) : ℂ) - I * ↑(γ / (x ^ 2 + γ ^ 2)) := by
+  calc ((x : ℂ) + γ * I)⁻¹
+      = ((x : ℂ) - γ * I) / (x ^ 2 + γ ^ 2) := inv_add_I_mul hγ
+    _ = (x : ℂ) / (x ^ 2 + γ ^ 2) - (γ : ℂ) * I / (x ^ 2 + γ ^ 2) :=
+        sub_div _ _ _
+    _ = ↑(x / (x ^ 2 + γ ^ 2)) - I * ↑(γ / (x ^ 2 + γ ^ 2)) := by
+        rw [ofReal_div, ofReal_div]
+        congr 1
+        · norm_cast
+        · rw [mul_comm (γ : ℂ) I, mul_div_assoc]
+          congr 1
+          norm_cast
+
+lemma hasDerivAt_log_sq_add {γ : ℝ} (hγ : γ ≠ 0) (x : ℝ) :
+    HasDerivAt (fun t : ℝ => Real.log (t ^ 2 + γ ^ 2))
+      (2 * x / (x ^ 2 + γ ^ 2)) x := by
+  have hpos : 0 < x ^ 2 + γ ^ 2 :=
+    add_pos_of_nonneg_of_pos (sq_nonneg _) (sq_pos_of_ne_zero hγ)
+  have hsq : HasDerivAt (fun t : ℝ => t ^ 2 + γ ^ 2) (2 * x) x := by
+    simpa using (hasDerivAt_pow 2 x).add_const (γ ^ 2)
+  convert (Real.hasDerivAt_log hpos.ne').comp x hsq using 1
+  field_simp [hpos.ne']
+
+lemma integral_x_div_sq_add (a b γ : ℝ) (hγ : γ ≠ 0) :
+    ∫ x : ℝ in a..b, x / (x ^ 2 + γ ^ 2) =
+      (1 / 2) * (Real.log (b ^ 2 + γ ^ 2) - Real.log (a ^ 2 + γ ^ 2)) := by
+  have hpos : ∀ x : ℝ, x ^ 2 + γ ^ 2 ≠ 0 := fun x =>
+    (add_pos_of_nonneg_of_pos (sq_nonneg x) (sq_pos_of_ne_zero hγ)).ne'
+  have hderiv : ∀ x : ℝ,
+      HasDerivAt (fun t : ℝ => (1 / 2) * Real.log (t ^ 2 + γ ^ 2))
+        (x / (x ^ 2 + γ ^ 2)) x := by
+    intro x
+    convert (hasDerivAt_log_sq_add hγ x).const_mul (1 / 2) using 1
+    ring
+  have hcont : Continuous fun x : ℝ => x / (x ^ 2 + γ ^ 2) :=
+    continuous_id.div ((continuous_pow 2).add continuous_const) hpos
+  have hFTC :=
+    integral_eq_sub_of_hasDerivAt (fun x (_ : x ∈ [[a, b]]) => hderiv x)
+      (hcont.intervalIntegrable a b)
+  convert hFTC using 1
+  ring
+
+lemma continuous_x_div_sq_add {γ : ℝ} (hγ : γ ≠ 0) :
+    Continuous fun x : ℝ => x / (x ^ 2 + γ ^ 2) :=
+  continuous_id.div ((continuous_pow 2).add continuous_const) fun x =>
+    (add_pos_of_nonneg_of_pos (sq_nonneg x) (sq_pos_of_ne_zero hγ)).ne'
+
+lemma continuous_const_div_sq_add (γ : ℝ) (hγ : γ ≠ 0) :
+    Continuous fun x : ℝ => γ / (x ^ 2 + γ ^ 2) :=
+  continuous_const.div ((continuous_pow 2).add continuous_const) fun x =>
+    (add_pos_of_nonneg_of_pos (sq_nonneg x) (sq_pos_of_ne_zero hγ)).ne'
+
+lemma continuous_inv_add_I_mul {γ : ℝ} (hγ : γ ≠ 0) :
+    Continuous fun x : ℝ => ((x : ℂ) + γ * I)⁻¹ := by
+  refine Continuous.congr ?_ fun x => (inv_add_I_mul' (x := x) hγ).symm
+  exact (continuous_ofReal.comp (continuous_x_div_sq_add hγ)).sub
+    (continuous_const.mul
+      (continuous_ofReal.comp (continuous_const_div_sq_add γ hγ)))
+
+lemma re_inv_add_I_mul {x γ : ℝ} (hγ : γ ≠ 0) :
+    (((x : ℂ) + γ * I)⁻¹).re = x / (x ^ 2 + γ ^ 2) := by
+  rw [inv_add_I_mul' hγ, sub_re, mul_re, I_re, I_im, ofReal_re, ofReal_im]
+  ring
+
+lemma im_inv_add_I_mul {x γ : ℝ} (hγ : γ ≠ 0) :
+    (((x : ℂ) + γ * I)⁻¹).im = -(γ / (x ^ 2 + γ ^ 2)) := by
+  rw [inv_add_I_mul' hγ, sub_im, mul_im, I_re, I_im, ofReal_re, ofReal_im]
+  ring
+
+lemma intervalIntegral_re {f : ℝ → ℂ} {a b : ℝ}
+    (hf : IntervalIntegrable f volume a b) :
+    (∫ x in a..b, f x).re = ∫ x in a..b, (f x).re :=
+  (Complex.reCLM.intervalIntegral_comp_comm hf).symm
+
+lemma intervalIntegral_im {f : ℝ → ℂ} {a b : ℝ}
+    (hf : IntervalIntegrable f volume a b) :
+    (∫ x in a..b, f x).im = ∫ x in a..b, (f x).im :=
+  (Complex.imCLM.intervalIntegral_comp_comm hf).symm
+
+lemma integral_inv_add_I_mul (a b γ : ℝ) (hγ : γ ≠ 0) :
+    ∫ x : ℝ in a..b, ((x : ℂ) + γ * I)⁻¹ =
+      ((1 : ℂ) / 2) * ↑(Real.log (b ^ 2 + γ ^ 2) - Real.log (a ^ 2 + γ ^ 2)) -
+        I * ↑(Real.arctan (b / γ) - Real.arctan (a / γ)) := by
+  have hf : IntervalIntegrable (fun x : ℝ => ((x : ℂ) + γ * I)⁻¹) volume a b :=
+    (continuous_inv_add_I_mul hγ).intervalIntegrable a b
+  have hsame : (fun x : ℝ => γ / (x ^ 2 + γ ^ 2)) =
+      fun x : ℝ => γ / (γ ^ 2 + x ^ 2) :=
+    funext fun x => by ring
+  apply Complex.ext
+  · rw [intervalIntegral_re hf]
+    simp_rw [re_inv_add_I_mul hγ]
+    rw [integral_x_div_sq_add a b γ hγ]
+    simp [sub_re, mul_re, ofReal_re, I_re, I_im]
+  · rw [intervalIntegral_im hf]
+    simp_rw [im_inv_add_I_mul hγ]
+    rw [intervalIntegral.integral_neg, hsame, integral_div_sq_add_sq]
+    simp [sub_im, mul_im, ofReal_im, ofReal_re, I_re, I_im]
+
+lemma inv_re_add_mul_I {σ y : ℝ} (hσ : σ ≠ 0) :
+    ((σ : ℂ) + y * I)⁻¹ = -I * ((y : ℂ) + (-σ) * I)⁻¹ := by
+  have hI : (σ : ℂ) + y * I = I * ((y : ℂ) + (-σ) * I) := by
+    calc (σ : ℂ) + y * I
+        = -(σ : ℂ) * I * I + y * I := by
+          rw [mul_assoc, I_mul_I, mul_neg_one, neg_neg]
+      _ = I * ((y : ℂ) + (-σ) * I) := by ring
+  rw [hI, mul_inv_rev, inv_I]
+  ring
+
+lemma inv_re_add_mul_I_div' {σ y : ℝ} (hσ : σ ≠ 0) :
+    ((σ : ℂ) + y * I)⁻¹ =
+      (↑(σ / (σ ^ 2 + y ^ 2)) : ℂ) - I * ↑(y / (σ ^ 2 + y ^ 2)) := by
+  calc ((σ : ℂ) + y * I)⁻¹
+      = -I * ((y : ℂ) + (-σ) * I)⁻¹ := inv_re_add_mul_I hσ
+    _ = -I * ((y : ℂ) + ↑(-σ) * I)⁻¹ := by simp
+    _ = -I * (↑(y / (y ^ 2 + (-σ) ^ 2)) -
+          I * ↑((-σ) / (y ^ 2 + (-σ) ^ 2))) := by
+        rw [inv_add_I_mul' (neg_ne_zero.mpr hσ)]
+    _ = -I * (↑(y / (y ^ 2 + σ ^ 2)) - I * ↑((-σ) / (y ^ 2 + σ ^ 2))) := by
+        rw [neg_sq]
+    _ = -I * ↑(y / (y ^ 2 + σ ^ 2)) + (I * I) * ↑((-σ) / (y ^ 2 + σ ^ 2)) := by
+        rw [mul_sub]; ring
+    _ = -I * ↑(y / (y ^ 2 + σ ^ 2)) + (-1) * ↑((-σ) / (y ^ 2 + σ ^ 2)) := by
+        rw [I_mul_I]
+    _ = ↑(σ / (σ ^ 2 + y ^ 2)) - I * ↑(y / (σ ^ 2 + y ^ 2)) := by
+        simp [neg_div, ofReal_neg, add_comm]
+        ring
+
+lemma continuous_inv_re_add_mul_I {σ : ℝ} (hσ : σ ≠ 0) :
+    Continuous fun y : ℝ => ((σ : ℂ) + y * I)⁻¹ := by
+  have hcongr :
+      (fun y : ℝ => ((σ : ℂ) + y * I)⁻¹) =
+        fun y : ℝ =>
+          (↑(σ / (σ ^ 2 + y ^ 2)) : ℂ) - I * ↑(y / (σ ^ 2 + y ^ 2)) :=
+    funext fun y => inv_re_add_mul_I_div' hσ
+  rw [hcongr]
+  refine (continuous_ofReal.comp ?_).sub
+      (continuous_const.mul (continuous_ofReal.comp ?_))
+  · exact (continuous_const_div_sq_add σ hσ).congr fun y => by ring
+  · exact (continuous_x_div_sq_add hσ).congr fun y => by ring
+
+lemma re_inv_re_add_mul_I {σ y : ℝ} (hσ : σ ≠ 0) :
+    (((σ : ℂ) + y * I)⁻¹).re = σ / (σ ^ 2 + y ^ 2) := by
+  rw [inv_re_add_mul_I_div' hσ, sub_re, mul_re, I_re, I_im, ofReal_re, ofReal_im]
+  ring
+
+lemma im_inv_re_add_mul_I {σ y : ℝ} (hσ : σ ≠ 0) :
+    (((σ : ℂ) + y * I)⁻¹).im = -(y / (σ ^ 2 + y ^ 2)) := by
+  rw [inv_re_add_mul_I_div' hσ, sub_im, mul_im, I_re, I_im, ofReal_re, ofReal_im]
+  ring
+
+lemma integral_inv_re_add_mul_I (σ a b : ℝ) (hσ : σ ≠ 0) :
+    ∫ y : ℝ in a..b, ((σ : ℂ) + y * I)⁻¹ =
+      ↑(Real.arctan (b / σ) - Real.arctan (a / σ)) -
+        I * ((1 / 2 : ℂ) *
+          ↑(Real.log (σ ^ 2 + b ^ 2) - Real.log (σ ^ 2 + a ^ 2))) := by
+  have hf : IntervalIntegrable (fun y : ℝ => ((σ : ℂ) + y * I)⁻¹) volume a b :=
+    (continuous_inv_re_add_mul_I hσ).intervalIntegrable a b
+  have hsame : (fun y : ℝ => y / (σ ^ 2 + y ^ 2)) =
+      fun y : ℝ => y / (y ^ 2 + σ ^ 2) :=
+    funext fun y => by ring
+  apply Complex.ext
+  · rw [intervalIntegral_re hf]
+    simp_rw [re_inv_re_add_mul_I hσ]
+    rw [integral_div_sq_add_sq]
+    simp [sub_re, mul_re, ofReal_re, I_re, I_im]
+  · rw [intervalIntegral_im hf]
+    simp_rw [im_inv_re_add_mul_I hσ]
+    rw [intervalIntegral.integral_neg, hsame, integral_x_div_sq_add a b σ hσ]
+    simp [sub_im, mul_im, ofReal_im, ofReal_re, I_re, I_im, add_comm]
+
+lemma arctan_add_inv_pos {x : ℝ} (hx : 0 < x) :
+    Real.arctan x + Real.arctan x⁻¹ = Real.pi / 2 := by
+  rw [Real.arctan_inv_of_pos hx]
+  ring
+
+lemma arctan_add_inv_neg {x : ℝ} (hx : x < 0) :
+    Real.arctan x + Real.arctan x⁻¹ = -(Real.pi / 2) := by
+  rw [Real.arctan_inv_of_neg hx]
+  ring
+
+lemma rectangle_inv_arctan_sum
+    {α β γ Γ : ℝ} (hα : α < 0) (hβ : 0 < β) (hγ : γ < 0) (hΓ : 0 < Γ) :
+    -(Real.arctan (β / γ) - Real.arctan (α / γ))
+      + (Real.arctan (β / Γ) - Real.arctan (α / Γ))
+      + (Real.arctan (Γ / β) - Real.arctan (γ / β))
+      - (Real.arctan (Γ / α) - Real.arctan (γ / α))
+    = 2 * Real.pi := by
+  have hTR : Real.arctan (β / Γ) + Real.arctan (Γ / β) = Real.pi / 2 := by
+    have := arctan_add_inv_pos (div_pos hβ hΓ)
+    rwa [inv_div] at this
+  have hBR : -(Real.arctan (β / γ) + Real.arctan (γ / β)) = Real.pi / 2 := by
+    have := arctan_add_inv_neg (div_neg_of_pos_of_neg hβ hγ)
+    rw [inv_div] at this
+    linarith
+  have hTL : -(Real.arctan (α / Γ) + Real.arctan (Γ / α)) = Real.pi / 2 := by
+    have := arctan_add_inv_neg (div_neg_of_neg_of_pos hα hΓ)
+    rw [inv_div] at this
+    linarith
+  have hBL : Real.arctan (α / γ) + Real.arctan (γ / α) = Real.pi / 2 := by
+    have := arctan_add_inv_pos (div_pos_of_neg_of_neg hα hγ)
+    rwa [inv_div] at this
+  calc
+      -(Real.arctan (β / γ) - Real.arctan (α / γ))
+        + (Real.arctan (β / Γ) - Real.arctan (α / Γ))
+        + (Real.arctan (Γ / β) - Real.arctan (γ / β))
+        - (Real.arctan (Γ / α) - Real.arctan (γ / α))
+      = (Real.arctan (β / Γ) + Real.arctan (Γ / β))
+          + (-(Real.arctan (β / γ) + Real.arctan (γ / β)))
+          + (-(Real.arctan (α / Γ) + Real.arctan (Γ / α)))
+          + (Real.arctan (α / γ) + Real.arctan (γ / α)) := by ring
+    _ = Real.pi / 2 + Real.pi / 2 + Real.pi / 2 + Real.pi / 2 := by
+        rw [hTR, hBR, hTL, hBL]
+    _ = 2 * Real.pi := by ring
+
+lemma sub_side_eq (p : ℂ) (x im : ℝ) :
+    (x + im * I) - p = ((x - p.re : ℝ) : ℂ) + (im - p.im) * I := by
+  apply Complex.ext <;> simp
+
+lemma rectangleIntegral_inv_of_zero_mem (z w : ℂ)
+    (hre : z.re < 0) (hre' : 0 < w.re)
+    (him : z.im < 0) (him' : 0 < w.im) :
+    rectangleIntegral (fun ζ => ζ⁻¹) z w = 2 * (Real.pi : ℂ) * I := by
+  have hzre : z.re ≠ 0 := hre.ne
+  have hwre : w.re ≠ 0 := hre'.ne'
+  have hzim : z.im ≠ 0 := him.ne
+  have hwim : w.im ≠ 0 := him'.ne'
+  have hsum := rectangle_inv_arctan_sum hre hre' him him'
+  simp only [rectangleIntegral]
+  rw [integral_inv_add_I_mul z.re w.re z.im hzim,
+    integral_inv_add_I_mul z.re w.re w.im hwim,
+    integral_inv_re_add_mul_I w.re z.im w.im hwre,
+    integral_inv_re_add_mul_I z.re z.im w.im hzre]
+  apply Complex.ext
+  · simp [smul_eq_mul, sub_re, mul_re, add_re, ofReal_re, I_re, I_im]
+    ring
+  · simp [smul_eq_mul, sub_im, mul_im, add_im, ofReal_im, ofReal_re, I_re, I_im]
+    linarith [hsum]
+
+
+end RectangleContour
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/

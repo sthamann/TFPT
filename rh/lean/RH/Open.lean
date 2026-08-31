@@ -994,6 +994,36 @@ weight).  [2d] remaining: contour integral, `T→∞`,
 three-channel identification.  Census stays 7
 (external 2).  NO RH CLAIM.
 
+## r514 census (outer bridges 21, [2d] winding)
+
+[2d] entry, sorry-free.  Mathlib has rectangle
+Cauchy-Goursat (`integral_boundary_rect_eq_zero_of_differentiableOn`)
+and circle residues, but no meromorphic residue
+theorem on rectangles and no winding-number API.
+Cheapest formalism: four-side sum, punch by the
+r498 split `f = r/(z-p)+h`, Cauchy on `h`, and an
+elementary arctan/log primitive for `∮ 1/(z-p)`.
+
+Proved: `rectangleIntegral_inv_of_zero_mem` —
+if `0` is in the open rectangle then
+`rectangleIntegral (·)⁻¹ z w = 2πi`.  Horizontal
+and vertical sides have closed-form integrals
+(`integral_inv_add_I_mul`, `integral_inv_re_add_mul_I`);
+the four arctan corners sum to `2π`
+(`rectangle_inv_arctan_sum`).  One-pole wrap
+(shift + holomorphic remainder) and the r499
+Finset multi-pole are the next brick.
+
+[2d] contour design: `Q_T = [-1/4, 2] × [-T, T]`.
+A left edge at `Re>0` misses `0<β<ε` zeros; hat
+pairing does not replace enclosure.  Right `Re=2`
+uses `ζ'/ζ = -Σ Λ(n)n^{-s}` (plan r515).  Left
+`Re=-1/4` folds by FE onto `Re=5/4` plus `χ'/χ`.
+Horizontals die from r506 `ĥ` decay times a
+log-type `ζ'/ζ` bound.  Residue identity:
+`∮ (ζ'/ζ) ĥ = spectralPartialSum ĥ - ĥ(1)`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

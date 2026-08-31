@@ -452,7 +452,10 @@ rectangle `[0,1]×[-X,X]` via the `r=13/8` disk
 (`w=5/8`) and FE pairing.  r513 assembles the
 dyadic sum `∑ 1/|ρ|² < ∞`
 (`summable_inv_sq_zetaZeros`); [2c] counting is
-complete.  Census stays 7.
+complete.  r514 starts [2d]: rectangle winding
+`rectangleIntegral_inv_of_zero_mem` (`∮ 1/z = 2πi`
+on a positively oriented rectangle about `0`).
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -570,6 +573,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms zetaZerosInDisk_card_le_inner
 #print axioms zetaZeroCountUpToXBound
 #print axioms summable_inv_sq_zetaZeros
+#print axioms rectangleIntegral_eq_zero_of_differentiableOn
+#print axioms integral_inv_add_I_mul
+#print axioms integral_inv_re_add_mul_I
+#print axioms rectangle_inv_arctan_sum
+#print axioms rectangleIntegral_inv_of_zero_mem
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
