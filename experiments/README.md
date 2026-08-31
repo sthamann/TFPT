@@ -1181,6 +1181,22 @@ not an RH claim.
 python experiments/tfpt-discovery/kernel_loewner_probe.py --smoke
 ```
 
+### R495 adversarial kernel-Loewner red team
+
+`tfpt-discovery/kernel_redteam_probe.py` independently attacks the
+R494 `L=0.3` floor through five non-calibration digamma/x-space
+cross-tests, exact rational zero-extension boundary-strip tests, a
+deliberately false doubled-`c_L` world, and a Clenshaw--Curtis
+Nyström/Hilbert--Schmidt computation separate from the sealed R494
+quadrature.  It explicitly measures both off-blocks and the
+block-diagonal rest beyond Legendre degree 400.  Verdict:
+`CONFIRMED(c=2.1000e-3)`; this is a fixed-support Weil theorem audit,
+not an RH claim.
+
+```bash
+python3 experiments/tfpt-discovery/kernel_redteam_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen

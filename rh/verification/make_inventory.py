@@ -2917,6 +2917,28 @@ _R494_STATUS = (
     "No L* claim, no R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R495_STATUS = (
+    "adversarial kernel-Loewner red team at L=0.3 "
+    "(round 495, PRIME.RDAGGER.KERNEL_LOEWNER_REDTEAM.01; "
+    "experiments-side audit, NO ledger row): "
+    "VERDICT CONFIRMED(c=2.1000e-3).  A1 independently derives the "
+    "digamma x-space identity; five non-calibration tests agree to "
+    "max 5.736e-21 and c_L=2.1924049111319992553 is stable at "
+    "50/80 dps.  A2 zero-extension translation is exact over Q on "
+    "6/6 step/shift tests; interval-only norms omit positive boundary "
+    "masses 1/5..1.  A3 false doubled-c_L world is correctly negative "
+    "(Rayleigh -1.924951, chain -2.188168).  A4 independent "
+    "Clenshaw-Curtis order 1025 gives lambda_max=1.501365808845941, "
+    "r_401=6.7948686839e-4, kappa_w=3.6980080402989774465, and "
+    "cutoff loss 3.3346406923e-3.  A5 measures off-HS 1.8049712e-4 "
+    "and nonzero QQ-HS 6.2971739e-4; both are included, with direct "
+    "charge 9.9071e-4 below the sealed 3r charge 2.1137e-3.  "
+    "Outward floor 2.12201489025e-3.  Smoke/full 11/11, SPEC_SHA "
+    "431251a9bcfd40a12d36f5e4a2bc76751afdcdd980a177f9de9597687e21a053; "
+    "verifier 6/6.  No L* claim, no R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7227,6 +7249,26 @@ ENTRIES = [
      "compiled PDF of kernel_loewner.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/kernel_redteam.tex", "problem_statement",
+     "r495",
+     [],
+     _R495_STATUS,
+     True),
+    ("rh/problem/verify_kernel_redteam.py", "problem_check",
+     "r495 companion",
+     [],
+     "machine check of kernel_redteam.tex: independent derivation and "
+     "audit tokens, sealed probe contract, exact rational boundary tests, "
+     "false-world failure, complete HS block accounting, outward floor "
+     "arithmetic, and under-60-second smoke rerun.  6/6 gates, final line "
+     "KERNEL REDTEAM VERIFIED -- CONFIRMED(c=2.1000e-3)",
+     True),
+    ("rh/problem/kernel_redteam.pdf", "problem_statement",
+     "r495",
+     [],
+     "compiled PDF of kernel_redteam.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7852,6 +7894,11 @@ ENTRIES = [
      "r494",
      [],
      _R494_STATUS,
+     True),
+    (f"{EXP}/kernel_redteam_probe.py", "sealed_probe",
+     "r495",
+     [],
+     _R495_STATUS,
      True),
 ]
 

@@ -7117,6 +7117,25 @@ Galerkin values remain upper-bound diagnostics.  Fixed-support Weil
 theorem only; NO ledger row, NO L\* claim, NO RH CLAIM.
 
 
+**Adversarial kernel--Loewner red team (r495,
+PRIME.RDAGGER.KERNEL\_LOEWNER\_REDTEAM.01).**
+Independent probe `experiments/tfpt-discovery/kernel_redteam_probe.py`
+(smoke/full 11/11, SPEC\_SHA `431251a9bcfd40a1`) plus
+`rh/problem/kernel_redteam.tex` (+ PDF +
+`verify_kernel_redteam.py`, 6/6,
+`KERNEL REDTEAM VERIFIED -- CONFIRMED(c=2.1000e-3)`).
+**Verdict CONFIRMED(c=2.1000e-3).**
+Five non-calibration digamma/$x$-space tests agree to
+$5.736\cdot10^{-21}$; six rational step/shift tests retain positive
+boundary-strip masses exactly.  A doubled-$c_L$ false world is
+negative (Rayleigh $-1.924951$, chain $-2.188168$).
+Independent Clenshaw--Curtis order 1025 gives
+$\lambda_{\max}=1.501365808845941$ and
+$r_{401}=6.7948687\cdot10^{-4}$.  The nonzero complementary
+block-diagonal rest $6.2971739\cdot10^{-4}$ is explicitly included.
+The outward floor is $2.12201489025\cdot10^{-3}$.
+Fixed-support audit only; NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7599,6 +7618,11 @@ rh/
 │   │                     x-space Loewner minorant +
 │   │                     n=401 exact-HS finite section;
 │   │                     operator floor, not Galerkin.
+│   │                     No RH claim
+│   ├── kernel_redteam.tex(+pdf) — r495:
+│   │                     CONFIRMED(c=2.1000e-3);
+│   │                     independent digamma, rational boundary,
+│   │                     false-world, CC/HS off-space audit.
 │   │                     No RH claim
 │   ├── operator_residual.tex(+pdf) — r490: STUCK
 │   │                     (off/s=5.86-eats-1000x;
@@ -8936,6 +8960,14 @@ the main verification/ledger/docset, or `experiments/next.txt`.
 File domain is the probe, `kernel_loewner.tex(+pdf)`, its verifier,
 INVENTORY, `run_rh.py`, and the experiments/RH READMEs.  Suite
 surface: integrity + probes (`run_rh.py --fast --skip-lean`).
+**r495 coexistence.** Round 495
+(`kernel_redteam_probe.py`) is an adversarial audit of the r494
+fixed-support floor.  It does not touch `rh/lean/` (parallel r493d owns
+that tree), the main verification/ledger/docset, or
+`experiments/next.txt`.  File domain is the probe,
+`kernel_redteam.tex(+pdf)`, its verifier, INVENTORY, `run_rh.py`, and
+the experiments/RH READMEs.  Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
