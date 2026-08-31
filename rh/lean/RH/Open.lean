@@ -1075,6 +1075,28 @@ zero-free) the integrand is `Σ + H`, so
 bounds, `T → ∞`, three-channel id.  Census
 stays 7 (external 2).  NO RH CLAIM.
 
+## r518 census (outer bridges 25, [2d] outer bridges)
+
+[2d] edge / T→∞ entry, honest cut, sorry-free.
+PROVED: ĥ-decay on any compact Re-interval
+(`norm_hat_le_inv_sq_on_Icc`, contour
+`[-1/4, 2]`); Dirichlet `|ζ'/ζ|` for every
+`Re ≥ σ > 1` (the 5/4 analog of r515);
+zero-free strip `(-1/4, 0)`; Finset pigeonhole
+and the unit-height Lücken-Lemma
+(`exists_gap_height`, `exists_gap_sequence`)
+from the r511 inner-disk count (two disks,
+FE pairing on the left half).  Named, not
+sorry: `HorizontalEdgeLandauBound` (classical
+partial fraction / Borel–Carathéodory, 1–2
+rounds), `LeftEdgeLogDerivBound` (FE fold +
+digamma log on the fixed line Re = −1/4),
+`ContourIdentityLimitAlongGaps`.  Remaining:
+Landau on the gap edge, horizontals → 0,
+left vertical, T→∞ of
+`contour_identity_fixed_T`.  Census stays 7
+(external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

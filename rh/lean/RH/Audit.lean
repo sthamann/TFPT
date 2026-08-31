@@ -464,7 +464,11 @@ r516 glues the punched `(ζ'/ζ)·F` remainder
 `logDerivHatRemainder`).
 r517: `ĥ` entire, filled remainder on `Q_T`,
 `contour_identity_fixed_T`.
-Census stays 7.
+r518: ĥ-decay on compact Re
+(`norm_hat_le_inv_sq_on_contour`), Dirichlet
+at Re ≥ 5/4, Lücken-Lemma
+(`exists_gap_height`).  Landau / left-edge /
+T→∞ remain named Props.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -603,6 +607,16 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.analyticOnNhd_hat
 #print axioms differentiableOn_logDerivHatRemainderFilled
 #print axioms contour_identity_fixed_T
+#print axioms FullWeilTest.norm_hat_le_inv_sq_of_abs_re_le
+#print axioms FullWeilTest.norm_hat_le_inv_sq_on_Icc
+#print axioms FullWeilTest.norm_hat_le_inv_sq_on_contour
+#print axioms norm_logDeriv_riemannZeta_le_of_re_ge
+#print axioms norm_logDeriv_riemannZeta_le_at_five_four
+#print axioms riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero
+#print axioms exists_point_far_from_finset
+#print axioms card_window_zeros_unit
+#print axioms exists_gap_height
+#print axioms exists_gap_sequence
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
