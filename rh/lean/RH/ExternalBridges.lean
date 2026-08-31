@@ -28,6 +28,7 @@ import Mathlib.Analysis.Calculus.LogDeriv
 import Mathlib.Analysis.Calculus.FDeriv.Analytic
 import Mathlib.Analysis.Meromorphic.Order
 import Mathlib.Topology.DiscreteSubset
+import Mathlib.Analysis.Complex.RemovableSingularity
 
 namespace RH
 
@@ -2321,6 +2322,193 @@ lemma tendsto_mul_logDeriv_riemannZeta {s : ℂ}
 
 end LogDerivZeta
 
+/-! ### r500: holomorphic part of `ζ'/ζ` at the pole `s = 1` ([2b] remainder)
+
+Mathlib v4.29.1 has no `riemannZeta = 1/(s-1) + holomorphic` lemma.
+It supplies `riemannZeta_residue_one` (`(s-1)ζ(s) → 1`) and
+`differentiableAt_hurwitzZetaEven_sub_one_div` (`ζ - 1/((s-1)Γ_ℝ)`
+differentiable at 1).  The logDeriv-convenient form is the removable
+singularity of `(s-1)ζ(s)`: fill in the value `1` at `s = 1`.  Then
+`ζ = g/(s-1)` with `g(1) = 1 ≠ 0`, so
+`ζ'/ζ = -1/(s-1) + g'/g`.  This completes [2b]: `ζ'/ζ` is meromorphic
+on all of `ℂ`.
+-/
+
+section LogDerivZetaPole
+
+open Filter Function Set
+
+open scoped Topology Asymptotics
+
+/-- Holomorphic filling of `(s-1)ζ(s)` at the pole (value `1`). -/
+noncomputable def riemannZetaMulSubOne : ℂ → ℂ :=
+  update (fun s => (s - 1) * riemannZeta s) 1 1
+
+lemma riemannZetaMulSubOne_apply_of_ne {s : ℂ} (hs : s ≠ 1) :
+    riemannZetaMulSubOne s = (s - 1) * riemannZeta s :=
+  update_of_ne hs _ _
+
+lemma riemannZetaMulSubOne_one : riemannZetaMulSubOne 1 = 1 :=
+  update_self ..
+
+/-- Off the pole, the filling agrees with `(s-1)ζ(s)` on a
+neighbourhood, so it is analytic wherever `ζ` is. -/
+lemma riemannZetaMulSubOne_eq_mul {s : ℂ} (hs : s ≠ 1) :
+    riemannZetaMulSubOne =ᶠ[𝓝 s] fun z => (z - 1) * riemannZeta z := by
+  have hU : ({1}ᶜ : Set ℂ) ∈ 𝓝 s := isOpen_compl_singleton.mem_nhds hs
+  filter_upwards [hU] with z hz
+  exact riemannZetaMulSubOne_apply_of_ne hz
+
+lemma analyticAt_riemannZetaMulSubOne (s : ℂ) :
+    AnalyticAt ℂ riemannZetaMulSubOne s := by
+  rcases eq_or_ne s 1 with rfl | hs
+  · refine Complex.analyticAt_of_differentiable_on_punctured_nhds_of_continuousAt
+      ?_ (continuousAt_update_same.mpr riemannZeta_residue_one)
+    filter_upwards [self_mem_nhdsWithin] with z hz
+    exact ((differentiableAt_id.sub (differentiableAt_const 1)).mul
+      (differentiableAt_riemannZeta hz)).congr_of_eventuallyEq
+      (riemannZetaMulSubOne_eq_mul hz)
+  · exact ((analyticAt_id.sub analyticAt_const).mul
+      (analyticAt_riemannZeta hs)).congr
+      (riemannZetaMulSubOne_eq_mul hs).symm
+
+/-- **r500 brick [2b], lemma (1).**  `(s-1)ζ(s)` extends to an entire
+function with value `1` at `s = 1`. -/
+lemma analyticOnNhd_riemannZetaMulSubOne :
+    AnalyticOnNhd ℂ riemannZetaMulSubOne univ :=
+  fun s _ => analyticAt_riemannZetaMulSubOne s
+
+lemma riemannZetaMulSubOne_one_ne_zero : riemannZetaMulSubOne 1 ≠ 0 := by
+  rw [riemannZetaMulSubOne_one]
+  norm_num
+
+/-- On a punctured neighbourhood of `1`, `ζ(s) = 1/(s-1) + H(s)` with
+`H` analytic at `1`. -/
+lemma exists_analytic_riemannZeta_eq_one_div_add :
+    ∃ H : ℂ → ℂ, AnalyticAt ℂ H 1 ∧
+      ∀ᶠ z in 𝓝[≠] 1, riemannZeta z = 1 / (z - 1) + H z := by
+  have hds : AnalyticAt ℂ (dslope riemannZetaMulSubOne 1) 1 := by
+    have hdiff : DifferentiableOn ℂ riemannZetaMulSubOne univ :=
+      fun s _ => (analyticAt_riemannZetaMulSubOne s).differentiableAt.differentiableWithinAt
+    have hdslope : DifferentiableOn ℂ (dslope riemannZetaMulSubOne 1) univ :=
+      (Complex.differentiableOn_dslope (s := univ) univ_mem).mpr hdiff
+    exact (hdslope.analyticOnNhd isOpen_univ) 1 (mem_univ _)
+  refine ⟨dslope riemannZetaMulSubOne 1, hds, ?_⟩
+  filter_upwards [self_mem_nhdsWithin] with z hz
+  have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hz
+  have hne : z ≠ 1 := hz
+  rw [dslope_of_ne riemannZetaMulSubOne hne]
+  have hslope :
+      slope riemannZetaMulSubOne 1 z =
+        (z - 1)⁻¹ * (riemannZetaMulSubOne z - riemannZetaMulSubOne 1) := rfl
+  rw [hslope, riemannZetaMulSubOne_apply_of_ne hne, riemannZetaMulSubOne_one]
+  field_simp [hz0]
+  ring
+
+/-- **r500 brick [2b], lemma (2).**  At the pole,
+`ζ'/ζ = -1/(s-1) + analytic`. -/
+lemma logDeriv_riemannZeta_eq_neg_one_div_add_analytic :
+    ∃ h : ℂ → ℂ, AnalyticAt ℂ h 1 ∧
+      ∀ᶠ z in 𝓝[≠] 1,
+        logDeriv riemannZeta z = -1 / (z - 1) + h z := by
+  have hg : AnalyticAt ℂ riemannZetaMulSubOne 1 :=
+    analyticAt_riemannZetaMulSubOne 1
+  have hg0 : riemannZetaMulSubOne 1 ≠ 0 :=
+    riemannZetaMulSubOne_one_ne_zero
+  have hg_log : AnalyticAt ℂ (logDeriv riemannZetaMulSubOne) 1 :=
+    (hg.deriv).div hg hg0
+  refine ⟨logDeriv riemannZetaMulSubOne, hg_log, ?_⟩
+  have hg_nz : ∀ᶠ z in 𝓝 1, riemannZetaMulSubOne z ≠ 0 :=
+    hg.continuousAt.preimage_mem_nhds (isOpen_compl_singleton.mem_nhds hg0)
+  obtain ⟨r, hr, hball⟩ := hg.exists_ball_analyticOnNhd
+  rw [eventually_nhdsWithin_iff]
+  filter_upwards [hg_nz, Metric.ball_mem_nhds (1 : ℂ) hr] with z hgz hzball hzne
+  have hz : z ≠ 1 := hzne
+  have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hz
+  have hf_eq :
+      riemannZeta =ᶠ[𝓝 z] fun w => riemannZetaMulSubOne w / (w - 1) := by
+    have hopen : ({1}ᶜ : Set ℂ) ∈ 𝓝 z := isOpen_compl_singleton.mem_nhds hz
+    filter_upwards [hopen] with w hw
+    have hw0 : w - 1 ≠ 0 := sub_ne_zero.mpr hw
+    rw [riemannZetaMulSubOne_apply_of_ne hw]
+    field_simp [hw0]
+  have hlog :
+      logDeriv riemannZeta z =
+        logDeriv (fun w => riemannZetaMulSubOne w / (w - 1)) z := by
+    simp [logDeriv_apply, hf_eq.deriv_eq, hf_eq.eq_of_nhds]
+  have hdg : DifferentiableAt ℂ riemannZetaMulSubOne z :=
+    (hball z hzball).differentiableAt
+  have hdd : DifferentiableAt ℂ (fun w : ℂ => w - 1) z := by fun_prop
+  have hlin :
+      (fun w : ℂ => w - 1) = fun w => (w - 1) ^ 1 := by
+    ext w; rw [pow_one]
+  rw [hlog, logDeriv_div z hgz hz0 hdg hdd, hlin,
+    logDeriv_sub_const_pow 1 1 z]
+  ring
+
+/-- Residue of `ζ'/ζ` at the pole is `-1`. -/
+lemma tendsto_mul_logDeriv_riemannZeta_one :
+    Tendsto (fun z => (z - 1) * logDeriv riemannZeta z) (𝓝[≠] 1) (𝓝 (-1)) := by
+  obtain ⟨h, hh, heq⟩ := logDeriv_riemannZeta_eq_neg_one_div_add_analytic
+  set G : ℂ → ℂ := fun z => (-1 : ℂ) + (z - 1) * h z
+  have hagree :
+      (fun z => (z - 1) * logDeriv riemannZeta z) =ᶠ[𝓝[≠] 1] G := by
+    filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+    have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hzne
+    rw [hz]
+    field_simp [hz0]
+    rfl
+  have hGs : G 1 = (-1 : ℂ) := by simp [G]
+  have hcont : ContinuousAt G 1 := by
+    unfold G
+    exact continuousAt_const.add
+      ((continuousAt_id.sub continuousAt_const).mul hh.continuousAt)
+  rw [← hGs]
+  exact Tendsto.congr' (EventuallyEq.symm hagree)
+    (hcont.tendsto.mono_left nhdsWithin_le_nhds)
+
+/-- `ζ'/ζ` is meromorphic at the pole. -/
+lemma meromorphicAt_logDeriv_riemannZeta_one :
+    MeromorphicAt (logDeriv riemannZeta) 1 := by
+  obtain ⟨h, hh, heq⟩ := logDeriv_riemannZeta_eq_neg_one_div_add_analytic
+  refine MeromorphicAt.iff_eventuallyEq_zpow_smul_analyticAt.mpr ?_
+  refine ⟨-1, fun z => (-1 : ℂ) + (z - 1) * h z, by fun_prop, ?_⟩
+  filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+  have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hzne
+  rw [hz, zpow_neg_one, smul_eq_mul]
+  field_simp [hz0]
+
+/-- Simple pole of `ζ'/ζ` at `s = 1`. -/
+lemma meromorphicOrderAt_logDeriv_riemannZeta_one :
+    meromorphicOrderAt (logDeriv riemannZeta) 1 = (-1 : ℤ) := by
+  obtain ⟨h, hh, heq⟩ := logDeriv_riemannZeta_eq_neg_one_div_add_analytic
+  set G : ℂ → ℂ := fun z => (-1 : ℂ) + (z - 1) * h z
+  have hGan : AnalyticAt ℂ G 1 := by fun_prop
+  have hGne : G 1 ≠ 0 := by simp [G]
+  have hfmer : MeromorphicAt (logDeriv riemannZeta) 1 :=
+    meromorphicAt_logDeriv_riemannZeta_one
+  rw [meromorphicOrderAt_eq_int_iff hfmer]
+  refine ⟨G, hGan, hGne, ?_⟩
+  filter_upwards [heq, self_mem_nhdsWithin] with z hz hzne
+  have hz0 : z - 1 ≠ 0 := sub_ne_zero.mpr hzne
+  rw [hz, zpow_neg_one, smul_eq_mul]
+  field_simp [hz0]
+  rfl
+
+/-- **r500 brick [2b], lemma (3).**  `ζ'/ζ` is meromorphic on all of
+`ℂ` (zeros: r498; pole: this cut). -/
+lemma meromorphicAt_logDeriv_riemannZeta_univ (s : ℂ) :
+    MeromorphicAt (logDeriv riemannZeta) s := by
+  rcases eq_or_ne s 1 with rfl | hs
+  · exact meromorphicAt_logDeriv_riemannZeta_one
+  · exact meromorphicAt_logDeriv_riemannZeta hs
+
+lemma meromorphicOn_logDeriv_riemannZeta :
+    MeromorphicOn (logDeriv riemannZeta) univ :=
+  fun s _ => meromorphicAt_logDeriv_riemannZeta_univ s
+
+end LogDerivZetaPole
+
 /-! ### r499: local finiteness of `ζ`-zeros (bridge [2c], first cut)
 
 The identity theorem ([2a]) isolates zeros on `ℂ \ {1}`.  Combined
@@ -2433,6 +2621,22 @@ lie in a closed strip rectangle (the [2d] contour support). -/
 lemma finite_riemannZeta_zeros_on_closedRect (σ₁ σ₂ T : ℝ) :
     {z ∈ zetaClosedRect σ₁ σ₂ T | riemannZeta z = 0 ∧ z ≠ 1}.Finite :=
   finite_riemannZeta_zeros_of_isCompact_ne_one (isCompact_zetaClosedRect σ₁ σ₂ T)
+
+/-- [2c] cut 2 interface: the r499 finite-zero witness as a
+`Finset`.  No convergence claim. -/
+noncomputable def riemannZetaZerosOnClosedRect (σ₁ σ₂ T : ℝ) : Finset ℂ :=
+  (finite_riemannZeta_zeros_on_closedRect σ₁ σ₂ T).toFinset
+
+lemma mem_riemannZetaZerosOnClosedRect {σ₁ σ₂ T : ℝ} {z : ℂ} :
+    z ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T ↔
+      z ∈ zetaClosedRect σ₁ σ₂ T ∧ riemannZeta z = 0 ∧ z ≠ 1 :=
+  Set.Finite.mem_toFinset _
+
+/-- Indexed spectral partial sum on a closed rectangle.
+Interface only: no `T → ∞` or absolute-convergence claim. -/
+noncomputable def spectralPartialSum (F : ℂ → ℂ) (σ₁ σ₂ T : ℝ) : ℂ :=
+  (riemannZetaZerosOnClosedRect σ₁ σ₂ T).sum fun ρ =>
+    (riemannZetaMultiplicity ρ : ℂ) * F ρ
 
 end ZetaZeroFiniteness
 

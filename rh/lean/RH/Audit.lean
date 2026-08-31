@@ -405,6 +405,11 @@ every non-polar zero
 r499 proves local finiteness of non-polar zeros and finiteness
 on every compact / closed strip rectangle
 (`finite_riemannZeta_zeros_on_closedRect`).
+r500 completes [2b]: holomorphic filling of `(s-1)ζ(s)` at
+the pole, `ζ'/ζ = -1/(s-1) + analytic`, and
+`MeromorphicOn (logDeriv riemannZeta) univ`.  [2c] cut 2
+exposes `spectralPartialSum` as a finite rectangle sum
+(interface only).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -454,6 +459,16 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms finite_riemannZeta_zeros_of_isCompact_ne_one
 #print axioms isCompact_zetaClosedRect
 #print axioms finite_riemannZeta_zeros_on_closedRect
+#print axioms analyticAt_riemannZetaMulSubOne
+#print axioms analyticOnNhd_riemannZetaMulSubOne
+#print axioms exists_analytic_riemannZeta_eq_one_div_add
+#print axioms logDeriv_riemannZeta_eq_neg_one_div_add_analytic
+#print axioms tendsto_mul_logDeriv_riemannZeta_one
+#print axioms meromorphicAt_logDeriv_riemannZeta_one
+#print axioms meromorphicOrderAt_logDeriv_riemannZeta_one
+#print axioms meromorphicAt_logDeriv_riemannZeta_univ
+#print axioms meromorphicOn_logDeriv_riemannZeta
+#print axioms mem_riemannZetaZerosOnClosedRect
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -639,6 +639,33 @@ Remaining named pieces of [2] (not extra sorries):
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r500 census (outer bridges 8, [2b] complete)
+
+PROVED brick [2b] remainder, sorry-free: `(s-1)ζ(s)` extends
+holomorphically through `s = 1` with value `1`
+(`riemannZetaMulSubOne`, `analyticOnNhd_riemannZetaMulSubOne`);
+equivalently `ζ(s) = 1/(s-1) + H(s)` with `H` analytic at `1`.
+Logarithmic derivative: `ζ'/ζ = -1/(s-1) + analytic` near `1`
+(`logDeriv_riemannZeta_eq_neg_one_div_add_analytic`), residue
+`-1` (`tendsto_mul_logDeriv_riemannZeta_one`), meromorphic
+order `-1` at the pole.  Combined with r498 this types
+`MeromorphicOn (logDeriv riemannZeta) univ`
+(`meromorphicOn_logDeriv_riemannZeta`): simple poles at
+non-polar zeros (residue = multiplicity) and at `s = 1`
+(residue `-1`).  [2b] is complete.
+
+[2c] cut 2 interface only (no convergence): the r499 finite
+rectangle witness as `riemannZetaZerosOnClosedRect` and the
+indexed sum `spectralPartialSum`.
+
+Remaining named pieces of [2] (not extra sorries):
+  [2c] cut 2: absolute convergence of `∑ m_ρ ĥ(ρ)` (growth of
+      `ĥ` vs zero-count; `T → ∞` of `spectralPartialSum`),
+  [2d] contour evaluation = three-channel form (now has the
+      full meromorphic integrand `ĥ · ζ'/ζ` on `ℂ`, including
+      the pole residue `-ĥ(1)`).
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
