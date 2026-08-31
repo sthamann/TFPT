@@ -6771,6 +6771,19 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460
 are parallel and not dropped.
 
+**Octave renormalization (r468,
+PRIME.RDAGGER.OCTAVE\_RENORMALIZATION.01).**
+Sealed probe
+`experiments/tfpt-discovery/octave_renorm_probe.py`
+(smoke 24/24, SPEC\_SHA `0e693815a86ef0ff`)
+plus `rh/problem/octave_renorm.tex` (+ PDF +
+`verify_octave_renorm.py`, 7/7, `OCTAVE RENORM VERIFIED`).
+**Ausgang OCTAVE\_NOT\_CAUCHY / EDGE\_TWO\_POINTS / REDUCTION\_ALIAS.**
+The live increment is $n<a$, not the $a^2$-octave.  Intra-block $\Delta q$ oscillates; the octave-weight bound grows.  $9\to10$ is intra $r=3$.  Two $\Delta$-halving edges ($+0.045$, $+0.018$) are not a law.  The proposed block-limit cut is an alias of the original quantifier.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460 / r461
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -7180,6 +7193,9 @@ rh/
 │   ├── fullcomb_cleanup.tex(+pdf) — r459: RACE_TREND_BROKEN;
 │   │                     LEANFAM_EXACT_ALIVE(12);
 │   │                     KZ137_OUTSIDE_MINCUT.  No RH claim
+│   ├── octave_renorm.tex(+pdf) — r468: OCTAVE_NOT_CAUCHY;
+│   │                     EDGE_TWO_POINTS;
+│   │                     REDUCTION_ALIAS.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8306,6 +8322,13 @@ is a PARTIAL proof attempt: exact spectral reduction and a finite
 two-band certificate, with the cofinal source-derived spectral-overlap
 estimate left open.  It does not touch `experiments/next.txt`, the
 ledger, or Lean, and makes no RH claim.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r468 coexistence.** Round 468 (`octave_renorm_probe.py`)
+tests the octave-renormalization cut
+(OCTAVE_NOT_CAUCHY; EDGE_TWO_POINTS; REDUCTION_ALIAS).
+It does not touch `experiments/next.txt`.  File domain
+disjoint from r467.  The Lean landing site is unchanged.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not

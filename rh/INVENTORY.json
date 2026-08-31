@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-08-30",
+  "generated": "2026-08-31",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -3896,6 +3896,36 @@
       "bytes": 226291
     },
     {
+      "path": "rh/problem/octave_renorm.tex",
+      "role": "problem_statement",
+      "round": "r468 companion",
+      "ledger_ids": [],
+      "status": "lemma-first octave renormalization (round 468): OCTAVE_NOT_CAUCHY; EDGE_TWO_POINTS; REDUCTION_ALIAS.  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "b365ff31279964a6d2eb2e725b0ef77e68de99990f8ee664cfffb5e8be88fb7c",
+      "bytes": 6196
+    },
+    {
+      "path": "rh/problem/verify_octave_renorm.py",
+      "role": "problem_check",
+      "round": "r468 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in octave_renorm.tex: standalone (verdicts, r-sequence, isolated octave, weight growth) plus construction pins (k=5, 8->9 edge, Delta-halving).  7/7 gates, final line OCTAVE RENORM VERIFIED",
+      "pin": true,
+      "sha256": "09ec5cf4d592e3685f2caba38a06e3bb31ea9ec8e9159555afcb928a69bb9a7a",
+      "bytes": 3066
+    },
+    {
+      "path": "rh/problem/octave_renorm.pdf",
+      "role": "problem_statement",
+      "round": "r468 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of octave_renorm.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "dd7e9d961dabfb9a8d7b57026c86e571b8c270e94f6b9cd419c5d779f79189ec",
+      "bytes": 221150
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4070,8 +4100,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "1e38a118c8c859ad029304fc1504abe0098939e2d86d23b8efbe1bc5eace5249",
-      "bytes": 5559564
+      "sha256": "35db63ed796c2ded01fcd534325c774b52e83b386dee3ebd99a6fea5d92b8369",
+      "bytes": 5561262
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4952,6 +4982,16 @@
       "pin": true,
       "sha256": "857854cdf837da25739599fef497e92899a43916b8119ca5a1284e42117ba199",
       "bytes": 4894
+    },
+    {
+      "path": "experiments/tfpt-discovery/octave_renorm_probe.py",
+      "role": "sealed_probe",
+      "round": "r468",
+      "ledger_ids": [],
+      "status": "octave renormalization (round 468, PRIME.RDAGGER.OCTAVE_RENORMALIZATION.01; experiments-side, NO ledger row): VERDICT OCTAVE_NOT_CAUCHY / EDGE_TWO_POINTS / REDUCTION_ALIAS.  Live source is n<a (r465 tents vanish for n>=a), not the a^2-octave.  Active-octave weight and Rosser-Schoenfeld psi bound both grow; isolated octave at k=11 moves q by +0.220 while total dq is -0.012.  Intra dq oscillates through k=15.  Block edges 8->9 (+0.045) and 15->16 (+0.018) are two points, not a 2^{-r} law.  r-sequence: 9->10 is intra r=3.  New k=13..16 interval-certified live.  Quantifier cut is an alias (r303).  Smoke 24/24, SPEC_SHA 0e693815a86ef0ff.  Companion rh/problem/octave_renorm.tex + verify_octave_renorm.py OCTAVE RENORM VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "2f8faa822c6b2a4429ce0e08e53fe2a21853d61eaf518824f45e20045f6d9f68",
+      "bytes": 13839
     }
   ]
 }
