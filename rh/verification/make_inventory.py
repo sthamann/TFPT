@@ -2939,6 +2939,28 @@ _R495_STATUS = (
     "NO anti-RH claim"
 )
 
+_R496_STATUS = (
+    "kernel-Loewner scaling test at L=0.8 "
+    "(round 496, PRIME.RDAGGER.KERNEL_LOEWNER.02; "
+    "experiments-side method no-go, NO ledger row): "
+    "VERDICT NO_GO(kernel-Loewner-compact-tail@L=0.8).  "
+    "G0: c_L=3.5598735700355446 and factor-two prime g(0) mass "
+    "2 sum Lambda(n)/sqrt(n)=2.9419735252236205 for n=2,3,4.  "
+    "G1 PASS: five dps-50 x/frequency tests agree within 5.499e-14; "
+    "r495-A2 zero-extension 6/6 exact over Q; r471 n=24 "
+    "mu_lo=1.32253673213734e-4; r477 r(1)=8.02740549e-2 and "
+    "Schur_lo=7.41382775e-2.  G2 NO_GO: best booked cutoff "
+    "[0.001,0.003] has n=101 section lmin=-1.610673303e-4, hence "
+    "every containing section through n=800 remains nonpositive by "
+    "interlacing.  G3 NO_GO: exact arch HS tail r_101=9.122410180 "
+    "with full 3r=27.367230540; bounded prime translations are "
+    "noncompact, with measured 101-to-301 off-block op norm "
+    "0.939496613.  Smoke/full 15/15, SPEC_SHA "
+    "63f590d43c9ed63e8419c99ddd6b9110e58a7f419d6445de71932aa4575cba97.  "
+    "Method no-go only; no anti-positivity theorem.  No L* claim, "
+    "no R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7269,6 +7291,17 @@ ENTRIES = [
      "compiled PDF of kernel_redteam.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/kernel_loewner08.tex", "problem_statement",
+     "r496", [], _R496_STATUS, True),
+    ("rh/problem/verify_kernel_loewner08.py", "problem_check",
+     "r496 companion", [],
+     "machine check of method-no-go boundary, factor-two prime balance, "
+     "G1 calibrations, exact 3x HS tail, prime off-block, and smoke; "
+     "final line VERIFIED kernel_loewner08 r496 NO_GO", True),
+    ("rh/problem/kernel_loewner08.pdf", "problem_statement",
+     "r496", [], "compiled PDF of kernel_loewner08.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7899,6 +7932,11 @@ ENTRIES = [
      "r495",
      [],
      _R495_STATUS,
+     True),
+    (f"{EXP}/kernel_loewner08_probe.py", "sealed_probe",
+     "r496",
+     [],
+     _R496_STATUS,
      True),
 ]
 

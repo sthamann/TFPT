@@ -267,6 +267,7 @@ PROBES = [
     ("r491", "outer_bridges3_probe.py"),
     ("r494", "kernel_loewner_probe.py"),
     ("r495", "kernel_redteam_probe.py"),
+    ("r496", "kernel_loewner08_probe.py"),
 ]
 
 MODULES = [

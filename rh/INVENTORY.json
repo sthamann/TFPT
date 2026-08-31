@@ -4686,6 +4686,36 @@
       "bytes": 335575
     },
     {
+      "path": "rh/problem/kernel_loewner08.tex",
+      "role": "problem_statement",
+      "round": "r496",
+      "ledger_ids": [],
+      "status": "kernel-Loewner scaling test at L=0.8 (round 496, PRIME.RDAGGER.KERNEL_LOEWNER.02; experiments-side method no-go, NO ledger row): VERDICT NO_GO(kernel-Loewner-compact-tail@L=0.8).  G0: c_L=3.5598735700355446 and factor-two prime g(0) mass 2 sum Lambda(n)/sqrt(n)=2.9419735252236205 for n=2,3,4.  G1 PASS: five dps-50 x/frequency tests agree within 5.499e-14; r495-A2 zero-extension 6/6 exact over Q; r471 n=24 mu_lo=1.32253673213734e-4; r477 r(1)=8.02740549e-2 and Schur_lo=7.41382775e-2.  G2 NO_GO: best booked cutoff [0.001,0.003] has n=101 section lmin=-1.610673303e-4, hence every containing section through n=800 remains nonpositive by interlacing.  G3 NO_GO: exact arch HS tail r_101=9.122410180 with full 3r=27.367230540; bounded prime translations are noncompact, with measured 101-to-301 off-block op norm 0.939496613.  Smoke/full 15/15, SPEC_SHA 63f590d43c9ed63e8419c99ddd6b9110e58a7f419d6445de71932aa4575cba97.  Method no-go only; no anti-positivity theorem.  No L* claim, no R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "eb6bbbe62ab66e1bfc15d76dd7979238870e5736f2c74a05c24b4fd69ddb8e18",
+      "bytes": 8103
+    },
+    {
+      "path": "rh/problem/verify_kernel_loewner08.py",
+      "role": "problem_check",
+      "round": "r496 companion",
+      "ledger_ids": [],
+      "status": "machine check of method-no-go boundary, factor-two prime balance, G1 calibrations, exact 3x HS tail, prime off-block, and smoke; final line VERIFIED kernel_loewner08 r496 NO_GO",
+      "pin": true,
+      "sha256": "400fcfeb2650087df73b7c4178e63c83def92929e2a79b22e34b003e87d69fb2",
+      "bytes": 2614
+    },
+    {
+      "path": "rh/problem/kernel_loewner08.pdf",
+      "role": "problem_statement",
+      "round": "r496",
+      "ledger_ids": [],
+      "status": "compiled PDF of kernel_loewner08.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "8f5a2aa707c1eaee29fbb89736663dee0180cfc4d0a1de1cbad449fe637c3bdd",
+      "bytes": 352365
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -5992,6 +6022,16 @@
       "pin": true,
       "sha256": "b051ef905de45112962c7726df4ca05379b03b8705bae1c4ab63226f650a8172",
       "bytes": 21957
+    },
+    {
+      "path": "experiments/tfpt-discovery/kernel_loewner08_probe.py",
+      "role": "sealed_probe",
+      "round": "r496",
+      "ledger_ids": [],
+      "status": "kernel-Loewner scaling test at L=0.8 (round 496, PRIME.RDAGGER.KERNEL_LOEWNER.02; experiments-side method no-go, NO ledger row): VERDICT NO_GO(kernel-Loewner-compact-tail@L=0.8).  G0: c_L=3.5598735700355446 and factor-two prime g(0) mass 2 sum Lambda(n)/sqrt(n)=2.9419735252236205 for n=2,3,4.  G1 PASS: five dps-50 x/frequency tests agree within 5.499e-14; r495-A2 zero-extension 6/6 exact over Q; r471 n=24 mu_lo=1.32253673213734e-4; r477 r(1)=8.02740549e-2 and Schur_lo=7.41382775e-2.  G2 NO_GO: best booked cutoff [0.001,0.003] has n=101 section lmin=-1.610673303e-4, hence every containing section through n=800 remains nonpositive by interlacing.  G3 NO_GO: exact arch HS tail r_101=9.122410180 with full 3r=27.367230540; bounded prime translations are noncompact, with measured 101-to-301 off-block op norm 0.939496613.  Smoke/full 15/15, SPEC_SHA 63f590d43c9ed63e8419c99ddd6b9110e58a7f419d6445de71932aa4575cba97.  Method no-go only; no anti-positivity theorem.  No L* claim, no R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "5a22457181b726c11258e4194cad9d00517715c99c814f5a562a4aefe0f396bc",
+      "bytes": 19091
     }
   ]
 }
