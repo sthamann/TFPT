@@ -6784,6 +6784,38 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460 / r461
 are parallel and not dropped.
 
+**Correlation wall judgment (r469,
+PRIME.RDAGGER.CORRELATION\_WALL\_JUDGMENT.01).**
+Adjudication note `rh/problem/correlation_wall_judgment.tex` (+ PDF).
+No probe, no new census, no Lean edit (the judge was forbidden to
+write status lines).  **Ausgang U1 INTERNALLY\_EXHAUSTED / U2
+EXTEND\_AND\_REFRAME / U3 REDIRECT\_TO\_FIXED\_L.**
+The residual cofinal object is, after the named bridges, the full
+Weil criterion.  Resources move to an unconditional classical theorem
+at fixed support length (F1: channel representation, digamma/Mellin
+identity, fixed-$L$ density).  Binding anti-list; no infinitely-many-$k$
+restatement.  Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+**Quadratic representation obstruction (r470,
+PRIME.RDAGGER.QUADREP.01).**
+Sealed probe
+`experiments/tfpt-discovery/quadrep_probe.py`
+(smoke 10/10, SPEC\_SHA `74de4e263ac7fd7b`)
+plus `rh/problem/quadrep.tex` (+ PDF +
+`verify_quadrep.py`, 6/6, `QUADREP VERIFIED`).
+**Ausgang OBSTRUCTION\_SEALED.**
+F1(i) of the r469 U3 contract.  `SelectedReadQuadraticRepresentation`
+is retained unweakened.  Lean proves the $k=5$ steps/cap mismatch
+(`exists_mesh_compatible_steps_gt_cap`) and the finite implication
+that a negative mesh-compatible read on a PSD cap refutes the
+channel.  The named obstruction
+`SelectedOnsetCompatibleNegativeRead` is sealed at $k=5$: an
+onset-compatible native Hessian is indefinite of rank $24>\mathrm{cap}+1=11$
+while $A_{\mathrm{cap}}$ is PD.  Sorry census stays **8**.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460 / r461 / r468 / r469
+are parallel and not dropped.
+
 ## Folder guide
 
 ```
@@ -6885,6 +6917,12 @@ rh/
 │       │                    selected_augDualResolvent_gt_half is the
 │       │                    stronger alternative since r430).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
+│       ├── InnerBridges.lean — r464/r470: finite PSD half proved;
+│       │                    SelectedReadQuadraticRepresentation
+│       │                    retained; r470 obstruction sealed
+│       │                    (exists_mesh_compatible_steps_gt_cap
+│       │                    proved; named signed remainder).
+│       │                    Zero sorry; census stays 8.  NO RH CLAIM
 │       ├── FrequentlySelected.lean — r430/r434/r463: semidefinite + FREQ
 │       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
 │       │                    internal_weil_nonneg_of_frequently_selected;
@@ -7196,6 +7234,12 @@ rh/
 │   ├── octave_renorm.tex(+pdf) — r468: OCTAVE_NOT_CAUCHY;
 │   │                     EDGE_TWO_POINTS;
 │   │                     REDUCTION_ALIAS.  No RH claim
+│   ├── correlation_wall_judgment.tex(+pdf) — r469:
+│   │                     U1 INTERNALLY_EXHAUSTED;
+│   │                     U3 REDIRECT_TO_FIXED_L.  No RH claim
+│   ├── quadrep.tex(+pdf) — r470: OBSTRUCTION_SEALED;
+│   │                     F1(i) channel map; k=5 signed/rank
+│   │                     Hessian witness.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8331,6 +8375,18 @@ It does not touch `experiments/next.txt`.  File domain
 disjoint from r467.  The Lean landing site is unchanged.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r469 coexistence.** Round 469 (`correlation_wall_judgment.tex`)
+is a pure adjudication (U1 INTERNALLY_EXHAUSTED; U3
+REDIRECT_TO_FIXED_L).  It does not touch
+`experiments/next.txt` or Lean.  Binding anti-list.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r470 coexistence.** Round 470 (`quadrep_probe.py`) seals
+F1(i) as OBSTRUCTION_SEALED.  File domain is InnerBridges.lean,
+the probe, the problem note, INVENTORY, and these status lines.
+It does not touch `experiments/next.txt`.  Census stays 8.
+Suite surface: integrity + probes + Lean
+(`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

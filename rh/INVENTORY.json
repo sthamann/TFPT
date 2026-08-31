@@ -3976,6 +3976,36 @@
       "bytes": 281830
     },
     {
+      "path": "rh/problem/quadrep.tex",
+      "role": "problem_statement",
+      "round": "r470",
+      "ledger_ids": [],
+      "status": "quadratic representation obstruction (round 470, PRIME.RDAGGER.QUADREP.01; experiments-side, NO ledger row): VERDICT OBSTRUCTION_SEALED.  F1(i) of the r469 U3 directive.  SelectedReadQuadraticRepresentation is retained unweakened (meshExp guard only, steps unbounded).  Lean proves exists_mesh_compatible_steps_gt_cap (k=5, meshExp=19, steps=11, cap=10) and quadraticRepresentation_refuted_of_negative_read.  Named obstruction SelectedOnsetCompatibleNegativeRead: at k=5 an onset-compatible GridElement (meshExp=3, steps=24, elementAnchor=21<=32) has native Hessian rank 24 > cap+1=11 with lambda_min(T)=-0.042885425277 (2 negative eigenvalues) while A_cap is PD (lambda_min=6.61842e-8, qdag=0.877898027321).  A negative native read cannot be a quadratic value of a PSD cap.  Smoke 10/10, SPEC_SHA 74de4e263ac7fd7b; Lean sorry census remains 8.  Companion rh/problem/quadrep.tex + verify_quadrep.py QUADREP VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "8cdf03e6eed790311e595f476f769e3263f553a643b756b4ebc19e30129ecda5",
+      "bytes": 4225
+    },
+    {
+      "path": "rh/problem/verify_quadrep.py",
+      "role": "problem_check",
+      "round": "r470 companion",
+      "ledger_ids": [],
+      "status": "machine check of r470 obstruction: original channel unweakened, quantifier witness proved, named signed obstruction, sorry census 8, numeric probe.  6/6 gates, final line QUADREP VERIFIED",
+      "pin": true,
+      "sha256": "6f8e520c1255d02c1caa0ed632e8e230aab602c982dba62760f4170402c3e06f",
+      "bytes": 2791
+    },
+    {
+      "path": "rh/problem/quadrep.pdf",
+      "role": "problem_statement",
+      "round": "r470",
+      "ledger_ids": [],
+      "status": "compiled PDF of quadrep.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "6567302869758442f55300f41617f330de198e80989513b03da903e084685c18",
+      "bytes": 205839
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4150,8 +4180,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "84ce5eccccdb570a11caa16e7fac1565cb939b3c733c9eb0abbc511b8cc7a74b",
-      "bytes": 5567641
+      "sha256": "6fe7225adbfffb3bbb19d5f55b46340a8a14212aa5c475a933d38c889cdd33eb",
+      "bytes": 5568794
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5052,6 +5082,16 @@
       "pin": true,
       "sha256": "2f8faa822c6b2a4429ce0e08e53fe2a21853d61eaf518824f45e20045f6d9f68",
       "bytes": 13839
+    },
+    {
+      "path": "experiments/tfpt-discovery/quadrep_probe.py",
+      "role": "sealed_probe",
+      "round": "r470",
+      "ledger_ids": [],
+      "status": "quadratic representation obstruction (round 470, PRIME.RDAGGER.QUADREP.01; experiments-side, NO ledger row): VERDICT OBSTRUCTION_SEALED.  F1(i) of the r469 U3 directive.  SelectedReadQuadraticRepresentation is retained unweakened (meshExp guard only, steps unbounded).  Lean proves exists_mesh_compatible_steps_gt_cap (k=5, meshExp=19, steps=11, cap=10) and quadraticRepresentation_refuted_of_negative_read.  Named obstruction SelectedOnsetCompatibleNegativeRead: at k=5 an onset-compatible GridElement (meshExp=3, steps=24, elementAnchor=21<=32) has native Hessian rank 24 > cap+1=11 with lambda_min(T)=-0.042885425277 (2 negative eigenvalues) while A_cap is PD (lambda_min=6.61842e-8, qdag=0.877898027321).  A negative native read cannot be a quadratic value of a PSD cap.  Smoke 10/10, SPEC_SHA 74de4e263ac7fd7b; Lean sorry census remains 8.  Companion rh/problem/quadrep.tex + verify_quadrep.py QUADREP VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "fa812d34a19a00e1a7addef651169983ecfde1263d41f6afbe2dcc79929ae370",
+      "bytes": 7591
     }
   ]
 }
