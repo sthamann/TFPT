@@ -392,6 +392,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms GridElement.toFun_eq_affine_on_nonneg_cell
 #print axioms GridElement.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell
 #print axioms gridPoleIntegral_eq_two_mul_sum_cell
+#print axioms GridElement.intervalIntegral_toFun_mul_two_cosh_cell
+#print axioms GridElement.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_increment
+#print axioms polePairingZ_one_sided
+#print axioms sum_cellCoshIncrement_eq_one_sided
+#print axioms weilPoleSide_eq_two_mul_sum_cellCoshIncrement
+#print axioms gridPoleHatIntegralIdentity
 #print axioms fullWeilFixedSupportGridDensity_of_dyadicSample
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

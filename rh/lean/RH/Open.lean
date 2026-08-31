@@ -473,6 +473,32 @@ affine integrand via the closed-cell identity
 primitives — is r493c2.  No new sorry; repository census remains 8.
 NO RH CLAIM.
 
+## r493c2 census (pole hat integral identity)
+
+PROVED, sorry-free: `gridPoleHatIntegralIdentity` (the Prop
+`GridPoleHatIntegralIdentity`).  Wörtlich:
+`weilPoleSide f = ∫_{-R}^{R} 2 cosh(u/2) · toFun u du` whenever
+`supportBound ≤ R`.  The three algebraic steps close without a
+sign mismatch (r491 precedent does not recur: `Π'' = -2 cosh`,
+outer minus on `polePairingZ`, weight `+2 cosh`).
+
+  (1) each nonnegative cell evaluates by `integral_congr` plus
+      `toFun_eq_affine_on_nonneg_cell` and
+      `intervalIntegral_affine_mul_two_cosh_half` to an
+      `affineCoshPrimitive` increment (`cellCoshIncrement`);
+  (2) `polePairingZ` reindexes by evenness to the one-sided ACF
+      knot sum (factor 2, zero-lag unhalved);
+  (3) the primitive second difference is `poleΔ`, so the
+      telescoped increment sum equals `weilPoleSide`.
+
+Census remains 8: no new sorry; the pole conjunct leaves
+`FullWeilFixedSupportCompletion`, which is now
+`FullWeilDyadicSampleConvergence ∧ FullWeilArchContinuity`.
+`fullWeil_channel_continuity` consumes the proved hat identity
+directly.  Remaining density-bridge: dyadic `L²` / ACF transfer
+and Dini / u-space arch continuity.  The pole piece of the
+density bridge is closed.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

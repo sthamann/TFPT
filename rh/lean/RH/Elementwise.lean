@@ -673,6 +673,103 @@ theorem intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell {R : ℝ}
   rw [f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul hR0,
     f.intervalIntegral_toFun_mul_two_cosh_eq_sum_cell hR]
 
+/-- Knot evaluation on the nonnegative native grid. -/
+theorem toFun_nat_mul_D0 (k : ℕ) :
+    f.toFun ((k : ℝ) * f.D0) = f.acf k := by
+  have hu : 0 ≤ (k : ℝ) * f.D0 :=
+    mul_nonneg (Nat.cast_nonneg _) f.D0_pos.le
+  have ht : |(k : ℝ) * f.D0| / f.D0 = (k : ℝ) := by
+    rw [abs_of_nonneg hu]
+    field_simp [f.D0_pos.ne']
+  unfold toFun
+  rw [ht, Nat.floor_natCast]
+  ring
+
+/-- Knot evaluation on the two-sided native grid (`toFun` is even). -/
+theorem toFun_int_mul_D0 (k : ℤ) :
+    f.toFun ((k : ℝ) * f.D0) = f.acf k.natAbs := by
+  have habs : |((k : ℝ) * f.D0)| = (k.natAbs : ℝ) * f.D0 := by
+    rw [abs_mul, abs_of_nonneg f.D0_pos.le, Nat.cast_natAbs, Int.cast_abs]
+  unfold toFun
+  rw [habs]
+  have ht : ((k.natAbs : ℝ) * f.D0) / f.D0 = (k.natAbs : ℝ) := by
+    field_simp [f.D0_pos.ne']
+  rw [ht, Nat.floor_natCast]
+  ring
+
+lemma cellAffine_left (d : ℕ) :
+    f.cellIntercept d + f.cellSlope d * ((d : ℝ) * f.D0) = f.acf d := by
+  unfold cellIntercept cellSlope
+  have hD0 : f.D0 ≠ 0 := f.D0_pos.ne'
+  field_simp [hD0]
+  ring
+
+lemma cellAffine_right (d : ℕ) :
+    f.cellIntercept d + f.cellSlope d * (((d : ℝ) + 1) * f.D0) =
+      f.acf (d + 1) := by
+  unfold cellIntercept cellSlope
+  have hD0 : f.D0 ≠ 0 := f.D0_pos.ne'
+  field_simp [hD0]
+  ring
+
+/-- Evaluated r493b primitive increment on the nonnegative cell
+`[d D0, (d+1) D0]`. -/
+noncomputable def cellCoshIncrement (d : ℕ) : ℝ :=
+  4 * f.acf (d + 1) * Real.sinh ((((d : ℝ) + 1) * f.D0) / 2) -
+    4 * f.acf d * Real.sinh (((d : ℝ) * f.D0) / 2) -
+    8 * f.cellSlope d *
+      (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+        Real.cosh (((d : ℝ) * f.D0) / 2))
+
+lemma cellCoshIncrement_eq_primitive (d : ℕ) :
+    affineCoshPrimitive (f.cellIntercept d) (f.cellSlope d)
+          (((d : ℝ) + 1) * f.D0) -
+        affineCoshPrimitive (f.cellIntercept d) (f.cellSlope d)
+          ((d : ℝ) * f.D0) =
+      f.cellCoshIncrement d := by
+  unfold affineCoshPrimitive cellCoshIncrement
+  rw [f.cellAffine_right d, f.cellAffine_left d]
+  ring
+
+/-- Step (1): on each nonnegative native cell the pole-density
+integrand is the r493b affine integrand, so the cell integral equals
+the primitive increment. -/
+theorem intervalIntegral_toFun_mul_two_cosh_cell (d : ℕ) :
+    intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        ((d : ℝ) * f.D0) (((d : ℝ) + 1) * f.D0) MeasureTheory.volume =
+      f.cellCoshIncrement d := by
+  have hle : (d : ℝ) * f.D0 ≤ ((d : ℝ) + 1) * f.D0 :=
+    mul_le_mul_of_nonneg_right (by linarith) f.D0_pos.le
+  have heq :
+      Set.EqOn
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        (fun u : ℝ =>
+          (f.cellIntercept d + f.cellSlope d * u) *
+            (2 * Real.cosh (u / 2)))
+        (Set.uIcc ((d : ℝ) * f.D0) (((d : ℝ) + 1) * f.D0)) := by
+    intro u hu
+    rw [Set.uIcc_of_le hle] at hu
+    change f.toFun u * (2 * Real.cosh (u / 2)) =
+      (f.cellIntercept d + f.cellSlope d * u) * (2 * Real.cosh (u / 2))
+    rw [f.toFun_eq_affine_on_nonneg_cell d hu.1 hu.2]
+  rw [intervalIntegral.integral_congr heq,
+    intervalIntegral_affine_mul_two_cosh_half]
+  exact f.cellCoshIncrement_eq_primitive d
+
+/-- Combined r493c1+c2 cell form: the two-sided integral is twice the
+sum of primitive increments. -/
+theorem intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_increment
+    {R : ℝ} (hR : f.supportBound ≤ R) :
+    intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        (-R) R MeasureTheory.volume =
+      2 * ∑ d ∈ Finset.range f.steps, f.cellCoshIncrement d := by
+  rw [f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell hR]
+  congr 1
+  refine Finset.sum_congr rfl fun d _ => ?_
+  exact f.intervalIntegral_toFun_mul_two_cosh_cell d
+
 /-- **the predefined elementwise anchor onset** (R325 target form)
 (ii)): computed from the element's support parameter ALONE, before
 any window is built or any form is read -- `a₀(f) = max(1, ⌈exp
@@ -1093,6 +1190,369 @@ noncomputable def poleRead (_a _m : ℕ) (f : GridElement) : ℝ :=
 /-- **the pole side of the Weil form**: the native-mesh pairing. -/
 noncomputable def weilPoleSide (f : GridElement) : ℝ :=
   poleEvenRead f.meshExp f
+
+/-- Local telescope; this mathlib pin has no `sum_range_sub`. -/
+lemma sum_range_sub_eq (n : ℕ) (g : ℕ → ℝ) :
+    ∑ d ∈ Finset.range n, (g (d + 1) - g d) = g n - g 0 := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rw [Finset.sum_range_succ, ih]
+    ring
+
+/-- `∑_{i=0}^{n} g i = g 0 + ∑_{i=0}^{n-1} g (i+1)`. -/
+lemma sum_range_succ_shift (n : ℕ) (g : ℕ → ℝ) :
+    ∑ i ∈ Finset.range (n + 1), g i =
+      g 0 + ∑ i ∈ Finset.range n, g (i + 1) := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rw [Finset.sum_range_succ, ih, Finset.sum_range_succ]
+    ring
+
+/-- Two-sided even sum: `∑_{k=-N}^{N} g k = g 0 + 2 ∑_{n=0}^{N-1} g (n+1)`. -/
+lemma sum_Icc_neg_of_even {N : ℕ} (g : ℤ → ℝ) (he : ∀ k, g (-k) = g k) :
+    ∑ k ∈ Finset.Icc (-(N : ℤ)) (N : ℤ), g k =
+      g 0 + 2 * ∑ n ∈ Finset.range N, g ((n + 1 : ℕ) : ℤ) := by
+  induction N with
+  | zero =>
+    simp
+  | succ N ih =>
+    have hN1 : ((N + 1 : ℕ) : ℤ) = (N : ℤ) + 1 := by simp
+    have hIcc :
+        Finset.Icc (-((N + 1 : ℕ) : ℤ)) ((N + 1 : ℕ) : ℤ) =
+          insert (-((N + 1 : ℕ) : ℤ))
+            (insert ((N + 1 : ℕ) : ℤ)
+              (Finset.Icc (-(N : ℤ)) (N : ℤ))) := by
+      ext k
+      simp only [Finset.mem_insert, Finset.mem_Icc, hN1]
+      omega
+    have hpos :
+        ((N + 1 : ℕ) : ℤ) ∉ Finset.Icc (-(N : ℤ)) (N : ℤ) := by
+      simp only [Finset.mem_Icc, hN1]
+      omega
+    have hneg :
+        -((N + 1 : ℕ) : ℤ) ∉
+          insert ((N + 1 : ℕ) : ℤ) (Finset.Icc (-(N : ℤ)) (N : ℤ)) := by
+      simp only [Finset.mem_insert, Finset.mem_Icc, hN1]
+      omega
+    rw [hIcc, Finset.sum_insert hneg, Finset.sum_insert hpos, ih]
+    have hsym : g (-((N + 1 : ℕ) : ℤ)) = g ((N + 1 : ℕ) : ℤ) := he _
+    rw [hsym, Finset.sum_range_succ]
+    ring
+
+theorem poleΔ_zero (D : ℝ) : poleΔ D 0 = 2 * polePotential D := by
+  unfold poleΔ
+  have h0 : ((0 : ℤ) : ℝ) * D = 0 := by simp
+  rw [h0, zero_sub, zero_add, polePotential_zero, mul_zero, sub_zero,
+    polePotential_even]
+  ring
+
+theorem poleΔ_eq_neg_eight_cosh_second (D : ℝ) (k : ℤ) :
+    poleΔ D k =
+      -8 * (Real.cosh (((k : ℝ) * D - D) / 2) -
+        2 * Real.cosh (((k : ℝ) * D) / 2) +
+        Real.cosh (((k : ℝ) * D + D) / 2)) := by
+  unfold poleΔ
+  simp only [polePotential_eq_cosh]
+  ring
+
+lemma cosh_first_diff_eq_neg_div_eight (D : ℝ) :
+    Real.cosh (D / 2) - Real.cosh 0 = -polePotential D / 8 := by
+  rw [Real.cosh_zero, polePotential_eq_cosh]
+  ring
+
+lemma cosh_second_diff_eq_neg_div_eight (D : ℝ) (j : ℕ) :
+    Real.cosh (((j : ℝ) * D) / 2) -
+        2 * Real.cosh ((((j : ℝ) + 1) * D) / 2) +
+        Real.cosh ((((j : ℝ) + 2) * D) / 2) =
+      -poleΔ D ((j + 1 : ℕ) : ℤ) / 8 := by
+  rw [poleΔ_eq_neg_eight_cosh_second]
+  have hz : (((j + 1 : ℕ) : ℤ) : ℝ) = (j : ℝ) + 1 := by
+    rw [Int.cast_natCast, Nat.cast_succ]
+  have h1 : (((j : ℝ) + 1) * D - D) / 2 = ((j : ℝ) * D) / 2 := by ring
+  have h3 : (((j : ℝ) + 1) * D + D) / 2 = (((j : ℝ) + 2) * D) / 2 := by ring
+  rw [hz, h1, h3]
+  field_simp
+
+/-- Summation by parts for a vanishing right endpoint. -/
+lemma sum_fwd_diff_mul (n : ℕ) (a c : ℕ → ℝ) (ha : a n = 0) :
+    ∑ d ∈ Finset.range n, (a (d + 1) - a d) * (c (d + 1) - c d) =
+      -a 0 * (c 1 - c 0) -
+        ∑ j ∈ Finset.range (n - 1),
+          a (j + 1) * (c j - 2 * c (j + 1) + c (j + 2)) := by
+  cases n with
+  | zero =>
+    simp [ha]
+  | succ n =>
+    have hsplit :
+        ∑ d ∈ Finset.range (n + 1),
+            (a (d + 1) - a d) * (c (d + 1) - c d) =
+          ∑ d ∈ Finset.range (n + 1), a (d + 1) * (c (d + 1) - c d) -
+            ∑ d ∈ Finset.range (n + 1), a d * (c (d + 1) - c d) := by
+      simp_rw [sub_mul]
+      exact Finset.sum_sub_distrib (s := Finset.range (n + 1))
+        (f := fun d => a (d + 1) * (c (d + 1) - c d))
+        (g := fun d => a d * (c (d + 1) - c d))
+    have h1 :
+        ∑ d ∈ Finset.range (n + 1), a (d + 1) * (c (d + 1) - c d) =
+          ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 1) - c d) +
+            a (n + 1) * (c (n + 1) - c n) :=
+      Finset.sum_range_succ _ n
+    have h2 :
+        ∑ d ∈ Finset.range (n + 1), a d * (c (d + 1) - c d) =
+          a 0 * (c 1 - c 0) +
+            ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 2) - c (d + 1)) := by
+      rw [sum_range_succ_shift]
+    have hre :
+        ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 1) - c d) -
+            ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 2) - c (d + 1)) =
+          ∑ d ∈ Finset.range n,
+            a (d + 1) *
+              ((c (d + 1) - c d) - (c (d + 2) - c (d + 1))) := by
+      simp_rw [← Finset.sum_sub_distrib, ← mul_sub]
+    have hdiff (d : ℕ) :
+        (c (d + 1) - c d) - (c (d + 2) - c (d + 1)) =
+          -(c d - 2 * c (d + 1) + c (d + 2)) := by
+      ring
+    calc
+      ∑ d ∈ Finset.range (n + 1), (a (d + 1) - a d) * (c (d + 1) - c d)
+          = ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 1) - c d) -
+              (a 0 * (c 1 - c 0) +
+                ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 2) - c (d + 1))) := by
+            rw [hsplit, h1, h2, ha, zero_mul, add_zero]
+      _ = ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 1) - c d) -
+            ∑ d ∈ Finset.range n, a (d + 1) * (c (d + 2) - c (d + 1)) -
+          a 0 * (c 1 - c 0) := by
+            rw [sub_add_eq_sub_sub, sub_right_comm]
+      _ = ∑ d ∈ Finset.range n,
+              a (d + 1) *
+                ((c (d + 1) - c d) - (c (d + 2) - c (d + 1))) -
+            a 0 * (c 1 - c 0) := by
+            rw [hre]
+      _ = ∑ d ∈ Finset.range n,
+              a (d + 1) * -(c d - 2 * c (d + 1) + c (d + 2)) -
+            a 0 * (c 1 - c 0) := by
+            simp_rw [hdiff]
+      _ = -a 0 * (c 1 - c 0) -
+            ∑ d ∈ Finset.range n,
+              a (d + 1) * (c d - 2 * c (d + 1) + c (d + 2)) := by
+            simp_rw [mul_neg]
+            rw [Finset.sum_neg_distrib]
+            rw [sub_eq_add_neg, add_comm, ← sub_eq_add_neg, neg_mul]
+
+lemma sum_acf_poleΔ_eq_upto_steps (f : GridElement) {N : ℕ}
+    (hN : f.steps ≤ N) :
+    ∑ k ∈ Finset.range N, f.acf (k + 1) * poleΔ f.D0 ((k + 1 : ℕ) : ℤ) =
+      ∑ k ∈ Finset.range (f.steps - 1),
+        f.acf (k + 1) * poleΔ f.D0 ((k + 1 : ℕ) : ℤ) := by
+  refine (Finset.sum_subset ?hsubset ?hzero).symm
+  · intro k hk
+    exact Finset.mem_range.mpr
+      (lt_of_lt_of_le (Finset.mem_range.mp hk)
+        (le_trans (Nat.sub_le f.steps 1) hN))
+  · intro k _hkN hknot
+    have : ¬ k < f.steps - 1 := mt Finset.mem_range.mpr hknot
+    have hkge : f.steps - 1 ≤ k := Nat.le_of_not_lt this
+    have : f.steps ≤ k + 1 := by omega
+    rw [f.acf_eq_zero this, zero_mul]
+
+/-- Step (2): two-sided `polePairingZ` is the one-sided ACF knot sum
+(factor 2, zero-lag unhalved) after even reindexing. -/
+theorem polePairingZ_one_sided (f : GridElement) (N : ℕ) :
+    polePairingZ f.D0 f N =
+      -(f.acf 0 * poleΔ f.D0 0 +
+          2 * ∑ k ∈ Finset.range N,
+            f.acf (k + 1) * poleΔ f.D0 ((k + 1 : ℕ) : ℤ)) / f.D0 := by
+  unfold polePairingZ
+  let g : ℤ → ℝ := fun k => f.toFun ((k : ℝ) * f.D0) * poleΔ f.D0 k
+  have hge : ∀ k, g (-k) = g k := by
+    intro k
+    have harg : ((-k : ℤ) : ℝ) * f.D0 = -((k : ℝ) * f.D0) := by
+      simp [neg_mul]
+    simp only [g]
+    rw [harg, f.toFun_even, poleΔ_even]
+  have hsum := sum_Icc_neg_of_even (N := N) g hge
+  have g0 : g 0 = f.acf 0 * poleΔ f.D0 0 := by
+    have h0 : ((0 : ℤ) : ℝ) * f.D0 = (0 : ℕ) * f.D0 := by simp
+    simp only [g]
+    rw [h0, f.toFun_nat_mul_D0]
+  have gk : ∀ k : ℕ,
+      g ((k + 1 : ℕ) : ℤ) =
+        f.acf (k + 1) * poleΔ f.D0 ((k + 1 : ℕ) : ℤ) := by
+    intro k
+    have hcast : (((k + 1 : ℕ) : ℤ) : ℝ) * f.D0 =
+        ((k + 1 : ℕ) : ℝ) * f.D0 := by
+      simp
+    simp only [g]
+    rw [hcast, f.toFun_nat_mul_D0]
+  rw [hsum, g0]
+  simp_rw [gk]
+
+lemma poleCutoff_native_ge_steps (f : GridElement) :
+    f.steps ≤ poleCutoff f f.meshExp := by
+  unfold poleCutoff
+  have hpow : 0 < 2 ^ f.meshExp := Nat.pow_pos (by decide : 0 < 2)
+  exact Nat.le_trans (Nat.le_add_right f.steps 3)
+    (Nat.le_mul_of_pos_right (f.steps + 3) hpow)
+
+/-- Step (3): the summed primitive increments equal the one-sided
+ACF / `poleΔ` pairing. -/
+theorem sum_cellCoshIncrement_eq_one_sided (f : GridElement) :
+    ∑ d ∈ Finset.range f.steps, f.cellCoshIncrement d =
+      -(f.acf 0 * polePotential f.D0 +
+          ∑ j ∈ Finset.range (f.steps - 1),
+            f.acf (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ)) / f.D0 := by
+  let a : ℕ → ℝ := f.acf
+  let c : ℕ → ℝ := fun d => Real.cosh (((d : ℝ) * f.D0) / 2)
+  let s : ℕ → ℝ := fun d => Real.sinh (((d : ℝ) * f.D0) / 2)
+  have ha : a f.steps = 0 := f.acf_eq_zero le_rfl
+  have hcast_succ (d : ℕ) : ((d + 1 : ℕ) : ℝ) = (d : ℝ) + 1 :=
+    Nat.cast_succ d
+  have hsinh :
+      ∑ d ∈ Finset.range f.steps,
+          (4 * a (d + 1) * s (d + 1) - 4 * a d * s d) =
+        0 := by
+    have htel :
+        ∑ d ∈ Finset.range f.steps, (a (d + 1) * s (d + 1) - a d * s d) =
+          a f.steps * s f.steps - a 0 * s 0 :=
+      sum_range_sub_eq f.steps (fun d => a d * s d)
+    have hs0 : s 0 = 0 := by
+      simp [s, Real.sinh_zero]
+    have hfactor :
+        ∀ d,
+          4 * a (d + 1) * s (d + 1) - 4 * a d * s d =
+            4 * (a (d + 1) * s (d + 1) - a d * s d) := by
+      intro d; ring
+    simp_rw [hfactor]
+    rw [← Finset.mul_sum, htel, ha, hs0]
+    ring
+  have hΔc (d : ℕ) :
+      Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+          Real.cosh (((d : ℝ) * f.D0) / 2) =
+        c (d + 1) - c d := by
+    change Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+        Real.cosh (((d : ℝ) * f.D0) / 2) =
+      Real.cosh ((((d + 1 : ℕ) : ℝ) * f.D0) / 2) -
+        Real.cosh (((d : ℝ) * f.D0) / 2)
+    rw [hcast_succ]
+  have hβ :
+      ∑ d ∈ Finset.range f.steps,
+          f.cellSlope d *
+            (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+              Real.cosh (((d : ℝ) * f.D0) / 2)) =
+        (∑ d ∈ Finset.range f.steps, (a (d + 1) - a d) * (c (d + 1) - c d)) /
+          f.D0 := by
+    have hpt (d : ℕ) :
+        f.cellSlope d *
+            (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+              Real.cosh (((d : ℝ) * f.D0) / 2)) =
+          ((a (d + 1) - a d) * (c (d + 1) - c d)) / f.D0 := by
+      unfold GridElement.cellSlope
+      rw [hΔc]
+      change ((f.acf (d + 1) - f.acf d) / f.D0) * (c (d + 1) - c d) =
+        ((a (d + 1) - a d) * (c (d + 1) - c d)) / f.D0
+      ring
+    simp_rw [hpt]
+    exact (Finset.sum_div (Finset.range f.steps)
+      (fun d => (a (d + 1) - a d) * (c (d + 1) - c d)) f.D0).symm
+  have hparts := sum_fwd_diff_mul f.steps a c ha
+  have hinc :
+      ∑ d ∈ Finset.range f.steps, f.cellCoshIncrement d =
+        ∑ d ∈ Finset.range f.steps,
+            (4 * a (d + 1) * s (d + 1) - 4 * a d * s d) -
+          8 *
+            ∑ d ∈ Finset.range f.steps,
+              f.cellSlope d *
+                (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+                  Real.cosh (((d : ℝ) * f.D0) / 2)) := by
+    have hpt (d : ℕ) :
+        f.cellCoshIncrement d =
+          (4 * a (d + 1) * s (d + 1) - 4 * a d * s d) -
+            8 * (f.cellSlope d *
+              (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+                Real.cosh (((d : ℝ) * f.D0) / 2))) := by
+      unfold GridElement.cellCoshIncrement
+      change
+          4 * f.acf (d + 1) *
+                Real.sinh ((((d : ℝ) + 1) * f.D0) / 2) -
+              4 * f.acf d * Real.sinh (((d : ℝ) * f.D0) / 2) -
+              8 * f.cellSlope d *
+                (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+                  Real.cosh (((d : ℝ) * f.D0) / 2)) =
+            (4 * a (d + 1) * s (d + 1) - 4 * a d * s d) -
+              8 * (f.cellSlope d *
+                (Real.cosh ((((d : ℝ) + 1) * f.D0) / 2) -
+                  Real.cosh (((d : ℝ) * f.D0) / 2)))
+      have hsL : s d = Real.sinh (((d : ℝ) * f.D0) / 2) := rfl
+      have hsR : s (d + 1) = Real.sinh ((((d + 1 : ℕ) : ℝ) * f.D0) / 2) := rfl
+      rw [hsL, hsR, hcast_succ]
+      ring
+    simp_rw [hpt]
+    rw [Finset.sum_sub_distrib, Finset.mul_sum]
+  have hfirst : c 1 - c 0 = -polePotential f.D0 / 8 := by
+    simp only [c, Nat.cast_one, Nat.cast_zero, one_mul, zero_mul]
+    have h0 : (0 : ℝ) / 2 = 0 := by ring
+    rw [h0]
+    convert cosh_first_diff_eq_neg_div_eight f.D0
+  have hsecond (j : ℕ) :
+      c j - 2 * c (j + 1) + c (j + 2) =
+        -poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8 := by
+    simp only [c]
+    have hj1 : ((j + 1 : ℕ) : ℝ) = (j : ℝ) + 1 := Nat.cast_succ j
+    have hj2 : ((j + 2 : ℕ) : ℝ) = (j : ℝ) + 2 := by norm_cast
+    rw [hj1, hj2, cosh_second_diff_eq_neg_div_eight]
+  have hS :
+      ∑ d ∈ Finset.range f.steps, (a (d + 1) - a d) * (c (d + 1) - c d) =
+        (a 0 * polePotential f.D0 +
+          ∑ j ∈ Finset.range (f.steps - 1),
+            a (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ)) / 8 := by
+    rw [hparts, hfirst]
+    simp_rw [hsecond]
+    have hA : -a 0 * (-polePotential f.D0 / 8) =
+        a 0 * polePotential f.D0 / 8 := by ring
+    have hB :
+        ∑ j ∈ Finset.range (f.steps - 1),
+            a (j + 1) * (-poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8) =
+          -(∑ j ∈ Finset.range (f.steps - 1),
+              a (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8) := by
+      have hpt (j : ℕ) :
+          a (j + 1) * (-poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8) =
+            -(a (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8) := by
+        ring
+      simp_rw [hpt]
+      exact Finset.sum_neg_distrib
+        (f := fun j =>
+          a (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ) / 8)
+    rw [hA, hB, sub_neg_eq_add, ← Finset.sum_div, ← add_div]
+  rw [hinc, hsinh, zero_sub, hβ, hS]
+  have hscale (x : ℝ) :
+      -(8 * ((x / 8) / f.D0)) = -(x / f.D0) := by
+    field_simp [f.D0_pos.ne']
+  rw [hscale]
+  simp only [a]
+  rw [neg_div]
+
+theorem weilPoleSide_eq_two_mul_sum_cellCoshIncrement (f : GridElement) :
+    weilPoleSide f =
+      2 * ∑ d ∈ Finset.range f.steps, f.cellCoshIncrement d := by
+  have hD : f.D0 = meshWidth f.meshExp := f.D0_eq_meshWidth
+  have hN : f.steps ≤ poleCutoff f f.meshExp :=
+    poleCutoff_native_ge_steps f
+  have hpair :
+      weilPoleSide f = polePairingZ f.D0 f (poleCutoff f f.meshExp) := by
+    unfold weilPoleSide poleEvenRead
+    rw [hD]
+  rw [hpair, polePairingZ_one_sided, sum_acf_poleΔ_eq_upto_steps f hN]
+  have hinc := sum_cellCoshIncrement_eq_one_sided f
+  have hΔ0 : poleΔ f.D0 0 = 2 * polePotential f.D0 := poleΔ_zero f.D0
+  have h2 : 2 * ∑ d ∈ Finset.range f.steps, f.cellCoshIncrement d =
+      -(f.acf 0 * poleΔ f.D0 0 +
+          2 * ∑ j ∈ Finset.range (f.steps - 1),
+            f.acf (j + 1) * poleΔ f.D0 ((j + 1 : ℕ) : ℤ)) / f.D0 := by
+    rw [hinc, hΔ0]
+    field_simp [f.D0_pos.ne']
+  rw [h2]
 
 /-- **named remaining finite-sum identity** (r376; not a `sorry`):
 the second-difference pairing of `polePotential` against a native-PL

@@ -373,6 +373,25 @@ theorem gridPoleIntegral_eq_two_mul_sum_cell
   simp_rw [hswap]
   exact f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell hR
 
+/-- r493c2: the native-mesh pole pairing equals the two-sided
+`2 cosh(u/2)` integral.  Each cell evaluates to an
+`affineCoshPrimitive` increment; the increments telescope against
+`poleΔ` after the even one-sided rewrite of `polePairingZ`. -/
+theorem gridPoleHatIntegralIdentity : GridPoleHatIntegralIdentity := by
+  intro f R hR
+  have hswap (a b : ℝ) :
+      intervalIntegral
+          (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
+          a b MeasureTheory.volume =
+        intervalIntegral
+          (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+          a b MeasureTheory.volume := by
+    refine intervalIntegral.integral_congr fun u _ => ?_
+    unfold fullWeilPoleWeight
+    ring
+  rw [hswap, f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_increment hR]
+  exact weilPoleSide_eq_two_mul_sum_cellCoshIncrement f
+
 /-- The pointwise hat identity supplies the sequence-level pole
 dictionary used by channel continuity. -/
 theorem gridPoleIntegralIdentification_of_hat
@@ -423,16 +442,15 @@ theorem fullWeilChannelContinuity_of_components
   rw [heq]
   exact fullWeilPoleIntegral_tendsto happrox
 
-/-- **Single remaining dense-completion package (r489).**
+/-- **Single remaining dense-completion package (r489; r493c2 shrink).**
 
-Its components stay separately named for subsequent rounds:
+The r376 native-grid pole hat dictionary is now a proved theorem
+(`gridPoleHatIntegralIdentity`).  Remaining components:
 compactly-supported dyadic `L²` step density and autocorrelation
-uniform convergence; r475 u-space arch continuity; and the r376
-native-grid pole integral dictionary. -/
+uniform convergence; r475 u-space / Dini arch continuity. -/
 def FullWeilFixedSupportCompletion : Prop :=
   FullWeilDyadicSampleConvergence ∧
-    FullWeilArchContinuity ∧
-    GridPoleHatIntegralIdentity
+    FullWeilArchContinuity
 
 /-- Form convergence assembled from the three channel limits. -/
 theorem fullWeilForm_tendsto_of_channels
@@ -488,14 +506,14 @@ theorem fullWeil_fixedSupport_grid_density :
   fullWeilFixedSupportGridDensity_of_dyadicSample
     fullWeil_fixedSupport_completion.1
 
-/-- All channel limits follow from the other two completion components
-plus the proved comb and polar-integral continuity theorems. -/
+/-- All channel limits follow from the remaining arch completion
+component, the proved pole hat identity, and the proved comb and
+polar-integral continuity theorems. -/
 theorem fullWeil_channel_continuity :
     FullWeilChannelContinuity :=
   fullWeilChannelContinuity_of_components
-    fullWeil_fixedSupport_completion.2.1
-    (gridPoleIntegralIdentification_of_hat
-      fullWeil_fixedSupport_completion.2.2)
+    fullWeil_fixedSupport_completion.2
+    (gridPoleIntegralIdentification_of_hat gridPoleHatIntegralIdentity)
 
 /-- Bridge 1 now consumes exactly the two named bricks above; its
 positivity-transfer algebra is sorry-free. -/
