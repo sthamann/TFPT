@@ -5760,8 +5760,8 @@
       "ledger_ids": [],
       "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "d7e3f26f31c0feab5a476d69ec2efcb936cf168d044c9927366e7bf46255efd9",
-      "bytes": 7046
+      "sha256": "c138624e5d53ce77c69bc4d6ea4f2ae471006985c6a378731ed9f7690eb21675",
+      "bytes": 7045
     },
     {
       "path": "experiments/tfpt-discovery/inner_bridges_probe.py",
@@ -5960,7 +5960,7 @@
       "ledger_ids": [],
       "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "c237e1329f6493fff3019d390c043c34ca87ad3a9d6e67c4cfedeabcb08ca773",
+      "sha256": "cc3d8a7ca42c46a856327d14c9f6204599e00b187d9b3a83e2ad36a1b9da3224",
       "bytes": 4885
     },
     {
@@ -5980,7 +5980,7 @@
       "ledger_ids": [],
       "status": "outer bridges fixed-support channel reduction (round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; experiments-side structural seal, NO ledger row): VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence on a common fixed support plus L1; the autocorrelation witness is compactly supported in L2.  Common-anchor finite comb continuity and the bounded-cosh standard polar integral continuity are proved.  The remaining density package is the transparent conjunction of dyadic L2 step/autocorrelation density, r475 u-space arch continuity, and the r376 native-grid pole integral dictionary.  Smoke 12/12, SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census 9 -> 8 (external 4 -> 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "192e3bf61ebe7b867590cac50bb9546701aefe1420b1a63237a24dfcdc0c1b45",
+      "sha256": "ec93446a6e60701f2e72faf4fc8c4cd039eb000f861515af6fe75b94034e6c9d",
       "bytes": 4190
     },
     {
@@ -6000,7 +6000,7 @@
       "ledger_ids": [],
       "status": "outer bridges final-density audit and reduction (round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; experiments-side structural seal, NO ledger row): VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  The r489 completion has three components, not two.  Polar normalization corrected to +2*cosh; one-cell pin 2.042015443302091.  fullWeilArchSide is concrete.  The L2 witness has Lipschitz and support-length contracts; explicit dyadicSampleGrid uses floor(R*2^m) cells and has a proved support bound.  Remaining exact targets: sampled autocorrelation convergence, singular arch continuity, finite-hat pole integral.  Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  Lean sorry census 8 -> 8 (external 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "a2d95b9850aa5b70890aac14ed11511505cdc129b0c2815d2c6904838cce4de4",
+      "sha256": "94857614a3e30eda7d5f123777fc36c6020941747273c2881cfd29706ca49a33",
       "bytes": 3810
     },
     {

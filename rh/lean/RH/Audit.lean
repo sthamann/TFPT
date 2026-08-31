@@ -385,6 +385,14 @@ sequence dictionary is proved.  Completion still has three
 components (dyadic convergence, arch continuity, pole hat identity),
 so census honestly remains 8.  No hidden two-component closure is
 claimed.
+
+r493e proves Dini / u-space arch continuity
+(`fullWeil_arch_continuity`, `fullWeil_arch_side_tendsto`) from
+the common Lipschitz majorant and dominated convergence on
+`Ioc 0 R`.  The completion theorem is now that proved arch
+statement.  External census 3 → 2; repository census 8 → 7.
+The remaining two outer-bridge `sorry`s are the Guinand–Weil
+dictionary and off-critical separation.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -406,6 +414,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms dyadicSampleGrid_l1_tendsto
 #print axioms fullWeil_dyadic_sample_convergence
 #print axioms fullWeilFixedSupportGridDensity_of_dyadicSample
+#print axioms FullWeilTest.lipschitz_toFun
+#print axioms GridElement.lipschitz_toFun_of_slope_bound
+#print axioms dyadicSampleGrid_uniform_lipschitz
+#print axioms archIntegrand_dini_bound
+#print axioms weilArchSide_eq_cutoff
+#print axioms fullWeil_arch_side_tendsto
+#print axioms fullWeil_arch_continuity
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

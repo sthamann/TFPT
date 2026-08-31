@@ -964,7 +964,10 @@ opaque standardExplicitFormula : FullWeilTest → ℝ
 target support, converges uniformly there, and converges in `L¹` on
 that fixed compact interval.  Uniform convergence supplies every
 point evaluation in the finite prime channel; `L¹` controls bounded
-integral weights such as the standard polar `cosh` functional. -/
+integral weights such as the standard polar `cosh` functional.
+The last conjunct is the common Dini / Lipschitz majorant required
+by the `1/u` arch weight: every approximating PL interpolant shares
+one Lipschitz constant (dyadic ACF knots give this uniformly). -/
 def FullWeilTest.FixedSupportGridApproximation
     (F : FullWeilTest) (grid : ℕ → GridElement) : Prop :=
   (∀ n, (grid n).supportBound ≤ F.supportRadius) ∧
@@ -977,7 +980,8 @@ def FullWeilTest.FixedSupportGridApproximation
     (fun n => intervalIntegral
       (fun u : ℝ => |(grid n).toFun u - F.toFun u|)
       (-F.supportRadius) F.supportRadius MeasureTheory.volume)
-    Filter.atTop (nhds 0)
+    Filter.atTop (nhds 0) ∧
+  ∃ Kgrid : NNReal, ∀ n, LipschitzWith Kgrid (grid n).toFun
 
 /-- Uniform-on-support convergence plus the common support bound gives
 pointwise convergence on all of `ℝ` (both functions vanish outside). -/
@@ -1066,7 +1070,7 @@ theorem fullWeilPoleIntegral_tendsto
     fun_prop
   have hC : Filter.Tendsto (fun n => C * err n)
       Filter.atTop (nhds 0) := by
-    simpa only [err, mul_zero] using happrox.2.2.2.const_mul C
+    simpa only [err, mul_zero] using happrox.2.2.2.1.const_mul C
   refine squeeze_zero' (Filter.Eventually.of_forall fun _ => norm_nonneg _) ?_ hC
   filter_upwards [] with n
   have hgridInt := happrox.2.2.1 n
@@ -1139,6 +1143,393 @@ def FullWeilDyadicSampleConvergence : Prop :=
       F.FixedSupportGridApproximation
         (fun m => dyadicSampleGrid h a F.supportRadius m)
 
+/-- Cell slopes vanish past the last ACF knot. -/
+lemma GridElement.cellSlope_eq_zero_of_steps_le (f : GridElement) {d : ℕ}
+    (hd : f.steps ≤ d) : f.cellSlope d = 0 := by
+  unfold GridElement.cellSlope
+  rw [f.acf_eq_zero hd, f.acf_eq_zero (le_trans hd (Nat.le_succ _)),
+    sub_zero, zero_div]
+
+/-- Even PL interpolant depends only on `|u|`. -/
+lemma GridElement.toFun_eq_toFun_abs (f : GridElement) (u : ℝ) :
+    f.toFun u = f.toFun |u| := by
+  rcases le_or_gt 0 u with hu | hu
+  · rw [abs_of_nonneg hu]
+  · rw [abs_of_neg hu, f.toFun_even]
+
+/-- Same-cell increment of the nonnegative PL interpolant. -/
+lemma GridElement.toFun_sub_le_of_mem_cell (f : GridElement) (d : ℕ)
+    {L x y : ℝ} (hL : ∀ k : ℕ, |f.cellSlope k| ≤ L)
+    (hx : (d : ℝ) * f.D0 ≤ x) (hxy : x ≤ y)
+    (hy : y ≤ ((d : ℝ) + 1) * f.D0) :
+    |f.toFun y - f.toFun x| ≤ L * (y - x) := by
+  have hylo : (d : ℝ) * f.D0 ≤ y := le_trans hx hxy
+  have hx0 : 0 ≤ x :=
+    le_trans (mul_nonneg (Nat.cast_nonneg _) f.D0_pos.le) hx
+  have hy0 : 0 ≤ y := le_trans hx0 hxy
+  rw [f.toFun_eq_affine_on_nonneg_cell d hx (le_trans hxy hy),
+    f.toFun_eq_affine_on_nonneg_cell d hylo hy]
+  have hdiff :
+      f.cellIntercept d + f.cellSlope d * y -
+        (f.cellIntercept d + f.cellSlope d * x) =
+      f.cellSlope d * (y - x) := by ring
+  rw [hdiff, abs_mul, abs_of_nonneg (sub_nonneg.mpr hxy)]
+  exact mul_le_mul_of_nonneg_right (hL d) (sub_nonneg.mpr hxy)
+
+/-- Telescoping ACF increments from knot `i` across `n` cells. -/
+lemma GridElement.acf_sub_eq_sum_cell (f : GridElement) (i n : ℕ) :
+    f.acf (i + n) - f.acf i =
+      ∑ k ∈ Finset.range n, (f.acf (i + k + 1) - f.acf (i + k)) := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rw [Finset.sum_range_succ, ← ih]
+    ring
+
+/-- Nonnegative restriction of the PL interpolant is Lipschitz. -/
+lemma GridElement.toFun_nonneg_lip (f : GridElement) {L s t : ℝ}
+    (hL : ∀ d : ℕ, |f.cellSlope d| ≤ L) (hs : 0 ≤ s) (hst : s ≤ t) :
+    |f.toFun t - f.toFun s| ≤ L * (t - s) := by
+  have hs0 : 0 ≤ s / f.D0 := div_nonneg hs f.D0_pos.le
+  have htD : 0 ≤ t / f.D0 := div_nonneg (le_trans hs hst) f.D0_pos.le
+  let i : ℕ := ⌊s / f.D0⌋₊
+  let j : ℕ := ⌊t / f.D0⌋₊
+  have hi : i = ⌊s / f.D0⌋₊ := rfl
+  have hj : j = ⌊t / f.D0⌋₊ := rfl
+  have hilo : (i : ℝ) * f.D0 ≤ s :=
+    (le_div_iff₀ f.D0_pos).mp (Nat.floor_le hs0)
+  have hjlo : (j : ℝ) * f.D0 ≤ t :=
+    (le_div_iff₀ f.D0_pos).mp (Nat.floor_le htD)
+  have hihi : s ≤ ((i : ℝ) + 1) * f.D0 := by
+    have := Nat.lt_succ_floor (s / f.D0)
+    rw [← hi, Nat.cast_succ] at this
+    exact (div_le_iff₀ f.D0_pos).mp (le_of_lt this)
+  have hjhi : t ≤ ((j : ℝ) + 1) * f.D0 := by
+    have := Nat.lt_succ_floor (t / f.D0)
+    rw [← hj, Nat.cast_succ] at this
+    exact (div_le_iff₀ f.D0_pos).mp (le_of_lt this)
+  have hij : i ≤ j := Nat.floor_le_floor
+    (div_le_div_of_nonneg_right hst f.D0_pos.le)
+  rcases eq_or_lt_of_le hij with hijeq | hijlt
+  · rw [hijeq] at hilo hihi
+    simpa [abs_sub_comm, hijeq] using
+      f.toFun_sub_le_of_mem_cell (x := s) (y := t) j hL hilo hst hjhi
+  · have hle : i + 1 ≤ j := Nat.succ_le_of_lt hijlt
+    have h1 : |f.toFun t - f.toFun ((j : ℝ) * f.D0)| ≤
+        L * (t - (j : ℝ) * f.D0) :=
+      f.toFun_sub_le_of_mem_cell (x := (j : ℝ) * f.D0) (y := t) j hL
+        le_rfl hjlo hjhi
+    have h3 : |f.toFun (((i : ℝ) + 1) * f.D0) - f.toFun s| ≤
+        L * (((i : ℝ) + 1) * f.D0 - s) := by
+      simpa [abs_sub_comm] using
+        f.toFun_sub_le_of_mem_cell (x := s) (y := ((i : ℝ) + 1) * f.D0)
+          i hL hilo hihi le_rfl
+    have h2 : |f.toFun ((j : ℝ) * f.D0) -
+        f.toFun (((i : ℝ) + 1) * f.D0)| ≤
+          L * ((j : ℝ) * f.D0 - ((i : ℝ) + 1) * f.D0) := by
+      have hjk : f.toFun ((j : ℝ) * f.D0) = f.acf j :=
+        f.toFun_nat_mul_D0 j
+      have hik : f.toFun (((i : ℝ) + 1) * f.D0) = f.acf (i + 1) := by
+        simpa [Nat.cast_succ] using f.toFun_nat_mul_D0 (i + 1)
+      rw [hjk, hik]
+      have hsum := f.acf_sub_eq_sum_cell (i + 1) (j - (i + 1))
+      have hji : i + 1 + (j - (i + 1)) = j := by omega
+      rw [hji] at hsum
+      rw [hsum]
+      refine le_trans (Finset.abs_sum_le_sum_abs _ _) ?_
+      have hterm : ∀ k ∈ Finset.range (j - (i + 1)),
+          |f.acf (i + 1 + k + 1) - f.acf (i + 1 + k)| ≤ L * f.D0 := by
+        intro k _
+        have hslope := hL (i + 1 + k)
+        unfold GridElement.cellSlope at hslope
+        rw [abs_div, abs_of_pos f.D0_pos] at hslope
+        exact (div_le_iff₀ f.D0_pos).mp hslope
+      refine le_trans (Finset.sum_le_sum hterm) ?_
+      simp only [Finset.sum_const, nsmul_eq_mul, Finset.card_range]
+      have hcast :
+          ((j : ℝ) - ((i : ℝ) + 1)) * f.D0 =
+            ((j - (i + 1) : ℕ) : ℝ) * f.D0 := by
+        have : (j : ℝ) - ((i : ℝ) + 1) = ((j - (i + 1) : ℕ) : ℝ) := by
+          rw [Nat.cast_sub hle, Nat.cast_add, Nat.cast_one]
+        rw [this]
+      have hspan :
+          (j : ℝ) * f.D0 - ((i : ℝ) + 1) * f.D0 =
+            ((j : ℝ) - ((i : ℝ) + 1)) * f.D0 := by ring
+      rw [hspan, hcast]
+      linarith
+    have htri :=
+      abs_sub_le (f.toFun t) (f.toFun ((j : ℝ) * f.D0)) (f.toFun s)
+    have htri2 :=
+      abs_sub_le (f.toFun ((j : ℝ) * f.D0))
+        (f.toFun (((i : ℝ) + 1) * f.D0)) (f.toFun s)
+    nlinarith [h1, h2, h3, htri, htri2]
+
+/-- A uniform cell-slope bound is a Lipschitz constant for `toFun`. -/
+lemma GridElement.lipschitz_toFun_of_slope_bound (f : GridElement) {L : ℝ}
+    (hL0 : 0 ≤ L) (hL : ∀ d : ℕ, |f.cellSlope d| ≤ L) :
+    LipschitzWith ⟨L, hL0⟩ f.toFun := by
+  refine LipschitzWith.of_dist_le_mul fun x y => ?_
+  rw [Real.dist_eq, Real.dist_eq]
+  change |f.toFun x - f.toFun y| ≤ L * |x - y|
+  rw [f.toFun_eq_toFun_abs x, f.toFun_eq_toFun_abs y]
+  have habs : |(|x| - |y|)| ≤ |x - y| := abs_abs_sub_abs_le_abs_sub _ _
+  refine le_trans ?_ (mul_le_mul_of_nonneg_left habs hL0)
+  rcases le_total |x| |y| with hst | hts
+  · have hlip := f.toFun_nonneg_lip hL (abs_nonneg x) hst
+    rw [abs_sub_comm] at hlip
+    convert hlip using 1
+    rw [abs_sub_comm (|x|) (|y|), abs_of_nonneg (sub_nonneg.mpr hst)]
+  · have hlip := f.toFun_nonneg_lip hL (abs_nonneg y) hts
+    convert hlip using 1
+    rw [abs_of_nonneg (sub_nonneg.mpr hts)]
+
+/-- Autocorrelation of a Lipschitz compactly-supported witness is
+itself Lipschitz, with constant `K² R²`. -/
+lemma FullWeilTest.lipschitz_toFun (F : FullWeilTest) :
+    ∃ K : NNReal, LipschitzWith K F.toFun := by
+  obtain ⟨h, _, hhKs, hhLip, hhSupp, hac⟩ := F.autocorrelation
+  obtain ⟨K, hK⟩ := hhLip
+  obtain ⟨a, hsupp⟩ := hhSupp
+  set R := F.supportRadius
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  have hc : Continuous h := hK.continuous
+  refine ⟨⟨(K : ℝ) * K * R * R, by positivity⟩, ?_⟩
+  refine LipschitzWith.of_dist_le_mul fun u v => ?_
+  rw [Real.dist_eq, Real.dist_eq, hac u, hac v]
+  rw [autocorrelation_eq_intervalIntegral hc hhKs hsupp hR,
+    autocorrelation_eq_intervalIntegral hc hhKs hsupp hR]
+  have hφu :
+      IntervalIntegrable (fun t : ℝ => h t * h (t + u))
+        MeasureTheory.volume a (a + R) :=
+    (hc.mul (hc.comp (continuous_add_right u))).intervalIntegrable _ _
+  have hφv :
+      IntervalIntegrable (fun t : ℝ => h t * h (t + v))
+        MeasureTheory.volume a (a + R) :=
+    (hc.mul (hc.comp (continuous_add_right v))).intervalIntegrable _ _
+  rw [← intervalIntegral.integral_sub hφu hφv]
+  have hrew :
+      (fun t : ℝ => h t * h (t + u) - h t * h (t + v)) =
+        fun t : ℝ => h t * (h (t + u) - h (t + v)) := by
+    funext t
+    ring
+  rw [hrew]
+  have hab : a ≤ a + R := le_add_of_nonneg_right hR
+  have hpt : ∀ t : ℝ,
+      |h t * (h (t + u) - h (t + v))| ≤
+        ((K : ℝ) * R) * (K : ℝ) * |u - v| := fun t => by
+    rw [abs_mul]
+    have hb := lipschitz_witness_abs_le hK hsupp hR t
+    have hdu := hK.dist_le_mul (t + u) (t + v)
+    rw [Real.dist_eq, Real.dist_eq] at hdu
+    have hspan : |t + u - (t + v)| = |u - v| := by
+      congr 1
+      ring
+    rw [hspan] at hdu
+    have h1 : |h t| * |h (t + u) - h (t + v)| ≤
+        ((K : ℝ) * R) * |h (t + u) - h (t + v)| :=
+      mul_le_mul_of_nonneg_right hb (abs_nonneg _)
+    have h2 : ((K : ℝ) * R) * |h (t + u) - h (t + v)| ≤
+        ((K : ℝ) * R) * ((K : ℝ) * |u - v|) :=
+      mul_le_mul_of_nonneg_left hdu (by positivity)
+    linarith
+  have hconst :
+      intervalIntegral
+          (fun _ : ℝ => ((K : ℝ) * R) * (K : ℝ) * |u - v|)
+          a (a + R) MeasureTheory.volume =
+        ((K : ℝ) * K * R * R) * |u - v| := by
+    rw [intervalIntegral.integral_const, smul_eq_mul]
+    ring
+  rw [← Real.norm_eq_abs]
+  refine le_trans
+    (intervalIntegral.norm_integral_le_of_norm_le hab
+      (by
+        filter_upwards [] with t _ht
+        simpa [Real.norm_eq_abs] using hpt t)
+      intervalIntegrable_const)
+    (le_of_eq hconst)
+
+/-- `w(u) e^{-3u/2} = 2 e^{-2u}/(1-e^{-2u})` for `u ≠ 0`. -/
+lemma weilArchUWeight_mul_exp {u : ℝ} (hu : u ≠ 0) :
+    weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u) =
+      2 * Real.exp (-2 * u) / (1 - Real.exp (-2 * u)) := by
+  unfold weilArchUWeight
+  have hden : 1 - Real.exp (-2 * u) ≠ 0 := by
+    intro h
+    have hexp : Real.exp (-2 * u) = 1 := (sub_eq_zero.mp h).symm
+    have hu2 : -2 * u = 0 := by
+      rwa [← Real.exp_eq_one_iff]
+    exact hu (by nlinarith [hu2])
+  field_simp [hden]
+  rw [← Real.exp_add]
+  ring_nf
+
+/-- The regularized weight is positive on `(0, ∞)`. -/
+lemma weilArchUWeight_pos {u : ℝ} (hu : 0 < u) : 0 < weilArchUWeight u := by
+  unfold weilArchUWeight
+  have hnum : 0 < 2 * Real.exp (-u / 2) := by positivity
+  have hden : 0 < 1 - Real.exp (-2 * u) :=
+    sub_pos.mpr (Real.exp_lt_one_iff.2 (by linarith))
+  positivity
+
+/-- Dini majorant: `w(u)·u ≤ e^{3u/2}` on `(0, ∞)`. -/
+lemma weilArchUWeight_mul_id_le {u : ℝ} (hu : 0 < u) :
+    weilArchUWeight u * u ≤ Real.exp ((3 / 2 : ℝ) * u) := by
+  have hden : 0 < 1 - Real.exp (-2 * u) :=
+    sub_pos.mpr (Real.exp_lt_one_iff.2 (by linarith))
+  have hge : (2 * u) * Real.exp (-2 * u) ≤ 1 - Real.exp (-2 * u) := by
+    have hexp := Real.add_one_le_exp (2 * u)
+    have hmul := mul_le_mul_of_nonneg_right hexp (Real.exp_pos (-2 * u)).le
+    rw [add_mul, ← Real.exp_add, one_mul] at hmul
+    have hsum : (2 * u) + (-2 * u) = 0 := by ring
+    rw [hsum, Real.exp_zero] at hmul
+    linarith
+  unfold weilArchUWeight
+  have hpos : 0 < 2 * u * Real.exp (-2 * u) := by positivity
+  have hnum0 : 0 ≤ 2 * Real.exp (-u / 2) * u := by positivity
+  have hw :
+      2 * Real.exp (-u / 2) / (1 - Real.exp (-2 * u)) * u =
+        2 * Real.exp (-u / 2) * u / (1 - Real.exp (-2 * u)) := by
+    ring
+  rw [hw]
+  have hquot :
+      2 * Real.exp (-u / 2) * u / (1 - Real.exp (-2 * u)) ≤
+        2 * Real.exp (-u / 2) * u / (2 * u * Real.exp (-2 * u)) :=
+    div_le_div_of_nonneg_left hnum0 hpos hge
+  refine le_trans hquot ?_
+  have hu0 : u ≠ 0 := hu.ne'
+  have hne : Real.exp (-2 * u) ≠ 0 := (Real.exp_pos _).ne'
+  have hsimp :
+      2 * Real.exp (-u / 2) * u / (2 * u * Real.exp (-2 * u)) =
+        Real.exp ((3 / 2 : ℝ) * u) := by
+    field_simp [hu0, hne]
+    rw [← Real.exp_add]
+    congr 1
+    ring
+  exact le_of_eq hsimp
+
+/-- Lipschitz increment against the tilted constant term. -/
+lemma archDiff_le_of_lipschitz {g : ℝ → ℝ} {K : NNReal} {u : ℝ}
+    (hK : LipschitzWith K g) (hu : 0 ≤ u) :
+    |Real.exp (-(3 / 2 : ℝ) * u) * g 0 - g u| ≤
+      ((3 / 2 : ℝ) * |g 0| + (K : ℝ)) * u := by
+  have hexp : |Real.exp (-(3 / 2 : ℝ) * u) - 1| ≤ (3 / 2 : ℝ) * u := by
+    have ha : 0 ≤ (3 / 2 : ℝ) * u := by positivity
+    have hle : -((3 / 2 : ℝ) * u) + 1 ≤ Real.exp (-((3 / 2 : ℝ) * u)) :=
+      Real.add_one_le_exp (-((3 / 2 : ℝ) * u))
+    have hnp : Real.exp (-(3 / 2 : ℝ) * u) ≤ 1 := by
+      refine Real.exp_le_one_iff.2 ?_
+      nlinarith [ha]
+    have hrew : Real.exp (-(3 / 2 : ℝ) * u) = Real.exp (-((3 / 2 : ℝ) * u)) := by
+      ring_nf
+    rw [hrew] at hnp ⊢
+    rw [abs_of_nonpos (sub_nonpos.mpr hnp), neg_sub]
+    linarith
+  have hLip := hK.dist_le_mul 0 u
+  rw [Real.dist_eq, Real.dist_eq, zero_sub, abs_neg, abs_of_nonneg hu] at hLip
+  have hrew :
+      Real.exp (-(3 / 2 : ℝ) * u) * g 0 - g u =
+        (Real.exp (-(3 / 2 : ℝ) * u) - 1) * g 0 + (g 0 - g u) := by
+    ring
+  rw [hrew]
+  refine le_trans (abs_add_le _ _) ?_
+  rw [abs_mul]
+  have h1 : |Real.exp (-(3 / 2 : ℝ) * u) - 1| * |g 0| ≤
+      ((3 / 2 : ℝ) * u) * |g 0| :=
+    mul_le_mul_of_nonneg_right hexp (abs_nonneg _)
+  linarith [h1, hLip]
+
+/-- Pointwise Dini bound for a Lipschitz test against the r475 weight. -/
+lemma archIntegrand_dini_bound {g : ℝ → ℝ} {K : NNReal} {u b : ℝ}
+    (hK : LipschitzWith K g) (hu : 0 < u) (hub : u ≤ b) :
+    |weilArchUWeight u * (Real.exp (-(3 / 2 : ℝ) * u) * g 0 - g u)| ≤
+      Real.exp ((3 / 2 : ℝ) * b) *
+        ((3 / 2 : ℝ) * |g 0| + (K : ℝ)) := by
+  have hw0 : 0 ≤ weilArchUWeight u := (weilArchUWeight_pos hu).le
+  have hwu := weilArchUWeight_mul_id_le hu
+  have hdiff := archDiff_le_of_lipschitz hK hu.le
+  have hexp : Real.exp ((3 / 2 : ℝ) * u) ≤ Real.exp ((3 / 2 : ℝ) * b) :=
+    Real.exp_le_exp.2 (by linarith)
+  calc
+    |weilArchUWeight u * (Real.exp (-(3 / 2 : ℝ) * u) * g 0 - g u)|
+        = weilArchUWeight u *
+            |Real.exp (-(3 / 2 : ℝ) * u) * g 0 - g u| := by
+          rw [abs_mul, abs_of_nonneg hw0]
+      _ ≤ weilArchUWeight u * (((3 / 2 : ℝ) * |g 0| + (K : ℝ)) * u) :=
+          mul_le_mul_of_nonneg_left hdiff hw0
+      _ = (weilArchUWeight u * u) * ((3 / 2 : ℝ) * |g 0| + (K : ℝ)) := by
+          ring
+      _ ≤ Real.exp ((3 / 2 : ℝ) * u) *
+            ((3 / 2 : ℝ) * |g 0| + (K : ℝ)) :=
+          mul_le_mul_of_nonneg_right hwu (by positivity)
+      _ ≤ Real.exp ((3 / 2 : ℝ) * b) *
+            ((3 / 2 : ℝ) * |g 0| + (K : ℝ)) :=
+          mul_le_mul_of_nonneg_right hexp (by positivity)
+
+/-- Dyadic sampled ACF interpolants share one Lipschitz constant. -/
+lemma dyadicSampleGrid_uniform_lipschitz
+    {F : FullWeilTest} {h : ℝ → ℝ} {K : NNReal} {a : ℝ}
+    (hK : LipschitzWith K h) (hhKs : HasCompactSupport h)
+    (hsupp : ∀ t : ℝ, t < a ∨ a + F.supportRadius < t → h t = 0)
+    (hac : ∀ u : ℝ, F.toFun u =
+      ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume) :
+    ∃ Kgrid : NNReal, ∀ m,
+      LipschitzWith Kgrid
+        (dyadicSampleGrid h a F.supportRadius m).toFun := by
+  obtain ⟨KF, hKF⟩ := F.lipschitz_toFun
+  set R := F.supportRadius
+  let L : ℝ := (KF : ℝ) + 8 * ((K : ℝ) * R) ^ 2
+  have hL0 : 0 ≤ L := by positivity
+  refine ⟨⟨L, hL0⟩, fun m => ?_⟩
+  refine GridElement.lipschitz_toFun_of_slope_bound _ hL0 fun d => ?_
+  set f := dyadicSampleGrid h a R m
+  have hD : 0 < f.D0 := f.D0_pos
+  by_cases hd : f.steps ≤ d
+  · rw [f.cellSlope_eq_zero_of_steps_le hd, abs_zero]
+    exact hL0
+  · have h1 := dyadicSampleGrid_acf_sub_toFun_le hK hhKs hsupp hac m d
+    have h2 := dyadicSampleGrid_acf_sub_toFun_le hK hhKs hsupp hac m (d + 1)
+    have hF := hKF.dist_le_mul (((d : ℝ) + 1) * f.D0) ((d : ℝ) * f.D0)
+    rw [Real.dist_eq, Real.dist_eq] at hF
+    have hspan : |(((d : ℝ) + 1) * f.D0) - ((d : ℝ) * f.D0)| = f.D0 := by
+      rw [add_mul, one_mul, add_sub_cancel_left, abs_of_pos hD]
+    rw [hspan] at hF
+    unfold GridElement.cellSlope
+    rw [abs_div, abs_of_pos hD]
+    have hDmesh : f.D0 = meshWidth m := rfl
+    have h1' : |f.acf d - F.toFun ((d : ℝ) * f.D0)| ≤
+        4 * ((K : ℝ) * R) ^ 2 * f.D0 := by
+      simpa [f, hDmesh, R] using h1
+    have h2' : |f.acf (d + 1) - F.toFun (((d : ℝ) + 1) * f.D0)| ≤
+        4 * ((K : ℝ) * R) ^ 2 * f.D0 := by
+      simpa [f, hDmesh, R, Nat.cast_succ] using h2
+    have h1c : |F.toFun ((d : ℝ) * f.D0) - f.acf d| ≤
+        4 * ((K : ℝ) * R) ^ 2 * f.D0 := by
+      rw [abs_sub_comm]
+      exact h1'
+    have htri1 :=
+      abs_sub_le (f.acf (d + 1)) (F.toFun (((d : ℝ) + 1) * f.D0)) (f.acf d)
+    have htri2 :=
+      abs_sub_le (F.toFun (((d : ℝ) + 1) * f.D0))
+        (F.toFun ((d : ℝ) * f.D0)) (f.acf d)
+    have hdiff : |f.acf (d + 1) - f.acf d| ≤ L * f.D0 := by
+      have hsum :
+          |f.acf (d + 1) - f.acf d| ≤
+            |f.acf (d + 1) - F.toFun (((d : ℝ) + 1) * f.D0)| +
+              |F.toFun (((d : ℝ) + 1) * f.D0) - F.toFun ((d : ℝ) * f.D0)| +
+                |F.toFun ((d : ℝ) * f.D0) - f.acf d| := by
+        linarith [htri1, htri2]
+      have hnum :
+          |f.acf (d + 1) - F.toFun (((d : ℝ) + 1) * f.D0)| +
+            |F.toFun (((d : ℝ) + 1) * f.D0) - F.toFun ((d : ℝ) * f.D0)| +
+              |F.toFun ((d : ℝ) * f.D0) - f.acf d| ≤
+            8 * ((K : ℝ) * R) ^ 2 * f.D0 + (KF : ℝ) * f.D0 := by
+        linarith [h2', hF, h1c]
+      have hLrw : 8 * ((K : ℝ) * R) ^ 2 * f.D0 + (KF : ℝ) * f.D0 = L * f.D0 := by
+        simp only [L]
+        ring
+      linarith [hsum, hnum, hLrw]
+    exact (div_le_iff₀ hD).mpr hdiff
+
 /-- r493d: the explicit left-sampled grid converges uniformly in the
 autocorrelation and in `L¹` on the fixed support.  The witness is
 already Lipschitz with interval support, so Heine plus a Lipschitz
@@ -1156,10 +1547,11 @@ theorem fullWeil_dyadic_sample_convergence :
     ?unif, fun m =>
       (dyadicSampleGrid h a F.supportRadius m).intervalIntegrable_toFun
         (-F.supportRadius) F.supportRadius,
-    ?l1⟩
+    ?l1, ?lip⟩
   · intro ε hε
     exact dyadicSampleGrid_toFun_uniform hK hhKs hsupp hac hε
   · exact dyadicSampleGrid_l1_tendsto hK hhKs hsupp hac
+  · exact dyadicSampleGrid_uniform_lipschitz hK hhKs hsupp hac
 
 /-- The explicit sampled-grid convergence target implies the
 existential fixed-support density interface. -/
@@ -1249,15 +1641,325 @@ theorem gridPoleIntegralIdentification_of_hat
   intro F grid _ happrox n
   exact hhat (grid n) F.supportRadius (happrox.1 n)
 
-/-- Arch continuity component.  This is continuity of r475's concrete
-u-space pairing along the fixed-support topology; Gauss--digamma is
-needed later for the standard explicit-formula dictionary, not for
-the topological positivity-limit argument itself. -/
+/-- `w` is continuous on any set that avoids the origin. -/
+lemma continuousOn_weilArchUWeight {s : Set ℝ}
+    (hs : ∀ x ∈ s, x ≠ 0) : ContinuousOn weilArchUWeight s := by
+  unfold weilArchUWeight
+  refine ContinuousOn.div (by fun_prop) (by fun_prop) ?_
+  intro x hx
+  have hx0 : x ≠ 0 := hs x hx
+  have hexp : Real.exp (-2 * x) ≠ 1 := by
+    intro h
+    have : -2 * x = 0 := by
+      rwa [← Real.exp_eq_one_iff]
+    exact hx0 (by nlinarith [this])
+  exact sub_ne_zero.2 hexp.symm
+
+/-- The tilted weight is continuous away from the origin. -/
+lemma continuousOn_weilArchUWeight_mul_exp {s : Set ℝ}
+    (hs : ∀ x ∈ s, x ≠ 0) :
+    ContinuousOn
+      (fun u : ℝ => weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u)) s :=
+  (continuousOn_weilArchUWeight hs).mul (by fun_prop)
+
+/-- Measurability of the regularized integrand of a measurable test. -/
+lemma measurable_weilArchUIntegrand_of_measurable {f : ℝ → ℝ}
+    (hf : Measurable f) :
+    Measurable (fun u : ℝ =>
+      if u = 0 then (0 : ℝ)
+      else weilArchUWeight u *
+        (Real.exp (-(3 / 2 : ℝ) * u) * f 0 - f u)) := by
+  refine Measurable.ite (measurableSet_singleton (0 : ℝ))
+    measurable_const ?_
+  unfold weilArchUWeight
+  fun_prop
+
+/-- Derivative of `log(1-e^{-2u})` is the tilted r475 weight. -/
+lemma hasDerivAt_log_one_sub_exp_neg_two {x : ℝ} (hx : 0 < x) :
+    HasDerivAt (fun t : ℝ => Real.log (1 - Real.exp (-2 * t)))
+      (weilArchUWeight x * Real.exp (-(3 / 2 : ℝ) * x)) x := by
+  have harg : 0 < 1 - Real.exp (-2 * x) :=
+    sub_pos.mpr (Real.exp_lt_one_iff.2 (by linarith))
+  have hder : HasDerivAt (fun t : ℝ => 1 - Real.exp (-2 * t))
+      (2 * Real.exp (-2 * x)) x := by
+    convert (hasDerivAt_const x (1 : ℝ)).sub
+      ((Real.hasDerivAt_exp (-2 * x)).comp x
+        ((hasDerivAt_id x).const_mul (-2))) using 1
+    ring
+  have hlog := (Real.hasDerivAt_log (ne_of_gt harg)).comp x hder
+  convert hlog using 1
+  · rw [weilArchUWeight_mul_exp hx.ne']
+    field_simp [harg.ne']
+
+/-- Antiderivative of the tilted weight on a compact interval away from `0`. -/
+lemma weilArch_weight_exp_integral {b R : ℝ} (hb : 0 < b) (hle : b ≤ R) :
+    intervalIntegral
+        (fun u : ℝ =>
+          weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u))
+        b R MeasureTheory.volume =
+      Real.log (1 - Real.exp (-2 * R)) -
+        Real.log (1 - Real.exp (-2 * b)) := by
+  have hcont :
+      ContinuousOn
+        (fun u : ℝ =>
+          weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u))
+        (Set.uIcc b R) := by
+    refine continuousOn_weilArchUWeight_mul_exp ?_
+    intro x hx
+    rw [Set.uIcc_of_le hle] at hx
+    exact (lt_of_lt_of_le hb hx.1).ne'
+  apply intervalIntegral.integral_eq_sub_of_hasDerivAt
+  · intro x hx
+    have hxpos : 0 < x := by
+      rw [Set.uIcc_of_le hle] at hx
+      exact lt_of_lt_of_le hb hx.1
+    exact hasDerivAt_log_one_sub_exp_neg_two hxpos
+  · exact hcont.intervalIntegrable
+
+/-- The r475 integrand of a Lipschitz test is interval-integrable
+on any compact subinterval of `[0, ∞)`. -/
+lemma intervalIntegrable_weilArchUIntegrand
+    {f : ℝ → ℝ} {K : NNReal} {a b : ℝ}
+    (hf : LipschitzWith K f) (ha : 0 ≤ a) (hab : a ≤ b) :
+    IntervalIntegrable
+      (fun u : ℝ =>
+        if u = 0 then (0 : ℝ)
+        else weilArchUWeight u *
+          (Real.exp (-(3 / 2 : ℝ) * u) * f 0 - f u))
+      MeasureTheory.volume a b := by
+  let g : ℝ → ℝ := fun _ =>
+    Real.exp ((3 / 2 : ℝ) * b) * ((3 / 2 : ℝ) * |f 0| + (K : ℝ))
+  refine IntervalIntegrable.mono_fun' (g := g) intervalIntegrable_const ?meas ?bound
+  · exact (measurable_weilArchUIntegrand_of_measurable
+      hf.continuous.measurable).aestronglyMeasurable
+  · refine (MeasureTheory.ae_restrict_iff' measurableSet_uIoc).2 ?_
+    refine Filter.Eventually.of_forall fun u hu => ?_
+    have huI : u ∈ Set.uIcc a b := Set.uIoc_subset_uIcc hu
+    have hu0 : 0 ≤ u := by
+      rw [Set.uIcc_of_le hab] at huI
+      exact le_trans ha huI.1
+    have hub : u ≤ b := by
+      rw [Set.uIcc_of_le hab] at huI
+      exact huI.2
+    by_cases h0 : u = 0
+    · simp [h0, g, Real.norm_eq_abs]
+      positivity
+    · have hupos : 0 < u := lt_of_le_of_ne hu0 (Ne.symm h0)
+      simpa [h0, g, Real.norm_eq_abs] using
+        archIntegrand_dini_bound hf hupos hub
+
+/-- Cutoff invariance: if `toFun` vanishes past `supportBound ≤ R`,
+the pairing at `supportBound` equals the pairing at `R`. -/
+lemma weilArchSide_eq_cutoff (f : GridElement) {R : ℝ} {K : NNReal}
+    (hR : 0 < R) (hsupp : f.supportBound ≤ R)
+    (hK : LipschitzWith K f.toFun) :
+    weilArchSide f =
+      (-(Real.eulerMascheroniConstant + Real.log Real.pi)
+        - Real.log (1 - Real.exp (-2 * R))) * f.toFun 0 +
+        intervalIntegral (weilArchUIntegrand f) 0 R
+          MeasureTheory.volume := by
+  by_cases hb0 : 0 < f.supportBound
+  · set b := f.supportBound
+    have hbR : b ≤ R := hsupp
+    have hI0b : IntervalIntegrable (weilArchUIntegrand f)
+        MeasureTheory.volume 0 b :=
+      intervalIntegrable_weilArchUIntegrand hK le_rfl f.supportBound_nonneg
+    have hIbR : IntervalIntegrable (weilArchUIntegrand f)
+        MeasureTheory.volume b R :=
+      intervalIntegrable_weilArchUIntegrand hK hb0.le hbR
+    have hadd :
+        intervalIntegral (weilArchUIntegrand f) 0 R
+            MeasureTheory.volume =
+          intervalIntegral (weilArchUIntegrand f) 0 b
+            MeasureTheory.volume +
+          intervalIntegral (weilArchUIntegrand f) b R
+            MeasureTheory.volume :=
+      (intervalIntegral.integral_add_adjacent_intervals hI0b hIbR).symm
+    have htail :
+        intervalIntegral (weilArchUIntegrand f) b R
+            MeasureTheory.volume =
+          f.toFun 0 *
+            intervalIntegral
+              (fun u : ℝ =>
+                weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u))
+              b R MeasureTheory.volume := by
+      have heq : Set.EqOn (weilArchUIntegrand f)
+          (fun u : ℝ =>
+            weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u) * f.toFun 0)
+          (Set.uIcc b R) := by
+        intro u hu
+        have hu0 : u ≠ 0 := by
+          rw [Set.uIcc_of_le hbR] at hu
+          exact (lt_of_lt_of_le hb0 hu.1).ne'
+        unfold weilArchUIntegrand
+        rw [if_neg hu0]
+        have htu : f.toFun u = 0 := by
+          rw [Set.uIcc_of_le hbR] at hu
+          exact f.toFun_eq_zero_of_supportBound_le
+            (le_trans hu.1 (le_abs_self u))
+        rw [htu, sub_zero]
+        ring
+      have hcongr :=
+        intervalIntegral.integral_congr (μ := MeasureTheory.volume) heq
+      have hmul :
+          (fun u : ℝ =>
+            weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u) * f.toFun 0) =
+            fun u : ℝ =>
+              f.toFun 0 *
+                (weilArchUWeight u * Real.exp (-(3 / 2 : ℝ) * u)) := by
+        funext u
+        ring
+      rw [hcongr, hmul, intervalIntegral.integral_const_mul]
+    unfold weilArchSide
+    rw [if_pos (by simpa [b] using hb0)]
+    rw [hadd, htail, weilArch_weight_exp_integral hb0 hbR]
+    ring
+  · have hb : f.supportBound = 0 :=
+      le_antisymm (not_lt.mp hb0) f.supportBound_nonneg
+    unfold weilArchSide
+    rw [if_neg hb0]
+    have hto0 : f.toFun 0 = 0 := by
+      exact f.toFun_eq_zero_of_supportBound_le (by simpa [hb] using abs_nonneg (0 : ℝ))
+    have hI0 : intervalIntegral (weilArchUIntegrand f) 0 R
+        MeasureTheory.volume = 0 := by
+      have heq : Set.EqOn (weilArchUIntegrand f) (fun _ => (0 : ℝ))
+          (Set.uIcc 0 R) := by
+        intro u hu
+        unfold weilArchUIntegrand
+        split_ifs with h0
+        · rfl
+        · have htu : f.toFun u = 0 :=
+            f.toFun_eq_zero_of_supportBound_le (by simpa [hb] using abs_nonneg u)
+          have ht00 : f.toFun 0 = 0 := hto0
+          rw [ht00, htu]
+          ring
+      rw [intervalIntegral.integral_congr (μ := MeasureTheory.volume) heq,
+        intervalIntegral.integral_zero]
+    rw [hto0, hI0]
+    ring
+
+/-- r493e: the r475 u-space pairing is continuous along a fixed-support
+approximation that carries a common Lipschitz / Dini majorant. -/
+theorem fullWeil_arch_side_tendsto
+    (F : FullWeilTest) (grid : ℕ → GridElement) :
+    F.admissible → F.FixedSupportGridApproximation grid →
+      Filter.Tendsto (fun n => weilArchSide (grid n))
+        Filter.atTop (nhds (fullWeilArchSide F)) := by
+  intro _hF happrox
+  obtain ⟨KF, hKF⟩ := F.lipschitz_toFun
+  obtain ⟨Kgrid, hKgrid⟩ := happrox.2.2.2.2
+  set R := F.supportRadius
+  have hR0 : 0 ≤ R := F.supportRadius_nonneg
+  by_cases hRz : R = 0
+  · have hF0 : fullWeilArchSide F = 0 := by
+      unfold fullWeilArchSide
+      have : ¬0 < F.supportRadius := by
+        simpa [hRz, R] using (lt_irrefl (0 : ℝ))
+      simp [this]
+    have hn0 : ∀ n, weilArchSide (grid n) = 0 := fun n => by
+      unfold weilArchSide
+      have : ¬0 < (grid n).supportBound :=
+        not_lt.mpr (le_trans (happrox.1 n) (le_of_eq hRz))
+      simp [this]
+    simpa [hF0, funext hn0] using tendsto_const_nhds (x := (0 : ℝ))
+  have hRpos : 0 < R := lt_of_le_of_ne hR0 (Ne.symm hRz)
+  have hFeq :
+      fullWeilArchSide F =
+        (-(Real.eulerMascheroniConstant + Real.log Real.pi)
+          - Real.log (1 - Real.exp (-2 * R))) * F.toFun 0 +
+          intervalIntegral (fullWeilArchUIntegrand F) 0 R
+            MeasureTheory.volume := by
+    unfold fullWeilArchSide
+    rw [if_pos (by simpa [R] using hRpos)]
+  have hgeq : ∀ n,
+      weilArchSide (grid n) =
+        (-(Real.eulerMascheroniConstant + Real.log Real.pi)
+          - Real.log (1 - Real.exp (-2 * R))) * (grid n).toFun 0 +
+          intervalIntegral (weilArchUIntegrand (grid n)) 0 R
+            MeasureTheory.volume :=
+    fun n => weilArchSide_eq_cutoff (grid n) hRpos (happrox.1 n) (hKgrid n)
+  have hfun :
+      (fun n => weilArchSide (grid n)) =
+        fun n =>
+          (-(Real.eulerMascheroniConstant + Real.log Real.pi)
+            - Real.log (1 - Real.exp (-2 * R))) * (grid n).toFun 0 +
+            intervalIntegral (weilArchUIntegrand (grid n)) 0 R
+              MeasureTheory.volume := funext hgeq
+  rw [hfun, hFeq]
+  refine Filter.Tendsto.add ?_ ?_
+  · exact tendsto_const_nhds.mul (happrox.tendsto_toFun 0)
+  · let C : ℝ :=
+      Real.exp ((3 / 2 : ℝ) * R) *
+        ((3 / 2 : ℝ) * (|F.toFun 0| + 1) + max (KF : ℝ) (Kgrid : ℝ))
+    let bound : ℝ → ℝ := fun _ => C
+    have hg0 : ∀ᶠ n in Filter.atTop,
+        |(grid n).toFun 0| ≤ |F.toFun 0| + 1 := by
+      have htend := Metric.tendsto_nhds.1 (happrox.tendsto_toFun 0) 1
+        (by norm_num)
+      filter_upwards [htend] with n hn
+      have hlt : |(grid n).toFun 0 - F.toFun 0| < 1 := by
+        simpa [Real.dist_eq] using hn
+      have htri : |(grid n).toFun 0| ≤
+          |F.toFun 0| + |(grid n).toFun 0 - F.toFun 0| := by
+        have := abs_add_le ((grid n).toFun 0 - F.toFun 0) (F.toFun 0)
+        convert this using 1 <;> ring
+      exact le_trans htri (add_le_add_right hlt.le _)
+    have hIgrid (n : ℕ) :
+        IntervalIntegrable (weilArchUIntegrand (grid n))
+          MeasureTheory.volume 0 R :=
+      intervalIntegrable_weilArchUIntegrand (hKgrid n) le_rfl hR0
+    have hIF :
+        IntervalIntegrable (fullWeilArchUIntegrand F)
+          MeasureTheory.volume 0 R :=
+      intervalIntegrable_weilArchUIntegrand hKF le_rfl hR0
+    have heq_int (φ : ℝ → ℝ) :
+        intervalIntegral φ 0 R MeasureTheory.volume =
+          ∫ u in Set.Ioc (0 : ℝ) R, φ u :=
+      intervalIntegral.integral_of_le hR0
+    simp_rw [heq_int]
+    have hbound_int :
+        MeasureTheory.Integrable bound
+          (MeasureTheory.volume.restrict (Set.Ioc (0 : ℝ) R)) :=
+      (intervalIntegrable_const (c := C)).1
+    refine MeasureTheory.tendsto_integral_filter_of_dominated_convergence
+      (μ := MeasureTheory.volume.restrict (Set.Ioc (0 : ℝ) R))
+      bound ?meas ?dom hbound_int ?lim
+    · filter_upwards with n
+      exact (measurable_weilArchUIntegrand_of_measurable
+        (hKgrid n).continuous.measurable).aestronglyMeasurable
+    · filter_upwards [hg0] with n hn
+      rw [MeasureTheory.ae_restrict_iff' measurableSet_Ioc]
+      refine Filter.Eventually.of_forall fun u hu => ?_
+      have hupos : 0 < u := hu.1
+      have hub : u ≤ R := hu.2
+      rw [Real.norm_eq_abs]
+      have hpt := archIntegrand_dini_bound (hKgrid n) hupos hub
+      have hIeq : weilArchUIntegrand (grid n) u =
+          weilArchUWeight u *
+            (Real.exp (-(3 / 2 : ℝ) * u) * (grid n).toFun 0 -
+              (grid n).toFun u) := by
+        unfold weilArchUIntegrand
+        rw [if_neg hupos.ne']
+      rw [hIeq]
+      refine le_trans hpt ?_
+      refine mul_le_mul_of_nonneg_left ?_ (Real.exp_pos _).le
+      refine add_le_add ?_ (le_max_right _ _)
+      exact mul_le_mul_of_nonneg_left hn (by norm_num)
+    · rw [MeasureTheory.ae_restrict_iff' measurableSet_Ioc]
+      refine Filter.Eventually.of_forall fun u hu => ?_
+      have hu0 : u ≠ 0 := hu.1.ne'
+      simp only [weilArchUIntegrand, fullWeilArchUIntegrand, hu0, ↓reduceIte]
+      exact ((tendsto_const_nhds.mul (happrox.tendsto_toFun 0)).sub
+        (happrox.tendsto_toFun u)).const_mul _
+
 def FullWeilArchContinuity : Prop :=
   ∀ (F : FullWeilTest) (grid : ℕ → GridElement), F.admissible →
     F.FixedSupportGridApproximation grid →
       Filter.Tendsto (fun n => weilArchSide (grid n))
         Filter.atTop (nhds (fullWeilArchSide F))
+
+theorem fullWeil_arch_continuity : FullWeilArchContinuity :=
+  fullWeil_arch_side_tendsto
 
 /-- Channel-continuity brick along the fixed-support approximation.
 The arch component is dominated/L¹ convergence (r475 supplies the
@@ -1340,11 +2042,11 @@ theorem grid_dense_extension_of_fixedSupport
   exact fullWeilForm_nonneg_of_tendsto hpos
     (fullWeilForm_tendsto_of_channels (hcontinuous F grid hF hgrid))
 
-/-- OPEN CLASSICAL BRICK 1 (r489): the one remaining completion
-package.  No infinite-window or mesh-PSD hypothesis is included. -/
+/-- r493e: the remaining dense-completion package is the proved
+Dini / u-space arch continuity. -/
 theorem fullWeil_fixedSupport_completion :
-    FullWeilFixedSupportCompletion := by
-  sorry
+    FullWeilFixedSupportCompletion :=
+  fullWeil_arch_continuity
 
 /-- Grid density is the proved r493d dyadic sampled-grid transfer.
 Formerly the first projection `fullWeil_fixedSupport_completion.1`. -/

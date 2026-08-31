@@ -132,7 +132,7 @@ def text_gates() -> None:
           "theorem internal_weil_nonneg_of_frequently_selected" in frequent
           and re.search(r"^theorem rh_of_frequently_selected\b",
                         frequent, re.MULTILINE) is None)
-    check("r489-three-external-bricks", external.count("\n  sorry") == 3
+    check("r493e-two-external-bricks", external.count("\n  sorry") == 2
           and "theorem grid_dense_extension : GridDenseExtension :=" in external
           and "fullWeil_fixedSupport_completion" in external
           and "standard_weil_criterion_to_mathlib_rh_of_separation" in external)

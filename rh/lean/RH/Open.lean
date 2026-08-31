@@ -527,6 +527,36 @@ consume the proved dyadic theorem and the remaining arch sorry.
 Census remains 8 (external 3): the completion `sorry` is now
 exactly Dini / u-space arch continuity (R493e).  NO RH CLAIM.
 
+## r493e census (arch / Dini continuity)
+
+PROVED, sorry-free: `fullWeil_arch_continuity` /
+`fullWeil_arch_side_tendsto` (the Prop `FullWeilArchContinuity`).
+The r475 pairing
+`A(g) = C_b·g(0) + ∫₀^b w(u)(e^{−3u/2}g(0) − g(u)) du`
+with `w(u) = 2e^{−u/2}/(1−e^{−2u})` is continuous along a
+fixed-support approximation that carries a common Lipschitz
+majorant (fifth conjunct of `FixedSupportGridApproximation`).
+
+Wörtlich:
+  (1) `FullWeilTest.lipschitz_toFun` — ACF of a Lipschitz
+      compact witness is Lipschitz (`K² R²`);
+      `GridElement.lipschitz_toFun_of_slope_bound` —
+      uniform cell-slope bound implies `toFun` Lipschitz;
+      `dyadicSampleGrid_uniform_lipschitz` — dyadic ACF
+      interpolants share one constant;
+  (2) `archIntegrand_dini_bound` — near 0, `w(u)·u ≤ e^{3u/2}`
+      and `|e^{−3u/2}g(0) − g(u)| ≤ ((3/2)|g(0)| + K)·u`,
+      so the product is dominated by an integrable constant;
+  (3) `MeasureTheory.tendsto_integral_filter_of_dominated_convergence`
+      on `Ioc 0 R` with that majorant, plus cutoff invariance
+      `weilArchSide_eq_cutoff` (`A(g,b) = A(g,R)`).
+
+`fullWeil_fixedSupport_completion` is now the proved arch
+theorem.  Density bridge complete: first outer bridge fallen.
+Census 8 → 7 (external 3 → 2).  Remaining outer bridges:
+`standard_explicit_formula_identification` and
+`fullWeil_separates_offCritical_zeros`.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
