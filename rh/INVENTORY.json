@@ -4300,8 +4300,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "feb549c0c08ae6bc75639607acf431007068d0976d25b84cc045432839b3ca79",
-      "bytes": 5574108
+      "sha256": "dd1c3f8f3b56714bfac45cf2fd416757e4b844996244032b63833a234342a6d5",
+      "bytes": 5575860
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5240,7 +5240,7 @@
       "ledger_ids": [],
       "status": "classical Weil modulus upgrade (round 474, PRIME.RDAGGER.MODULUS_UPGRADE.01; experiments-side, NO ledger row): VERDICT PARTIAL.  F2b of the r469 U3 directive.  Lemmas PROVED: C_P=2 S_eff(L) with S_eff exact and zero at L=0.3; C_Pi=8 sinh(L); Jackson 1/pi^2 and 1/pi on H^2 interpolants; combination implication R_grid > omega => Q >= (R-omega)||h||^2 on the first Dirichlet H^2 ball.  Quantitative close STUCK: every sealed mesh is SHORT, including YB L=0.3 (omega 0.140 vs R_grid 0.0083).  Modulus too crude (arch 1/w on the first-order cross term).  Smoke 11/11, full 21/21, SPEC_SHA 45db1c92384913e8.  Companion rh/problem/modulus_upgrade.tex + verify_modulus_upgrade.py MODULUS UPGRADE VERIFIED -- PARTIAL.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "56e5287b3b4fe634002e4e044553b8ed619c502f5aae1cc8cfd5726f5bde697b",
+      "sha256": "e6691e4af88ad901382c451a7091b9d863536a05172cdd856701831ef7af5de0",
       "bytes": 14648
     },
     {
