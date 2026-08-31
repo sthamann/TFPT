@@ -112,6 +112,7 @@ import Mathlib.Algebra.Order.Interval.Finset.Basic
 import Mathlib.Algebra.Order.Ring.Int
 import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Gamma.Digamma
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Analysis.Complex.Trigonometric
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
@@ -351,6 +352,53 @@ theorem toFun_eq_sum_linearCellPiece (u : ℝ) :
     intro hcell
     have hfloor : q = d := (Nat.floor_eq_iff ht0).2 hcell
     omega
+
+/-- Derivatives of the half-scaled hyperbolic functions. -/
+lemma hasDerivAt_sinh_half (x : ℝ) :
+    HasDerivAt (fun u : ℝ => Real.sinh (u / 2))
+      (Real.cosh (x / 2) / 2) x := by
+  convert (Real.hasDerivAt_sinh (x / 2)).comp x
+    ((hasDerivAt_id x).div_const 2) using 1
+  ring
+
+lemma hasDerivAt_cosh_half (x : ℝ) :
+    HasDerivAt (fun u : ℝ => Real.cosh (u / 2))
+      (Real.sinh (x / 2) / 2) x := by
+  convert (Real.hasDerivAt_cosh (x / 2)).comp x
+    ((hasDerivAt_id x).div_const 2) using 1
+  ring
+
+/-- Primitive for an affine function times `2 cosh(u/2)`. -/
+noncomputable def affineCoshPrimitive (α β u : ℝ) : ℝ :=
+  ((α + β * u) * Real.sinh (u / 2)) * 4 -
+    (β * Real.cosh (u / 2)) * 8
+
+lemma hasDerivAt_affineCoshPrimitive (α β x : ℝ) :
+    HasDerivAt (affineCoshPrimitive α β)
+      ((α + β * x) * 2 * Real.cosh (x / 2)) x := by
+  have hl : HasDerivAt (fun u : ℝ => α + β * u) β x := by
+    convert (hasDerivAt_const x α).add
+      ((hasDerivAt_id x).const_mul β) using 1
+    ring
+  unfold affineCoshPrimitive
+  convert ((hl.mul (hasDerivAt_sinh_half x)).const_mul 4).sub
+    (((hasDerivAt_cosh_half x).const_mul β).const_mul 8) using 1
+  · funext y
+    simp only [Pi.mul_apply, Pi.sub_apply]
+    ring
+  · ring
+
+/-- Closed elementary integral used by the r376 cell assembly. -/
+lemma intervalIntegral_affine_mul_two_cosh_half (α β a b : ℝ) :
+    intervalIntegral
+        (fun u : ℝ => (α + β * u) * (2 * Real.cosh (u / 2)))
+        a b MeasureTheory.volume =
+      affineCoshPrimitive α β b - affineCoshPrimitive α β a := by
+  apply intervalIntegral.integral_eq_sub_of_hasDerivAt
+  · intro x _
+    convert hasDerivAt_affineCoshPrimitive α β x using 1
+    ring
+  · exact Continuous.intervalIntegrable (by fun_prop) _ _
 
 /-- **the support parameter** `steps · D0` -- the quantity from which
 the elementwise onset `elementAnchor` is PREDEFINED (R325: "a₀, m_f
