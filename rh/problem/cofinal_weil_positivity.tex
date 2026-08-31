@@ -1,6 +1,7 @@
 % cofinal_weil_positivity.tex -- r466 external problem package.
 % Self-contained statement of the selected R-dagger mincut.
-% NO RH CLAIM.  The lemma and the three external bridges are separate.
+% r472 reframe: a finite-matrix FORM of the full criterion, not a
+% lower-strength statement.  NO RH CLAIM.
 \documentclass[11pt]{article}
 
 \usepackage[a4paper,margin=2.45cm]{geometry}
@@ -27,32 +28,46 @@
 \title{\bfseries Cofinal compact-window Weil positivity\\[2mm]
 \large A self-contained finite-matrix problem}
 \author{Stefan Hamann}
-\date{August 30, 2026}
+\date{August 31, 2026}
 
 \begin{document}
 \maketitle
 
 \begin{abstract}\noindent
-We isolate one concrete lemma: for infinitely many indices in an
-explicit sequence, a finite bordered dual resolvent is at least
-one half of the identity.  The matrix is built from the von~Mangoldt
-comb, the archimedean Weil kernel, one fixed smooth comparison comb,
-and the reserve $5/7$.  The measured race is
-$0.606566$--$0.757783$ for $k=5,\ldots,12$, but no
-infinite-subsequence proof is known.  After two internal
-identifications, the lemma has a classical reading as positivity of
-the Weil quadratic form on a cofinal sequence of compact support
-windows.  Three further bridges---density, standard explicit-formula
-identification, and the zeta/RH interface---are separate open
-problems.  This document asks for the finite-matrix lemma; it does
-not claim the Riemann hypothesis.
+This note offers a precisely localized finite-matrix \emph{form of}
+the Riemann hypothesis, never a lower-strength statement.  It asks
+whether an explicit bordered dual resolvent is at least one half of
+the identity for infinitely many indices.  The matrix is built from
+the von~Mangoldt comb, the archimedean Weil kernel, one fixed smooth
+comparison comb, and the reserve $5/7$.  Round 469 binds the strength
+reading: because the compact-window floor $\lambda_*(L)$ is
+nonincreasing, positivity on any unbounded cofinal sequence is the
+full Weil criterion after the two internal identifications and the
+three separately named external bridges.  No such proof is claimed.
+What is supplied is an exact finite formulation, a certified finite
+census, the r467/r468 anatomy of its correlation wall, and a
+scramble filter that rules out whole classes of attacks.  A distinct
+fixed-$L$ prize is stated separately; unlike the cofinal problem it
+is not RH-equivalent.
 \end{abstract}
 
 \medskip\noindent
 \textbf{Grades.}\enspace
 \Egrade{} means an exact finite identity or a proved elementary
-lemma; \Cgrade{} means a sealed finite census; \Ograde{} means open.
+statement; \Cgrade{} means a sealed finite census; \Ograde{} means open.
 No census is extrapolated and no open statement is promoted.
+
+\medskip\noindent
+\fcolorbox{red!65!black}{red!3}{\parbox{0.94\linewidth}{
+\textbf{Strength warning (binding r469 reading).}
+The target below is not a tractable fragment offered beneath RH.
+Modulo the explicitly listed internal and external bridges, the
+monotonicity of $\lambda_*(L)$ makes ``good on an unbounded
+subsequence'' equivalent to positivity at every finite support
+length, hence to the full Weil criterion.  The document locates that
+problem in one explicit family of finite matrices; it does not prove
+it and does not count its finite certificates as progress toward RH.
+Source: r469, commit \texttt{f455a22a}.}}
 
 \section{The named sequence}
 
@@ -218,7 +233,8 @@ itself refute the requested statement.
 \end{problem}
 
 This semidefinite statement, rather than a strict asymptotic margin,
-is the requested lemma.  It has two useful equivalent coordinates.
+is the requested finite-matrix form.  It has two useful equivalent
+coordinates.
 
 \paragraph{Classical coordinate.}
 For a compactly supported $h\in L^2(\R)$ put
@@ -353,47 +369,133 @@ $1-\theta$ and $1-\lambda_{\max}(C_k)$.\\
 \bottomrule
 \end{longtable}
 
-\section{What does not work}
+\section{The separate fixed-window prize}\label{sec:fixedL}
 
-\begin{enumerate}
-\item \textbf{A finite atom table.}
-The apparent wall at anchors $631/641$ was exactly the cutoff
-$4\cdot10^5$ lying between their squares.  The mathematical source
-requires every prime power through $a_k^2$.
+This section has no cofinal quantifier.  Interval arithmetic
+certifies the finite matrix inequality for every
+$k=5,\ldots,16$ \Egrade{} (r465, commit \texttt{74bf4ef4};
+extension quoted in r468, commit \texttt{4a0cb4a0}).  The largest
+centred support half-width is
+\[
+ L_{16}=\frac{16\log2}{4}=4\log2=2.772589\ldots,
+\]
+compared with $0.8$ in the external computational certificate.
 
-\item \textbf{A fixed prefix.}
-Below the first prime-tent index
-$J_P=2^{r_k}-1$, MAIN and a world with the prime comb deleted agree
-to machine precision.  Such a prefix is useful anatomy but is
-prime-blind and cannot be the mincut.
+The following payoff is conditional, and its conditions are part of
+the same sentence: \emph{if}
+\code{SelectedReadQuadraticRepresentation},
+\code{arch_gauss_mellin_digamma_identity}, and fixed-support
+dyadic density/continuity are proved, \emph{then} the finite
+certificates imply $\lambda_*(L_k)\ge0$ for each certified
+$k\le16$.  Closing those three individually finite or standard
+tasks would make this a new unconditional fixed-window theorem.
+It would remain strictly weaker than the cofinal problem and would
+not be RH-equivalent.  Source and classification: r469, commit
+\texttt{f455a22a}.
 
-\item \textbf{Raw operator-norm or Gershgorin bounds.}
-The norm majorant grows from $4.825$ to $4991.649$ while the actual
-race stays below $0.758$.  It discards the small overlap with the
-dangerous eigenspaces.  Gershgorin lower bounds are negative on all
-eight measured rows.
+\section{The correlation wall}\label{sec:wall}
 
-\item \textbf{The best two-band bound without source control.}
-Optimizing over every spectral cut certifies $k=5$ with $0.910<1$,
-but exceeds $1$ for $k=6,\ldots,12$.  The projector identity is a
-reduction, not an estimate.
+\paragraph{Measured anatomy.}
+On $k=5,\ldots,12$, the top MAIN eigenvector has
+$0.926$--$0.989$ of its squared Fourier mass in the lowest quarter
+of frequencies, while the smooth ARCH control aligns with its top
+mode at $0.995813$--$0.998970$.  A deterministic source-position
+scramble raises the dangerous normalized top overlap by a factor
+$28.5$--$5.3\cdot10^5$.  At fixed $k=11$ geometry, the isolated
+$k=10\to11$ prime octave moves $q^\dagger$ by $+0.2199$, while the
+complete step is $-0.01180$.  Thus the protective cancellation is
+not in either factor separately; it lies in the joint dependence of
+the border vector and the eigenbasis on the same arithmetic source
+\Cgrade.  Sources: r467, commit \texttt{a0e9aa4d}; r468, commit
+\texttt{4a0cb4a0}.
 
-\item \textbf{One fixed-$r$ plateau.}
-The spacing $\Delta_k$ is constant on a block, but each block has
-only $2r+1$ indices.  No argument confined to one block can prove
-``infinitely many $k$''.
+\paragraph{Exact extremal coordinate.}
+Put
+\[
+ \omega_k=\mu_k-\nu_k,\qquad
+ \mathcal A_k=
+ \begin{pmatrix}I-C_k&u_k\\u_k^T&1\end{pmatrix}.
+\]
+Whenever the denominator is positive on
+$\mathcal P_{<N_k}\setminus\{0\}$,
+\begin{equation}\label{eq:extremal}
+ q_k^\dagger
+ =\frac1{B_k^{\rm bud}}
+ \sup_{0\ne p\in\mathcal P_{<N_k}}
+ \frac{\left(\int p\,d\sigma_k\right)^2}
+      {\int p^2\,d\omega_k},
+ \qquad
+ 1-q_k^\dagger=
+ \frac{\det\mathcal A_k}{\det(I-C_k)}.
+\end{equation}
+The maximizer is the $\omega_k$-Riesz representative of
+$p\mapsto\int p\,d\sigma_k$ \Egrade.  Every failed pairing route
+replaces this \emph{one} supremum by a product of two suprema---a
+data majorant times a mode majorant---and thereby discards the
+measured alignment.  This is a diagnosis, not a bound.
+Source: r469, commit \texttt{f455a22a}.
 
-\item \textbf{A Weyl comparison with mismatched depths.}
-The archimedean baseline used in the prefix race and the full matrix
-live on different polynomial spaces.  Extending the former to full
-depth already contains the desired positivity problem.
+\paragraph{Attacker's pre-filter (methodological, not a theorem).}
+Before attempting a proof, apply the deterministic scramble to its
+hypotheses.  If the proposed bound is scramble-invariant, it must
+also absorb the observed factor $28.5$--$5.3\cdot10^5$ and is
+rejected before further work.  A viable attack must identify a
+source-sensitive input that changes under this scramble and retains
+the joint dependence in \eqref{eq:extremal}.  This filter does not
+assert that the scrambled value of $q^\dagger$ was measured; only
+the dangerous alignment was measured.  Source: r469, commit
+\texttt{f455a22a}, based on r467, commit \texttt{a0e9aa4d}.
 
-\item \textbf{Zero-density, Li, or Bombieri--Lagarias as a shortcut.}
-These are valuable alternate coordinates and diagnostics.  They do
-not supply positivity for every compactly supported
-autocorrelation; proving all required inequalities is again the
-hard criterion.
-\end{enumerate}
+\section{Compressed kill list}\label{sec:kills}
+
+Rows 1--31 quote the sealed dossier aggregation r466
+(commit \texttt{2b94dac8}); row 32 is r467
+(commit \texttt{a0e9aa4d}); row 33 is r468
+(commit \texttt{4a0cb4a0}).  Each row records one killing pin, not a
+family theorem.
+
+\scriptsize
+\begin{longtable}{@{}r p{0.47\linewidth} p{0.38\linewidth}@{}}
+\toprule
+\# & Route & Killing pin\\
+\midrule
+\endhead
+1 & $L^\infty/d_{\rm arm}$ majorant & Taylor remainder / linear term $\ge0.50$\\
+2 & Fold-parity pairing & residual $0.512$\\
+3 & Finite-head Chebyshev / uniform $Z$ & $\chi$ mutants $1.021$ and $0.892$\\
+4 & Gershgorin/Schur assist & first useful depth only $0.11N$\\
+5 & OSC--Geronimus / Neumann $R_2$ & quadratic/linear ratio $0.86$\\
+6 & Checkerboard / $M$-matrix & sign agreement $0.504$\\
+7 & Three-gap mask & $8$--$18$ distinct gaps\\
+8 & Isolation of fold mask & core pair count reaches $16$\\
+9 & Source Weyl-energy decay & slope $+0.542$\\
+10 & Bulk FORM\_T / FORM\_P & repair rank $49$, not $1$\\
+11 & (P1) as construction class & $K/2=2$ fails on $9/42$\\
+12 & Moments / Euler source Gram & residual $209$\\
+13 & Ones mode / lift overflow & $\cos=0.007$\\
+14 & $\nu$ rank-one / Loewner sandwich & $N_\nu=104$\\
+15 & Nyquist density $1/2$ & measured density $0.283$\\
+16 & Literal $\Theta=C^T\Phi_NC$ & relative mismatch $0.96$\\
+17 & Unfitted Krein transport & residual $3.37$\\
+18 & Test polynomial / Fourier / Bernstein & loss factor $90$\\
+19 & Identity saturation $\|\mathfrak T_0\|=1$ & $C_{\min}-1=4.57\cdot10^{-8}$\\
+20 & Hole top mode & leftover $\sigma=1.024$\\
+21 & Top mode as edge defect & cosine $0.6766$ versus $0.058$\\
+22 & de Branges phase dominance & $\mathrm{yy}_A=3$\\
+23 & Uniform $\varphi_{bb}<0$ & vacuous overflow $6/14$\\
+24 & Uniform denominator gap & reserve $0.105\to0.038$\\
+25 & Razor overlap as global coordinate & selected margin $0.617$\\
+26 & $C_{\min}$ Nyquist face & cosine $-0.007$\\
+27 & Unsigned $|Z_{\rm loc}|$ triangle & loss $2.240$--$19.245$\\
+28 & Chebyshev $\psi$ / left--right Abel & pair count $1$\\
+29 & Prime-blind prefix as mincut & world difference $3.33\cdot10^{-16}$\\
+30 & Raw resolvent norm & $4.825\to4991.649$\\
+31 & Fixed-$r$ blocks & exactly $2r+1$ indices\\
+32 & Exact-coordinate Abel chain & factor $91.703\to119482.632$\\
+33 & Octave renormalization / block limit & $+0.2199$ isolated versus $-0.01180$ total\\
+\bottomrule
+\end{longtable}
+\normalsize
 
 \section{Numerical provenance}
 
@@ -422,6 +524,15 @@ $1.89\cdot10^{-14}$ &
 r460 spectral race proof, \texttt{f915dd5e}\\
 $(S,N)$ pins, $2\cdot10^{-12}$, census eight &
 r463 faithful-fold repair, \texttt{8f81005f}\\
+certified range $k=5,\ldots,16$; $L_{16}=2.772589\ldots$ &
+r465 interval certificates, \texttt{74bf4ef4};
+r468 extension, \texttt{4a0cb4a0}\\
+low-F, ARCH, scramble, Abel-chain diagnostics &
+r467 overlap mechanism, \texttt{a0e9aa4d}\\
+octave $+0.2199$; complete step $-0.01180$ &
+r468 octave renormalization, \texttt{4a0cb4a0}\\
+extremal/determinant identities and strength ruling &
+r469 judgment, \texttt{f455a22a}\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -434,7 +545,7 @@ The finite algebra has independent formal anchors:
 \code{selectedWindowConeSemidef_implies_A_cap_posSemidef};
 \item the compound premise
 \code{FrequentlySelectedInternalMincut}, which visibly contains
-\code{SelectedACapPsdImpliesPlainReads};
+\code{SelectedReadQuadraticRepresentation};
 \item the proved conditional endpoint
 \code{internal_weil_nonneg_of_frequently_selected};
 \item sealed checkers for the full-comb race, spectral reduction,
@@ -447,11 +558,12 @@ The formal census after exposing every known obligation is eight
 uses of \code{sorry}; this is documentation of gaps, not evidence.
 
 \paragraph{Internal open steps.}
-The implication from the selected cap matrix to the native
-three-channel read remains the named proposition
-\code{SelectedACapPsdImpliesPlainReads} \Ograde.  The exact
-archimedean lag/read identification also remains open in the formal
-path \Ograde.
+Round 464 proves the finite PSD implication once the exact channel
+representation is supplied.  The two named remainders are now
+\code{SelectedReadQuadraticRepresentation} \Ograde{} and
+\code{arch_gauss_mellin_digamma_identity} \Ograde.  The former
+identifies the selected matrix with the native three-channel read;
+the latter is the remaining classical archimedean seam.
 
 \paragraph{External bridge 1: density and continuity.}
 Extend positivity from native dyadic piecewise-linear
@@ -469,11 +581,13 @@ zeta function and its Riemann-hypothesis predicate \Ograde.
 
 \medskip\noindent
 \fbox{\parbox{0.94\linewidth}{
-\textbf{Boundary.}  Problem~\ref{prob:main} is the lemma being
-offered.  It is open.  Even a proof of that lemma must still pass the
-two internal identifications and the three separately listed
-external bridges before it can participate in an RH proof.  The
-present document proves no statement about the zeros of $\zeta$.}}
+\textbf{Boundary.}  Problem~\ref{prob:main} is the precise
+finite-matrix form being offered.  It is open and, modulo the two
+internal identifications and three separately listed external
+bridges, has the strength of the full Weil criterion.  The mechanism
+is not evidence; the certificates are finite statements; the
+residual is not a lower-strength result.  The present document proves
+no statement about the zeros of $\zeta$.}}
 
 \begin{thebibliography}{9}
 \bibitem{Weil1952}

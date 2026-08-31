@@ -38,7 +38,7 @@
 \large A specialist dossier on the critical bordered block
 $\boldsymbol{R^{\dagger}}$}
 \author{Stefan Hamann}
-\date{August 30, 2026}
+\date{August 31, 2026}
 
 \begin{document}
 \maketitle
@@ -61,12 +61,16 @@ unsigned cancellation of von~Mangoldt data
 (Section~\ref{sec:cores}).  Round 427 audited the campaign
 numbers (Section~\ref{sec:audit}).  The current architecture is
 an \emph{open program} in the Krein--Langer class $\Sk_{\kappa}$
-(Section~\ref{sec:potapov}), but rounds 445--463 sharpen its
+(Section~\ref{sec:potapov}), but rounds 445--469 sharpen its
 external form.  A table-cap failure was exposed and repaired, a
 prime-blind prefix was killed by a two-world red team, the full
-selected windows survived through $k=12$, and the remaining
-mincut was translated into cofinal compact-window Weil positivity
-(Sections~\ref{sec:methodology}--\ref{sec:r463-fidelity}).  The
+selected windows were interval-certified through $k=16$, and the
+remaining mincut was translated into cofinal compact-window Weil
+positivity.  Rounds 467--469 exposed the correlation wall, its
+scramble filter, and the exact extremal coordinate, and retyped the
+residual as a finite-matrix form of the full criterion rather than
+a lower-strength result
+(Sections~\ref{sec:methodology}--\ref{sec:channels}).  The
 older minimal-inertia and
 saturation/RHP questions are retained as
 Problems~\ref{prob:minimal} and~\ref{prob:rhp}.  This document is
@@ -102,12 +106,15 @@ campaign audit round 427; selected-sequence reopening round 428;
 head-identity round 429; adversarial selected-window campaign
 rounds 445--459; spectral race reduction round 460; classical
 translation round 461; end-to-end gap map round 462; faithful
-Lean-object repair round 463.  Companion notes:
+Lean-object repair round 463; finite interval certificates round
+465; overlap anatomy round 467; octave renormalization round 468;
+binding judgment round 469; package reframe round 472.  Companion notes:
 \path{campaign_audit.tex}, \path{qn_reopened.tex},
 \path{zloc_head.tex}, \path{vacuity_redteam.tex},
 \path{fullcomb_cleanup.tex}, \path{race_proof.tex},
 \path{narrowband_weil.tex}, \path{endtoend_gapmap.tex},
-and \path{lean_fidelity.tex}.
+\path{lean_fidelity.tex}, \path{overlap_mechanism.tex},
+\path{octave_renorm.tex}, and \path{correlation_wall_judgment.tex}.
 
 \section{Setup}\label{sec:setup}
 
@@ -845,18 +852,19 @@ These numbers certify the dictionary; they do not prove (P1)
 off the certified head.
 
 \paragraph{Closed internal languages.}
-Table~\ref{tab:closed} lists thirty-one named routes closed
-between DCCXLVI and DCCCXXX: the original seventeen languages
+Table~\ref{tab:closed} lists thirty-three named routes closed
+between DCCXLVI and DCCCXXXVIII: the original seventeen languages
 for (P1), the two r409 graph-factor closures previously omitted
 from the count, the r413--r429 bulk and terminal kills, and the
-three r456/r460 quantifier and majorant closures.
+three r456/r460 quantifier and majorant closures, followed by the
+r467 exact-coordinate Abel and r468 octave-renormalization closures.
 Each line is a sealed probe record, not an extrapolation.
 Nothing in the table is a family theorem.
 
 \begin{table}[ht]
 \centering
-\caption{Thirty-one named closed routes (bulk and terminal),
-DCCXLVI--DCCCXXX.  Verdicts are probe-local.  No family
+\caption{Thirty-three named closed routes (bulk and terminal),
+DCCXLVI--DCCCXXXVIII.  Verdicts are probe-local.  No family
 theorem is claimed.}
 \label{tab:closed}
 {\small
@@ -926,6 +934,10 @@ Raw resolvent norm / Gershgorin
   & r460, DCCCXXX & $4.825\to4991.649$; destroys border alignment \\
 Fixed-$r$ selected blocks
   & r460, DCCCXXX & only $2r+1$ indices; cannot prove FREQ \\
+Exact-coordinate Abel chain
+  & r467, DCCCXXXVIII & factor $91.703\to119482.632$ \\
+Octave renormalization / block limit
+  & r468, DCCCXXXVII & $+0.2199$ isolated versus $-0.01180$ total \\
 \bottomrule
 \end{tabular}}
 \end{table}
@@ -1481,10 +1493,12 @@ sorry-free R$^{\dagger}$ Lean layer.  No Riemann--Hilbert
 steepest-descent analysis has been carried out.  The
 equilibrium-measure limit, the Gamma parametrix, and the error
 operator $E$ are open, and they are no longer the cheapest target.
-After the r445--r463 audit, the clean external target is the
-frequently-selected semidefinite lemma, classically translated as
-cofinal compact-window Weil positivity in
-Section~\ref{sec:r461}.  The four open-program statements of
+After the r445--r469 audit, the clean external target is the
+frequently-selected semidefinite \emph{form}, classically translated
+as cofinal compact-window Weil positivity in
+Section~\ref{sec:r461}.  It is not a lower-strength lemma: modulo
+the named bridges, nestedness makes it the full Weil criterion.
+The four open-program statements of
 Section~\ref{sec:potapov}, together with
 Problems~\ref{prob:qn} and~\ref{prob:siginf}, are candidate routes
 to that target rather than competing formulations.
@@ -1599,6 +1613,56 @@ $r=\lfloor\sqrt{k}\rfloor$: that block has exactly $2r+1$ indices.
 The surviving target is a source-derived border-overlap estimate
 across infinitely many $r$-blocks \gr{open, r460}.
 
+\section{Correlation wall: rounds 467--469}\label{sec:wall}
+
+\paragraph{Anatomy.}
+The r460 spectral coordinate is now accompanied by three independent
+controls.  On $k=5,\ldots,12$, the top MAIN mode has
+$0.926$--$0.989$ of its squared Fourier mass in the lowest quarter
+of frequencies, while the smooth ARCH border aligns with its top
+mode at $0.995813$--$0.998970$.  A deterministic source-position
+scramble raises the dangerous normalized top overlap by
+$28.5$--$5.3\cdot10^5$.  Finally, at fixed $k=11$ geometry the
+isolated $k=10\to11$ prime octave changes $q^\dagger$ by $+0.2199$,
+whereas the complete step is $-0.01180$.  The cancellation therefore
+lives in the joint dependence of the border vector and the
+eigenbasis on the same arithmetic source
+\gr{census, r467 \texttt{a0e9aa4d}; r468 \texttt{4a0cb4a0}}.
+It is a measured mechanism, not evidence for any global statement.
+
+\paragraph{Extremal identity.}
+Write $\omega_k=\mu_k-\nu_k$ and
+$\mathcal A_k=\left(\begin{smallmatrix}
+I-C_k&u_k\\u_k^T&1
+\end{smallmatrix}\right)$.  The exact r469 coordinate is
+\begin{equation}\label{eq:extremal}
+q_k^\dagger
+=\frac1{B_k^{\rm bud}}
+\sup_{0\ne p\in\mathcal P_{<N_k}}
+\frac{\left(\int p\,d\sigma_k\right)^2}
+     {\int p^2\,d\omega_k},
+\qquad
+1-q_k^\dagger
+=\frac{\det\mathcal A_k}{\det(I-C_k)} .
+\end{equation}
+The extremizer is the $\omega_k$-Riesz representative of the smooth
+functional $p\mapsto\int p\,d\sigma_k$ \gr{exact restatement,
+r469, commit \texttt{f455a22a}}.  The common failure class of the
+majorant routes is now visible: each replaces this one fused
+supremum by a product of two suprema, one for the data and one for
+the modes.
+
+\paragraph{Scramble pre-filter.}
+The following is methodological, not a theorem.  If the hypotheses
+of a proposed bound are unchanged by the deterministic r467
+source-position scramble, then the bound must absorb the observed
+alignment factor $28.5$--$5.3\cdot10^5$ and should be rejected
+before substantial work.  A viable attack must name a
+scramble-sensitive source input and retain the joint dependence in
+\eqref{eq:extremal}.  Only the dangerous alignment, not the
+scrambled value of $q^\dagger$, was measured
+\gr{r469 ruling, commit \texttt{f455a22a}}.
+
 \section{Classical centre: cofinal Weil positivity}\label{sec:r461}
 
 The selected sequence is
@@ -1652,9 +1716,34 @@ The six-step route and its honest status are:
 \item certify additional fixed compact windows
       \gr{finite and unconditional, but not a cofinal result};
 \item prove nonnegativity on unbounded $L_{k}$
-      \gr{open-hard; after Steps 1--4 this is equivalent to the full
-      Weil criterion}.
+      \gr{open-hard; after Steps 1--4 this is the full Weil
+      criterion in a finite-matrix coordinate, not a subordinate
+      lemma}.
 \end{enumerate}
+
+\section{The separate fixed-\texorpdfstring{$L$}{L} prize}
+\label{sec:fixedL}
+
+The cofinal quantifier is deliberately absent here.  Interval
+arithmetic certifies the finite matrix inequality for
+$k=5,\ldots,16$ \gr{exact finite certificates, r465
+\texttt{74bf4ef4}; extension recorded in r468 \texttt{4a0cb4a0}}.
+The top centred half-width is
+\[
+L_{16}=\frac{16\log2}{4}=4\log2=2.772589\ldots,
+\]
+against $0.8$ in the external computational certificate.
+
+The classical payoff remains conditional, with all conditions stated
+in the same sentence: if
+\texttt{SelectedReadQuadraticRepresentation},
+\texttt{arch\_gauss\_mellin\_digamma\_identity}, and fixed-support
+dyadic density/continuity are proved, then the finite certificates
+give $\lambda_*(L_k)\ge0$ for each certified $k\le16$.  Closing
+those three finite or standard tasks would make this an
+unconditional fixed-window theorem.  It would remain strictly
+weaker than the cofinal problem and would not be RH-equivalent
+\gr{r469 ruling, commit \texttt{f455a22a}}.
 
 \section{R462/R463 end-to-end Lean state}\label{sec:r463-fidelity}
 
@@ -1689,15 +1778,97 @@ interfaces rather than per-atom completion data.
 The endpoint is now
 \texttt{internal\_weil\_nonneg\_of\_frequently\_selected}.
 Its compound mincut visibly includes
-\texttt{SelectedACapPsdImpliesPlainReads}.  Three previously absent
-external links are named \texttt{sorry}s: dense extension to the full
-Weil class, identification with the standard explicit formula, and
-the standard Weil criterion against Mathlib's
-\texttt{RiemannHypothesis}.  Hence the honest census is $5\to8$.
-The finite Loewner, whitening, filter, and internal endpoint
+\texttt{SelectedReadQuadraticRepresentation}.  Round 464 proves the
+finite PSD-to-read implication from that representation and reduces
+the archimedean seam to
+\texttt{arch\_gauss\_mellin\_digamma\_identity}; both names remain
+open.  Three external links are named \texttt{sorry}s: dense
+extension to the full Weil class, identification with the standard
+explicit formula, and the standard Weil criterion against Mathlib's
+\texttt{RiemannHypothesis}.  The honest census remains eight.  The
+finite Loewner, whitening, filter, PSD wrapper, and internal endpoint
 implications are proved; the compound premise and the three external
 bridges are not.  No statement in this section claims the Riemann
-hypothesis \gr{r463, commit \texttt{8f81005f}}.
+hypothesis \gr{r463 \texttt{8f81005f}; r464 \texttt{4ac2325f}}.
+
+\section{External channels and claim discipline}\label{sec:channels}
+
+\paragraph{Dispatch list.}
+The package should be sent (i) to arXiv with math.NT primary and
+math.CA cross-list, explicitly as a problem-and-anatomy note;
+(ii) directly to the author of the compact-window certificate
+preprint; (iii) to specialists in Weil positivity and the
+archimedean place, and to discrete orthogonal-polynomial /
+Riemann--Hilbert asymptotics specialists; and (iv) to a specialist
+mathematics forum using only the measure-theoretic formulation below.
+The repository remains a reproducible appendix, not a prerequisite
+for reading the external note.
+
+\paragraph{Literal forum question (RH-free).}
+\begin{quote}\small
+Fix $k\ge5$ and put
+\[
+r=\lfloor\sqrt k\rfloor,\quad M=k2^r,\quad N=M/2,\quad
+\Delta=2^{-r}\log2,\quad
+\theta_j=\frac{2\pi j}{2M-2},\quad x_j=\cos\theta_j .
+\]
+Let $T_\Delta(t)=\max(0,1-|t|/\Delta)$ and let
+$\Lambda(n)=\log p$ for $n=p^\ell$ and $0$ otherwise.  For
+$s\ge\Delta$ set
+\[
+A_\Delta(s)=-\int_{s-\Delta}^{s+\Delta}
+T_\Delta(s-w)\frac{e^{-w/2}}{1-e^{-2w}}\,dw .
+\]
+For $0\le s<\Delta$, set $t=T_\Delta(s)$ and
+$S_s(w)=\tfrac12(T_\Delta(s-w)+T_\Delta(s+w))$, and put
+\[
+A_\Delta(s)=-(\gamma_E+\log\pi)t+
+2\int_0^{s+\Delta}
+\frac{te^{-2w}-S_s(w)e^{-w/2}}{1-e^{-2w}}\,dw
+-t\log(1-e^{-2(s+\Delta)}).
+\]
+For $0\le i<M$ define
+\[
+c_i=A_\Delta(i\Delta)-
+\sum_{2\le n\le 2^{2k}}\frac{\Lambda(n)}{\sqrt n}
+\{T_\Delta(i\Delta-\log n)+T_\Delta(i\Delta+\log n)\}.
+\]
+For $1\le j\le M-1$, let
+\[
+d_j=c_0+2\sum_{i=1}^{M-2}c_i\cos(i\theta_j)
++c_{M-1}\cos((M-1)\theta_j),
+\quad
+w_j=\frac{2(1-\cos\theta_j)}{2M-2}\,d_j,
+\]
+with $w_{M-1}$ divided once more by $2$, and set
+$\omega_k=\sum_jw_j\delta_{x_j}$ and
+$\mu_k=\sum_j\max(w_j,0)\delta_{x_j}$.
+Construct $\sigma_k$ by the same finite linear map after replacing
+the atoms $(\log n,\Lambda(n)/\sqrt n)$ by
+$(u_\ell,2e^{u_\ell/2}\eta)$, where
+$\eta=0.01$, $u_\ell=\ell\eta$, and $0<u_\ell<2k\log2$.
+Let $p_0,\ldots,p_{N-1}$ be the $\mu_k$-orthonormal polynomials and
+\[
+B_k=\sum_{i=0}^{N-2}\left(\int p_i\,d\sigma_k\right)^2+\frac57.
+\]
+Can one prove, for infinitely many $k$, the Markov-type inequality
+\[
+\sup_{0\ne p\in\mathcal P_{<N}}
+\frac{\left(\int p\,d\sigma_k\right)^2}
+     {\int p^2\,d\omega_k}\le B_k,
+\]
+with positivity of the denominator on
+$\mathcal P_{<N}\setminus\{0\}$ included in the assertion?
+\end{quote}
+
+\paragraph{What must not be claimed.}
+No RH claim and no anti-RH claim.  The measured mechanism is not
+evidence in either direction.  Finite matrices and interval
+certificates are not progress toward RH.  The cofinal residual is
+not a lower-strength lemma.  The external compact-window preprint is
+not promoted to a theorem here.  Any improvement of
+$\lambda_*(L)$ is stated only conditionally, with its three
+conditions in the same sentence, until those conditions are closed.
 
 \medskip\noindent
 \textbf{Claim boundary.}\enspace
