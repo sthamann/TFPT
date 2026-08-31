@@ -1061,6 +1061,20 @@ analytic germ at every pole, so it fills.
 on `Q_T` remain (r517).  Census stays 7
 (external 2).  NO RH CLAIM.
 
+## r517 census (outer bridges 24, [2d] contour identity)
+
+[2d] fixed-T residue identity, sorry-free.
+`FullWeilTest.hat` is entire (parametric DCT,
+r509 majorant).  The r516 fill values assemble
+to a global `H` on `Q_T` (finite poles:
+r499 Finset + 1).  On sides that miss poles
+(`T` not an ordinate; `Re = 2` and `Re = -1/4`
+zero-free) the integrand is `Σ + H`, so
+`rectangleIntegral_sum_simple_poles` gives
+`contour_identity_fixed_T`.  Remaining: edge
+bounds, `T → ∞`, three-channel id.  Census
+stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

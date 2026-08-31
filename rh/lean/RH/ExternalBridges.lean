@@ -7089,6 +7089,474 @@ lemma exists_analyticAt_update_logDerivHatRemainder_at_one
 
 end ContourRemainder
 
+/-! ### r517: `ĥ` entire, filled remainder, fixed-T residue identity -/
+
+section ContourIdentity
+
+open Complex Filter Function Set MeasureTheory
+open scoped Topology Interval
+
+lemma hasDerivAt_hat_integrand (g : ℝ → ℝ) (t : ℝ) (s : ℂ) :
+    HasDerivAt (fun z : ℂ => (g t : ℂ) * exp (z * t))
+      ((g t : ℂ) * t * exp (s * t)) s := by
+  have h := ((hasDerivAt_id' s).mul_const (t : ℂ)).cexp
+  convert h.const_mul (g t : ℂ) using 1
+  ring
+
+lemma FullWeilTest.hasDerivAt_hat (F : FullWeilTest) (s₀ : ℂ) :
+    HasDerivAt F.hat
+      (∫ t : ℝ, (F.toFun t : ℂ) * (t : ℂ) * exp (s₀ * t)) s₀ := by
+  let r : ℝ := 1
+  have hr : (0 : ℝ) < r := by norm_num
+  have hs : Metric.ball s₀ r ∈ 𝓝 s₀ := Metric.ball_mem_nhds s₀ hr
+  let Fint : ℂ → ℝ → ℂ := fun z t => (F.toFun t : ℂ) * exp (z * t)
+  let F' : ℂ → ℝ → ℂ := fun z t => (F.toFun t : ℂ) * (t : ℂ) * exp (z * t)
+  have hF_meas : ∀ᶠ z in 𝓝 s₀, AEStronglyMeasurable (Fint z) volume :=
+    Filter.Eventually.of_forall fun z =>
+      ((continuous_ofReal.comp F.continuous_toFun).mul
+        (continuous_exp.comp (continuous_const.mul continuous_ofReal))).aestronglyMeasurable
+  have hF_int := F.integrable_hat_integrand s₀
+  have hF'_meas : AEStronglyMeasurable (F' s₀) volume := by
+    have hc : Continuous fun t : ℝ =>
+        (F.toFun t : ℂ) * (t : ℂ) * exp (s₀ * t) :=
+      ((continuous_ofReal.comp F.continuous_toFun).mul
+        (continuous_ofReal.comp continuous_id)).mul
+        (continuous_exp.comp (continuous_const.mul continuous_ofReal))
+    exact hc.aestronglyMeasurable
+  let bound : ℝ → ℝ := fun t =>
+    |F.toFun t| * |t| * Real.exp ((‖s₀‖ + 1) * |t|)
+  have hbound_int : Integrable bound := by
+    have hc : Continuous bound :=
+      ((continuous_abs.comp F.continuous_toFun).mul continuous_abs).mul
+        (Real.continuous_exp.comp (continuous_const.mul continuous_abs))
+    have hsupp : HasCompactSupport bound :=
+      HasCompactSupport.of_support_subset_isCompact isCompact_Icc
+        (fun t ht => F.support_subset_Icc (by
+          refine mem_support.mpr ?_
+          intro hg
+          have : bound t = 0 := by simp [bound, hg]
+          exact (mem_support.mp ht) this))
+    exact hc.integrable_of_hasCompactSupport hsupp
+  have h_bound : ∀ᵐ t ∂volume, ∀ z ∈ Metric.ball s₀ r, ‖F' z t‖ ≤ bound t := by
+    refine Filter.Eventually.of_forall ?_
+    intro t z hz
+    have hzball : ‖z - s₀‖ < (1 : ℝ) := by
+      simpa [dist_eq_norm, r] using Metric.mem_ball.mp hz
+    have hzle : ‖z‖ ≤ ‖s₀‖ + 1 := by
+      have htri : ‖z‖ ≤ ‖s₀‖ + ‖z - s₀‖ := by
+        calc ‖z‖ = ‖s₀ + (z - s₀)‖ := by simp
+          _ ≤ ‖s₀‖ + ‖z - s₀‖ := norm_add_le _ _
+      linarith [htri, hzball.le]
+    have hre : |z.re| ≤ ‖s₀‖ + 1 :=
+      (abs_re_le_norm z).trans hzle
+    rw [norm_mul, norm_mul, norm_real, norm_real, norm_exp]
+    have hrezt : (z * (t : ℂ)).re = z.re * t := by simp
+    rw [hrezt]
+    have hexp : Real.exp (z.re * t) ≤ Real.exp ((‖s₀‖ + 1) * |t|) := by
+      apply Real.exp_le_exp.mpr
+      calc z.re * t ≤ |z.re * t| := le_abs_self _
+        _ = |z.re| * |t| := abs_mul _ _
+        _ ≤ (‖s₀‖ + 1) * |t| :=
+          mul_le_mul_of_nonneg_right hre (abs_nonneg _)
+    exact mul_le_mul_of_nonneg_left hexp (mul_nonneg (abs_nonneg _) (abs_nonneg _))
+  have h_diff : ∀ᵐ t ∂volume, ∀ z ∈ Metric.ball s₀ r,
+      HasDerivAt (fun w : ℂ => Fint w t) (F' z t) z :=
+    Filter.Eventually.of_forall fun t z _ => hasDerivAt_hat_integrand F.toFun t z
+  exact (hasDerivAt_integral_of_dominated_loc_of_deriv_le
+    hs hF_meas hF_int hF'_meas h_bound hbound_int h_diff).2
+
+lemma FullWeilTest.differentiable_hat (F : FullWeilTest) :
+    Differentiable ℂ F.hat :=
+  fun s => (F.hasDerivAt_hat s).differentiableAt
+
+lemma FullWeilTest.analyticOnNhd_hat (F : FullWeilTest) :
+    AnalyticOnNhd ℂ F.hat univ :=
+  analyticOnNhd_univ_iff_differentiable.mpr F.differentiable_hat
+
+lemma FullWeilTest.analyticAt_hat (F : FullWeilTest) (s : ℂ) :
+    AnalyticAt ℂ F.hat s :=
+  F.analyticOnNhd_hat s (mem_univ s)
+
+/-- Poles of `(ζ′/ζ)·F` on the closed strip rectangle: the r499
+zeros together with the simple pole at `1`. -/
+noncomputable def contourPoles (σ₁ σ₂ T : ℝ) : Finset ℂ :=
+  insert (1 : ℂ) (riemannZetaZerosOnClosedRect σ₁ σ₂ T)
+
+lemma one_not_mem_riemannZetaZerosOnClosedRect (σ₁ σ₂ T : ℝ) :
+    (1 : ℂ) ∉ riemannZetaZerosOnClosedRect σ₁ σ₂ T :=
+  fun h => (mem_riemannZetaZerosOnClosedRect.mp h).2.2 rfl
+
+lemma mem_contourPoles {σ₁ σ₂ T : ℝ} {z : ℂ} :
+    z ∈ contourPoles σ₁ σ₂ T ↔
+      z = 1 ∨ z ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T :=
+  Finset.mem_insert
+
+lemma analyticAt_logDeriv_riemannZeta {s : ℂ}
+    (hs : s ≠ 1) (hz : riemannZeta s ≠ 0) :
+    AnalyticAt ℂ (logDeriv riemannZeta) s :=
+  (analyticAt_riemannZeta hs).deriv.div (analyticAt_riemannZeta hs) hz
+
+lemma analyticAt_logDerivHatRemainder_of_mem_rect_not_pole
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hQ : s ∈ zetaClosedRect σ₁ σ₂ T)
+    (hs1 : s ≠ 1)
+    (hsz : s ∉ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    AnalyticAt ℂ (logDerivHatRemainder F σ₁ σ₂ T) s := by
+  have hz : riemannZeta s ≠ 0 := fun h =>
+    hsz (mem_riemannZetaZerosOnClosedRect.mpr ⟨hQ, h, hs1⟩)
+  have hx : ∀ ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T, ρ ≠ s :=
+    fun ρ hρ hps => hsz (by simpa [hps] using hρ)
+  have hsum := analyticAt_sum_inv_sub
+    (riemannZetaZerosOnClosedRect σ₁ σ₂ T)
+    (fun ρ => (riemannZetaMultiplicity ρ : ℂ) * F ρ) hx
+  unfold logDerivHatRemainder
+  exact (((analyticAt_logDeriv_riemannZeta hs1 hz).mul
+      (hF s (mem_univ s))).sub hsum).sub
+    (analyticAt_const.mul (analyticAt_inv_sub hs1.symm))
+
+noncomputable def logDerivHatRemainderFillAtZero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) : ℂ :=
+  Classical.choose
+    (exists_analyticAt_update_logDerivHatRemainder_at_zero hF hs)
+
+lemma analyticAt_update_logDerivHatRemainder_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    AnalyticAt ℂ
+      (update (logDerivHatRemainder F σ₁ σ₂ T) s
+        (logDerivHatRemainderFillAtZero hF hs)) s :=
+  Classical.choose_spec
+    (exists_analyticAt_update_logDerivHatRemainder_at_zero hF hs)
+
+noncomputable def logDerivHatRemainderFillAtOne
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ) (σ₁ σ₂ T : ℝ) : ℂ :=
+  Classical.choose
+    (exists_analyticAt_update_logDerivHatRemainder_at_one hF σ₁ σ₂ T)
+
+lemma analyticAt_update_logDerivHatRemainder_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ) (σ₁ σ₂ T : ℝ) :
+    AnalyticAt ℂ
+      (update (logDerivHatRemainder F σ₁ σ₂ T) 1
+        (logDerivHatRemainderFillAtOne hF σ₁ σ₂ T)) 1 :=
+  Classical.choose_spec
+    (exists_analyticAt_update_logDerivHatRemainder_at_one hF σ₁ σ₂ T)
+
+noncomputable def logDerivHatRemainderFilled
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ) (σ₁ σ₂ T : ℝ) : ℂ → ℂ :=
+  fun z =>
+    if hz : z ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T then
+      logDerivHatRemainderFillAtZero hF hz
+    else if z = 1 then
+      logDerivHatRemainderFillAtOne hF σ₁ σ₂ T
+    else
+      logDerivHatRemainder F σ₁ σ₂ T z
+
+lemma logDerivHatRemainderFilled_of_not_mem
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {z : ℂ}
+    (hz : z ∉ contourPoles σ₁ σ₂ T) :
+    logDerivHatRemainderFilled hF σ₁ σ₂ T z =
+      logDerivHatRemainder F σ₁ σ₂ T z := by
+  have hz' : z ∉ riemannZetaZerosOnClosedRect σ₁ σ₂ T ∧ z ≠ 1 := by
+    rw [mem_contourPoles, not_or] at hz
+    exact ⟨hz.2, hz.1⟩
+  simp [logDerivHatRemainderFilled, hz'.1, hz'.2]
+
+lemma eventuallyEq_filled_of_not_mem
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∉ contourPoles σ₁ σ₂ T) :
+    logDerivHatRemainderFilled hF σ₁ σ₂ T
+      =ᶠ[𝓝 s] logDerivHatRemainder F σ₁ σ₂ T := by
+  have hnhds : (contourPoles σ₁ σ₂ T : Set ℂ)ᶜ ∈ 𝓝 s :=
+    (Finset.isClosed (contourPoles σ₁ σ₂ T)).isOpen_compl.mem_nhds
+      (mem_compl hs)
+  filter_upwards [hnhds] with z hz
+  exact logDerivHatRemainderFilled_of_not_mem hF hz
+
+lemma eventuallyEq_filled_update_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    logDerivHatRemainderFilled hF σ₁ σ₂ T
+      =ᶠ[𝓝 s]
+        update (logDerivHatRemainder F σ₁ σ₂ T) s
+          (logDerivHatRemainderFillAtZero hF hs) := by
+  have hnhds :
+      ((contourPoles σ₁ σ₂ T).erase s : Set ℂ)ᶜ ∈ 𝓝 s :=
+    ((contourPoles σ₁ σ₂ T).erase s).isClosed.isOpen_compl.mem_nhds
+      (by simp)
+  filter_upwards [hnhds] with z hz
+  by_cases hzs : z = s
+  · subst hzs
+    simp [logDerivHatRemainderFilled, hs, update_self]
+  · have hzp : z ∉ contourPoles σ₁ σ₂ T := fun h =>
+      hz (Finset.mem_erase.mpr ⟨hzs, h⟩)
+    rw [update_of_ne hzs, logDerivHatRemainderFilled_of_not_mem hF hzp]
+
+lemma eventuallyEq_filled_update_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ) (σ₁ σ₂ T : ℝ) :
+    logDerivHatRemainderFilled hF σ₁ σ₂ T
+      =ᶠ[𝓝 (1 : ℂ)]
+        update (logDerivHatRemainder F σ₁ σ₂ T) 1
+          (logDerivHatRemainderFillAtOne hF σ₁ σ₂ T) := by
+  have h1z : (1 : ℂ) ∉ riemannZetaZerosOnClosedRect σ₁ σ₂ T :=
+    one_not_mem_riemannZetaZerosOnClosedRect σ₁ σ₂ T
+  have hnhds :
+      (riemannZetaZerosOnClosedRect σ₁ σ₂ T : Set ℂ)ᶜ ∈ 𝓝 (1 : ℂ) :=
+    (riemannZetaZerosOnClosedRect σ₁ σ₂ T).isClosed.isOpen_compl.mem_nhds
+      (mem_compl h1z)
+  filter_upwards [hnhds] with z hz
+  by_cases hz1 : z = 1
+  · subst hz1
+    simp [logDerivHatRemainderFilled, h1z, update_self]
+  · have hzp : z ∉ contourPoles σ₁ σ₂ T := fun h => by
+      rw [mem_contourPoles] at h
+      exact h.elim hz1 hz
+    rw [update_of_ne hz1, logDerivHatRemainderFilled_of_not_mem hF hzp]
+
+lemma analyticAt_logDerivHatRemainderFilled_at_zero
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hs : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    AnalyticAt ℂ (logDerivHatRemainderFilled hF σ₁ σ₂ T) s :=
+  (analyticAt_update_logDerivHatRemainder_at_zero hF hs).congr
+    (eventuallyEq_filled_update_at_zero hF hs).symm
+
+lemma analyticAt_logDerivHatRemainderFilled_at_one
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ) (σ₁ σ₂ T : ℝ) :
+    AnalyticAt ℂ (logDerivHatRemainderFilled hF σ₁ σ₂ T) 1 :=
+  (analyticAt_update_logDerivHatRemainder_at_one hF σ₁ σ₂ T).congr
+    (eventuallyEq_filled_update_at_one hF σ₁ σ₂ T).symm
+
+lemma analyticAt_logDerivHatRemainderFilled
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {s : ℂ}
+    (hQ : s ∈ zetaClosedRect σ₁ σ₂ T) :
+    AnalyticAt ℂ (logDerivHatRemainderFilled hF σ₁ σ₂ T) s := by
+  by_cases hsz : s ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T
+  · exact analyticAt_logDerivHatRemainderFilled_at_zero hF hsz
+  · by_cases hs1 : s = 1
+    · subst hs1
+      exact analyticAt_logDerivHatRemainderFilled_at_one hF σ₁ σ₂ T
+    · have hs : s ∉ contourPoles σ₁ σ₂ T := by
+        rw [mem_contourPoles]; exact fun h => h.elim hs1 hsz
+      exact (analyticAt_logDerivHatRemainder_of_mem_rect_not_pole
+          hF hQ hs1 hsz).congr
+        (eventuallyEq_filled_of_not_mem hF hs).symm
+
+lemma differentiableOn_logDerivHatRemainderFilled
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    (σ₁ σ₂ T : ℝ) :
+    DifferentiableOn ℂ (logDerivHatRemainderFilled hF σ₁ σ₂ T)
+      (zetaClosedRect σ₁ σ₂ T) :=
+  fun _s hs =>
+    (analyticAt_logDerivHatRemainderFilled hF hs).differentiableWithinAt
+
+lemma logDeriv_mul_eq_sum_add_remainder (F : ℂ → ℂ) (σ₁ σ₂ T : ℝ)
+    (z : ℂ) :
+    logDeriv riemannZeta z * F z =
+      (∑ ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T,
+          (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ))
+      + (-F 1) / (z - 1)
+      + logDerivHatRemainder F σ₁ σ₂ T z := by
+  unfold logDerivHatRemainder
+  ring
+
+lemma logDeriv_mul_eq_sum_add_filled
+    {F : ℂ → ℂ} (hF : AnalyticOnNhd ℂ F univ)
+    {σ₁ σ₂ T : ℝ} {z : ℂ}
+    (hz : z ∉ contourPoles σ₁ σ₂ T) :
+    logDeriv riemannZeta z * F z =
+      (∑ ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T,
+          (riemannZetaMultiplicity ρ : ℂ) * F ρ / (z - ρ))
+      + (-F 1) / (z - 1)
+      + logDerivHatRemainderFilled hF σ₁ σ₂ T z := by
+  rw [logDeriv_mul_eq_sum_add_remainder,
+    logDerivHatRemainderFilled_of_not_mem hF hz]
+
+lemma riemannZeta_ne_zero_of_re_eq_neg_one_div_four {s : ℂ}
+    (hs : s.re = -1 / 4) : riemannZeta s ≠ 0 := by
+  intro hz
+  have hneg : ∀ n : ℕ, s ≠ -n := by
+    intro n hn
+    have hre : s.re = -(n : ℝ) := by rw [hn]; simp
+    have hnval : (n : ℝ) = 1 / 4 := by linarith [hs, hre]
+    have h4 : (4 : ℝ) * n = 1 := by linarith [hnval]
+    norm_cast at h4
+    omega
+  have hs1 : s ≠ 1 := by
+    intro h
+    have : s.re = 1 := by rw [h]; simp
+    linarith
+  have hz1 : riemannZeta (1 - s) = 0 := by
+    rw [riemannZeta_one_sub hneg hs1, hz, mul_zero]
+  have hre1 : (1 : ℝ) ≤ (1 - s).re := by
+    rw [re_one_sub, hs]; norm_num
+  exact riemannZeta_ne_zero_of_one_le_re hre1 hz1
+
+lemma riemannZeta_ne_zero_of_re_eq_two {s : ℂ} (hs : s.re = 2) :
+    riemannZeta s ≠ 0 :=
+  riemannZeta_ne_zero_of_one_le_re (by simp [hs] : (1 : ℝ) ≤ s.re)
+
+lemma rectangleIntegral_congr_sides (f g : ℂ → ℂ) (z w : ℂ)
+    (hbot : EqOn (fun x : ℝ => f ((x : ℂ) + z.im * I))
+      (fun x : ℝ => g ((x : ℂ) + z.im * I)) [[z.re, w.re]])
+    (htop : EqOn (fun x : ℝ => f ((x : ℂ) + w.im * I))
+      (fun x : ℝ => g ((x : ℂ) + w.im * I)) [[z.re, w.re]])
+    (hright : EqOn (fun y : ℝ => f ((w.re : ℂ) + y * I))
+      (fun y : ℝ => g ((w.re : ℂ) + y * I)) [[z.im, w.im]])
+    (hleft : EqOn (fun y : ℝ => f ((z.re : ℂ) + y * I))
+      (fun y : ℝ => g ((z.re : ℂ) + y * I)) [[z.im, w.im]]) :
+    rectangleIntegral f z w = rectangleIntegral g z w := by
+  simp only [rectangleIntegral]
+  rw [intervalIntegral.integral_congr hbot,
+    intervalIntegral.integral_congr htop,
+    intervalIntegral.integral_congr hright,
+    intervalIntegral.integral_congr hleft]
+
+lemma contour_sum_r_eq (F : ℂ → ℂ) (σ₁ σ₂ T : ℝ) (ζ : ℂ)
+    (h1z : (1 : ℂ) ∉ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    ∑ p ∈ insert (1 : ℂ) (riemannZetaZerosOnClosedRect σ₁ σ₂ T),
+        (if p = 1 then -F 1
+          else (riemannZetaMultiplicity p : ℂ) * F p) / (ζ - p) =
+      (∑ ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T,
+          (riemannZetaMultiplicity ρ : ℂ) * F ρ / (ζ - ρ))
+      + (-F 1) / (ζ - 1) := by
+  set zeros := riemannZetaZerosOnClosedRect σ₁ σ₂ T
+  set r : ℂ → ℂ := fun p =>
+    if p = 1 then -F 1 else (riemannZetaMultiplicity p : ℂ) * F p
+  have hr1 : r 1 = -F 1 := if_pos rfl
+  have hrp : ∀ ρ ∈ zeros,
+      r ρ = (riemannZetaMultiplicity ρ : ℂ) * F ρ :=
+    fun ρ hρ => if_neg (mem_riemannZetaZerosOnClosedRect.mp hρ).2.2
+  change ∑ p ∈ insert (1 : ℂ) zeros, r p / (ζ - p) = _
+  rw [Finset.sum_insert h1z, hr1, add_comm]
+  congr 1
+  exact Finset.sum_congr rfl fun ρ hρ => by rw [hrp ρ hρ]
+
+lemma contour_identity_fixed_T (F : FullWeilTest) {T : ℝ}
+    (hT : 0 < T)
+    (hord : ∀ ρ ∈ riemannZetaZerosOnClosedRect (-1 / 4) 2 T,
+      |ρ.im| < T) :
+    rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+      (((-1 / 4 : ℝ) : ℂ) + (-T : ℝ) * I)
+      (((2 : ℝ) : ℂ) + (T : ℝ) * I) =
+      (2 * (Real.pi : ℂ) * I) *
+        (spectralPartialSum F.hat (-1 / 4) 2 T - F.hat 1) := by
+  set z : ℂ := (((-1 / 4 : ℝ) : ℂ) + (-T : ℝ) * I)
+  set w : ℂ := (((2 : ℝ) : ℂ) + (T : ℝ) * I)
+  have hzre : z.re = -1 / 4 := by simp [z]
+  have hwre : w.re = 2 := by simp [w]
+  have hzim : z.im = -T := by simp [z]
+  have hwim : w.im = T := by simp [w]
+  have hre_le : (-1 / 4 : ℝ) ≤ 2 := by norm_num
+  have him_le : -T ≤ T := neg_le_self hT.le
+  have hrect :
+      [[z.re, w.re]] ×ℂ [[z.im, w.im]] =
+        zetaClosedRect (-1 / 4) 2 T := by
+    simp [zetaClosedRect, hzre, hwre, hzim, hwim,
+      uIcc_of_le hre_le, uIcc_of_le him_le]
+  let zeros := riemannZetaZerosOnClosedRect (-1 / 4) 2 T
+  let poles := contourPoles (-1 / 4) 2 T
+  let H := logDerivHatRemainderFilled F.analyticOnNhd_hat (-1 / 4) 2 T
+  let r : ℂ → ℂ := fun p =>
+    if p = 1 then -F.hat 1
+    else (riemannZetaMultiplicity p : ℂ) * F.hat p
+  have h1z : (1 : ℂ) ∉ zeros :=
+    one_not_mem_riemannZetaZerosOnClosedRect (-1 / 4) 2 T
+  have hH : DifferentiableOn ℂ H ([[z.re, w.re]] ×ℂ [[z.im, w.im]]) := by
+    rw [hrect]
+    exact differentiableOn_logDerivHatRemainderFilled
+      F.analyticOnNhd_hat (-1 / 4) 2 T
+  have hp : ∀ p ∈ insert (1 : ℂ) zeros,
+      z.re < p.re ∧ p.re < w.re ∧ z.im < p.im ∧ p.im < w.im := by
+    intro p hp
+    rw [hzre, hwre, hzim, hwim]
+    rcases Finset.mem_insert.mp hp with hp1 | hpz
+    · subst hp1
+      refine ⟨by norm_num, by norm_num, neg_lt_zero.mpr hT, hT⟩
+    · have hmem := mem_riemannZetaZerosOnClosedRect.mp hpz
+      have hQ := mem_zetaClosedRect.mp hmem.1
+      have hre1 : -1 / 4 < p.re := lt_of_le_of_ne hQ.1 fun h =>
+        (riemannZeta_ne_zero_of_re_eq_neg_one_div_four h.symm) hmem.2.1
+      have hre2 : p.re < 2 := lt_of_le_of_ne hQ.2.1 fun h =>
+        (riemannZeta_ne_zero_of_re_eq_two h) hmem.2.1
+      have him : |p.im| < T := hord p hpz
+      exact ⟨hre1, hre2, (abs_lt.mp him).1, (abs_lt.mp him).2⟩
+  have hside : ∀ q : ℂ,
+      q.re = -1 / 4 ∨ q.re = 2 ∨ q.im = -T ∨ q.im = T →
+        q ∉ poles := by
+    intro q hq hqp
+    rw [mem_contourPoles] at hqp
+    rcases hqp with hq1 | hqz
+    · subst hq1
+      rcases hq with hre | hre | him | him
+      · norm_num at hre
+      · norm_num at hre
+      · exact (neg_lt_zero.mpr hT).ne him.symm
+      · exact hT.ne' him.symm
+    · have hmem := mem_riemannZetaZerosOnClosedRect.mp hqz
+      rcases hq with hre | hre | him | him
+      · exact (riemannZeta_ne_zero_of_re_eq_neg_one_div_four hre) hmem.2.1
+      · exact (riemannZeta_ne_zero_of_re_eq_two hre) hmem.2.1
+      · have : |q.im| < T := hord q hqz
+        rw [him, abs_neg, abs_of_nonneg hT.le] at this
+        exact lt_irrefl T this
+      · have : |q.im| < T := hord q hqz
+        rw [him, abs_of_nonneg hT.le] at this
+        exact lt_irrefl T this
+  have hfun :
+      rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ) z w =
+        rectangleIntegral
+          (fun ζ => (∑ p ∈ insert (1 : ℂ) zeros, r p / (ζ - p)) + H ζ)
+          z w := by
+    refine rectangleIntegral_congr_sides _ _ z w ?bot ?top ?right ?left
+    · intro x _hx
+      dsimp
+      have hq : ((x : ℂ) + z.im * I).im = -T := by simp [hzim]
+      have hnp := hside _ (Or.inr (Or.inr (Or.inl hq)))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat (-1 / 4) 2 T _ h1z]
+    · intro x _hx
+      dsimp
+      have hq : ((x : ℂ) + w.im * I).im = T := by simp [hwim]
+      have hnp := hside _ (Or.inr (Or.inr (Or.inr hq)))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat (-1 / 4) 2 T _ h1z]
+    · intro y _hy
+      dsimp
+      have hq : ((w.re : ℂ) + y * I).re = 2 := by simp [hwre]
+      have hnp := hside _ (Or.inr (Or.inl hq))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat (-1 / 4) 2 T _ h1z]
+    · intro y _hy
+      dsimp
+      have hq : ((z.re : ℂ) + y * I).re = -1 / 4 := by simp [hzre]
+      have hnp := hside _ (Or.inl hq)
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat (-1 / 4) 2 T _ h1z]
+  have hcauchy :=
+    rectangleIntegral_sum_simple_poles H z w (insert (1 : ℂ) zeros) r hH hp
+  rw [hfun, hcauchy]
+  have hsumr : ∑ p ∈ insert (1 : ℂ) zeros, r p =
+      spectralPartialSum F.hat (-1 / 4) 2 T - F.hat 1 := by
+    have hr1 : r 1 = -F.hat 1 := if_pos rfl
+    have hrp : ∀ ρ ∈ zeros,
+        r ρ = (riemannZetaMultiplicity ρ : ℂ) * F.hat ρ :=
+      fun ρ hρ => if_neg (mem_riemannZetaZerosOnClosedRect.mp hρ).2.2
+    rw [Finset.sum_insert h1z, hr1, spectralPartialSum, sub_eq_add_neg,
+      add_comm]
+    congr 1
+    exact Finset.sum_congr rfl fun ρ hρ => hrp ρ hρ
+  rw [hsumr]
+
+end ContourIdentity
+
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
 def StandardExplicitFormulaIdentification : Prop :=

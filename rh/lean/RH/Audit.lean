@@ -462,6 +462,8 @@ bounds `|ζ'/ζ|` on `Re ≥ 2`.
 r516 glues the punched `(ζ'/ζ)·F` remainder
 (`exists_analyticAt_update_of_meromorphicOrderAt_nonneg`,
 `logDerivHatRemainder`).
+r517: `ĥ` entire, filled remainder on `Q_T`,
+`contour_identity_fixed_T`.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -598,6 +600,9 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms meromorphicOrderAt_logDerivHatRemainder_at_one
 #print axioms exists_analyticAt_update_logDerivHatRemainder_at_zero
 #print axioms exists_analyticAt_update_logDerivHatRemainder_at_one
+#print axioms FullWeilTest.analyticOnNhd_hat
+#print axioms differentiableOn_logDerivHatRemainderFilled
+#print axioms contour_identity_fixed_T
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
