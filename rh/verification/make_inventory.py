@@ -2895,6 +2895,28 @@ _R492_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R494_STATUS = (
+    "x-space Weil-kernel Loewner certificate at L=0.3 "
+    "(round 494, PRIME.RDAGGER.KERNEL_LOEWNER.01; "
+    "experiments-side fixed-support theorem, NO ledger row): "
+    "VERDICT PROVED(c=2.1000e-3).  G1 three stop hits PASS: "
+    "sigma_A(0)=-5.3721834192256654; Dirichlet "
+    "1.18025311091317e-2 inside [1.150,1.192]e-2; odd section "
+    "2.2256359052e-1 with Pi_odd=-2<sinh>^2.  "
+    "c_L in [2.19240491113,2.19240491114].  G2: zero-extension "
+    "translation boundary strips retained, I-Re R_x >= 0; quintic "
+    "C2 cutoff [0.01,0.03], kappa_w=3.698008040298977, omitted "
+    "prefix booked, diagnostic loss 3.3344388074e-3.  G3: n=401 "
+    "Legendre section lambda_max=1.501365606961153; exact HS tail "
+    "<=7.0457565325e-4 < finite margin/3; complete 2x off-block "
+    "charge gives 3*tail=2.1137269598e-3; certified operator floor "
+    "2.1220149285e-3, sealed at c=2.1e-3.  Hard n<=800 NO-GO does "
+    "not fire.  Smoke/full 17/17, SPEC_SHA "
+    "2e6d71138dff454025641443a9c77f8018d36827dcf94cc35f1696dae9deda47; "
+    "verifier 6/6.  Galerkin values remain upper-bound diagnostics.  "
+    "No L* claim, no R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7185,6 +7207,26 @@ ENTRIES = [
      "compiled PDF of keystone_judgment.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/kernel_loewner.tex", "problem_statement",
+     "r494",
+     [],
+     _R494_STATUS,
+     True),
+    ("rh/problem/verify_kernel_loewner.py", "problem_check",
+     "r494 companion",
+     [],
+     "machine check of kernel_loewner.tex: theorem and claim-boundary "
+     "tokens, zero-extension convention, three calibration hits, "
+     "booked cutoff, exact HS tail with 2x off-block charge, sealed "
+     "smoke rerun.  6/6 gates, final line KERNEL LOEWNER VERIFIED -- "
+     "PROVED(c=2.1000e-3)",
+     True),
+    ("rh/problem/kernel_loewner.pdf", "problem_statement",
+     "r494",
+     [],
+     "compiled PDF of kernel_loewner.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7805,6 +7847,11 @@ ENTRIES = [
      "r491",
      [],
      _R491_STATUS,
+     True),
+    (f"{EXP}/kernel_loewner_probe.py", "sealed_probe",
+     "r494",
+     [],
+     _R494_STATUS,
      True),
 ]
 

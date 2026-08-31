@@ -7097,6 +7097,25 @@ The frequency-side $0.3$ lane is closed permanently; twenty kills are
 consolidated into six families.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Kernel--Loewner operator certificate (r494,
+PRIME.RDAGGER.KERNEL\_LOEWNER.01).**
+Sealed probe `experiments/tfpt-discovery/kernel_loewner_probe.py`
+(smoke/full 17/17, SPEC\_SHA `2e6d71138dff4540`) plus
+`rh/problem/kernel_loewner.tex` (+ PDF +
+`verify_kernel_loewner.py`, 6/6,
+`KERNEL LOEWNER VERIFIED -- PROVED(c=2.1000e-3)`).
+**Verdict PROVED(c=2.1000e-3).**
+At $L=0.3$, all three identity calibrations pass; the
+zero-extension proof retains both translation boundary strips; the
+quintic $C^2$ cutoff has
+$\kappa_w=3.698008040298977$ with the omitted prefix booked.
+The $n=401$ Legendre certificate encloses the exact HS rest by
+$7.0457565325\cdot10^{-4}<\text{margin}/3$ and charges it three
+times, including both off-block terms.  The resulting operator floor
+is $2.1220149285\cdot10^{-3}$, sealed at $c=2.1\cdot10^{-3}$.
+Galerkin values remain upper-bound diagnostics.  Fixed-support Weil
+theorem only; NO ledger row, NO L\* claim, NO RH CLAIM.
+
 
 ## Folder guide
 
@@ -7574,6 +7593,12 @@ rh/
 │   │                     U2 PROCEED_UNDER_BUDGET /
 │   │                     U3 REDIRECT_TO_KERNEL_LANE;
 │   │                     adjudication only, no pin.
+│   │                     No RH claim
+│   ├── kernel_loewner.tex(+pdf) — r494:
+│   │                     PROVED(c=2.1000e-3);
+│   │                     x-space Loewner minorant +
+│   │                     n=401 exact-HS finite section;
+│   │                     operator floor, not Galerkin.
 │   │                     No RH claim
 │   ├── operator_residual.tex(+pdf) — r490: STUCK
 │   │                     (off/s=5.86-eats-1000x;
@@ -8904,6 +8929,13 @@ in parallel) or `experiments/next.txt`.  File domain is
 `rh/problem/keystone_judgment.tex(+pdf)`, `make_inventory.py`,
 `INVENTORY.json` and this README.  Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r494 coexistence.** Round 494 (`kernel_loewner_probe.py`) proves the
+fixed-support Weil operator floor at $L=0.3$ in the x-space kernel
+form.  It does not touch `rh/lean/` (parallel r493c1 owns that tree),
+the main verification/ledger/docset, or `experiments/next.txt`.
+File domain is the probe, `kernel_loewner.tex(+pdf)`, its verifier,
+INVENTORY, `run_rh.py`, and the experiments/RH READMEs.  Suite
+surface: integrity + probes (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

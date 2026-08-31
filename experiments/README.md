@@ -1165,6 +1165,22 @@ three-part completion remainder.  Verdict:
 python experiments/tfpt-discovery/outer_bridges3_probe.py --smoke
 ```
 
+### R494 kernel-Loewner operator certificate
+
+`tfpt-discovery/kernel_loewner_probe.py` executes the three-gate
+`PRIME.RDAGGER.KERNEL_LOEWNER.01` contract at `L=0.3`: three
+identity calibrations, the zero-extension Loewner lemma with both
+translation boundary strips, and a 401-dimensional Legendre
+finite-section certificate with the exact Hilbert--Schmidt rest
+charged three times (finite rest plus both off-blocks).  Verdict:
+`PROVED(c=2.1000e-3)`.  The uncut Galerkin sequence remains labelled
+as upper-bound diagnostics; this is a fixed-support Weil theorem,
+not an RH claim.
+
+```bash
+python experiments/tfpt-discovery/kernel_loewner_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen
