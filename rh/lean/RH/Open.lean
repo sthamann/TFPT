@@ -1131,6 +1131,21 @@ clamp: holomorphic `g = F/Π` (dslope fold) +
 r519 kernel, then the sliver `[-1/16, 1/2]`.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r521 census (outer bridges 28, [2d] Landau wired)
+
+`HorizontalEdgeLandauBound` is a theorem: on a
+gap edge `Im = T ≥ 2`, for `σ ∈ [1/2, 2]`,
+`|ζ'/ζ(σ+iT)| ≤ B (1+log T)³`.  PROVED,
+sorry-free: r516 update-fill of `g = F/P` on
+`D(2+iT, 13/8)` (orders cancel on
+`landauInnerDisk`; fill ≠ 0), pigeonhole
+mid-radius in `[49/32, 51/32]`, `|g|` on that
+sphere then max modulus, center lower bound,
+r519 kernel on `g`, plus r520 `P'/P` gap sum.
+Remaining: sliver `[-1/16, 1/2]`, horizontals
+→ 0, left edge, `T→∞`, three-channel id.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

@@ -56,6 +56,7 @@ import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
 import Mathlib.Analysis.Complex.BorelCaratheodory
 import Mathlib.Analysis.Complex.HasPrimitives
+import Mathlib.Analysis.Complex.AbsMax
 
 namespace RH
 
@@ -7951,6 +7952,53 @@ lemma exists_point_far_from_finset (s : Finset ℝ) {a b : ℝ}
     linarith [this, himg]
   exact (Nat.not_succ_le_self n) hcard
 
+lemma exists_point_far_from_finset_any (s : Finset ℝ) {a b : ℝ}
+    (hab : a ≤ b) :
+    ∃ t, a ≤ t ∧ t ≤ b ∧
+      ∀ x ∈ s, (b - a) / (2 * (s.card + 1 : ℝ)) ≤ |t - x| := by
+  classical
+  let s' := s.image fun x : ℝ => min b (max a x)
+  have hs' : ∀ x ∈ s', a ≤ x ∧ x ≤ b := by
+    intro x hx
+    obtain ⟨y, _, rfl⟩ := Finset.mem_image.mp hx
+    exact ⟨le_min hab (le_max_left a y), min_le_left _ _⟩
+  obtain ⟨t, ht1, ht2, hfar⟩ := exists_point_far_from_finset s' hab hs'
+  refine ⟨t, ht1, ht2, ?_⟩
+  intro x hx
+  have hclamp : min b (max a x) ∈ s' :=
+    Finset.mem_image.mpr ⟨x, hx, rfl⟩
+  have hfar' := hfar _ hclamp
+  have hcard : (s'.card : ℝ) ≤ s.card :=
+    Nat.cast_le.mpr Finset.card_image_le
+  have hfrac : (b - a) / (2 * (s.card + 1 : ℝ)) ≤
+      (b - a) / (2 * (s'.card + 1 : ℝ)) := by
+    have hden : 0 < 2 * (s.card + 1 : ℝ) := by positivity
+    have hden' : 0 < 2 * (s'.card + 1 : ℝ) := by positivity
+    exact div_le_div_of_nonneg_left (sub_nonneg.mpr hab) hden'
+      (by nlinarith [hcard])
+  have hproj : |t - min b (max a x)| ≤ |t - x| := by
+    rcases le_total x a with hxa | hax
+    · have hmin : min b (max a x) = a := by
+        rw [max_eq_left hxa, min_eq_right hab]
+      rw [hmin]
+      have hx_le_t : x ≤ t := hxa.trans ht1
+      have habs_ta : |t - a| = t - a := abs_of_nonneg (sub_nonneg.mpr ht1)
+      have habs_tx : |t - x| = t - x := abs_of_nonneg (sub_nonneg.mpr hx_le_t)
+      rw [habs_ta, habs_tx]
+      linarith
+    · rcases le_total x b with hxb | hbx
+      · have heq : min b (max a x) = x := by
+          rw [max_eq_right hax, min_eq_right hxb]
+        simp [heq]
+      · have hmin : min b (max a x) = b := by
+          rw [max_eq_right hax, min_eq_left hbx]
+        rw [hmin]
+        have ht_le_x : t ≤ x := ht2.trans hbx
+        rw [abs_sub_comm t x, abs_of_nonneg (sub_nonneg.mpr ht_le_x),
+          abs_sub_comm t b, abs_of_nonneg (sub_nonneg.mpr ht2)]
+        linarith
+  exact hfrac.trans (hfar'.trans hproj)
+
 lemma mem_unit_height_inner_disk {N : ℝ} {z : ℂ}
     (hre : (1 / 2 : ℝ) ≤ z.re) (hre1 : z.re ≤ 1)
     (him : N ≤ z.im ∧ z.im ≤ (N + 1 : ℝ)) :
@@ -8803,6 +8851,421 @@ lemma norm_sum_multiplicity_inv_le_of_gap {T A : ℝ}
     (sum_multiplicity_landauInnerDisk_le T)
     (le_of_lt hdenpos))
 
+/-- r521: holomorphic zero-free quotient `g = F/P` via the r516
+update-fill (orders cancel on the inner-disk zeros). -/
+lemma analyticAt_landauPoly (T : ℝ) (z : ℂ) :
+    AnalyticAt ℂ (landauPoly T) z :=
+  (landauInnerDisk T).analyticAt_fun_prod fun ρ _ => by fun_prop
+
+lemma meromorphicAt_landauPoly (T : ℝ) (z : ℂ) :
+    MeromorphicAt (landauPoly T) z :=
+  (analyticAt_landauPoly T z).meromorphicAt
+
+lemma meromorphicOrderAt_pow_sub_const (ρ : ℂ) (n : ℕ) (x : ℂ) :
+    meromorphicOrderAt (fun z : ℂ => (z - ρ) ^ n) x =
+      if x = ρ then (n : WithTop ℤ) else (0 : WithTop ℤ) := by
+  by_cases hx : x = ρ
+  · rw [if_pos hx]
+    have heq : (fun z : ℂ => (z - ρ) ^ n) = ((· - ρ) ^ n) := rfl
+    rw [heq, hx]
+    simpa using meromorphicOrderAt_pow_id_sub_const (n := n)
+  · have han : AnalyticAt ℂ (fun z : ℂ => (z - ρ) ^ n) x := by fun_prop
+    have hne : (x - ρ) ^ n ≠ 0 :=
+      pow_ne_zero _ (sub_ne_zero.mpr hx)
+    rw [if_neg hx, han.meromorphicOrderAt_eq,
+      han.analyticOrderAt_eq_zero.mpr hne]
+    simp
+
+lemma landauPoly_ne_zero_of_not_mem {T : ℝ} {x : ℂ}
+    (hx : x ∉ landauInnerDisk T) :
+    landauPoly T x ≠ 0 := by
+  unfold landauPoly
+  refine Finset.prod_ne_zero_iff.mpr ?_
+  intro ρ hρ
+  have hne : x ≠ ρ := fun h => hx (by simpa [h] using hρ)
+  exact pow_ne_zero _ (sub_ne_zero.mpr hne)
+
+lemma landauPoly_eq_zero_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    landauPoly T ρ = 0 := by
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp
+    (by simpa [landauInnerDisk] using hρ)
+  have hm : 0 < riemannZetaMultiplicity ρ :=
+    riemannZetaMultiplicity_pos hz'.2.1 hz'.2.2
+  unfold landauPoly
+  refine Finset.prod_eq_zero hρ ?_
+  simp [sub_self, zero_pow (M₀ := ℂ) hm.ne']
+
+lemma meromorphicOrderAt_landauPoly_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    meromorphicOrderAt (landauPoly T) ρ =
+      (riemannZetaMultiplicity ρ : WithTop ℤ) := by
+  have hf : ∀ τ ∈ landauInnerDisk T,
+      MeromorphicAt (fun z : ℂ =>
+        (z - τ) ^ riemannZetaMultiplicity τ) ρ :=
+    fun _ _ => by fun_prop
+  have hsum := meromorphicOrderAt_fun_prod (s := landauInnerDisk T)
+    (f := fun τ z => (z - τ) ^ riemannZetaMultiplicity τ) hf
+  unfold landauPoly
+  rw [hsum]
+  have hterm : ∀ τ ∈ landauInnerDisk T,
+      meromorphicOrderAt (fun z : ℂ =>
+        (z - τ) ^ riemannZetaMultiplicity τ) ρ =
+        if ρ = τ then (riemannZetaMultiplicity τ : WithTop ℤ)
+        else (0 : WithTop ℤ) :=
+    fun τ _ => meromorphicOrderAt_pow_sub_const τ _ ρ
+  rw [Finset.sum_congr rfl hterm, Finset.sum_ite_eq]
+  simp [hρ]
+
+lemma meromorphicOrderAt_landauPoly_of_not_mem {T : ℝ} {x : ℂ}
+    (hx : x ∉ landauInnerDisk T) :
+    meromorphicOrderAt (landauPoly T) x = 0 := by
+  have hf : ∀ τ ∈ landauInnerDisk T,
+      MeromorphicAt (fun z : ℂ =>
+        (z - τ) ^ riemannZetaMultiplicity τ) x :=
+    fun _ _ => by fun_prop
+  have hsum := meromorphicOrderAt_fun_prod (s := landauInnerDisk T)
+    (f := fun τ z => (z - τ) ^ riemannZetaMultiplicity τ) hf
+  unfold landauPoly
+  rw [hsum]
+  refine Finset.sum_eq_zero ?_
+  intro τ hτ
+  have hne : x ≠ τ := fun h => hx (by simpa [h] using hτ)
+  simpa [hne] using meromorphicOrderAt_pow_sub_const τ
+    (riemannZetaMultiplicity τ) x
+
+lemma meromorphicOrderAt_riemannZetaMulSubOne_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    meromorphicOrderAt riemannZetaMulSubOne ρ =
+      (riemannZetaMultiplicity ρ : WithTop ℤ) := by
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp
+    (by simpa [landauInnerDisk] using hρ)
+  have hAn := analyticAt_riemannZetaMulSubOne ρ
+  have hAnZ := analyticAt_riemannZeta hz'.2.2
+  have hordF : analyticOrderAt riemannZetaMulSubOne ρ =
+      analyticOrderAt riemannZeta ρ := by
+    have hne : ρ ≠ 1 := hz'.2.2
+    have heq : riemannZetaMulSubOne =ᶠ[𝓝 ρ]
+        fun w => (w - 1) * riemannZeta w :=
+      riemannZetaMulSubOne_eq_mul hne
+    have hlin : AnalyticAt ℂ (fun w : ℂ => w - 1) ρ := by fun_prop
+    have hlin0 : analyticOrderAt (fun w : ℂ => w - 1) ρ = 0 :=
+      hlin.analyticOrderAt_eq_zero.mpr (sub_ne_zero.mpr hne)
+    have hfun :
+        (fun w : ℂ => (w - 1) * riemannZeta w) =
+          (fun w : ℂ => w - 1) * riemannZeta := rfl
+    rw [analyticOrderAt_congr heq, hfun, analyticOrderAt_mul hlin hAnZ,
+      hlin0, zero_add]
+  have htopZ : analyticOrderAt riemannZeta ρ ≠ ⊤ :=
+    analyticOrderAt_riemannZeta_ne_top hz'.2.2
+  have htopF : analyticOrderAt riemannZetaMulSubOne ρ ≠ ⊤ := by
+    rw [hordF]; exact htopZ
+  rw [hAn.meromorphicOrderAt_eq, hordF]
+  cases hord : analyticOrderAt riemannZeta ρ
+  · exact (htopZ hord).elim
+  · simp [riemannZetaMultiplicity, analyticOrderNatAt, hord]
+
+noncomputable def landauRaw (T : ℝ) : ℂ → ℂ :=
+  riemannZetaMulSubOne / landauPoly T
+
+lemma meromorphicAt_landauRaw (T : ℝ) (x : ℂ) :
+    MeromorphicAt (landauRaw T) x :=
+  (analyticAt_riemannZetaMulSubOne x).meromorphicAt.div
+    (meromorphicAt_landauPoly T x)
+
+lemma meromorphicOrderAt_landauRaw (T : ℝ) (x : ℂ) :
+    meromorphicOrderAt (landauRaw T) x =
+      meromorphicOrderAt riemannZetaMulSubOne x -
+        meromorphicOrderAt (landauPoly T) x :=
+  meromorphicOrderAt_div
+    (analyticAt_riemannZetaMulSubOne x).meromorphicAt
+    (meromorphicAt_landauPoly T x)
+
+lemma meromorphicOrderAt_landauRaw_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    meromorphicOrderAt (landauRaw T) ρ = 0 := by
+  rw [meromorphicOrderAt_landauRaw, meromorphicOrderAt_riemannZetaMulSubOne_of_mem hρ,
+    meromorphicOrderAt_landauPoly_of_mem hρ]
+  simp
+
+lemma meromorphicOrderAt_landauRaw_nonneg (T : ℝ) (x : ℂ) :
+    0 ≤ meromorphicOrderAt (landauRaw T) x := by
+  by_cases hx : x ∈ landauInnerDisk T
+  · simpa [meromorphicOrderAt_landauRaw_of_mem hx]
+  · rw [meromorphicOrderAt_landauRaw, meromorphicOrderAt_landauPoly_of_not_mem hx]
+    simpa using (analyticAt_riemannZetaMulSubOne x).meromorphicOrderAt_nonneg
+
+noncomputable def landauFillAt (T : ℝ) {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) : ℂ :=
+  Classical.choose
+    (exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+      (meromorphicAt_landauRaw T ρ)
+      (meromorphicOrderAt_landauRaw_nonneg T ρ))
+
+lemma analyticAt_update_landauRaw {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    AnalyticAt ℂ (update (landauRaw T) ρ (landauFillAt T hρ)) ρ :=
+  Classical.choose_spec
+    (exists_analyticAt_update_of_meromorphicOrderAt_nonneg
+      (meromorphicAt_landauRaw T ρ)
+      (meromorphicOrderAt_landauRaw_nonneg T ρ))
+
+lemma landauFillAt_ne_zero {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    landauFillAt T hρ ≠ 0 := by
+  have han := analyticAt_update_landauRaw hρ
+  have htend : Filter.Tendsto (landauRaw T) (𝓝[≠] ρ)
+      (𝓝 (landauFillAt T hρ)) :=
+    continuousAt_update_same.mp han.continuousAt
+  obtain ⟨c, hc0, hc⟩ :=
+    tendsto_ne_zero_of_meromorphicOrderAt_eq_zero
+      (meromorphicAt_landauRaw T ρ)
+      (meromorphicOrderAt_landauRaw_of_mem hρ)
+  exact (tendsto_nhds_unique htend hc) ▸ hc0
+
+noncomputable def landauQuotient (T : ℝ) : ℂ → ℂ :=
+  fun z =>
+    if hz : z ∈ landauInnerDisk T then landauFillAt T hz
+    else landauRaw T z
+
+lemma landauQuotient_of_not_mem {T : ℝ} {z : ℂ}
+    (hz : z ∉ landauInnerDisk T) :
+    landauQuotient T z = landauRaw T z := by
+  simp [landauQuotient, hz]
+
+lemma landauQuotient_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    landauQuotient T ρ = landauFillAt T hρ := by
+  simp [landauQuotient, hρ]
+
+lemma eventuallyEq_landauQuotient_of_not_mem {T : ℝ} {s : ℂ}
+    (hs : s ∉ landauInnerDisk T) :
+    landauQuotient T =ᶠ[𝓝 s] landauRaw T := by
+  have hnhds : (landauInnerDisk T : Set ℂ)ᶜ ∈ 𝓝 s :=
+    (Finset.isClosed (landauInnerDisk T)).isOpen_compl.mem_nhds
+      (mem_compl hs)
+  filter_upwards [hnhds] with z hz
+  exact landauQuotient_of_not_mem hz
+
+lemma eventuallyEq_landauQuotient_update {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    landauQuotient T =ᶠ[𝓝 ρ]
+      update (landauRaw T) ρ (landauFillAt T hρ) := by
+  have hnhds :
+      ((landauInnerDisk T).erase ρ : Set ℂ)ᶜ ∈ 𝓝 ρ :=
+    ((landauInnerDisk T).erase ρ).isClosed.isOpen_compl.mem_nhds
+      (by simp)
+  filter_upwards [hnhds] with z hz
+  by_cases hzs : z = ρ
+  · subst hzs
+    simp [landauQuotient, hρ, update_self]
+  · have hzp : z ∉ landauInnerDisk T := fun h =>
+      hz (Finset.mem_erase.mpr ⟨hzs, h⟩)
+    rw [update_of_ne hzs, landauQuotient_of_not_mem hzp]
+
+lemma analyticAt_landauQuotient (T : ℝ) (s : ℂ) :
+    AnalyticAt ℂ (landauQuotient T) s := by
+  by_cases hs : s ∈ landauInnerDisk T
+  · exact (analyticAt_update_landauRaw hs).congr
+      (eventuallyEq_landauQuotient_update hs).symm
+  · have hP : landauPoly T s ≠ 0 := landauPoly_ne_zero_of_not_mem hs
+    have hraw : AnalyticAt ℂ (landauRaw T) s :=
+      (analyticAt_riemannZetaMulSubOne s).div
+        (analyticAt_landauPoly T s) hP
+    exact hraw.congr (eventuallyEq_landauQuotient_of_not_mem hs).symm
+
+lemma analyticOnNhd_landauQuotient (T : ℝ) :
+    AnalyticOnNhd ℂ (landauQuotient T) univ :=
+  fun s _ => analyticAt_landauQuotient T s
+
+lemma riemannZetaMulSubOne_eq_landauPoly_mul_quotient
+    (T : ℝ) (z : ℂ) :
+    riemannZetaMulSubOne z =
+      landauPoly T z * landauQuotient T z := by
+  by_cases hz : z ∈ landauInnerDisk T
+  · have hF : riemannZetaMulSubOne z = 0 := by
+      have hz' := mem_riemannZetaZerosInClosedDisk.mp
+        (by simpa [landauInnerDisk] using hz)
+      exact riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩
+    rw [hF, landauPoly_eq_zero_of_mem hz, zero_mul]
+  · rw [landauQuotient_of_not_mem hz]
+    have hP : landauPoly T z ≠ 0 := landauPoly_ne_zero_of_not_mem hz
+    rw [landauRaw, Pi.div_apply, ← mul_div_assoc]
+    exact (mul_div_cancel_left₀ (riemannZetaMulSubOne z) hP).symm
+
+lemma landauQuotient_ne_zero_of_mem {T : ℝ} {ρ : ℂ}
+    (hρ : ρ ∈ landauInnerDisk T) :
+    landauQuotient T ρ ≠ 0 := by
+  rw [landauQuotient_of_mem hρ]
+  exact landauFillAt_ne_zero hρ
+
+lemma landauQuotient_ne_zero_of_not_mem {T : ℝ} {z : ℂ}
+    (hz : z ∉ landauInnerDisk T)
+    (hF : riemannZetaMulSubOne z ≠ 0) :
+    landauQuotient T z ≠ 0 := by
+  rw [landauQuotient_of_not_mem hz]
+  have hP : landauPoly T z ≠ 0 := landauPoly_ne_zero_of_not_mem hz
+  simp [landauRaw, hF, hP]
+
+lemma landauQuotient_ne_zero_on_landau_ball {T : ℝ} {z : ℂ}
+    (hz : z ∈ Metric.ball ((2 : ℂ) + T * I) (13 / 8)) :
+    landauQuotient T z ≠ 0 := by
+  by_cases hmem : z ∈ landauInnerDisk T
+  · exact landauQuotient_ne_zero_of_mem hmem
+  · have hF : riemannZetaMulSubOne z ≠ 0 := by
+      intro h0
+      have hζ := riemannZetaMulSubOne_eq_zero_iff.mp h0
+      have hrabs : |(13 / 8 : ℝ)| = (13 / 8 : ℝ) :=
+        abs_of_pos (by norm_num)
+      have hzcl : z ∈ Metric.closedBall ((2 : ℂ) + T * I) (13 / 8) :=
+        Metric.ball_subset_closedBall hz
+      have : z ∈ landauInnerDisk T :=
+        mem_riemannZetaZerosInClosedDisk.mpr
+          ⟨by simpa [hrabs] using hzcl, hζ.1, hζ.2⟩
+      exact hmem this
+    exact landauQuotient_ne_zero_of_not_mem hmem hF
+
+lemma norm_riemannZetaMulSubOne_le_jensen_of_mem_landau_ball
+    {T : ℝ} {z : ℂ}
+    (hz : z ∈ Metric.ball ((2 : ℂ) + T * I) (13 / 8)) :
+    ‖riemannZetaMulSubOne z‖ ≤ jensenSphereMajorant T :=
+  (norm_riemannZetaMulSubOne_le_on_landau_ball hz).trans (le_max_right _ _)
+
+lemma landau_center_not_mem_inner (T : ℝ) :
+    ((2 : ℂ) + T * I) ∉ landauInnerDisk T := by
+  intro h
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp
+    (by simpa [landauInnerDisk] using h)
+  exact riemannZetaMulSubOne_center_ne_zero T
+    (riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩)
+
+lemma card_landauInnerDisk_le_sum_multiplicity (T : ℝ) :
+    ((landauInnerDisk T).card : ℝ) ≤
+      ∑ ρ ∈ landauInnerDisk T, (riemannZetaMultiplicity ρ : ℝ) := by
+  have h1 : ((landauInnerDisk T).card : ℝ) =
+      ∑ ρ ∈ landauInnerDisk T, (1 : ℝ) := by
+    simp
+  rw [h1]
+  refine Finset.sum_le_sum ?_
+  intro ρ hρ
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp
+    (by simpa [landauInnerDisk] using hρ)
+  have hm := riemannZetaMultiplicity_pos hz'.2.1 hz'.2.2
+  exact_mod_cast hm
+
+lemma exists_landau_midRadius (T : ℝ) :
+    ∃ R : ℝ, (49 / 32 : ℝ) ≤ R ∧ R ≤ (51 / 32 : ℝ) ∧
+      ∀ ρ ∈ landauInnerDisk T,
+        (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+          |R - ‖ρ - ((2 : ℂ) + T * I)‖| := by
+  set c := (2 : ℂ) + T * I
+  set s := (landauInnerDisk T).image fun ρ : ℂ => ‖ρ - c‖
+  have hab : (49 / 32 : ℝ) ≤ (51 / 32 : ℝ) := by norm_num
+  obtain ⟨R, hR1, hR2, hfar⟩ :=
+    exists_point_far_from_finset_any s hab
+  refine ⟨R, hR1, hR2, ?_⟩
+  intro ρ hρ
+  have him : ‖ρ - c‖ ∈ s :=
+    Finset.mem_image.mpr ⟨ρ, hρ, rfl⟩
+  have h := hfar _ him
+  have hlen : (51 / 32 : ℝ) - 49 / 32 = (1 / 16 : ℝ) := by norm_num
+  have hfrac :
+      (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+        ((51 / 32 : ℝ) - 49 / 32) /
+          (2 * (s.card + 1 : ℝ)) := by
+    have hden : 0 < 2 * (s.card + 1 : ℝ) := by positivity
+    have hcard : (s.card : ℝ) ≤ (landauInnerDisk T).card :=
+      Nat.cast_le.mpr Finset.card_image_le
+    have : (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) =
+        (1 / 16 : ℝ) / (2 * ((landauInnerDisk T).card + 1 : ℝ)) := by
+      field_simp; ring
+    rw [this, hlen]
+    exact div_le_div_of_nonneg_left (by norm_num) hden
+      (by nlinarith [hcard])
+  exact hfrac.trans h
+
+lemma mem_closedBall_three_halves_of_horizontal
+    {T σ : ℝ} (hσ1 : (1 / 2 : ℝ) ≤ σ) (hσ2 : σ ≤ 2) :
+    σ + T * I ∈ Metric.closedBall ((2 : ℂ) + T * I) (3 / 2) := by
+  have hdist : ‖(σ + T * I) - ((2 : ℂ) + T * I)‖ = |σ - 2| := by
+    have heq : (σ + T * I) - ((2 : ℂ) + T * I) = ↑(σ - 2) := by
+      norm_cast
+      simp
+    rw [heq, Complex.norm_real, Real.norm_eq_abs]
+  have hle : |σ - 2| ≤ (3 / 2 : ℝ) := by
+    rw [abs_sub_comm]
+    exact abs_le.mpr ⟨by linarith, by linarith⟩
+  rw [Metric.mem_closedBall, dist_eq_norm, hdist]
+  exact hle
+
+lemma horizontal_ne_one {T σ : ℝ} (hT : (2 : ℝ) ≤ T) :
+    (σ : ℂ) + T * I ≠ 1 := by
+  intro h
+  have him : ((σ : ℂ) + T * I).im = (1 : ℂ).im := congrArg Complex.im h
+  simp at him
+  linarith
+
+lemma riemannZeta_ne_zero_of_landau_gap {T A : ℝ}
+    (hA : 0 < A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    {σ : ℝ} :
+    riemannZeta (σ + T * I) ≠ 0 := by
+  intro hz
+  have hs1 := horizontal_ne_one (σ := σ) hT
+  have hdenpos : 0 < A * (1 + Real.log T) := by
+    have hlog : 0 ≤ Real.log T :=
+      Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT)
+    exact mul_pos hA (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1)
+      (le_add_of_nonneg_right hlog))
+  have hgapρ := hgap _ hz hs1
+  have : |((σ : ℂ) + T * I).im - T| = 0 := by simp
+  have hpos : 0 < 1 / (A * (1 + Real.log T)) := one_div_pos.mpr hdenpos
+  linarith
+
+lemma not_mem_landauInnerDisk_of_gap {T A : ℝ}
+    (hA : 0 < A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    {σ : ℝ} :
+    (σ : ℂ) + T * I ∉ landauInnerDisk T := by
+  intro h
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp
+    (by simpa [landauInnerDisk] using h)
+  exact riemannZeta_ne_zero_of_landau_gap hA hT hgap hz'.2.1
+
+lemma logDeriv_riemannZeta_eq_landauQuotient_add
+    {T : ℝ} {s : ℂ} (hs1 : s ≠ 1) (hP : ∀ ρ ∈ landauInnerDisk T, s ≠ ρ)
+    (hζ : riemannZeta s ≠ 0) :
+    logDeriv riemannZeta s =
+      logDeriv (landauQuotient T) s +
+        logDeriv (landauPoly T) s - 1 / (s - 1) := by
+  have hF0 : riemannZetaMulSubOne s ≠ 0 := by
+    intro h0
+    exact hζ (riemannZetaMulSubOne_eq_zero_iff.mp h0).1
+  have hP0 : landauPoly T s ≠ 0 := by
+    refine landauPoly_ne_zero_of_not_mem ?_
+    intro hmem
+    exact hP s hmem rfl
+  have hg0 : landauQuotient T s ≠ 0 :=
+    landauQuotient_ne_zero_of_not_mem
+      (fun hmem => hP s hmem rfl) hF0
+  have hlogF := logDeriv_riemannZeta_eq_logDeriv_mulSubOne_sub hs1 hζ
+  have heq : riemannZetaMulSubOne = fun z =>
+      landauPoly T z * landauQuotient T z := by
+    ext z
+    exact riemannZetaMulSubOne_eq_landauPoly_mul_quotient T z
+  have hlogmul :
+      logDeriv riemannZetaMulSubOne s =
+        logDeriv (landauPoly T) s + logDeriv (landauQuotient T) s := by
+    have hmul := logDeriv_mul s hP0 hg0
+      (analyticAt_landauPoly T s).differentiableAt
+      (analyticAt_landauQuotient T s).differentiableAt
+    rw [heq]
+    exact hmul
+  rw [hlogF, hlogmul]
+  ring
+
 /-- Classical Landau / Borel–Carathéodory local splitting on a gap
 edge `Im = T`.  Contour revision (r520): the r510 disk stays in
 `Re > 0`, so the sealed range is `σ ∈ [1/2, 2]` (inner radius
@@ -8818,6 +9281,602 @@ def HorizontalEdgeLandauBound : Prop :=
         1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) →
       ∀ σ : ℝ, (1 / 2 : ℝ) ≤ σ → σ ≤ 2 →
         ‖logDeriv riemannZeta (σ + T * I)‖ ≤ B * (1 + Real.log T) ^ 3
+
+lemma norm_sub_ge_abs_dist_sub {c w ρ : ℂ} {R : ℝ}
+    (hw : dist w c = R) :
+    |R - ‖ρ - c‖| ≤ ‖w - ρ‖ := by
+  have h := abs_norm_sub_norm_le (w - c) (ρ - c)
+  have hwcn : ‖w - c‖ = R := by simpa [dist_eq_norm] using hw
+  have hsub : (w - c) - (ρ - c) = w - ρ := by ring
+  simpa [hwcn, hsub] using h
+
+lemma norm_landauPoly_ge_on_mid_sphere {T R : ℝ} {w : ℂ}
+    (hw : w ∈ Metric.sphere ((2 : ℂ) + T * I) R)
+    (hfar : ∀ ρ ∈ landauInnerDisk T,
+      (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+        |R - ‖ρ - ((2 : ℂ) + T * I)‖|) :
+    ((1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ))) ^
+        (∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ) ≤
+      ‖landauPoly T w‖ := by
+  set c := (2 : ℂ) + T * I
+  set η : ℝ := (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ))
+  set N : ℕ := ∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ
+  have hwR : dist w c = R := Metric.mem_sphere.mp hw
+  have heta0 : 0 ≤ η := by
+    have : 0 < ((landauInnerDisk T).card + 1 : ℝ) := by positivity
+    positivity
+  have hfac : ∀ ρ ∈ landauInnerDisk T,
+      η ^ riemannZetaMultiplicity ρ ≤
+        ‖w - ρ‖ ^ riemannZetaMultiplicity ρ := by
+    intro ρ hρ
+    have hle : η ≤ ‖w - ρ‖ :=
+      (hfar ρ hρ).trans (norm_sub_ge_abs_dist_sub (c := c) hwR)
+    exact pow_le_pow_left₀ heta0 hle _
+  have hprod :=
+    Finset.prod_le_prod (fun _ _ => pow_nonneg heta0 _) hfac
+  have hleft :
+      ∏ ρ ∈ landauInnerDisk T, η ^ riemannZetaMultiplicity ρ = η ^ N :=
+    Finset.prod_pow_eq_pow_sum _ _ _
+  have hright :
+      ∏ ρ ∈ landauInnerDisk T, ‖w - ρ‖ ^ riemannZetaMultiplicity ρ =
+        ‖landauPoly T w‖ := by
+    unfold landauPoly
+    rw [norm_prod]
+    refine Finset.prod_congr rfl ?_
+    intro ρ _; rw [norm_pow]
+  rwa [hleft, hright] at hprod
+
+lemma not_mem_landauInnerDisk_of_mid_sphere {T R : ℝ} {w : ℂ}
+    (hw : w ∈ Metric.sphere ((2 : ℂ) + T * I) R)
+    (hfar : ∀ ρ ∈ landauInnerDisk T,
+      (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+        |R - ‖ρ - ((2 : ℂ) + T * I)‖|)
+    (heta : 0 < (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ))) :
+    w ∉ landauInnerDisk T := by
+  intro hmem
+  have hwR : dist w ((2 : ℂ) + T * I) = R := Metric.mem_sphere.mp hw
+  have hsep := hfar w hmem
+  have : |R - ‖w - ((2 : ℂ) + T * I)‖| = 0 := by
+    have : ‖w - ((2 : ℂ) + T * I)‖ = R := by
+      simpa [dist_eq_norm] using hwR
+    simp [this]
+  linarith
+
+lemma norm_landauQuotient_le_on_mid_sphere {T R : ℝ} {w : ℂ}
+    (hRlt : R < (13 / 8 : ℝ))
+    (hw : w ∈ Metric.sphere ((2 : ℂ) + T * I) R)
+    (hfar : ∀ ρ ∈ landauInnerDisk T,
+      (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+        |R - ‖ρ - ((2 : ℂ) + T * I)‖|) :
+    ‖landauQuotient T w‖ ≤
+      jensenSphereMajorant T *
+        ((1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)))⁻¹ ^
+          (∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ) := by
+  set c := (2 : ℂ) + T * I
+  set η : ℝ := (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ))
+  set N : ℕ := ∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ
+  have hwR : dist w c = R := Metric.mem_sphere.mp hw
+  have hw13 : w ∈ Metric.ball c (13 / 8) := by
+    rw [Metric.mem_ball, hwR]; exact hRlt
+  have heta_pos : 0 < η := by
+    have : 0 < ((landauInnerDisk T).card + 1 : ℝ) := by positivity
+    positivity
+  have hwS := not_mem_landauInnerDisk_of_mid_sphere hw hfar heta_pos
+  have hg : landauQuotient T w = landauRaw T w :=
+    landauQuotient_of_not_mem hwS
+  have hPge := norm_landauPoly_ge_on_mid_sphere hw hfar
+  have hFle : ‖riemannZetaMulSubOne w‖ ≤ jensenSphereMajorant T :=
+    norm_riemannZetaMulSubOne_le_jensen_of_mem_landau_ball hw13
+  have hPpos : 0 < ‖landauPoly T w‖ :=
+    lt_of_lt_of_le (pow_pos heta_pos N) hPge
+  have hgw : ‖landauQuotient T w‖ =
+      ‖riemannZetaMulSubOne w‖ / ‖landauPoly T w‖ := by
+    rw [hg, landauRaw, Pi.div_apply, norm_div]
+  have hMF0 : 0 ≤ jensenSphereMajorant T :=
+    le_trans zero_le_one (one_le_jensenSphereMajorant T)
+  have h1 : ‖riemannZetaMulSubOne w‖ / ‖landauPoly T w‖ ≤
+      jensenSphereMajorant T / ‖landauPoly T w‖ :=
+    div_le_div_of_nonneg_right hFle (norm_nonneg _)
+  have h2 : jensenSphereMajorant T / ‖landauPoly T w‖ ≤
+      jensenSphereMajorant T / (η ^ N) :=
+    div_le_div_of_nonneg_left hMF0 (pow_pos heta_pos N) hPge
+  have h3 : jensenSphereMajorant T / (η ^ N) =
+      jensenSphereMajorant T * η⁻¹ ^ N := by
+    rw [div_eq_mul_inv, inv_pow]
+  rw [hgw]
+  exact (h1.trans h2).trans_eq h3
+
+lemma norm_landauQuotient_le_on_mid_closedBall {T R : ℝ}
+    (hRpos : 0 < R) (hRlt : R < (13 / 8 : ℝ))
+    (hfar : ∀ ρ ∈ landauInnerDisk T,
+      (1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)) ≤
+        |R - ‖ρ - ((2 : ℂ) + T * I)‖|)
+    {z : ℂ} (hz : z ∈ Metric.closedBall ((2 : ℂ) + T * I) R) :
+    ‖landauQuotient T z‖ ≤
+      jensenSphereMajorant T *
+        ((1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)))⁻¹ ^
+          (∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ) := by
+  set c := (2 : ℂ) + T * I
+  set Cbd : ℝ :=
+    jensenSphereMajorant T *
+      ((1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)))⁻¹ ^
+        (∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ)
+  have hAn := analyticOnNhd_landauQuotient T
+  have hdiff : DifferentiableOn ℂ (landauQuotient T) (Metric.ball c R) :=
+    (hAn.mono (Set.subset_univ _)).differentiableOn
+  have hcont : ContinuousOn (landauQuotient T)
+      (closure (Metric.ball c R)) :=
+    hAn.continuousOn.mono (Set.subset_univ _)
+  have hdc : DiffContOnCl ℂ (landauQuotient T) (Metric.ball c R) :=
+    ⟨hdiff, hcont⟩
+  have hfront : ∀ w ∈ frontier (Metric.ball c R),
+      ‖landauQuotient T w‖ ≤ Cbd := by
+    intro w hw
+    have hw' : w ∈ Metric.sphere c R :=
+      Metric.frontier_ball_subset_sphere hw
+    exact norm_landauQuotient_le_on_mid_sphere hRlt hw' hfar
+  by_cases hzt : z ∈ Metric.ball c R
+  · exact Complex.norm_le_of_forall_mem_frontier_norm_le
+      Metric.isBounded_ball hdc hfront (subset_closure hzt)
+  · have hw : z ∈ Metric.sphere c R := by
+      have hzle : dist z c ≤ R := Metric.mem_closedBall.mp hz
+      have hznlt : ¬ dist z c < R := fun h =>
+        hzt (Metric.mem_ball.mpr h)
+      exact Metric.mem_sphere.mpr (le_antisymm hzle (le_of_not_gt hznlt))
+    exact norm_landauQuotient_le_on_mid_sphere hRlt hw hfar
+
+lemma log_norm_landauQuotient_center_ge (T : ℝ) :
+    -Real.log (13 / 8 : ℝ) *
+        (∑ ρ ∈ landauInnerDisk T, (riemannZetaMultiplicity ρ : ℝ)) -
+      Real.log ‖riemannZeta 2‖ ≤
+      Real.log ‖landauQuotient T ((2 : ℂ) + T * I)‖ := by
+  set c := (2 : ℂ) + T * I
+  set N : ℕ := ∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ
+  have hcS : c ∉ landauInnerDisk T := landau_center_not_mem_inner T
+  have hg : landauQuotient T c = landauRaw T c :=
+    landauQuotient_of_not_mem hcS
+  have hP0 : landauPoly T c ≠ 0 := landauPoly_ne_zero_of_not_mem hcS
+  have hF0 : riemannZetaMulSubOne c ≠ 0 :=
+    riemannZetaMulSubOne_center_ne_zero T
+  have hgw : ‖landauQuotient T c‖ =
+      ‖riemannZetaMulSubOne c‖ / ‖landauPoly T c‖ := by
+    rw [hg, landauRaw, Pi.div_apply, norm_div]
+  have hPle : ‖landauPoly T c‖ ≤ (13 / 8 : ℝ) ^ N := by
+    have hfac : ∀ ρ ∈ landauInnerDisk T,
+        ‖c - ρ‖ ^ riemannZetaMultiplicity ρ ≤
+          (13 / 8 : ℝ) ^ riemannZetaMultiplicity ρ := by
+      intro ρ hρ
+      have hz' := mem_riemannZetaZerosInClosedDisk.mp
+        (by simpa [landauInnerDisk, c] using hρ)
+      have hrabs : |(13 / 8 : ℝ)| = (13 / 8 : ℝ) :=
+        abs_of_pos (by norm_num)
+      have hle : ‖ρ - c‖ ≤ (13 / 8 : ℝ) := by
+        simpa [c, hrabs, dist_eq_norm, Metric.mem_closedBall] using hz'.1
+      have : ‖c - ρ‖ = ‖ρ - c‖ := norm_sub_rev _ _
+      rw [this]
+      exact pow_le_pow_left₀ (norm_nonneg _) hle _
+    have hprod :=
+      Finset.prod_le_prod (fun ρ _ => pow_nonneg (norm_nonneg _) _) hfac
+    have hright :
+        ∏ ρ ∈ landauInnerDisk T,
+            (13 / 8 : ℝ) ^ riemannZetaMultiplicity ρ =
+          (13 / 8 : ℝ) ^ N :=
+      Finset.prod_pow_eq_pow_sum _ _ _
+    have hleft : ‖landauPoly T c‖ =
+        ∏ ρ ∈ landauInnerDisk T,
+          ‖c - ρ‖ ^ riemannZetaMultiplicity ρ := by
+      unfold landauPoly
+      rw [norm_prod]
+      refine Finset.prod_congr rfl ?_
+      intro ρ _; rw [norm_pow]
+    rw [hright] at hprod
+    rwa [hleft]
+  have hFge := norm_riemannZetaMulSubOne_center_ge T
+  have hζ2 : 0 < ‖riemannZeta 2‖ := by
+    rw [norm_riemannZeta_two]; positivity
+  have hgcpos : 0 < ‖landauQuotient T c‖ := by
+    rw [hgw]
+    exact div_pos (norm_pos_iff.mpr hF0) (norm_pos_iff.mpr hP0)
+  have hlog : Real.log ‖landauQuotient T c‖ =
+      Real.log ‖riemannZetaMulSubOne c‖ - Real.log ‖landauPoly T c‖ := by
+    rw [hgw, Real.log_div (norm_pos_iff.mpr hF0).ne'
+      (norm_pos_iff.mpr hP0).ne']
+  have hlogF : -Real.log ‖riemannZeta 2‖ ≤
+      Real.log ‖riemannZetaMulSubOne c‖ := by
+    have := log_center_neg_le T
+    linarith
+  have h138 : 1 < (13 / 8 : ℝ) := by norm_num
+  have hlogP : Real.log ‖landauPoly T c‖ ≤
+      (N : ℝ) * Real.log (13 / 8 : ℝ) := by
+    have hPpos : 0 < ‖landauPoly T c‖ := norm_pos_iff.mpr hP0
+    have h138pos : 0 < (13 / 8 : ℝ) := by norm_num
+    have := Real.log_le_log hPpos hPle
+    have hpow : Real.log ((13 / 8 : ℝ) ^ N) =
+        (N : ℝ) * Real.log (13 / 8 : ℝ) :=
+      Real.log_pow _ _
+    rwa [hpow] at this
+  have hsum : (N : ℝ) =
+      ∑ ρ ∈ landauInnerDisk T, (riemannZetaMultiplicity ρ : ℝ) := by
+    simp [N, Nat.cast_sum]
+  rw [hlog, ← hsum]
+  linarith [hlogF, hlogP]
+
+lemma landau_mid_geom_factor {R : ℝ}
+    (hRa : (49 / 32 : ℝ) ≤ R) (hRb : R ≤ (51 / 32 : ℝ)) :
+    (R + 3 / 2) / (R - 3 / 2) ^ 2 ≤ (4096 : ℝ) := by
+  have hden : (1 / 32 : ℝ) ≤ R - 3 / 2 := by linarith
+  have hdenpos : 0 < R - 3 / 2 := lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1 / 32) hden
+  have hnum : R + 3 / 2 ≤ (99 / 32 : ℝ) := by linarith
+  have hsq : (1 / 32 : ℝ) ^ 2 ≤ (R - 3 / 2) ^ 2 :=
+    pow_le_pow_left₀ (by norm_num) hden 2
+  have hpos : 0 < (R - 3 / 2) ^ 2 := pow_pos hdenpos 2
+  have : (R + 3 / 2) / (R - 3 / 2) ^ 2 ≤
+      (99 / 32 : ℝ) / (1 / 32 : ℝ) ^ 2 := by
+    rw [div_le_div_iff₀ hpos (by positivity)]
+    nlinarith [hnum, hsq, sq_nonneg (R - 3 / 2)]
+  have hval : (99 / 32 : ℝ) / (1 / 32 : ℝ) ^ 2 = (3168 : ℝ) := by
+    norm_num
+  linarith
+
+noncomputable def landauHorizontalConst : ℝ :=
+  100000000 * (1 + zetaZerosInDiskCardBoundInner) ^ 3 *
+    (1 + Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ +
+      Real.log 32 + Real.log (13 / 8) + 4)
+
+lemma landauHorizontalConst_pos : 0 < landauHorizontalConst := by
+  have hC : 0 < 1 + zetaZerosInDiskCardBoundInner := by
+    linarith [zetaZerosInDiskCardBoundInner_pos]
+  have h1 : 0 < Real.log jensenSphereMajorantCoeff :=
+    Real.log_pos one_lt_jensenSphereMajorantCoeff
+  have h2 : 0 < Real.log ‖riemannZeta 2‖ :=
+    Real.log_pos one_lt_norm_riemannZeta_two
+  have h3 : 0 < Real.log 32 := Real.log_pos (by norm_num)
+  have h4 : 0 < Real.log (13 / 8 : ℝ) := Real.log_pos (by norm_num)
+  unfold landauHorizontalConst
+  positivity
+
+set_option maxHeartbeats 400000 in
+lemma landau_cubic_pack {Cin L a b c d : ℝ}
+    (hC : 0 ≤ Cin) (hL : 1 ≤ L)
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hd : 0 ≤ d) :
+    16384 * (1 + (a + b + 4 + 2 * Cin * (c + (2 * Cin + 1)) +
+        2 * Cin * d) * L ^ 2) + 2 * Cin * L ^ 2 + 1 ≤
+      100000000 * (1 + Cin) ^ 3 * (1 + a + b + c + d + 4) * L ^ 3 := by
+  set Q : ℝ := 1 + a + b + c + d + 4
+  set P : ℝ := a + b + 4 + 2 * Cin * (c + (2 * Cin + 1)) + 2 * Cin * d
+  set U : ℝ := 1 + Cin
+  have hQ : (1 : ℝ) ≤ Q := by linarith
+  have hU : (1 : ℝ) ≤ U := by linarith
+  have hP0 : 0 ≤ P := by
+    have : 0 ≤ 2 * Cin := by linarith
+    nlinarith
+  have hL2 : (1 : ℝ) ≤ L * L := by nlinarith [hL]
+  have hL3 : L * L ≤ L * L * L := by nlinarith [hL]
+  have hU2 : (1 : ℝ) ≤ U * U := by nlinarith [hU]
+  have hU3 : U * U ≤ U * U * U := by nlinarith [hU]
+  have hP : P ≤ 20 * (U * U * U) * Q := by
+    have hPexp : P = a + b + 4 + 2 * Cin * c + 4 * Cin * Cin + 2 * Cin +
+        2 * Cin * d := by ring
+    rw [hPexp]
+    have h1 : a + b + 4 ≤ Q := by linarith
+    have h2 : 2 * Cin * c ≤ 2 * U * Q := by nlinarith
+    have h3 : 2 * Cin * d ≤ 2 * U * Q := by nlinarith
+    have h4 : 4 * Cin * Cin + 2 * Cin ≤ 4 * U * U := by nlinarith
+    have hU3' : U ≤ U * U * U := by nlinarith [hU, hU2]
+    have h2u : 2 * U * Q ≤ 2 * (U * U * U) * Q :=
+      mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hU3' (by norm_num : (0 : ℝ) ≤ 2))
+        (le_trans (by norm_num : (0 : ℝ) ≤ 1) hQ)
+    have h4u : 4 * U * U ≤ 4 * (U * U * U) * Q := by
+      have : U * U ≤ (U * U * U) * Q := by nlinarith [hU, hQ]
+      nlinarith
+    have h1u : Q ≤ (U * U * U) * Q := by nlinarith [hU, hU2, hU3, hQ]
+    nlinarith [h1, h2, h3, h4, h2u, h4u, h1u]
+  have hleft : 16384 * (1 + P * (L * L)) + 2 * Cin * (L * L) + 1 ≤
+      (16385 + 2 * Cin + 16384 * P) * (L * L) := by
+    nlinarith [hL2, hC, hP0]
+  have h16385 : (16385 : ℝ) ≤ 16385 * (U * U * U) * Q := by
+    nlinarith [hU, hU2, hU3, hQ]
+  have h2c : 2 * Cin ≤ 2 * (U * U * U) * Q := by
+    nlinarith [hU, hU2, hU3, hQ, hC]
+  have h16384P : 16384 * P ≤ 327680 * (U * U * U) * Q := by
+    nlinarith [hP]
+  have hcoef : 16385 + 2 * Cin + 16384 * P ≤ 400000 * (U * U * U) * Q := by
+    linarith [h16385, h2c, h16384P]
+  have hmid : (16385 + 2 * Cin + 16384 * P) * (L * L) ≤
+      400000 * (U * U * U) * Q * (L * L * L) := by
+    have := mul_le_mul hcoef hL3 (by nlinarith [hL])
+      (by nlinarith [hU, hQ])
+    nlinarith
+  have hfin : 400000 * (U * U * U) * Q * (L * L * L) ≤
+      100000000 * (U * U * U) * Q * (L * L * L) := by
+    nlinarith [hU, hQ, hL]
+  have hpowU : (1 + Cin) ^ 3 = U * U * U := by
+    simp [U]; ring
+  have hpowL : L ^ 2 = L * L := by ring
+  have hpowL3 : L ^ 3 = L * L * L := by ring
+  have hgoal : 16384 * (1 + P * (L * L)) + 2 * Cin * (L * L) + 1 ≤
+      100000000 * (U * U * U) * Q * (L * L * L) :=
+    hleft.trans (hmid.trans hfin)
+  rw [hpowU, hpowL, hpowL3]
+  simpa [P, Q, U] using hgoal
+
+set_option maxHeartbeats 800000 in
+theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
+  refine ⟨(1 : ℝ), landauHorizontalConst, by norm_num,
+    landauHorizontalConst_pos, ?_⟩
+  intro T hT hgap σ hσ1 hσ2
+  set c := (2 : ℂ) + T * I
+  set s := (σ : ℂ) + T * I
+  set L := (1 : ℝ) + Real.log T
+  set Cin := zetaZerosInDiskCardBoundInner
+  set S := landauInnerDisk T
+  set n := S.card
+  set η : ℝ := (1 : ℝ) / (32 * (n + 1 : ℝ))
+  set N : ℕ := ∑ ρ ∈ S, riemannZetaMultiplicity ρ
+  set MF := jensenSphereMajorant T
+  have hL : (1 : ℝ) ≤ L := by
+    have : 0 ≤ Real.log T :=
+      Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT)
+    exact le_add_of_nonneg_right this
+  have hLpos : 0 < L := lt_of_lt_of_le zero_lt_one hL
+  have hLL : L ≤ L ^ 2 := by nlinarith [hL]
+  have hCin : 0 < Cin := zetaZerosInDiskCardBoundInner_pos
+  have hNreal : (N : ℝ) = ∑ ρ ∈ S, (riemannZetaMultiplicity ρ : ℝ) := by
+    simp [N, Nat.cast_sum]
+  have hNleL : (N : ℝ) ≤ 2 * Cin * L := by
+    have h := (sum_multiplicity_landauInnerDisk_le T).trans
+      (mul_le_mul_of_nonneg_left (one_add_log_two_add_abs_le hT) hCin.le)
+    have heq : zetaZerosInDiskCardBoundInner * (2 * (1 + Real.log T)) =
+        2 * Cin * L := by
+      simp [Cin, L]; ring
+    simpa [S, hNreal, heq] using h
+  have hs1 : s ≠ 1 := horizontal_ne_one (σ := σ) hT
+  have hζ : riemannZeta s ≠ 0 :=
+    riemannZeta_ne_zero_of_landau_gap (A := 1) (by norm_num) hT hgap
+  have hsnot : s ∉ S :=
+    not_mem_landauInnerDisk_of_gap (A := 1) (by norm_num) hT hgap
+  have hPne : ∀ ρ ∈ S, s ≠ ρ :=
+    fun ρ hρ heq => hsnot (by simpa [S, heq] using hρ)
+  have hsplit := logDeriv_riemannZeta_eq_landauQuotient_add (T := T) hs1
+    (by simpa [S] using hPne) hζ
+  have hPlog := logDeriv_landauPoly (T := T) (s := s)
+    (by simpa [S] using hPne)
+  have him : s.im = T := by simp [s]
+  have hPnormL : ‖logDeriv (landauPoly T) s‖ ≤ 2 * Cin * L ^ 2 := by
+    have h := norm_sum_multiplicity_inv_le_of_gap (A := (1 : ℝ))
+      (by norm_num) hT hgap him
+    have h' : ‖logDeriv (landauPoly T) s‖ ≤
+        Cin * (1 + Real.log (2 + |T|)) * L := by
+      rw [hPlog]
+      simpa [S, Cin, L] using h
+    have := h'.trans (mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_left (one_add_log_two_add_abs_le hT) hCin.le)
+      (le_of_lt hLpos))
+    nlinarith [hCin.le, hL]
+  have hs1norm : ‖(1 : ℂ) / (s - 1)‖ ≤ (1 : ℝ) := by
+    have hne : s - 1 ≠ 0 := sub_ne_zero.mpr hs1
+    have himle : T ≤ ‖s - 1‖ := by
+      have : |(s - 1).im| ≤ ‖s - 1‖ := abs_im_le_norm (s - 1)
+      have him : (s - 1).im = T := by simp [s]
+      rw [him, abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) hT)] at this
+      exact this
+    rw [norm_div, norm_one]
+    have : (1 : ℝ) ≤ ‖s - 1‖ :=
+      le_trans (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT) himle
+    simpa [one_div] using inv_le_one_of_one_le₀ this
+  obtain ⟨R, hRa, hRb, hfar⟩ := exists_landau_midRadius T
+  have hRpos : 0 < R :=
+    lt_of_lt_of_le (by norm_num : (0 : ℝ) < 49 / 32) hRa
+  have hrR : (3 / 2 : ℝ) < R :=
+    lt_of_lt_of_le (by norm_num : (3 / 2 : ℝ) < 49 / 32) hRa
+  have hRlt : R < (13 / 8 : ℝ) :=
+    lt_of_le_of_lt hRb (by norm_num)
+  have hclR : Metric.closedBall c R ⊆ Metric.ball c (13 / 8) :=
+    Metric.closedBall_subset_ball hRlt
+  have hAn := analyticOnNhd_landauQuotient T
+  have hdiff : DifferentiableOn ℂ (landauQuotient T) (Metric.ball c R) :=
+    (hAn.mono (Set.subset_univ _)).differentiableOn
+  have hneR : ∀ z ∈ Metric.ball c R, landauQuotient T z ≠ 0 :=
+    fun z hz => landauQuotient_ne_zero_on_landau_ball
+      (hclR (Metric.ball_subset_closedBall hz))
+  have heta_pos : 0 < η := by
+    have : 0 < (n + 1 : ℝ) := by positivity
+    positivity
+  set Cbd : ℝ := MF * η⁻¹ ^ N
+  have hCeq : Cbd = jensenSphereMajorant T *
+      ((1 : ℝ) / (32 * ((landauInnerDisk T).card + 1 : ℝ)))⁻¹ ^
+        (∑ ρ ∈ landauInnerDisk T, riemannZetaMultiplicity ρ) := by
+    simp [Cbd, MF, η, N, n, S]
+  have hCbdle : ∀ z ∈ Metric.ball c R, ‖landauQuotient T z‖ ≤ Cbd := by
+    intro z hz
+    have := norm_landauQuotient_le_on_mid_closedBall hRpos hRlt
+      (by simpa [S] using hfar)
+      (Metric.ball_subset_closedBall hz)
+    convert this
+  have hMFpos : 0 < MF :=
+    lt_of_lt_of_le zero_lt_one (one_le_jensenSphereMajorant T)
+  have hCpos : 0 < Cbd := by
+    have : 0 < η⁻¹ := inv_pos.mpr heta_pos
+    positivity
+  have hlogR : ∀ z ∈ Metric.ball c R,
+      Real.log ‖landauQuotient T z‖ ≤ Real.log Cbd :=
+    fun z hz => Real.log_le_log (norm_pos_iff.mpr (hneR z hz)) (hCbdle z hz)
+  have hzBall : s ∈ Metric.closedBall c (3 / 2) :=
+    mem_closedBall_three_halves_of_horizontal hσ1 hσ2
+  have hker :=
+    norm_logDeriv_le_of_log_norm_le (f := landauQuotient T) (c := c)
+      (M := Real.log Cbd) (R := R) (r := (3 / 2 : ℝ))
+      hRpos (by norm_num) hrR hdiff hneR hlogR hzBall
+  have hgeom := landau_mid_geom_factor hRa hRb
+  set K : ℝ := max (Real.log Cbd - Real.log ‖landauQuotient T c‖) (1 : ℝ)
+  have hKform : 4 * max (Real.log Cbd - Real.log ‖landauQuotient T c‖) (1 : ℝ) *
+      (R + 3 / 2) / (R - 3 / 2) ^ 2 =
+        4 * K * ((R + 3 / 2) / (R - 3 / 2) ^ 2) := by
+    unfold K
+    ring
+  have hgker : ‖logDeriv (landauQuotient T) s‖ ≤ 4 * K * 4096 := by
+    have := hker.trans_eq hKform
+    exact this.trans (mul_le_mul_of_nonneg_left hgeom (by
+      have hKpos : 0 ≤ K := le_trans (by norm_num : (0 : ℝ) ≤ 1) (le_max_right _ _)
+      positivity))
+  have hn1 : (n + 1 : ℝ) ≤ (2 * Cin + 1) * L := by
+    have hnle : (n : ℝ) ≤ (N : ℝ) := by
+      simpa [n, S, hNreal] using card_landauInnerDisk_le_sum_multiplicity T
+    nlinarith [hnle, hNleL, hL]
+  have hinvη : η⁻¹ = 32 * (n + 1 : ℝ) := by
+    unfold η; field_simp
+  have hlogη : Real.log η⁻¹ ≤ Real.log 32 + (n + 1 : ℝ) := by
+    have hn1pos : 0 < (n + 1 : ℝ) := by positivity
+    have : η⁻¹ = 32 * (n + 1 : ℝ) := hinvη
+    have h32 : 0 < (32 : ℝ) := by norm_num
+    rw [this, Real.log_mul (ne_of_gt h32) hn1pos.ne']
+    have : Real.log (n + 1 : ℝ) ≤ (n + 1 : ℝ) - 1 :=
+      Real.log_le_sub_one_of_pos hn1pos
+    linarith
+  have hlogηL : Real.log η⁻¹ ≤ Real.log 32 + (2 * Cin + 1) * L :=
+    hlogη.trans (add_le_add_right hn1 (Real.log 32))
+  have hlogMF : Real.log MF ≤
+      Real.log jensenSphereMajorantCoeff + 4 * L := by
+    have := log_jensenSphereMajorant_le T
+    have h2 : 2 * Real.log (2 + |T|) ≤ 4 * L := by
+      have : 1 + Real.log (2 + |T|) ≤ 2 * L := one_add_log_two_add_abs_le hT
+      nlinarith [Real.log_nonneg (by nlinarith [abs_nonneg T] : (1 : ℝ) ≤ 2 + |T|)]
+    linarith
+  have hc0 : landauQuotient T c ≠ 0 :=
+    landauQuotient_ne_zero_on_landau_ball
+      (Metric.mem_ball_self (by norm_num : (0 : ℝ) < 13 / 8))
+  have hcenter := log_norm_landauQuotient_center_ge T
+  have hMsub : Real.log Cbd - Real.log ‖landauQuotient T c‖ ≤
+      Real.log MF + (N : ℝ) * Real.log η⁻¹ +
+        (N : ℝ) * Real.log (13 / 8 : ℝ) + Real.log ‖riemannZeta 2‖ := by
+    have hclog : Real.log Cbd = Real.log MF + (N : ℝ) * Real.log η⁻¹ := by
+      have hinvpos : 0 < η⁻¹ := inv_pos.mpr heta_pos
+      rw [show Cbd = MF * η⁻¹ ^ N from rfl, Real.log_mul hMFpos.ne'
+        (pow_ne_zero _ hinvpos.ne'), Real.log_pow]
+    have hneg : -Real.log ‖landauQuotient T c‖ ≤
+        (N : ℝ) * Real.log (13 / 8 : ℝ) + Real.log ‖riemannZeta 2‖ := by
+      have hsum : (N : ℝ) =
+          ∑ ρ ∈ landauInnerDisk T, (riemannZetaMultiplicity ρ : ℝ) := hNreal.trans
+        (by simp [S])
+      have := hcenter
+      rw [← hsum] at this
+      linarith [this]
+    linarith [hclog, hneg]
+  have hlog32n : 0 ≤ Real.log 32 :=
+    (Real.log_pos (by norm_num : (1 : ℝ) < 32)).le
+  have hlog138n : 0 ≤ Real.log (13 / 8 : ℝ) :=
+    (Real.log_pos (by norm_num : (1 : ℝ) < 13 / 8)).le
+  have hlogKn : 0 ≤ Real.log jensenSphereMajorantCoeff :=
+    (Real.log_pos one_lt_jensenSphereMajorantCoeff).le
+  have hlogzn : 0 ≤ Real.log ‖riemannZeta 2‖ :=
+    (Real.log_pos one_lt_norm_riemannZeta_two).le
+  have hPack : Real.log Cbd - Real.log ‖landauQuotient T c‖ ≤
+      (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+        2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+          2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 := by
+    have hη1 : (1 : ℝ) ≤ η⁻¹ := by
+      rw [hinvη]
+      have hn1 : (1 : ℝ) ≤ (n + 1 : ℝ) := by
+        exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+      nlinarith [hn1]
+    have hNη : (N : ℝ) * Real.log η⁻¹ ≤
+        2 * Cin * L * (Real.log 32 + (2 * Cin + 1) * L) :=
+      mul_le_mul hNleL hlogηL (Real.log_nonneg hη1)
+        (mul_nonneg (mul_nonneg (by norm_num) hCin.le) hLpos.le)
+    have hNηL : (N : ℝ) * Real.log η⁻¹ ≤
+        (2 * Cin * Real.log 32 + 2 * Cin * (2 * Cin + 1)) * L ^ 2 := by
+      have h1 : 2 * Cin * Real.log 32 * L ≤
+          2 * Cin * Real.log 32 * L ^ 2 :=
+        mul_le_mul_of_nonneg_left hLL
+          (mul_nonneg (mul_nonneg (by norm_num) hCin.le) hlog32n)
+      have hNη' : 2 * Cin * L * (Real.log 32 + (2 * Cin + 1) * L) =
+          2 * Cin * Real.log 32 * L + 2 * Cin * (2 * Cin + 1) * L ^ 2 := by
+        ring
+      linarith [hNη, hNη', h1]
+    have hN138 : (N : ℝ) * Real.log (13 / 8 : ℝ) ≤
+        2 * Cin * Real.log (13 / 8 : ℝ) * L ^ 2 := by
+      have h := mul_le_mul_of_nonneg_right hNleL hlog138n
+      have h' : (2 * Cin * Real.log (13 / 8 : ℝ)) * L ≤
+          (2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 :=
+        mul_le_mul_of_nonneg_left hLL
+          (mul_nonneg (mul_nonneg (by norm_num) hCin.le) hlog138n)
+      have h'' : 2 * Cin * L * Real.log (13 / 8 : ℝ) =
+          (2 * Cin * Real.log (13 / 8 : ℝ)) * L := by ring
+      have h''' : 2 * Cin * Real.log (13 / 8 : ℝ) * L ^ 2 =
+          (2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 := by ring
+      exact h.trans (h''.trans_le (h'''.symm ▸ h'))
+    have hMFL : Real.log MF ≤
+        (Real.log jensenSphereMajorantCoeff + 4) * L ^ 2 := by
+      nlinarith [hlogMF, hLL, hlogKn]
+    have hz2 : Real.log ‖riemannZeta 2‖ ≤
+        Real.log ‖riemannZeta 2‖ * L ^ 2 := by
+      nlinarith [hLL, hlogzn]
+    linarith [hMsub, hMFL, hz2, hNηL, hN138]
+  have hK : K ≤ 1 +
+      (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+        2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+          2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 := by
+    have ha := le_max_left
+      (Real.log Cbd - Real.log ‖landauQuotient T c‖) (1 : ℝ)
+    have : K ≤ max
+        ((Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+          2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+            2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2) (1 : ℝ) :=
+      max_le_max hPack le_rfl
+    have hnn : 0 ≤
+        (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+          2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+            2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 := by
+      have : 0 ≤ Real.log jensenSphereMajorantCoeff :=
+        (Real.log_pos one_lt_jensenSphereMajorantCoeff).le
+      have : 0 ≤ Real.log ‖riemannZeta 2‖ :=
+        (Real.log_pos one_lt_norm_riemannZeta_two).le
+      positivity
+    have hmax : max
+        ((Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+          2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+            2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2) (1 : ℝ) ≤
+        1 +
+          (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+            2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+              2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2 := by
+      exact max_le (le_add_of_nonneg_left (by norm_num)) (le_add_of_nonneg_right hnn)
+    exact this.trans hmax
+  have hgL : ‖logDeriv (landauQuotient T) s‖ ≤
+      16384 * (1 +
+        (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 4 +
+          2 * Cin * (Real.log 32 + (2 * Cin + 1)) +
+            2 * Cin * Real.log (13 / 8 : ℝ)) * L ^ 2) := by
+    have : 4 * K * 4096 = 16384 * K := by ring
+    rw [this] at hgker
+    exact hgker.trans (mul_le_mul_of_nonneg_left hK (by norm_num))
+  have htri : ‖logDeriv riemannZeta s‖ ≤
+      ‖logDeriv (landauQuotient T) s‖ +
+        ‖logDeriv (landauPoly T) s‖ + ‖(1 : ℂ) / (s - 1)‖ := by
+    rw [hsplit, sub_eq_add_neg]
+    have h1 := norm_add_le
+      (logDeriv (landauQuotient T) s + logDeriv (landauPoly T) s)
+      (-(1 / (s - 1)))
+    have h2 := norm_add_le
+      (logDeriv (landauQuotient T) s) (logDeriv (landauPoly T) s)
+    have h3 : ‖-(1 / (s - 1))‖ = ‖(1 : ℂ) / (s - 1)‖ := norm_neg _
+    linarith [h1, h2, h3]
+  have hsumle := htri.trans (add_le_add (add_le_add hgL hPnormL) hs1norm)
+  have hfinal : ‖logDeriv riemannZeta s‖ ≤ landauHorizontalConst * L ^ 3 := by
+    have hbig := landau_cubic_pack (Cin := Cin) (L := L)
+      (a := Real.log jensenSphereMajorantCoeff)
+      (b := Real.log ‖riemannZeta 2‖)
+      (c := Real.log 32)
+      (d := Real.log (13 / 8 : ℝ))
+      hCin.le hL hlogKn hlogzn hlog32n hlog138n
+    have : landauHorizontalConst * L ^ 3 =
+        100000000 * (1 + Cin) ^ 3 *
+          (1 + Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ +
+            Real.log 32 + Real.log (13 / 8) + 4) * L ^ 3 := by
+      simp [landauHorizontalConst, Cin]
+    exact hsumle.trans (hbig.trans_eq this.symm)
+  simpa [s, L] using hfinal
 
 /-- Left vertical `Re = -1/4`: FE fold
 `ζ'/ζ(s) = χ'/χ(s) - ζ'/ζ(1-s)` with `Re(1-s) = 5/4`

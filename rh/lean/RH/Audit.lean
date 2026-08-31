@@ -474,7 +474,10 @@ general balls; `logDeriv` primitive +
 r520: contour revision to the r510-safe
 horizontal `[1/2, 2]`; logDeriv dictionary,
 `landauPoly`, Jensen `Σ m`, gap sum
-`O(log² T)`.  `g = F/Π` + kernel remain.
+`O(log² T)`.
+r521: `horizontalEdgeLandauBound` — `g = F/P`
+update-fill, mid-sphere max modulus, r519
+kernel; Prop closed on `σ ∈ [1/2, 2]`.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -635,6 +638,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms logDeriv_landauPoly
 #print axioms sum_multiplicity_landauInnerDisk_le
 #print axioms norm_sum_multiplicity_inv_le_of_gap
+#print axioms analyticAt_landauQuotient
+#print axioms landauQuotient_ne_zero_on_landau_ball
+#print axioms logDeriv_riemannZeta_eq_landauQuotient_add
+#print axioms norm_landauQuotient_le_on_mid_closedBall
+#print axioms log_norm_landauQuotient_center_ge
+#print axioms horizontalEdgeLandauBound
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
