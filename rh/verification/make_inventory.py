@@ -2683,6 +2683,26 @@ _R475_STATUS = (
     "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R476_STATUS = (
+    "classical Weil crossterm sharpening "
+    "(round 476, PRIME.RDAGGER.CROSSTERM_SHARPENING.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT UNCONDITIONAL(L_max=2.7726) on the first "
+    "Dirichlet H^2 ball (NOT lambda_*(L)>=0).  Route B: "
+    "the ball is span{cos(pi x/(2L))}; 1-mode Rayleigh "
+    "from closed g, regularized A, psi algebraic tail.  "
+    "YB gate PASS r in [1.163e-2, 1.180e-2], P=0.  All 12 "
+    "schedule points H2BALL_POS through L_16=2.7726 "
+    "(r_lo=3.45e-6).  sigma_A(0)=-(gamma+log pi)-(pi/2+3 log 2) "
+    "~ -5.372.  Peano C0 in [16.16596, 16.16597].  "
+    "Smoke 15/15, full 25/25, SPEC_SHA a123650e757b912d.  "
+    "Companion rh/problem/crossterm.tex + "
+    "verify_crossterm.py CROSSTERM VERIFIED -- "
+    "UNCONDITIONAL(L_max=2.7726).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R366_STATUS = "The edge-gap lemma via Markov-Stieltjes mass counting -- the last sharp internal attempt after the r363 INTERNAL_LIMIT (round 366, PRIME.LSTAR.DUAL.EDGE_GAP_MS.01; experiments-side, NO ledger row): 30/30 sealed; SPEC_SHA 2b75c2668f0ca545 final with record, freeze 4164a1c1a1bd3aaf, two-commit protocol pre-freeze dbf340ab / record (this change); two disclosed calibration amendments a1/a2 (MS sandwich f64 floor on 15/85 mid/deep MAIN, max high-side 1.7e-7 at kz133, G33 retyped to graded maxdev; chi shallow sum-lambda bar 1e-12 -> 1e-11 after 2/42 + 1/42 chi rows at 7.4e-12 with sandwich 0/0; NO forcing candidate, SCALED_BAND, MINC_HALF or verdict letter moved).  MAIN VERDICT MS_CENSUS(M1-gap SATZ + M3-sandwich SATZ + M4-sum-lambda SATZ + M5-scaled REFUTED + M6-chr-endpoint REFUTED + M7-dictionary-force OPEN/NO + Z=1 CENSUS 84/85) + REST_NECESSARY_ONLY + STURM_CANONICAL_CENSUS(84/85 MAIN, chi MAY tip, scramble MUST tip) + COMPOSITION_TYPED + INTERNAL_EXHAUSTED.  LEG A: true Gauss zeros (vectorized bisection of p_n, 52 steps) give sum lambda = U to 3e-15 at w9 (mp dps-30 3e-15) and the classical MS sandwich Lambda_{j-1} <= M_left(z_j) <= Lambda_j as SATZ in exact arithmetic; discrete gap theorem SATZ; zero-count == degree 85/85 graded.  THE MASS-FORCING CANDIDATES ARE REFUTED: CAND_SCALED (n M_I/U in (0.5, 1.5)) 0/74 resolvable MAIN; CAND_GE1 (M_I > chr_pair) 0/74.  The pair-gap is DUAL-VOID (w9 M_I = 6.83e-5, U = 520.27, n M_I/U = 2.40e-5) -- proportional counting predicts Z = 0, measured Z = 1 lives in the O(1) MS buffer which cannot distinguish 0 from 1.  Dictionary: M_I IS the closed route-B weight at fold 3; comparing it to Christoffel numbers needs the OP kernel, NOT in the Digamma/tent/reciprocal dictionary.  EDGE-GAP remains OPEN as a theorem.  LEG B: min_diag(R_CC) > 1/2 on 74/74 resolvable (0 C-nodes below 1/2) -- NECESSARY, SATZ (lambda_min <= min diag); Gershgorin >= 0 on 0/74 -- NOT sufficient.  Fold-1 occupation is a UNION mu-atom, not a C-node.  Scramble minC 0.186 < 1/2 (23 C-nodes below) -- named occupation break.  REST_MASS_GO does not fire.  COMPOSITION (74 resolvable): Schur split SATZ 74/74; Cauchy rest>=eps SATZ 74/74; detS>0 and rest>0 CENSUS 74/74; r362 A5/A7 gated at w9.  The r363 hoped chain still has TWO gaps.  Worlds: chi3 30/42 and chi4 29/42 keep Sturm (MAY tip); CAND_SCALED 0/42+0/42; scramble straddle FAILS (n_mid 3, zeros_in_pair 2/2) AND rest -0.4962 AND minC 0.186.  Twin dose-zero bitwise, |dlog| 6.9e-4, |d M_I| 9.7e-10.  Must-fails 5/5 (m1 off-by-one MS 183 viol, m2 bar-by-sight AST, m3 occ-from-rest AST, m4 circular Christoffel AST, m5 wrong gap 0 vs 1).  Honest: both mass paths fail to close the two r363 theorem-loci -- INTERNAL_EXHAUSTED, the internal full attack (pinning then mass) is finished at measured grade; the external RHP path stays a documented option.  Deterministic, record run1/run2 byte-identical up to WALL (260.3/267.2 s).  NO L* claim, NO R-dagger claim, NO RH claim in either direction"
 
 # (path, role, round, ledger_ids, status, pin) -- kept in exact
@@ -6416,6 +6436,26 @@ ENTRIES = [
      "compiled PDF of arch_rate.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/crossterm.tex", "problem_statement",
+     "r476",
+     [],
+     _R476_STATUS,
+     True),
+    ("rh/problem/verify_crossterm.py", "problem_check",
+     "r476 companion",
+     [],
+     "machine check of crossterm.tex: note tokens "
+     "(UNCONDITIONAL, H2BALL_POS, scramble, YB, psi tail), "
+     "smoke run, YB r_lo>0, L_16 pin.  6/6 gates, "
+     "final line CROSSTERM VERIFIED -- "
+     "UNCONDITIONAL(L_max=2.7726)",
+     True),
+    ("rh/problem/crossterm.pdf", "problem_statement",
+     "r476",
+     [],
+     "compiled PDF of crossterm.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -6956,6 +6996,11 @@ ENTRIES = [
      "r475",
      [],
      _R475_STATUS,
+     True),
+    (f"{EXP}/crossterm_probe.py", "sealed_probe",
+     "r476",
+     [],
+     _R476_STATUS,
      True),
 ]
 

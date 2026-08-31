@@ -6876,6 +6876,17 @@ from the named rate.  Witness: $0.119793278323$ at $k=5$
 positivity.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Crossterm sharpening (r476,
+PRIME.RDAGGER.CROSSTERM\_SHARPENING.01).**
+Sealed probe
+`experiments/tfpt-discovery/crossterm_probe.py`
+(smoke 15/15, full 25/25, SPEC\_SHA `a123650e757b912d`)
+plus `rh/problem/crossterm.tex` (+ PDF +
+`verify_crossterm.py`, 6/6, `CROSSTERM VERIFIED -- UNCONDITIONAL(L_max=2.7726)`).
+**Ausgang UNCONDITIONAL($L_{\max}=2.7726$) on the first Dirichlet $H^2$ ball.**
+YB gate PASS ($r\in[1.163\cdot10^{-2},1.180\cdot10^{-2}]$, $P=0$).  All 12 schedule points H2BALL\_POS through $L_{16}$.  Not $\lambda_*(L)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7316,6 +7327,10 @@ rh/
 │   │                     RATE_O_DELTA2; Gauss named;
 │   │                     err O(Delta^2) at fixed f.
 │   │                     No RH claim
+│   ├── crossterm.tex(+pdf) — r476: UNCONDITIONAL
+│   │                     (L_max=2.7726) on the first
+│   │                     Dirichlet H^2 ball; YB gate PASS.
+│   │                     Not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8489,6 +8504,13 @@ Audit.lean, the probe, the problem note, INVENTORY, and these
 status lines.  It does not touch `experiments/next.txt`.
 Census stays 8.  Suite surface: integrity + probes + Lean
 (`run_rh.py --fast`).
+**r476 coexistence.** Round 476 (`crossterm_probe.py`) seals
+the first-mode Rayleigh as UNCONDITIONAL(L_max=2.7726) on
+the declared H^2 ball (not lambda_*).  File domain is the
+probe, `crossterm.tex`, the verifier, INVENTORY, `run_rh.py`,
+and these status lines.  It does not touch Lean or
+`experiments/next.txt`.  Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

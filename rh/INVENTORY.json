@@ -4126,6 +4126,36 @@
       "bytes": 225108
     },
     {
+      "path": "rh/problem/crossterm.tex",
+      "role": "problem_statement",
+      "round": "r476",
+      "ledger_ids": [],
+      "status": "classical Weil crossterm sharpening (round 476, PRIME.RDAGGER.CROSSTERM_SHARPENING.01; experiments-side, NO ledger row): VERDICT UNCONDITIONAL(L_max=2.7726) on the first Dirichlet H^2 ball (NOT lambda_*(L)>=0).  Route B: the ball is span{cos(pi x/(2L))}; 1-mode Rayleigh from closed g, regularized A, psi algebraic tail.  YB gate PASS r in [1.163e-2, 1.180e-2], P=0.  All 12 schedule points H2BALL_POS through L_16=2.7726 (r_lo=3.45e-6).  sigma_A(0)=-(gamma+log pi)-(pi/2+3 log 2) ~ -5.372.  Peano C0 in [16.16596, 16.16597].  Smoke 15/15, full 25/25, SPEC_SHA a123650e757b912d.  Companion rh/problem/crossterm.tex + verify_crossterm.py CROSSTERM VERIFIED -- UNCONDITIONAL(L_max=2.7726).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "6e0fa43bff47ee2f9e01a84d2594ff1d2e99f8e912eb462a2a918b60b80da7a8",
+      "bytes": 6722
+    },
+    {
+      "path": "rh/problem/verify_crossterm.py",
+      "role": "problem_check",
+      "round": "r476 companion",
+      "ledger_ids": [],
+      "status": "machine check of crossterm.tex: note tokens (UNCONDITIONAL, H2BALL_POS, scramble, YB, psi tail), smoke run, YB r_lo>0, L_16 pin.  6/6 gates, final line CROSSTERM VERIFIED -- UNCONDITIONAL(L_max=2.7726)",
+      "pin": true,
+      "sha256": "04564760f3990065bc950126a810168271daa88ec064706e8a0bef14f34bc97e",
+      "bytes": 3058
+    },
+    {
+      "path": "rh/problem/crossterm.pdf",
+      "role": "problem_statement",
+      "round": "r476",
+      "ledger_ids": [],
+      "status": "compiled PDF of crossterm.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "142cff0410a25f36fdacb056039469a57ad7a0de425e451dde9b77835d2b51b8",
+      "bytes": 353006
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4300,8 +4330,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "dd1c3f8f3b56714bfac45cf2fd416757e4b844996244032b63833a234342a6d5",
-      "bytes": 5575860
+      "sha256": "5f182df9a84cd97b0bf277dcf9aabdf011d071e3bdaa626445ce995b14f01e09",
+      "bytes": 5577528
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5252,6 +5282,16 @@
       "pin": true,
       "sha256": "a79ea3370a5ad813e3a378ba11915320bfe556d1b636b331723ed7779d3a0c77",
       "bytes": 5494
+    },
+    {
+      "path": "experiments/tfpt-discovery/crossterm_probe.py",
+      "role": "sealed_probe",
+      "round": "r476",
+      "ledger_ids": [],
+      "status": "classical Weil crossterm sharpening (round 476, PRIME.RDAGGER.CROSSTERM_SHARPENING.01; experiments-side, NO ledger row): VERDICT UNCONDITIONAL(L_max=2.7726) on the first Dirichlet H^2 ball (NOT lambda_*(L)>=0).  Route B: the ball is span{cos(pi x/(2L))}; 1-mode Rayleigh from closed g, regularized A, psi algebraic tail.  YB gate PASS r in [1.163e-2, 1.180e-2], P=0.  All 12 schedule points H2BALL_POS through L_16=2.7726 (r_lo=3.45e-6).  sigma_A(0)=-(gamma+log pi)-(pi/2+3 log 2) ~ -5.372.  Peano C0 in [16.16596, 16.16597].  Smoke 15/15, full 25/25, SPEC_SHA a123650e757b912d.  Companion rh/problem/crossterm.tex + verify_crossterm.py CROSSTERM VERIFIED -- UNCONDITIONAL(L_max=2.7726).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "095d34e0981f1779572dce74c21246724b0ff37478c38f95cdd2a316df6bf812",
+      "bytes": 13344
     }
   ]
 }
