@@ -6887,6 +6887,17 @@ plus `rh/problem/crossterm.tex` (+ PDF +
 YB gate PASS ($r\in[1.163\cdot10^{-2},1.180\cdot10^{-2}]$, $P=0$).  All 12 schedule points H2BALL\_POS through $L_{16}$.  Not $\lambda_*(L)\ge0$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**High-mode dominance (r477,
+PRIME.RDAGGER.HIGHMODE\_DOMINANCE.01).**
+Sealed probe
+`experiments/tfpt-discovery/highmode_probe.py`
+(smoke 18/18, full 28/28, SPEC\_SHA `57fd2de61c6fdcc9`)
+plus `rh/problem/highmode.tex` (+ PDF +
+`verify_highmode.py`, 6/6, `HIGHMODE VERIFIED -- ARCHITECTURE_STANDS(0.3,0.8,1.0)`).
+**Regime ARCHITECTURE\_STANDS at $L=0.3,0.8,1.0$.**
+Symbol identity sealed; $t_0=22/4300/2.44\cdot10^5$; crude Schur bound fails; direct $2\times2$ PD.  YB gate PASS.  Not $\lambda_*(L)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7331,6 +7342,9 @@ rh/
 │   │                     (L_max=2.7726) on the first
 │   │                     Dirichlet H^2 ball; YB gate PASS.
 │   │                     Not lambda_*.  No RH claim
+│   ├── highmode.tex(+pdf) — r477: ARCHITECTURE_STANDS
+│   │                     (0.3,0.8,1.0); t0+Schur schema;
+│   │                     not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8510,6 +8524,13 @@ the declared H^2 ball (not lambda_*).  File domain is the
 probe, `crossterm.tex`, the verifier, INVENTORY, `run_rh.py`,
 and these status lines.  It does not touch Lean or
 `experiments/next.txt`.  Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r477 coexistence.** Round 477 (`highmode_probe.py`) seals
+the high-mode / Schur architecture at L=0.3,0.8,1.0
+(not lambda_*).  File domain is the probe, `highmode.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362

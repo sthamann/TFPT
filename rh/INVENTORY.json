@@ -4156,6 +4156,36 @@
       "bytes": 353006
     },
     {
+      "path": "rh/problem/highmode.tex",
+      "role": "problem_statement",
+      "round": "r477",
+      "ledger_ids": [],
+      "status": "classical Weil high-mode dominance (round 477, PRIME.RDAGGER.HIGHMODE_DOMINANCE.01; experiments-side, NO ledger row): VERDICT ARCHITECTURE_STANDS(0.3,0.8,1.0).  Frequency form A=(1/2pi) int sigma_A |hat h|^2 with sigma_A = Re psi(1/4+it/2)-log pi, Bose identity sealed at 6 frequencies.  Prime range n<=e^{2L}.  High-mode t0 sealed: 22 / 4300 / 2.44e5.  Crude Schur coupling bound fails (YB crude ~-125); direct 2x2 (constant, first Dirichlet) PD at all three L (Schur_lo 4.67e-2, 7.41e-2, 3.55e-2).  YB gate PASS (P=0).  Not lambda_*(L)>=0.  Smoke 18/18, full 28/28, SPEC_SHA 57fd2de61c6fdcc9.  Companion rh/problem/highmode.tex + verify_highmode.py HIGHMODE VERIFIED -- ARCHITECTURE_STANDS(0.3,0.8,1.0).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "6eb978b8a8c9e880a740702fc5404e37f4708cf1cbc8a186fe3620f516e1f8b7",
+      "bytes": 6249
+    },
+    {
+      "path": "rh/problem/verify_highmode.py",
+      "role": "problem_check",
+      "round": "r477 companion",
+      "ledger_ids": [],
+      "status": "machine check of highmode.tex: note tokens (ARCHITECTURE_STANDS, e^{2L}, Re psi, Schur, YB), smoke run, t0 and Schur pins.  6/6 gates, final line HIGHMODE VERIFIED -- ARCHITECTURE_STANDS(0.3,0.8,1.0)",
+      "pin": true,
+      "sha256": "47ff2475f8dc4ff150d4956dd443e048c33ba38cc137f5e2375a12113ae1537b",
+      "bytes": 2979
+    },
+    {
+      "path": "rh/problem/highmode.pdf",
+      "role": "problem_statement",
+      "round": "r477",
+      "ledger_ids": [],
+      "status": "compiled PDF of highmode.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "0a19265480a1f5f66547672301111d62c3a66e6b79de7c9a457b05c04a237095",
+      "bytes": 355124
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4330,8 +4360,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5f182df9a84cd97b0bf277dcf9aabdf011d071e3bdaa626445ce995b14f01e09",
-      "bytes": 5577528
+      "sha256": "ca95655ebc4855c664606fbcc95bf150afbd2888ffde88c5dc7bac7ecdcdc5c6",
+      "bytes": 5579632
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5292,6 +5322,16 @@
       "pin": true,
       "sha256": "095d34e0981f1779572dce74c21246724b0ff37478c38f95cdd2a316df6bf812",
       "bytes": 13344
+    },
+    {
+      "path": "experiments/tfpt-discovery/highmode_probe.py",
+      "role": "sealed_probe",
+      "round": "r477",
+      "ledger_ids": [],
+      "status": "classical Weil high-mode dominance (round 477, PRIME.RDAGGER.HIGHMODE_DOMINANCE.01; experiments-side, NO ledger row): VERDICT ARCHITECTURE_STANDS(0.3,0.8,1.0).  Frequency form A=(1/2pi) int sigma_A |hat h|^2 with sigma_A = Re psi(1/4+it/2)-log pi, Bose identity sealed at 6 frequencies.  Prime range n<=e^{2L}.  High-mode t0 sealed: 22 / 4300 / 2.44e5.  Crude Schur coupling bound fails (YB crude ~-125); direct 2x2 (constant, first Dirichlet) PD at all three L (Schur_lo 4.67e-2, 7.41e-2, 3.55e-2).  YB gate PASS (P=0).  Not lambda_*(L)>=0.  Smoke 18/18, full 28/28, SPEC_SHA 57fd2de61c6fdcc9.  Companion rh/problem/highmode.tex + verify_highmode.py HIGHMODE VERIFIED -- ARCHITECTURE_STANDS(0.3,0.8,1.0).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "b94956d651eb75b5b4990fd5651bdee9ac1c8efcc73b63c8adfa43e38bd8711b",
+      "bytes": 13192
     }
   ]
 }

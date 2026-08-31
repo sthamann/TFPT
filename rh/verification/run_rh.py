@@ -250,6 +250,7 @@ PROBES = [
     ("r474", "modulus_upgrade_probe.py"),
     ("r475", "arch_rate_probe.py"),
     ("r476", "crossterm_probe.py"),
+    ("r477", "highmode_probe.py"),
 ]
 
 MODULES = [
