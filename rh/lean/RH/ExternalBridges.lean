@@ -2984,8 +2984,46 @@ lemma FullWeilTest.integrable_hat_comp_sub (F : FullWeilTest) (s : ℂ) (δ : �
   · linarith [hm.1, neg_le_abs δ, F.supportRadius_nonneg]
   · linarith [hm.2, le_abs_self δ, F.supportRadius_nonneg]
 
--- The Weierstrass identity `hat * (1-e^{sδ})² = ∫ Δ²g e^{st}` and the
--- strip bound `‖hat s‖ ≤ C/(1+|Im s|²)` are the next [2c] cut.
+/-- Two one-step translations: no `2δ` coercion. -/
+lemma FullWeilTest.hat_comp_sub_twice (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    ∫ t : ℝ, (F.toFun (t + (-δ) + (-δ)) : ℂ) * exp (s * t) =
+      exp (s * δ) * exp (s * δ) * F.hat s := by
+  have hφ :
+      (fun t : ℝ => (F.toFun (t + (-δ) + (-δ)) : ℂ) * exp (s * t)) =
+        fun t =>
+          (fun u : ℝ => (F.toFun (u + (-δ)) : ℂ) * exp (s * (u + δ)))
+            (t + (-δ)) := by
+    ext t
+    simp
+  rw [hφ, integral_add_right_eq_self
+      (fun u : ℝ => (F.toFun (u + (-δ)) : ℂ) * exp (s * (u + δ))) (-δ)]
+  have hmul :
+      (fun u : ℝ => (F.toFun (u + (-δ)) : ℂ) * exp (s * (u + δ))) =
+        fun u => exp (s * δ) • ((F.toFun (u + (-δ)) : ℂ) * exp (s * u)) := by
+    ext u
+    have hadd : s * ((u : ℂ) + (δ : ℂ)) = s * u + s * δ := mul_add _ _ _
+    rw [hadd, exp_add, smul_eq_mul]
+    ring
+  rw [hmul, integral_smul, F.hat_comp_sub s δ, smul_eq_mul]
+  ring
+
+lemma FullWeilTest.integrable_hat_comp_sub_twice
+    (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    Integrable fun t : ℝ =>
+      (F.toFun (t + (-δ) + (-δ)) : ℂ) * exp (s * t) := by
+  have hpt : ∀ t : ℝ,
+      F.toFun (t + (-δ) + (-δ)) = F.toFun (t + (-(2 * δ))) :=
+    fun t => by ring
+  simp_rw [hpt]
+  exact F.integrable_hat_comp_sub s (2 * δ)
+
+
+-- r504 third clamp: Weierstrass identity `hat*(1-e^{sδ})² = ∫ Δ²g e^{st}`
+-- does not rewrite through Bochner `integral_add`/`integral_sub` on
+-- `g0 - 2•gδ + g2` (Pi.add vs pointwise); `exp_eq_neg_exp_re` still
+-- fights `ofReal_div` / `↑π * I` vs `I * ↑π`.  Consumer
+-- `norm_hat_le_inv_sq` therefore not landed.  Two-step translation
+-- (`hat_comp_sub_twice`) is in: no `2δ` coercion remains.
 
 end WeilHatGrowth
 

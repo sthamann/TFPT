@@ -757,6 +757,29 @@ Remaining named pieces of [2] (not extra sorries):
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r504 census (outer bridges 11, strip bound)
+
+Target `FullWeilTest.norm_hat_le_inv_sq` NOT landed.
+Two-step translation IS in, sorry-free:
+`∫ g(t-δ-δ) e^{st} = e^{sδ} e^{sδ} hat`
+(`hat_comp_sub_twice`) -- the `2δ` coercion
+is gone.  Third clamp: Bochner
+`integral_add`/`integral_sub` will not match
+`∫ (g0 - 2•gδ + g2)` (Pi.add vs pointwise),
+and `e^{sδ} = -e^{σδ}` still fights
+`ofReal_div` / `↑π * I` vs `I * ↑π`.
+Consumer assembly `nlinarith` on the strip
+constants timed out behind those.
+
+ĥ-side of [2c] still missing `1/t²`.
+Remaining named pieces of [2] (not extra sorries):
+  [2c] Weierstrass identity +
+      `‖hat s‖ ≤ C/(1+|Im s|²)` on the strip;
+  [2c] `|ζ|` convexity → Jensen → `N(T)` →
+      `∑ 1/|ρ|²`;
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

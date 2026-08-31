@@ -417,8 +417,11 @@ product no) and proves the spectral kernel
 difference `O(δ²)` bound
 (`autocorrelation_second_diff_le`,
 `FullWeilTest.abs_second_diff_le`) and hat
-translation (`hat_comp_sub`).  Strip `1/t²`
-(`norm_hat_le_inv_sq`) remains the next cut.
+translation (`hat_comp_sub`).  r504 adds the
+two-step translation (`hat_comp_sub_twice`);
+the consumer strip bound `norm_hat_le_inv_sq`
+is still open (Bochner Pi.add split /
+`ofReal` Weierstrass wiring).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -488,6 +491,8 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.abs_second_diff_le
 #print axioms FullWeilTest.hat_comp_sub
 #print axioms FullWeilTest.integrable_hat_comp_sub
+#print axioms FullWeilTest.hat_comp_sub_twice
+#print axioms FullWeilTest.integrable_hat_comp_sub_twice
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
