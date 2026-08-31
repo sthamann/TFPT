@@ -6920,6 +6920,17 @@ plus `rh/problem/lambdastar03.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge0$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Kappa-high remainder (r480,
+PRIME.RDAGGER.KAPPA\_HIGH.01).**
+Sealed probe
+`experiments/tfpt-discovery/kappa_high_probe.py`
+(smoke 14/14, full 23/23, SPEC\_SHA `7be2cb1dcc994ba6`)
+plus `rh/problem/kappa_high.tex` (+ PDF +
+`verify_kappa_high.py`, 6/6, `KAPPA_HIGH VERIFIED -- REDUCED(refined-Schur; crude-kappa_high-killed@0.30)`).
+**Regime REDUCED: crude $\kappa_{\mathrm{high}}\le1.79\cdot10^{-2}$ KILL ($\approx0.291$); refined even Schur numeric PD, interval OPEN.**
+Not $\lambda_*(0.3)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7373,6 +7384,9 @@ rh/
 │   ├── lambdastar03.tex(+pdf) — r479: REDUCED
 │   │                     (kappa_high<=1.79e-2 at t*=8,N=5);
 │   │                     not lambda_*.  No RH claim
+│   ├── kappa_high.tex(+pdf) — r480: REDUCED
+│   │                     (refined-Schur; crude-kappa_high
+│   │                     killed@0.30); not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8570,6 +8584,14 @@ integrity + probes (`run_rh.py --fast --skip-lean`).
 **r479 coexistence.** Round 479 (`lambdastar03_probe.py`)
 reduces lambda_*(0.3)>=0 to a high-band coupling bound
 (not lambda_*).  File domain is the probe, `lambdastar03.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r480 coexistence.** Round 480 (`kappa_high_probe.py`)
+kills the r479 operator-norm remainder and reduces
+lambda_*(0.3)>=0 to a refined even matrix Schur
+(not lambda_*).  File domain is the probe, `kappa_high.tex`,
 the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes

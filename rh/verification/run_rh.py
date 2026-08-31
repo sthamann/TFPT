@@ -253,6 +253,7 @@ PROBES = [
     ("r477", "highmode_probe.py"),
     ("r478", "endtoend_fixedl_probe.py"),
     ("r479", "lambdastar03_probe.py"),
+    ("r480", "kappa_high_probe.py"),
 ]
 
 MODULES = [

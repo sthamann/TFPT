@@ -4246,6 +4246,36 @@
       "bytes": 418055
     },
     {
+      "path": "rh/problem/kappa_high.tex",
+      "role": "problem_statement",
+      "round": "r480",
+      "ledger_ids": [],
+      "status": "classical Weil kappa_high at L=0.3 (round 480, PRIME.RDAGGER.KAPPA_HIGH.01; experiments-side, NO ledger row): VERDICT REDUCED(refined-Schur; crude-kappa_high-killed@0.30).  Named r479 bound ||P_5 A_+ (1-P_5)||<=1.79e-2 is FALSE: Nyström n=48 T=150 gives kappa_high~2.91e-1 (stable vs n=64); every scanned (t*,N) stays >0.25.  Edge modes n=3,4 have 1-lambda=O(1) and couple O(sigma) to the tail; crude sqrt(mu_3 c_tail) mixes directions.  Fourier-HS not reused.  Refined even 3x3 Schur S=B-CC^T/c_tail is numerically PD (lmin~5.69e-3); odd ~0.207.  Interval S>0 OPEN.  Not lambda_*(0.3)>=0.  Smoke 14/14, full 23/23, SPEC_SHA 7be2cb1dcc994ba6.  Companion rh/problem/kappa_high.tex + verify_kappa_high.py KAPPA_HIGH VERIFIED -- REDUCED(refined-Schur; crude-kappa_high-killed@0.30).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "4217ba61c2a857921cd6e700224f00414523e2bbd8ea8db93e0650ab0c7c5018",
+      "bytes": 9640
+    },
+    {
+      "path": "rh/problem/verify_kappa_high.py",
+      "role": "problem_check",
+      "round": "r480 companion",
+      "ledger_ids": [],
+      "status": "machine check of kappa_high.tex: note tokens (REDUCED, e^{2L}, refined Schur, Fourier-HS not reused, YB), smoke run, crude-kill and Schur pins.  6/6 gates, final line KAPPA_HIGH VERIFIED -- REDUCED(refined-Schur; crude-kappa_high-killed@0.30)",
+      "pin": true,
+      "sha256": "cbeca7c359b83a7f91264357a7b456f03302399d6d558ec8f6d0f3dee83aed62",
+      "bytes": 3140
+    },
+    {
+      "path": "rh/problem/kappa_high.pdf",
+      "role": "problem_statement",
+      "round": "r480",
+      "ledger_ids": [],
+      "status": "compiled PDF of kappa_high.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "032ab7d5de3159a22d01d6830b7f52f0a5f302206ae73f3b1326231980b539f6",
+      "bytes": 405982
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4420,8 +4450,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "4ba84f6374c275bc11dcb0beee510dc1b260bd61c757204043e492e1731b7e0e",
-      "bytes": 5583395
+      "sha256": "ff7bc15d54b7ccf474c331b923806bf8a449aa7f8ed7beeed02e4c2db806321e",
+      "bytes": 5585033
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5412,6 +5442,16 @@
       "pin": true,
       "sha256": "02d78deed78455987be9b93091f8981b87b1d37e4e6806580dc4b22dad8813b2",
       "bytes": 10666
+    },
+    {
+      "path": "experiments/tfpt-discovery/kappa_high_probe.py",
+      "role": "sealed_probe",
+      "round": "r480",
+      "ledger_ids": [],
+      "status": "classical Weil kappa_high at L=0.3 (round 480, PRIME.RDAGGER.KAPPA_HIGH.01; experiments-side, NO ledger row): VERDICT REDUCED(refined-Schur; crude-kappa_high-killed@0.30).  Named r479 bound ||P_5 A_+ (1-P_5)||<=1.79e-2 is FALSE: Nyström n=48 T=150 gives kappa_high~2.91e-1 (stable vs n=64); every scanned (t*,N) stays >0.25.  Edge modes n=3,4 have 1-lambda=O(1) and couple O(sigma) to the tail; crude sqrt(mu_3 c_tail) mixes directions.  Fourier-HS not reused.  Refined even 3x3 Schur S=B-CC^T/c_tail is numerically PD (lmin~5.69e-3); odd ~0.207.  Interval S>0 OPEN.  Not lambda_*(0.3)>=0.  Smoke 14/14, full 23/23, SPEC_SHA 7be2cb1dcc994ba6.  Companion rh/problem/kappa_high.tex + verify_kappa_high.py KAPPA_HIGH VERIFIED -- REDUCED(refined-Schur; crude-kappa_high-killed@0.30).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "b969f45b333e74ded2c4d0897dba325a7f7d6345920eb9353e472858de0d2586",
+      "bytes": 13370
     }
   ]
 }
