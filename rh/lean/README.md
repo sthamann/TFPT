@@ -130,6 +130,17 @@
 > density, channel continuity and positivity transfer are derived from
 > that one package.  Census **9 → 8**. NO RH CLAIM.
 >
+> **r491 outer bridges 3 — HIDDEN GAP FOUND / REDUCED:** r489's
+> completion has three components, not two: dyadic convergence, arch
+> continuity, and pole identification.  The polar sign is corrected to
+> `+2 cosh(u/2)`.  `fullWeilArchSide` is now concrete.  The witness has
+> explicit Lipschitz and support-length contracts; `dyadicSampleGrid`
+> is an explicit left-sampled dyadic sequence with a proved support
+> bound.  Its remaining convergence is
+> `FullWeilDyadicSampleConvergence`.  The pole seam is narrowed to
+> `GridPoleHatIntegralIdentity`, whose implication to the sequence
+> dictionary is proved.  Census **8 → 8**. NO RH CLAIM.
+>
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
 > bridge never bound `u`/`B` vs `terminal_positive_main`; U2: mesh-width
@@ -998,7 +1009,7 @@ Loewner identities and the density / mean-value lemmas do not.
 | `frequently_of_pos_lower_density` | **proved** | density `≥ ε > 0` eventually ⇒ frequently |
 | `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
 
-Zero `sorry` in this file.  Repository census is 8 after r489
+Zero `sorry` in this file.  Repository census is 8 after r491
 (three external bridge sorries in `RH/ExternalBridges.lean`).
 
 **r440 mean tau index (no new Lean).**  T1/T2/MI2 are

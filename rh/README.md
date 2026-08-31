@@ -7059,6 +7059,21 @@ The $0.3$ keystone is frozen.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 
+**Outer bridges III (r491,
+PRIME.RDAGGER.OUTER\_BRIDGES.03).**
+Structural probe `experiments/tfpt-discovery/outer_bridges3_probe.py`
+(smoke 12/12, SPEC\_SHA `baaafe714f54eb07`) plus
+`rh/problem/outer_bridges3.tex` (+ PDF +
+`verify_outer_bridges3.py`, 7/7,
+`OUTER BRIDGES 3 VERIFIED -- REDUCED`).
+**Verdict HIDDEN\_GAP\_FOUND / DENSITY\_BRIDGE\_REDUCED.**
+The r489 completion has three components, not two.  r491 corrects the
+polar sign to `+2 cosh`, makes the full arch functional concrete, and
+constructs the support-fitting sampled dyadic GridElement sequence.
+Its support bound and the implication from hat identity to pole
+sequence continuity are proved.  Census **8 → 8**.  NO RH CLAIM.
+
+
 ## Folder guide
 
 ```
@@ -7185,10 +7200,10 @@ rh/
 │       │                    density, grid fold, sign split; k=5/9/10
 │       │                    pins match lean_fidelity_probe).  Zero sorry;
 │       │                    NO RH CLAIM
-│       ├── ExternalBridges.lean — r463/r487/r489 outer bridges;
-│       │                    uniform+L1 fixed-support topology; comb
-│       │                    and standard polar continuity proved;
-│       │                    one dense completion sorry remains.
+│       ├── ExternalBridges.lean — r463/r487/r489/r491 bridges;
+│       │                    +2cosh sign fixed; full arch concrete;
+│       │                    explicit support-fitting dyadic sampler;
+│       │                    three-part completion sorry remains.
 │       │                    Three external sorries; census 8.
 │       │                    NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
@@ -8844,6 +8859,14 @@ lines.  It does not touch Lean or
 `experiments/next.txt`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r491 coexistence.** Round 491 (`outer_bridges3_probe.py`) finds
+the omitted arch component, repairs the polar sign, and narrows the
+completion to explicit dyadic convergence, arch continuity, and the
+finite-hat pole identity.  File domain is `RH/ExternalBridges.lean`,
+`RH/Audit.lean`, `RH/Open.lean`, Lean and RH READMEs, the probe,
+`outer_bridges3.tex`, verifier, INVENTORY, and `run_rh.py`.  It does
+not touch `experiments/next.txt`.  Suite surface: integrity + probes +
+Lean (`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

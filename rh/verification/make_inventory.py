@@ -2811,6 +2811,23 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R491_STATUS = (
+    "outer bridges final-density audit and reduction "
+    "(round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; "
+    "experiments-side structural seal, NO ledger row): "
+    "VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  "
+    "The r489 completion has three components, not two.  Polar "
+    "normalization corrected to +2*cosh; one-cell pin "
+    "2.042015443302091.  fullWeilArchSide is concrete.  The L2 "
+    "witness has Lipschitz and support-length contracts; explicit "
+    "dyadicSampleGrid uses floor(R*2^m) cells and has a proved support "
+    "bound.  Remaining exact targets: sampled autocorrelation "
+    "convergence, singular arch continuity, finite-hat pole integral.  "
+    "Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  "
+    "Lean sorry census 8 -> 8 (external 3).  NO L* claim, "
+    "NO R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7071,6 +7088,25 @@ ENTRIES = [
      "compiled PDF of operator_residual.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/outer_bridges3.tex", "problem_statement",
+     "r491",
+     [],
+     _R491_STATUS,
+     True),
+    ("rh/problem/verify_outer_bridges3.py", "problem_check",
+     "r491 companion",
+     [],
+     "machine check of r491 outer bridges: polar sign, concrete full "
+     "arch, explicit dyadic construction and support bound, exact pole "
+     "hat seam, honest unchanged census, structural smoke.  7/7 gates, "
+     "final line OUTER BRIDGES 3 VERIFIED -- REDUCED",
+     True),
+    ("rh/problem/outer_bridges3.pdf", "problem_statement",
+     "r491",
+     [],
+     "compiled PDF of outer_bridges3.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7686,6 +7722,11 @@ ENTRIES = [
      "r490",
      [],
      _R490_STATUS,
+     True),
+    (f"{EXP}/outer_bridges3_probe.py", "sealed_probe",
+     "r491",
+     [],
+     _R491_STATUS,
      True),
 ]
 

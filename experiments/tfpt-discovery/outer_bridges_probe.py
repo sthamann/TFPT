@@ -71,7 +71,7 @@ def main() -> int:
               "FullWeilChannelContinuity")))
     check("three-channel-form-visible",
           all(token in external for token in (
-              "opaque fullWeilArchSide",
+              "noncomputable def fullWeilArchSide",
               "noncomputable def fullWeilCombSide",
               "noncomputable def fullWeilPoleSide",
               "noncomputable def fullWeilForm")))

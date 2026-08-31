@@ -1155,6 +1155,16 @@ integral continuity, and one remaining dense-completion package.
 python experiments/tfpt-discovery/outer_bridges2_probe.py --smoke
 ```
 
+`tfpt-discovery/outer_bridges3_probe.py` seals the r491 correction and
+reduction: positive polar `2 cosh` normalization, concrete full arch
+functional, explicit support-fitting dyadic sampler, and the exact
+three-part completion remainder.  Verdict:
+`HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED`.
+
+```bash
+python experiments/tfpt-discovery/outer_bridges3_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen

@@ -365,7 +365,7 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms productionArchDelta_tendsto_atTop
 #print axioms selectedArchError_tendsto_zero_of_rate
 
-/-! ## (q) The r463/r487/r489 explicit external-bridge census
+/-! ## (q) The r463/r487/r489/r491 explicit external-bridge census
 r489 proves finite comb continuity and continuity of the standard
 polar integral, strengthens the topology to uniform-on-fixed-support
 plus `L¹`, and consolidates density, arch continuity, and the r376
@@ -375,8 +375,21 @@ External census returns from four to three; repository census 9 -> 8.
 The Mathlib endpoint wrapper is proved from the one named
 off-critical separation theorem.  Standard explicit-formula
 normalization remains one `sorry`.
+
+r491 corrects the polar integral sign (`+2 cosh`, because the r376
+pairing has an outer minus), makes `fullWeilArchSide` concrete, and
+retypes the dense component around the explicit support-fitting
+`dyadicSampleGrid`.  The remaining pole seam is the exact finite-hat
+identity `GridPoleHatIntegralIdentity`; its implication to the
+sequence dictionary is proved.  Completion still has three
+components (dyadic convergence, arch continuity, pole hat identity),
+so census honestly remains 8.  No hidden two-component closure is
+claimed.
 The internal endpoint is deliberately not named RH. -/
 
+#print axioms dyadicSampleGrid_supportBound_le
+#print axioms fullWeilFixedSupportGridDensity_of_dyadicSample
+#print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
 #print axioms weilCombSide_eq_fullAnchor

@@ -399,7 +399,7 @@ supported in `L²`.  PROVED:
   * global pointwise convergence from the support-uniform topology;
   * common finite-anchor reduction and comb-channel continuity;
   * continuity of the standard polar integral
-    `∫ -2 cosh(u/2) g(u) du`.
+    `∫ +2 cosh(u/2) g(u) du` (sign corrected in r491).
 
 The r376 native-mesh pole read is not definitionally that integral.
 Its finite-element identity is named
@@ -410,6 +410,33 @@ it is one transparent conjunction
 `sorry`.  Public density, channel-continuity, and positivity wrappers
 are derived from it.  External sorries 4 -> 3; repository census
 9 -> 8.  NO RH CLAIM.
+
+## r491 census (outer bridges 3)
+
+HIDDEN GAP FOUND: the r489 completion has three components, not the
+two listed in the r491 prompt.  `FullWeilArchContinuity` is still
+required, and was previously impossible to derive while
+`fullWeilArchSide` was opaque.  It is now the concrete r475 u-space
+pairing.
+
+The r376 pole normalization is corrected: `polePotential'' =
+-2 cosh(u/2)` and `polePairingZ` has an outer minus, hence the full
+integral weight is `+2 cosh(u/2)`.  The one-cell check is
+2.042015443302091 on both sides (difference 1.8e-15).
+
+The L2 witness now carries a Lipschitz constant and support in an
+interval of length `supportRadius`.  `dyadicSampleGrid` is explicit:
+left samples, mesh `2^-m`, and `floor(R*2^m)` cells; its support bound
+is PROVED.  Its convergence is isolated as
+`FullWeilDyadicSampleConvergence`, which implies the previous
+existential density interface.  The pole seam is reduced to the exact
+finite-hat theorem `GridPoleHatIntegralIdentity`; its implication to
+the sequence-level dictionary is PROVED.
+
+Still open inside the one completion sorry: dyadic sampled
+autocorrelation convergence, singular u-space arch continuity, and
+the finite-hat pole integral.  Census remains 8 (external 3).
+No density-bridge closure and NO RH CLAIM.
 
 ## r440 census (mean tau index)
 

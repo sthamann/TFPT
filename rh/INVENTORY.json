@@ -4576,6 +4576,36 @@
       "bytes": 462526
     },
     {
+      "path": "rh/problem/outer_bridges3.tex",
+      "role": "problem_statement",
+      "round": "r491",
+      "ledger_ids": [],
+      "status": "outer bridges final-density audit and reduction (round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; experiments-side structural seal, NO ledger row): VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  The r489 completion has three components, not two.  Polar normalization corrected to +2*cosh; one-cell pin 2.042015443302091.  fullWeilArchSide is concrete.  The L2 witness has Lipschitz and support-length contracts; explicit dyadicSampleGrid uses floor(R*2^m) cells and has a proved support bound.  Remaining exact targets: sampled autocorrelation convergence, singular arch continuity, finite-hat pole integral.  Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  Lean sorry census 8 -> 8 (external 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "f6b1545959c4e90e9a69e88051c17ce4d382080e727251a93322b737a0e1346c",
+      "bytes": 4481
+    },
+    {
+      "path": "rh/problem/verify_outer_bridges3.py",
+      "role": "problem_check",
+      "round": "r491 companion",
+      "ledger_ids": [],
+      "status": "machine check of r491 outer bridges: polar sign, concrete full arch, explicit dyadic construction and support bound, exact pole hat seam, honest unchanged census, structural smoke.  7/7 gates, final line OUTER BRIDGES 3 VERIFIED -- REDUCED",
+      "pin": true,
+      "sha256": "81c2b809b92c9c661043c1490c64524cda6289338da8afb5e9a50e77e4db11c4",
+      "bytes": 2057
+    },
+    {
+      "path": "rh/problem/outer_bridges3.pdf",
+      "role": "problem_statement",
+      "round": "r491",
+      "ledger_ids": [],
+      "status": "compiled PDF of outer_bridges3.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "748253f8976667f9566b5bd1f3a0f6e5f83761ad30e9a93ffd515c608c8759f9",
+      "bytes": 201196
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -5820,8 +5850,8 @@
       "ledger_ids": [],
       "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "b26fab0dfb4ad73fbf7cbf4fa2581a679a20a3c1b2d7562da17188166652074a",
-      "bytes": 4874
+      "sha256": "c237e1329f6493fff3019d390c043c34ca87ad3a9d6e67c4cfedeabcb08ca773",
+      "bytes": 4885
     },
     {
       "path": "experiments/tfpt-discovery/resolvent_solve_probe.py",
@@ -5852,6 +5882,16 @@
       "pin": true,
       "sha256": "fbd7d6413546cfafa1459ffeba59028504ea4f763f8d5cb9dc53bf0429d7617c",
       "bytes": 10211
+    },
+    {
+      "path": "experiments/tfpt-discovery/outer_bridges3_probe.py",
+      "role": "sealed_probe",
+      "round": "r491",
+      "ledger_ids": [],
+      "status": "outer bridges final-density audit and reduction (round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; experiments-side structural seal, NO ledger row): VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  The r489 completion has three components, not two.  Polar normalization corrected to +2*cosh; one-cell pin 2.042015443302091.  fullWeilArchSide is concrete.  The L2 witness has Lipschitz and support-length contracts; explicit dyadicSampleGrid uses floor(R*2^m) cells and has a proved support bound.  Remaining exact targets: sampled autocorrelation convergence, singular arch continuity, finite-hat pole integral.  Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  Lean sorry census 8 -> 8 (external 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "a2d95b9850aa5b70890aac14ed11511505cdc129b0c2815d2c6904838cce4de4",
+      "bytes": 3810
     }
   ]
 }

@@ -38,14 +38,68 @@ structure FullWeilTest where
   autocorrelation : ∃ h : ℝ → ℝ,
     MeasureTheory.MemLp h 2 MeasureTheory.volume ∧
     HasCompactSupport h ∧
+    (∃ K : NNReal, LipschitzWith K h) ∧
+    (∃ a : ℝ, ∀ t : ℝ, t < a ∨ a + supportRadius < t → h t = 0) ∧
     ∀ u : ℝ, toFun u =
       ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume
   admissible : Prop
 
-/-- Full-class archimedean channel.  Its concrete integral
-normalization is the r475 `weilArchSide` formula with `F.toFun`;
-factoring it here lets density be audited channel by channel. -/
-opaque fullWeilArchSide : FullWeilTest → ℝ
+/-- The actual half-open step function represented by a
+`GridElement`: value `x i` on the dyadic cell `[iD,(i+1)D)` and zero
+off the finite cell range. -/
+noncomputable def GridElement.toStepFun (f : GridElement) (t : ℝ) : ℝ :=
+  if ht : 0 ≤ t ∧ ⌊t / f.D0⌋₊ < f.steps then
+    f.x ⟨⌊t / f.D0⌋₊, ht.2⟩
+  else 0
+
+/-- Explicit left-sampled dyadic grid element for a witness supported
+in `[a,a+R]`.  Values are arbitrary reals; no value-grid rounding is
+part of `GridElement`. -/
+noncomputable def dyadicSampleGrid
+    (h : ℝ → ℝ) (a R : ℝ) (m : ℕ) : GridElement where
+  steps := Nat.floor (R * (2 : ℝ) ^ m)
+  meshExp := m
+  x i := h (a + (i : ℕ) * meshWidth m)
+
+/-- Flooring the number of cells makes the sampled grid support fit
+inside the declared target support. -/
+theorem dyadicSampleGrid_supportBound_le
+    (h : ℝ → ℝ) (a R : ℝ) (m : ℕ) (hR : 0 ≤ R) :
+    (dyadicSampleGrid h a R m).supportBound ≤ R := by
+  unfold dyadicSampleGrid GridElement.supportBound GridElement.D0
+  dsimp
+  have hpow : 0 < (2 : ℝ) ^ m := by positivity
+  have hfloor :
+      ((Nat.floor (R * (2 : ℝ) ^ m) : ℕ) : ℝ) ≤
+        R * (2 : ℝ) ^ m :=
+    Nat.floor_le (mul_nonneg hR hpow.le)
+  calc
+    ((Nat.floor (R * (2 : ℝ) ^ m) : ℕ) : ℝ) *
+        (1 / (2 : ℝ) ^ m) ≤
+      (R * (2 : ℝ) ^ m) * (1 / (2 : ℝ) ^ m) :=
+        mul_le_mul_of_nonneg_right hfloor (by positivity)
+    _ = R := by field_simp
+
+/-- Full-class regularized u-space arch integrand, with the same
+normalization as r475 `weilArchUIntegrand`. -/
+noncomputable def fullWeilArchUIntegrand
+    (F : FullWeilTest) (u : ℝ) : ℝ :=
+  if u = 0 then 0
+  else weilArchUWeight u *
+    (Real.exp (-(3 / 2 : ℝ) * u) * F.toFun 0 - F.toFun u)
+
+/-- Full-class archimedean channel, concretely the r475 u-space
+pairing at the declared support radius. -/
+noncomputable def fullWeilArchSide (F : FullWeilTest) : ℝ :=
+  if 0 < F.supportRadius then
+    let b := F.supportRadius
+    let g0 := F.toFun 0
+    let Cb := -(Real.eulerMascheroniConstant + Real.log Real.pi)
+      - Real.log (1 - Real.exp (-2 * b))
+    Cb * g0 +
+      intervalIntegral (fullWeilArchUIntegrand F)
+        0 b MeasureTheory.volume
+  else 0
 
 /-- Common finite anchor determined by the target support. -/
 noncomputable def FullWeilTest.fullAnchor (F : FullWeilTest) : ℕ :=
@@ -57,11 +111,12 @@ noncomputable def fullWeilCombSide (F : FullWeilTest) : ℝ :=
   ∑ n ∈ windowAtoms F.fullAnchor, combMass n * F.toFun (Real.log n)
 
 /-- Standard polar weight.  Since `Π''(u) = -2 cosh(u/2)` for the
-r376 potential `Π = polePotential`, this is the compact-support
-integral form of the pole channel (equivalently the two evaluations
-of the bilateral transform at `±1/2`). -/
+r376 potential `Π = polePotential` and `polePairingZ` has an outer
+minus sign, the integral weight is `+2 cosh(u/2)`.  This is
+equivalently the two evaluations of the bilateral transform at
+`±1/2`. -/
 noncomputable def fullWeilPoleWeight (u : ℝ) : ℝ :=
-  -2 * Real.cosh (u / 2)
+  2 * Real.cosh (u / 2)
 
 /-- Full-class pole channel as the bounded-weight integral on the
 fixed support. -/
@@ -220,8 +275,7 @@ theorem fullWeilPoleIntegral_tendsto
         have hcosh : Real.cosh (u / 2) ≤
             Real.cosh (F.supportRadius / 2) := by
           exact (Real.cosh_le_cosh).2 hhalf
-        simp only [norm_mul, Real.norm_eq_abs, fullWeilPoleWeight,
-          abs_neg]
+        simp only [norm_mul, Real.norm_eq_abs, fullWeilPoleWeight]
         rw [abs_of_pos (by norm_num : (0 : ℝ) < 2),
           abs_of_pos (Real.cosh_pos _)]
         dsimp [C]
@@ -241,9 +295,36 @@ def FullWeilFixedSupportGridDensity : Prop :=
   ∀ F : FullWeilTest, F.admissible →
     ∃ grid : ℕ → GridElement, F.FixedSupportGridApproximation grid
 
+/-- Exact dyadic-density target after r491: the approximating sequence
+is no longer existentially anonymous, but the explicit left-sampled
+`dyadicSampleGrid h a R`.  The remaining proof must establish its
+uniform autocorrelation and `L¹` convergence from the support and
+Lipschitz contracts. -/
+def FullWeilDyadicSampleConvergence : Prop :=
+  ∀ F : FullWeilTest, F.admissible →
+    ∃ (h : ℝ → ℝ) (K : NNReal) (a : ℝ),
+      MeasureTheory.MemLp h 2 MeasureTheory.volume ∧
+      HasCompactSupport h ∧
+      LipschitzWith K h ∧
+      (∀ t : ℝ, t < a ∨ a + F.supportRadius < t → h t = 0) ∧
+      (∀ u : ℝ, F.toFun u =
+        ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume) ∧
+      F.FixedSupportGridApproximation
+        (fun m => dyadicSampleGrid h a F.supportRadius m)
+
+/-- The explicit sampled-grid convergence target implies the
+existential fixed-support density interface. -/
+theorem fullWeilFixedSupportGridDensity_of_dyadicSample
+    (hdyadic : FullWeilDyadicSampleConvergence) :
+    FullWeilFixedSupportGridDensity := by
+  intro F hF
+  obtain ⟨h, K, a, hhLp, hhcompact, hhLip, hhsupport, hac, happrox⟩ :=
+    hdyadic F hF
+  exact ⟨fun m => dyadicSampleGrid h a F.supportRadius m, happrox⟩
+
 /-- Existing r376 finite-element seam, now placed exactly: the
 native-mesh second-difference pole read equals the compact-support
-`-2 cosh(u/2)` integral.  Once this dictionary holds, pole continuity
+`+2 cosh(u/2)` integral.  Once this dictionary holds, pole continuity
 is the proved `fullWeilPoleIntegral_tendsto`. -/
 def GridPoleIntegralIdentification : Prop :=
   ∀ (F : FullWeilTest) (grid : ℕ → GridElement), F.admissible →
@@ -252,6 +333,26 @@ def GridPoleIntegralIdentification : Prop :=
         intervalIntegral
           (fun u : ℝ => fullWeilPoleWeight u * (grid n).toFun u)
           (-F.supportRadius) F.supportRadius MeasureTheory.volume
+
+/-- Exact finite-element identity needed for the r376 pole seam.
+Each `GridElement.toFun` is the finite hat expansion of its ACF
+samples; integrating a hat against `-polePotential'' = 2 cosh(u/2)`
+gives the second difference in `polePairingZ`.  The larger interval
+causes no change because `toFun` vanishes outside its support. -/
+def GridPoleHatIntegralIdentity : Prop :=
+  ∀ (f : GridElement) (R : ℝ), f.supportBound ≤ R →
+    weilPoleSide f =
+      intervalIntegral
+        (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
+        (-R) R MeasureTheory.volume
+
+/-- The pointwise hat identity supplies the sequence-level pole
+dictionary used by channel continuity. -/
+theorem gridPoleIntegralIdentification_of_hat
+    (hhat : GridPoleHatIntegralIdentity) :
+    GridPoleIntegralIdentification := by
+  intro F grid _ happrox n
+  exact hhat (grid n) F.supportRadius (happrox.1 n)
 
 /-- Arch continuity component.  This is continuity of r475's concrete
 u-space pairing along the fixed-support topology; Gauss--digamma is
@@ -302,9 +403,9 @@ compactly-supported dyadic `L²` step density and autocorrelation
 uniform convergence; r475 u-space arch continuity; and the r376
 native-grid pole integral dictionary. -/
 def FullWeilFixedSupportCompletion : Prop :=
-  FullWeilFixedSupportGridDensity ∧
+  FullWeilDyadicSampleConvergence ∧
     FullWeilArchContinuity ∧
-    GridPoleIntegralIdentification
+    GridPoleHatIntegralIdentity
 
 /-- Form convergence assembled from the three channel limits. -/
 theorem fullWeilForm_tendsto_of_channels
@@ -357,7 +458,8 @@ theorem fullWeil_fixedSupport_completion :
 package. -/
 theorem fullWeil_fixedSupport_grid_density :
     FullWeilFixedSupportGridDensity :=
-  fullWeil_fixedSupport_completion.1
+  fullWeilFixedSupportGridDensity_of_dyadicSample
+    fullWeil_fixedSupport_completion.1
 
 /-- All channel limits follow from the other two completion components
 plus the proved comb and polar-integral continuity theorems. -/
@@ -365,7 +467,8 @@ theorem fullWeil_channel_continuity :
     FullWeilChannelContinuity :=
   fullWeilChannelContinuity_of_components
     fullWeil_fixedSupport_completion.2.1
-    fullWeil_fixedSupport_completion.2.2
+    (gridPoleIntegralIdentification_of_hat
+      fullWeil_fixedSupport_completion.2.2)
 
 /-- Bridge 1 now consumes exactly the two named bricks above; its
 positivity-transfer algebra is sorry-free. -/
