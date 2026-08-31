@@ -6989,6 +6989,33 @@ Not $\lambda_*(0.3)\ge c$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 
+**Woodbury / Birman--Schwinger (r486,
+PRIME.RDAGGER.WOODBURY\_MINF.01).**
+Sealed probe
+`experiments/tfpt-discovery/woodbury_minf_probe.py`
+(smoke 16/16, full 23/23, SPEC\_SHA `7f306746b2a2b517`)
+plus `rh/problem/woodbury_minf.tex` (+ PDF +
+`verify_woodbury_minf.py`, 6/6, `WOODBURY_MINF VERIFIED -- REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open)`).
+**Regime REDUCED: enemy $A^-$ is 3 certified modes; finite BS $<1$; operator $R^{-1}$ open.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
+**Outer bridges lane start (r487,
+PRIME.RDAGGER.OUTER\_BRIDGES.01).**
+Structural probe
+`experiments/tfpt-discovery/outer_bridges_probe.py`
+(smoke 12/12, SPEC\_SHA `5ea36777bc6077e6`) plus
+`rh/problem/outer_bridges.tex` (+ PDF +
+`verify_outer_bridges.py`, 6/6, `OUTER BRIDGES VERIFIED`).
+**Regime OUTER\_LANE\_TYPED / DENSE\_LIMIT\_REDUCED /
+ZETA\_INTERFACE\_PROVED.**  The fixed-support autocorrelation class
+and channel limits are typed; the positivity-limit and literal
+Mathlib zeta wrappers are proved.  Four external bricks remain.
+Sorry census **8 → 9** because density was split honestly in two.
+Experiments-side seal, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
 ## Folder guide
 
 ```
@@ -7115,10 +7142,12 @@ rh/
 │       │                    density, grid fold, sign split; k=5/9/10
 │       │                    pins match lean_fidelity_probe).  Zero sorry;
 │       │                    NO RH CLAIM
-│       ├── ExternalBridges.lean — r463: three honest external bridges
-│       │                    (dense extension, explicit-formula id,
-│       │                    Mathlib RiemannHypothesis; each sorry).
-│       │                    Census contribution 5→8.  NO RH CLAIM
+│       ├── ExternalBridges.lean — r463/r487: outer-bridge lane;
+│       │                    fixed-support Grid density + channel
+│       │                    continuity split; positivity-limit and
+│       │                    Mathlib endpoint wrappers proved.
+│       │                    Four external sorries; census 9.
+│       │                    NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
 │       │                    oneDefect_update_posDef_iff,
@@ -7452,6 +7481,10 @@ rh/
 │   ├── filon_enclosure.tex(+pdf) — r483: REDUCED
 │   ├── block_completion.tex(+pdf) — r484: STUCK
 │   ├── weighted_schur.tex(+pdf) — r485: REDUCED
+│   ├── woodbury_minf.tex(+pdf) — r486: REDUCED
+│   │                     (enemy-3dim-BS<1; Q_E-Higham;
+│   │                     operator-Rinv-open);
+│   │                     not lambda_*.  No RH claim
 │   │                     (A-GO; finite-S_w-PD;
 │   │                     operator-M_inf-open)+CHECKPOINT;
 │   │                     not lambda_*.  No RH claim
@@ -8714,6 +8747,22 @@ the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r486 coexistence.** Round 486 (`woodbury_minf_probe.py`)
+represents the negative-symbol enemy $A^-$ by three
+certified Slepians of $K_{t_c}$ and records a finite
+Birman--Schwinger number $<1$, with operator $R^{-1}$
+left open
+(not lambda_*).  File domain is the probe, `woodbury_minf.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r487 coexistence.** Round 487 (`outer_bridges_probe.py`) starts
+the permanent outer-bridge Lean lane.  File domain is
+`RH/ExternalBridges.lean`, `RH/Audit.lean`, `RH/Open.lean`, Lean and
+RH READMEs, the probe, `outer_bridges.tex`, verifier, INVENTORY, and
+`run_rh.py`.  It does not touch `experiments/next.txt`.
+Suite surface: integrity + probes + Lean (`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

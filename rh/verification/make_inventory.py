@@ -2811,6 +2811,51 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R487_STATUS = (
+    "outer bridges lane start "
+    "(round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; "
+    "experiments-side structural seal, NO ledger row): "
+    "VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / "
+    "ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even "
+    "fixed-support real autocorrelation.  Dense extension is split "
+    "into fullWeil_fixedSupport_grid_density and "
+    "fullWeil_channel_continuity; channel-limit assembly, closed-cone "
+    "positivity, and the public wrapper are proved.  The Mathlib "
+    "RiemannHypothesis interface is proved from the named "
+    "off-critical separation brick.  Mathlib has riemannZeta and "
+    "Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, "
+    "but no ZetaZero enumeration, multiplicity API, or Guinand--Weil "
+    "formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  "
+    "Lean sorry census 8 -> 9 because the old density sorry was "
+    "honestly split into two.  NO L* claim, NO R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
+_R486_STATUS = (
+    "classical Weil Woodbury/Birman-Schwinger enemy "
+    "representation at L=0.3 "
+    "(round 486, PRIME.RDAGGER.WOODBURY_MINF.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT REDUCED(enemy-3dim-BS<1; Q_E-Higham; "
+    "operator-Rinv-open).  "
+    "Route (b)/(ii) first: A- = |sigma| 1_{|t|<t_c} has "
+    "tr(K_tc)=1.201 and Slepian (0.859, 0.314, 0.027); "
+    "enemy is 3 certified modes (no garbage).  "
+    "BS lmax=0.99409 (E012 0.99365), margin 5.91e-3; "
+    "Schur of R does not move the margin.  "
+    "Q_E Higham mu>=2.87e-3.  r476 Dirichlet Q=1.178e-2 "
+    "hits [1.150e-2, 1.192e-2].  Trace-rest after 012 "
+    "7.81e-4.  Operator R^{-1}=(A++Pi)^{-1} OPEN.  "
+    "Route (a) not opened.  Smoke 16/16, full 23/23, "
+    "SPEC_SHA 7f306746b2a2b517.  "
+    "Companion rh/problem/woodbury_minf.tex + "
+    "verify_woodbury_minf.py WOODBURY_MINF VERIFIED -- "
+    "REDUCED(enemy-3dim-BS<1; Q_E-Higham; "
+    "operator-Rinv-open).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R485_STATUS = (
     "classical Weil weighted Schur at L=0.3 "
     "(round 485, PRIME.RDAGGER.WEIGHTED_SCHUR.01; "
@@ -6853,6 +6898,47 @@ ENTRIES = [
      "compiled PDF of weighted_schur.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/woodbury_minf.tex", "problem_statement",
+     "r486",
+     [],
+     _R486_STATUS,
+     True),
+    ("rh/problem/verify_woodbury_minf.py", "problem_check",
+     "r486 companion",
+     [],
+     "machine check of woodbury_minf.tex: note tokens "
+     "(REDUCED, enemy-3dim, Birman, Woodbury, e^{2L}, "
+     "Fourier-HS not reused, Yoshida--Bombieri), smoke "
+     "run, enemy-spectrum and BS pins.  6/6 gates, "
+     "final line WOODBURY_MINF VERIFIED -- "
+     "REDUCED(enemy-3dim-BS<1; Q_E-Higham; "
+     "operator-Rinv-open)",
+     True),
+    ("rh/problem/woodbury_minf.pdf", "problem_statement",
+     "r486",
+     [],
+     "compiled PDF of woodbury_minf.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
+    ("rh/problem/outer_bridges.tex", "problem_statement",
+     "r487",
+     [],
+     _R487_STATUS,
+     True),
+    ("rh/problem/verify_outer_bridges.py", "problem_check",
+     "r487 companion",
+     [],
+     "machine check of r487 outer bridges: density decomposition, "
+     "sorry-free positivity transfer and zeta interface wrapper, "
+     "four external bricks, structural smoke.  6/6 gates, final line "
+     "OUTER BRIDGES VERIFIED",
+     True),
+    ("rh/problem/outer_bridges.pdf", "problem_statement",
+     "r487",
+     [],
+     "compiled PDF of outer_bridges.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7443,6 +7529,16 @@ ENTRIES = [
      "r485",
      [],
      _R485_STATUS,
+     True),
+    (f"{EXP}/woodbury_minf_probe.py", "sealed_probe",
+     "r486",
+     [],
+     _R486_STATUS,
+     True),
+    (f"{EXP}/outer_bridges_probe.py", "sealed_probe",
+     "r487",
+     [],
+     _R487_STATUS,
      True),
 ]
 

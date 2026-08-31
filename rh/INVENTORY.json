@@ -4426,6 +4426,66 @@
       "bytes": 453575
     },
     {
+      "path": "rh/problem/woodbury_minf.tex",
+      "role": "problem_statement",
+      "round": "r486",
+      "ledger_ids": [],
+      "status": "classical Weil Woodbury/Birman-Schwinger enemy representation at L=0.3 (round 486, PRIME.RDAGGER.WOODBURY_MINF.01; experiments-side, NO ledger row): VERDICT REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open).  Route (b)/(ii) first: A- = |sigma| 1_{|t|<t_c} has tr(K_tc)=1.201 and Slepian (0.859, 0.314, 0.027); enemy is 3 certified modes (no garbage).  BS lmax=0.99409 (E012 0.99365), margin 5.91e-3; Schur of R does not move the margin.  Q_E Higham mu>=2.87e-3.  r476 Dirichlet Q=1.178e-2 hits [1.150e-2, 1.192e-2].  Trace-rest after 012 7.81e-4.  Operator R^{-1}=(A++Pi)^{-1} OPEN.  Route (a) not opened.  Smoke 16/16, full 23/23, SPEC_SHA 7f306746b2a2b517.  Companion rh/problem/woodbury_minf.tex + verify_woodbury_minf.py WOODBURY_MINF VERIFIED -- REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "8938a7226eaf53376d6c1aa3ea82f8492af14253db4b030a6a59230c2f39d108",
+      "bytes": 7534
+    },
+    {
+      "path": "rh/problem/verify_woodbury_minf.py",
+      "role": "problem_check",
+      "round": "r486 companion",
+      "ledger_ids": [],
+      "status": "machine check of woodbury_minf.tex: note tokens (REDUCED, enemy-3dim, Birman, Woodbury, e^{2L}, Fourier-HS not reused, Yoshida--Bombieri), smoke run, enemy-spectrum and BS pins.  6/6 gates, final line WOODBURY_MINF VERIFIED -- REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open)",
+      "pin": true,
+      "sha256": "8ce77ca7690d395fa11eb2a2b396580c249c8a3c9ab0e0923f15883cbb987f01",
+      "bytes": 3232
+    },
+    {
+      "path": "rh/problem/woodbury_minf.pdf",
+      "role": "problem_statement",
+      "round": "r486",
+      "ledger_ids": [],
+      "status": "compiled PDF of woodbury_minf.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "d34e53f8898002a2b0a0b259d61381da1274877651d8c6b95497fb6fd36c8596",
+      "bytes": 421525
+    },
+    {
+      "path": "rh/problem/outer_bridges.tex",
+      "role": "problem_statement",
+      "round": "r487",
+      "ledger_ids": [],
+      "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "712b4f211b3cd22e757359d6ef186c7eb5ba3a8bd6f23a32c6b8af3dd505b08a",
+      "bytes": 5448
+    },
+    {
+      "path": "rh/problem/verify_outer_bridges.py",
+      "role": "problem_check",
+      "round": "r487 companion",
+      "ledger_ids": [],
+      "status": "machine check of r487 outer bridges: density decomposition, sorry-free positivity transfer and zeta interface wrapper, four external bricks, structural smoke.  6/6 gates, final line OUTER BRIDGES VERIFIED",
+      "pin": true,
+      "sha256": "7b60fa5485a6b8b8f7781d13a38eb1a34b9882d40b7b1ce16375dfc65bc858ca",
+      "bytes": 2012
+    },
+    {
+      "path": "rh/problem/outer_bridges.pdf",
+      "role": "problem_statement",
+      "round": "r487",
+      "ledger_ids": [],
+      "status": "compiled PDF of outer_bridges.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "6e7e09176709f20225e9da805cb5d7fa9fe7878cc1b3bb3198a0d37868e4703f",
+      "bytes": 264145
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4600,8 +4660,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "0d811cb63f8e70def5c0fb7b163b1f0415245b6aa510486985a464135ac5bfa8",
-      "bytes": 5597126
+      "sha256": "6251de9f090951bb82191cf9f8684ee0116222e17540a66c755141b1149578b2",
+      "bytes": 5598963
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5470,8 +5530,8 @@
       "ledger_ids": [],
       "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "b160b4b40e7fd4a4e517b09ff5fcb21a835021752724db228d27ff9d8e653579",
-      "bytes": 6820
+      "sha256": "45b4931aadc42caf9f849a0f93169ad42a80d07110a519ce183a63204f622c72",
+      "bytes": 6984
     },
     {
       "path": "experiments/tfpt-discovery/inner_bridges_probe.py",
@@ -5652,6 +5712,26 @@
       "pin": true,
       "sha256": "ed777458bfad005a2f9ac29f1ae33b02539e6f60bae30ac2cf9707e278dbb9df",
       "bytes": 11082
+    },
+    {
+      "path": "experiments/tfpt-discovery/woodbury_minf_probe.py",
+      "role": "sealed_probe",
+      "round": "r486",
+      "ledger_ids": [],
+      "status": "classical Weil Woodbury/Birman-Schwinger enemy representation at L=0.3 (round 486, PRIME.RDAGGER.WOODBURY_MINF.01; experiments-side, NO ledger row): VERDICT REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open).  Route (b)/(ii) first: A- = |sigma| 1_{|t|<t_c} has tr(K_tc)=1.201 and Slepian (0.859, 0.314, 0.027); enemy is 3 certified modes (no garbage).  BS lmax=0.99409 (E012 0.99365), margin 5.91e-3; Schur of R does not move the margin.  Q_E Higham mu>=2.87e-3.  r476 Dirichlet Q=1.178e-2 hits [1.150e-2, 1.192e-2].  Trace-rest after 012 7.81e-4.  Operator R^{-1}=(A++Pi)^{-1} OPEN.  Route (a) not opened.  Smoke 16/16, full 23/23, SPEC_SHA 7f306746b2a2b517.  Companion rh/problem/woodbury_minf.tex + verify_woodbury_minf.py WOODBURY_MINF VERIFIED -- REDUCED(enemy-3dim-BS<1; Q_E-Higham; operator-Rinv-open).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "2f3ed24a75a7f33f86738210604e0ed0a7c747520adcdbdfb3da9060f0a2c88c",
+      "bytes": 11188
+    },
+    {
+      "path": "experiments/tfpt-discovery/outer_bridges_probe.py",
+      "role": "sealed_probe",
+      "round": "r487",
+      "ledger_ids": [],
+      "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "7022f59d53381f95d818b3ee701e4aa96c0ace34a95f2682d7648ee5c8fb0f07",
+      "bytes": 4814
     }
   ]
 }

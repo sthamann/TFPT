@@ -259,6 +259,8 @@ PROBES = [
     ("r483", "filon_enclosure_probe.py"),
     ("r484", "block_completion_probe.py"),
     ("r485", "weighted_schur_probe.py"),
+    ("r486", "woodbury_minf_probe.py"),
+    ("r487", "outer_bridges_probe.py"),
 ]
 
 MODULES = [
