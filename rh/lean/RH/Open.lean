@@ -367,6 +367,29 @@ seal: err/Δ² = 3.9893 at k=5 and 3.8466 at k=9 on the r470
 witness.  Census stays 8 (the exact-identity sorry is retained
 for the historical FREQ consumer).  NO RH CLAIM.
 
+## r487 census (outer bridges, lane start)
+
+The full class is now typed as continuous, even, compactly supported
+real autocorrelations with an explicit `L¹` witness.  Dense extension
+is split into:
+
+  * sorry `fullWeil_fixedSupport_grid_density`;
+  * sorry `fullWeil_channel_continuity`.
+
+The positivity-limit algebra and `grid_dense_extension` wrapper are
+PROVED.  The standard explicit-formula normalization remains sorry
+`standard_explicit_formula_identification`.
+
+The zeta interface uses mathlib's literal zero predicate
+`riemannZeta s = 0`; no `ZetaZero` enumeration exists in this
+mathlib tag.  `standard_weil_criterion_to_mathlib_rh_of_separation`
+is PROVED.  Its only classical remainder is sorry
+`fullWeil_separates_offCritical_zeros`; the Guinand--Weil spectral
+formula is named as `GuinandWeilExplicitFormula`.  Mathlib has no
+ready Guinand--Weil theorem, but does provide `MellinTransform`,
+`MellinInversion`, and `MellinEqDirichlet`.  Census 8 -> 9 because
+the old dense-extension sorry was honestly split in two.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

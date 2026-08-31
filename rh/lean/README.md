@@ -105,6 +105,21 @@
 > `arch_gauss_mellin_digamma_identity`, matching Mathlib's explicit
 > Gauss-integral TODO.  Census **8 → 8**. NO RH CLAIM.
 >
+> **r487 outer bridges:** `RH/ExternalBridges.lean` types
+> `FullWeilTest` as a continuous even fixed-support real
+> autocorrelation.  The dense extension is split into the two exact
+> bricks `fullWeil_fixedSupport_grid_density` and
+> `fullWeil_channel_continuity`; form-limit positivity and the
+> `grid_dense_extension` wrapper are proved.  The Mathlib interface
+> `standard_weil_criterion_to_mathlib_rh_of_separation` is proved
+> directly against `riemannZeta`; its remaining classical brick is
+> `fullWeil_separates_offCritical_zeros`.  No `ZetaZero` enumeration
+> exists in the installed Mathlib tag.  Mellin transform, inversion,
+> and Mellin-to-Dirichlet infrastructure do exist; a Guinand--Weil
+> explicit formula does not.
+> The old density `sorry` split in two, so census **8 → 9**.
+> NO RH CLAIM.
+>
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
 > bridge never bound `u`/`B` vs `terminal_positive_main`; U2: mesh-width
@@ -973,8 +988,8 @@ Loewner identities and the density / mean-value lemmas do not.
 | `frequently_of_pos_lower_density` | **proved** | density `≥ ε > 0` eventually ⇒ frequently |
 | `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
 
-Zero `sorry` in this file.  Repository census is 8 after r463
-(three external bridge sorries in `RH/ExternalBridges.lean`).
+Zero `sorry` in this file.  Repository census is 9 after r487
+(four external bridge sorries in `RH/ExternalBridges.lean`).
 
 **r440 mean tau index (no new Lean).**  T1/T2/MI2 are
 finite identities, machine-checked in
@@ -1073,11 +1088,13 @@ on the extraction shows `sorryAx` only through
 | `SelectedMasterImpliesPlainReads` | — | named, **OFF PATH** (eventual-strict master route) |
 | `GraphResolventIsLEnsembleInv` | — | named, **OFF PATH** (graph-resolvent face, not consumed by FREQ) |
 
-The three arrows beyond this internal endpoint are now declarations
-in `RH/ExternalBridges.lean`, each with one `sorry`:
-`grid_dense_extension`, `standard_explicit_formula_identification`,
-and `standard_weil_criterion_to_mathlib_rh`.  The last statement uses
-mathlib's actual `riemannZeta` / `RiemannHypothesis` interface.
+The three arrows beyond this internal endpoint are explicit in
+`RH/ExternalBridges.lean`.  r487 splits density into two sorries
+(`fullWeil_fixedSupport_grid_density`,
+`fullWeil_channel_continuity`) and proves its limit wrapper; explicit
+formula normalization remains
+`standard_explicit_formula_identification`; the Mathlib endpoint is
+a proved wrapper around `fullWeil_separates_offCritical_zeros`.
 
 BYPASS VERDICT: yes — Selected-R† semidefiniteness bypasses
 `terminal_q_canonical` / `lstar_canonical`.  The remaining named

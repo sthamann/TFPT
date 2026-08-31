@@ -1134,6 +1134,18 @@ cd experiments/gauge-unification       && PYTHONPATH=src python -m tfpt_gut.cli 
 python experiments/build_evidence_scorecard.py
 ```
 
+### R487 outer-bridge structure seal
+
+`tfpt-discovery/outer_bridges_probe.py` audits the fixed-support
+autocorrelation interface, the two-piece dense-extension reduction,
+the literal Mathlib `riemannZeta` endpoint, available Mellin
+infrastructure, and the honest Lean sorry census 9.  It is structural
+research documentation only and makes no RH claim.
+
+```bash
+python experiments/tfpt-discovery/outer_bridges_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen

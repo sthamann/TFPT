@@ -132,7 +132,9 @@ def text_gates() -> None:
           "theorem internal_weil_nonneg_of_frequently_selected" in frequent
           and re.search(r"^theorem rh_of_frequently_selected\b",
                         frequent, re.MULTILINE) is None)
-    check("three-external-sorries", external.count("\n  sorry") == 3)
+    check("r487-four-external-bricks", external.count("\n  sorry") == 4
+          and "theorem grid_dense_extension : GridDenseExtension :=" in external
+          and "standard_weil_criterion_to_mathlib_rh_of_separation" in external)
     check("mathlib-rh-interface", "RiemannHypothesis" in external
           and "Mathlib.NumberTheory.LSeries.RiemannZeta" in external)
 
