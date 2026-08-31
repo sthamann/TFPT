@@ -438,6 +438,23 @@ autocorrelation convergence, singular u-space arch continuity, and
 the finite-hat pole integral.  Census remains 8 (external 3).
 No density-bridge closure and NO RH CLAIM.
 
+## r493a census (floor-free finite cell representation)
+
+PROVED: `GridElement.toFun_eq_sum_linearCellPiece`.  The actual
+`GridElement.toFun` is the even piecewise-linear interpolation of the
+autocorrelation knots `acf d`, not the underlying step function with
+values `x`.  It is now a finite sum over `Finset.range f.steps` of
+explicit affine pieces supported on the half-open normalized cells
+`[d,d+1)`.  The representation contains no floor; floor arithmetic is
+used only in the proof to identify the unique active cell.  Outside
+the cell range both sides vanish via `acf_eq_zero`.
+
+This is the exact finite-sum input for r493b: distribute the interval
+integral over the sum, split each affine cell, and identify its
+`2 cosh(u/2)` integral with the corresponding second difference of
+`polePotential`.  No new sorry; repository census remains 8.
+NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

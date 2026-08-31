@@ -300,6 +300,58 @@ noncomputable def toFun (u : ℝ) : ℝ :=
     + (|u| / f.D0 - (⌊|u| / f.D0⌋₊ : ℝ))
       * (f.acf (⌊|u| / f.D0⌋₊ + 1) - f.acf ⌊|u| / f.D0⌋₊)
 
+/-- Floor-free affine piece on the half-open normalized grid cell
+`[d,d+1)`.  The coefficients are the actual PL knot values `acf d`
+and `acf (d+1)`; the seed values `x` enter through `acf`. -/
+noncomputable def linearCellPiece (d : ℕ) (u : ℝ) : ℝ :=
+  let t := |u| / f.D0
+  if (d : ℝ) ≤ t ∧ t < (d : ℝ) + 1 then
+    f.acf d + (t - d) * (f.acf (d + 1) - f.acf d)
+  else 0
+
+/-- **Finite floor-free cell representation.**  The floor-based
+definition of `toFun` equals the finite sum of its affine
+half-open-cell pieces.  Thus `GridElement.toFun` is an even
+piecewise-linear hat/cell function, not the underlying step function. -/
+theorem toFun_eq_sum_linearCellPiece (u : ℝ) :
+    f.toFun u = ∑ d ∈ Finset.range f.steps, f.linearCellPiece d u := by
+  let t : ℝ := |u| / f.D0
+  have ht0 : 0 ≤ t := div_nonneg (abs_nonneg _) f.D0_pos.le
+  let q : ℕ := ⌊t⌋₊
+  have hqle : (q : ℝ) ≤ t := Nat.floor_le ht0
+  have htq : t < (q : ℝ) + 1 := Nat.lt_floor_add_one t
+  by_cases hq : q < f.steps
+  · rw [Finset.sum_eq_single q]
+    · unfold toFun linearCellPiece
+      dsimp only
+      change f.acf q + (t - q) * (f.acf (q + 1) - f.acf q) = _
+      rw [if_pos ⟨hqle, htq⟩]
+    · intro d hd hdq
+      simp only [Finset.mem_range] at hd
+      unfold linearCellPiece
+      dsimp only
+      rw [if_neg]
+      intro hcell
+      have hfloor : ⌊t⌋₊ = d := (Nat.floor_eq_iff ht0).2 hcell
+      exact hdq (hfloor ▸ rfl)
+    · simp [hq]
+  · have hstepsq : f.steps ≤ q := Nat.le_of_not_gt hq
+    unfold toFun
+    change f.acf q + (t - q) * (f.acf (q + 1) - f.acf q) = _
+    rw [f.acf_eq_zero hstepsq,
+      f.acf_eq_zero (hstepsq.trans (Nat.le_succ q))]
+    simp
+    symm
+    apply Finset.sum_eq_zero
+    intro d hd
+    simp only [Finset.mem_range] at hd
+    unfold linearCellPiece
+    dsimp only
+    rw [if_neg]
+    intro hcell
+    have hfloor : q = d := (Nat.floor_eq_iff ht0).2 hcell
+    omega
+
 /-- **the support parameter** `steps · D0` -- the quantity from which
 the elementwise onset `elementAnchor` is PREDEFINED (R325: "a₀, m_f
 in advance from f"). -/
