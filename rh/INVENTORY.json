@@ -4186,6 +4186,36 @@
       "bytes": 355124
     },
     {
+      "path": "rh/problem/endtoend_fixedl.tex",
+      "role": "problem_statement",
+      "round": "r478",
+      "ledger_ids": [],
+      "status": "classical Weil end-to-end fixed-L (round 478, PRIME.RDAGGER.ENDTOEND_FIXEDL.01; experiments-side, NO ledger row): VERDICT PARTIAL(0.3-even-5x5-PD|tail-Schur).  Even Fourier Gram at L=0.3 (P=0, t0=22) PD for N=2,3,4,5: 2x2 charpoly lmin in [1.731e-2,1.826e-2], Higham mu>=8.30e-3 / 2.46e-3 (N=2,3); N=4,5 congruence-certified PD.  Tail Schur OPEN (HS correction 6.78e-2 > Higham3).  Not lambda_*(0.3)>=0.  L=0.8 even Fourier 3x3 with exact rank-3 P indefinite; best substructure r477 2x2 Schur_lo=7.41e-2; N~2190 Chol ~3.50e9 flops.  sigma_P almost-periodic, gain<=1.010 at L=0.8 (no L>1.6 unlock).  Smoke 17/17, full 27/27, SPEC_SHA 138cbf9410486418.  Companion rh/problem/endtoend_fixedl.tex + verify_endtoend_fixedl.py ENDTOEND_FIXEDL VERIFIED -- PARTIAL(0.3-even-5x5-PD|tail-Schur).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "6e422b9bf9f5835222716767cc3ea9d7f61062ee58750586ff57a275625671e0",
+      "bytes": 10277
+    },
+    {
+      "path": "rh/problem/verify_endtoend_fixedl.py",
+      "role": "problem_check",
+      "round": "r478 companion",
+      "ledger_ids": [],
+      "status": "machine check of endtoend_fixedl.tex: note tokens (PARTIAL, e^{2L}, Re psi, Hilbert-Schmidt, almost periodic), smoke run, 2x2/3x3 and K_P pins.  6/6 gates, final line ENDTOEND_FIXEDL VERIFIED -- PARTIAL(0.3-even-5x5-PD|tail-Schur)",
+      "pin": true,
+      "sha256": "e4c253c6eaabd6066ba6474dde1dc5e40d1129df1d56a1aa393cf6e12fab4df9",
+      "bytes": 3105
+    },
+    {
+      "path": "rh/problem/endtoend_fixedl.pdf",
+      "role": "problem_statement",
+      "round": "r478",
+      "ledger_ids": [],
+      "status": "compiled PDF of endtoend_fixedl.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "cbcec12f8f49287dc9020cae081160baff50d955b66ce3a9709d72f5145c001c",
+      "bytes": 412926
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4360,8 +4390,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ca95655ebc4855c664606fbcc95bf150afbd2888ffde88c5dc7bac7ecdcdc5c6",
-      "bytes": 5579632
+      "sha256": "5ad7539cea28754900183b89d6ff65da9ec76b9e17f39f75ebc9dada600f58d9",
+      "bytes": 5581523
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5332,6 +5362,16 @@
       "pin": true,
       "sha256": "b94956d651eb75b5b4990fd5651bdee9ac1c8efcc73b63c8adfa43e38bd8711b",
       "bytes": 13192
+    },
+    {
+      "path": "experiments/tfpt-discovery/endtoend_fixedl_probe.py",
+      "role": "sealed_probe",
+      "round": "r478",
+      "ledger_ids": [],
+      "status": "classical Weil end-to-end fixed-L (round 478, PRIME.RDAGGER.ENDTOEND_FIXEDL.01; experiments-side, NO ledger row): VERDICT PARTIAL(0.3-even-5x5-PD|tail-Schur).  Even Fourier Gram at L=0.3 (P=0, t0=22) PD for N=2,3,4,5: 2x2 charpoly lmin in [1.731e-2,1.826e-2], Higham mu>=8.30e-3 / 2.46e-3 (N=2,3); N=4,5 congruence-certified PD.  Tail Schur OPEN (HS correction 6.78e-2 > Higham3).  Not lambda_*(0.3)>=0.  L=0.8 even Fourier 3x3 with exact rank-3 P indefinite; best substructure r477 2x2 Schur_lo=7.41e-2; N~2190 Chol ~3.50e9 flops.  sigma_P almost-periodic, gain<=1.010 at L=0.8 (no L>1.6 unlock).  Smoke 17/17, full 27/27, SPEC_SHA 138cbf9410486418.  Companion rh/problem/endtoend_fixedl.tex + verify_endtoend_fixedl.py ENDTOEND_FIXEDL VERIFIED -- PARTIAL(0.3-even-5x5-PD|tail-Schur).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "109f5d4a34248be1ecd4ef4544c62e97de85548fb64322df6d2e75a31cbbf453",
+      "bytes": 17562
     }
   ]
 }

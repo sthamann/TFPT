@@ -6898,6 +6898,17 @@ plus `rh/problem/highmode.tex` (+ PDF +
 Symbol identity sealed; $t_0=22/4300/2.44\cdot10^5$; crude Schur bound fails; direct $2\times2$ PD.  YB gate PASS.  Not $\lambda_*(L)\ge0$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**End-to-end fixed-$L$ (r478,
+PRIME.RDAGGER.ENDTOEND\_FIXEDL.01).**
+Sealed probe
+`experiments/tfpt-discovery/endtoend_fixedl_probe.py`
+(smoke 17/17, full 27/27, SPEC\_SHA `138cbf9410486418`)
+plus `rh/problem/endtoend_fixedl.tex` (+ PDF +
+`verify_endtoend_fixedl.py`, 6/6, `ENDTOEND_FIXEDL VERIFIED -- PARTIAL(0.3-even-5x5-PD|tail-Schur)`).
+**Regime PARTIAL: even Fourier $N=2..5$ PD at $L=0.3$; tail Schur OPEN.**
+Not $\lambda_*(0.3)\ge0$.  $L=0.8$ Fourier $3\times3$ indefinite; $K_P$ gain $\le1.010$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7345,6 +7356,9 @@ rh/
 │   ├── highmode.tex(+pdf) — r477: ARCHITECTURE_STANDS
 │   │                     (0.3,0.8,1.0); t0+Schur schema;
 │   │                     not lambda_*.  No RH claim
+│   ├── endtoend_fixedl.tex(+pdf) — r478: PARTIAL
+│   │                     (0.3-even-5x5-PD|tail-Schur);
+│   │                     block SATZ, tail OPEN.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8532,6 +8546,13 @@ the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r478 coexistence.** Round 478 (`endtoend_fixedl_probe.py`)
+seals the even Fourier block SATZ at L=0.3 (N=2..5 PD) and
+records the tail-Schur obstruction (not lambda_*).  File
+domain is the probe, `endtoend_fixedl.tex`, the verifier,
+INVENTORY, `run_rh.py`, and these status lines.  It does
+not touch Lean or `experiments/next.txt`.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
