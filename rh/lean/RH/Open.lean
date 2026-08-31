@@ -334,6 +334,23 @@ Elementwise `sorry` is now the named
 lists Gauss's digamma integral representation as TODO.  Census
 unchanged at 8.  NO RH CLAIM.
 
+## r473 census (extraction-joint redesign)
+
+A-verdict ARTEFACT at the r470 k=5 witness: classical
+Guinand--Weil `Q(g_f) = +0.0769078530458283` while
+`fullRead = -0.0428854252772195`.  The gap is the arch tent
+error `0.1197932783230478`; `ĝ ≥ 0` (true autocorrelation).
+Proved inner bridge: `selectedACapPsdImpliesPolynomialReads`
+(PSD `A_cap` ⇒ degree-`< cap` reads `≥ 0`; moment dictionary
+`PrimeWindow.hankel_quadform`).  Proved arch-gap identity
+`fullRead_weilForm_gap_eq_arch` (does not consume the digamma
+sorry).  Named outer bridge
+`SelectedPolynomialApproximatesGrid`.  Redesigned joint
+`FrequentlySelectedPolynomialJoint`; fixed-`k` readout
+`weilForm_ge_neg_two_archError_of_joint`.  Historical FREQ
+endpoint retained.  Census stays 8.  No infinitely-many-`k`
+statement.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

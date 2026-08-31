@@ -52,6 +52,22 @@ Prop `selected_augDualResolvent_gt_half` (`∀ᶠ`, strict
 `PosDef`) is KEPT as the stronger alternative form; it
 implies the new mincut (`frequently_selected_of_eventually_gt_half`).
 
+r473 JOINT REDESIGN.  After the r470 obstruction the native
+`GridElement` channel is no longer the load-bearing class.
+The proved inner bridge is the polynomial class of degree
+`< cap` (`selectedACapPsdImpliesPolynomialReads`).  The
+historical FREQ endpoint
+`internal_weil_nonneg_of_frequently_selected` is retained
+byte-stable (it still consumes the refuted full-class
+representation as a hypothesis).  The redesigned joint is
+`FrequentlySelectedPolynomialJoint`: the spectral FREQ cone
+together with the named outer approximation
+`SelectedPolynomialApproximatesGrid`.  Its fixed-`k`
+readout is `selected_polynomial_nonneg_of_cone` (proved)
+plus `weilForm_ge_neg_two_archError_of_approx` (proved as a
+function of the named approx).  No infinitely-many-`k`
+conclusion is added.
+
 ALSO IN THIS FILE (sorry-free arithmetic):
 
   * positive lower density ⇒ frequently (decidable proxy;
@@ -446,6 +462,51 @@ theorem internal_weil_nonneg_of_frequently_selected_of_A_cap
   weil_nonneg_of_frequently_selected
     (selectedSemidefImpliesPlainReads_of_A_cap hbridge)
     (frequently_atTop.mp hmincut)
+
+/-! ## r473 redesigned joint (polynomial class + named approx)
+
+The historical endpoint above still consumes the r464 full-class
+channel as a hypothesis.  After r470 that channel is obstructed.
+The load-bearing inner bridge is the polynomial class; the
+GridElement gap is the named outer approximation.  Both
+statements below are fixed-`k` (or functions of a named Prop
+that is itself fixed-`k`).  No infinitely-many-`k` conclusion.
+NO RH CLAIM. -/
+
+/-- Spectral FREQ cone plus the named polynomial-to-GridElement
+approximation.  Replaces the r464
+`FrequentlySelectedInternalMincut` as the honest joint; the
+old compound is retained for sealed-probe stability. -/
+def FrequentlySelectedPolynomialJoint : Prop :=
+  frequently_selected_augDualResolvent_ge_half ∧
+    SelectedPolynomialApproximatesGrid
+
+/-- **Fixed-k polynomial readout (r473, PROVED).**  A single
+selected window in the semidefinite cone has nonnegative
+polynomial-class `A_cap` reads. -/
+theorem selected_polynomial_nonneg_of_cone
+    {k : ℕ} (hk : 0 < k)
+    (hcone : selectedWindowConeSemidef k hk)
+    (z : Fin (selectedRealWindow k hk).cap ⊕ Unit → ℝ) :
+    0 ≤ selectedReadQuadratic k hk z :=
+  selectedACapPsdImpliesPolynomialReads hk
+    (selectedWindowConeSemidef_implies_A_cap_posSemidef hk hcone) z
+
+/-- **Redesigned internal readout (r473, PROVED as a function
+of the named approx).**  At one good selected window, every
+onset-and-mesh-compatible test satisfies
+`weilForm ≥ −2 err_arch`.  Fixed `k` only. -/
+theorem weilForm_ge_neg_two_archError_of_joint
+    {k : ℕ} (hk : 0 < k)
+    (hcone : selectedWindowConeSemidef k hk)
+    (happrox : SelectedPolynomialApproximatesGrid)
+    (f : GridElement)
+    (hm : f.meshExp ≤ selectedMesh k)
+    (ha : f.elementAnchor ≤ selectedAnchor k) :
+    -2 * selectedArchError k f ≤ weilForm f :=
+  weilForm_ge_neg_two_archError_of_approx hk f hm ha
+    (selectedWindowConeSemidef_implies_A_cap_posSemidef hk hcone)
+    happrox
 
 /-! ## Positive lower density ⇒ frequently
 

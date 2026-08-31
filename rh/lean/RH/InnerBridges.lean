@@ -19,9 +19,21 @@ quantifier admits `steps > cap` (proved), and a mesh-and-onset-
 compatible native Hessian at k=5 is indefinite of rank larger
 than `cap+1` while `A_cap` is PD (numerical seal).  No new `sorry`.
 
+r473 redesigns the extraction joint after that obstruction.
+The class `A_cap` can carry is the polynomial class of degree
+`< cap`: `selectedACapPsdImpliesPolynomialReads` is the r464
+PSD algebra on that finite-dimensional space (moment evaluation,
+no `steps` problem).  Native `GridElement` reads differ from
+the classical Guinand--Weil value by the arch tent error
+(`fullRead_weilForm_gap_eq_arch`, proved from the exact comb
+and pole channels).  The polynomial-to-GridElement gap is the
+named outer bridge `SelectedPolynomialApproximatesGrid`.
+No infinitely-many-`k` statement.  No new `sorry`.
+
 Claim boundary: research documentation.  NO RH CLAIM.
 -/
 import RH.Selected
+import Mathlib.Algebra.Polynomial.Basic
 
 namespace RH
 
@@ -162,5 +174,226 @@ theorem quadraticRepresentation_refuted_of_negative_read
     rw [hz]
     exact hA.dotProduct_mulVec_nonneg z
   exact (not_le_of_gt hneg) hnn
+
+/-! ## r473: polynomial-class bridge and the arch error identity
+
+The r470 obstruction shows that the native `GridElement` class
+is larger than the cap space.  The class the finite matrix
+`A_cap` actually sees is the coefficient-plus-border space of
+real polynomials of degree `< cap`.  On that class the channel
+is the moment evaluation of `A_cap`, and PSD implies
+nonnegativity by the r464 algebra.  NO RH CLAIM. -/
+
+open Polynomial
+open VonMangoldtWindow (coeffPoly coeffPoly_eval)
+
+namespace PrimeWindow
+
+variable (w : PrimeWindow)
+
+/-- Discrete μ-mass of `p²` on the real window. -/
+noncomputable def muSq (p : Polynomial ℝ) : ℝ :=
+  ∑ j, w.combWeight j * p.eval (w.nodes j) ^ 2
+
+/-- Discrete ν-mass of `p²` on the real window. -/
+noncomputable def nuSq (p : Polynomial ℝ) : ℝ :=
+  ∑ j, w.archWeight j * p.eval (w.nodes j) ^ 2
+
+/-- **Moment dictionary (r473, PROVED).**  The Hankel quadratic
+form is `μ(p_x²) − ν(p_x²)` for the coefficient polynomial of
+`x`.  Finite algebra; no `GridElement.steps`. -/
+theorem hankel_quadform (n : ℕ) (x : Fin n → ℝ) :
+    x ⬝ᵥ (w.hankel n *ᵥ x) = w.muSq (coeffPoly x) - w.nuSq (coeffPoly x) := by
+  classical
+  have hmom : ∀ m : ℕ, w.mom m = ∑ j, w.weight j * w.nodes j ^ m := by
+    intro m
+    rfl
+  have hsplit : w.muSq (coeffPoly x) - w.nuSq (coeffPoly x)
+      = ∑ j, w.weight j * (coeffPoly x).eval (w.nodes j) ^ 2 := by
+    rw [muSq, nuSq, ← Finset.sum_sub_distrib]
+    refine Finset.sum_congr rfl fun j _ => ?_
+    rw [weight]
+    ring
+  rw [hsplit]
+  have hrhs : ∀ j : Fin w.S,
+      w.weight j * (coeffPoly x).eval (w.nodes j) ^ 2
+      = ∑ i : Fin n, ∑ k : Fin n,
+          x i * x k * (w.weight j * w.nodes j ^ ((i : ℕ) + (k : ℕ))) := by
+    intro j
+    rw [coeffPoly_eval, sq, Finset.sum_mul_sum, Finset.mul_sum]
+    refine Finset.sum_congr rfl fun i _ => ?_
+    rw [Finset.mul_sum]
+    refine Finset.sum_congr rfl fun k _ => ?_
+    rw [pow_add]
+    ring
+  calc x ⬝ᵥ (w.hankel n *ᵥ x)
+      = ∑ i : Fin n, ∑ k : Fin n,
+          x i * x k * w.mom ((i : ℕ) + (k : ℕ)) := by
+        simp only [dotProduct, Matrix.mulVec, hankel, dotProduct]
+        refine Finset.sum_congr rfl fun i _ => ?_
+        rw [Finset.mul_sum]
+        refine Finset.sum_congr rfl fun k _ => ?_
+        ring
+    _ = ∑ i : Fin n, ∑ k : Fin n, ∑ j,
+          x i * x k * (w.weight j * w.nodes j ^ ((i : ℕ) + (k : ℕ))) := by
+        refine Finset.sum_congr rfl fun i _ =>
+          Finset.sum_congr rfl fun k _ => ?_
+        rw [hmom, Finset.mul_sum]
+    _ = ∑ i : Fin n, ∑ j, ∑ k : Fin n,
+          x i * x k * (w.weight j * w.nodes j ^ ((i : ℕ) + (k : ℕ))) :=
+        Finset.sum_congr rfl fun i _ => Finset.sum_comm
+    _ = ∑ j, ∑ i : Fin n, ∑ k : Fin n,
+          x i * x k * (w.weight j * w.nodes j ^ ((i : ℕ) + (k : ℕ))) :=
+        Finset.sum_comm
+    _ = ∑ j, w.weight j * (coeffPoly x).eval (w.nodes j) ^ 2 := by
+        refine Finset.sum_congr rfl fun j _ => (hrhs j).symm
+
+/-- **Augmented quadratic form (r473, PROVED).**  At the test
+vector `(x, t)` the cap form splits as the Hankel wall, the
+mixed border, and the budget corner. -/
+theorem A_quadform (n : ℕ) (x : Fin n → ℝ) (t : ℝ) :
+    Sum.elim x (fun _ : Unit => t) ⬝ᵥ (w.A n *ᵥ Sum.elim x (fun _ => t))
+      = x ⬝ᵥ (w.hankel n *ᵥ x) + 2 * t * (w.borderVec n ⬝ᵥ x)
+        + w.B * t ^ 2 := by
+  have h1 : ∀ i : Fin n,
+      (w.A n *ᵥ Sum.elim x (fun _ : Unit => t)) (Sum.inl i)
+        = (w.hankel n *ᵥ x) i + w.u i * t := by
+    intro i
+    simp [A, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, hankel]
+  have h2 : (w.A n *ᵥ Sum.elim x (fun _ : Unit => t)) (Sum.inr ())
+      = w.borderVec n ⬝ᵥ x + w.B * t := by
+    simp [A, Matrix.mulVec, dotProduct, Fintype.sum_sum_type, borderVec]
+  calc Sum.elim x (fun _ : Unit => t) ⬝ᵥ (w.A n *ᵥ Sum.elim x (fun _ => t))
+      = (∑ i : Fin n,
+          x i * (w.A n *ᵥ Sum.elim x (fun _ : Unit => t)) (Sum.inl i))
+        + t * (w.A n *ᵥ Sum.elim x (fun _ : Unit => t)) (Sum.inr ()) := by
+        simp [dotProduct, Fintype.sum_sum_type]
+    _ = (∑ i : Fin n, x i * ((w.hankel n *ᵥ x) i + w.u i * t))
+        + t * (w.borderVec n ⬝ᵥ x + w.B * t) := by
+        rw [h2]
+        congr 1
+        exact Finset.sum_congr rfl fun i _ => by rw [h1 i]
+    _ = x ⬝ᵥ (w.hankel n *ᵥ x) + 2 * t * (w.borderVec n ⬝ᵥ x)
+        + w.B * t ^ 2 := by
+        have hsum : ∑ i : Fin n,
+            x i * ((w.hankel n *ᵥ x) i + w.u i * t)
+            = (∑ i : Fin n, x i * (w.hankel n *ᵥ x) i)
+              + t * ∑ i : Fin n, w.u i * x i := by
+          rw [Finset.mul_sum, ← Finset.sum_add_distrib]
+          exact Finset.sum_congr rfl fun i _ => by ring
+        have hu : ∑ i : Fin n, w.u i * x i
+            = ∑ i : Fin n, w.borderVec n i * x i := by
+          simp [borderVec]
+        simp only [dotProduct]
+        rw [hsum, hu]
+        ring
+
+end PrimeWindow
+
+/-- Polynomial-class read: the `A_cap` quadratic form of the
+coefficient vector of `p` (degree `< cap` after truncation)
+together with a border coordinate.  This is the moment
+evaluation the finite matrix can see. -/
+noncomputable def selectedPolynomialRead
+    (k : ℕ) (hk : 0 < k) (p : Polynomial ℝ) (t : ℝ) : ℝ :=
+  let x : Fin (selectedRealWindow k hk).cap → ℝ :=
+    fun i => p.coeff (i : ℕ)
+  selectedReadQuadratic k hk (Sum.elim x fun _ => t)
+
+/-- **POLYNOMIAL-CLASS BRIDGE (r473, PROVED).**  `A_cap ⪰ 0`
+implies every degree-`< cap` polynomial read is nonnegative.
+The channel is the identity on the cap-plus-border space; there
+is no `steps` quantifier.  Fixed `k` only.  NO RH CLAIM. -/
+theorem selectedACapPsdImpliesPolynomialReads
+    {k : ℕ} (hk : 0 < k)
+    (hA : ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef)
+    (z : Fin (selectedRealWindow k hk).cap ⊕ Unit → ℝ) :
+    0 ≤ selectedReadQuadratic k hk z :=
+  hA.dotProduct_mulVec_nonneg z
+
+theorem selectedACapPsdImpliesPolynomialReads_poly
+    {k : ℕ} (hk : 0 < k)
+    (hA : ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef)
+    (p : Polynomial ℝ) (t : ℝ) :
+    0 ≤ selectedPolynomialRead k hk p t :=
+  selectedACapPsdImpliesPolynomialReads hk hA _
+
+/-- Arch tent discrepancy of a selected window against the
+classical (opaque) digamma pairing. -/
+noncomputable def selectedArchError (k : ℕ) (f : GridElement) : ℝ :=
+  |archRead (selectedAnchor k) (selectedMesh k) f - weilArchSide f|
+
+/-- **Exact onset gap (r473, PROVED).**  Once the comb channel
+has covered the support, `fullRead − weilForm` is exactly the
+arch tent error.  Pole equality is definitional.  Does not
+consume `arch_gauss_mellin_digamma_identity`.  NO RH CLAIM. -/
+theorem fullRead_weilForm_gap_eq_arch
+    {a m : ℕ} (f : GridElement) (ha : f.elementAnchor ≤ a) :
+    fullRead a m f - weilForm f = archRead a m f - weilArchSide f := by
+  unfold fullRead weilForm poleRead weilPoleSide
+  rw [comb_elementwise_stabilization f ha]
+  ring
+
+theorem selected_fullRead_weil_absError
+    {k : ℕ} (f : GridElement)
+    (ha : f.elementAnchor ≤ selectedAnchor k) :
+    |fullRead (selectedAnchor k) (selectedMesh k) f - weilForm f|
+      = selectedArchError k f := by
+  unfold selectedArchError
+  rw [fullRead_weilForm_gap_eq_arch f ha]
+
+/-- **Named outer bridge (r473).**  At a fixed selected window,
+every mesh-compatible native read lies within the arch tent
+error of the polynomial-class `A_cap` image.  On a PSD cap
+this is `fullRead ≥ −selectedArchError`.  Sealed numerically
+at the r470 k=5 witness; not a `sorry`.  No infinitely-many-`k`
+quantifier. -/
+def SelectedPolynomialApproximatesGrid : Prop :=
+  ∀ (k : ℕ) (hk : 0 < k) (f : GridElement),
+    f.meshExp ≤ selectedMesh k →
+      ∃ z : Fin (selectedRealWindow k hk).cap ⊕ Unit → ℝ,
+        |fullRead (selectedAnchor k) (selectedMesh k) f
+          - selectedReadQuadratic k hk z|
+          ≤ selectedArchError k f
+
+/-- **Cone plus named approx (r473, PROVED as a function of the
+named bridge).**  PSD `A_cap` and the polynomial approximation
+give `fullRead ≥ −err_arch` at a single window.  Fixed `k` only.
+NO RH CLAIM. -/
+theorem selected_reads_ge_neg_archError_of_approx
+    {k : ℕ} (hk : 0 < k) (f : GridElement)
+    (hm : f.meshExp ≤ selectedMesh k)
+    (hA : ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef)
+    (happrox : SelectedPolynomialApproximatesGrid) :
+    -selectedArchError k f
+      ≤ fullRead (selectedAnchor k) (selectedMesh k) f := by
+  obtain ⟨z, hz⟩ := happrox k hk f hm
+  have hnn : 0 ≤ selectedReadQuadratic k hk z :=
+    selectedACapPsdImpliesPolynomialReads hk hA z
+  have hside := abs_le.mp hz
+  linarith
+
+/-- Onset-compatible form: `weilForm ≥ −2 err_arch` at a single
+window, from the proved arch-gap identity plus the named approx.
+Fixed `k` only.  NO RH CLAIM. -/
+theorem weilForm_ge_neg_two_archError_of_approx
+    {k : ℕ} (hk : 0 < k) (f : GridElement)
+    (hm : f.meshExp ≤ selectedMesh k)
+    (ha : f.elementAnchor ≤ selectedAnchor k)
+    (hA : ((selectedRealWindow k hk).toPrimeWindow.A
+      (selectedRealWindow k hk).cap).PosSemidef)
+    (happrox : SelectedPolynomialApproximatesGrid) :
+    -2 * selectedArchError k f ≤ weilForm f := by
+  have hrd := selected_reads_ge_neg_archError_of_approx hk f hm hA happrox
+  have hgap := selected_fullRead_weil_absError f ha
+  have hpart : weilForm f
+      ≥ fullRead (selectedAnchor k) (selectedMesh k) f
+        - selectedArchError k f := by
+    have := abs_le.mp (le_of_eq hgap)
+    linarith
+  linarith
 
 end RH

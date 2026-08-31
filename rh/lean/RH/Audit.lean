@@ -357,6 +357,11 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms selectedSemidefImpliesPlainReads_of_A_cap
 #print axioms internal_weil_nonneg_of_frequently_selected_of_A_cap
 #print axioms arch_gauss_mellin_digamma_identity
+#print axioms selectedACapPsdImpliesPolynomialReads
+#print axioms PrimeWindow.hankel_quadform
+#print axioms fullRead_weilForm_gap_eq_arch
+#print axioms selected_reads_ge_neg_archError_of_approx
+#print axioms weilForm_ge_neg_two_archError_of_joint
 
 /-! ## (q) The r463 explicit external-bridge census
 Exactly three new `sorry` declarations, replacing arrows that were
