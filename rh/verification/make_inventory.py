@@ -2961,6 +2961,71 @@ _R496_STATUS = (
     "no R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R502_STATUS = (
+    "0.8 rung judgment "
+    "(round 502, PRIME.RDAGGER.L08_JUDGMENT.01; "
+    "adjudication note, NO probe, NO verifier, NO census, "
+    "NO ledger row, NO sealed pin): "
+    "VERDICT U1 BLOCKED(no-certifiable-gap@L>=0.45) / "
+    "U2 LADDER_RESTS_REDIRECT_TO_BRIDGE_LANE / "
+    "U3 ANTI_LIST_EXTENDED.  "
+    "The r496 no-go is reproduced from an independent implementation: "
+    "all four cutoff rows (-1.610673e-4, -8.176622e-4, -2.284102e-3, "
+    "-3.032258e-2), all four kappa_w (7.3770530633, 6.6829061429, "
+    "6.1992956339, 5.0654766992), HS 19.2177 and r_101 9.12241; the "
+    "matching booking is (B), prime translations retained as "
+    "operators (booking (A) gives -3.8688).  "
+    "U1: both r496 obstructions are mis-specified because the target "
+    "does not exist at the claimed size.  An explicit odd Legendre "
+    "degree-13 witness gives lambda_*(0.8) <= 1.8170e-14, evaluated "
+    "at dps=30 in the x-space form as 1.81691694981e-14 and bracketed "
+    "from below by the nonnegative spectral side of the explicit "
+    "formula over the first 60 zeta zeros, 1.442289883e-14 (79 "
+    "percent); the gamma_1 term is 1.061e-26, i.e. "
+    "|hat h(gamma_1)| ~ 7.3e-14 against ||hat h||^2 = 2 pi.  Controls "
+    "reproduce: L=0.8 constant mode 0.0802740549593 inside the r477 "
+    "hull with 60-zero partial 0.07050676638; L=0.3 even minimiser "
+    "0.0075718518899 with partial 0.007040224407.  Ceiling ladder "
+    "(Galerkin upper bounds, n=81): 7.5715e-3 (L=0.30), 1.3294e-3 "
+    "(0.34657), 1.8136e-4 (0.40), 1.6166e-5 (0.45), 9.3448e-7 (0.50), "
+    "1.6096e-9 (0.60), 4.8745e-13 (0.70), below float floor from 0.75; "
+    "archimedean floor lambda_min(A+Pi) = +7.5715e-3, +1.3294e-3, "
+    "-7.8049e-2, -2.0521e-1, -3.2224e-1, -5.3588e-1, -7.3394e-1, "
+    "-9.2648e-1, and -12.5178 at the r471 top rung L_16=2.7726; "
+    "channel cancellation depth 2.1 digits at L=0.3 rising to 13.6 at "
+    "L=0.8.  Four candidate refinements calibrated then killed: "
+    "K1 finer window (the deficit really does vanish -- -1.3454e-5, "
+    "-9.0685e-7, -9.2299e-8, -6.9242e-9, -7.4437e-11 -- and its limit "
+    "is the ceiling; positivity at the witness needs x_0 < 4.59e-8, "
+    "hence n >~ 3.5e7 modes); K2 prime-free error block via a scalar "
+    "(closed-form almost-periodic sup pi_0.8 = 2.13500217689506 at "
+    "c = -1/(2 sqrt 2) since log 4 = 2 log 2, and the sharper "
+    "boundary-strip minorant sum a_n = 1.4709867626 with step "
+    "potential levels 0.4907286/0.9808577/0.3465736/0 -- both dead, "
+    "certificate between -2.40 and -3.87 because "
+    "lambda_min(A+Pi) < 0); K3 primes as a joint finite-parametric "
+    "object (exact per node: Re R_a is 1/2 times the adjacency of the "
+    "path graph on m = ceil(2L/a) vertices, measured lambda_max "
+    "0.707107 = cos(pi/4) for log 2 and 0.500000 = cos(pi/3) for "
+    "log 3 and log 4; impossible jointly, log 3 / log 2 irrational); "
+    "K4 strip-booked cutoff (exact and Loewner-legal, but the witness "
+    "has h(+-L)^2 = 9.84e-14, the ceiling's own order).  "
+    "U2: the r493e assembly grid_dense_extension consumes NON-STRICT "
+    "positivity uniform in the support length, so a fixed-L gap is "
+    "off-target; the lambda_* ladder is closed as a proof route for "
+    "every L > (log 2)/2, r494/r495 stand, resources go to the bridge "
+    "lane, and a mandatory feasibility pre-gate measures cancellation "
+    "depth before any scheme is proposed.  "
+    "U3: new family F-VII (fixed-L margin objects read as proof "
+    "targets) with N5-N10; the r492 U2-ranking entry 'same machine up "
+    "the r471 schedule' is withdrawn.  "
+    "The ceiling is an UPPER bound on a quantity RH predicts to be "
+    "nonnegative; a small positive lambda_* is exactly what RH "
+    "predicts, and both representations return a positive value.  "
+    "NO counterexample, NO anti-positivity statement.  No L* claim, "
+    "no R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7300,6 +7365,17 @@ ENTRIES = [
      "final line VERIFIED kernel_loewner08 r496 NO_GO", True),
     ("rh/problem/kernel_loewner08.pdf", "problem_statement",
      "r496", [], "compiled PDF of kernel_loewner08.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
+    ("rh/problem/l08_judgment.tex", "problem_statement",
+     "r502",
+     [],
+     _R502_STATUS,
+     True),
+    ("rh/problem/l08_judgment.pdf", "problem_statement",
+     "r502",
+     [],
+     "compiled PDF of l08_judgment.tex "
      "(recompiled artefact, registered unpinned)", False),
 
     # -- frozen libraries the modules embed byte-exact --

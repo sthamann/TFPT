@@ -7136,6 +7136,59 @@ block-diagonal rest $6.2971739\cdot10^{-4}$ is explicitly included.
 The outward floor is $2.12201489025\cdot10^{-3}$.
 Fixed-support audit only; NO ledger row, NO L\* claim, NO RH CLAIM.
 
+
+**Kernel--Loewner scaling test at $L=0.8$ (r496,
+PRIME.RDAGGER.KERNEL\_LOEWNER.02).**
+Sealed probe `experiments/tfpt-discovery/kernel_loewner08_probe.py`
+(smoke/full 15/15, SPEC\_SHA `63f590d43c9ed63e`) plus
+`rh/problem/kernel_loewner08.tex` (+ PDF +
+`verify_kernel_loewner08.py`,
+`VERIFIED kernel_loewner08 r496 NO_GO`).
+**Verdict NO\_GO(kernel-Loewner-compact-tail@L=0.8).**
+G1 passes ($c_L=3.5598735700355446$, factor-two prime $g(0)$ mass
+$2\sum\Lambda(n)/\sqrt n=2.9419735252236205$, five dps-50 tests within
+$5.499\cdot10^{-14}$).  G2 and G3 give a method no-go: the best booked
+cutoff $[0.001,0.003]$ has $n=101$ section
+$\lambda_{\min}=-1.610673\cdot10^{-4}$, the full $3\times$HS charge is
+$27.367230540$, and the bounded prime translations are noncompact
+(measured off-block $0.939496613$).
+Method no-go only, no anti-positivity theorem; NO ledger row,
+NO L\* claim, NO RH CLAIM.
+
+
+**The $0.8$ rung judgment (r502,
+PRIME.RDAGGER.L08\_JUDGMENT.01).**
+Adjudication note `rh/problem/l08_judgment.tex` (+ PDF).
+No probe, no verifier, no census, no sealed pin.
+**Verdict U1 BLOCKED(no-certifiable-gap@$L\ge0.45$) /
+U2 LADDER\_RESTS\_REDIRECT\_TO\_BRIDGE\_LANE /
+U3 ANTI\_LIST\_EXTENDED.**
+The r496 no-go is reproduced from an independent implementation (all
+four cutoff rows, all four $\kappa_w$, $\|T_w\|_{\rm HS}=19.2177$,
+$r_{101}=9.12241$), which also identifies its booking as the one that
+retains the prime translations as operators.
+Both r496 obstructions are then found to be mis-specified: an explicit
+odd Legendre degree-13 witness gives
+$\lambda_*(0.8)\le1.8170\cdot10^{-14}$, evaluated at `dps=30` in the
+$x$-space form as $1.81691694981\cdot10^{-14}$ and bracketed from below
+by the nonnegative spectral side of the explicit formula over the first
+$60$ zeta zeros ($1.442289883\cdot10^{-14}$, $79\%$), with the
+$\gamma_1$ term at $1.061\cdot10^{-26}$.  The r496 margins are ten
+orders of magnitude above that target.  Measured ceiling ladder
+$7.57\cdot10^{-3}$, $1.33\cdot10^{-3}$, $1.81\cdot10^{-4}$,
+$1.62\cdot10^{-5}$, $9.34\cdot10^{-7}$, $1.61\cdot10^{-9}$,
+$4.87\cdot10^{-13}$ at $L=0.30,0.34657,0.40,0.45,0.50,0.60,0.70$, with
+the archimedean floor falling to $-0.92648$ at $L=0.8$: three-channel
+cancellation to $13.6$ digits.  Four candidate refinements are
+calibrated against these numbers and all four die.
+$\lambda_*$-ladder closed as a proof route beyond the prime-free zone;
+r494/r495 stand; resources to the bridge lane; new anti-list family
+F-VII with N5--N10.
+The ceiling is an **upper** bound on a quantity RH predicts to be
+nonnegative, and both representations return a positive value: NO
+counterexample, NO anti-positivity statement.
+NO ledger row, NO L\* claim, NO RH CLAIM, NO anti-RH claim.
+
 ## Folder guide
 
 ```
@@ -7624,6 +7677,20 @@ rh/
 │   │                     independent digamma, rational boundary,
 │   │                     false-world, CC/HS off-space audit.
 │   │                     No RH claim
+│   ├── kernel_loewner08.tex(+pdf) — r496:
+│   │                     NO_GO(kernel-Loewner-compact-tail@L=0.8);
+│   │                     G1 pass, G2/G3 no-go
+│   │                     (section -1.6107e-4, 3xHS 27.367,
+│   │                     prime off-block 0.9395).
+│   │                     Method no-go only.  No RH claim
+│   ├── l08_judgment.tex(+pdf) — r502:
+│   │                     U1 BLOCKED(no-certifiable-gap@L>=0.45) /
+│   │                     U2 LADDER_RESTS_REDIRECT_TO_BRIDGE_LANE /
+│   │                     U3 ANTI_LIST_EXTENDED;
+│   │                     lambda_*(0.8) <= 1.8170e-14 witnessed,
+│   │                     x-space + spectral bracket;
+│   │                     ceiling ladder + 4 calibrated kills.
+│   │                     Upper bound, NOT anti-RH.  No RH claim
 │   ├── operator_residual.tex(+pdf) — r490: STUCK
 │   │                     (off/s=5.86-eats-1000x;
 │   │                     GL-tiny-not-the-certificate)
@@ -8967,6 +9034,15 @@ that tree), the main verification/ledger/docset, or
 `experiments/next.txt`.  File domain is the probe,
 `kernel_redteam.tex(+pdf)`, its verifier, INVENTORY, `run_rh.py`, and
 the experiments/RH READMEs.  Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r502 coexistence.** Round 502 (`l08_judgment.tex`) is a pure
+adjudication note on the r496 no-go at $L=0.8$.  It adds no probe, no
+verifier and no pin, and it does not touch `rh/lean/` (r501 runs there
+in parallel), the main verification/ledger/docset, or
+`experiments/next.txt`.  File domain is
+`rh/problem/l08_judgment.tex(+pdf)`, `make_inventory.py`,
+`INVENTORY.json` and this README (which also picks up the missing r496
+status block).  Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
