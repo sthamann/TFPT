@@ -429,7 +429,11 @@ r506 proves the parked strip bound
 (`FullWeilTest.norm_hat_le_inv_sq`) and the
 Dirichlet majorants `‖ζ(s)‖ ≤ ‖ζ(2)‖`,
 `‖1/ζ(s)‖ ≤ ‖ζ(2)‖` on `Re s ≥ 2`.  ĥ-side of
-[2c] is complete.  Census stays 7.
+[2c] is complete.  r507 lands FE pairing
+(`riemannZeta_one_sub_eq_zero_of`) and the
+Γ-free Euler–Maclaurin skeleton (FTC cell,
+telescoping, `{x}`-cells, cell majorant).
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -511,6 +515,16 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms inv_riemannZeta_eq_LSeries_moebius
 #print axioms normRiemannZetaLeZetaTwo
 #print axioms normInvRiemannZetaLeZetaTwo
+#print axioms riemannZeta_one_sub_hypotheses
+#print axioms riemannZeta_one_sub_eq_zero_of
+#print axioms riemannZeta_zero_iff_one_sub
+#print axioms fract_eq_sub_of_mem_Ico
+#print axioms intervalIntegral_ofReal_cpow_deriv
+#print axioms intervalIntegral_cpow_neg_succ
+#print axioms sum_succ_mul_sub_cpow
+#print axioms sub_cpow_eq_s_mul_intervalIntegral
+#print axioms norm_zetaFractCellIntegrand_le
+#print axioms norm_zetaFractCell_le
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

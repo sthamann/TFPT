@@ -831,6 +831,28 @@ then Jensen → `N(T)` → `∑ 1/|ρ|²`.
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r507 census (outer bridges 14, Γ-free counting path)
+
+(a) FE-pairing KOMPLETT: `ζ(s)=0` and `0<Re s<1`
+imply `ζ(1-s)=0` (`riemannZeta_one_sub_eq_zero_of`,
+iff via `riemannZeta_zero_iff_one_sub`).  Uses
+Mathlib `riemannZeta_one_sub` (cos form); no
+Γ-growth and no `Gamma_ne_zero`.
+
+(b) Mathlib has no complex N=1 Euler–Maclaurin
+(`ZetaAsymp` is only `s→1` / real `term`).
+Landed: FTC cell `∫_n^{n+1} x^{-s-1}`, discrete
+telescoping, `{x}`-cell series `zetaFractIntegral`,
+and cell majorant `|cell| ≤ ∫ x^{-σ-1}`.  The
+assembled `ζ(s)=1/(s-1)+1-s∫_1^∞{x}x^{-s-1}`
+on `Re s>1` (then identity theorem to `Re s>0`)
+is r508.
+
+(c) Strip `|ζ| ≤ C(δ)(1+|s|)` on `Re s≥δ>0` not
+this round.  Jensen / `N(T)` / `∑ 1/|ρ|²` = r508–r509.
+`RiemannZetaStripPolyBound` remains parked.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

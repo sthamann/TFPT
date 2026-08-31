@@ -36,6 +36,11 @@ import Mathlib.Analysis.Complex.Exponential
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.PSeriesComplex
 import Mathlib.Topology.Algebra.InfiniteSum.Order
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
+import Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts
+import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
+import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
+import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
 
 namespace RH
 
@@ -3610,6 +3615,248 @@ lemma normInvRiemannZetaLeZetaTwo : NormInvRiemannZetaLeZetaTwo := by
   exact (tsum_norm_term_one_two).le
 
 end ZetaHalfPlaneBounds
+
+/-! ### r507: Γ-free counting path — FE pairing + N=1 Euler–Maclaurin
+
+Mathlib scoping (v4.29.1):
+* `riemannZeta_one_sub` uses **cos(π s / 2)** (not sin) and needs
+  `∀ n, s ≠ -n` plus `s ≠ 1`.  No growth bound.
+* `Complex.Gamma_ne_zero` / `Gamma_ne_zero_of_re_pos` exist; pairing
+  does not need them (the FE is a product, so `ζ(s) = 0` forces
+  `ζ(1-s) = 0` whenever the identity applies).
+* `ZetaAsymptotics` (`Harmonic/ZetaAsymp`) is only the `s → 1`
+  Euler–Mascheroni limit.  Its real auxiliary
+  `term n s = ∫_n^{n+1} (x-n)/x^{s+1}` is the real-s>1 shadow of
+  the `{x}`-cell, not a complex `Re s > 0` representation.
+* No EulerMacLaurin zeta module and no `{x} x^{-s-1}` formula
+  for complex `s`.  We build the N=1 form from FTC + telescoping.
+-/
+
+section ZetaFunctionalEquationPairing
+
+open Complex
+
+/-- On the open strip `0 < Re s < 1` the FE hypotheses hold:
+`s` is not a non-positive integer and `s ≠ 1`. -/
+lemma riemannZeta_one_sub_hypotheses {s : ℂ} (h0 : 0 < s.re) (h1 : s.re < 1) :
+    (∀ n : ℕ, s ≠ -n) ∧ s ≠ 1 := by
+  refine ⟨fun n h => ?_, fun h => ?_⟩
+  · have hre : s.re = - (n : ℝ) := by
+      rw [h, neg_re, natCast_re]
+    have : (0 : ℝ) ≤ n := Nat.cast_nonneg _
+    linarith
+  · have : s.re = 1 := by rw [h]; simp
+    linarith
+
+/-- **r507 (a).**  Functional-equation pairing on the open strip:
+`ζ(s) = 0` and `0 < Re s < 1` imply `ζ(1-s) = 0`.  Prefactors of
+`riemannZeta_one_sub` are finite on this strip, so no Γ-growth
+and no `Gamma_ne_zero` is required. -/
+lemma riemannZeta_one_sub_eq_zero_of {s : ℂ}
+    (h0 : 0 < s.re) (h1 : s.re < 1) (hz : riemannZeta s = 0) :
+    riemannZeta (1 - s) = 0 := by
+  obtain ⟨hs_neg, hs1⟩ := riemannZeta_one_sub_hypotheses h0 h1
+  rw [riemannZeta_one_sub hs_neg hs1, hz, mul_zero]
+
+lemma re_one_sub {s : ℂ} : (1 - s).re = 1 - s.re := by
+  simp [sub_re]
+
+/-- Pairing is an equivalence: apply the one-sided lemma twice. -/
+lemma riemannZeta_zero_iff_one_sub {s : ℂ}
+    (h0 : 0 < s.re) (h1 : s.re < 1) :
+    riemannZeta s = 0 ↔ riemannZeta (1 - s) = 0 := by
+  constructor
+  · exact riemannZeta_one_sub_eq_zero_of h0 h1
+  · intro hz
+    have h0' : 0 < (1 - s).re := by rw [re_one_sub]; linarith
+    have h1' : (1 - s).re < 1 := by rw [re_one_sub]; linarith
+    simpa [sub_sub_cancel] using
+      riemannZeta_one_sub_eq_zero_of h0' h1' hz
+
+end ZetaFunctionalEquationPairing
+
+section ZetaEulerMaclaurin
+
+open Complex Set MeasureTheory
+open scoped Interval
+
+/-- `{x} = x - n` on the half-open cell `[n, n+1)`. -/
+lemma fract_eq_sub_of_mem_Ico {n : ℕ} {x : ℝ}
+    (hx : x ∈ Ico (n : ℝ) (n + 1)) : Int.fract x = x - n := by
+  have hfloor : ⌊x⌋ = (n : ℤ) :=
+    Int.floor_eq_on_Ico (n : ℤ) x (by
+      refine ⟨?_, ?_⟩
+      · exact_mod_cast hx.1
+      · exact_mod_cast hx.2)
+  simp [Int.fract, hfloor]
+
+lemma continuousOn_ofReal_cpow_Icc {a b : ℝ} (ha : 0 < a) (_hab : a ≤ b) (z : ℂ) :
+    ContinuousOn (fun x : ℝ => (x : ℂ) ^ z) (Icc a b) := by
+  intro x hx
+  have hx0 : x ≠ 0 := (ha.trans_le hx.1).ne'
+  exact (continuousAt_ofReal_cpow_const x z (Or.inr hx0)).continuousWithinAt
+
+lemma intervalIntegrable_ofReal_cpow {n : ℕ} (hn : 0 < n) (z : ℂ) :
+    IntervalIntegrable (fun x : ℝ => (x : ℂ) ^ z) volume (n : ℝ) (n + 1 : ℝ) := by
+  refine ContinuousOn.intervalIntegrable_of_Icc (by linarith) ?_
+  exact continuousOn_ofReal_cpow_Icc (Nat.cast_pos.mpr hn) (by linarith) z
+
+/-- FTC for `x ↦ x^r` on a cell `[n, n+1]` with `n ≥ 1`. -/
+lemma intervalIntegral_ofReal_cpow_deriv {n : ℕ} (hn : 0 < n) {r : ℂ}
+    (hr : r ≠ 0) :
+    ∫ x in (n : ℝ)..(n + 1), r * (x : ℂ) ^ (r - 1) =
+      ((n + 1 : ℝ) : ℂ) ^ r - (n : ℂ) ^ r := by
+  have hderiv : ∀ x ∈ uIcc (n : ℝ) (n + 1),
+      HasDerivAt (fun y : ℝ => (y : ℂ) ^ r) (r * (x : ℂ) ^ (r - 1)) x := by
+    intro x hx
+    have hx0 : x ≠ 0 := by
+      rw [uIcc_of_le (by linarith)] at hx
+      exact ((Nat.cast_pos.mpr hn).trans_le hx.1).ne'
+    exact hasDerivAt_ofReal_cpow_const hx0 hr
+  have hint : IntervalIntegrable (fun x : ℝ => r * (x : ℂ) ^ (r - 1))
+      volume (n : ℝ) (n + 1 : ℝ) :=
+    (intervalIntegrable_ofReal_cpow hn (r - 1)).const_mul r
+  simpa using intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint
+
+/-- Cell identity: `∫_n^{n+1} x^{-s-1} dx = (n^{-s} - (n+1)^{-s}) / s`. -/
+lemma intervalIntegral_cpow_neg_succ {n : ℕ} (hn : 0 < n) {s : ℂ}
+    (hs : s ≠ 0) :
+    ∫ x in (n : ℝ)..(n + 1), (x : ℂ) ^ (-s - 1) =
+      ((n : ℂ) ^ (-s) - ((n + 1 : ℕ) : ℂ) ^ (-s)) / s := by
+  have hr : (-s) ≠ 0 := neg_ne_zero.mpr hs
+  have hFTC := intervalIntegral_ofReal_cpow_deriv hn hr
+  have hI :
+      (-s) * (∫ x in (n : ℝ)..(n + 1), (x : ℂ) ^ (-s - 1)) =
+        ((n + 1 : ℝ) : ℂ) ^ (-s) - (n : ℂ) ^ (-s) := by
+    trans ∫ x in (n : ℝ)..(n + 1), (-s) * (x : ℂ) ^ (-s - 1)
+    · exact (intervalIntegral.integral_const_mul
+        (r := -s) (fun x : ℝ => (x : ℂ) ^ (-s - 1))).symm
+    · convert hFTC using 1
+  have hcast : ((n + 1 : ℝ) : ℂ) = ((n + 1 : ℕ) : ℂ) := by simp
+  rw [hcast] at hI
+  rw [eq_div_iff hs]
+  linear_combination -(hI)
+
+/-- Discrete telescoping: `∑_{k=1}^N k (k^{-s}-(k+1)^{-s}) = ∑ k^{-s} - N(N+1)^{-s}`. -/
+lemma sum_succ_mul_sub_cpow (N : ℕ) (s : ℂ) :
+    ∑ n ∈ Finset.range N,
+        (n + 1 : ℂ) * ((n + 1 : ℂ) ^ (-s) - (n + 2 : ℂ) ^ (-s)) =
+      (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) -
+        (N : ℂ) * (N + 1 : ℂ) ^ (-s) := by
+  induction N with
+  | zero => simp
+  | succ N ih =>
+    have hstep :
+        (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) -
+            (N : ℂ) * (N + 1 : ℂ) ^ (-s) +
+            (N + 1 : ℂ) * ((N + 1 : ℂ) ^ (-s) - (N + 2 : ℂ) ^ (-s)) =
+          (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) +
+            (N + 1 : ℂ) ^ (-s) -
+            (N + 1 : ℂ) * (N + 2 : ℂ) ^ (-s) := by
+      have hN : (N + 1 : ℂ) - (N : ℂ) = 1 := by ring
+      calc
+        (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) -
+            (N : ℂ) * (N + 1 : ℂ) ^ (-s) +
+            (N + 1 : ℂ) * ((N + 1 : ℂ) ^ (-s) - (N + 2 : ℂ) ^ (-s))
+            = (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) +
+              ((N + 1 : ℂ) - (N : ℂ)) * (N + 1 : ℂ) ^ (-s) -
+              (N + 1 : ℂ) * (N + 2 : ℂ) ^ (-s) := by ring
+        _ = (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) +
+              (N + 1 : ℂ) ^ (-s) -
+              (N + 1 : ℂ) * (N + 2 : ℂ) ^ (-s) := by
+          rw [hN, one_mul]
+    calc
+      ∑ n ∈ Finset.range (N + 1),
+          (n + 1 : ℂ) * ((n + 1 : ℂ) ^ (-s) - (n + 2 : ℂ) ^ (-s))
+          = (∑ n ∈ Finset.range N,
+              (n + 1 : ℂ) * ((n + 1 : ℂ) ^ (-s) - (n + 2 : ℂ) ^ (-s))) +
+            (N + 1 : ℂ) * ((N + 1 : ℂ) ^ (-s) - (N + 2 : ℂ) ^ (-s)) :=
+        Finset.sum_range_succ _ _
+      _ = (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) -
+            (N : ℂ) * (N + 1 : ℂ) ^ (-s) +
+            (N + 1 : ℂ) * ((N + 1 : ℂ) ^ (-s) - (N + 2 : ℂ) ^ (-s)) := by
+        rw [ih]
+      _ = (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) +
+            (N + 1 : ℂ) ^ (-s) -
+            (N + 1 : ℂ) * (N + 2 : ℂ) ^ (-s) := hstep
+      _ = (∑ n ∈ Finset.range (N + 1), (n + 1 : ℂ) ^ (-s)) -
+            ((N + 1 : ℕ) : ℂ) * (((N + 1 : ℕ) : ℂ) + 1) ^ (-s) := by
+        rw [Finset.sum_range_succ, Nat.cast_succ, add_assoc]
+        simp only [one_add_one_eq_two]
+
+/-- `{x}`-cell integrand on `[n+1, n+2)` (equals `Int.fract` there). -/
+noncomputable def zetaFractCellIntegrand (n : ℕ) (s : ℂ) (x : ℝ) : ℂ :=
+  ((x - (n + 1 : ℝ) : ℝ) : ℂ) * (x : ℂ) ^ (-s - 1)
+
+noncomputable def zetaFractCell (n : ℕ) (s : ℂ) : ℂ :=
+  ∫ x in ((n + 1 : ℝ))..(n + 2), zetaFractCellIntegrand n s x
+
+/-- N=1 fractional-part integral as a cell series (equals `∫_1^∞ {x} x^{-s-1} dx`
+whenever the improper integral exists). -/
+noncomputable def zetaFractIntegral (s : ℂ) : ℂ :=
+  ∑' n : ℕ, zetaFractCell n s
+
+lemma continuousOn_zetaFractCellIntegrand (n : ℕ) (s : ℂ) :
+    ContinuousOn (zetaFractCellIntegrand n s) (Icc (n + 1 : ℝ) (n + 2)) := by
+  have hpos : (0 : ℝ) < n + 1 := by exact_mod_cast Nat.succ_pos n
+  have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+  unfold zetaFractCellIntegrand
+  refine ContinuousOn.mul ?_ (continuousOn_ofReal_cpow_Icc hpos hle (-s - 1))
+  exact (continuous_ofReal.comp (continuous_sub_right (n + 1 : ℝ))).continuousOn
+
+lemma intervalIntegrable_zetaFractCellIntegrand (n : ℕ) (s : ℂ) :
+    IntervalIntegrable (zetaFractCellIntegrand n s) volume
+      (n + 1 : ℝ) (n + 2) :=
+  (continuousOn_zetaFractCellIntegrand n s).intervalIntegrable_of_Icc (by linarith)
+
+lemma intervalIntegrable_id_mul_cpow {n : ℕ} (hn : 0 < n) (z : ℂ) :
+    IntervalIntegrable (fun x : ℝ => (x : ℂ) * (x : ℂ) ^ z) volume
+      (n : ℝ) (n + 1 : ℝ) := by
+  refine ContinuousOn.intervalIntegrable_of_Icc (by linarith) ?_
+  exact ContinuousOn.mul continuous_ofReal.continuousOn
+    (continuousOn_ofReal_cpow_Icc (Nat.cast_pos.mpr hn) (by linarith) z)
+
+/-- Rearrangement of the cell FTC: `n^{-s}-(n+1)^{-s} = s ∫_n^{n+1} x^{-s-1}`. -/
+lemma sub_cpow_eq_s_mul_intervalIntegral {n : ℕ} (hn : 0 < n) {s : ℂ}
+    (hs : s ≠ 0) :
+    (n : ℂ) ^ (-s) - ((n + 1 : ℕ) : ℂ) ^ (-s) =
+      s * ∫ x in (n : ℝ)..(n + 1), (x : ℂ) ^ (-s - 1) := by
+  rw [intervalIntegral_cpow_neg_succ hn hs, mul_div_cancel₀ _ hs]
+
+lemma one_div_natCast_cpow_eq_cpow_neg {n : ℕ} (s : ℂ) :
+    (1 : ℂ) / (n : ℂ) ^ s = (n : ℂ) ^ (-s) := by
+  rw [cpow_neg, inv_eq_one_div]
+
+/-- On a cell, `|{x} x^{-s-1}| ≤ x^{-Re s - 1}`. -/
+lemma norm_zetaFractCellIntegrand_le (n : ℕ) (s : ℂ) {x : ℝ}
+    (hx : x ∈ Icc (n + 1 : ℝ) (n + 2)) :
+    ‖zetaFractCellIntegrand n s x‖ ≤ x ^ (-s.re - 1) := by
+  have hxpos : 0 < x :=
+    (show (0 : ℝ) < n + 1 by exact_mod_cast Nat.succ_pos n).trans_le hx.1
+  have hfrac : |x - (n + 1)| ≤ 1 := by
+    have h0 : 0 ≤ x - (n + 1) := sub_nonneg.mpr hx.1
+    have h1 : x - (n + 1) ≤ 1 := by linarith [hx.2]
+    rw [abs_of_nonneg h0]
+    exact h1
+  unfold zetaFractCellIntegrand
+  rw [norm_mul, Complex.norm_real, norm_cpow_eq_rpow_re_of_pos hxpos]
+  simp only [sub_re, neg_re, one_re]
+  exact mul_le_of_le_one_left (Real.rpow_nonneg hxpos.le _) hfrac
+
+/-- Cell majorant: `|∫_{n+1}^{n+2} {x} x^{-s-1}| ≤ ∫_{n+1}^{n+2} x^{-σ-1}`. -/
+lemma norm_zetaFractCell_le (n : ℕ) (s : ℂ) :
+    ‖zetaFractCell n s‖ ≤
+      ∫ x in (n + 1 : ℝ)..(n + 2), (x : ℝ) ^ (-s.re - 1) := by
+  have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+  refine (intervalIntegral.norm_integral_le_integral_norm hle).trans ?_
+  refine intervalIntegral.integral_mono_on hle
+    ((continuousOn_zetaFractCellIntegrand n s).norm.intervalIntegrable_of_Icc hle)
+    (ContinuousOn.intervalIntegrable_of_Icc hle
+      (continuousOn_id.rpow_const (fun x hx => Or.inl
+        ((show (0 : ℝ) < n + 1 by exact_mod_cast Nat.succ_pos n).trans_le hx.1).ne')))
+    (fun x hx => norm_zetaFractCellIntegrand_le n s hx)
+
+end ZetaEulerMaclaurin
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
