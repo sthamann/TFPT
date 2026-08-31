@@ -402,6 +402,9 @@ every non-polar zero
 [2b] residue calculus at non-polar zeros
 (`logDeriv_riemannZeta_eq_multiplicity_div_add_analytic`,
 `tendsto_mul_logDeriv_riemannZeta`, meromorphy on `ℂ \ {1}`).
+r499 proves local finiteness of non-polar zeros and finiteness
+on every compact / closed strip rectangle
+(`finite_riemannZeta_zeros_on_closedRect`).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -442,6 +445,15 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms meromorphicOn_logDeriv_riemannZeta_compl_one
 #print axioms meromorphicOrderAt_logDeriv_riemannZeta
 #print axioms tendsto_mul_logDeriv_riemannZeta
+#print axioms isConnected_compl_one
+#print axioms riemannZeta_eventually_ne_zero_punctured
+#print axioms riemannZeta_eventually_ne_zero_nhdsNE_one
+#print axioms isDiscrete_riemannZeta_zeros_compl_one
+#print axioms riemannZeta_zeros_locallyFinite_compl_one
+#print axioms finite_riemannZeta_zeros_of_isCompact
+#print axioms finite_riemannZeta_zeros_of_isCompact_ne_one
+#print axioms isCompact_zetaClosedRect
+#print axioms finite_riemannZeta_zeros_on_closedRect
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

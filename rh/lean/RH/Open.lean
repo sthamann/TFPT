@@ -616,6 +616,29 @@ Remaining named pieces of [2] (not extra sorries):
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r499 census (outer bridges 7, [2c] first cut)
+
+PROVED brick [2c] lemmas (1)--(2), sorry-free: zeros of
+`riemannZeta` on `ℂ \ {1}` are discrete / locally finite;
+every compact `K ⊆ ℂ \ {1}` meets them finitely often
+(`finite_riemannZeta_zeros_of_isCompact`); the residue at
+`s = 1` excludes zeros from a punctured neighbourhood of the
+pole, so the same holds on every compact in `ℂ`
+(`finite_riemannZeta_zeros_of_isCompact_ne_one`).  A closed
+strip rectangle `[σ₁,σ₂]×[-T,T]` therefore contains only
+finitely many zeros
+(`finite_riemannZeta_zeros_on_closedRect`) -- the [2d]
+contour support is a finite residue sum, using the r498
+residue lemma.  The polar decomposition of `ζ'/ζ` at `s = 1`
+is not in this cut.
+
+Remaining named pieces of [2] (not extra sorries):
+  [2c] cut 2: absolute convergence of `∑ m_ρ ĥ(ρ)` for
+      admissible tests,
+  [2b] remainder: `ζ'/ζ = -1/(s-1) + analytic` at the pole,
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

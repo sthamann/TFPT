@@ -27,6 +27,7 @@ import Mathlib.MeasureTheory.Function.LocallyIntegrable
 import Mathlib.Analysis.Calculus.LogDeriv
 import Mathlib.Analysis.Calculus.FDeriv.Analytic
 import Mathlib.Analysis.Meromorphic.Order
+import Mathlib.Topology.DiscreteSubset
 
 namespace RH
 
@@ -2113,10 +2114,14 @@ lemma analyticAt_riemannZeta {s : ℂ} (hs : s ≠ 1) :
     AnalyticAt ℂ riemannZeta s :=
   analyticOnNhd_riemannZeta_compl_one s hs
 
+/-- `ℂ \ {1}` is connected (real rank of `ℂ` is 2). -/
+lemma isConnected_compl_one : IsConnected ({1}ᶜ : Set ℂ) :=
+  isConnected_compl_singleton_of_one_lt_rank
+      (Complex.rank_real_complex ▸ Nat.one_lt_ofNat) (1 : ℂ)
+
 /-- `ℂ \ {1}` is preconnected (real rank of `ℂ` is 2). -/
 lemma isPreconnected_compl_one : IsPreconnected ({1}ᶜ : Set ℂ) :=
-  (isConnected_compl_singleton_of_one_lt_rank
-      (Complex.rank_real_complex ▸ Nat.one_lt_ofNat) (1 : ℂ)).isPreconnected
+  isConnected_compl_one.isPreconnected
 
 /-- Identity theorem: `ζ` is not eventually zero at any non-polar
 point, because `ζ(0) = -1/2 ≠ 0` and `ℂ \ {1}` is preconnected. -/
@@ -2315,6 +2320,121 @@ lemma tendsto_mul_logDeriv_riemannZeta {s : ℂ}
     (hcont.tendsto.mono_left nhdsWithin_le_nhds)
 
 end LogDerivZeta
+
+/-! ### r499: local finiteness of `ζ`-zeros (bridge [2c], first cut)
+
+The identity theorem ([2a]) isolates zeros on `ℂ \ {1}`.  Combined
+with Mathlib's `codiscreteWithin` / locally-finite complement, every
+compact `K ⊆ ℂ \ {1}` meets the zero set finitely often.  The residue
+at `s = 1` excludes zeros from a punctured neighbourhood of the pole,
+so the same finiteness holds on every compact in `ℂ` (a closed strip
+rectangle may contain `1`).  A residue sum of `ζ'/ζ` over such a
+rectangle is therefore a finite sum, using the r498 residue lemma.
+The absolute-convergence half of [2c] is not in this cut.
+-/
+
+section ZetaZeroFiniteness
+
+open Filter Set
+
+open scoped Topology
+
+/-- Isolation: away from the pole, `ζ` is not identically zero, so it
+is non-vanishing on a punctured neighbourhood. -/
+lemma riemannZeta_eventually_ne_zero_punctured {s : ℂ} (hs : s ≠ 1) :
+    ∀ᶠ z in 𝓝[≠] s, riemannZeta z ≠ 0 :=
+  (analyticAt_riemannZeta hs).eventually_eq_zero_or_eventually_ne_zero.resolve_left
+    fun h => analyticOrderAt_riemannZeta_ne_top hs (analyticOrderAt_eq_top.mpr h)
+
+/-- The residue ` (s-1)ζ(s) → 1 ` forbids zeros in a punctured
+neighbourhood of the pole. -/
+lemma riemannZeta_eventually_ne_zero_nhdsNE_one :
+    ∀ᶠ s in 𝓝[≠] 1, riemannZeta s ≠ 0 := by
+  have h := riemannZeta_residue_one.eventually
+    (isOpen_compl_singleton.mem_nhds (by norm_num : (1 : ℂ) ≠ 0))
+  filter_upwards [h] with s hs
+  exact right_ne_zero_of_mul hs
+
+/-- Non-polar zeros of `ζ` are a discrete subset of `ℂ`. -/
+lemma isDiscrete_riemannZeta_zeros_compl_one :
+    IsDiscrete (riemannZeta ⁻¹' {0} ∩ ({1}ᶜ : Set ℂ)) :=
+  isDiscrete_of_codiscreteWithin (s := riemannZeta ⁻¹' {0})
+    (analyticOnNhd_riemannZeta_compl_one.preimage_zero_mem_codiscreteWithin
+      (by
+        rw [riemannZeta_zero]
+        norm_num)
+      (by norm_num : (0 : ℂ) ≠ 1) isConnected_compl_one)
+
+/-- Local finiteness on `ℂ \ {1}`: every point has a neighbourhood
+meeting only finitely many zeros. -/
+lemma riemannZeta_zeros_locallyFinite_compl_one :
+    ∀ z ∈ ({1}ᶜ : Set ℂ), ∃ t ∈ 𝓝 z,
+      (t ∩ {w : ℂ | w ≠ 1 ∧ riemannZeta w = 0}).Finite := by
+  have hcod :
+      riemannZeta ⁻¹' {0}ᶜ ∈ codiscreteWithin ({1}ᶜ : Set ℂ) :=
+    analyticOnNhd_riemannZeta_compl_one.preimage_zero_mem_codiscreteWithin
+      (by
+        rw [riemannZeta_zero]
+        norm_num)
+      (by norm_num : (0 : ℂ) ≠ 1) isConnected_compl_one
+  rw [codiscreteWithin_iff_locallyFiniteComplementWithin] at hcod
+  intro z hz
+  obtain ⟨t, ht, hfin⟩ := hcod z hz
+  refine ⟨t, ht, hfin.subset fun w hw => ?_⟩
+  simp only [mem_inter_iff, mem_diff, mem_preimage, mem_compl_iff,
+    mem_singleton_iff, mem_setOf_eq] at hw ⊢
+  exact ⟨hw.1, hw.2.1, not_not.mpr hw.2.2⟩
+
+/-- **r499 brick [2c], lemma (1).**  On every compact `K ⊆ ℂ \ {1}`
+the zero set of `ζ` is finite. -/
+lemma finite_riemannZeta_zeros_of_isCompact {K : Set ℂ}
+    (hK : IsCompact K) (hK1 : K ⊆ ({1}ᶜ : Set ℂ)) :
+    {z ∈ K | riemannZeta z = 0}.Finite := by
+  choose! t ht_nhds ht_fin using fun z (hz : z ∈ K) =>
+    riemannZeta_zeros_locallyFinite_compl_one z (hK1 hz)
+  obtain ⟨F, hFmem, hFcov⟩ := hK.elim_nhds_subcover t (fun z hz => ht_nhds z hz)
+  have hunion :
+      {z ∈ K | riemannZeta z = 0} ⊆
+        ⋃ z ∈ F, t z ∩ {w : ℂ | w ≠ 1 ∧ riemannZeta w = 0} := by
+    intro w hw
+    obtain ⟨z, hzF, hwt⟩ := mem_iUnion₂.mp (hFcov hw.1)
+    exact mem_iUnion₂.mpr ⟨z, hzF, hwt, hK1 hw.1, hw.2⟩
+  exact ((F.finite_toSet).biUnion fun z hz =>
+    ht_fin z (hFmem z (Finset.mem_coe.mp hz))).subset hunion
+
+/-- The same finiteness on every compact in `ℂ`: zeros cannot
+accumulate at the pole. -/
+lemma finite_riemannZeta_zeros_of_isCompact_ne_one {K : Set ℂ}
+    (hK : IsCompact K) :
+    {z ∈ K | riemannZeta z = 0 ∧ z ≠ 1}.Finite := by
+  have hnear := riemannZeta_eventually_ne_zero_nhdsNE_one
+  rw [eventually_nhdsWithin_iff, eventually_nhds_iff] at hnear
+  obtain ⟨U, hU, hUopen, h1U⟩ := hnear
+  have hKc : IsCompact (K \ U) := hK.diff hUopen
+  have hK1 : K \ U ⊆ ({1}ᶜ : Set ℂ) := by
+    intro z hz h1
+    exact hz.2 (h1 ▸ h1U)
+  have hfin := finite_riemannZeta_zeros_of_isCompact hKc hK1
+  refine hfin.subset ?_
+  intro z hz
+  refine ⟨⟨hz.1, fun hzU => ?_⟩, hz.2.1⟩
+  exact hU z hzU hz.2.2 hz.2.1
+
+/-- Closed strip rectangle `[σ₁, σ₂] × [-T, T]`. -/
+def zetaClosedRect (σ₁ σ₂ T : ℝ) : Set ℂ :=
+  Icc σ₁ σ₂ ×ℂ Icc (-T) T
+
+lemma isCompact_zetaClosedRect (σ₁ σ₂ T : ℝ) :
+    IsCompact (zetaClosedRect σ₁ σ₂ T) :=
+  isCompact_Icc.reProdIm isCompact_Icc
+
+/-- **r499 brick [2c], lemma (2).**  Only finitely many zeros of `ζ`
+lie in a closed strip rectangle (the [2d] contour support). -/
+lemma finite_riemannZeta_zeros_on_closedRect (σ₁ σ₂ T : ℝ) :
+    {z ∈ zetaClosedRect σ₁ σ₂ T | riemannZeta z = 0 ∧ z ≠ 1}.Finite :=
+  finite_riemannZeta_zeros_of_isCompact_ne_one (isCompact_zetaClosedRect σ₁ σ₂ T)
+
+end ZetaZeroFiniteness
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
