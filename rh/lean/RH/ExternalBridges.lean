@@ -33,6 +33,9 @@ import Mathlib.Topology.DiscreteSubset
 import Mathlib.Analysis.Complex.RemovableSingularity
 import Mathlib.MeasureTheory.Group.Integral
 import Mathlib.Analysis.Complex.Exponential
+import Mathlib.Analysis.SpecialFunctions.Pow.Real
+import Mathlib.Analysis.PSeriesComplex
+import Mathlib.Topology.Algebra.InfiniteSum.Order
 
 namespace RH
 
@@ -3131,13 +3134,314 @@ lemma norm_one_sub_exp_pi {s : ℂ} (hτ : s.im ≠ 0) :
   rw [norm_real]
   exact abs_of_nonneg (add_nonneg (zero_le_one : (0 : ℝ) ≤ 1) (Real.exp_nonneg _))
 
+/-- Sharp complement: `t ∉ [-R-r, R+r]` is `|t| > R+r`. -/
+lemma FullWeilTest.not_mem_Icc_abs {F : FullWeilTest} {t r : ℝ}
+    (ht : t ∉ Icc (-(F.supportRadius + r)) (F.supportRadius + r)) :
+    F.supportRadius + r < |t| :=
+  not_le.mp (mt (fun h => mem_Icc.mpr (abs_le.mp h)) ht)
+
+/-- Real Δ² of `g` vanishes outside the wide window: each of the
+three copies `g(t)`, `g(t-δ)`, `g(t-2δ)` has its own shifted
+support in `[-R,R]`. -/
+lemma FullWeilTest.second_diff_eq_zero_of_wide (F : FullWeilTest)
+    {t δ : ℝ} (ht : F.supportRadius + 2 * |δ| < |t|) :
+    F.toFun t - 2 * F.toFun (t - δ) + F.toFun (t - 2 * δ) = 0 := by
+  have ht0 : F.supportRadius < |t| := by linarith [abs_nonneg δ]
+  have ht1 : F.supportRadius < |t - δ| := by
+    have htri : |t| ≤ |t - δ| + |δ| := by
+      have : |t| = |(t - δ) + δ| := by ring
+      rw [this]
+      exact abs_add_le (t - δ) δ
+    linarith
+  have ht2 : F.supportRadius < |t - 2 * δ| := by
+    have htri : |t| ≤ |t - 2 * δ| + |2 * δ| := by
+      have : |t| = |(t - 2 * δ) + (2 * δ)| := by ring
+      rw [this]
+      exact abs_add_le (t - 2 * δ) (2 * δ)
+    have habs : |2 * δ| = 2 * |δ| := by
+      rw [abs_mul, abs_of_nonneg (by positivity : (0 : ℝ) ≤ 2)]
+    linarith [habs]
+  rw [F.support_toFun t ht0, F.support_toFun (t - δ) ht1,
+    F.support_toFun (t - 2 * δ) ht2]
+  ring
+
+/-- ofReal: the ℂ-linear combination is the coercion of the real Δ².
+The `t + (-δ) + (-δ)` form is rewritten as `t - 2δ` on ℝ, then
+lifted. -/
+lemma FullWeilTest.ofReal_second_diff (F : FullWeilTest) (t δ : ℝ) :
+    (F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+      + (F.toFun (t + (-δ) + (-δ)) : ℂ)
+    = ((F.toFun t - 2 * F.toFun (t - δ)
+        + F.toFun (t - 2 * δ) : ℝ) : ℂ) := by
+  have h1 : t + (-δ) = t - δ := by ring
+  have h2 : t + (-δ) + (-δ) = t - 2 * δ := by ring
+  rw [h2, h1]
+  have h2c : (2 : ℂ) = ((2 : ℝ) : ℂ) := by norm_num
+  rw [h2c, ← ofReal_mul, ← ofReal_sub, ← ofReal_add]
+
+lemma FullWeilTest.weierstrass_integrand_eq_zero_of_not_mem
+    (F : FullWeilTest) (s : ℂ) {t δ : ℝ}
+    (ht : t ∉ Icc (-(F.supportRadius + 2 * |δ|))
+      (F.supportRadius + 2 * |δ|)) :
+    ((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+      + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t) = 0 := by
+  have hwide := F.not_mem_Icc_abs (r := 2 * |δ|) ht
+  rw [F.ofReal_second_diff, F.second_diff_eq_zero_of_wide hwide,
+    ofReal_zero, zero_mul]
+
+lemma FullWeilTest.hat_mul_weierstrass_eq_setIntegral
+    (F : FullWeilTest) (s : ℂ) (δ : ℝ) :
+    F.hat s * (1 - exp (s * δ)) ^ 2 =
+      ∫ t in Icc (-(F.supportRadius + 2 * |δ|))
+        (F.supportRadius + 2 * |δ|),
+        ((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+          + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t) := by
+  rw [F.hat_mul_weierstrass s δ]
+  exact (setIntegral_eq_integral_of_forall_compl_eq_zero
+    (fun t ht => F.weierstrass_integrand_eq_zero_of_not_mem s ht)).symm
+
+/-- Pointwise envelope of the Weierstrass integrand on the wide
+window: `|Δ²g(t)| e^{σ t} ≤ K δ² W e^{|σ| W}`. -/
+lemma FullWeilTest.norm_weierstrass_integrand_le (F : FullWeilTest)
+    {K : ℝ} (hK0 : 0 ≤ K)
+    (hK : ∀ u δ : ℝ,
+      |F.toFun u - 2 * F.toFun (u - δ) + F.toFun (u - 2 * δ)| ≤
+        K * δ ^ 2 * (F.supportRadius + 2 * |δ|))
+    (s : ℂ) {t δ : ℝ}
+    (ht : t ∈ Icc (-(F.supportRadius + 2 * |δ|))
+      (F.supportRadius + 2 * |δ|)) :
+    ‖((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+      + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t)‖ ≤
+      K * δ ^ 2 * (F.supportRadius + 2 * |δ|) *
+        Real.exp (|s.re| * (F.supportRadius + 2 * |δ|)) := by
+  set W := F.supportRadius + 2 * |δ|
+  have hW : 0 ≤ W :=
+    add_nonneg F.supportRadius_nonneg (by positivity)
+  rw [norm_mul, F.ofReal_second_diff, norm_real, Real.norm_eq_abs,
+    norm_exp]
+  have hre : (s * (t : ℂ)).re = s.re * t := by simp
+  rw [hre]
+  have hexp : Real.exp (s.re * t) ≤ Real.exp (|s.re| * W) := by
+    apply Real.exp_le_exp.mpr
+    have htabs : |t| ≤ W := abs_le.mpr ⟨ht.1, ht.2⟩
+    calc s.re * t ≤ |s.re * t| := le_abs_self _
+      _ = |s.re| * |t| := abs_mul _ _
+      _ ≤ |s.re| * W := mul_le_mul_of_nonneg_left htabs (abs_nonneg _)
+  have hΔ := hK t δ
+  have hC0 : 0 ≤ K * δ ^ 2 * W :=
+    mul_nonneg (mul_nonneg hK0 (sq_nonneg _)) hW
+  exact mul_le_mul hΔ hexp (Real.exp_nonneg _) hC0
+
+lemma FullWeilTest.norm_hat_mul_weierstrass_le (F : FullWeilTest)
+    {K : ℝ} (hK0 : 0 ≤ K)
+    (hK : ∀ u δ : ℝ,
+      |F.toFun u - 2 * F.toFun (u - δ) + F.toFun (u - 2 * δ)| ≤
+        K * δ ^ 2 * (F.supportRadius + 2 * |δ|))
+    (s : ℂ) (δ : ℝ) :
+    ‖F.hat s * (1 - exp (s * δ)) ^ 2‖ ≤
+      2 * K * δ ^ 2 * (F.supportRadius + 2 * |δ|) ^ 2 *
+        Real.exp (|s.re| * (F.supportRadius + 2 * |δ|)) := by
+  set W := F.supportRadius + 2 * |δ|
+  have hW : 0 ≤ W :=
+    add_nonneg F.supportRadius_nonneg (by positivity)
+  have hμ : volume (Icc (-W) W) < ⊤ := isCompact_Icc.measure_lt_top
+  have hvol : volume.real (Icc (-W) W) = 2 * W := by
+    rw [Measure.real, Real.volume_Icc, sub_neg_eq_add,
+      ENNReal.toReal_ofReal (by linarith [hW])]
+    ring
+  have hpt : ∀ t ∈ Icc (-W) W,
+      ‖((F.toFun t : ℂ) - (2 : ℂ) * (F.toFun (t + (-δ)) : ℂ)
+        + (F.toFun (t + (-δ) + (-δ)) : ℂ)) * exp (s * t)‖ ≤
+        K * δ ^ 2 * W * Real.exp (|s.re| * W) :=
+    fun t ht => F.norm_weierstrass_integrand_le hK0 hK s ht
+  rw [F.hat_mul_weierstrass_eq_setIntegral s δ]
+  have hbound :=
+    norm_setIntegral_le_of_norm_le_const (μ := volume) hμ hpt
+  refine hbound.trans ?_
+  rw [hvol]
+  ring_nf
+  rfl
+
 /-- Target 1/t² strip bound. Weierstrass identity and
-`e^{sδ} = -e^{σδ}` (with `|1-e^{sδ}| ≥ 2`) are in; the remaining
-tactic is the Δ²-support / `ofReal` / set-integral assembly
-documented in the r503/r504 notes.  No `sorry`. -/
+`e^{sδ} = -e^{σδ}` (with `|1-e^{sδ}| ≥ 2`) are in. -/
 def FullWeilTest.NormHatLeInvSq (F : FullWeilTest) : Prop :=
   ∃ C : ℝ, 0 ≤ C ∧ ∀ s : ℂ, s.re ∈ Icc (0 : ℝ) 1 →
     ‖F.hat s‖ ≤ C / (1 + s.im ^ 2)
+
+/-- **r506, ĥ-side of [2c] complete.**  `‖hat s‖ ≤ C/(1+τ²)` on the
+closed strip `0 ≤ Re s ≤ 1`.  `|τ| ≤ 1` from the Paley–Wiener
+envelope; `|τ| > 1` from Weierstrass + `|1-e^{sδ}| ≥ 2` at
+`δ = π/|τ|`. -/
+lemma FullWeilTest.norm_hat_le_inv_sq (F : FullWeilTest) :
+    F.NormHatLeInvSq := by
+  unfold FullWeilTest.NormHatLeInvSq
+  obtain ⟨Cexp, hCexp0, hCexp⟩ := F.norm_hat_le_exp
+  obtain ⟨K, hK0, hK⟩ := F.abs_second_diff_le
+  set R := F.supportRadius
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  set C : ℝ :=
+    2 * Cexp * Real.exp (R + 1)
+      + K * Real.pi ^ 2 * (R + 2 * Real.pi) ^ 2
+        * Real.exp (R + 2 * Real.pi)
+  have hC0 : 0 ≤ C :=
+    add_nonneg (by positivity) (by positivity)
+  refine ⟨C, hC0, fun s hs => ?_⟩
+  have hσ0 : 0 ≤ s.re := hs.1
+  have hσ1 : s.re ≤ 1 := hs.2
+  have hdenpos : 0 < 1 + s.im ^ 2 := by nlinarith [sq_nonneg s.im]
+  by_cases hτle : |s.im| ≤ 1
+  · have hexp :
+        Real.exp ((R + 1) * |s.re|) ≤ Real.exp (R + 1) := by
+      apply Real.exp_le_exp.mpr
+      rw [abs_of_nonneg hσ0]
+      nlinarith [hR, hσ1]
+    have hhat : ‖F.hat s‖ ≤ Cexp * Real.exp (R + 1) :=
+      (hCexp s).trans (mul_le_mul_of_nonneg_left hexp hCexp0)
+    have hτsq : s.im ^ 2 ≤ 1 := by
+      have : |s.im| ^ 2 ≤ (1 : ℝ) ^ 2 :=
+        sq_le_sq.mpr (by simpa [abs_one] using hτle)
+      rwa [sq_abs, one_pow] at this
+    have hden : 1 + s.im ^ 2 ≤ 2 := by linarith
+    have hprod : ‖F.hat s‖ * (1 + s.im ^ 2)
+        ≤ 2 * Cexp * Real.exp (R + 1) := by
+      have := mul_le_mul hhat hden (by nlinarith [sq_nonneg s.im])
+        (by positivity)
+      nlinarith
+    have hCpart : 2 * Cexp * Real.exp (R + 1) ≤ C := by
+      dsimp [C]
+      exact le_add_of_nonneg_right (by positivity)
+    exact (le_div_iff₀ hdenpos).mpr (hprod.trans hCpart)
+  · have hτgt : 1 < |s.im| := not_le.mp hτle
+    have hτne : s.im ≠ 0 := fun h0 => by
+      rw [h0, abs_zero] at hτgt
+      linarith
+    set δ : ℝ := Real.pi / |s.im|
+    have hδpos : 0 < δ :=
+      div_pos Real.pi_pos (abs_pos.mpr hτne)
+    have hδleπ : δ ≤ Real.pi :=
+      div_le_self Real.pi_pos.le (le_of_lt hτgt)
+    have hWle : R + 2 * |δ| ≤ R + 2 * Real.pi := by
+      rw [abs_of_pos hδpos]
+      linarith
+    have hI := F.norm_hat_mul_weierstrass_le hK0 hK s δ
+    have hfac :
+        ‖(1 : ℂ) - exp (s * (δ : ℝ))‖ =
+          1 + Real.exp (s.re * δ) := by
+      simpa [δ] using norm_one_sub_exp_pi hτne
+    have hge : (2 : ℝ) ≤ ‖(1 : ℂ) - exp (s * (δ : ℝ))‖ := by
+      rw [hfac]
+      simpa [δ] using one_add_exp_re_pi_ge_two hσ0 hτne
+    have hpow : ‖((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ =
+        ‖(1 : ℂ) - exp (s * (δ : ℝ))‖ ^ 2 :=
+      norm_pow _ 2
+    have hge4 : (4 : ℝ) ≤ ‖((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ := by
+      rw [hpow]
+      nlinarith [hge]
+    have hmul : ‖F.hat s * ((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ =
+        ‖F.hat s‖ * ‖((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ :=
+      norm_mul _ _
+    have hhat4 : ‖F.hat s‖ * 4 ≤
+        2 * K * δ ^ 2 * (R + 2 * |δ|) ^ 2 *
+          Real.exp (|s.re| * (R + 2 * |δ|)) := by
+      have hleft : ‖F.hat s‖ * 4
+          ≤ ‖F.hat s‖ * ‖((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ :=
+        mul_le_mul_of_nonneg_left hge4 (norm_nonneg _)
+      calc ‖F.hat s‖ * 4
+          ≤ ‖F.hat s‖ * ‖((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ := hleft
+        _ = ‖F.hat s * ((1 : ℂ) - exp (s * (δ : ℝ))) ^ 2‖ := hmul.symm
+        _ ≤ _ := hI
+    have hhat : ‖F.hat s‖ ≤
+        (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * |δ|) ^ 2 *
+          Real.exp (|s.re| * (R + 2 * |δ|)) := by
+      have hdiv := (le_div_iff₀ (by norm_num : (0 : ℝ) < 4)).mpr hhat4
+      have hrearr :
+          (2 * K * δ ^ 2 * (R + 2 * |δ|) ^ 2 *
+            Real.exp (|s.re| * (R + 2 * |δ|))) / 4
+          = (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * |δ|) ^ 2 *
+            Real.exp (|s.re| * (R + 2 * |δ|)) := by ring
+      rwa [hrearr] at hdiv
+    have hexp : Real.exp (|s.re| * (R + 2 * |δ|))
+        ≤ Real.exp (R + 2 * Real.pi) := by
+      apply Real.exp_le_exp.mpr
+      have habsσ : |s.re| ≤ 1 := by
+        rwa [abs_of_nonneg hσ0]
+      have : |s.re| * (R + 2 * |δ|) ≤ 1 * (R + 2 * Real.pi) :=
+        mul_le_mul habsσ hWle
+          (add_nonneg hR (by positivity)) (by positivity)
+      linarith
+    have hWsq : (R + 2 * |δ|) ^ 2 ≤ (R + 2 * Real.pi) ^ 2 :=
+      pow_le_pow_left₀ (add_nonneg hR (by positivity)) hWle 2
+    have hδsq : δ ^ 2 = Real.pi ^ 2 / s.im ^ 2 := by
+      have hne : |s.im| ≠ 0 := abs_ne_zero.mpr hτne
+      rw [div_pow, sq_abs]
+    have hτsq : 1 ≤ s.im ^ 2 := by
+      have h1 : (1 : ℝ) ≤ |s.im| := le_of_lt hτgt
+      have : (1 : ℝ) ^ 2 ≤ |s.im| ^ 2 :=
+        pow_le_pow_left₀ (by positivity) h1 2
+      rwa [one_pow, sq_abs] at this
+    have hcomp : 1 / s.im ^ 2 ≤ 2 / (1 + s.im ^ 2) := by
+      have hpos1 : 0 < s.im ^ 2 := by nlinarith
+      rw [div_le_div_iff₀ hpos1 hdenpos]
+      nlinarith
+    have hδbound : δ ^ 2 ≤ 2 * Real.pi ^ 2 / (1 + s.im ^ 2) := by
+      rw [hδsq, div_eq_mul_inv, show 2 * Real.pi ^ 2 / (1 + s.im ^ 2) =
+          Real.pi ^ 2 * (2 / (1 + s.im ^ 2)) from by ring]
+      exact mul_le_mul_of_nonneg_left
+        (by simpa [one_div] using hcomp) (by positivity)
+    have hnnK : 0 ≤ (1 / 2 : ℝ) * K := by positivity
+    have hnnδ : 0 ≤ δ ^ 2 := sq_nonneg _
+    have hnnW : 0 ≤ (R + 2 * |δ|) ^ 2 := sq_nonneg _
+    have hnnE : 0 ≤ Real.exp (|s.re| * (R + 2 * |δ|)) :=
+      Real.exp_nonneg _
+    have hstep1 : ‖F.hat s‖ ≤
+        (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * Real.pi) ^ 2 *
+          Real.exp (R + 2 * Real.pi) := by
+      refine hhat.trans ?_
+      have hmid : (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * |δ|) ^ 2 *
+            Real.exp (|s.re| * (R + 2 * |δ|))
+          ≤ (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * Real.pi) ^ 2 *
+            Real.exp (|s.re| * (R + 2 * |δ|)) :=
+        mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hWsq (mul_nonneg hnnK hnnδ))
+          hnnE
+      refine hmid.trans ?_
+      exact mul_le_mul_of_nonneg_left hexp (by positivity)
+    have hnnRest : 0 ≤ (1 / 2 : ℝ) * K * (R + 2 * Real.pi) ^ 2 *
+        Real.exp (R + 2 * Real.pi) := by positivity
+    have hstep2 : ‖F.hat s‖ ≤
+        (1 / 2 : ℝ) * K * (2 * Real.pi ^ 2 / (1 + s.im ^ 2)) *
+          (R + 2 * Real.pi) ^ 2 * Real.exp (R + 2 * Real.pi) := by
+      refine hstep1.trans ?_
+      have hrearr1 :
+          (1 / 2 : ℝ) * K * δ ^ 2 * (R + 2 * Real.pi) ^ 2 *
+            Real.exp (R + 2 * Real.pi)
+          = δ ^ 2 * ((1 / 2 : ℝ) * K * (R + 2 * Real.pi) ^ 2 *
+            Real.exp (R + 2 * Real.pi)) := by ring
+      have hrearr2 :
+          (1 / 2 : ℝ) * K * (2 * Real.pi ^ 2 / (1 + s.im ^ 2)) *
+            (R + 2 * Real.pi) ^ 2 * Real.exp (R + 2 * Real.pi)
+          = (2 * Real.pi ^ 2 / (1 + s.im ^ 2)) *
+            ((1 / 2 : ℝ) * K * (R + 2 * Real.pi) ^ 2 *
+              Real.exp (R + 2 * Real.pi)) := by ring
+      rw [hrearr1, hrearr2]
+      exact mul_le_mul_of_nonneg_right hδbound hnnRest
+    have hsimp :
+        (1 / 2 : ℝ) * K * (2 * Real.pi ^ 2 / (1 + s.im ^ 2)) *
+          (R + 2 * Real.pi) ^ 2 * Real.exp (R + 2 * Real.pi)
+        = (K * Real.pi ^ 2 * (R + 2 * Real.pi) ^ 2 *
+            Real.exp (R + 2 * Real.pi)) / (1 + s.im ^ 2) := by
+      field_simp
+      try ring
+    rw [hsimp] at hstep2
+    have hCpart : K * Real.pi ^ 2 * (R + 2 * Real.pi) ^ 2 *
+        Real.exp (R + 2 * Real.pi) ≤ C := by
+      dsimp [C]
+      exact le_add_of_nonneg_left (by positivity)
+    have hdiv : (K * Real.pi ^ 2 * (R + 2 * Real.pi) ^ 2 *
+          Real.exp (R + 2 * Real.pi)) / (1 + s.im ^ 2)
+        ≤ C / (1 + s.im ^ 2) :=
+      div_le_div_of_nonneg_right hCpart hdenpos.le
+    exact hstep2.trans hdiv
 
 end WeilHatGrowth
 
@@ -3175,11 +3479,63 @@ lemma norm_one_div_nat_succ_cpow_le_two {s : ℂ} (hs : 2 ≤ s.re) (n : ℕ) :
   rw [h2]
   exact Real.rpow_le_rpow_of_exponent_le hb (neg_le_neg hs)
 
-/-- Dirichlet majorant `|ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`.
-Termwise comparison is in (`norm_one_div_nat_succ_cpow_le_two`);
-the remaining tactic is `Summable` eta for `n+1` vs `Nat.add`. -/
+/-- Same summand as `zeta_eq_tsum_one_div_nat_add_one_cpow`.
+The `n+1` is the ℂ-addition `(n : ℂ) + 1`, converted from the
+`summable_nat_add_iff` index `(n+1 : ℕ)` by `nat_succ_coe_complex`. -/
+lemma summable_one_div_nat_add_one_cpow {s : ℂ} (hs : 1 < s.re) :
+    Summable fun n : ℕ => (1 : ℂ) / (n + 1 : ℂ) ^ s := by
+  have h := (Complex.summable_one_div_nat_cpow (p := s)).mpr hs
+  have hshift :=
+    (summable_nat_add_iff
+      (f := fun n : ℕ => (1 : ℂ) / (n : ℂ) ^ s) 1).mpr h
+  refine (summable_congr fun n => ?_).mp hshift
+  rw [nat_succ_coe_complex]
+
+lemma one_div_nat_succ_cpow_two_eq_ofReal (n : ℕ) :
+    (1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ) =
+      ((((n + 1 : ℕ) : ℝ) ^ (-(2 : ℝ)) : ℝ) : ℂ) := by
+  have hn : 0 ≤ ((n + 1 : ℕ) : ℝ) := Nat.cast_nonneg _
+  rw [nat_succ_coe_complex, ← ofReal_natCast]
+  have h2 : (2 : ℂ) = ((2 : ℝ) : ℂ) := by norm_num
+  rw [h2, ← ofReal_cpow hn, ← ofReal_one, ← ofReal_div]
+  congr 1
+  rw [Real.rpow_neg hn, one_div]
+
+lemma tsum_norm_one_div_nat_succ_two :
+    (∑' n : ℕ, ‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖) =
+      ‖∑' n : ℕ, (1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ := by
+  have heq : ∀ n : ℕ, (1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ) =
+      (‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ : ℂ) := fun n => by
+    rw [one_div_nat_succ_cpow_two_eq_ofReal]
+    rw [Complex.norm_of_nonneg (Real.rpow_nonneg (Nat.cast_nonneg _) _)]
+  rw [tsum_congr heq, ← ofReal_tsum,
+    Complex.norm_of_nonneg (tsum_nonneg fun _ => norm_nonneg _)]
+
+/-- Dirichlet majorant `|ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`. -/
 def NormRiemannZetaLeZetaTwo : Prop :=
   ∀ s : ℂ, 2 ≤ s.re → ‖riemannZeta s‖ ≤ ‖riemannZeta 2‖
+
+/-- **r506, ζ-side cut.**  `|ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`, using
+Mathlib's `zeta_eq_tsum_one_div_nat_add_one_cpow` summand shape
+verbatim (no reindex). -/
+lemma normRiemannZetaLeZetaTwo : NormRiemannZetaLeZetaTwo := by
+  intro s hs
+  have hs1 : 1 < s.re := by linarith
+  have h2 : 1 < (2 : ℂ).re := by simp
+  rw [zeta_eq_tsum_one_div_nat_add_one_cpow hs1,
+    zeta_eq_tsum_one_div_nat_add_one_cpow h2]
+  have hsum_n : Summable fun n : ℕ =>
+      ‖(1 : ℂ) / (n + 1 : ℂ) ^ s‖ := by
+    rw [summable_norm_iff]
+    exact summable_one_div_nat_add_one_cpow hs1
+  have hsum_2 : Summable fun n : ℕ =>
+      ‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ := by
+    rw [summable_norm_iff]
+    exact summable_one_div_nat_add_one_cpow h2
+  refine (norm_tsum_le_tsum_norm hsum_n).trans ?_
+  refine (hsum_n.tsum_le_tsum
+    (fun n => norm_one_div_nat_succ_cpow_le_two hs n) hsum_2).trans ?_
+  exact (tsum_norm_one_div_nat_succ_two).le
 
 /-- Möbius inversion on `Re s > 1`: `1/ζ(s) = L(μ, s)`. -/
 lemma inv_riemannZeta_eq_LSeries_moebius {s : ℂ} (hs : 1 < s.re) :
@@ -3187,6 +3543,30 @@ lemma inv_riemannZeta_eq_LSeries_moebius {s : ℂ} (hs : 1 < s.re) :
   have hprod := ArithmeticFunction.LSeries_zeta_mul_Lseries_moebius hs
   rw [ArithmeticFunction.LSeries_zeta_eq_riemannZeta hs] at hprod
   exact inv_eq_of_mul_eq_one_right hprod
+
+lemma norm_moebius_le_one (n : ℕ) :
+    ‖(ArithmeticFunction.moebius n : ℂ)‖ ≤ ‖((1 : ℕ → ℂ) n)‖ := by
+  rw [Complex.norm_intCast, ← Int.cast_abs]
+  simp only [Pi.one_apply, norm_one]
+  exact_mod_cast ArithmeticFunction.abs_moebius_le_one (n := n)
+
+lemma tsum_norm_term_one_two :
+    (∑' n : ℕ, ‖LSeries.term (1 : ℕ → ℂ) (2 : ℂ) n‖) = ‖riemannZeta 2‖ := by
+  have h2 : 1 < (2 : ℂ).re := by simp
+  have hn2 : Summable fun n : ℕ => ‖LSeries.term (1 : ℕ → ℂ) (2 : ℂ) n‖ := by
+    rw [summable_norm_iff]
+    exact LSeriesSummable_one_iff.mpr h2
+  have hshift := Summable.tsum_eq_zero_add hn2
+  have h0 : ‖LSeries.term (1 : ℕ → ℂ) (2 : ℂ) 0‖ = 0 := by
+    simp [LSeries.term_zero]
+  have htail :
+      (∑' n : ℕ, ‖LSeries.term (1 : ℕ → ℂ) (2 : ℂ) (n + 1)‖) =
+        ∑' n : ℕ, ‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ := by
+    refine tsum_congr fun n => ?_
+    have hn : n + 1 ≠ 0 := Nat.succ_ne_zero n
+    rw [LSeries.term_of_ne_zero hn, Pi.one_apply, ← nat_succ_coe_complex]
+  rw [hshift, h0, zero_add, htail, tsum_norm_one_div_nat_succ_two,
+    ← zeta_eq_tsum_one_div_nat_add_one_cpow h2]
 
 /-- Polynomial bound on a vertical strip via FE + `Gamma` growth.
 Mathlib v4.29.1 has `riemannZeta_one_sub` and factorial Stirling,
@@ -3196,10 +3576,38 @@ def RiemannZetaStripPolyBound : Prop :=
     ∀ s : ℂ, s.re ∈ Icc σ₁ σ₂ →
       ‖riemannZeta s‖ ≤ A * (1 + |s.im|) ^ B
 
-/-- `|1/ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`. Tactic remainder: `|μ| ≤ 1`
-termwise majorant through `LSeries.norm_term_le`. -/
+/-- `|1/ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`. -/
 def NormInvRiemannZetaLeZetaTwo : Prop :=
   ∀ s : ℂ, 2 ≤ s.re → ‖(riemannZeta s)⁻¹‖ ≤ ‖riemannZeta 2‖
+
+/-- **r506, ζ-side inverse.**  `|1/ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2` via
+`|μ(n)| ≤ 1` and `LSeries.norm_term_le`. -/
+lemma normInvRiemannZetaLeZetaTwo : NormInvRiemannZetaLeZetaTwo := by
+  intro s hs
+  have hs1 : 1 < s.re := by linarith
+  have h2 : 1 < (2 : ℂ).re := by simp
+  rw [inv_riemannZeta_eq_LSeries_moebius hs1]
+  have hμ : LSeriesSummable ↗ArithmeticFunction.moebius s :=
+    ArithmeticFunction.LSeriesSummable_moebius_iff.mpr hs1
+  have h1s : LSeriesSummable (1 : ℕ → ℂ) s :=
+    LSeriesSummable_one_iff.mpr hs1
+  have hnμ : Summable fun n =>
+      ‖LSeries.term ↗ArithmeticFunction.moebius s n‖ := by
+    rw [summable_norm_iff]; exact hμ
+  have hn1 : Summable fun n =>
+      ‖LSeries.term (1 : ℕ → ℂ) s n‖ := by
+    rw [summable_norm_iff]; exact h1s
+  have hn2 : Summable fun n =>
+      ‖LSeries.term (1 : ℕ → ℂ) (2 : ℂ) n‖ := by
+    rw [summable_norm_iff]; exact LSeriesSummable_one_iff.mpr h2
+  have hre : (2 : ℂ).re ≤ s.re := by simpa using hs
+  refine (norm_tsum_le_tsum_norm hnμ).trans ?_
+  refine (hnμ.tsum_le_tsum (fun n => LSeries.norm_term_le s (norm_moebius_le_one n))
+    hn1).trans ?_
+  refine (hn1.tsum_le_tsum
+    (fun n => LSeries.norm_term_le_of_re_le_re (1 : ℕ → ℂ) hre n)
+    hn2).trans ?_
+  exact (tsum_norm_term_one_two).le
 
 end ZetaHalfPlaneBounds
 

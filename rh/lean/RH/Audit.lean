@@ -425,7 +425,11 @@ r505 lands the Weierstrass identity
 parked as `FullWeilTest.NormHatLeInvSq`.  ζ-side:
 termwise Dirichlet comparison and `1/ζ = L(μ)`
 are in; `|ζ| ≤ |ζ(2)|` remains a named Prop.
-Census stays 7.
+r506 proves the parked strip bound
+(`FullWeilTest.norm_hat_le_inv_sq`) and the
+Dirichlet majorants `‖ζ(s)‖ ≤ ‖ζ(2)‖`,
+`‖1/ζ(s)‖ ≤ ‖ζ(2)‖` on `Re s ≥ 2`.  ĥ-side of
+[2c] is complete.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -500,10 +504,13 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms exp_mul_pi_div_abs_im
 #print axioms norm_one_sub_exp_pi
 #print axioms one_add_exp_re_pi_ge_two
+#print axioms FullWeilTest.norm_hat_le_inv_sq
 #print axioms norm_one_div_nat_succ_cpow
 #print axioms norm_riemannZeta_two
 #print axioms norm_one_div_nat_succ_cpow_le_two
 #print axioms inv_riemannZeta_eq_LSeries_moebius
+#print axioms normRiemannZetaLeZetaTwo
+#print axioms normInvRiemannZetaLeZetaTwo
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -811,6 +811,26 @@ Remaining named pieces of [2] (not extra sorries):
   [2d] contour evaluation = three-channel form.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r506 census (outer bridges 13, strip + zeta majorants)
+
+ĥ-Seite von [2c] KOMPLETT, sorry-free:
+`‖hat s‖ ≤ C/(1+τ²)` on `0 ≤ Re s ≤ 1`
+(`FullWeilTest.norm_hat_le_inv_sq`).  Assembly:
+wide Δ²-support (three copies), ofReal of the
+real second difference, set-integral envelope,
+Weierstrass division by `|1-e^{sδ}| ≥ 2`.
+
+ζ-side cut 1 PROVED: `|ζ(s)| ≤ |ζ(2)|` and
+`|1/ζ(s)| ≤ |ζ(2)|` on `Re s ≥ 2`
+(`normRiemannZetaLeZetaTwo`,
+`normInvRiemannZetaLeZetaTwo`).  Remaining
+[2c] analysis: three-lines convexity of `|ζ|`
+on the strip (needs vertical `Complex.Gamma`,
+`RiemannZetaStripPolyBound` still parked),
+then Jensen → `N(T)` → `∑ 1/|ρ|²`.
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
