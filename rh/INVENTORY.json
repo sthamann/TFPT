@@ -3956,6 +3956,26 @@
       "bytes": 221150
     },
     {
+      "path": "rh/problem/correlation_wall_judgment.tex",
+      "role": "problem_statement",
+      "round": "r469",
+      "ledger_ids": [],
+      "status": "correlation wall judgment (round 469, PRIME.RDAGGER.CORRELATION_WALL_JUDGMENT.01; adjudication note, NO probe, NO census, NO ledger row): VERDICT U1 INTERNALLY_EXHAUSTED / U2 EXTEND_AND_REFRAME / U3 REDIRECT_TO_FIXED_L.  U1: eight candidate languages adjudicated (self-consistency/fixed point, transfer operator/thermodynamic formalism, microlocal/semiclassical, determinantal/Fredholm, Sarnak-Mobius disjointness, free probability, Loewner/Christoffel minorant, quantifier renormalization); only the microlocal candidate survives the new methodological scramble filter, and executing it needs the retained RHP polynomial asymptotics plus power-saving cancellation for sum Lambda(n) n^{-1/2+it}.  Two sealed restatements are supplied as diagnosis: the dual extremal form of q-dagger (dossier A5 in Christoffel/Markov coordinates, extremizer = omega-Riesz representer of the smooth border functional) and the determinant ratio 1-q = det A / det(I-C); both explain why every pairing bound loses the measured 10^2..10^5 and why that slack matches the r467 scramble factor 28.5..5.3e5.  r461 nestedness is restated judicially: the cofinal target is, modulo the named bridges, the full Weil criterion, hence not a lemma.  Core closed for rounds; resources redirected to the fixed-L unconditional classical lane (SelectedReadQuadraticRepresentation, arch_gauss_mellin_digamma_identity, fixed-support density/continuity) and to the external package.  Binding anti-list with a mandatory scramble gate.  No probe, no new theorem, no new census.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "15ebd26cf00efcffa5b8ac0138b8242d082a853b09e3b59c8f6a778267f5ba03",
+      "bytes": 27704
+    },
+    {
+      "path": "rh/problem/correlation_wall_judgment.pdf",
+      "role": "problem_statement",
+      "round": "r469",
+      "ledger_ids": [],
+      "status": "compiled PDF of correlation_wall_judgment.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "bc158b035a5430e6d3f974fb062c6ab5965064719129bbf5c3916bf4e3d5bc49",
+      "bytes": 281830
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
