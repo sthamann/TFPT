@@ -7073,6 +7073,30 @@ constructs the support-fitting sampled dyadic GridElement sequence.
 Its support bound and the implication from hat identity to pole
 sequence continuity are proved.  Census **8 → 8**.  NO RH CLAIM.
 
+**Keystone judgment (r492,
+PRIME.RDAGGER.KEYSTONE\_JUDGMENT.01).**
+Adjudication note `rh/problem/keystone_judgment.tex` (+ PDF).
+No probe, no verifier, no census, no sealed pin.
+**Verdict U1 IDEA\_NAMED(kernel-Loewner) / U2 PROCEED\_UNDER\_BUDGET /
+U3 REDIRECT\_TO\_KERNEL\_LANE.**
+Four of the five proposed candidates die, three of them structurally
+(the smooth $t$-cutoff misdiagnoses the $1/t$ tails, which are forced
+by the compact time support; the Fredholm trace-power route lies in no
+Schatten class with the shift and has no explicit kernels without it;
+the smoothing preconditioner is incompatible with
+$\operatorname{supp}\subset[-L,L]$).
+The named idea is the classical $x$-space Weil kernel form with
+$k(x)=e^{x/2}/\sinh x$, together with $I-\operatorname{Re}\tau_x\succeq0$:
+every truncation of the $x$-integral is Loewner-safe, so the r483--r490
+off-space obstruction has no analogue there.
+Calibrated against three sealed numbers (`sigma_A(0)`, the r476
+Dirichlet hull, the odd sector); closing budget measured.
+Free diagnosis: the r488/r490 premise ``$R$ not coercive'' is false
+($R\succeq1.568\cdot10^{-2}I$); no verdict is regressed.
+The frequency-side $0.3$ lane is closed permanently; twenty kills are
+consolidated into six families.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 
 ## Folder guide
 
@@ -7545,6 +7569,12 @@ rh/
 │   │                     G-cert-N5-BS=0.994;
 │   │                     operator-R-gap-open);
 │   │                     not lambda_*.  No RH claim
+│   ├── keystone_judgment.tex(+pdf) — r492:
+│   │                     U1 IDEA_NAMED(kernel-Loewner) /
+│   │                     U2 PROCEED_UNDER_BUDGET /
+│   │                     U3 REDIRECT_TO_KERNEL_LANE;
+│   │                     adjudication only, no pin.
+│   │                     No RH claim
 │   ├── operator_residual.tex(+pdf) — r490: STUCK
 │   │                     (off/s=5.86-eats-1000x;
 │   │                     GL-tiny-not-the-certificate)
@@ -8867,6 +8897,13 @@ finite-hat pole identity.  File domain is `RH/ExternalBridges.lean`,
 `outer_bridges3.tex`, verifier, INVENTORY, and `run_rh.py`.  It does
 not touch `experiments/next.txt`.  Suite surface: integrity + probes +
 Lean (`run_rh.py --fast`).
+**r492 coexistence.** Round 492 (`keystone_judgment.tex`) is a pure
+adjudication note on the frozen $0.3$ keystone.  It adds no probe, no
+verifier and no pin, and it does not touch `rh/lean/` (r491 runs there
+in parallel) or `experiments/next.txt`.  File domain is
+`rh/problem/keystone_judgment.tex(+pdf)`, `make_inventory.py`,
+`INVENTORY.json` and this README.  Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

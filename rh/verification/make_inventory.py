@@ -2828,6 +2828,73 @@ _R491_STATUS = (
     "NO R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R492_STATUS = (
+    "0.3 keystone judgment "
+    "(round 492, PRIME.RDAGGER.KEYSTONE_JUDGMENT.01; "
+    "adjudication note, NO probe, NO verifier, NO census, "
+    "NO ledger row, NO sealed pin): "
+    "VERDICT U1 IDEA_NAMED(kernel-Loewner) / "
+    "U2 PROCEED_UNDER_BUDGET / U3 REDIRECT_TO_KERNEL_LANE.  "
+    "U1: four of five proposed candidates die, three "
+    "structurally.  Smooth t-cutoff misdiagnosed: the 1/t tails "
+    "are forced by u(+-L) != 0, i.e. by the compact time support, "
+    "and max(-sigma_A,0) is Lipschitz (corner, not jump).  "
+    "Fredholm trace powers dead twice: with the shift "
+    "B = A^- + sI >= sI makes K = B^{1/2} R_s^{-1} B^{1/2} lie in "
+    "no Schatten class (lambda_n(R) ~ log(n/4L) from "
+    "sigma_A ~ log(t/2pi)), so (tr K^m)^{1/m} = infinity for every "
+    "m; without the shift tr((A^- R^{-1})^m) is not an integral of "
+    "explicit kernels, R^{-1} on L^2[-L,L] being the unavailable "
+    "finite-interval Wiener-Hopf inverse.  Smoothing "
+    "preconditioner incompatible with supp in [-L,L]; the only "
+    "support-preserving congruence M_w buys epsilon in the tail "
+    "against epsilon^2 in the margin.  Other L is real but weaker "
+    "(lambda_min^even 9.49e-2 / 3.34e-2 / 7.57e-3 / 1.33e-3 at "
+    "L = 0.20 / 0.25 / 0.30 / 0.3465): L = 0.25 becomes the "
+    "calibration rung only.  NAMED IDEA (the judge own): the "
+    "classical x-space Weil kernel form "
+    "Q_W(h) = int_0^{2L} k(x)(g(0)-g(x))dx - c_L g(0) + Pi(h) "
+    "with k(x) = e^{x/2}/sinh(x), "
+    "c_L = int_0^{2L}(k - 1/x)dx + log(4L) + gamma + log(pi) = "
+    "2.192404911132 at L = 0.3, plus the observation that "
+    "I - Re tau_x >= 0 for every x, so EVERY truncation of the "
+    "x-integral is Loewner-safe: no off-space term, no tail, no "
+    "jet, no garbage mode.  The remainder is one bounded "
+    "Hilbert-Schmidt eigenvalue bound with an explicit C^infty "
+    "kernel on the compact box [-L,L]^2.  Calibrated against three "
+    "sealed numbers: sigma_A(0) = -5.3721834192256654; first "
+    "Dirichlet 1.18025e-2 inside the r476 hull [1.150,1.192]e-2 "
+    "(r486 midpoint 1.178e-2); odd lambda_min 2.2257e-1 against "
+    "r483/r485/r486 0.211/0.221/0.226.  Even operator lambda_min "
+    "7.5720e-3, Legendre Galerkin spread 2.5e-5 between N = 6 and "
+    "N = 36 (spectral, no garbage).  Measured closing budget at "
+    "cutoff [1e-2,3e-2], n = 401: 4.2375e-3 - 3*6.77e-4 = "
+    "2.20e-3 > 0.  FREE DIAGNOSIS: the r488/r490 premise "
+    "R-not-coercive / inf spec R = 0 is FALSE; "
+    "<u,A^+u> >= sigma_A(t_1)(1 - lambda_0(K_{t_1}))||u||^2 gives "
+    "R >= 1.5685e-2 I at t_1 = 8.2 (Slepian calibration "
+    "lambda_0(K_{t_c}) = 0.8593909212 vs 0.859391, "
+    "lambda_0(K_8) = 0.9350520466 vs 0.935); the shift s = 0.05 is "
+    "not mandatory, but the amplifier 1/c_R = 64 is worse than "
+    "1/s = 20, so the lane is not rescued -- the premise is "
+    "anti-listed, no verdict regressed.  U2: the keystone is worth "
+    "it only in the kernel form and only under a three-round "
+    "budget; the kernel lane dominates the r471 F2b fallback "
+    "(no point evaluations, hence no density/continuity gap) and "
+    "scales better than the frequency route (the prime term enters "
+    "as an explicit bounded translation sum).  F3 Guinand-Weil "
+    "fixed-L is the Lean explicit-formula bridge (r487: 16-28 "
+    "rounds; r489: density bridge at one named sorry), unaffected.  "
+    "U3: R494 = PRIME.RDAGGER.KERNEL_LOEWNER.01 under a three-gate "
+    "contract (G1 identity with three stop-condition calibration "
+    "hits, G2 Loewner truncation budget, G3 finite section with "
+    "hard NO-GO at n <= 800); the frequency-side 0.3 lane is closed "
+    "permanently; twenty kills consolidated into six families plus "
+    "four pre-listed kernel-lane pads.  No probe, no new theorem, "
+    "no new census, no sealed pin.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -7105,6 +7172,17 @@ ENTRIES = [
      "r491",
      [],
      "compiled PDF of outer_bridges3.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
+    ("rh/problem/keystone_judgment.tex", "problem_statement",
+     "r492",
+     [],
+     _R492_STATUS,
+     True),
+    ("rh/problem/keystone_judgment.pdf", "problem_statement",
+     "r492",
+     [],
+     "compiled PDF of keystone_judgment.tex "
      "(recompiled artefact, registered unpinned)", False),
 
     # -- frozen libraries the modules embed byte-exact --
