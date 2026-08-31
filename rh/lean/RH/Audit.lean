@@ -446,8 +446,11 @@ proves the disk card
 (`zetaZerosInDisk_card_le`,
 `jensenDiskZeroCountBound`) with explicit
 `C = (log K + log‖ζ(2)‖ + 2) / log(7/6)`.
-The height-count `N(X) ≲ X log X` remains a
-named Prop.  Census stays 7.
+r512 proves the height count
+(`zetaZeroCountUpToXBound`) on the critical-strip
+rectangle `[0,1]×[-X,X]` via the `r=13/8` disk
+(`w=5/8`) and FE pairing.  `∑ 1/|ρ|²` remains
+open.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -562,6 +565,8 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms zetaZerosInDisk_card_mul_log_le
 #print axioms zetaZerosInDisk_card_le
 #print axioms jensenDiskZeroCountBound
+#print axioms zetaZerosInDisk_card_le_inner
+#print axioms zetaZeroCountUpToXBound
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

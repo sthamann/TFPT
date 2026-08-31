@@ -16,6 +16,7 @@ are proved without `sorry`.
 -/
 import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.NumberTheory.LSeries.Nonvanishing
 import Mathlib.NumberTheory.LSeries.Dirichlet
 import Mathlib.NumberTheory.LSeries.HurwitzZetaValues
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
@@ -5174,14 +5175,564 @@ theorem jensenDiskZeroCountBound : JensenDiskZeroCountBound :=
   ⟨zetaZerosInDiskCardBound, zetaZerosInDiskCardBound_pos,
     zetaZerosInDisk_card_le⟩
 
-/-- Height-count `N(X) ≲ X log X` on `{1/2 ≤ Re ≤ 7/2}`; needs a
-larger radius or FE-folding before a disk cover works. Named Prop,
-no sorry. -/
+lemma mem_zetaClosedRect {s1 s2 T : ℝ} {z : ℂ} :
+    z ∈ zetaClosedRect s1 s2 T ↔
+      s1 ≤ z.re ∧ z.re ≤ s2 ∧ -T ≤ z.im ∧ z.im ≤ T := by
+  simp [zetaClosedRect, mem_reProdIm, mem_Icc, and_assoc]
+
+lemma riemannZeta_ne_zero_of_re_eq_zero {s : ℂ} (hs : s.re = 0) :
+    riemannZeta s ≠ 0 := by
+  by_cases h0 : s = 0
+  · subst h0
+    rw [riemannZeta_zero]
+    norm_num
+  · intro hz
+    have hneg : ∀ n : ℕ, s ≠ -n := by
+      intro n hn
+      have hre : s.re = -(n : ℝ) := by rw [hn]; simp
+      have hn0 : n = 0 := by
+        have : (n : ℝ) = 0 := by linarith [hs, hre]
+        exact Nat.cast_eq_zero.mp this
+      exact h0 (by simpa [hn0] using hn)
+    have hs1 : s ≠ 1 := by
+      intro h
+      have : s.re = 1 := by rw [h]; simp
+      linarith
+    have hz1 : riemannZeta (1 - s) = 0 := by
+      rw [riemannZeta_one_sub hneg hs1, hz, mul_zero]
+    have hre1 : (1 : ℝ) ≤ (1 - s).re := by
+      rw [re_one_sub, hs]; norm_num
+    exact riemannZeta_ne_zero_of_one_le_re hre1 hz1
+
+lemma mem_jensen_support_of_mem_disk_radius {T r : ℝ} {z : ℂ}
+    (hr : 0 < r) (hrR : r ≤ (7 / 4 : ℝ))
+    (hz : z ∈ riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) r) :
+    z ∈ (MeromorphicOn.divisor riemannZetaMulSubOne
+      (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|)).support := by
+  set c := (2 : ℂ) + T * I
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp hz
+  have hrabs : |r| = r := abs_of_pos hr
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  have hzF : riemannZetaMulSubOne z = 0 :=
+    riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩
+  have hzB : z ∈ Metric.closedBall c |7 / 4| := by
+    have hzball : z ∈ Metric.closedBall c r := by
+      simpa [c, hrabs] using hz'.1
+    exact Metric.closedBall_subset_closedBall (by simpa [hRabs] using hrR) hzball
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hge := riemannZetaMulSubOne_divisor_ge_one_of_zero hzF hmer hzB
+  exact fun h00 => by linarith [hge, h00]
+
+/-- Inner radius `13/8` sits strictly inside the r511 Jensen circle
+`R = 7/4`.  For `β ≥ 1/2` this gives a genuine height window
+`w = 5/8`. -/
+lemma zetaZerosInDisk_card_mul_log_le_inner (T : ℝ) :
+    ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card : ℝ) *
+        Real.log (14 / 13 : ℝ) ≤
+      ∑ᶠ u, (MeromorphicOn.divisor riemannZetaMulSubOne
+          (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) u : ℝ) *
+        Real.log ((7 / 4 : ℝ) * ‖((2 : ℂ) + T * I) - u‖⁻¹) := by
+  set c := (2 : ℂ) + T * I
+  set D := MeromorphicOn.divisor riemannZetaMulSubOne (Metric.closedBall c |7 / 4|)
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hfin : D.support.Finite :=
+    D.finiteSupport (isCompact_closedBall c |7 / 4|)
+  set s := hfin.toFinset
+  set Z := riemannZetaZerosInClosedDisk c (13 / 8)
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  have hrabs : |(13 / 8 : ℝ)| = (13 / 8 : ℝ) := abs_of_pos (by norm_num)
+  have hZsub : Z ⊆ s := by
+    intro z hz
+    exact hfin.mem_toFinset.mpr
+      (mem_jensen_support_of_mem_disk_radius (by norm_num : (0 : ℝ) < 13 / 8)
+        (by norm_num) (by simpa [Z, c] using hz))
+  have htermnn : ∀ u ∈ s, 0 ≤ (D u : ℝ) *
+      Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) := by
+    intro u hu
+    have huB : u ∈ Metric.closedBall c |7 / 4| :=
+      D.supportWithinDomain (hfin.mem_toFinset.mp hu)
+    exact mul_nonneg (riemannZetaMulSubOne_divisor_nonneg T u)
+      (jensen_log_weight_nonneg T huB)
+  have hsupp :
+      (fun u => (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹)).support ⊆ s := by
+    intro u hu
+    have : D u ≠ 0 := by
+      intro h00
+      simp [h00] at hu
+    exact hfin.mem_toFinset.mpr this
+  have hleft :
+      ∑ z ∈ Z, Real.log (14 / 13 : ℝ) ≤
+        ∑ z ∈ Z, (D z : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) := by
+    refine Finset.sum_le_sum ?_
+    intro z hz
+    have hz' := mem_riemannZetaZerosInClosedDisk.mp (by simpa [Z, c] using hz)
+    have hzF : riemannZetaMulSubOne z = 0 :=
+      riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩
+    have hzB : z ∈ Metric.closedBall c |7 / 4| := by
+      have : (13 / 8 : ℝ) ≤ (7 / 4 : ℝ) := by norm_num
+      have hzball : z ∈ Metric.closedBall c (13 / 8) := by
+        simpa [c, hrabs] using hz'.1
+      exact Metric.closedBall_subset_closedBall (by simpa [hRabs] using this) hzball
+    have hge : (1 : ℝ) ≤ (D z : ℝ) := by
+      exact_mod_cast (riemannZetaMulSubOne_divisor_ge_one_of_zero hzF hmer hzB)
+    have hzc : z ≠ c := by
+      intro h
+      exact riemannZetaMulSubOne_center_ne_zero T (by simpa [c, h] using hzF)
+    have hpos : 0 < ‖c - z‖ := norm_pos_iff.mpr (sub_ne_zero.mpr hzc.symm)
+    have hle : ‖c - z‖ ≤ (13 / 8 : ℝ) := by
+      have : dist z c ≤ (13 / 8 : ℝ) := by
+        simpa [c, hrabs, Metric.mem_closedBall] using hz'.1
+      simpa [dist_eq_norm, norm_sub_rev] using this
+    have hlogle : Real.log (14 / 13 : ℝ) ≤
+        Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) := by
+      apply Real.log_le_log (by positivity)
+      rw [← div_eq_mul_inv, div_le_div_iff₀ (by positivity) hpos]
+      nlinarith
+    have hlogpos : 0 ≤ Real.log (14 / 13 : ℝ) :=
+      le_of_lt (Real.log_pos (by norm_num))
+    nlinarith [riemannZetaMulSubOne_divisor_nonneg T z]
+  have hmid :
+      ∑ z ∈ Z, (D z : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) ≤
+        ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+    Finset.sum_le_sum_of_subset_of_nonneg hZsub fun u hu _ => htermnn u hu
+  have hcard : ∑ z ∈ Z, Real.log (14 / 13 : ℝ) =
+      (Z.card : ℝ) * Real.log (14 / 13 : ℝ) := by simp
+  have hfinsum :
+      ∑ᶠ u, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) =
+        ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+    finsum_eq_sum_of_support_subset _ hsupp
+  calc
+    (Z.card : ℝ) * Real.log (14 / 13 : ℝ) = ∑ z ∈ Z, Real.log (14 / 13 : ℝ) :=
+      hcard.symm
+    _ ≤ ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+      hleft.trans hmid
+    _ = ∑ᶠ u, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) := hfinsum.symm
+
+noncomputable def zetaZerosInDiskCardBoundInner : ℝ :=
+  (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 2) /
+    Real.log (14 / 13 : ℝ)
+
+lemma zetaZerosInDiskCardBoundInner_pos : 0 < zetaZerosInDiskCardBoundInner := by
+  have hnum : 0 < Real.log jensenSphereMajorantCoeff +
+      Real.log ‖riemannZeta 2‖ + 2 := by
+    have h1 : 0 < Real.log jensenSphereMajorantCoeff :=
+      Real.log_pos one_lt_jensenSphereMajorantCoeff
+    have h2 : 0 < Real.log ‖riemannZeta 2‖ :=
+      Real.log_pos one_lt_norm_riemannZeta_two
+    linarith
+  have hden : 0 < Real.log (14 / 13 : ℝ) := Real.log_pos (by norm_num)
+  unfold zetaZerosInDiskCardBoundInner
+  exact div_pos hnum hden
+
+lemma zetaZerosInDisk_card_le_inner (T : ℝ) :
+    (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card ≤
+      zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + |T|)) := by
+  have hlog : 0 < Real.log (14 / 13 : ℝ) := Real.log_pos (by norm_num)
+  have hL : 0 ≤ Real.log (2 + |T|) :=
+    Real.log_nonneg (by nlinarith [abs_nonneg T])
+  have hchain :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card : ℝ) *
+          Real.log (14 / 13 : ℝ) ≤
+        Real.log (jensenSphereMajorant T) -
+          Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ :=
+    (zetaZerosInDisk_card_mul_log_le_inner T).trans
+      (riemannZetaMulSubOne_jensen_sum_le T)
+  have hnum :
+      Real.log (jensenSphereMajorant T) -
+          Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ ≤
+        Real.log jensenSphereMajorantCoeff +
+          Real.log ‖riemannZeta 2‖ + 2 * Real.log (2 + |T|) := by
+    linarith [log_jensenSphereMajorant_le T, log_center_neg_le T]
+  have hA :
+      0 ≤ Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ := by
+    have h1 : 0 ≤ Real.log jensenSphereMajorantCoeff :=
+      le_of_lt (Real.log_pos one_lt_jensenSphereMajorantCoeff)
+    have h2 : 0 ≤ Real.log ‖riemannZeta 2‖ :=
+      le_of_lt (Real.log_pos one_lt_norm_riemannZeta_two)
+    linarith
+  have hpack :
+      Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ +
+          2 * Real.log (2 + |T|) ≤
+        (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 2) *
+          (1 + Real.log (2 + |T|)) := by
+    nlinarith [hL, hA]
+  have hdiv :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card : ℝ) ≤
+        zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + |T|)) := by
+    have hle := hchain.trans (hnum.trans hpack)
+    unfold zetaZerosInDiskCardBoundInner
+    rw [div_mul_eq_mul_div]
+    exact (le_div_iff₀ hlog).mpr (by simpa [mul_comm] using hle)
+  exact_mod_cast hdiv
+
+/-- Height-count on the critical-strip rectangle `[0, 1] × [-X, X]`. -/
 def ZetaZeroCountUpToXBound : Prop :=
   ∃ C : ℝ, 0 < C ∧
-    ∀ X : ℝ, 2 ≤ X →
-      (riemannZetaZerosOnClosedRect (2 - (3 / 2 : ℝ)) (2 + 3 / 2) X).card ≤
-        C * X * Real.log X
+    ∀ X : ℝ, 0 ≤ X →
+      (riemannZetaZerosOnClosedRect 0 1 X).card ≤
+        C * (1 + X) * (1 + Real.log (2 + X))
+
+lemma mem_closedDisk_of_re_ge_half {T : ℝ} {z : ℂ}
+    (hre : (1 / 2 : ℝ) ≤ z.re) (hre1 : z.re ≤ 1)
+    (him : |z.im - T| ≤ (5 / 8 : ℝ)) :
+    z ∈ Metric.closedBall ((2 : ℂ) + T * I) |(13 / 8 : ℝ)| := by
+  have hRabs : |(13 / 8 : ℝ)| = (13 / 8 : ℝ) := abs_of_pos (by norm_num)
+  set c := (2 : ℂ) + T * I
+  have hre_c : (z - c).re = z.re - 2 := by
+    simp [c, sub_re, add_re, mul_re, I_re]
+  have him_c : (z - c).im = z.im - T := by
+    simp [c, sub_im, add_im, mul_im, I_re, I_im]
+  have hsq : ‖z - c‖ ^ 2 = (z.re - 2) ^ 2 + (z.im - T) ^ 2 := by
+    rw [← Complex.normSq_eq_norm_sq, Complex.normSq_apply, hre_c, him_c]
+    ring
+  have habsre : |z.re - 2| ≤ (3 / 2 : ℝ) := by
+    have hnn : 0 ≤ 2 - z.re := by linarith [hre1]
+    have hup : 2 - z.re ≤ (3 / 2 : ℝ) := by linarith [hre]
+    rwa [abs_sub_comm, abs_of_nonneg hnn]
+  have hsqle : (z.re - 2) ^ 2 + (z.im - T) ^ 2 ≤ (13 / 8 : ℝ) ^ 2 := by
+    have h1 : (z.re - 2) ^ 2 ≤ (3 / 2 : ℝ) ^ 2 :=
+      sq_le_sq.mpr (by simpa [abs_of_pos (by norm_num : (0 : ℝ) < 3 / 2)] using habsre)
+    have h2 : (z.im - T) ^ 2 ≤ (5 / 8 : ℝ) ^ 2 :=
+      sq_le_sq.mpr (by simpa [abs_of_pos (by norm_num : (0 : ℝ) < 5 / 8)] using him)
+    nlinarith
+  have hnorm : ‖z - c‖ ≤ (13 / 8 : ℝ) := by
+    have hnn : 0 ≤ ‖z - c‖ := norm_nonneg _
+    have hR : 0 ≤ (13 / 8 : ℝ) := by norm_num
+    exact (sq_le_sq₀ hnn hR).mp (by rwa [hsq])
+  simpa [c, dist_eq_norm, hRabs] using hnorm
+
+lemma abs_int_floor_le (y : ℝ) : |(Int.floor y : ℝ)| ≤ |y| + 1 := by
+  have h1 := Int.floor_le y
+  have h2 := Int.lt_floor_add_one y
+  refine abs_le.mpr ⟨?_, ?_⟩
+  · exact le_of_lt (by linarith [neg_le_abs y, h2])
+  · linarith [le_abs_self y, h1]
+
+noncomputable def zetaZeroHeightCenterBound (X : ℝ) : ℕ :=
+  Nat.ceil ((8 : ℝ) * X / 5) + 1
+
+noncomputable def zetaZeroHeightCenters (X : ℝ) : Finset ℝ :=
+  (Finset.Icc (-(zetaZeroHeightCenterBound X : ℤ))
+      (zetaZeroHeightCenterBound X : ℤ)).image
+    fun k : ℤ => (k : ℝ) * (5 / 8)
+
+lemma mem_zetaZeroHeightCenters {X : ℝ} {k : ℤ}
+    (hk : |k| ≤ (zetaZeroHeightCenterBound X : ℤ)) :
+    (k : ℝ) * (5 / 8) ∈ zetaZeroHeightCenters X := by
+  refine Finset.mem_image.mpr ⟨k, ?_, rfl⟩
+  exact Finset.mem_Icc.mpr (abs_le.mp hk)
+
+lemma exists_zetaZeroHeightCenter {X γ : ℝ}
+    (hX : 0 ≤ X) (hγ : |γ| ≤ X) :
+    ∃ T ∈ zetaZeroHeightCenters X, |γ - T| ≤ (5 / 8 : ℝ) := by
+  set w := (5 / 8 : ℝ)
+  have hw : 0 < w := by norm_num
+  set k := Int.floor (γ / w)
+  have hlo : (k : ℝ) ≤ γ / w := Int.floor_le _
+  have hhi : γ / w < (k : ℝ) + 1 := Int.lt_floor_add_one _
+  have hcancel : (γ / w) * w = γ := by field_simp [hw.ne']
+  have hdiff0 : 0 ≤ γ - (k : ℝ) * w := by
+    have hmul := mul_le_mul_of_nonneg_right hlo (le_of_lt hw)
+    rw [hcancel] at hmul
+    linarith
+  have hdiff1 : γ - (k : ℝ) * w < w := by
+    have hmul := mul_lt_mul_of_pos_right hhi hw
+    rw [hcancel, add_mul, one_mul] at hmul
+    linarith
+  have hwin : |γ - (k : ℝ) * w| ≤ w := by
+    have : |γ - (k : ℝ) * w| = γ - (k : ℝ) * w := abs_of_nonneg hdiff0
+    linarith [hdiff1]
+  have hn : |k| ≤ (zetaZeroHeightCenterBound X : ℤ) := by
+    have hkR : |(k : ℝ)| ≤ (8 : ℝ) * X / 5 + 1 := by
+      have := abs_int_floor_le (γ / w)
+      have hdiv : |γ / w| ≤ X / w := by
+        rw [abs_div, abs_of_pos hw]
+        exact div_le_div_of_nonneg_right hγ (le_of_lt hw)
+      have hwX : X / w = (8 : ℝ) * X / 5 := by
+        field_simp [w]; ring
+      linarith
+    have hceil : ((8 : ℝ) * X / 5 : ℝ) ≤
+        (Nat.ceil ((8 : ℝ) * X / 5) : ℝ) := Nat.le_ceil _
+    have hnR : |(k : ℝ)| ≤ (zetaZeroHeightCenterBound X : ℝ) := by
+      have hnval : (zetaZeroHeightCenterBound X : ℝ) =
+          (Nat.ceil ((8 : ℝ) * X / 5) : ℝ) + 1 := by
+        unfold zetaZeroHeightCenterBound
+        exact_mod_cast rfl
+      linarith [hkR, hceil, hnval]
+    exact_mod_cast hnR
+  refine ⟨(k : ℝ) * w, mem_zetaZeroHeightCenters hn, ?_⟩
+  simpa [w] using hwin
+
+lemma mem_disk_of_half_strip {X : ℝ} {z : ℂ} (hX : 0 ≤ X)
+    (hz : z ∈ riemannZetaZerosOnClosedRect 0 1 X)
+    (hre : (1 / 2 : ℝ) ≤ z.re) :
+    ∃ T ∈ zetaZeroHeightCenters X,
+      z ∈ riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8) := by
+  have hz' := mem_riemannZetaZerosOnClosedRect.mp hz
+  have hrect := mem_zetaClosedRect.mp hz'.1
+  obtain ⟨T, hT, him⟩ := exists_zetaZeroHeightCenter hX
+    (abs_le.mpr ⟨hrect.2.2.1, hrect.2.2.2⟩)
+  refine ⟨T, hT, ?_⟩
+  refine mem_riemannZetaZerosInClosedDisk.mpr ⟨?_, hz'.2.1, hz'.2.2⟩
+  exact mem_closedDisk_of_re_ge_half hre hrect.2.1 him
+
+lemma one_sub_mem_closedRect {X : ℝ} {z : ℂ}
+    (hz : z ∈ riemannZetaZerosOnClosedRect 0 1 X)
+    (h0 : 0 < z.re) (h1 : z.re < 1) :
+    1 - z ∈ riemannZetaZerosOnClosedRect 0 1 X := by
+  have hz' := mem_riemannZetaZerosOnClosedRect.mp hz
+  have hrect := mem_zetaClosedRect.mp hz'.1
+  have hz1 : riemannZeta (1 - z) = 0 :=
+    riemannZeta_one_sub_eq_zero_of h0 h1 hz'.2.1
+  have hre : 0 ≤ (1 - z).re ∧ (1 - z).re ≤ 1 := by
+    rw [re_one_sub]
+    constructor <;> linarith [hrect.1, hrect.2.1]
+  have him : -(X) ≤ (1 - z).im ∧ (1 - z).im ≤ X := by
+    have : (1 - z).im = -z.im := by simp [sub_im]
+    rw [this]
+    constructor <;> linarith [hrect.2.2.1, hrect.2.2.2]
+  have hne : 1 - z ≠ 1 := by
+    intro h
+    have : z = 0 := by linear_combination -(h)
+    exact (ne_of_gt h0) (by simpa [this] using this)
+  refine mem_riemannZetaZerosOnClosedRect.mpr ⟨?_, hz1, hne⟩
+  exact mem_zetaClosedRect.mpr ⟨hre.1, hre.2, him.1, him.2⟩
+
+lemma zetaZeroHeightCenters_card_le (X : ℝ) (hX : 0 ≤ X) :
+    (zetaZeroHeightCenters X).card ≤
+      2 * zetaZeroHeightCenterBound X + 1 := by
+  refine (Finset.card_image_le).trans ?_
+  have hIcc :
+      (Finset.Icc (-(zetaZeroHeightCenterBound X : ℤ))
+        (zetaZeroHeightCenterBound X : ℤ)).card =
+        2 * zetaZeroHeightCenterBound X + 1 := by
+    rw [Int.card_Icc]
+    set n := zetaZeroHeightCenterBound X
+    have : ((n : ℤ) + 1 - - (n : ℤ)) = ((2 * n + 1 : ℕ) : ℤ) := by
+      push_cast; ring
+    rw [this, Int.toNat_natCast]
+  exact_mod_cast hIcc.le
+
+lemma zetaZeroHeightCenterBound_cast_le (X : ℝ) (hX : 0 ≤ X) :
+    (zetaZeroHeightCenterBound X : ℝ) ≤ (8 : ℝ) * X / 5 + 2 := by
+  have hpos : 0 ≤ (8 : ℝ) * X / 5 := by positivity
+  have hlt := Nat.ceil_lt_add_one hpos
+  unfold zetaZeroHeightCenterBound
+  exact_mod_cast (by linarith : (Nat.ceil ((8 : ℝ) * X / 5) : ℝ) + 1 ≤
+    (8 : ℝ) * X / 5 + 2)
+
+lemma abs_heightCenter_le (X : ℝ) {T : ℝ}
+    (hT : T ∈ zetaZeroHeightCenters X) :
+    |T| ≤ (zetaZeroHeightCenterBound X : ℝ) * (5 / 8) := by
+  obtain ⟨k, hk, rfl⟩ := Finset.mem_image.mp hT
+  have hkI := Finset.mem_Icc.mp hk
+  have habs : |k| ≤ (zetaZeroHeightCenterBound X : ℤ) := abs_le.mpr hkI
+  have : |(k : ℝ)| ≤ (zetaZeroHeightCenterBound X : ℝ) := by exact_mod_cast habs
+  have hw : 0 ≤ (5 / 8 : ℝ) := by norm_num
+  simpa [abs_mul, abs_of_nonneg hw] using mul_le_mul_of_nonneg_right this hw
+
+lemma card_half_strip_le (X : ℝ) (hX : 0 ≤ X) :
+    ((riemannZetaZerosOnClosedRect 0 1 X).filter
+        fun z => (1 / 2 : ℝ) ≤ z.re).card ≤
+      (zetaZeroHeightCenters X).card *
+        (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) := by
+  set S := (riemannZetaZerosOnClosedRect 0 1 X).filter
+    fun z => (1 / 2 : ℝ) ≤ z.re
+  set Cts := zetaZeroHeightCenters X
+  have hcover :
+      S ⊆ Cts.biUnion fun T =>
+        riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8) := by
+    intro z hz
+    obtain ⟨hzS, hre⟩ := Finset.mem_filter.mp hz
+    obtain ⟨T, hT, hzD⟩ := mem_disk_of_half_strip hX hzS hre
+    exact Finset.mem_biUnion.mpr ⟨T, hT, hzD⟩
+  have hbu :
+      (Cts.biUnion fun T =>
+          riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card ≤
+        ∑ T ∈ Cts,
+          (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card :=
+    Finset.card_biUnion_le
+  have hnat : S.card ≤
+      ∑ T ∈ Cts,
+        (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (13 / 8)).card :=
+    (Finset.card_le_card hcover).trans hbu
+  have h1 : (S.card : ℝ) ≤
+      ∑ T ∈ Cts, ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I)
+        (13 / 8)).card : ℝ) := by
+    have hcast :
+        (↑(∑ T ∈ Cts, (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I)
+            (13 / 8)).card) : ℝ) =
+          ∑ T ∈ Cts, (↑(riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I)
+            (13 / 8)).card : ℝ) :=
+      map_sum (Nat.castAddMonoidHom ℝ)
+        (fun T : ℝ => (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I)
+          (13 / 8)).card) Cts
+    exact (Nat.cast_le.mpr hnat).trans_eq hcast
+  have h3 :
+      ∑ T ∈ Cts, ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I)
+          (13 / 8)).card : ℝ) ≤
+        ∑ T ∈ Cts, zetaZerosInDiskCardBoundInner *
+          (1 + Real.log (2 + X + 5 / 4)) := by
+    refine Finset.sum_le_sum ?_
+    intro T hT
+    have hn := zetaZeroHeightCenterBound_cast_le X hX
+    have habsT : |T| ≤ X + 5 / 4 := by
+      have := mul_le_mul_of_nonneg_right hn (by norm_num : (0 : ℝ) ≤ 5 / 8)
+      have hsimp : ((8 : ℝ) * X / 5 + 2) * (5 / 8) = X + 5 / 4 := by ring
+      linarith [abs_heightCenter_le X hT]
+    have hlog : 1 + Real.log (2 + |T|) ≤
+        1 + Real.log (2 + X + 5 / 4) := by
+      have hpos : 0 < 2 + |T| := by positivity
+      have hle : 2 + |T| ≤ 2 + X + 5 / 4 := by linarith [abs_nonneg T]
+      exact add_le_add le_rfl (Real.log_le_log hpos hle)
+    have hdisk := zetaZerosInDisk_card_le_inner T
+    exact_mod_cast (hdisk.trans (mul_le_mul_of_nonneg_left hlog
+      (le_of_lt zetaZerosInDiskCardBoundInner_pos)))
+  have h4 :
+      ∑ T ∈ Cts, zetaZerosInDiskCardBoundInner *
+          (1 + Real.log (2 + X + 5 / 4)) =
+        (Cts.card : ℝ) * (zetaZerosInDiskCardBoundInner *
+          (1 + Real.log (2 + X + 5 / 4))) := by
+    simp [Finset.sum_const, nsmul_eq_mul]
+  exact (h1.trans h3).trans_eq h4
+
+lemma card_critical_le_two_mul_half (X : ℝ) (_hX : 0 ≤ X) :
+    (riemannZetaZerosOnClosedRect 0 1 X).card ≤
+      2 * ((riemannZetaZerosOnClosedRect 0 1 X).filter
+        fun z => (1 / 2 : ℝ) ≤ z.re).card := by
+  set S := riemannZetaZerosOnClosedRect 0 1 X
+  set Sge := S.filter fun z => (1 / 2 : ℝ) ≤ z.re
+  set Slt := S.filter fun z => z.re < (1 / 2 : ℝ)
+  have hunion : Sge ∪ Slt = S := by
+    ext z
+    simp [Sge, Slt, Finset.mem_union, Finset.mem_filter]
+    constructor
+    · rintro (⟨h, _⟩ | ⟨h, _⟩) <;> exact h
+    · intro hz
+      by_cases hre : (1 / 2 : ℝ) ≤ z.re
+      · exact Or.inl ⟨hz, by simpa using hre⟩
+      · exact Or.inr ⟨hz, by simpa using lt_of_not_ge hre⟩
+  have hdisj : Disjoint Sge Slt := by
+    refine Finset.disjoint_left.mpr ?_
+    intro z hzge hzlt
+    have := (Finset.mem_filter.mp hzge).2
+    have := (Finset.mem_filter.mp hzlt).2
+    linarith
+  have hpart : S.card = Slt.card + Sge.card := by
+    rw [← hunion, Finset.card_union_of_disjoint hdisj, add_comm]
+  have hinj : Function.Injective fun z : ℂ => 1 - z :=
+    fun a b h => sub_right_inj.mp h
+  have himage : Slt.image (fun z => 1 - z) ⊆ Sge := by
+    intro w hw
+    obtain ⟨z, hzlt, rfl⟩ := Finset.mem_image.mp hw
+    have hz := (Finset.mem_filter.mp hzlt).1
+    have hre_lt := (Finset.mem_filter.mp hzlt).2
+    have hz' := mem_riemannZetaZerosOnClosedRect.mp hz
+    have hrect := mem_zetaClosedRect.mp hz'.1
+    have hre0 : 0 < z.re :=
+      lt_of_le_of_ne hrect.1 fun h0 =>
+        riemannZeta_ne_zero_of_re_eq_zero h0.symm hz'.2.1
+    have hre1 : z.re < 1 := lt_of_lt_of_le hre_lt (by norm_num)
+    have hwmem := one_sub_mem_closedRect hz hre0 hre1
+    have hre_ge : (1 / 2 : ℝ) ≤ (1 - z).re := by
+      rw [re_one_sub]; linarith
+    exact Finset.mem_filter.mpr ⟨hwmem, hre_ge⟩
+  have hle : Slt.card ≤ Sge.card :=
+    (Finset.card_image_of_injective Slt hinj).symm.trans_le
+      (Finset.card_le_card himage)
+  linarith [hpart, hle]
+
+noncomputable def zetaZeroCountUpToXBoundConst : ℝ :=
+  2 * (16 / 5 + 5) * zetaZerosInDiskCardBoundInner * (9 / 4)
+
+lemma zetaZeroCountUpToXBoundConst_pos :
+    0 < zetaZeroCountUpToXBoundConst := by
+  have hC := zetaZerosInDiskCardBoundInner_pos
+  unfold zetaZeroCountUpToXBoundConst
+  positivity
+
+lemma log_height_pack (X : ℝ) (hX : 0 ≤ X) :
+    1 + Real.log (2 + X + 5 / 4) ≤
+      (9 / 4) * (1 + Real.log (2 + X)) := by
+  have hpos : 0 < 2 + X := by positivity
+  have h1 : 0 < 1 + (5 / 4 : ℝ) / (2 + X) := by positivity
+  have hsplit : 2 + X + 5 / 4 = (2 + X) * (1 + (5 / 4) / (2 + X)) := by
+    field_simp
+  have hlog : Real.log (2 + X + 5 / 4) ≤ Real.log (2 + X) + 5 / 4 := by
+    have hsum : Real.log (2 + X + 5 / 4) =
+        Real.log (2 + X) + Real.log (1 + (5 / 4) / (2 + X)) := by
+      rw [hsplit, Real.log_mul hpos.ne' h1.ne']
+    have hlog1 : Real.log (1 + (5 / 4) / (2 + X)) ≤
+        (5 / 4 : ℝ) / (2 + X) := by
+      have := Real.log_le_sub_one_of_pos h1
+      linarith
+    have hdiv : (5 / 4 : ℝ) / (2 + X) ≤ 5 / 4 :=
+      (div_le_iff₀ hpos).mpr (by nlinarith [hX])
+    linarith [hsum, hlog1, hdiv]
+  have hL : 0 ≤ Real.log (2 + X) := Real.log_nonneg (by linarith)
+  nlinarith [hlog, hL]
+
+lemma heightCenters_card_cast_le (X : ℝ) (hX : 0 ≤ X) :
+    ((zetaZeroHeightCenters X).card : ℝ) ≤ (16 / 5 : ℝ) * X + 5 := by
+  have hcts := zetaZeroHeightCenters_card_le X hX
+  have hn := zetaZeroHeightCenterBound_cast_le X hX
+  have hcard : ((zetaZeroHeightCenters X).card : ℝ) ≤
+      (2 * zetaZeroHeightCenterBound X + 1 : ℝ) := by exact_mod_cast hcts
+  have hlin : (2 * zetaZeroHeightCenterBound X + 1 : ℝ) ≤
+      2 * ((8 : ℝ) * X / 5 + 2) + 1 := by
+    linarith [hn]
+  have hsimp : 2 * ((8 : ℝ) * X / 5 + 2) + 1 = (16 / 5 : ℝ) * X + 5 := by ring
+  linarith
+
+theorem zetaZeroCountUpToXBound : ZetaZeroCountUpToXBound :=
+  ⟨zetaZeroCountUpToXBoundConst, zetaZeroCountUpToXBoundConst_pos, fun X hX => by
+    have hhalf := card_half_strip_le X hX
+    have htwo := card_critical_le_two_mul_half X hX
+    have hctsR := heightCenters_card_cast_le X hX
+    have hpack := log_height_pack X hX
+    have hCpos := le_of_lt zetaZerosInDiskCardBoundInner_pos
+    have hR : ((riemannZetaZerosOnClosedRect 0 1 X).card : ℝ) ≤
+        2 * ((zetaZeroHeightCenters X).card : ℝ) *
+          (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) := by
+      have hge : (((riemannZetaZerosOnClosedRect 0 1 X).filter
+          fun z => (1 / 2 : ℝ) ≤ z.re).card : ℝ) ≤
+          ((zetaZeroHeightCenters X).card : ℝ) *
+            (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) :=
+        hhalf
+      have h2R : ((riemannZetaZerosOnClosedRect 0 1 X).card : ℝ) ≤
+          2 * (((riemannZetaZerosOnClosedRect 0 1 X).filter
+            fun z => (1 / 2 : ℝ) ≤ z.re).card : ℝ) := by exact_mod_cast htwo
+      nlinarith [h2R, hge, hCpos]
+    have hcts1 : ((zetaZeroHeightCenters X).card : ℝ) ≤
+        (16 / 5 + 5 : ℝ) * (1 + X) := by nlinarith [hctsR, hX]
+    have hL1pos : 0 ≤ 1 + Real.log (2 + X + 5 / 4) :=
+      add_nonneg (by norm_num)
+        (Real.log_nonneg (by nlinarith [hX] : (1 : ℝ) ≤ 2 + X + 5 / 4))
+    have hL2pos : 0 ≤ 1 + Real.log (2 + X) :=
+      add_nonneg (by norm_num) (Real.log_nonneg (by linarith : (1 : ℝ) ≤ 2 + X))
+    have hXpos : 0 ≤ 1 + X := by linarith
+    have hstep1 :
+        2 * ((zetaZeroHeightCenters X).card : ℝ) *
+            (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) ≤
+          2 * ((16 / 5 + 5 : ℝ) * (1 + X)) *
+            (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) :=
+      mul_le_mul_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hcts1 (by norm_num))
+        (mul_nonneg hCpos hL1pos)
+    have hstep2 :
+        2 * ((16 / 5 + 5 : ℝ) * (1 + X)) *
+            (zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + X + 5 / 4))) ≤
+          2 * ((16 / 5 + 5 : ℝ) * (1 + X)) *
+            (zetaZerosInDiskCardBoundInner * ((9 / 4) * (1 + Real.log (2 + X)))) :=
+      mul_le_mul_of_nonneg_left
+        (mul_le_mul_of_nonneg_left hpack hCpos)
+        (mul_nonneg (by norm_num) (mul_nonneg (by norm_num) hXpos))
+    have hrewrit :
+        2 * ((16 / 5 + 5 : ℝ) * (1 + X)) *
+            (zetaZerosInDiskCardBoundInner * ((9 / 4) * (1 + Real.log (2 + X)))) =
+          zetaZeroCountUpToXBoundConst * (1 + X) * (1 + Real.log (2 + X)) := by
+      unfold zetaZeroCountUpToXBoundConst; ring
+    exact (hR.trans (hstep1.trans hstep2)).trans_eq hrewrit⟩
 
 end ZetaEulerMaclaurin
 

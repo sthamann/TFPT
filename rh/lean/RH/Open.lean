@@ -708,6 +708,7 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
     r510  filling bound + centre + Jensen API;
     r511  disk card via `Real.circleAverage`;
     r512  dyadic `N(X) ≲ X log X` + FE-fold;
+    r513  `∑ 1/|ρ|² < ∞` via dyadic blocks;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
   matching the original 4--8 band if the strip
@@ -952,9 +953,25 @@ full divisor sum ≥ inner-disk subsum
 (`zetaZerosInDisk_card_mul_log_le`);
 circle majorant `M ≤ K(2+|T|)²` with `δ=1/8`.
 
-(3) Height-count `N(X) ≲ X log X` on the
-strip (`ZetaZeroCountUpToXBound`) and the
-FE-pairing fold `β<1/4 ↦ 1-β>3/4` stay r512.
+(3) Height-count `N(X)` is r512.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r512 census (outer bridges 19, height count)
+
+Route (b)+inner lift, sorry-free.  Honest geometry:
+`D(2+iT, 3/2)` only touches `β=1/2` at a point
+(`w=0`).  Same Jensen circle `R=7/4`, inner
+`r=13/8` gives window `w=5/8` on `β≥1/2`
+(`(13/8)²-(3/2)²=25/64`).  FE pairing
+(`riemannZeta_zero_iff_one_sub`) doubles
+`0<β<1/2` onto `β>1/2`.
+
+Proved: `zetaZeroCountUpToXBound` —
+`(riemannZetaZerosOnClosedRect 0 1 X).card
+≤ C·(1+X)·(1+log(2+X))` for `X≥0`, with
+`C = 2·(16/5+5)·C_inner·(9/4)` and
+`C_inner = (log K + log‖ζ(2)‖ + 2)/log(14/13)`.
+`∑ 1/|ρ|²` dyadic assembly is r513.
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)
