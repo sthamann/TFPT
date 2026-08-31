@@ -16,6 +16,7 @@ are proved without `sorry`.
 -/
 import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
+import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Topology.Order.Basic
 
 namespace RH
@@ -34,7 +35,9 @@ structure FullWeilTest where
   continuous_toFun : Continuous toFun
   even_toFun : Function.Even toFun
   support_toFun : ∀ u : ℝ, supportRadius < |u| → toFun u = 0
-  autocorrelation : ∃ h : ℝ → ℝ, MeasureTheory.Integrable h ∧
+  autocorrelation : ∃ h : ℝ → ℝ,
+    MeasureTheory.MemLp h 2 MeasureTheory.volume ∧
+    HasCompactSupport h ∧
     ∀ u : ℝ, toFun u =
       ∫ t : ℝ, h t * h (t + u) ∂MeasureTheory.volume
   admissible : Prop
@@ -44,14 +47,27 @@ normalization is the r475 `weilArchSide` formula with `F.toFun`;
 factoring it here lets density be audited channel by channel. -/
 opaque fullWeilArchSide : FullWeilTest → ℝ
 
-/-- Full-class prime channel.  Fixed support makes the von-Mangoldt
-pairing a finite sum, although the finite-support reduction is one of
-the continuity lemmas below. -/
-opaque fullWeilCombSide : FullWeilTest → ℝ
+/-- Common finite anchor determined by the target support. -/
+noncomputable def FullWeilTest.fullAnchor (F : FullWeilTest) : ℕ :=
+  max 1 (Nat.ceil (Real.exp F.supportRadius))
 
-/-- Full-class pole channel.  This is the rank-two/polar functional in
-the standard normalization. -/
-opaque fullWeilPoleSide : FullWeilTest → ℝ
+/-- Full-class prime channel.  The support anchor makes the
+von-Mangoldt pairing visibly finite. -/
+noncomputable def fullWeilCombSide (F : FullWeilTest) : ℝ :=
+  ∑ n ∈ windowAtoms F.fullAnchor, combMass n * F.toFun (Real.log n)
+
+/-- Standard polar weight.  Since `Π''(u) = -2 cosh(u/2)` for the
+r376 potential `Π = polePotential`, this is the compact-support
+integral form of the pole channel (equivalently the two evaluations
+of the bilateral transform at `±1/2`). -/
+noncomputable def fullWeilPoleWeight (u : ℝ) : ℝ :=
+  -2 * Real.cosh (u / 2)
+
+/-- Full-class pole channel as the bounded-weight integral on the
+fixed support. -/
+noncomputable def fullWeilPoleSide (F : FullWeilTest) : ℝ :=
+  intervalIntegral (fun u : ℝ => fullWeilPoleWeight u * F.toFun u)
+    (-F.supportRadius) F.supportRadius MeasureTheory.volume
 
 /-- The continuation of the internal three-channel pairing to the full
 Weil test class, now visibly decomposed by channel. -/
@@ -63,20 +79,158 @@ of the TFPT finite-window construction. -/
 opaque standardExplicitFormula : FullWeilTest → ℝ
 
 /-- Fixed-support approximation data.  `grid n` never exceeds the
-target support, converges pointwise there, and converges in `L¹` on
-that fixed compact interval.  These are the inputs needed for the
-arch integral; the finite prime and polar channels require less. -/
+target support, converges uniformly there, and converges in `L¹` on
+that fixed compact interval.  Uniform convergence supplies every
+point evaluation in the finite prime channel; `L¹` controls bounded
+integral weights such as the standard polar `cosh` functional. -/
 def FullWeilTest.FixedSupportGridApproximation
     (F : FullWeilTest) (grid : ℕ → GridElement) : Prop :=
   (∀ n, (grid n).supportBound ≤ F.supportRadius) ∧
-  (∀ u : ℝ, |u| ≤ F.supportRadius →
-    Filter.Tendsto (fun n => (grid n).toFun u)
-      Filter.atTop (nhds (F.toFun u))) ∧
+  (∀ ε : ℝ, 0 < ε → ∀ᶠ n in Filter.atTop,
+    ∀ u : ℝ, |u| ≤ F.supportRadius →
+      |(grid n).toFun u - F.toFun u| < ε) ∧
+  (∀ n, IntervalIntegrable (grid n).toFun MeasureTheory.volume
+    (-F.supportRadius) F.supportRadius) ∧
   Filter.Tendsto
     (fun n => intervalIntegral
       (fun u : ℝ => |(grid n).toFun u - F.toFun u|)
       (-F.supportRadius) F.supportRadius MeasureTheory.volume)
     Filter.atTop (nhds 0)
+
+/-- Uniform-on-support convergence plus the common support bound gives
+pointwise convergence on all of `ℝ` (both functions vanish outside). -/
+theorem FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
+    {F : FullWeilTest} {grid : ℕ → GridElement}
+    (happrox : F.FixedSupportGridApproximation grid) (u : ℝ) :
+    Filter.Tendsto (fun n => (grid n).toFun u)
+      Filter.atTop (nhds (F.toFun u)) := by
+  rw [Metric.tendsto_atTop]
+  intro ε hε
+  obtain ⟨N, hN⟩ :=
+    Filter.eventually_atTop.1 (happrox.2.1 ε hε)
+  refine ⟨N, fun n hn => ?_⟩
+  rw [Real.dist_eq]
+  by_cases hu : |u| ≤ F.supportRadius
+  · exact hN n hn u hu
+  · have hRu : F.supportRadius < |u| := lt_of_not_ge hu
+    rw [F.support_toFun u hRu]
+    rw [(grid n).toFun_eq_zero_of_lt_abs
+      (lt_of_le_of_lt (happrox.1 n) hRu)]
+    simpa using hε
+
+/-- Every approximating grid support fits below the target's common
+finite prime anchor. -/
+theorem GridElement.elementAnchor_le_fullAnchor
+    {F : FullWeilTest} {f : GridElement}
+    (hsupport : f.supportBound ≤ F.supportRadius) :
+    f.elementAnchor ≤ F.fullAnchor := by
+  unfold GridElement.elementAnchor FullWeilTest.fullAnchor
+  exact max_le_max_left 1
+    (Nat.ceil_mono ((Real.exp_le_exp).2 hsupport))
+
+/-- The native prime side equals the target-anchor finite sum whenever
+the native support lies in the target support. -/
+theorem weilCombSide_eq_fullAnchor
+    {F : FullWeilTest} {f : GridElement}
+    (hsupport : f.supportBound ≤ F.supportRadius) :
+    weilCombSide f =
+      ∑ n ∈ windowAtoms F.fullAnchor,
+        combMass n * f.toFun (Real.log n) := by
+  symm
+  exact comb_elementwise_stabilization f
+    (f.elementAnchor_le_fullAnchor hsupport)
+
+/-- **Comb continuity (r489, PROVED).**  Fixed support turns the prime
+channel into one common finite sum, and uniform convergence supplies
+the finitely many point evaluations. -/
+theorem fullWeilCombSide_tendsto
+    {F : FullWeilTest} {grid : ℕ → GridElement}
+    (happrox : F.FixedSupportGridApproximation grid) :
+    Filter.Tendsto (fun n => weilCombSide (grid n))
+      Filter.atTop (nhds (fullWeilCombSide F)) := by
+  unfold fullWeilCombSide
+  have heq : (fun k => weilCombSide (grid k)) =
+      (fun k => ∑ n ∈ windowAtoms F.fullAnchor,
+        combMass n * (grid k).toFun (Real.log n)) := by
+    funext k
+    exact weilCombSide_eq_fullAnchor (happrox.1 k)
+  rw [heq]
+  exact tendsto_finset_sum (windowAtoms F.fullAnchor) fun n _ =>
+    (happrox.tendsto_toFun (Real.log n)).const_mul (combMass n)
+
+/-- The standard polar integral is continuous for the chosen
+fixed-support topology.  This is the analytic rank-two continuity
+statement; identifying r376's native-mesh second-difference read with
+this integral is recorded separately below. -/
+theorem fullWeilPoleIntegral_tendsto
+    {F : FullWeilTest} {grid : ℕ → GridElement}
+    (happrox : F.FixedSupportGridApproximation grid) :
+    Filter.Tendsto
+      (fun n => intervalIntegral
+        (fun u : ℝ => fullWeilPoleWeight u * (grid n).toFun u)
+        (-F.supportRadius) F.supportRadius MeasureTheory.volume)
+      Filter.atTop (nhds (fullWeilPoleSide F)) := by
+  rw [tendsto_iff_norm_sub_tendsto_zero]
+  unfold fullWeilPoleSide
+  let C : ℝ := 2 * Real.cosh (F.supportRadius / 2)
+  let err : ℕ → ℝ := fun n => intervalIntegral
+    (fun u : ℝ => |(grid n).toFun u - F.toFun u|)
+    (-F.supportRadius) F.supportRadius MeasureTheory.volume
+  have hFint : IntervalIntegrable F.toFun MeasureTheory.volume
+      (-F.supportRadius) F.supportRadius :=
+    F.continuous_toFun.intervalIntegrable _ _
+  have hweight : Continuous fullWeilPoleWeight := by
+    unfold fullWeilPoleWeight
+    fun_prop
+  have hC : Filter.Tendsto (fun n => C * err n)
+      Filter.atTop (nhds 0) := by
+    simpa only [err, mul_zero] using happrox.2.2.2.const_mul C
+  refine squeeze_zero' (Filter.Eventually.of_forall fun _ => norm_nonneg _) ?_ hC
+  filter_upwards [] with n
+  have hgridInt := happrox.2.2.1 n
+  have hgridWeighted :=
+    hgridInt.continuousOn_mul hweight.continuousOn
+  have hFWeighted :=
+    hFint.continuousOn_mul hweight.continuousOn
+  rw [← intervalIntegral.integral_sub hgridWeighted hFWeighted]
+  have hintegrand :
+      (fun u : ℝ => fullWeilPoleWeight u * (grid n).toFun u -
+        fullWeilPoleWeight u * F.toFun u) =
+      (fun u : ℝ => fullWeilPoleWeight u *
+        ((grid n).toFun u - F.toFun u)) := by
+    funext u
+    ring
+  rw [hintegrand]
+  change ‖intervalIntegral
+    (fun u : ℝ => fullWeilPoleWeight u *
+      ((grid n).toFun u - F.toFun u))
+    (-F.supportRadius) F.supportRadius MeasureTheory.volume‖ ≤ C * err n
+  calc
+    _ ≤ intervalIntegral
+        (fun u : ℝ => C * |(grid n).toFun u - F.toFun u|)
+        (-F.supportRadius) F.supportRadius MeasureTheory.volume := by
+      apply intervalIntegral.norm_integral_le_of_norm_le
+        (neg_le_self F.supportRadius_nonneg)
+      · filter_upwards [] with u hu
+        have huabs : |u| ≤ F.supportRadius := by
+          exact abs_le.mpr ⟨hu.1.le, hu.2⟩
+        have hhalf : |u / 2| ≤ |F.supportRadius / 2| := by
+          rw [abs_div, abs_div, abs_of_nonneg F.supportRadius_nonneg]
+          exact div_le_div_of_nonneg_right huabs (by norm_num)
+        have hcosh : Real.cosh (u / 2) ≤
+            Real.cosh (F.supportRadius / 2) := by
+          exact (Real.cosh_le_cosh).2 hhalf
+        simp only [norm_mul, Real.norm_eq_abs, fullWeilPoleWeight,
+          abs_neg]
+        rw [abs_of_pos (by norm_num : (0 : ℝ) < 2),
+          abs_of_pos (Real.cosh_pos _)]
+        dsimp [C]
+        exact mul_le_mul_of_nonneg_right
+          (mul_le_mul_of_nonneg_left hcosh (by norm_num))
+          (abs_nonneg ((grid n).toFun u - F.toFun u))
+      · exact ((hgridInt.sub hFint).norm.const_mul C)
+    _ = C * err n := by
+      rw [intervalIntegral.integral_const_mul]
 
 /-- Density brick: every admissible fixed-support autocorrelation has
 a dyadic `GridElement` autocorrelation approximation with the same
@@ -86,6 +240,28 @@ interpolation. -/
 def FullWeilFixedSupportGridDensity : Prop :=
   ∀ F : FullWeilTest, F.admissible →
     ∃ grid : ℕ → GridElement, F.FixedSupportGridApproximation grid
+
+/-- Existing r376 finite-element seam, now placed exactly: the
+native-mesh second-difference pole read equals the compact-support
+`-2 cosh(u/2)` integral.  Once this dictionary holds, pole continuity
+is the proved `fullWeilPoleIntegral_tendsto`. -/
+def GridPoleIntegralIdentification : Prop :=
+  ∀ (F : FullWeilTest) (grid : ℕ → GridElement), F.admissible →
+    F.FixedSupportGridApproximation grid →
+      ∀ n, weilPoleSide (grid n) =
+        intervalIntegral
+          (fun u : ℝ => fullWeilPoleWeight u * (grid n).toFun u)
+          (-F.supportRadius) F.supportRadius MeasureTheory.volume
+
+/-- Arch continuity component.  This is continuity of r475's concrete
+u-space pairing along the fixed-support topology; Gauss--digamma is
+needed later for the standard explicit-formula dictionary, not for
+the topological positivity-limit argument itself. -/
+def FullWeilArchContinuity : Prop :=
+  ∀ (F : FullWeilTest) (grid : ℕ → GridElement), F.admissible →
+    F.FixedSupportGridApproximation grid →
+      Filter.Tendsto (fun n => weilArchSide (grid n))
+        Filter.atTop (nhds (fullWeilArchSide F))
 
 /-- Channel-continuity brick along the fixed-support approximation.
 The arch component is dominated/L¹ convergence (r475 supplies the
@@ -100,6 +276,35 @@ def FullWeilChannelContinuity : Prop :=
         Filter.atTop (nhds (fullWeilCombSide F)) ∧
       Filter.Tendsto (fun n => weilPoleSide (grid n))
         Filter.atTop (nhds (fullWeilPoleSide F))
+
+/-- The three channel limits follow from the remaining arch component
+and the native-grid pole dictionary.  Comb continuity and standard
+polar-integral continuity are proved above. -/
+theorem fullWeilChannelContinuity_of_components
+    (harch : FullWeilArchContinuity)
+    (hpole : GridPoleIntegralIdentification) :
+    FullWeilChannelContinuity := by
+  intro F grid hF happrox
+  refine ⟨harch F grid hF happrox, fullWeilCombSide_tendsto happrox, ?_⟩
+  have heq : (fun n => weilPoleSide (grid n)) =
+      (fun n => intervalIntegral
+        (fun u : ℝ => fullWeilPoleWeight u * (grid n).toFun u)
+        (-F.supportRadius) F.supportRadius MeasureTheory.volume) := by
+    funext n
+    exact hpole F grid hF happrox n
+  rw [heq]
+  exact fullWeilPoleIntegral_tendsto happrox
+
+/-- **Single remaining dense-completion package (r489).**
+
+Its components stay separately named for subsequent rounds:
+compactly-supported dyadic `L²` step density and autocorrelation
+uniform convergence; r475 u-space arch continuity; and the r376
+native-grid pole integral dictionary. -/
+def FullWeilFixedSupportCompletion : Prop :=
+  FullWeilFixedSupportGridDensity ∧
+    FullWeilArchContinuity ∧
+    GridPoleIntegralIdentification
 
 /-- Form convergence assembled from the three channel limits. -/
 theorem fullWeilForm_tendsto_of_channels
@@ -142,17 +347,25 @@ theorem grid_dense_extension_of_fixedSupport
   exact fullWeilForm_nonneg_of_tendsto hpos
     (fullWeilForm_tendsto_of_channels (hcontinuous F grid hF hgrid))
 
-/-- OPEN CLASSICAL BRICK 1a (r487): dyadic step approximation of the
-compactly supported autocorrelation witness. -/
-theorem fullWeil_fixedSupport_grid_density :
-    FullWeilFixedSupportGridDensity := by
+/-- OPEN CLASSICAL BRICK 1 (r489): the one remaining completion
+package.  No infinite-window or mesh-PSD hypothesis is included. -/
+theorem fullWeil_fixedSupport_completion :
+    FullWeilFixedSupportCompletion := by
   sorry
 
-/-- OPEN CLASSICAL BRICK 1b (r487): continuity of the three concrete
-channels along the fixed-support approximation. -/
+/-- Grid density is the first component of the single completion
+package. -/
+theorem fullWeil_fixedSupport_grid_density :
+    FullWeilFixedSupportGridDensity :=
+  fullWeil_fixedSupport_completion.1
+
+/-- All channel limits follow from the other two completion components
+plus the proved comb and polar-integral continuity theorems. -/
 theorem fullWeil_channel_continuity :
-    FullWeilChannelContinuity := by
-  sorry
+    FullWeilChannelContinuity :=
+  fullWeilChannelContinuity_of_components
+    fullWeil_fixedSupport_completion.2.1
+    fullWeil_fixedSupport_completion.2.2
 
 /-- Bridge 1 now consumes exactly the two named bricks above; its
 positivity-transfer algebra is sorry-free. -/

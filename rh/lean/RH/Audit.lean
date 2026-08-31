@@ -365,18 +365,28 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms productionArchDelta_tendsto_atTop
 #print axioms selectedArchError_tendsto_zero_of_rate
 
-/-! ## (q) The r463/r487 explicit external-bridge census
-r487 splits the former dense-extension `sorry` into fixed-support
-Grid density and channel continuity, increasing the honest external
-census from three to four.  `grid_dense_extension` is now a proved
-positivity-limit wrapper.  The Mathlib endpoint wrapper is also
-proved from the one named off-critical separation theorem.  Standard
-explicit-formula normalization remains one `sorry`.
+/-! ## (q) The r463/r487/r489 explicit external-bridge census
+r489 proves finite comb continuity and continuity of the standard
+polar integral, strengthens the topology to uniform-on-fixed-support
+plus `L¹`, and consolidates density, arch continuity, and the r376
+native-grid pole dictionary into one typed completion `sorry`.
+External census returns from four to three; repository census 9 -> 8.
+`grid_dense_extension` remains a proved positivity-limit wrapper.
+The Mathlib endpoint wrapper is proved from the one named
+off-critical separation theorem.  Standard explicit-formula
+normalization remains one `sorry`.
 The internal endpoint is deliberately not named RH. -/
 
+#print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
+#print axioms GridElement.elementAnchor_le_fullAnchor
+#print axioms weilCombSide_eq_fullAnchor
+#print axioms fullWeilCombSide_tendsto
+#print axioms fullWeilPoleIntegral_tendsto
+#print axioms fullWeilChannelContinuity_of_components
 #print axioms fullWeilForm_tendsto_of_channels
 #print axioms fullWeilForm_nonneg_of_tendsto
 #print axioms grid_dense_extension_of_fixedSupport
+#print axioms fullWeil_fixedSupport_completion
 #print axioms fullWeil_fixedSupport_grid_density
 #print axioms fullWeil_channel_continuity
 #print axioms grid_dense_extension

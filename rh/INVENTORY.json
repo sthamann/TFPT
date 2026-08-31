@@ -4516,6 +4516,36 @@
       "bytes": 392173
     },
     {
+      "path": "rh/problem/outer_bridges2.tex",
+      "role": "problem_statement",
+      "round": "r489",
+      "ledger_ids": [],
+      "status": "outer bridges fixed-support channel reduction (round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; experiments-side structural seal, NO ledger row): VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence on a common fixed support plus L1; the autocorrelation witness is compactly supported in L2.  Common-anchor finite comb continuity and the bounded-cosh standard polar integral continuity are proved.  The remaining density package is the transparent conjunction of dyadic L2 step/autocorrelation density, r475 u-space arch continuity, and the r376 native-grid pole integral dictionary.  Smoke 12/12, SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census 9 -> 8 (external 4 -> 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "3d8a919f7461bfa68134820b322aea4f8294959c1972baf9756dbaaaa8554ad6",
+      "bytes": 4476
+    },
+    {
+      "path": "rh/problem/verify_outer_bridges2.py",
+      "role": "problem_check",
+      "round": "r489 companion",
+      "ledger_ids": [],
+      "status": "machine check of r489 outer bridges: uniform fixed-support topology, compact L2 witness, comb and polar-integral continuity, one dense completion sorry, structural smoke.  6/6 gates, final line OUTER BRIDGES 2 VERIFIED",
+      "pin": true,
+      "sha256": "4dbba1bb7ee41fc9f414f5a251291760590fd45782ed4c46cea4bc2ddce4ee9f",
+      "bytes": 2060
+    },
+    {
+      "path": "rh/problem/outer_bridges2.pdf",
+      "role": "problem_statement",
+      "round": "r489",
+      "ledger_ids": [],
+      "status": "compiled PDF of outer_bridges2.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "6acf3cec59d31a36e9533b21c101c3a2d2bdbcdfb08dd2843ae3e5810050b44e",
+      "bytes": 212327
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -5560,8 +5590,8 @@
       "ledger_ids": [],
       "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "45b4931aadc42caf9f849a0f93169ad42a80d07110a519ce183a63204f622c72",
-      "bytes": 6984
+      "sha256": "d7e3f26f31c0feab5a476d69ec2efcb936cf168d044c9927366e7bf46255efd9",
+      "bytes": 7046
     },
     {
       "path": "experiments/tfpt-discovery/inner_bridges_probe.py",
@@ -5760,8 +5790,8 @@
       "ledger_ids": [],
       "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
-      "sha256": "7022f59d53381f95d818b3ee701e4aa96c0ace34a95f2682d7648ee5c8fb0f07",
-      "bytes": 4814
+      "sha256": "b26fab0dfb4ad73fbf7cbf4fa2581a679a20a3c1b2d7562da17188166652074a",
+      "bytes": 4874
     },
     {
       "path": "experiments/tfpt-discovery/resolvent_solve_probe.py",
@@ -5772,6 +5802,16 @@
       "pin": true,
       "sha256": "1fd339f9c04610a1ca54ef4384ad27468b56f6354c51db4564f3d867c91ce49b",
       "bytes": 10111
+    },
+    {
+      "path": "experiments/tfpt-discovery/outer_bridges2_probe.py",
+      "role": "sealed_probe",
+      "round": "r489",
+      "ledger_ids": [],
+      "status": "outer bridges fixed-support channel reduction (round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; experiments-side structural seal, NO ledger row): VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence on a common fixed support plus L1; the autocorrelation witness is compactly supported in L2.  Common-anchor finite comb continuity and the bounded-cosh standard polar integral continuity are proved.  The remaining density package is the transparent conjunction of dyadic L2 step/autocorrelation density, r475 u-space arch continuity, and the r376 native-grid pole integral dictionary.  Smoke 12/12, SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census 9 -> 8 (external 4 -> 3).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "192e3bf61ebe7b867590cac50bb9546701aefe1420b1a63237a24dfcdc0c1b45",
+      "bytes": 4190
     }
   ]
 }

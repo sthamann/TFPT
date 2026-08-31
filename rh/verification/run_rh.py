@@ -262,6 +262,7 @@ PROBES = [
     ("r486", "woodbury_minf_probe.py"),
     ("r487", "outer_bridges_probe.py"),
     ("r488", "resolvent_solve_probe.py"),
+    ("r489", "outer_bridges2_probe.py"),
 ]
 
 MODULES = [

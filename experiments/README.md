@@ -1146,6 +1146,15 @@ research documentation only and makes no RH claim.
 python experiments/tfpt-discovery/outer_bridges_probe.py --smoke
 ```
 
+`tfpt-discovery/outer_bridges2_probe.py` seals the r489 continuation:
+uniform-plus-`L¹` fixed-support topology, compact `L²`
+autocorrelation witness, sorry-free finite-comb and standard polar
+integral continuity, and one remaining dense-completion package.
+
+```bash
+python experiments/tfpt-discovery/outer_bridges2_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen

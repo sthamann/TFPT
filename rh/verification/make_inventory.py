@@ -2811,6 +2811,24 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R489_STATUS = (
+    "outer bridges fixed-support channel reduction "
+    "(round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; "
+    "experiments-side structural seal, NO ledger row): "
+    "VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / "
+    "DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence "
+    "on a common fixed support plus L1; the autocorrelation witness "
+    "is compactly supported in L2.  Common-anchor finite comb "
+    "continuity and the bounded-cosh standard polar integral "
+    "continuity are proved.  The remaining density package is the "
+    "transparent conjunction of dyadic L2 step/autocorrelation "
+    "density, r475 u-space arch continuity, and the r376 native-grid "
+    "pole integral dictionary.  Smoke 12/12, "
+    "SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census "
+    "9 -> 8 (external 4 -> 3).  NO L* claim, NO R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
 _R488_STATUS = (
     "classical Weil resolvent solve at L=0.3 "
     "(round 488, PRIME.RDAGGER.RESOLVENT_SOLVE.01; "
@@ -6984,6 +7002,25 @@ ENTRIES = [
      "compiled PDF of resolvent_solve.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/outer_bridges2.tex", "problem_statement",
+     "r489",
+     [],
+     _R489_STATUS,
+     True),
+    ("rh/problem/verify_outer_bridges2.py", "problem_check",
+     "r489 companion",
+     [],
+     "machine check of r489 outer bridges: uniform fixed-support "
+     "topology, compact L2 witness, comb and polar-integral continuity, "
+     "one dense completion sorry, structural smoke.  6/6 gates, final "
+     "line OUTER BRIDGES 2 VERIFIED",
+     True),
+    ("rh/problem/outer_bridges2.pdf", "problem_statement",
+     "r489",
+     [],
+     "compiled PDF of outer_bridges2.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7589,6 +7626,11 @@ ENTRIES = [
      "r488",
      [],
      _R488_STATUS,
+     True),
+    (f"{EXP}/outer_bridges2_probe.py", "sealed_probe",
+     "r489",
+     [],
+     _R489_STATUS,
      True),
 ]
 

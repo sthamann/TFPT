@@ -71,8 +71,10 @@ def main() -> int:
               "FullWeilChannelContinuity")))
     check("three-channel-form-visible",
           all(token in external for token in (
-              "opaque fullWeilArchSide", "opaque fullWeilCombSide",
-              "opaque fullWeilPoleSide", "noncomputable def fullWeilForm")))
+              "opaque fullWeilArchSide",
+              "noncomputable def fullWeilCombSide",
+              "noncomputable def fullWeilPoleSide",
+              "noncomputable def fullWeilForm")))
     check("limit-algebra-proved",
           all(token in external for token in (
               "theorem fullWeilForm_tendsto_of_channels",
@@ -102,9 +104,9 @@ def main() -> int:
 
     census = sorry_census()
     external_sorries = [row for row in census if row[0] == "ExternalBridges.lean"]
-    check("external-sorry-census-4", len(external_sorries) == 4,
+    check("r489-external-sorry-census-3", len(external_sorries) == 3,
           ", ".join(f"{name}:{line}" for name, line in external_sorries))
-    check("project-sorry-census-9", len(census) == 9,
+    check("r489-project-sorry-census-8", len(census) == 8,
           ", ".join(f"{name}:{line}" for name, line in census))
 
     failed = [name for name, ok in CHECKS if not ok]

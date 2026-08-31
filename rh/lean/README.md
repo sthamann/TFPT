@@ -120,6 +120,16 @@
 > The old density `sorry` split in two, so census **8 → 9**.
 > NO RH CLAIM.
 >
+> **r489 outer bridges 2:** the fixed-support topology is strengthened
+> to uniform convergence plus `L¹`, and the autocorrelation witness is
+> compactly supported in `L²`.  `fullWeilCombSide_tendsto` and
+> `fullWeilPoleIntegral_tendsto` are proved.  The existing r376
+> native-grid pole/integral dictionary, dyadic `L²` step density, and
+> r475 u-space arch continuity are separately named components of the
+> sole dense remainder `FullWeilFixedSupportCompletion`.  Public grid
+> density, channel continuity and positivity transfer are derived from
+> that one package.  Census **9 → 8**. NO RH CLAIM.
+>
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
 > bridge never bound `u`/`B` vs `terminal_positive_main`; U2: mesh-width
@@ -988,8 +998,8 @@ Loewner identities and the density / mean-value lemmas do not.
 | `frequently_of_pos_lower_density` | **proved** | density `≥ ε > 0` eventually ⇒ frequently |
 | `exists_index_zero_of_block_mean_lt_one` | **proved** | `κ : ℕ → ℕ`, block mean `< 1` ⇒ a zero in the block |
 
-Zero `sorry` in this file.  Repository census is 9 after r487
-(four external bridge sorries in `RH/ExternalBridges.lean`).
+Zero `sorry` in this file.  Repository census is 8 after r489
+(three external bridge sorries in `RH/ExternalBridges.lean`).
 
 **r440 mean tau index (no new Lean).**  T1/T2/MI2 are
 finite identities, machine-checked in
@@ -1089,10 +1099,9 @@ on the extraction shows `sorryAx` only through
 | `GraphResolventIsLEnsembleInv` | — | named, **OFF PATH** (graph-resolvent face, not consumed by FREQ) |
 
 The three arrows beyond this internal endpoint are explicit in
-`RH/ExternalBridges.lean`.  r487 splits density into two sorries
-(`fullWeil_fixedSupport_grid_density`,
-`fullWeil_channel_continuity`) and proves its limit wrapper; explicit
-formula normalization remains
+`RH/ExternalBridges.lean`.  r489 reduces density and all channel
+continuity to the sole typed completion
+`FullWeilFixedSupportCompletion`; explicit formula normalization remains
 `standard_explicit_formula_identification`; the Mathlib endpoint is
 a proved wrapper around `fullWeil_separates_offCritical_zeros`.
 

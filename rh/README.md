@@ -7028,6 +7028,19 @@ Not $\lambda_*(0.3)\ge c$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 
+**Outer bridges II (r489,
+PRIME.RDAGGER.OUTER\_BRIDGES.02).**
+Structural probe `experiments/tfpt-discovery/outer_bridges2_probe.py`
+(smoke 12/12, SPEC\_SHA `9952567c0a594287`) plus
+`rh/problem/outer_bridges2.tex` (+ PDF +
+`verify_outer_bridges2.py`, 6/6, `OUTER BRIDGES 2 VERIFIED`).
+**Regime COMB\_CLOSED / POLAR\_INTEGRAL\_CLOSED /
+DENSE\_COMPLETION\_ONE\_SORRY.**  The topology is uniform on a
+common fixed support plus L1; the witness is compactly supported in
+L2.  Common-anchor finite-comb and bounded-cosh polar-integral
+continuity are proved.  Census **9 → 8**.  Experiments-side structural
+seal, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7154,11 +7167,11 @@ rh/
 │       │                    density, grid fold, sign split; k=5/9/10
 │       │                    pins match lean_fidelity_probe).  Zero sorry;
 │       │                    NO RH CLAIM
-│       ├── ExternalBridges.lean — r463/r487: outer-bridge lane;
-│       │                    fixed-support Grid density + channel
-│       │                    continuity split; positivity-limit and
-│       │                    Mathlib endpoint wrappers proved.
-│       │                    Four external sorries; census 9.
+│       ├── ExternalBridges.lean — r463/r487/r489 outer bridges;
+│       │                    uniform+L1 fixed-support topology; comb
+│       │                    and standard polar continuity proved;
+│       │                    one dense completion sorry remains.
+│       │                    Three external sorries; census 8.
 │       │                    NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
@@ -8789,6 +8802,13 @@ the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r489 coexistence.** Round 489 (`outer_bridges2_probe.py`) closes
+finite-comb and standard polar-integral continuity and reduces the
+dense bridge to one completion sorry.  File domain is
+`RH/ExternalBridges.lean`, `RH/Audit.lean`, `RH/Open.lean`, Lean and
+RH READMEs, the probe, `outer_bridges2.tex`, verifier, INVENTORY, and
+`run_rh.py`.  It does not touch `experiments/next.txt`.
+Suite surface: integrity + probes + Lean (`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

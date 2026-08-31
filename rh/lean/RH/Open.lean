@@ -390,6 +390,27 @@ ready Guinand--Weil theorem, but does provide `MellinTransform`,
 `MellinInversion`, and `MellinEqDirichlet`.  Census 8 -> 9 because
 the old dense-extension sorry was honestly split in two.  NO RH CLAIM.
 
+## r489 census (outer bridges 2)
+
+The bridge topology is now uniform convergence on the common fixed
+support plus `L¹`; the autocorrelation witness is explicitly compactly
+supported in `L²`.  PROVED:
+
+  * global pointwise convergence from the support-uniform topology;
+  * common finite-anchor reduction and comb-channel continuity;
+  * continuity of the standard polar integral
+    `∫ -2 cosh(u/2) g(u) du`.
+
+The r376 native-mesh pole read is not definitionally that integral.
+Its finite-element identity is named
+`GridPoleIntegralIdentification`.  Together with dyadic `L²` step
+density/autocorrelation convergence and r475 u-space arch continuity,
+it is one transparent conjunction
+`FullWeilFixedSupportCompletion`, carrying the only dense-bridge
+`sorry`.  Public density, channel-continuity, and positivity wrappers
+are derived from it.  External sorries 4 -> 3; repository census
+9 -> 8.  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
