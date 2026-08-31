@@ -467,8 +467,11 @@ r517: `ĥ` entire, filled remainder on `Q_T`,
 r518: ĥ-decay on compact Re
 (`norm_hat_le_inv_sq_on_contour`), Dirichlet
 at Re ≥ 5/4, Lücken-Lemma
-(`exists_gap_height`).  Landau / left-edge /
-T→∞ remain named Props.  Census stays 7.
+(`exists_gap_height`).
+r519: Mathlib Borel–Carathéodory wrapped to
+general balls; `logDeriv` primitive +
+`norm_logDeriv_le_of_log_norm_le`.  Landau
+assembly remains a named Prop.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -617,6 +620,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms card_window_zeros_unit
 #print axioms exists_gap_height
 #print axioms exists_gap_sequence
+#print axioms borelCaratheodory_ball
+#print axioms borelCaratheodory_ball_zero
+#print axioms borelCaratheodory_closedBall_zero
+#print axioms exists_logDeriv_primitive
+#print axioms re_logDeriv_primitive_eq
+#print axioms norm_logDeriv_le_of_log_norm_le
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -54,6 +54,8 @@ import Mathlib.Analysis.SpecificLimits.Normed
 import Mathlib.Topology.Algebra.InfiniteSum.ENNReal
 import Mathlib.Analysis.SpecialFunctions.Integrals.Basic
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
+import Mathlib.Analysis.Complex.BorelCaratheodory
+import Mathlib.Analysis.Complex.HasPrimitives
 
 namespace RH
 
@@ -8187,6 +8189,241 @@ lemma exists_gap_sequence :
     exists_gap_height ((2 * k + 1 : ℕ) : ℝ) (hN k)
   exact ⟨T, fun k => ⟨(hT k).1, (hT k).2.1⟩,
     fun k z hz hlo hhi => (hT k).2.2 z hz hlo hhi⟩
+
+lemma borelCaratheodory_ball {f : ℂ → ℂ} {c : ℂ} {M R : ℝ} {z : ℂ}
+    (hM : 0 < M) (hR : 0 < R)
+    (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hRe : ∀ w ∈ Metric.ball c R, (f w).re ≤ M)
+    (hz : z ∈ Metric.ball c R) :
+    ‖f z‖ ≤
+      2 * M * ‖z - c‖ / (R - ‖z - c‖) +
+        ‖f c‖ * (R + ‖z - c‖) / (R - ‖z - c‖) := by
+  set g : ℂ → ℂ := fun w => f (w + c)
+  have hmaps : MapsTo (fun w : ℂ => w + c) (Metric.ball (0 : ℂ) R)
+      (Metric.ball c R) := by
+    intro w hw
+    simp only [Metric.mem_ball, dist_eq_norm, add_sub_cancel_right, sub_zero] at hw ⊢
+    exact hw
+  have hg : DifferentiableOn ℂ g (Metric.ball (0 : ℂ) R) :=
+    hf.comp (differentiableOn_id.add (differentiableOn_const c)) hmaps
+  have hRe' : MapsTo g (Metric.ball (0 : ℂ) R) {w : ℂ | w.re ≤ M} := by
+    intro w hw
+    exact hRe (w + c) (hmaps hw)
+  have hz' : z - c ∈ Metric.ball (0 : ℂ) R := by
+    simpa [Metric.mem_ball, dist_eq_norm] using hz
+  have hbc := Complex.borelCaratheodory hM hg hRe' hR hz'
+  have hg0 : g 0 = f c := by simp [g]
+  have hgz : g (z - c) = f z := by simp [g, sub_add_cancel]
+  simpa [hg0, hgz, dist_eq_norm] using hbc
+
+lemma borelCaratheodory_ball_zero {f : ℂ → ℂ} {c : ℂ} {M R : ℝ} {z : ℂ}
+    (hM : 0 < M) (hR : 0 < R)
+    (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hRe : ∀ w ∈ Metric.ball c R, (f w).re ≤ M)
+    (hf0 : f c = 0) (hz : z ∈ Metric.ball c R) :
+    ‖f z‖ ≤ 2 * M * ‖z - c‖ / (R - ‖z - c‖) := by
+  have h := borelCaratheodory_ball hM hR hf hRe hz
+  simpa [hf0] using h
+
+lemma borelCaratheodory_closedBall_zero {f : ℂ → ℂ} {c : ℂ} {M R r : ℝ}
+    {z : ℂ} (hM : 0 < M) (hR : 0 < R) (hr : 0 ≤ r) (hrR : r < R)
+    (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hRe : ∀ w ∈ Metric.ball c R, (f w).re ≤ M)
+    (hf0 : f c = 0) (hz : z ∈ Metric.closedBall c r) :
+    ‖f z‖ ≤ 2 * M * r / (R - r) := by
+  have hzR : z ∈ Metric.ball c R :=
+    (Metric.closedBall_subset_ball hrR) hz
+  have h0 := borelCaratheodory_ball_zero hM hR hf hRe hf0 hzR
+  have hnc : ‖z - c‖ ≤ r := by
+    simpa [Metric.mem_closedBall, dist_eq_norm] using hz
+  have hmono : 2 * M * ‖z - c‖ / (R - ‖z - c‖) ≤ 2 * M * r / (R - r) := by
+    have hnum : 0 ≤ 2 * M := by positivity
+    have hdenpos : 0 < R - r := sub_pos.mpr hrR
+    have hle : ‖z - c‖ / (R - ‖z - c‖) ≤ r / (R - r) := by
+      have hzn : 0 ≤ ‖z - c‖ := norm_nonneg _
+      have hzr : ‖z - c‖ < R := by
+        simpa [Metric.mem_ball, dist_eq_norm] using hzR
+      have h1 : 0 < R - ‖z - c‖ := sub_pos.mpr hzr
+      rw [div_le_div_iff₀ h1 hdenpos]
+      nlinarith [hzn, hr]
+    simpa [mul_div_assoc] using (mul_le_mul_of_nonneg_left hle hnum)
+  exact h0.trans hmono
+
+lemma differentiableOn_logDeriv_of_ne {f : ℂ → ℂ} {s : Set ℂ}
+    (hs : IsOpen s) (hf : DifferentiableOn ℂ f s)
+    (hne : ∀ z ∈ s, f z ≠ 0) :
+    DifferentiableOn ℂ (logDeriv f) s := by
+  intro z hz
+  have hdf : DifferentiableAt ℂ f z :=
+    hf.differentiableAt (hs.mem_nhds hz)
+  have hder : DifferentiableAt ℂ (deriv f) z :=
+    (hf.deriv hs z hz).differentiableAt (hs.mem_nhds hz)
+  exact (hder.div hdf (hne z hz)).differentiableWithinAt
+
+lemma exists_logDeriv_primitive {f : ℂ → ℂ} {c : ℂ} {R : ℝ}
+    (_hR : 0 < R) (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hne : ∀ z ∈ Metric.ball c R, f z ≠ 0) :
+    ∃ h : ℂ → ℂ, h c = 0 ∧
+      ∀ z ∈ Metric.ball c R, HasDerivAt h (logDeriv f z) z := by
+  have hld : DifferentiableOn ℂ (logDeriv f) (Metric.ball c R) :=
+    differentiableOn_logDeriv_of_ne Metric.isOpen_ball hf hne
+  exact hld.isExactOn_ball.with_val_at c 0
+
+lemma hasDerivAt_exp_div {f h : ℂ → ℂ} {z : ℂ}
+    (hh : HasDerivAt h (logDeriv f z) z)
+    (hf : DifferentiableAt ℂ f z) (hfz : f z ≠ 0) :
+    HasDerivAt (fun w => Complex.exp (h w) / f w) 0 z := by
+  have hexp : HasDerivAt (fun w => Complex.exp (h w))
+      (Complex.exp (h z) * logDeriv f z) z :=
+    hh.cexp
+  have hdiv := hexp.div hf.hasDerivAt hfz
+  have hval :
+      (Complex.exp (h z) * logDeriv f z * f z -
+        Complex.exp (h z) * deriv f z) / f z ^ 2 = 0 := by
+    rw [logDeriv_apply]
+    field_simp [hfz]
+    ring
+  exact hval ▸ hdiv
+
+lemma re_logDeriv_primitive_eq {f h : ℂ → ℂ} {c : ℂ} {R : ℝ}
+    (hR : 0 < R) (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hne : ∀ z ∈ Metric.ball c R, f z ≠ 0)
+    (hh0 : h c = 0)
+    (hh : ∀ z ∈ Metric.ball c R, HasDerivAt h (logDeriv f z) z)
+    {z : ℂ} (hz : z ∈ Metric.ball c R) :
+    (h z).re = Real.log ‖f z‖ - Real.log ‖f c‖ := by
+  have hc : c ∈ Metric.ball c R := Metric.mem_ball_self hR
+  have hF : DifferentiableOn ℂ (fun w => Complex.exp (h w) / f w)
+      (Metric.ball c R) := by
+    intro w hw
+    have hfw : DifferentiableAt ℂ f w :=
+      hf.differentiableAt (Metric.isOpen_ball.mem_nhds hw)
+    exact (hasDerivAt_exp_div (hh w hw) hfw (hne w hw)).differentiableAt.differentiableWithinAt
+  have hder0 : EqOn (deriv (fun w => Complex.exp (h w) / f w)) 0
+      (Metric.ball c R) := by
+    intro w hw
+    have hfw : DifferentiableAt ℂ f w :=
+      hf.differentiableAt (Metric.isOpen_ball.mem_nhds hw)
+    exact (hasDerivAt_exp_div (hh w hw) hfw (hne w hw)).deriv
+  have hconst :=
+    Metric.isOpen_ball.is_const_of_deriv_eq_zero Metric.isPreconnected_ball hF hder0 hz hc
+  have hval : Complex.exp (h z) / f z = Complex.exp (h c) / f c := hconst
+  have hexp0 : Complex.exp (h c) = 1 := by simp [hh0]
+  have hratio : Complex.exp (h z) / f z = 1 / f c := by
+    simpa [hexp0] using hval
+  have hne0 : f c ≠ 0 := hne c hc
+  have hnez : f z ≠ 0 := hne z hz
+  have heq : Complex.exp (h z) = f z / f c := by
+    have hratio' : Complex.exp (h z) / f z = (f c)⁻¹ := by
+      simpa using hratio
+    rw [div_eq_iff hnez] at hratio'
+    have hmul : Complex.exp (h z) * f c = f z := by
+      rw [hratio']
+      calc
+        (f c)⁻¹ * f z * f c = (f c)⁻¹ * f c * f z := by ring
+        _ = f z := by rw [inv_mul_cancel₀ hne0, one_mul]
+    exact (eq_div_iff_mul_eq hne0).mpr hmul
+  have hn : ‖Complex.exp (h z)‖ = ‖f z‖ / ‖f c‖ := by
+    rw [heq, norm_div]
+  have hfcpos : 0 < ‖f c‖ := norm_pos_iff.mpr hne0
+  have hfzpos : 0 < ‖f z‖ := norm_pos_iff.mpr (hne z hz)
+  have : Real.exp (h z).re = ‖f z‖ / ‖f c‖ := by
+    simpa [Complex.norm_exp] using hn
+  have hlog : (h z).re = Real.log (‖f z‖ / ‖f c‖) := by
+    apply Real.exp_injective
+    rw [Real.exp_log (div_pos hfzpos hfcpos), this]
+  rwa [Real.log_div hfzpos.ne' hfcpos.ne'] at hlog
+
+lemma norm_logDeriv_le_of_log_norm_le {f : ℂ → ℂ} {c : ℂ} {M R r : ℝ}
+    (hR : 0 < R) (hr : 0 < r) (hrR : r < R)
+    (hf : DifferentiableOn ℂ f (Metric.ball c R))
+    (hne : ∀ z ∈ Metric.ball c R, f z ≠ 0)
+    (hlog : ∀ z ∈ Metric.ball c R, Real.log ‖f z‖ ≤ M)
+    {z : ℂ} (hz : z ∈ Metric.closedBall c r) :
+    ‖logDeriv f z‖ ≤
+      4 * max (M - Real.log ‖f c‖) (1 : ℝ) * (R + r) / (R - r) ^ 2 := by
+  obtain ⟨h, hh0, hh⟩ := exists_logDeriv_primitive hR hf hne
+  have hzR : z ∈ Metric.ball c R :=
+    (Metric.closedBall_subset_ball hrR) hz
+  have hc : c ∈ Metric.ball c R := Metric.mem_ball_self hR
+  have hdh : DifferentiableOn ℂ h (Metric.ball c R) :=
+    fun w hw => (hh w hw).differentiableAt.differentiableWithinAt
+  have hRe : ∀ w ∈ Metric.ball c R, (h w).re ≤ max (M - Real.log ‖f c‖) (1 : ℝ) := by
+    intro w hw
+    have hre := re_logDeriv_primitive_eq hR hf hne hh0 hh hw
+    have : (h w).re ≤ M - Real.log ‖f c‖ := by
+      rw [hre]
+      linarith [hlog w hw]
+    exact this.trans (le_max_left _ _)
+  set K : ℝ := max (M - Real.log ‖f c‖) (1 : ℝ)
+  have hK : 0 < K := lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) (le_max_right _ _)
+  set δ : ℝ := (R - r) / 2
+  have hδpos : 0 < δ := by
+    have : 0 < R - r := sub_pos.mpr hrR
+    positivity
+  have hcl : Metric.closedBall z δ ⊆ Metric.ball c R := by
+    intro w hw
+    have htri : dist w c ≤ dist w z + dist z c := dist_triangle w z c
+    have hwz : dist w z ≤ δ := Metric.mem_closedBall.mp hw
+    have hzc : dist z c ≤ r := Metric.mem_closedBall.mp hz
+    have hsum : dist w c ≤ δ + r := le_trans htri (add_le_add hwz hzc)
+    have hδr : δ + r = (R + r) / 2 := by
+      unfold δ
+      ring
+    have hlt : (R + r) / 2 < R := by
+      have : r < R := hrR
+      linarith
+    exact (hsum.trans_eq hδr).trans_lt hlt
+  have hsub : Metric.ball z δ ⊆ Metric.ball c R :=
+    (Metric.ball_subset_closedBall).trans hcl
+  have hcl' : closure (Metric.ball z δ) ⊆ Metric.ball c R :=
+    Metric.closure_ball_subset_closedBall.trans hcl
+  have hdc : DiffContOnCl ℂ h (Metric.ball z δ) :=
+    ⟨hdh.mono hsub, hdh.continuousOn.mono hcl'⟩
+  have hC : ∀ w ∈ Metric.sphere z δ, ‖h w‖ ≤
+      2 * K * (R + r) / (R - r) := by
+    intro w hw
+    have hwR : w ∈ Metric.ball c R := hcl (Metric.sphere_subset_closedBall hw)
+    have hbc := borelCaratheodory_ball_zero hK hR hdh hRe hh0 hwR
+    have hwc : ‖w - c‖ ≤ r + δ := by
+      have h1 : dist w z = δ := Metric.mem_sphere.mp hw
+      have h2 : dist z c ≤ r := Metric.mem_closedBall.mp hz
+      have : dist w c ≤ δ + r :=
+        (dist_triangle w z c).trans (add_le_add (le_of_eq h1) h2)
+      simpa [dist_eq_norm, add_comm] using this
+    have hwcR : ‖w - c‖ < R := by
+      simpa [Metric.mem_ball, dist_eq_norm] using hwR
+    have hmono : 2 * K * ‖w - c‖ / (R - ‖w - c‖) ≤ 2 * K * (r + δ) / (R - (r + δ)) := by
+      have hnum : 0 ≤ 2 * K := by positivity
+      have hden1 : 0 < R - ‖w - c‖ := sub_pos.mpr hwcR
+      have hrd : r + δ = (R + r) / 2 := by unfold δ; ring
+      have hden2 : 0 < R - (r + δ) := by
+        rw [hrd]; linarith
+      have hfrac : ‖w - c‖ / (R - ‖w - c‖) ≤ (r + δ) / (R - (r + δ)) := by
+        rw [div_le_div_iff₀ hden1 hden2]
+        nlinarith [norm_nonneg (w - c), hwc]
+      simpa [mul_div_assoc] using mul_le_mul_of_nonneg_left hfrac hnum
+    have hsimp : 2 * K * (r + δ) / (R - (r + δ)) = 2 * K * (R + r) / (R - r) := by
+      unfold δ
+      field_simp
+      ring
+    exact (hbc.trans hmono).trans_eq hsimp
+  have hcauchy :=
+    Complex.norm_deriv_le_of_forall_mem_sphere_norm_le hδpos hdc hC
+  have hder : deriv h z = logDeriv f z := (hh z hzR).deriv
+  have hδeq : δ = (R - r) / 2 := rfl
+  have hbound :
+      2 * K * (R + r) / (R - r) / δ =
+        4 * K * (R + r) / (R - r) ^ 2 := by
+    unfold δ
+    field_simp
+    ring
+  rw [hder] at hcauchy
+  refine hcauchy.trans ?_
+  have : (2 * K * (R + r) / (R - r)) / δ ≤
+      4 * K * (R + r) / (R - r) ^ 2 := le_of_eq hbound
+  simpa [div_eq_mul_inv] using this
+
 
 /-- Classical Landau / Borel–Carathéodory local splitting
 `ζ'/ζ(s) = Σ_{|ρ-s|≤1} m_ρ/(s-ρ) + O(log T)` on a gap edge

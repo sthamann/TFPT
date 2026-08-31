@@ -1097,6 +1097,22 @@ left vertical, T→∞ of
 `contour_identity_fixed_T`.  Census stays 7
 (external 2).  NO RH CLAIM.
 
+## r519 census (outer bridges 26, [2d] Landau kernel)
+
+Mathlib already carries `Complex.borelCaratheodory`
+(v4.29+ local pin).  PROVED, sorry-free: the
+general-center wrappers `borelCaratheodory_ball`,
+`_ball_zero`, `_closedBall_zero`; a holomorphic
+log on a zero-free disk via
+`DifferentiableOn.isExactOn_ball` (the primitive
+`h` of `f'/f`, no branch); `Re h = log‖f‖ − log‖f(c)‖`;
+and the Cauchy–BC bound
+`norm_logDeriv_le_of_log_norm_le`.
+`HorizontalEdgeLandauBound` stays a named Prop:
+the ζ-assembly (`g = F/Π`, r510 on Re>δ, gap
+sum `O(log² T)`) is the next cut.  Census stays 7
+(external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
