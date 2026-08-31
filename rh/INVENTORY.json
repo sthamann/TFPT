@@ -3896,6 +3896,36 @@
       "bytes": 226291
     },
     {
+      "path": "rh/problem/overlap_mechanism.tex",
+      "role": "problem_statement",
+      "round": "r467 companion",
+      "ledger_ids": [],
+      "status": "lemma-first overlap mechanism (round 467): STUCK(QUALITATIVE_ALIGNMENT_REAL; ABEL_CURRENCY_TOO_COARSE; SOURCE_TO_BORDER_BASIS_BRIDGE_MISSING).  NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "e658836ea9da579c1561663b9dda4e2a266779b32b29ff8b010d7125231616d4",
+      "bytes": 16133
+    },
+    {
+      "path": "rh/problem/verify_overlap_mechanism.py",
+      "role": "problem_check",
+      "round": "r467 companion",
+      "ledger_ids": [],
+      "status": "machine check of every numbered lemma in overlap_mechanism.tex: standalone (verdicts, Abel lemma, anatomy, stop gate) plus construction pins (k=5..12 top modes, band factors).  9/9 gates, final line OVERLAP MECHANISM NOTE VERIFIED -- VERDICT STUCK",
+      "pin": true,
+      "sha256": "3bff8a49435a77fa6585476575146d5d2ed013cc1b6ec5c4e36425ddbd04a2df",
+      "bytes": 4985
+    },
+    {
+      "path": "rh/problem/overlap_mechanism.pdf",
+      "role": "problem_statement",
+      "round": "r467 companion",
+      "ledger_ids": [],
+      "status": "compiled PDF of overlap_mechanism.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "ab1aef8831c3d80cf20db11eb7072c26bd40081f4f5f6c58e3491b5e0f9135db",
+      "bytes": 243302
+    },
+    {
       "path": "rh/problem/octave_renorm.tex",
       "role": "problem_statement",
       "round": "r468 companion",
@@ -4100,8 +4130,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "35db63ed796c2ded01fcd534325c774b52e83b386dee3ebd99a6fea5d92b8369",
-      "bytes": 5561262
+      "sha256": "5dc5e7249d2cc952d2012f52a2a27d10161739b500b91fbe301f9bb32878718d",
+      "bytes": 5564938
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -4982,6 +5012,16 @@
       "pin": true,
       "sha256": "857854cdf837da25739599fef497e92899a43916b8119ca5a1284e42117ba199",
       "bytes": 4894
+    },
+    {
+      "path": "experiments/tfpt-discovery/overlap_mechanism_probe.py",
+      "role": "sealed_probe",
+      "round": "r467",
+      "ledger_ids": [],
+      "status": "overlap mechanism probe (round 467, PRIME.RDAGGER.OVERLAP_MECHANISM.01; experiments-side, NO ledger row): VERDICT STUCK(QUALITATIVE_ALIGNMENT_REAL; ABEL_CURRENCY_TOO_COARSE; SOURCE_TO_BORDER_BASIS_BRIDGE_MISSING).  Qualitative alignment is real (top MAIN modes low-frequency, corr +0.745, ARCH aligns, scramble destroys tiny MAIN alignment), but even measured exact U_r give Abel band factors 91.7..1.19e5 and the >1e3 stop gate fires on k=7..12.  u is the smooth-border functional after the MAIN OP basis change, not the raw prime-lag vector.  Smoke 17/17, SPEC_SHA 7ec07cccc7372ba9, commit a0e9aa4d.  Companion rh/problem/overlap_mechanism.tex + verify_overlap_mechanism.py OVERLAP MECHANISM NOTE VERIFIED -- VERDICT STUCK.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "5a8bb14663da596468485b41fe3bc354cbbf012073181f3abd6de565d5e439cf",
+      "bytes": 21275
     },
     {
       "path": "experiments/tfpt-discovery/octave_renorm_probe.py",

@@ -2500,6 +2500,29 @@ _R464_STATUS = (
     "NO RH claim, NO anti-RH claim"
 )
 
+_R467_STATUS = (
+    "overlap mechanism probe "
+    "(round 467, PRIME.RDAGGER.OVERLAP_MECHANISM.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT STUCK(QUALITATIVE_ALIGNMENT_REAL; "
+    "ABEL_CURRENCY_TOO_COARSE; "
+    "SOURCE_TO_BORDER_BASIS_BRIDGE_MISSING).  "
+    "Qualitative alignment is real (top MAIN modes "
+    "low-frequency, corr +0.745, ARCH aligns, scramble "
+    "destroys tiny MAIN alignment), but even measured "
+    "exact U_r give Abel band factors 91.7..1.19e5 and "
+    "the >1e3 stop gate fires on k=7..12.  u is the "
+    "smooth-border functional after the MAIN OP basis "
+    "change, not the raw prime-lag vector.  Smoke "
+    "17/17, SPEC_SHA 7ec07cccc7372ba9, commit "
+    "a0e9aa4d.  Companion "
+    "rh/problem/overlap_mechanism.tex + "
+    "verify_overlap_mechanism.py OVERLAP MECHANISM "
+    "NOTE VERIFIED -- VERDICT STUCK.  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R468_STATUS = (
     "octave renormalization "
     "(round 468, PRIME.RDAGGER.OCTAVE_RENORMALIZATION.01; "
@@ -6094,6 +6117,32 @@ ENTRIES = [
      "compiled PDF of race_proof.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/overlap_mechanism.tex", "problem_statement",
+     "r467 companion",
+     [],
+     "lemma-first overlap mechanism (round 467): "
+     "STUCK(QUALITATIVE_ALIGNMENT_REAL; "
+     "ABEL_CURRENCY_TOO_COARSE; "
+     "SOURCE_TO_BORDER_BASIS_BRIDGE_MISSING).  "
+     "NO RH claim, NO anti-RH claim",
+     True),
+    ("rh/problem/verify_overlap_mechanism.py", "problem_check",
+     "r467 companion",
+     [],
+     "machine check of every numbered lemma in "
+     "overlap_mechanism.tex: standalone "
+     "(verdicts, Abel lemma, anatomy, stop "
+     "gate) plus construction pins "
+     "(k=5..12 top modes, band factors).  "
+     "9/9 gates, final line OVERLAP MECHANISM "
+     "NOTE VERIFIED -- VERDICT STUCK",
+     True),
+    ("rh/problem/overlap_mechanism.pdf", "problem_statement",
+     "r467 companion",
+     [],
+     "compiled PDF of overlap_mechanism.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     ("rh/problem/octave_renorm.tex", "problem_statement",
      "r468 companion",
      [],
@@ -6624,6 +6673,11 @@ ENTRIES = [
      "r464",
      [],
      _R464_STATUS,
+     True),
+    (f"{EXP}/overlap_mechanism_probe.py", "sealed_probe",
+     "r467",
+     [],
+     _R467_STATUS,
      True),
     (f"{EXP}/octave_renorm_probe.py", "sealed_probe",
      "r468",
