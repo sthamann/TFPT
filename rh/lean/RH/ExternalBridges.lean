@@ -45,6 +45,9 @@ import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
 import Mathlib.Analysis.Complex.LocallyUniformLimit
 import Mathlib.Analysis.Analytic.Uniqueness
 import Mathlib.Analysis.Complex.Convex
+import Mathlib.Analysis.Complex.JensenFormula
+import Mathlib.MeasureTheory.Integral.CircleAverage
+import Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic
 
 namespace RH
 
@@ -4585,16 +4588,171 @@ lemma norm_riemannZeta_le_of_re_gt {δ : ℝ} (hδ : 0 < δ) {s : ℂ}
     tsum_nonneg fun _ => Real.rpow_nonneg (Nat.cast_nonneg _) _
   nlinarith [norm_nonneg s]
 
-/-- r509 Teil 2 landing site: Jensen counting on disks `D(2+iT, 1.5)`.
-The circle-average identity is Mathlib
-`MeromorphicOn.circleAverage_log_norm`; wiring the poly bound and
-the r506 centre lower bound `|ζ(2+iT)| ≥ 1/|ζ(2)|` is r510. -/
+/-- **r510.** Filling bound without `|s-1| ≥ 1/2`:
+`|(s-1)ζ(s)| = |s - s(s-1)I(s)|` on `Re s > δ`. -/
+lemma norm_riemannZetaMulSubOne_le_of_re_gt {δ : ℝ} (hδ : 0 < δ) {s : ℂ}
+    (hs : δ < s.re) :
+    ‖riemannZetaMulSubOne s‖ ≤
+      ‖s‖ + ‖s‖ * (‖s‖ + 1) *
+        ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+  let C := ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1)
+  have hC : 0 ≤ C :=
+    tsum_nonneg fun _ => Real.rpow_nonneg (Nat.cast_nonneg _) _
+  by_cases h1 : s = 1
+  · subst h1
+    rw [riemannZetaMulSubOne_one, norm_one]
+    nlinarith [norm_nonneg (1 : ℂ)]
+  · have hform :=
+      riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos (lt_trans hδ hs) h1
+    have halg :
+        (s - 1) * (s / (s - 1) - s * zetaFractIntegral s) =
+          s - s * (s - 1) * zetaFractIntegral s := by
+      have hne : s - 1 ≠ 0 := sub_ne_zero.mpr h1
+      field_simp [hne]
+    rw [riemannZetaMulSubOne_apply_of_ne h1, hform, halg]
+    have hI : ‖zetaFractIntegral s‖ ≤ C :=
+      norm_zetaFractIntegral_le_of_re_gt hδ hs
+    refine (norm_sub_le _ _).trans ?_
+    have hright :
+        ‖s * (s - 1) * zetaFractIntegral s‖ ≤ ‖s‖ * (‖s‖ + 1) * C := by
+      have hsm1 : ‖s - 1‖ ≤ ‖s‖ + 1 :=
+        (norm_sub_le s 1).trans (by simp)
+      rw [mul_assoc, norm_mul, norm_mul, mul_assoc]
+      refine mul_le_mul_of_nonneg_left ?_ (norm_nonneg s)
+      exact mul_le_mul hsm1 hI (norm_nonneg _)
+        (add_nonneg (norm_nonneg s) zero_le_one)
+    exact add_le_add le_rfl hright
+
+/-- **r510.** Centre lower bound: `|F(2+iT)| ≥ 1/|ζ(2)|`. -/
+lemma norm_riemannZetaMulSubOne_center_ge (T : ℝ) :
+    ‖riemannZeta 2‖⁻¹ ≤ ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ := by
+  set c := (2 : ℂ) + T * I
+  have hc : c ≠ 1 := by
+    intro h
+    have : c.re = (1 : ℂ).re := congrArg Complex.re h
+    simp [c] at this
+  have hre : (2 : ℝ) ≤ c.re := by simp [c]
+  have hz : riemannZeta c ≠ 0 :=
+    riemannZeta_ne_zero_of_one_lt_re (by simp [c])
+  have hinv : ‖riemannZeta c‖⁻¹ ≤ ‖riemannZeta 2‖ := by
+    simpa [norm_inv] using normInvRiemannZetaLeZetaTwo c hre
+  have hζ2pos : 0 < ‖riemannZeta 2‖ := by
+    rw [norm_riemannZeta_two]; positivity
+  have hζpos : 0 < ‖riemannZeta c‖ := norm_pos_iff.mpr hz
+  have hζ : ‖riemannZeta 2‖⁻¹ ≤ ‖riemannZeta c‖ := by
+    rw [inv_le_iff_one_le_mul₀ hζpos] at hinv
+    exact (inv_le_iff_one_le_mul₀ hζ2pos).mpr (by rwa [mul_comm] at hinv)
+  rw [riemannZetaMulSubOne_apply_of_ne hc, norm_mul]
+  have hfac : (1 : ℝ) ≤ ‖c - 1‖ := by
+    have heq : ‖c - 1‖ = Real.sqrt (1 + T ^ 2) := by
+      rw [Complex.norm_eq_sqrt_sq_add_sq]
+      simp [c, add_re, add_im, sub_re, sub_im, mul_re, mul_im, I_re, I_im]
+      ring_nf
+    rw [heq]
+    exact (Real.le_sqrt (by norm_num) (by positivity)).mpr
+      (by nlinarith [sq_nonneg T])
+  nlinarith [hζ, norm_nonneg (riemannZeta c),
+    inv_nonneg.mpr (norm_nonneg (riemannZeta 2))]
+
+/-- r499 witness restricted to a closed disk. -/
+noncomputable def riemannZetaZerosInClosedDisk (c : ℂ) (r : ℝ) : Finset ℂ :=
+  (finite_riemannZeta_zeros_of_isCompact_ne_one
+    (isCompact_closedBall c |r|)).toFinset
+
+lemma mem_riemannZetaZerosInClosedDisk {c : ℂ} {r : ℝ} {z : ℂ} :
+    z ∈ riemannZetaZerosInClosedDisk c r ↔
+      z ∈ Metric.closedBall c |r| ∧ riemannZeta z = 0 ∧ z ≠ 1 :=
+  Set.Finite.mem_toFinset _
+
+lemma riemannZetaMulSubOne_eq_zero_iff {z : ℂ} :
+    riemannZetaMulSubOne z = 0 ↔ riemannZeta z = 0 ∧ z ≠ 1 := by
+  by_cases h1 : z = 1
+  · subst h1
+    simp [riemannZetaMulSubOne_one]
+  · rw [riemannZetaMulSubOne_apply_of_ne h1, mul_eq_zero]
+    constructor
+    · intro h
+      rcases h with h | h
+      · exact absurd (sub_eq_zero.mp h) h1
+      · exact ⟨h, h1⟩
+    · exact fun h => Or.inr h.1
+
+lemma riemannZetaMulSubOne_meromorphicOrderAt_ne_top (z : ℂ) :
+    meromorphicOrderAt riemannZetaMulSubOne z ≠ ⊤ := by
+  intro htop
+  have hAn := analyticAt_riemannZetaMulSubOne z
+  have hANtop : analyticOrderAt riemannZetaMulSubOne z = ⊤ := by
+    rw [hAn.meromorphicOrderAt_eq] at htop
+    exact ENat.map_eq_top_iff.mp htop
+  have heq : riemannZetaMulSubOne =ᶠ[𝓝 z] 0 :=
+    analyticOrderAt_eq_top.mp hANtop
+  have heqOn :=
+    analyticOnNhd_riemannZetaMulSubOne.eqOn_of_preconnected_of_eventuallyEq
+      analyticOnNhd_const isPreconnected_univ (mem_univ z) heq
+      (mem_univ (2 : ℂ))
+  have h2 : riemannZetaMulSubOne 2 = 0 := heqOn
+  rw [riemannZetaMulSubOne_apply_of_ne (by norm_num : (2 : ℂ) ≠ 1),
+    mul_eq_zero] at h2
+  rcases h2 with h2 | h2
+  · exact (by norm_num : (2 : ℂ) - 1 ≠ 0) h2
+  · exact riemannZeta_ne_zero_of_one_lt_re (by norm_num) h2
+
+lemma riemannZetaMulSubOne_divisor_ge_one_of_zero {z : ℂ}
+    (hz : riemannZetaMulSubOne z = 0) {U : Set ℂ}
+    (hU : MeromorphicOn riemannZetaMulSubOne U) (hzU : z ∈ U) :
+    (1 : ℤ) ≤ MeromorphicOn.divisor riemannZetaMulSubOne U z := by
+  have hAn := analyticAt_riemannZetaMulSubOne z
+  have hAnNe : analyticOrderAt riemannZetaMulSubOne z ≠ ⊤ := by
+    intro htop
+    exact riemannZetaMulSubOne_meromorphicOrderAt_ne_top z (by
+      rw [hAn.meromorphicOrderAt_eq, htop]; simp)
+  obtain ⟨n, hn⟩ := ENat.ne_top_iff_exists.mp hAnNe
+  have hn0 : n ≠ 0 := by
+    intro h0
+    have : analyticOrderAt riemannZetaMulSubOne z = 0 := by
+      rw [← hn]; simp [h0]
+    exact (hAn.analyticOrderAt_eq_zero.mp this) hz
+  rw [MeromorphicOn.divisor_apply hU hzU, hAn.meromorphicOrderAt_eq, ← hn]
+  simp
+  exact Nat.one_le_iff_ne_zero.mpr hn0
+
+noncomputable def zetaFractCellMajorant (δ : ℝ) : ℝ :=
+  ∑' n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-δ - 1)
+
+lemma summable_zetaFractCellMajorant {δ : ℝ} (hδ : 0 < δ) :
+    Summable fun n : ℕ => ((n + 1 : ℕ) : ℝ) ^ (-δ - 1) := by
+  refine (summable_congr fun n => ?_).mp
+    (summable_rpow_neg_succ (p := δ + 1) (by linarith))
+  congr 1
+  ring
+
+lemma zetaFractCellMajorant_nonneg {δ : ℝ} :
+    0 ≤ zetaFractCellMajorant δ :=
+  tsum_nonneg fun _ => Real.rpow_nonneg (Nat.cast_nonneg _) _
+
+set_option maxHeartbeats 800000
+
+/-- Disk form of the r509 landing site. The tall-rectangle
+`C log(2+|T|)` statement was classically too strong (that is `N(T)`).
+Mathlib API: `MeromorphicOn.circleAverage_log_norm` and the
+zero-free case `AnalyticOnNhd.circleAverage_log_norm_of_ne_zero`,
+with averages in the `Real` namespace (`Real.circleAverage`).
+The holomorphic filling `riemannZetaMulSubOne` is the integrand;
+`mono_set` restricts meromorphy to the circle. Card assembly is r511. -/
 def JensenDiskZeroCountBound : Prop :=
   ∃ C : ℝ, 0 < C ∧
-    ∀ T : ℝ, 4 ≤ |T| →
-      (riemannZetaZerosOnClosedRect (2 - (3 / 2 : ℝ)) (2 + 3 / 2)
-          (|T| + 3 / 2)).card ≤
+    ∀ T : ℝ,
+      (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card ≤
         C * Real.log (2 + |T|)
+
+/-- Height-count `N(X) ≲ X log X` on `{1/2 ≤ Re ≤ 7/2}`; needs a
+larger radius or FE-folding before a disk cover works. Named Prop,
+no sorry. -/
+def ZetaZeroCountUpToXBound : Prop :=
+  ∃ C : ℝ, 0 < C ∧
+    ∀ X : ℝ, 2 ≤ X →
+      (riemannZetaZerosOnClosedRect (2 - (3 / 2 : ℝ)) (2 + 3 / 2) X).card ≤
+        C * X * Real.log X
 
 end ZetaEulerMaclaurin
 

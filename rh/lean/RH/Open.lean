@@ -705,7 +705,8 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
           (~3 rounds);
     r508  N=1 EM + `|ζ|` poly on `Re s>1`;
     r509  identity fill + `|ζ|` poly on `Re>δ`;
-    r510  Jensen → `N(R)` on `D(2+iT, 1.5)`;
+    r510  filling bound + centre + Jensen API;
+    r511  disk card via `Real.circleAverage`;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
   matching the original 4--8 band if the strip
@@ -906,6 +907,30 @@ region: `|ζ(s)| ≤ C(δ)(1+|s|)` on
 `MeromorphicOn.circleAverage_log_norm` plus
 the poly bound and the r506 centre lower
 bound `|ζ(2+iT)| ≥ 1/|ζ(2)|` is r510.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r510 census (outer bridges 17, Jensen wiring)
+
+(1) Füllungs-Schranke KOMPLETT, sorry-free:
+`|(s-1)ζ(s)| ≤ |s| + |s|(|s|+1)∑(n+1)^{-δ-1}` on
+`Re s>δ` without `|s-1|≥1/2`
+(`norm_riemannZetaMulSubOne_le_of_re_gt`).
+
+(2) Zentrum-Untergrenze KOMPLETT:
+`|F(2+iT)| ≥ 1/|ζ(2)|`
+(`norm_riemannZetaMulSubOne_center_ge`).
+
+(3) Mathlib-Jensen-Lage: the mean-value form is
+`MeromorphicOn.circleAverage_log_norm`; averages
+live in `namespace Real` (`Real.circleAverage`).
+The zero-free case is
+`AnalyticOnNhd.circleAverage_log_norm_of_ne_zero`.
+Restriction of meromorphy is `MeromorphicOn.mono_set`.
+Disk Finset `riemannZetaZerosInClosedDisk` and
+`F=0 ↔ ζ=0 ∧ z≠1` are in.  Weighted-sum vs card
+assembly is r511.  `JensenDiskZeroCountBound` and
+`ZetaZeroCountUpToXBound` remain named Props
+(no new sorry).
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)

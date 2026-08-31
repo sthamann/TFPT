@@ -438,7 +438,11 @@ and the poly bound there.  r509 fills
 `ζ = s/(s-1) − s·I` to `{Re s>0, s≠1}`
 by Weierstrass + identity theorem, and
 extends the poly bound to `{Re>δ}`.
-Jensen counting remains a named Prop.
+r510 proves the filling bound without `|s-1|≥1/2`
+and the centre lower bound `|F(2+iT)| ≥ 1/|ζ(2)|`.
+Jensen's formula is `Real.circleAverage` plus
+`MeromorphicOn.circleAverage_log_norm`; the disk
+card corollary remains a named Prop.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -543,6 +547,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms riemannZeta_eq_s_div_sub_s_mul_fractIntegral_of_re_pos
 #print axioms norm_zetaFractIntegral_le_of_re_gt
 #print axioms norm_riemannZeta_le_of_re_gt
+#print axioms norm_riemannZetaMulSubOne_le_of_re_gt
+#print axioms norm_riemannZetaMulSubOne_center_ge
+#print axioms riemannZetaMulSubOne_eq_zero_iff
+#print axioms riemannZetaMulSubOne_meromorphicOrderAt_ne_top
+#print axioms riemannZetaMulSubOne_divisor_ge_one_of_zero
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
