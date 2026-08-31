@@ -6931,6 +6931,17 @@ plus `rh/problem/kappa_high.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge0$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Schur certificate (r481,
+PRIME.RDAGGER.SCHUR\_CERTIFICATE.01).**
+Sealed probe
+`experiments/tfpt-discovery/schur_cert_probe.py`
+(smoke 14/14, full 21/21, SPEC\_SHA `c81a0b2490cfb475`)
+plus `rh/problem/schur_cert.tex` (+ PDF +
+`verify_schur_cert.py`, 6/6, `SCHUR_CERT VERIFIED -- REDUCED(interval-FT+IBP-tail)`).
+**Regime REDUCED: $\varepsilon$ lifts; interval FT + IBP tail OPEN.**
+Not $\lambda_*(0.3)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7387,6 +7398,9 @@ rh/
 │   ├── kappa_high.tex(+pdf) — r480: REDUCED
 │   │                     (refined-Schur; crude-kappa_high
 │   │                     killed@0.30); not lambda_*.  No RH claim
+│   ├── schur_cert.tex(+pdf) — r481: REDUCED
+│   │                     (interval-FT+IBP-tail);
+│   │                     not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8592,6 +8606,14 @@ Suite surface: integrity + probes
 kills the r479 operator-norm remainder and reduces
 lambda_*(0.3)>=0 to a refined even matrix Schur
 (not lambda_*).  File domain is the probe, `kappa_high.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
+**r481 coexistence.** Round 481 (`schur_cert_probe.py`)
+lifts epsilon and kills the Fourier/sigma^2 routes;
+the remainder is an oscillatory tail integral
+(not lambda_*).  File domain is the probe, `schur_cert.tex`,
 the verifier, INVENTORY, `run_rh.py`, and these status
 lines.  It does not touch Lean or `experiments/next.txt`.
 Suite surface: integrity + probes

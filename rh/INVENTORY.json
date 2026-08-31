@@ -4276,6 +4276,36 @@
       "bytes": 405982
     },
     {
+      "path": "rh/problem/schur_cert.tex",
+      "role": "problem_statement",
+      "round": "r481",
+      "ledger_ids": [],
+      "status": "classical Weil Schur certificate at L=0.3 (round 481, PRIME.RDAGGER.SCHUR_CERTIFICATE.01; experiments-side, NO ledger row): VERDICT REDUCED(interval-FT+IBP-tail).  epsilon=lambda_6(K_8)<=1.46e-8 lifts from Nyström (entire sinc, GL remainder <1e-80, residual 1e-16); c_tail>=0.2408 PROVED.  Fourier route (b) KILL (Q_0n ~ 1/n tail eats Schur).  sigma^2 Plancherel is not ||A u|| on [-L,L].  IBP envelope pad ~0.76 on mode 4 KILL.  Working basis: Nyström-Slepian interpolant.  Interval FT + oscillatory [T,inf) OPEN.  Not lambda_*(0.3)>=0.  Smoke 14/14, full 21/21, SPEC_SHA c81a0b2490cfb475.  Companion rh/problem/schur_cert.tex + verify_schur_cert.py SCHUR_CERT VERIFIED -- REDUCED(interval-FT+IBP-tail).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "4eedbcbe58428c5f0a1fbac5cca948bf43cc0d01a75153fdddca92c01bb5c3c0",
+      "bytes": 9177
+    },
+    {
+      "path": "rh/problem/verify_schur_cert.py",
+      "role": "problem_check",
+      "round": "r481 companion",
+      "ledger_ids": [],
+      "status": "machine check of schur_cert.tex: note tokens (REDUCED, e^{2L}, IBP, Fourier-HS not reused, YB, spherical Bessel), smoke run, epsilon pins.  6/6 gates, final line SCHUR_CERT VERIFIED -- REDUCED(interval-FT+IBP-tail)",
+      "pin": true,
+      "sha256": "6d090acdb75a4a19981a9d3e4e539b09d453e1ccfdf7e33ebac7cc13d06857e6",
+      "bytes": 2960
+    },
+    {
+      "path": "rh/problem/schur_cert.pdf",
+      "role": "problem_statement",
+      "round": "r481",
+      "ledger_ids": [],
+      "status": "compiled PDF of schur_cert.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "b6e9439c3d7e86fc406da07343c38ab4dc430cf1b16f301138fbe678f6032e1b",
+      "bytes": 434467
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4450,8 +4480,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "ff7bc15d54b7ccf474c331b923806bf8a449aa7f8ed7beeed02e4c2db806321e",
-      "bytes": 5585033
+      "sha256": "b0dccc1cc11c8ffc9f099cb492cbd8b00aa1f29ce05e3d72de8af17ddc7b4b48",
+      "bytes": 5588589
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5452,6 +5482,16 @@
       "pin": true,
       "sha256": "b969f45b333e74ded2c4d0897dba325a7f7d6345920eb9353e472858de0d2586",
       "bytes": 13370
+    },
+    {
+      "path": "experiments/tfpt-discovery/schur_cert_probe.py",
+      "role": "sealed_probe",
+      "round": "r481",
+      "ledger_ids": [],
+      "status": "classical Weil Schur certificate at L=0.3 (round 481, PRIME.RDAGGER.SCHUR_CERTIFICATE.01; experiments-side, NO ledger row): VERDICT REDUCED(interval-FT+IBP-tail).  epsilon=lambda_6(K_8)<=1.46e-8 lifts from Nyström (entire sinc, GL remainder <1e-80, residual 1e-16); c_tail>=0.2408 PROVED.  Fourier route (b) KILL (Q_0n ~ 1/n tail eats Schur).  sigma^2 Plancherel is not ||A u|| on [-L,L].  IBP envelope pad ~0.76 on mode 4 KILL.  Working basis: Nyström-Slepian interpolant.  Interval FT + oscillatory [T,inf) OPEN.  Not lambda_*(0.3)>=0.  Smoke 14/14, full 21/21, SPEC_SHA c81a0b2490cfb475.  Companion rh/problem/schur_cert.tex + verify_schur_cert.py SCHUR_CERT VERIFIED -- REDUCED(interval-FT+IBP-tail).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "9883aab17a056f9b4367ea7d71a2e6e1fb20ceef3b078f119cf6361f7408bd83",
+      "bytes": 10204
     }
   ]
 }

@@ -254,6 +254,8 @@ PROBES = [
     ("r478", "endtoend_fixedl_probe.py"),
     ("r479", "lambdastar03_probe.py"),
     ("r480", "kappa_high_probe.py"),
+    ("r481", "schur_cert_probe.py"),
+    ("r482", "carleson_edgeband_probe.py"),
 ]
 
 MODULES = [
