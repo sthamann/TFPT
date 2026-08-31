@@ -17,6 +17,10 @@ are proved without `sorry`.
 import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
+import Mathlib.Analysis.Analytic.Order
+import Mathlib.Analysis.Complex.CauchyIntegral
+import Mathlib.Analysis.Normed.Module.Connected
+import Mathlib.LinearAlgebra.Complex.FiniteDimensional
 import Mathlib.Topology.Order.Basic
 import Mathlib.MeasureTheory.Integral.Bochner.Set
 import Mathlib.MeasureTheory.Function.LocallyIntegrable
@@ -2069,6 +2073,94 @@ positivity-transfer algebra is sorry-free. -/
 theorem grid_dense_extension : GridDenseExtension :=
   grid_dense_extension_of_fixedSupport
     fullWeil_fixedSupport_grid_density fullWeil_channel_continuity
+
+/-! ### r497: multiplicity API for `riemannZeta` (bridge [2], first brick)
+
+Lane decision: prove the explicit-formula identification **before**
+off-critical separation.  `FullWeilSeparatesOffCriticalZeros` is
+stated against the opaque `standardExplicitFormula`.  That value
+cannot be shown negative without an identification (bridge [2]) or a
+spectral-side definition, which is the same work.  Mathlib's
+`RiemannHypothesis` is the quantified zero statement
+`ζ(s)=0 ∧ nontrivial ∧ s≠1 → Re s = 1/2`; the logical wrapper
+`standard_weil_criterion_to_mathlib_rh_of_separation` is already
+proved.  A contour/Mellin argument for one test family is a
+special case of Guinand--Weil, not a bypass of [2].
+
+Named remainder of [2] after this brick:
+  [2b] meromorphic `ζ'/ζ` (simple poles, residue = order);
+  [2c] local finiteness of zeros and absolute convergence of the
+      spectral pairing for admissible tests;
+  [2d] contour evaluation = the three-channel form
+      (`standard_explicit_formula_identification`).
+-/
+
+/-- `ζ` is holomorphic on `ℂ \ {1}`. -/
+lemma differentiableOn_riemannZeta_compl_one :
+    DifferentiableOn ℂ riemannZeta ({1}ᶜ) :=
+  fun _z hz => (differentiableAt_riemannZeta hz).differentiableWithinAt
+
+/-- Analyticity on a neighbourhood of every point of `ℂ \ {1}`. -/
+lemma analyticOnNhd_riemannZeta_compl_one :
+    AnalyticOnNhd ℂ riemannZeta ({1}ᶜ) :=
+  differentiableOn_riemannZeta_compl_one.analyticOnNhd isOpen_compl_singleton
+
+/-- Pointwise analyticity of `ζ` away from the pole. -/
+lemma analyticAt_riemannZeta {s : ℂ} (hs : s ≠ 1) :
+    AnalyticAt ℂ riemannZeta s :=
+  analyticOnNhd_riemannZeta_compl_one s hs
+
+/-- `ℂ \ {1}` is preconnected (real rank of `ℂ` is 2). -/
+lemma isPreconnected_compl_one : IsPreconnected ({1}ᶜ : Set ℂ) :=
+  (isConnected_compl_singleton_of_one_lt_rank
+      (Complex.rank_real_complex ▸ Nat.one_lt_ofNat) (1 : ℂ)).isPreconnected
+
+/-- Identity theorem: `ζ` is not eventually zero at any non-polar
+point, because `ζ(0) = -1/2 ≠ 0` and `ℂ \ {1}` is preconnected. -/
+lemma analyticOrderAt_riemannZeta_ne_top {s : ℂ} (hs : s ≠ 1) :
+    analyticOrderAt riemannZeta s ≠ ⊤ := by
+  have h0 : (0 : ℂ) ≠ 1 := by norm_num
+  have hord0 : analyticOrderAt riemannZeta 0 ≠ ⊤ := by
+    have hz0 : riemannZeta 0 ≠ 0 := by
+      rw [riemannZeta_zero]
+      norm_num
+    have hord :
+        analyticOrderAt riemannZeta 0 = 0 :=
+      (analyticAt_riemannZeta h0).analyticOrderAt_eq_zero.2 hz0
+    simp [hord]
+  exact analyticOnNhd_riemannZeta_compl_one.analyticOrderAt_ne_top_of_isPreconnected
+    isPreconnected_compl_one h0 hs hord0
+
+/-- A genuine zero (away from the pole) has positive order. -/
+lemma analyticOrderAt_riemannZeta_ne_zero {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    analyticOrderAt riemannZeta s ≠ 0 :=
+  (analyticAt_riemannZeta hs).analyticOrderAt_ne_zero.2 hz
+
+/-- **r497 brick [2a].**  At every non-polar zero the analytic order
+of `riemannZeta` is a positive finite `ℕ∞` (neither `0` nor `⊤`).
+This is the multiplicity number that a future spectral sum must
+carry.  Mathlib v4.29.1 has `analyticOrderAt` but no `ZetaZero`
+enumeration. -/
+lemma riemannZeta_analyticOrderAt_finite_pos {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    analyticOrderAt riemannZeta s ≠ 0 ∧
+      analyticOrderAt riemannZeta s ≠ ⊤ :=
+  ⟨analyticOrderAt_riemannZeta_ne_zero hz hs,
+    analyticOrderAt_riemannZeta_ne_top hs⟩
+
+/-- Local multiplicity as a natural number (junk `0` at the pole). -/
+noncomputable def riemannZetaMultiplicity (s : ℂ) : ℕ :=
+  analyticOrderNatAt riemannZeta s
+
+lemma riemannZetaMultiplicity_pos {s : ℂ}
+    (hz : riemannZeta s = 0) (hs : s ≠ 1) :
+    0 < riemannZetaMultiplicity s := by
+  have hfin := riemannZeta_analyticOrderAt_finite_pos hz hs
+  unfold riemannZetaMultiplicity analyticOrderNatAt
+  refine Nat.pos_of_ne_zero ?_
+  intro h0
+  exact (not_or.mpr ⟨hfin.1, hfin.2⟩) (ENat.toNat_eq_zero.mp h0)
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/

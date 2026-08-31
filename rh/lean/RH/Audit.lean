@@ -393,6 +393,12 @@ the common Lipschitz majorant and dominated convergence on
 statement.  External census 3 → 2; repository census 8 → 7.
 The remaining two outer-bridge `sorry`s are the Guinand–Weil
 dictionary and off-critical separation.
+
+r497 scopes the remaining lane: [2] before [3], because [3] is
+stated on the opaque `standardExplicitFormula`.  Brick [2a] is
+the proved finite-positive analytic order of `riemannZeta` at
+every non-polar zero
+(`riemannZeta_analyticOrderAt_finite_pos`).  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -421,6 +427,10 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms weilArchSide_eq_cutoff
 #print axioms fullWeil_arch_side_tendsto
 #print axioms fullWeil_arch_continuity
+#print axioms analyticAt_riemannZeta
+#print axioms analyticOrderAt_riemannZeta_ne_top
+#print axioms riemannZeta_analyticOrderAt_finite_pos
+#print axioms riemannZetaMultiplicity_pos
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

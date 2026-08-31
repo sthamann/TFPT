@@ -557,6 +557,40 @@ Census 8 → 7 (external 3 → 2).  Remaining outer bridges:
 `standard_explicit_formula_identification` and
 `fullWeil_separates_offCritical_zeros`.  NO RH CLAIM.
 
+## r497 census (outer bridges 5, lane switch)
+
+ORDER: prove bridge [2] (explicit-formula identification) before
+bridge [3] (off-critical separation).  Mathlib
+`RiemannHypothesis` is the quantified zero statement
+`ζ(s)=0 ∧ nontrivial ∧ s≠1 → Re s = 1/2`.  The logical wrapper
+`standard_weil_criterion_to_mathlib_rh_of_separation` is already
+proved.  [3] is stated as
+`∃ F, admissible ∧ standardExplicitFormula F < 0`.
+`standardExplicitFormula` is opaque, so a negativity proof
+requires the identification [2] (or a spectral-side definition,
+which is the same work).  A contour/Mellin argument for one
+test family is a special case of Guinand--Weil, not a bypass.
+
+PROVED brick [2a], sorry-free:
+`riemannZeta_analyticOrderAt_finite_pos` —
+at every non-polar zero, `analyticOrderAt riemannZeta s`
+is neither `0` nor `⊤`; `riemannZetaMultiplicity` is a
+positive `ℕ`.  Uses `ζ(0) = -1/2`, identity on the
+preconnected set `ℂ \ {1}`, and `differentiableAt_riemannZeta`.
+
+Remaining named pieces of [2] (not extra sorries):
+  [2b] meromorphic `ζ'/ζ` (simple poles, residue = order),
+      ~2--4 rounds;
+  [2c] local finiteness of zeros and absolute convergence of
+      the spectral pairing, ~4--8 rounds;
+  [2d] contour evaluation = three-channel form
+      (`standard_explicit_formula_identification`), ~8--16
+      rounds.
+Bridge [3] after [2]: Gauss-like `FullWeilTest` family and
+the off-critical sign, ~4--8 rounds.
+
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
