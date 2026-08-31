@@ -2811,6 +2811,29 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R488_STATUS = (
+    "classical Weil resolvent solve at L=0.3 "
+    "(round 488, PRIME.RDAGGER.RESOLVENT_SOLVE.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT REDUCED(R-not-coercive; "
+    "s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open).  "
+    "lambda_min(R) collapses with n (0.337/0.106/0.076 "
+    "at n=48/96/128); shift s=0.05 mandatory.  "
+    "s=0 recovers r486 BSE=0.993651.  "
+    "G-certificate G^{1/2} B G^{1/2} at s=0.05 is "
+    "0.99415 (N=3) / 0.99439 (N=5); residual 2e-16.  "
+    "N=3+|sig0|*rest/s OVERSHOOTS 1.078 (not a SATZ).  "
+    "N=5 tail 5.5e-7, GBG+bud/s=0.99440.  "
+    "Operator R vs Galerkin R gap OPEN.  "
+    "Smoke 12/12, full 18/18, SPEC_SHA 2ce1bae7228fb033.  "
+    "Companion rh/problem/resolvent_solve.tex + "
+    "verify_resolvent_solve.py RESOLVENT_SOLVE VERIFIED -- "
+    "REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; "
+    "operator-R-gap-open).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R487_STATUS = (
     "outer bridges lane start "
     "(round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; "
@@ -6939,6 +6962,28 @@ ENTRIES = [
      "compiled PDF of outer_bridges.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/problem/resolvent_solve.tex", "problem_statement",
+     "r488",
+     [],
+     _R488_STATUS,
+     True),
+    ("rh/problem/verify_resolvent_solve.py", "problem_check",
+     "r488 companion",
+     [],
+     "machine check of resolvent_solve.tex: note tokens "
+     "(REDUCED, R-not-coercive, Birman, e^{2L}, "
+     "Fourier-HS not reused, Yoshida--Bombieri, r486), "
+     "smoke run, shift and G-certificate pins.  6/6 gates, "
+     "final line RESOLVENT_SOLVE VERIFIED -- "
+     "REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; "
+     "operator-R-gap-open)",
+     True),
+    ("rh/problem/resolvent_solve.pdf", "problem_statement",
+     "r488",
+     [],
+     "compiled PDF of resolvent_solve.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7539,6 +7584,11 @@ ENTRIES = [
      "r487",
      [],
      _R487_STATUS,
+     True),
+    (f"{EXP}/resolvent_solve_probe.py", "sealed_probe",
+     "r488",
+     [],
+     _R488_STATUS,
      True),
 ]
 

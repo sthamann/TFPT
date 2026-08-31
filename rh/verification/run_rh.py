@@ -261,6 +261,7 @@ PROBES = [
     ("r485", "weighted_schur_probe.py"),
     ("r486", "woodbury_minf_probe.py"),
     ("r487", "outer_bridges_probe.py"),
+    ("r488", "resolvent_solve_probe.py"),
 ]
 
 MODULES = [

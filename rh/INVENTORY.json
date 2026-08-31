@@ -4486,6 +4486,36 @@
       "bytes": 264145
     },
     {
+      "path": "rh/problem/resolvent_solve.tex",
+      "role": "problem_statement",
+      "round": "r488",
+      "ledger_ids": [],
+      "status": "classical Weil resolvent solve at L=0.3 (round 488, PRIME.RDAGGER.RESOLVENT_SOLVE.01; experiments-side, NO ledger row): VERDICT REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open).  lambda_min(R) collapses with n (0.337/0.106/0.076 at n=48/96/128); shift s=0.05 mandatory.  s=0 recovers r486 BSE=0.993651.  G-certificate G^{1/2} B G^{1/2} at s=0.05 is 0.99415 (N=3) / 0.99439 (N=5); residual 2e-16.  N=3+|sig0|*rest/s OVERSHOOTS 1.078 (not a SATZ).  N=5 tail 5.5e-7, GBG+bud/s=0.99440.  Operator R vs Galerkin R gap OPEN.  Smoke 12/12, full 18/18, SPEC_SHA 2ce1bae7228fb033.  Companion rh/problem/resolvent_solve.tex + verify_resolvent_solve.py RESOLVENT_SOLVE VERIFIED -- REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "c0c304b651047004094458500f39d0608a805ae6c993bf470f1b202c35d797ce",
+      "bytes": 6511
+    },
+    {
+      "path": "rh/problem/verify_resolvent_solve.py",
+      "role": "problem_check",
+      "round": "r488 companion",
+      "ledger_ids": [],
+      "status": "machine check of resolvent_solve.tex: note tokens (REDUCED, R-not-coercive, Birman, e^{2L}, Fourier-HS not reused, Yoshida--Bombieri, r486), smoke run, shift and G-certificate pins.  6/6 gates, final line RESOLVENT_SOLVE VERIFIED -- REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open)",
+      "pin": true,
+      "sha256": "a898df930b5d4c22462b92e09ecfb3c50fc2e2f3fca65543243830983491a9f2",
+      "bytes": 3316
+    },
+    {
+      "path": "rh/problem/resolvent_solve.pdf",
+      "role": "problem_statement",
+      "round": "r488",
+      "ledger_ids": [],
+      "status": "compiled PDF of resolvent_solve.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "9a6effb85f6445fa8b231ab04db4d6a0b9e4c52957aeda11165cf8aef6f62347",
+      "bytes": 392173
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4660,8 +4690,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "6251de9f090951bb82191cf9f8684ee0116222e17540a66c755141b1149578b2",
-      "bytes": 5598963
+      "sha256": "32f6d64ab0bcf19bdb206aecd9c1df0cea794c4c71ba4fc19fbf84c42a14fc48",
+      "bytes": 5602056
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5732,6 +5762,16 @@
       "pin": true,
       "sha256": "7022f59d53381f95d818b3ee701e4aa96c0ace34a95f2682d7648ee5c8fb0f07",
       "bytes": 4814
+    },
+    {
+      "path": "experiments/tfpt-discovery/resolvent_solve_probe.py",
+      "role": "sealed_probe",
+      "round": "r488",
+      "ledger_ids": [],
+      "status": "classical Weil resolvent solve at L=0.3 (round 488, PRIME.RDAGGER.RESOLVENT_SOLVE.01; experiments-side, NO ledger row): VERDICT REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open).  lambda_min(R) collapses with n (0.337/0.106/0.076 at n=48/96/128); shift s=0.05 mandatory.  s=0 recovers r486 BSE=0.993651.  G-certificate G^{1/2} B G^{1/2} at s=0.05 is 0.99415 (N=3) / 0.99439 (N=5); residual 2e-16.  N=3+|sig0|*rest/s OVERSHOOTS 1.078 (not a SATZ).  N=5 tail 5.5e-7, GBG+bud/s=0.99440.  Operator R vs Galerkin R gap OPEN.  Smoke 12/12, full 18/18, SPEC_SHA 2ce1bae7228fb033.  Companion rh/problem/resolvent_solve.tex + verify_resolvent_solve.py RESOLVENT_SOLVE VERIFIED -- REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "1fd339f9c04610a1ca54ef4384ad27468b56f6354c51db4564f3d867c91ce49b",
+      "bytes": 10111
     }
   ]
 }

@@ -7016,6 +7016,18 @@ Sorry census **8 → 9** because density was split honestly in two.
 Experiments-side seal, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 
+**Resolvent solve (r488,
+PRIME.RDAGGER.RESOLVENT\_SOLVE.01).**
+Sealed probe
+`experiments/tfpt-discovery/resolvent_solve_probe.py`
+(smoke 12/12, full 18/18, SPEC\_SHA `2ce1bae7228fb033`)
+plus `rh/problem/resolvent_solve.tex` (+ PDF +
+`verify_resolvent_solve.py`, 6/6, `RESOLVENT_SOLVE VERIFIED -- REDUCED(R-not-coercive; s=0.05-G-cert-N5-BS=0.994; operator-R-gap-open)`).
+**Regime REDUCED: $R$ not coercive; shift $s=0.05$ $G$-certificate $N=5$ BS $0.994$; operator $R$-gap open.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+
 ## Folder guide
 
 ```
@@ -7482,6 +7494,11 @@ rh/
 │   ├── block_completion.tex(+pdf) — r484: STUCK
 │   ├── weighted_schur.tex(+pdf) — r485: REDUCED
 │   ├── woodbury_minf.tex(+pdf) — r486: REDUCED
+│   ├── resolvent_solve.tex(+pdf) — r488: REDUCED
+│   │                     (R-not-coercive; s=0.05
+│   │                     G-cert-N5-BS=0.994;
+│   │                     operator-R-gap-open);
+│   │                     not lambda_*.  No RH claim
 │   │                     (enemy-3dim-BS<1; Q_E-Higham;
 │   │                     operator-Rinv-open);
 │   │                     not lambda_*.  No RH claim
@@ -8763,6 +8780,15 @@ the permanent outer-bridge Lean lane.  File domain is
 RH READMEs, the probe, `outer_bridges.tex`, verifier, INVENTORY, and
 `run_rh.py`.  It does not touch `experiments/next.txt`.
 Suite surface: integrity + probes + Lean (`run_rh.py --fast`).
+**r488 coexistence.** Round 488 (`resolvent_solve_probe.py`)
+shows $R=A^++\Pi$ is not coercive, records a shifted
+$G$-certificate $<1$ on $V_n$, and leaves the operator
+$R$-gap open
+(not lambda_*).  File domain is the probe, `resolvent_solve.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`
