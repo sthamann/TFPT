@@ -245,6 +245,8 @@ PROBES = [
     ("r467", "overlap_mechanism_probe.py"),
     ("r468", "octave_renorm_probe.py"),
     ("r470", "quadrep_probe.py"),
+    ("r471", "classical_cert_probe.py"),
+    ("r473", "extraction_joint_probe.py"),
 ]
 
 MODULES = [

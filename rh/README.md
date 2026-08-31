@@ -6816,6 +6816,36 @@ Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 Coexistence: r434 / r435 / r436 / r438 / r440 / r441 / r442 / r443 / r444 / r445 / r446 / r447 / r448 / r449 / r450 / r451 / r452 / r453 / r454 / r455 / r456 / r457 / r458 / r459 / r460 / r461 / r468 / r469
 are parallel and not dropped.
 
+**Classical grid certificates (r471,
+PRIME.RDAGGER.CLASSICAL\_CERT.01).**
+Sealed probe
+`experiments/tfpt-discovery/classical_cert_probe.py`
+(smoke 14/14, full 25/25, SPEC\_SHA `18eb2a33651585f5`)
+plus `rh/problem/classical_cert.tex` (+ PDF +
+`verify_classical_cert.py`, 6/6, `CLASSICAL CERT VERIFIED -- GRID_CERTIFIED(L_max=2.7726)`).
+**Ausgang GRID\_CERTIFIED($L_{\max}=2.7726$).**
+Dictionary-free Guinand--Weil form $Q=A-P+\Pi$ on piecewise-constant $h$ supported in $[-L,L]$.  Calibration $L=0.8$ green; then $L_5$ through $L_{16}$.  Type is never $\lambda_*(L)\ge 0$; the discretization gap is named F2b.  Scramble-sensitive (literal $\log n$).  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
+**Extraction-joint redesign (r473,
+PRIME.RDAGGER.EXTRACTION\_JOINT\_REDESIGN.01).**
+Sealed probe
+`experiments/tfpt-discovery/extraction_joint_probe.py`
+(smoke 13/13, SPEC\_SHA `0650125bd812c1f8`)
+plus `rh/problem/extraction_joint.tex` (+ PDF +
+`verify_extraction_joint.py`, 6/6, `EXTRACTION JOINT VERIFIED`).
+**Ausgang ARTEFACT + POLY\_BRIDGE\_PROVED.**
+At the r470 $k=5$ witness, classical $Q(g_f)=+0.0769078530458283$
+while $\mathrm{fullRead}=-0.0428854252772195$; the gap is the arch
+tent error $0.1197932783230478$ ($\hat g\ge0$).  Lean proves
+`selectedACapPsdImpliesPolynomialReads` and
+`fullRead_weilForm_gap_eq_arch`.  Named outer bridge
+`SelectedPolynomialApproximatesGrid`.  Redesigned joint
+`FrequentlySelectedPolynomialJoint` with fixed-$k$ readout
+$\mathrm{weilForm}\ge-2\,\mathrm{err}_{\mathrm{arch}}$.
+Sorry census stays **8**.  No infinitely-many-$k$ statement.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -6917,11 +6947,12 @@ rh/
 │       │                    selected_augDualResolvent_gt_half is the
 │       │                    stronger alternative since r430).
 │       │                    Zero sorry; census stays 5.  NO RH CLAIM
-│       ├── InnerBridges.lean — r464/r470: finite PSD half proved;
+│       ├── InnerBridges.lean — r464/r470/r473: finite PSD half proved;
 │       │                    SelectedReadQuadraticRepresentation
-│       │                    retained; r470 obstruction sealed
-│       │                    (exists_mesh_compatible_steps_gt_cap
-│       │                    proved; named signed remainder).
+│       │                    retained; r470 obstruction sealed;
+│       │                    r473 poly-class bridge proved
+│       │                    (selectedACapPsdImpliesPolynomialReads)
+│       │                    plus named approx and arch-gap identity.
 │       │                    Zero sorry; census stays 8.  NO RH CLAIM
 │       ├── FrequentlySelected.lean — r430/r434/r463: semidefinite + FREQ
 │       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
@@ -7240,6 +7271,14 @@ rh/
 │   ├── quadrep.tex(+pdf) — r470: OBSTRUCTION_SEALED;
 │   │                     F1(i) channel map; k=5 signed/rank
 │   │                     Hessian witness.  No RH claim
+│   ├── classical_cert.tex(+pdf) — r471: GRID_CERTIFIED
+│   │                     (L_max=2.7726); dictionary-free
+│   │                     Guinand--Weil grid family; F2b open.
+│   │                     No RH claim
+│   ├── extraction_joint.tex(+pdf) — r473: ARTEFACT +
+│   │                     POLY_BRIDGE_PROVED; Q>0>fullRead
+│   │                     at k=5; poly-class A_cap bridge.
+│   │                     No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8386,6 +8425,19 @@ F1(i) as OBSTRUCTION_SEALED.  File domain is InnerBridges.lean,
 the probe, the problem note, INVENTORY, and these status lines.
 It does not touch `experiments/next.txt`.  Census stays 8.
 Suite surface: integrity + probes + Lean
+(`run_rh.py --fast`).
+**r471 coexistence.** Round 471 (`classical_cert_probe.py`) seals
+dictionary-free grid certificates GRID_CERTIFIED($L_{\max}=2.7726$).
+File domain is the probe, `classical_cert.tex`, the verifier,
+INVENTORY, `run_rh.py`, and these status lines.  It does not
+touch Lean or `experiments/next.txt`.  Suite surface: integrity
++ probes (`run_rh.py --fast --skip-lean`).
+**r473 coexistence.** Round 473 (`extraction_joint_probe.py`) seals
+F1-joint redesign as ARTEFACT + POLY_BRIDGE_PROVED.  File domain
+is InnerBridges.lean, FrequentlySelected.lean, Open.lean,
+Audit.lean, the probe, the problem note, INVENTORY, and these
+status lines.  It does not touch `experiments/next.txt`.
+Census stays 8.  Suite surface: integrity + probes + Lean
 (`run_rh.py --fast`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362

@@ -4006,6 +4006,66 @@
       "bytes": 205839
     },
     {
+      "path": "rh/problem/classical_cert.tex",
+      "role": "problem_statement",
+      "round": "r471",
+      "ledger_ids": [],
+      "status": "classical Guinand-Weil grid certificates (round 471, PRIME.RDAGGER.CLASSICAL_CERT.01; experiments-side, NO ledger row): VERDICT GRID_CERTIFIED(L_max=2.7726).  F2 of the r469 U3 directive.  Dictionary-free Q(g)=A-P+Pi on piecewise-constant h supported in [-L,L]; interval Toeplitz Q_L; validated Cholesky.  Calibration L=0.8 green (n=8,16,24); Yoshida/Bombieri L=0.30 green; then L_5, 1.0..2.0, L_8, L_12, L_16 all GRID_CERTIFIED.  Type is NEVER lambda_*(L)>=0; gap named F2b (modulus of continuity at fixed L).  Scramble-sensitive (literal log n).  Smoke 14/14, full 25/25, SPEC_SHA 18eb2a33651585f5.  Companion rh/problem/classical_cert.tex + verify_classical_cert.py CLASSICAL CERT VERIFIED -- GRID_CERTIFIED(L_max=2.7726).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "9b353babd925e3ade992e88ae5380b841f62ea24142914e2c3f3d84f4c5b40bb",
+      "bytes": 8327
+    },
+    {
+      "path": "rh/problem/verify_classical_cert.py",
+      "role": "problem_check",
+      "round": "r471 companion",
+      "ledger_ids": [],
+      "status": "machine check of classical_cert.tex: note tokens (GRID_CERTIFIED vs lambda_*(L), F2b, scramble, dictionary-free, L=0.8 calibration), smoke run, sealed CERT_PINS/SHAPE_PINS.  6/6 gates, final line CLASSICAL CERT VERIFIED -- GRID_CERTIFIED(L_max=2.7726)",
+      "pin": true,
+      "sha256": "9fce5ec889dc3f82b88ad4eeec0998cd2519be3532f06d9683e093e63c0cb3da",
+      "bytes": 3485
+    },
+    {
+      "path": "rh/problem/classical_cert.pdf",
+      "role": "problem_statement",
+      "round": "r471",
+      "ledger_ids": [],
+      "status": "compiled PDF of classical_cert.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "5d131d11551293ff5d927996f2b22ca028191468462b447f5745a369282f201b",
+      "bytes": 330266
+    },
+    {
+      "path": "rh/problem/extraction_joint.tex",
+      "role": "problem_statement",
+      "round": "r473",
+      "ledger_ids": [],
+      "status": "extraction-joint redesign (round 473, PRIME.RDAGGER.EXTRACTION_JOINT_REDESIGN.01; experiments-side, NO ledger row): VERDICT ARTEFACT + POLY_BRIDGE_PROVED.  F1 foundation after the r470 obstruction, under the r469 U3 contract.  At the k=5 sealed witness, classical Q(g_f)=+0.0769078530458283 while fullRead=-0.0428854252772195; the gap is the arch tent error 0.1197932783230478 (comb exact, pole native, ghat_min>0).  Lean proves selectedACapPsdImpliesPolynomialReads (PSD A_cap => deg<cap reads >=0; PrimeWindow.hankel_quadform) and fullRead_weilForm_gap_eq_arch.  Named outer bridge SelectedPolynomialApproximatesGrid.  Redesigned joint FrequentlySelectedPolynomialJoint; fixed-k readout weilForm >= -2 err_arch.  Historical FREQ endpoint retained.  No infinitely-many-k statement.  Smoke 13/13, SPEC_SHA 0650125bd812c1f8; Lean sorry census remains 8.  Companion rh/problem/extraction_joint.tex + verify_extraction_joint.py EXTRACTION JOINT VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "87181a5fc24cf783115c4d2ece39a0279eaf6f65e20ad0358e77db9724d9f139",
+      "bytes": 6887
+    },
+    {
+      "path": "rh/problem/verify_extraction_joint.py",
+      "role": "problem_check",
+      "round": "r473 companion",
+      "ledger_ids": [],
+      "status": "machine check of r473 extraction joint: polynomial bridge proved, named approx and redesigned joint, historical endpoint retained, artefact pins, sorry census 8, numeric probe.  6/6 gates, final line EXTRACTION JOINT VERIFIED",
+      "pin": true,
+      "sha256": "aae6f5828bbe8adb2859a0cb0f659c4850814c608f98492015febef6dd5d46a7",
+      "bytes": 2941
+    },
+    {
+      "path": "rh/problem/extraction_joint.pdf",
+      "role": "problem_statement",
+      "round": "r473",
+      "ledger_ids": [],
+      "status": "compiled PDF of extraction_joint.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "475dbe494dc332f7a10ee1785fe4ee4419f53117d64386517f4f9dc5d2b3c942",
+      "bytes": 227170
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4180,8 +4240,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "6fe7225adbfffb3bbb19d5f55b46340a8a14212aa5c475a933d38c889cdd33eb",
-      "bytes": 5568794
+      "sha256": "71fcffc17022a519baeed890463398bca5b2febbd1385c48ff09ba67969ce473",
+      "bytes": 5570676
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5092,6 +5152,26 @@
       "pin": true,
       "sha256": "fa812d34a19a00e1a7addef651169983ecfde1263d41f6afbe2dcc79929ae370",
       "bytes": 7591
+    },
+    {
+      "path": "experiments/tfpt-discovery/classical_cert_probe.py",
+      "role": "sealed_probe",
+      "round": "r471",
+      "ledger_ids": [],
+      "status": "classical Guinand-Weil grid certificates (round 471, PRIME.RDAGGER.CLASSICAL_CERT.01; experiments-side, NO ledger row): VERDICT GRID_CERTIFIED(L_max=2.7726).  F2 of the r469 U3 directive.  Dictionary-free Q(g)=A-P+Pi on piecewise-constant h supported in [-L,L]; interval Toeplitz Q_L; validated Cholesky.  Calibration L=0.8 green (n=8,16,24); Yoshida/Bombieri L=0.30 green; then L_5, 1.0..2.0, L_8, L_12, L_16 all GRID_CERTIFIED.  Type is NEVER lambda_*(L)>=0; gap named F2b (modulus of continuity at fixed L).  Scramble-sensitive (literal log n).  Smoke 14/14, full 25/25, SPEC_SHA 18eb2a33651585f5.  Companion rh/problem/classical_cert.tex + verify_classical_cert.py CLASSICAL CERT VERIFIED -- GRID_CERTIFIED(L_max=2.7726).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "6cb0cb29a1b4cdf8ce558c53aa6ecfb84f94c447a4e46f9e098976781fe7aa49",
+      "bytes": 26595
+    },
+    {
+      "path": "experiments/tfpt-discovery/extraction_joint_probe.py",
+      "role": "sealed_probe",
+      "round": "r473",
+      "ledger_ids": [],
+      "status": "extraction-joint redesign (round 473, PRIME.RDAGGER.EXTRACTION_JOINT_REDESIGN.01; experiments-side, NO ledger row): VERDICT ARTEFACT + POLY_BRIDGE_PROVED.  F1 foundation after the r470 obstruction, under the r469 U3 contract.  At the k=5 sealed witness, classical Q(g_f)=+0.0769078530458283 while fullRead=-0.0428854252772195; the gap is the arch tent error 0.1197932783230478 (comb exact, pole native, ghat_min>0).  Lean proves selectedACapPsdImpliesPolynomialReads (PSD A_cap => deg<cap reads >=0; PrimeWindow.hankel_quadform) and fullRead_weilForm_gap_eq_arch.  Named outer bridge SelectedPolynomialApproximatesGrid.  Redesigned joint FrequentlySelectedPolynomialJoint; fixed-k readout weilForm >= -2 err_arch.  Historical FREQ endpoint retained.  No infinitely-many-k statement.  Smoke 13/13, SPEC_SHA 0650125bd812c1f8; Lean sorry census remains 8.  Companion rh/problem/extraction_joint.tex + verify_extraction_joint.py EXTRACTION JOINT VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "13c4d3896727d5ee7110853b7f43ccf87c93e79d8fcc39bec167647a3b9526e3",
+      "bytes": 7886
     }
   ]
 }
