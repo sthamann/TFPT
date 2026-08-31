@@ -3627,6 +3627,65 @@ lemma normInvRiemannZetaLeZetaTwo : NormInvRiemannZetaLeZetaTwo := by
     hn2).trans ?_
   exact (tsum_norm_term_one_two).le
 
+/-- `ζ'/ζ = -L(Λ)` on `Re s > 1`. -/
+lemma logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt {s : ℂ}
+    (hs : 1 < s.re) :
+    logDeriv riemannZeta s = - L ↗ArithmeticFunction.vonMangoldt s := by
+  rw [logDeriv_apply, ArithmeticFunction.LSeries_vonMangoldt_eq_deriv_riemannZeta_div hs]
+  ring
+
+lemma term_vonMangoldt_two_eq_ofReal_norm (n : ℕ) :
+    LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n =
+      (‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ : ℂ) := by
+  rcases eq_or_ne n 0 with rfl | hn
+  · simp
+  · have hΛ : 0 ≤ ArithmeticFunction.vonMangoldt n :=
+      ArithmeticFunction.vonMangoldt_nonneg
+    have hden : (0 : ℝ) < (n : ℝ) ^ 2 :=
+      pow_pos (Nat.cast_pos.mpr (Nat.pos_of_ne_zero hn)) 2
+    have key :
+        (ArithmeticFunction.vonMangoldt n : ℂ) / (n : ℂ) ^ 2 =
+          (‖(ArithmeticFunction.vonMangoldt n : ℂ) / (n : ℂ) ^ 2‖ : ℂ) := by
+      rw [← ofReal_natCast, ← ofReal_pow, ← ofReal_div]
+      rw [Complex.norm_real, Real.norm_eq_abs, abs_of_nonneg (div_nonneg hΛ hden.le)]
+    simpa [LSeries.term_of_ne_zero hn] using key
+
+lemma tsum_norm_term_vonMangoldt_two :
+    (∑' n, ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖) =
+      ‖L ↗ArithmeticFunction.vonMangoldt (2 : ℂ)‖ := by
+  have h2 : 1 < (2 : ℂ).re := by simp
+  have hsum := ArithmeticFunction.LSeriesSummable_vonMangoldt h2
+  have hn : Summable fun n =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ := by
+    rw [summable_norm_iff]; exact hsum
+  have heq := term_vonMangoldt_two_eq_ofReal_norm
+  rw [LSeries, tsum_congr heq, ← ofReal_tsum,
+    Complex.norm_of_nonneg (tsum_nonneg fun _ => norm_nonneg _)]
+
+/-- On `Re s ≥ 2`, `|ζ'/ζ(s)| ≤ Σ Λ(n) n^{-2} = -ζ'(2)/ζ(2) = |ζ'/ζ(2)|`. -/
+lemma norm_logDeriv_riemannZeta_le_at_two {s : ℂ} (hs : 2 ≤ s.re) :
+    ‖logDeriv riemannZeta s‖ ≤ ‖logDeriv riemannZeta (2 : ℂ)‖ := by
+  have hs1 : 1 < s.re := by linarith
+  have h2 : 1 < (2 : ℂ).re := by simp
+  rw [logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt hs1,
+    logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt h2, norm_neg, norm_neg]
+  have hΛs : LSeriesSummable ↗ArithmeticFunction.vonMangoldt s :=
+    ArithmeticFunction.LSeriesSummable_vonMangoldt hs1
+  have hΛ2 : LSeriesSummable ↗ArithmeticFunction.vonMangoldt (2 : ℂ) :=
+    ArithmeticFunction.LSeriesSummable_vonMangoldt h2
+  have hns : Summable fun n =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt s n‖ := by
+    rw [summable_norm_iff]; exact hΛs
+  have hn2 : Summable fun n =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ := by
+    rw [summable_norm_iff]; exact hΛ2
+  have hre : (2 : ℂ).re ≤ s.re := by simpa using hs
+  refine (norm_tsum_le_tsum_norm hns).trans ?_
+  refine (hns.tsum_le_tsum
+    (fun n => LSeries.norm_term_le_of_re_le_re
+      (↗ArithmeticFunction.vonMangoldt) hre n) hn2).trans ?_
+  exact (tsum_norm_term_vonMangoldt_two).le
+
 end ZetaHalfPlaneBounds
 
 /-! ### r507: Γ-free counting path — FE pairing + N=1 Euler–Maclaurin
@@ -6445,6 +6504,295 @@ lemma rectangleIntegral_inv_of_zero_mem (z w : ℂ)
     ring
   · simp [smul_eq_mul, sub_im, mul_im, add_im, ofReal_im, ofReal_re, I_re, I_im]
     linarith [hsum]
+
+
+/-- Horizontal side after a complex translation: only `p.re` shifts the
+real parameter. -/
+lemma add_horiz_shift (p : ℂ) (x im : ℝ) :
+    ((x : ℂ) + ↑(im - p.im) * I) + p = ((x + p.re : ℝ) : ℂ) + im * I := by
+  apply Complex.ext
+  · simp [add_re, mul_re, I_re, I_im]
+  · simp [add_im, mul_im, I_re, I_im]
+
+/-- Vertical side after a complex translation: only `p.im` shifts the
+real parameter. -/
+lemma add_vert_shift (p : ℂ) (σ y : ℝ) :
+    (↑(σ - p.re) : ℂ) + y * I + p = (σ : ℂ) + ↑(y + p.im) * I := by
+  apply Complex.ext
+  · simp [add_re, mul_re, I_re, I_im]
+  · simp [add_im, mul_im, I_re, I_im]
+
+lemma intervalIntegral_horiz_shift (f : ℂ → ℂ) (a b im : ℝ) (p : ℂ) :
+    (∫ x : ℝ in (a - p.re)..(b - p.re),
+        f (((x : ℂ) + ↑(im - p.im) * I) + p)) =
+      ∫ x : ℝ in a..b, f ((x : ℂ) + im * I) := by
+  simp_rw [add_horiz_shift]
+  exact (intervalIntegral.integral_comp_add_right
+      (fun t : ℝ => f ((t : ℂ) + im * I)) p.re).trans
+    (by simp [sub_add_cancel])
+
+lemma intervalIntegral_vert_shift (f : ℂ → ℂ) (σ a b : ℝ) (p : ℂ) :
+    (∫ y : ℝ in (a - p.im)..(b - p.im),
+        f ((↑(σ - p.re) : ℂ) + y * I + p)) =
+      ∫ y : ℝ in a..b, f ((σ : ℂ) + y * I) := by
+  simp_rw [add_vert_shift]
+  exact (intervalIntegral.integral_comp_add_right
+      (fun t : ℝ => f ((σ : ℂ) + t * I)) p.im).trans
+    (by simp [sub_add_cancel])
+
+/-- Substitution `g(ζ) = f(ζ + p)`: the four-side rectangle integral
+is invariant.  Horizontal sides use `p.re`; vertical sides use `p.im`. -/
+lemma rectangleIntegral_comp_add (f : ℂ → ℂ) (z w p : ℂ) :
+    rectangleIntegral (fun ζ => f (ζ + p)) (z - p) (w - p) =
+      rectangleIntegral f z w := by
+  simp only [rectangleIntegral, sub_re, sub_im]
+  rw [intervalIntegral_horiz_shift f z.re w.re z.im p,
+    intervalIntegral_horiz_shift f z.re w.re w.im p,
+    intervalIntegral_vert_shift f w.re z.im w.im p,
+    intervalIntegral_vert_shift f z.re z.im w.im p]
+
+lemma rectangleIntegral_comp_sub (f : ℂ → ℂ) (z w p : ℂ) :
+    rectangleIntegral (fun ζ => f (ζ - p)) z w =
+      rectangleIntegral f (z - p) (w - p) := by
+  simpa [sub_eq_add_neg, add_comm, sub_neg_eq_add] using
+    rectangleIntegral_comp_add f (z - p) (w - p) (-p)
+
+lemma rectangleIntegral_inv_of_mem (z w p : ℂ)
+    (hre : z.re < p.re) (hre' : p.re < w.re)
+    (him : z.im < p.im) (him' : p.im < w.im) :
+    rectangleIntegral (fun ζ => (ζ - p)⁻¹) z w = 2 * (Real.pi : ℂ) * I := by
+  rw [rectangleIntegral_comp_sub (fun ξ => ξ⁻¹) z w p]
+  refine rectangleIntegral_inv_of_zero_mem (z - p) (w - p) ?_ ?_ ?_ ?_
+  · simpa [sub_re] using sub_neg.mpr hre
+  · simpa [sub_re] using sub_pos.mpr hre'
+  · simpa [sub_im] using sub_neg.mpr him
+  · simpa [sub_im] using sub_pos.mpr him'
+
+lemma rectangleIntegral_const_mul (c : ℂ) (f : ℂ → ℂ) (z w : ℂ) :
+    rectangleIntegral (fun ζ => c * f ζ) z w = c * rectangleIntegral f z w := by
+  simp only [rectangleIntegral]
+  simp_rw [← smul_eq_mul, intervalIntegral.integral_smul]
+  simp [smul_add, smul_comm c I]
+  ring
+
+lemma rectangleIntegral_add (f g : ℂ → ℂ) (z w : ℂ)
+    (hfb : IntervalIntegrable (fun x : ℝ => f ((x : ℂ) + z.im * I)) volume z.re w.re)
+    (hft : IntervalIntegrable (fun x : ℝ => f ((x : ℂ) + w.im * I)) volume z.re w.re)
+    (hfr : IntervalIntegrable (fun y : ℝ => f ((w.re : ℂ) + y * I)) volume z.im w.im)
+    (hfl : IntervalIntegrable (fun y : ℝ => f ((z.re : ℂ) + y * I)) volume z.im w.im)
+    (hgb : IntervalIntegrable (fun x : ℝ => g ((x : ℂ) + z.im * I)) volume z.re w.re)
+    (hgt : IntervalIntegrable (fun x : ℝ => g ((x : ℂ) + w.im * I)) volume z.re w.re)
+    (hgr : IntervalIntegrable (fun y : ℝ => g ((w.re : ℂ) + y * I)) volume z.im w.im)
+    (hgl : IntervalIntegrable (fun y : ℝ => g ((z.re : ℂ) + y * I)) volume z.im w.im) :
+    rectangleIntegral (fun ζ => f ζ + g ζ) z w =
+      rectangleIntegral f z w + rectangleIntegral g z w := by
+  simp only [rectangleIntegral]
+  rw [intervalIntegral.integral_add hfb hgb, intervalIntegral.integral_add hft hgt,
+    intervalIntegral.integral_add hfr hgr, intervalIntegral.integral_add hfl hgl]
+  simp [smul_eq_mul, mul_add, sub_eq_add_neg]
+  ring
+
+lemma continuous_side_inv_sub_horiz (p : ℂ) {im : ℝ} (him : im ≠ p.im) :
+    Continuous fun x : ℝ => ((x : ℂ) + im * I - p)⁻¹ :=
+  ((continuous_ofReal.add continuous_const).sub continuous_const).inv₀ fun _ => by
+    intro h
+    apply him
+    exact sub_eq_zero.mp (by simpa [sub_im] using congrArg Complex.im h)
+
+lemma continuous_side_inv_sub_vert (p : ℂ) {σ : ℝ} (hσ : σ ≠ p.re) :
+    Continuous fun y : ℝ => ((σ : ℂ) + y * I - p)⁻¹ :=
+  ((continuous_const.add (continuous_ofReal.mul continuous_const)).sub
+      continuous_const).inv₀ fun _ => by
+    intro h
+    apply hσ
+    exact sub_eq_zero.mp (by simpa [sub_re] using congrArg Complex.re h)
+
+lemma mem_closedRect_horiz {z w : ℂ} {im x : ℝ}
+    (hx : x ∈ [[z.re, w.re]]) (him : im ∈ [[z.im, w.im]]) :
+    (x : ℂ) + im * I ∈ [[z.re, w.re]] ×ℂ [[z.im, w.im]] := by
+  refine mem_reProdIm.mpr ⟨?_, ?_⟩
+  · simpa [add_re, mul_re, I_re, I_im, ofReal_re] using hx
+  · simpa [add_im, mul_im, I_re, I_im, ofReal_im] using him
+
+lemma mem_closedRect_vert {z w : ℂ} {σ y : ℝ}
+    (hσ : σ ∈ [[z.re, w.re]]) (hy : y ∈ [[z.im, w.im]]) :
+    (σ : ℂ) + y * I ∈ [[z.re, w.re]] ×ℂ [[z.im, w.im]] := by
+  refine mem_reProdIm.mpr ⟨?_, ?_⟩
+  · simpa [add_re, mul_re, I_re, I_im, ofReal_re] using hσ
+  · simpa [add_im, mul_im, I_re, I_im, ofReal_im] using hy
+
+lemma intervalIntegrable_holomorphic_horiz (h : ℂ → ℂ) (z w : ℂ) {im : ℝ}
+    (hh : ContinuousOn h ([[z.re, w.re]] ×ℂ [[z.im, w.im]]))
+    (him : im ∈ [[z.im, w.im]]) :
+    IntervalIntegrable (fun x : ℝ => h ((x : ℂ) + im * I)) volume z.re w.re :=
+  (hh.comp (continuous_ofReal.add continuous_const).continuousOn
+      fun _ hx => mem_closedRect_horiz hx him).intervalIntegrable
+
+lemma intervalIntegrable_holomorphic_vert (h : ℂ → ℂ) (z w : ℂ) {σ : ℝ}
+    (hh : ContinuousOn h ([[z.re, w.re]] ×ℂ [[z.im, w.im]]))
+    (hσ : σ ∈ [[z.re, w.re]]) :
+    IntervalIntegrable (fun y : ℝ => h ((σ : ℂ) + y * I)) volume z.im w.im :=
+  (hh.comp (continuous_const.add (continuous_ofReal.mul continuous_const)).continuousOn
+      fun _ hy => mem_closedRect_vert hσ hy).intervalIntegrable
+
+/-- One simple pole in the open rectangle, with holomorphic remainder
+already extended to the closed rectangle (the r498 split). -/
+lemma rectangleIntegral_simple_pole (h : ℂ → ℂ) (z w p r : ℂ)
+    (hh : DifferentiableOn ℂ h ([[z.re, w.re]] ×ℂ [[z.im, w.im]]))
+    (hre : z.re < p.re) (hre' : p.re < w.re)
+    (him : z.im < p.im) (him' : p.im < w.im) :
+    rectangleIntegral (fun ζ => r / (ζ - p) + h ζ) z w =
+      (2 * (Real.pi : ℂ) * I) * r := by
+  have hhol := rectangleIntegral_eq_zero_of_differentiableOn h z w hh
+  have hwind := rectangleIntegral_inv_of_mem z w p hre hre' him him'
+  have hcont := hh.continuousOn
+  have hhb := intervalIntegrable_holomorphic_horiz h z w hcont left_mem_uIcc
+  have hht := intervalIntegrable_holomorphic_horiz h z w hcont right_mem_uIcc
+  have hhr := intervalIntegrable_holomorphic_vert h z w hcont right_mem_uIcc
+  have hhl := intervalIntegrable_holomorphic_vert h z w hcont left_mem_uIcc
+  have hfb : IntervalIntegrable
+      (fun x : ℝ => r * (((x : ℂ) + z.im * I - p)⁻¹)) volume z.re w.re :=
+    (continuous_const.mul (continuous_side_inv_sub_horiz p him.ne)).intervalIntegrable _ _
+  have hft : IntervalIntegrable
+      (fun x : ℝ => r * (((x : ℂ) + w.im * I - p)⁻¹)) volume z.re w.re :=
+    (continuous_const.mul (continuous_side_inv_sub_horiz p him'.ne')).intervalIntegrable _ _
+  have hfr : IntervalIntegrable
+      (fun y : ℝ => r * (((w.re : ℂ) + y * I - p)⁻¹)) volume z.im w.im :=
+    (continuous_const.mul (continuous_side_inv_sub_vert p hre'.ne')).intervalIntegrable _ _
+  have hfl : IntervalIntegrable
+      (fun y : ℝ => r * (((z.re : ℂ) + y * I - p)⁻¹)) volume z.im w.im :=
+    (continuous_const.mul (continuous_side_inv_sub_vert p hre.ne)).intervalIntegrable _ _
+  have hadd :=
+    rectangleIntegral_add (fun ζ => r * (ζ - p)⁻¹) h z w
+      hfb hft hfr hfl hhb hht hhr hhl
+  have hdiv : (fun ζ : ℂ => r / (ζ - p) + h ζ) =
+      fun ζ => r * (ζ - p)⁻¹ + h ζ :=
+    funext fun ζ => by rw [div_eq_mul_inv]
+  rw [hdiv, hadd, rectangleIntegral_const_mul, hhol, hwind]
+  ring
+
+lemma rectangleIntegral_div_sub (z w p r : ℂ)
+    (hre : z.re < p.re) (hre' : p.re < w.re)
+    (him : z.im < p.im) (him' : p.im < w.im) :
+    rectangleIntegral (fun ζ => r / (ζ - p)) z w =
+      (2 * (Real.pi : ℂ) * I) * r := by
+  have h0 :
+      (fun ζ : ℂ => r / (ζ - p) + (0 : ℂ)) = fun ζ => r / (ζ - p) := by
+    funext ζ; simp
+  rw [← h0]
+  exact rectangleIntegral_simple_pole (fun _ => 0) z w p r
+    (differentiableOn_const 0) hre hre' him him'
+
+lemma intervalIntegrable_div_sub_horiz (p r : ℂ) (a b im : ℝ)
+    (him : im ≠ p.im) :
+    IntervalIntegrable (fun x : ℝ => r / ((x : ℂ) + im * I - p)) volume a b := by
+  have hfun :
+      (fun x : ℝ => r / ((x : ℂ) + im * I - p)) =
+        fun x : ℝ => r * ((x : ℂ) + im * I - p)⁻¹ :=
+    funext fun _ => div_eq_mul_inv _ _
+  rw [hfun]
+  exact (continuous_const.mul (continuous_side_inv_sub_horiz p him)).intervalIntegrable a b
+
+lemma intervalIntegrable_div_sub_vert (p r : ℂ) (σ a b : ℝ)
+    (hσ : σ ≠ p.re) :
+    IntervalIntegrable (fun y : ℝ => r / ((σ : ℂ) + y * I - p)) volume a b := by
+  have hfun :
+      (fun y : ℝ => r / ((σ : ℂ) + y * I - p)) =
+        fun y : ℝ => r * ((σ : ℂ) + y * I - p)⁻¹ :=
+    funext fun _ => div_eq_mul_inv _ _
+  rw [hfun]
+  exact (continuous_const.mul (continuous_side_inv_sub_vert p hσ)).intervalIntegrable a b
+
+lemma intervalIntegrable_sum_div_horiz (s : Finset ℂ) (r : ℂ → ℂ)
+    (a b im : ℝ) (him : ∀ p ∈ s, im ≠ p.im) :
+    IntervalIntegrable
+      (fun x : ℝ => ∑ p ∈ s, r p / ((x : ℂ) + im * I - p)) volume a b := by
+  have hfun :
+      (fun x : ℝ => ∑ p ∈ s, r p / ((x : ℂ) + im * I - p)) =
+        fun x : ℝ => ∑ p ∈ s, r p * ((x : ℂ) + im * I - p)⁻¹ :=
+    funext fun _ => by simp_rw [div_eq_mul_inv]
+  rw [hfun]
+  exact (continuous_finset_sum s fun p hp =>
+      continuous_const.mul (continuous_side_inv_sub_horiz p (him p hp))).intervalIntegrable a b
+
+lemma intervalIntegrable_sum_div_vert (s : Finset ℂ) (r : ℂ → ℂ)
+    (σ a b : ℝ) (hσ : ∀ p ∈ s, σ ≠ p.re) :
+    IntervalIntegrable
+      (fun y : ℝ => ∑ p ∈ s, r p / ((σ : ℂ) + y * I - p)) volume a b := by
+  have hfun :
+      (fun y : ℝ => ∑ p ∈ s, r p / ((σ : ℂ) + y * I - p)) =
+        fun y : ℝ => ∑ p ∈ s, r p * ((σ : ℂ) + y * I - p)⁻¹ :=
+    funext fun _ => by simp_rw [div_eq_mul_inv]
+  rw [hfun]
+  exact (continuous_finset_sum s fun p hp =>
+      continuous_const.mul (continuous_side_inv_sub_vert p (hσ p hp))).intervalIntegrable a b
+
+/-- Finite simple-pole sum, no remainder.  Interior poles make every
+side miss every pole, so each summand is continuous on the side. -/
+lemma rectangleIntegral_sum_div (s : Finset ℂ) (r : ℂ → ℂ) (z w : ℂ)
+    (hp : ∀ p ∈ s, z.re < p.re ∧ p.re < w.re ∧ z.im < p.im ∧ p.im < w.im) :
+    rectangleIntegral (fun ζ => ∑ p ∈ s, r p / (ζ - p)) z w =
+      (2 * (Real.pi : ℂ) * I) * ∑ p ∈ s, r p := by
+  classical
+  revert hp
+  refine Finset.induction_on s ?empty ?insert
+  · intro _hp
+    simp [rectangleIntegral]
+  · intro p s hps ih hp
+    have hp' := hp p (Finset.mem_insert_self p s)
+    have hs : ∀ q ∈ s,
+        z.re < q.re ∧ q.re < w.re ∧ z.im < q.im ∧ q.im < w.im :=
+      fun q hq => hp q (Finset.mem_insert_of_mem hq)
+    have hadd := rectangleIntegral_add
+      (fun ζ => r p / (ζ - p))
+      (fun ζ => ∑ q ∈ s, r q / (ζ - q)) z w
+      (intervalIntegrable_div_sub_horiz p (r p) z.re w.re z.im hp'.2.2.1.ne)
+      (intervalIntegrable_div_sub_horiz p (r p) z.re w.re w.im hp'.2.2.2.ne.symm)
+      (intervalIntegrable_div_sub_vert p (r p) w.re z.im w.im hp'.2.1.ne.symm)
+      (intervalIntegrable_div_sub_vert p (r p) z.re z.im w.im hp'.1.ne)
+      (intervalIntegrable_sum_div_horiz s r z.re w.re z.im
+        fun q hq => (hs q hq).2.2.1.ne)
+      (intervalIntegrable_sum_div_horiz s r z.re w.re w.im
+        fun q hq => (hs q hq).2.2.2.ne.symm)
+      (intervalIntegrable_sum_div_vert s r w.re z.im w.im
+        fun q hq => (hs q hq).2.1.ne.symm)
+      (intervalIntegrable_sum_div_vert s r z.re z.im w.im
+        fun q hq => (hs q hq).1.ne)
+    have hfun :
+        (fun ζ : ℂ => ∑ q ∈ insert p s, r q / (ζ - q)) =
+          fun ζ => r p / (ζ - p) + ∑ q ∈ s, r q / (ζ - q) := by
+      funext ζ
+      exact Finset.sum_insert hps
+    rw [hfun, hadd, rectangleIntegral_div_sub z w p (r p)
+      hp'.1 hp'.2.1 hp'.2.2.1 hp'.2.2.2, ih hs, Finset.sum_insert hps]
+    ring
+
+/-- r498-style Finset punch: `f = Σ r_p/(·-p) + h` with `h` holomorphic
+on the closed rectangle.  One Cauchy call on `h`. -/
+lemma rectangleIntegral_sum_simple_poles (h : ℂ → ℂ) (z w : ℂ)
+    (s : Finset ℂ) (r : ℂ → ℂ)
+    (hh : DifferentiableOn ℂ h ([[z.re, w.re]] ×ℂ [[z.im, w.im]]))
+    (hp : ∀ p ∈ s, z.re < p.re ∧ p.re < w.re ∧ z.im < p.im ∧ p.im < w.im) :
+    rectangleIntegral (fun ζ => (∑ p ∈ s, r p / (ζ - p)) + h ζ) z w =
+      (2 * (Real.pi : ℂ) * I) * ∑ p ∈ s, r p := by
+  have hhol := rectangleIntegral_eq_zero_of_differentiableOn h z w hh
+  have hc := hh.continuousOn
+  have hadd := rectangleIntegral_add
+    (fun ζ => ∑ p ∈ s, r p / (ζ - p)) h z w
+    (intervalIntegrable_sum_div_horiz s r z.re w.re z.im
+      fun p hp' => (hp p hp').2.2.1.ne)
+    (intervalIntegrable_sum_div_horiz s r z.re w.re w.im
+      fun p hp' => (hp p hp').2.2.2.ne.symm)
+    (intervalIntegrable_sum_div_vert s r w.re z.im w.im
+      fun p hp' => (hp p hp').2.1.ne.symm)
+    (intervalIntegrable_sum_div_vert s r z.re z.im w.im
+      fun p hp' => (hp p hp').1.ne)
+    (intervalIntegrable_holomorphic_horiz h z w hc left_mem_uIcc)
+    (intervalIntegrable_holomorphic_horiz h z w hc right_mem_uIcc)
+    (intervalIntegrable_holomorphic_vert h z w hc right_mem_uIcc)
+    (intervalIntegrable_holomorphic_vert h z w hc left_mem_uIcc)
+  rw [hadd, rectangleIntegral_sum_div s r z w hp, hhol]
+  ring
 
 
 end RectangleContour

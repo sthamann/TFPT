@@ -1012,16 +1012,35 @@ and vertical sides have closed-form integrals
 the four arctan corners sum to `2π`
 (`rectangle_inv_arctan_sum`).  One-pole wrap
 (shift + holomorphic remainder) and the r499
-Finset multi-pole are the next brick.
+Finset multi-pole are r515.
 
 [2d] contour design: `Q_T = [-1/4, 2] × [-T, T]`.
 A left edge at `Re>0` misses `0<β<ε` zeros; hat
 pairing does not replace enclosure.  Right `Re=2`
-uses `ζ'/ζ = -Σ Λ(n)n^{-s}` (plan r515).  Left
+uses `ζ'/ζ = -Σ Λ(n)n^{-s}` (r515 bound).  Left
 `Re=-1/4` folds by FE onto `Re=5/4` plus `χ'/χ`.
 Horizontals die from r506 `ĥ` decay times a
 log-type `ζ'/ζ` bound.  Residue identity:
 `∮ (ζ'/ζ) ĥ = spectralPartialSum ĥ - ĥ(1)`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r515 census (outer bridges 22, [2d] one-pole)
+
+[2d] one-pole wrap, Finset multi-pole, and the
+`Re ≥ 2` Dirichlet bound, sorry-free.
+`rectangleIntegral_comp_add` is four real-side
+substitutions (`p.re` horizontal, `p.im` vertical).
+`rectangleIntegral_inv_of_mem` is the shifted
+`∮ 1/(ζ-p) = 2πi`.  The residue lemma
+`rectangleIntegral_simple_pole` takes the r498
+split `f = r/(·-p)+h` with `h` holomorphic on
+the closed rectangle as an explicit hypothesis.
+The Finset form `rectangleIntegral_sum_simple_poles`
+is the same split plus one Cauchy call on `h`.
+On `Re s ≥ 2`, `‖ζ'/ζ(s)‖ ≤ ‖ζ'/ζ(2)‖` from
+`ζ'/ζ = -L(Λ)` and termwise `n^{-Re s} ≤ n^{-2}`.
+Remaining [2d]: assemble `∮ (ζ'/ζ) ĥ` on `Q_T`
+(left-edge FE fold, horizontals, `T→∞`).
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)

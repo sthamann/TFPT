@@ -455,6 +455,10 @@ dyadic sum `∑ 1/|ρ|² < ∞`
 complete.  r514 starts [2d]: rectangle winding
 `rectangleIntegral_inv_of_zero_mem` (`∮ 1/z = 2πi`
 on a positively oriented rectangle about `0`).
+r515 wraps one and many simple poles
+(`rectangleIntegral_simple_pole`,
+`rectangleIntegral_sum_simple_poles`) and
+bounds `|ζ'/ζ|` on `Re ≥ 2`.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -578,6 +582,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms integral_inv_re_add_mul_I
 #print axioms rectangle_inv_arctan_sum
 #print axioms rectangleIntegral_inv_of_zero_mem
+#print axioms rectangleIntegral_comp_add
+#print axioms rectangleIntegral_inv_of_mem
+#print axioms rectangleIntegral_simple_pole
+#print axioms rectangleIntegral_sum_simple_poles
+#print axioms logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt
+#print axioms norm_logDeriv_riemannZeta_le_at_two
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
