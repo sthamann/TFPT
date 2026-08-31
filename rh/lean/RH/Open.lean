@@ -974,6 +974,26 @@ Proved: `zetaZeroCountUpToXBound` —
 `∑ 1/|ρ|²` dyadic assembly is r513.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r513 census (outer bridges 20, [2c] counting complete)
+
+[2c] ZÄHLTEIL KOMPLETT, sorry-free.
+`zetaZeroCountUpToXBound` estimates Finset.card (not the
+Jensen divisor sum).  Unweighted assembly is enough for
+the named sum: dyadic blocks `B_j = {2^j ≤ |Im| < 2^{j+1}}`
+plus the r499 compact `|Im|<1`, with
+`#B_j ≤ N(2^{j+1})` and `|ρ| ≥ 2^j`, so the block is
+`O((j+2) 2^{-j})`.  Geometric-polynomial comparison is
+`summable_pow_mul_geometric_of_norm_lt_one`.
+
+Proved: `summable_inv_sq_zetaZeros` —
+`Summable fun ρ : {z // IsCriticalStripZetaZero z} => (‖ρ‖²)⁻¹`.
+The weighted twin `∑ m_ρ/|ρ|²` is the same blocks once
+`m_ρ ≤ D_F(ρ) ≤ C_inner(1+log(2+|γ|))` is recorded
+(Jensen already bounds the divisor; card dropped the
+weight).  [2d] remaining: contour integral, `T→∞`,
+three-channel identification.  Census stays 7
+(external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

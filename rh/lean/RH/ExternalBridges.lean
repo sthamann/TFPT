@@ -50,6 +50,8 @@ import Mathlib.Analysis.Complex.JensenFormula
 import Mathlib.Analysis.Real.Pi.Bounds
 import Mathlib.MeasureTheory.Integral.CircleAverage
 import Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic
+import Mathlib.Analysis.SpecificLimits.Normed
+import Mathlib.Topology.Algebra.InfiniteSum.ENNReal
 
 namespace RH
 
@@ -5684,8 +5686,9 @@ lemma heightCenters_card_cast_le (X : ℝ) (hX : 0 ≤ X) :
   have hsimp : 2 * ((8 : ℝ) * X / 5 + 2) + 1 = (16 / 5 : ℝ) * X + 5 := by ring
   linarith
 
-theorem zetaZeroCountUpToXBound : ZetaZeroCountUpToXBound :=
-  ⟨zetaZeroCountUpToXBoundConst, zetaZeroCountUpToXBoundConst_pos, fun X hX => by
+lemma card_zeros_le (X : ℝ) (hX : 0 ≤ X) :
+    ((riemannZetaZerosOnClosedRect 0 1 X).card : ℝ) ≤
+      zetaZeroCountUpToXBoundConst * (1 + X) * (1 + Real.log (2 + X)) := by
     have hhalf := card_half_strip_le X hX
     have htwo := card_critical_le_two_mul_half X hX
     have hctsR := heightCenters_card_cast_le X hX
@@ -5732,9 +5735,411 @@ theorem zetaZeroCountUpToXBound : ZetaZeroCountUpToXBound :=
             (zetaZerosInDiskCardBoundInner * ((9 / 4) * (1 + Real.log (2 + X)))) =
           zetaZeroCountUpToXBoundConst * (1 + X) * (1 + Real.log (2 + X)) := by
       unfold zetaZeroCountUpToXBoundConst; ring
-    exact (hR.trans (hstep1.trans hstep2)).trans_eq hrewrit⟩
+    exact (hR.trans (hstep1.trans hstep2)).trans_eq hrewrit
+
+theorem zetaZeroCountUpToXBound : ZetaZeroCountUpToXBound :=
+  ⟨zetaZeroCountUpToXBoundConst, zetaZeroCountUpToXBoundConst_pos, fun X hX => by
+    exact_mod_cast (card_zeros_le X hX)⟩
 
 end ZetaEulerMaclaurin
+
+/-! ### r513: ∑ 1/|ρ|² via dyadic blocks ([2c] counting complete)
+
+`zetaZeroCountUpToXBound` estimates Finset.card of the rectangle
+zeros (unweighted).  Jensen's divisor already carries multiplicity;
+the same disk constant therefore bounds `riemannZetaMultiplicity`
+pointwise by `O(log(2+|γ|))`, which is enough for the weighted
+[2d] series `∑ m_ρ/|ρ|²`.  Block geometry: compact `|Im|<1`
+(finite by r499) plus `B_j = {2^j ≤ |Im| < 2^{j+1}}`.
+-/
+
+section ZetaZeroInvSq
+
+open Complex Classical
+open scoped ENNReal
+
+def IsCriticalStripZetaZero (s : ℂ) : Prop :=
+  riemannZeta s = 0 ∧ 0 < s.re ∧ s.re < 1
+
+lemma isCriticalStripZetaZero_ne_zero {s : ℂ}
+    (hs : IsCriticalStripZetaZero s) : s ≠ 0 :=
+  fun h => (ne_of_gt hs.2.1) (by simp [h])
+
+lemma isCriticalStripZetaZero_norm_pos {s : ℂ}
+    (hs : IsCriticalStripZetaZero s) : 0 < ‖s‖ :=
+  norm_pos_iff.mpr (isCriticalStripZetaZero_ne_zero hs)
+
+lemma isCriticalStripZetaZero_ne_one {s : ℂ}
+    (hs : IsCriticalStripZetaZero s) : s ≠ 1 :=
+  fun h => (lt_irrefl (1 : ℝ)) (by
+    have : s.re = 1 := by simp [h]
+    linarith [hs.2.2, this])
+
+lemma mem_rect_of_criticalStrip {X : ℝ} {z : ℂ}
+    (hz : IsCriticalStripZetaZero z) (him : |z.im| ≤ X) :
+    z ∈ riemannZetaZerosOnClosedRect 0 1 X := by
+  refine mem_riemannZetaZerosOnClosedRect.mpr ⟨?_, hz.1,
+    isCriticalStripZetaZero_ne_one hz⟩
+  exact mem_zetaClosedRect.mpr ⟨le_of_lt hz.2.1, le_of_lt hz.2.2,
+    (abs_le.mp him).1, (abs_le.mp him).2⟩
+
+lemma isCriticalStrip_of_mem_rect {X : ℝ} {z : ℂ}
+    (hz : z ∈ riemannZetaZerosOnClosedRect 0 1 X) :
+    IsCriticalStripZetaZero z := by
+  have hz' := mem_riemannZetaZerosOnClosedRect.mp hz
+  have hrect := mem_zetaClosedRect.mp hz'.1
+  have h0 : 0 < z.re :=
+    lt_of_le_of_ne hrect.1 fun h0 =>
+      riemannZeta_ne_zero_of_re_eq_zero h0.symm hz'.2.1
+  have h1 : z.re < 1 :=
+    lt_of_le_of_ne hrect.2.1 fun h1 =>
+      riemannZeta_ne_zero_of_one_le_re (le_of_eq h1.symm) hz'.2.1
+  exact ⟨hz'.2.1, h0, h1⟩
+
+lemma exists_dyadic_index {x : ℝ} (hx : 1 ≤ x) :
+    ∃ j : ℕ, (2 : ℝ) ^ j ≤ x ∧ x < (2 : ℝ) ^ (j + 1) := by
+  have hx0 : 0 ≤ x := le_trans (by norm_num : (0 : ℝ) ≤ 1) hx
+  set n := Nat.floor x
+  have hn_le : (n : ℝ) ≤ x := Nat.floor_le hx0
+  have hx_lt : x < (n : ℝ) + 1 := Nat.lt_floor_add_one x
+  have hn1 : 1 ≤ n := (Nat.le_floor_iff hx0).mpr (by exact_mod_cast hx)
+  have hn0 : n ≠ 0 := Nat.pos_iff_ne_zero.mp (Nat.succ_le_iff.mp hn1)
+  refine ⟨Nat.log 2 n, ?_, ?_⟩
+  · have hnat : (2 : ℕ) ^ Nat.log 2 n ≤ n := Nat.pow_log_le_self 2 hn0
+    have : (2 : ℝ) ^ Nat.log 2 n ≤ (n : ℝ) := by exact_mod_cast hnat
+    linarith
+  · have hlt := Nat.lt_pow_succ_log_self (by norm_num : (1 : ℕ) < 2) n
+    have hnat : n + 1 ≤ 2 ^ (Nat.log 2 n + 1) := Nat.succ_le_of_lt hlt
+    have : (n : ℝ) + 1 ≤ (2 : ℝ) ^ (Nat.log 2 n + 1) := by exact_mod_cast hnat
+    linarith
+
+noncomputable def zetaZeroCompactBlock : Finset ℂ :=
+  (riemannZetaZerosOnClosedRect 0 1 1).filter fun z => |z.im| < 1
+
+noncomputable def zetaZeroDyadicBlock (j : ℕ) : Finset ℂ :=
+  (riemannZetaZerosOnClosedRect 0 1 ((2 : ℝ) ^ (j + 1))).filter fun z =>
+    (2 : ℝ) ^ j ≤ |z.im| ∧ |z.im| < (2 : ℝ) ^ (j + 1)
+
+lemma mem_compactBlock {z : ℂ} :
+    z ∈ zetaZeroCompactBlock ↔
+      z ∈ riemannZetaZerosOnClosedRect 0 1 1 ∧ |z.im| < 1 :=
+  Finset.mem_filter
+
+lemma mem_dyadicBlock {j : ℕ} {z : ℂ} :
+    z ∈ zetaZeroDyadicBlock j ↔
+      z ∈ riemannZetaZerosOnClosedRect 0 1 ((2 : ℝ) ^ (j + 1)) ∧
+        (2 : ℝ) ^ j ≤ |z.im| ∧ |z.im| < (2 : ℝ) ^ (j + 1) :=
+  Finset.mem_filter
+
+lemma isCritical_of_mem_compact {z : ℂ} (hz : z ∈ zetaZeroCompactBlock) :
+    IsCriticalStripZetaZero z :=
+  isCriticalStrip_of_mem_rect (mem_compactBlock.mp hz).1
+
+lemma isCritical_of_mem_dyadic {j : ℕ} {z : ℂ}
+    (hz : z ∈ zetaZeroDyadicBlock j) :
+    IsCriticalStripZetaZero z :=
+  isCriticalStrip_of_mem_rect (mem_dyadicBlock.mp hz).1
+
+lemma mem_compact_or_dyadic {z : ℂ} (hz : IsCriticalStripZetaZero z) :
+    z ∈ zetaZeroCompactBlock ∨ ∃ j : ℕ, z ∈ zetaZeroDyadicBlock j := by
+  by_cases h : |z.im| < 1
+  · refine Or.inl (mem_compactBlock.mpr ⟨?_, h⟩)
+    exact mem_rect_of_criticalStrip hz (le_of_lt h)
+  · have h1 : 1 ≤ |z.im| := le_of_not_gt h
+    obtain ⟨j, hj0, hj1⟩ := exists_dyadic_index h1
+    refine Or.inr ⟨j, mem_dyadicBlock.mpr ⟨?_, hj0, hj1⟩⟩
+    exact mem_rect_of_criticalStrip hz (le_of_lt hj1)
+
+lemma stripZeros_eq_blocks :
+    {z : ℂ | IsCriticalStripZetaZero z} =
+      (zetaZeroCompactBlock : Set ℂ) ∪
+        ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ) := by
+  ext z
+  constructor
+  · intro hz
+    rcases mem_compact_or_dyadic hz with h | ⟨j, hj⟩
+    · exact Or.inl h
+    · exact Or.inr ⟨zetaZeroDyadicBlock j, ⟨j, rfl⟩, hj⟩
+  · intro hz
+    rcases hz with h | h
+    · exact isCritical_of_mem_compact h
+    · obtain ⟨s, ⟨j, rfl⟩, hzj⟩ := h
+      exact isCritical_of_mem_dyadic hzj
+
+lemma dyadicBlock_norm_ge {j : ℕ} {z : ℂ}
+    (hz : z ∈ zetaZeroDyadicBlock j) :
+    (2 : ℝ) ^ j ≤ ‖z‖ := by
+  have him := (mem_dyadicBlock.mp hz).2.1
+  exact le_trans him (Complex.abs_im_le_norm z)
+
+lemma inv_sq_le_dyadic {j : ℕ} {z : ℂ}
+    (hz : z ∈ zetaZeroDyadicBlock j) :
+    (‖z‖ ^ 2)⁻¹ ≤ ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+  have hpos : 0 < ‖z‖ :=
+    isCriticalStripZetaZero_norm_pos (isCritical_of_mem_dyadic hz)
+  have hge := dyadicBlock_norm_ge hz
+  have h2 : 0 < (2 : ℝ) ^ j := pow_pos (by norm_num) _
+  have hsq : ((2 : ℝ) ^ j) ^ 2 ≤ ‖z‖ ^ 2 :=
+    sq_le_sq.mpr (by simpa [abs_of_pos h2, abs_of_pos hpos] using hge)
+  have hinv : (‖z‖ ^ 2)⁻¹ ≤ (((2 : ℝ) ^ j) ^ 2)⁻¹ :=
+    (inv_le_inv₀ (sq_pos_of_pos hpos) (sq_pos_of_pos h2)).mpr hsq
+  have hrew : (((2 : ℝ) ^ j) ^ 2)⁻¹ = ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+    simp [inv_pow]
+  exact hinv.trans_eq hrew
+
+lemma two_pow_cast (j : ℕ) : ((2 : ℕ) : ℝ) ^ j = (2 : ℝ) ^ j := by
+  simp
+
+lemma log_dyadic_height_le (j : ℕ) :
+    1 + Real.log (2 + (2 : ℝ) ^ (j + 1)) ≤ 2 * ((j : ℝ) + 2) := by
+  have h2 : (2 : ℝ) + (2 : ℝ) ^ (j + 1) ≤ (2 : ℝ) ^ (j + 2) := by
+    have hpow : (2 : ℝ) ^ (j + 2) = 2 * (2 : ℝ) ^ (j + 1) := by ring
+    have hone : (1 : ℝ) ≤ (2 : ℝ) ^ j := one_le_pow₀ (by norm_num)
+    have hge : (2 : ℝ) ≤ (2 : ℝ) ^ (j + 1) := by
+      have : (2 : ℝ) ^ (j + 1) = 2 * (2 : ℝ) ^ j := by ring
+      nlinarith [this, hone]
+    nlinarith [hpow, hge]
+  have hpos : 0 < 2 + (2 : ℝ) ^ (j + 1) := by positivity
+  have hlog : Real.log (2 + (2 : ℝ) ^ (j + 1)) ≤
+      Real.log ((2 : ℝ) ^ (j + 2)) :=
+    Real.log_le_log hpos h2
+  have hlogpow : Real.log ((2 : ℝ) ^ (j + 2)) = (j + 2 : ℝ) * Real.log 2 := by
+    simpa [Nat.cast_add, Nat.cast_ofNat] using Real.log_pow (2 : ℝ) (j + 2)
+  have hlog2 : Real.log 2 ≤ 1 := by
+    have := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+    linarith
+  nlinarith [hlog, hlogpow, hlog2]
+
+lemma dyadic_count_factor_le (j : ℕ) :
+    (1 + (2 : ℝ) ^ (j + 1)) * (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) *
+      ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤ 8 * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by
+  have ha : 0 < (2 : ℝ) ^ j := pow_pos (by norm_num) _
+  have ha1 : (1 : ℝ) ≤ (2 : ℝ) ^ j := one_le_pow₀ (by norm_num)
+  have h2j : (2 : ℝ) ^ (j + 1) = 2 * (2 : ℝ) ^ j := by ring
+  have hinv : ((2 : ℝ) ^ j)⁻¹ = (2 : ℝ)⁻¹ ^ j := (inv_pow (2 : ℝ) j).symm
+  have hrew : (1 + (2 : ℝ) ^ (j + 1)) * ((2 : ℝ) ^ j)⁻¹ ^ 2 =
+      ((2 : ℝ) ^ j)⁻¹ ^ 2 + 2 * ((2 : ℝ) ^ j)⁻¹ := by
+    rw [h2j]
+    have hA : (2 * (2 : ℝ) ^ j) * ((2 : ℝ) ^ j)⁻¹ ^ 2 =
+        2 * ((2 : ℝ) ^ j)⁻¹ := by
+      field_simp [ha.ne']
+    rw [add_mul, one_mul, hA]
+  have hsmall : ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤ ((2 : ℝ) ^ j)⁻¹ := by
+    rw [pow_two]
+    exact mul_le_of_le_one_left (inv_nonneg.mpr (le_of_lt ha))
+      (inv_le_one_of_one_le₀ ha1)
+  have hprod : (1 + (2 : ℝ) ^ (j + 1)) * ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤
+      4 * (2 : ℝ)⁻¹ ^ j := by
+    rw [hrew, hinv]
+    nlinarith [hsmall]
+  have hlog := log_dyadic_height_le j
+  have hnnL : 0 ≤ 1 + Real.log (2 + (2 : ℝ) ^ (j + 1)) := by
+    have : (1 : ℝ) ≤ 2 + (2 : ℝ) ^ (j + 1) := by
+      nlinarith [pow_nonneg (by norm_num : (0 : ℝ) ≤ 2) (j + 1)]
+    exact add_nonneg (by norm_num) (Real.log_nonneg this)
+  have hmul' :
+      ((1 + (2 : ℝ) ^ (j + 1)) * ((2 : ℝ) ^ j)⁻¹ ^ 2) *
+          (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) ≤
+        (4 * (2 : ℝ)⁻¹ ^ j) * (2 * ((j : ℝ) + 2)) :=
+    mul_le_mul hprod hlog hnnL (mul_nonneg (by norm_num) (by positivity))
+  have hassoc :
+      (1 + (2 : ℝ) ^ (j + 1)) * (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) *
+          ((2 : ℝ) ^ j)⁻¹ ^ 2 =
+        ((1 + (2 : ℝ) ^ (j + 1)) * ((2 : ℝ) ^ j)⁻¹ ^ 2) *
+          (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) := by ring
+  have h8 : (4 * (2 : ℝ)⁻¹ ^ j) * (2 * ((j : ℝ) + 2)) =
+      8 * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by ring
+  rw [hassoc]
+  exact hmul'.trans_eq h8
+
+noncomputable def zetaZeroInvSqBlockBound : ℝ :=
+  8 * zetaZeroCountUpToXBoundConst
+
+lemma zetaZeroInvSqBlockBound_nonneg : 0 ≤ zetaZeroInvSqBlockBound :=
+  mul_nonneg (by norm_num) (le_of_lt zetaZeroCountUpToXBoundConst_pos)
+
+lemma dyadicBlock_inv_sq_sum_le (j : ℕ) :
+    ∑ z ∈ zetaZeroDyadicBlock j, (‖z‖ ^ 2)⁻¹ ≤
+      zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by
+  set B := zetaZeroDyadicBlock j
+  have hX : 0 ≤ (2 : ℝ) ^ (j + 1) := pow_nonneg (by norm_num) _
+  have hcard := card_zeros_le ((2 : ℝ) ^ (j + 1)) hX
+  have hBcard : (B.card : ℝ) ≤
+      ((riemannZetaZerosOnClosedRect 0 1 ((2 : ℝ) ^ (j + 1))).card : ℝ) :=
+    Nat.cast_le.mpr (Finset.card_le_card (Finset.filter_subset _ _))
+  have hterm : ∀ z ∈ B, (‖z‖ ^ 2)⁻¹ ≤ ((2 : ℝ) ^ j)⁻¹ ^ 2 :=
+    fun z hz => inv_sq_le_dyadic hz
+  have hsum : ∑ z ∈ B, (‖z‖ ^ 2)⁻¹ ≤
+      (B.card : ℝ) * ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+    have := Finset.sum_le_card_nsmul B (fun z => (‖z‖ ^ 2)⁻¹)
+      (((2 : ℝ) ^ j)⁻¹ ^ 2) hterm
+    simpa [nsmul_eq_mul] using this
+  have hC := le_of_lt zetaZeroCountUpToXBoundConst_pos
+  have hL : 0 ≤ 1 + Real.log (2 + (2 : ℝ) ^ (j + 1)) := by
+    have : (1 : ℝ) ≤ 2 + (2 : ℝ) ^ (j + 1) := by
+      nlinarith [pow_nonneg (by norm_num : (0 : ℝ) ≤ 2) (j + 1)]
+    exact add_nonneg (by norm_num) (Real.log_nonneg this)
+  have hpack : (B.card : ℝ) * ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤
+      zetaZeroCountUpToXBoundConst * (1 + (2 : ℝ) ^ (j + 1)) *
+        (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) * ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+    have h1 := hBcard.trans hcard
+    exact mul_le_mul_of_nonneg_right h1 (sq_nonneg _)
+  have hfac := dyadic_count_factor_le j
+  have hfin :
+      zetaZeroCountUpToXBoundConst * (1 + (2 : ℝ) ^ (j + 1)) *
+          (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) * ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤
+        zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by
+    have := mul_le_mul_of_nonneg_left hfac hC
+    unfold zetaZeroInvSqBlockBound
+    nlinarith [this]
+  exact hsum.trans (hpack.trans hfin)
+
+lemma summable_nat_succ_mul_two_pow_neg :
+    Summable fun j : ℕ => ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by
+  have hr : ‖(2 : ℝ)⁻¹‖ < 1 := by norm_num
+  have hpow : Summable fun n : ℕ => (n : ℝ) ^ 1 * (2 : ℝ)⁻¹ ^ n :=
+    summable_pow_mul_geometric_of_norm_lt_one 1 hr
+  have hgeo : Summable fun n : ℕ => (2 : ℝ)⁻¹ ^ n :=
+    summable_geometric_of_lt_one (by norm_num) (by norm_num)
+  have h1 : Summable fun n : ℕ => (n : ℝ) * (2 : ℝ)⁻¹ ^ n := by
+    simpa using hpow
+  have h2 : Summable fun n : ℕ => (2 : ℝ) * (2 : ℝ)⁻¹ ^ n :=
+    hgeo.mul_left 2
+  convert h1.add h2 using 1
+  ext j
+  ring
+
+lemma summable_dyadic_block_majorant :
+    Summable fun j : ℕ =>
+      zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j := by
+  convert (summable_nat_succ_mul_two_pow_neg).mul_left zetaZeroInvSqBlockBound using 1
+  ext j
+  ring
+
+lemma inv_sq_nonneg (z : ℂ) : 0 ≤ (‖z‖ ^ 2)⁻¹ :=
+  inv_nonneg.mpr (sq_nonneg _)
+
+noncomputable def invSqStripZero (z : ℂ) : ℝ≥0∞ :=
+  if IsCriticalStripZetaZero z then ENNReal.ofReal (‖z‖ ^ 2)⁻¹ else 0
+
+lemma invSqStripZero_eq_ofReal {z : ℂ} (hz : IsCriticalStripZetaZero z) :
+    invSqStripZero z = ENNReal.ofReal (‖z‖ ^ 2)⁻¹ :=
+  if_pos hz
+
+lemma invSqStripZero_eq_zero {z : ℂ} (hz : ¬ IsCriticalStripZetaZero z) :
+    invSqStripZero z = 0 :=
+  if_neg hz
+
+lemma tsum_invSq_compact :
+    ∑' z : (zetaZeroCompactBlock : Set ℂ), invSqStripZero z =
+      ∑ z ∈ zetaZeroCompactBlock, invSqStripZero z := by
+  rw [← Finset.tsum_subtype zetaZeroCompactBlock invSqStripZero]
+  rfl
+
+lemma tsum_invSq_dyadic (j : ℕ) :
+    ∑' z : (zetaZeroDyadicBlock j : Set ℂ), invSqStripZero z =
+      ∑ z ∈ zetaZeroDyadicBlock j, invSqStripZero z := by
+  rw [← Finset.tsum_subtype (zetaZeroDyadicBlock j) invSqStripZero]
+  rfl
+
+lemma sum_invSq_eq_ofReal (s : Finset ℂ)
+    (hs : ∀ z ∈ s, IsCriticalStripZetaZero z) :
+    ∑ z ∈ s, invSqStripZero z =
+      ENNReal.ofReal (∑ z ∈ s, (‖z‖ ^ 2)⁻¹) := by
+  have hcongr : ∑ z ∈ s, invSqStripZero z =
+      ∑ z ∈ s, ENNReal.ofReal (‖z‖ ^ 2)⁻¹ :=
+    Finset.sum_congr rfl fun z hz => invSqStripZero_eq_ofReal (hs z hz)
+  rw [hcongr, ENNReal.ofReal_sum_of_nonneg fun z _ => inv_sq_nonneg z]
+
+lemma sum_invSq_compact_ne_top :
+    (∑ z ∈ zetaZeroCompactBlock, invSqStripZero z) ≠ ∞ := by
+  rw [sum_invSq_eq_ofReal _ fun z hz => isCritical_of_mem_compact hz]
+  exact ENNReal.ofReal_ne_top
+
+lemma sum_invSq_dyadic_le (j : ℕ) :
+    ∑ z ∈ zetaZeroDyadicBlock j, invSqStripZero z ≤
+      ENNReal.ofReal (zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j) := by
+  rw [sum_invSq_eq_ofReal _ fun z hz => isCritical_of_mem_dyadic hz]
+  exact ENNReal.ofReal_le_ofReal (dyadicBlock_inv_sq_sum_le j)
+
+lemma tsum_invSq_strip_le :
+    ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, invSqStripZero z ≤
+      ∑ z ∈ zetaZeroCompactBlock, invSqStripZero z +
+        ∑' j : ℕ, ENNReal.ofReal
+          (zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j) := by
+  have hunion := stripZeros_eq_blocks
+  have h1 :
+      ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, invSqStripZero z =
+        ∑' z : ↥((zetaZeroCompactBlock : Set ℂ) ∪
+            ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ)), invSqStripZero z :=
+    tsum_congr_set_coe _ hunion
+  have h2 := ENNReal.tsum_union_le invSqStripZero
+    (zetaZeroCompactBlock : Set ℂ)
+    (⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ))
+  have h3 := ENNReal.tsum_iUnion_le_tsum invSqStripZero
+    fun j : ℕ => (zetaZeroDyadicBlock j : Set ℂ)
+  have hcomp : ∑' z : (zetaZeroCompactBlock : Set ℂ), invSqStripZero z =
+      ∑ z ∈ zetaZeroCompactBlock, invSqStripZero z := tsum_invSq_compact
+  have hdy : ∑' j : ℕ, ∑' z : (zetaZeroDyadicBlock j : Set ℂ), invSqStripZero z ≤
+      ∑' j : ℕ, ENNReal.ofReal
+        (zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j) := by
+    refine ENNReal.tsum_le_tsum fun j => ?_
+    rw [tsum_invSq_dyadic]
+    exact sum_invSq_dyadic_le j
+  calc
+    ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, invSqStripZero z =
+        ∑' z : ↥((zetaZeroCompactBlock : Set ℂ) ∪
+            ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ)), invSqStripZero z := h1
+    _ ≤ ∑' z : (zetaZeroCompactBlock : Set ℂ), invSqStripZero z +
+          ∑' z : ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ), invSqStripZero z := h2
+    _ ≤ ∑ z ∈ zetaZeroCompactBlock, invSqStripZero z +
+          ∑' j : ℕ, ∑' z : (zetaZeroDyadicBlock j : Set ℂ), invSqStripZero z := by
+        rw [hcomp]; exact add_le_add le_rfl h3
+    _ ≤ ∑ z ∈ zetaZeroCompactBlock, invSqStripZero z +
+          ∑' j : ℕ, ENNReal.ofReal
+            (zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j) :=
+        add_le_add le_rfl hdy
+
+lemma tsum_dyadic_majorant_ne_top :
+    (∑' j : ℕ, ENNReal.ofReal
+        (zetaZeroInvSqBlockBound * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j)) ≠ ∞ := by
+  have hf : ∀ n : ℕ, 0 ≤
+      zetaZeroInvSqBlockBound * ((n : ℝ) + 2) * (2 : ℝ)⁻¹ ^ n := fun n =>
+    mul_nonneg (mul_nonneg zetaZeroInvSqBlockBound_nonneg (by nlinarith))
+      (pow_nonneg (by norm_num) _)
+  rw [← ENNReal.ofReal_tsum_of_nonneg hf summable_dyadic_block_majorant]
+  exact ENNReal.ofReal_ne_top
+
+lemma tsum_invSq_strip_ne_top :
+    (∑' z : {z : ℂ | IsCriticalStripZetaZero z}, invSqStripZero z) ≠ ∞ := by
+  have hle := tsum_invSq_strip_le
+  have h1 := sum_invSq_compact_ne_top
+  have h2 := tsum_dyadic_majorant_ne_top
+  exact ne_top_of_le_ne_top (ENNReal.add_ne_top.mpr ⟨h1, h2⟩) hle
+
+lemma tsum_ofReal_inv_sq_ne_top :
+    (∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+      ENNReal.ofReal (‖(ρ : ℂ)‖ ^ 2)⁻¹) ≠ ∞ := by
+  have heq :
+      (fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+        ENNReal.ofReal (‖(ρ : ℂ)‖ ^ 2)⁻¹) =
+        fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+          invSqStripZero ρ.val :=
+    funext fun ρ => (invSqStripZero_eq_ofReal ρ.property).symm
+  rw [heq]
+  exact tsum_invSq_strip_ne_top
+
+lemma summable_inv_sq_zetaZeros :
+    Summable fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+      (‖(ρ : ℂ)‖ ^ 2)⁻¹ := by
+  have htop := tsum_ofReal_inv_sq_ne_top
+  have hNN := ENNReal.summable_toNNReal_of_tsum_ne_top htop
+  refine (summable_congr fun ρ => ?_).mpr (NNReal.summable_coe.mpr hNN)
+  refine Eq.trans (ENNReal.toReal_ofReal (inv_sq_nonneg (ρ : ℂ))).symm ?_
+  rfl
+
+end ZetaZeroInvSq
+
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/

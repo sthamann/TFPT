@@ -449,8 +449,10 @@ proves the disk card
 r512 proves the height count
 (`zetaZeroCountUpToXBound`) on the critical-strip
 rectangle `[0,1]×[-X,X]` via the `r=13/8` disk
-(`w=5/8`) and FE pairing.  `∑ 1/|ρ|²` remains
-open.  Census stays 7.
+(`w=5/8`) and FE pairing.  r513 assembles the
+dyadic sum `∑ 1/|ρ|² < ∞`
+(`summable_inv_sq_zetaZeros`); [2c] counting is
+complete.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -567,6 +569,7 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms jensenDiskZeroCountBound
 #print axioms zetaZerosInDisk_card_le_inner
 #print axioms zetaZeroCountUpToXBound
+#print axioms summable_inv_sq_zetaZeros
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
