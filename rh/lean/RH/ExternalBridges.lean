@@ -346,6 +346,33 @@ def GridPoleHatIntegralIdentity : Prop :=
         (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
         (-R) R MeasureTheory.volume
 
+/-- r493c1: evenness split plus dyadic cell decomposition.  The two-sided
+pole-density integral equals twice the sum of the nonnegative cell
+integrals.  Each cell is the r493b affine integrand on
+`[d D0, (d+1) D0]` via `toFun_eq_affine_on_nonneg_cell`. -/
+theorem gridPoleIntegral_eq_two_mul_sum_cell
+    (f : GridElement) {R : ℝ} (hR : f.supportBound ≤ R) :
+    intervalIntegral
+        (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
+        (-R) R MeasureTheory.volume =
+      2 * ∑ d ∈ Finset.range f.steps,
+        intervalIntegral
+          (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
+          ((d : ℝ) * f.D0) (((d : ℝ) + 1) * f.D0)
+          MeasureTheory.volume := by
+  have hswap (a b : ℝ) :
+      intervalIntegral
+          (fun u : ℝ => fullWeilPoleWeight u * f.toFun u)
+          a b MeasureTheory.volume =
+        intervalIntegral
+          (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+          a b MeasureTheory.volume := by
+    refine intervalIntegral.integral_congr fun u _ => ?_
+    unfold fullWeilPoleWeight
+    ring
+  simp_rw [hswap]
+  exact f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell hR
+
 /-- The pointwise hat identity supplies the sequence-level pole
 dictionary used by channel continuity. -/
 theorem gridPoleIntegralIdentification_of_hat

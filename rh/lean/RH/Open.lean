@@ -455,6 +455,24 @@ integral over the sum, split each affine cell, and identify its
 `polePotential`.  No new sorry; repository census remains 8.
 NO RH CLAIM.
 
+## r493c1 census (evenness split + dyadic cell decomposition)
+
+PROVED: `GridElement.toFun_eq_affine_on_nonneg_cell`,
+`GridElement.intervalIntegral_toFun_mul_two_cosh_eq_two_mul`,
+`GridElement.intervalIntegral_toFun_mul_two_cosh_eq_sum_cell`,
+`GridElement.intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell`,
+and the weight-normalized wrapper
+`gridPoleIntegral_eq_two_mul_sum_cell`.  The even product
+`toFun × 2 cosh(·/2)` splits as `∫_{-R}^{R} = 2 ∫_0^R`; the
+nonnegative half decomposes as the adjacent-interval sum over the
+native cells `[d D0, (d+1) D0]` for `d < steps`, with the tail
+beyond `supportBound` vanishing.  Each cell integral is the r493b
+affine integrand via the closed-cell identity
+`toFun = cellIntercept d + cellSlope d · u`.  Step (iii) — rewrite
+`polePairingZ` as the one-sided ACF knot sum and match the evaluated
+primitives — is r493c2.  No new sorry; repository census remains 8.
+NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

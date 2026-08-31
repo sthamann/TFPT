@@ -114,6 +114,7 @@ import Mathlib.Analysis.SpecialFunctions.Sqrt
 import Mathlib.Analysis.SpecialFunctions.Gamma.Digamma
 import Mathlib.Analysis.SpecialFunctions.Trigonometric.DerivHyp
 import Mathlib.Analysis.Complex.Trigonometric
+import Mathlib.MeasureTheory.Function.Floor
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
 
 namespace RH
@@ -434,6 +435,243 @@ theorem toFun_eq_zero_of_lt_abs {u : ℝ} (hu : f.supportBound < |u|) :
   · rw [abs_of_nonpos h] at hu
     rw [← f.toFun_even]
     exact f.toFun_eq_zero hu
+
+/-- Closed-support vanishing: the interpolant is zero on the closing
+knot `|u| = supportBound` as well as outside. -/
+theorem toFun_eq_zero_of_supportBound_le {u : ℝ} (hu : f.supportBound ≤ |u|) :
+    f.toFun u = 0 := by
+  rcases lt_or_eq_of_le hu with hlt | heq
+  · exact f.toFun_eq_zero_of_lt_abs hlt
+  · have ht : |u| / f.D0 = (f.steps : ℝ) := by
+      rw [heq.symm]
+      unfold supportBound D0
+      field_simp
+    unfold toFun
+    have hfloor : ⌊|u| / f.D0⌋₊ = f.steps := by
+      rw [ht, Nat.floor_natCast]
+    rw [hfloor, f.acf_eq_zero le_rfl, f.acf_eq_zero (Nat.le_succ _)]
+    ring
+
+/-- Slope of the nonnegative closed cell `[d D0, (d+1) D0]`. -/
+noncomputable def cellSlope (d : ℕ) : ℝ :=
+  (f.acf (d + 1) - f.acf d) / f.D0
+
+/-- Intercept of the nonnegative closed cell `[d D0, (d+1) D0]`. -/
+noncomputable def cellIntercept (d : ℕ) : ℝ :=
+  f.acf d - (d : ℝ) * (f.acf (d + 1) - f.acf d)
+
+/-- On the nonnegative closed cell, `toFun` is the affine function
+`cellIntercept d + cellSlope d · u`.  This is the input shape of
+`intervalIntegral_affine_mul_two_cosh_half` (r493b). -/
+theorem toFun_eq_affine_on_nonneg_cell (d : ℕ) {u : ℝ}
+    (hlo : (d : ℝ) * f.D0 ≤ u) (hhi : u ≤ ((d : ℝ) + 1) * f.D0) :
+    f.toFun u = f.cellIntercept d + f.cellSlope d * u := by
+  have hu : 0 ≤ u :=
+    le_trans (mul_nonneg (Nat.cast_nonneg _) f.D0_pos.le) hlo
+  have ht0 : 0 ≤ u / f.D0 := div_nonneg hu f.D0_pos.le
+  have hd : (d : ℝ) ≤ u / f.D0 := (le_div_iff₀ f.D0_pos).mpr hlo
+  have hu' : u / f.D0 ≤ (d : ℝ) + 1 := (div_le_iff₀ f.D0_pos).mpr hhi
+  have hD0 : f.D0 ≠ 0 := f.D0_pos.ne'
+  by_cases hlt : u / f.D0 < (d : ℝ) + 1
+  · have hfloor : ⌊u / f.D0⌋₊ = d := (Nat.floor_eq_iff ht0).2 ⟨hd, hlt⟩
+    unfold toFun cellIntercept cellSlope
+    rw [abs_of_nonneg hu, hfloor]
+    field_simp [hD0]
+    ring
+  · have heq : u / f.D0 = (d : ℝ) + 1 := le_antisymm hu' (le_of_not_gt hlt)
+    have hfloor : ⌊u / f.D0⌋₊ = d + 1 := by
+      rw [heq, ← Nat.cast_succ d, Nat.floor_natCast]
+    have hto : f.toFun u = f.acf (d + 1) := by
+      unfold toFun
+      rw [abs_of_nonneg hu, hfloor, heq, Nat.cast_succ]
+      ring
+    have huD : u = ((d : ℝ) + 1) * f.D0 := (div_eq_iff hD0).mp heq
+    have haff : f.cellIntercept d + f.cellSlope d * u = f.acf (d + 1) := by
+      unfold cellIntercept cellSlope
+      rw [huD]
+      field_simp [hD0]
+      ring
+    rw [hto, haff]
+
+/-- Pointwise bound used for interval-integrability of `toFun`. -/
+lemma acf_abs_le_sum (k : ℕ) :
+    |f.acf k| ≤ ∑ d ∈ Finset.range (f.steps + 2), |f.acf d| := by
+  by_cases hk : k < f.steps + 2
+  · exact Finset.single_le_sum (fun i _ => abs_nonneg (f.acf i))
+      (Finset.mem_range.mpr hk)
+  · have : f.steps ≤ k := by omega
+    rw [f.acf_eq_zero this, abs_zero]
+    exact Finset.sum_nonneg fun _ _ => abs_nonneg _
+
+lemma toFun_abs_le (u : ℝ) :
+    |f.toFun u| ≤ 3 * ∑ d ∈ Finset.range (f.steps + 2), |f.acf d| := by
+  set t : ℝ := |u| / f.D0
+  set q : ℕ := ⌊t⌋₊
+  have ht0 : 0 ≤ t := div_nonneg (abs_nonneg _) f.D0_pos.le
+  have hfrac : |t - (q : ℝ)| ≤ 1 := by
+    have h0 : 0 ≤ t - (q : ℝ) := sub_nonneg.mpr (Nat.floor_le ht0)
+    have h1 : t - (q : ℝ) < 1 := by
+      have hlt := Nat.lt_floor_add_one t
+      simp [q] at hlt ⊢
+      linarith
+    exact abs_le.mpr ⟨by linarith, h1.le⟩
+  set Δ : ℝ := f.acf (q + 1) - f.acf q
+  have hto : f.toFun u = f.acf q + (t - q) * Δ := by
+    simp [toFun, t, q, Δ]
+  have htri : |f.acf q + (t - q) * Δ| ≤ |f.acf q| + |t - q| * |Δ| := by
+    simpa [abs_mul] using abs_add_le (f.acf q) ((t - q) * Δ)
+  have hprod : |t - q| * |Δ| ≤ |f.acf (q + 1)| + |f.acf q| :=
+    calc
+      |t - q| * |Δ| ≤ 1 * |Δ| :=
+        mul_le_mul_of_nonneg_right hfrac (abs_nonneg _)
+      _ = |Δ| := one_mul _
+      _ ≤ |f.acf (q + 1)| + |f.acf q| := by
+        simpa [Δ, sub_eq_add_neg, abs_neg] using
+          abs_add_le (f.acf (q + 1)) (-f.acf q)
+  have hfin : |f.acf q + (t - q) * Δ| ≤
+      2 * |f.acf q| + |f.acf (q + 1)| := by
+    linarith [htri, hprod]
+  rw [hto]
+  refine hfin.trans ?_
+  have hq := f.acf_abs_le_sum q
+  have hq1 := f.acf_abs_le_sum (q + 1)
+  linarith
+
+lemma measurable_toFun : Measurable f.toFun := by
+  have hacf : Measurable f.acf := measurable_from_nat
+  have hfloor : Measurable fun u : ℝ => ⌊|u| / f.D0⌋₊ := by fun_prop
+  have hfloor1 : Measurable fun u : ℝ => ⌊|u| / f.D0⌋₊ + 1 :=
+    hfloor.add_const 1
+  have hcast : Measurable fun n : ℕ => (n : ℝ) := measurable_from_nat
+  have ht : Measurable fun u : ℝ => |u| / f.D0 := by fun_prop
+  unfold toFun
+  exact (hacf.comp hfloor).add <|
+    (ht.sub (hcast.comp hfloor)).mul <|
+      (hacf.comp hfloor1).sub (hacf.comp hfloor)
+
+lemma intervalIntegrable_toFun (a b : ℝ) :
+    IntervalIntegrable f.toFun MeasureTheory.volume a b := by
+  rw [intervalIntegrable_iff]
+  refine MeasureTheory.IntegrableOn.of_bound ?_
+      f.measurable_toFun.aestronglyMeasurable
+      (3 * ∑ d ∈ Finset.range (f.steps + 2), |f.acf d|) ?_
+  · rw [Real.volume_uIoc]
+    exact ENNReal.ofReal_lt_top
+  · exact Filter.Eventually.of_forall fun u => f.toFun_abs_le u
+
+lemma intervalIntegrable_toFun_mul_two_cosh (a b : ℝ) :
+    IntervalIntegrable
+      (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+      MeasureTheory.volume a b :=
+  (f.intervalIntegrable_toFun a b).mul_continuousOn (by fun_prop)
+
+lemma toFun_mul_two_cosh_even (u : ℝ) :
+    f.toFun (-u) * (2 * Real.cosh ((-u) / 2)) =
+      f.toFun u * (2 * Real.cosh (u / 2)) := by
+  rw [f.toFun_even, neg_div, Real.cosh_neg]
+
+/-- Evenness split (r493c1): `∫_{-R}^{R} g(u)·2cosh(u/2) du = 2 ∫_0^R`
+for the even product `toFun × 2 cosh(·/2)`. -/
+theorem intervalIntegral_toFun_mul_two_cosh_eq_two_mul {R : ℝ} (hR : 0 ≤ R) :
+    intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        (-R) R MeasureTheory.volume =
+      2 * intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        0 R MeasureTheory.volume := by
+  set g : ℝ → ℝ := fun u => f.toFun u * (2 * Real.cosh (u / 2))
+  have hint : IntervalIntegrable g MeasureTheory.volume (-R) R :=
+    f.intervalIntegrable_toFun_mul_two_cosh (-R) R
+  have h0R : IntervalIntegrable g MeasureTheory.volume 0 R :=
+    hint.mono_set <| by
+      rw [Set.uIcc_of_le hR, Set.uIcc_of_le (neg_le_self hR)]
+      exact Set.Icc_subset_Icc (neg_nonpos.mpr hR) le_rfl
+  have hneg : IntervalIntegrable g MeasureTheory.volume (-R) 0 :=
+    hint.mono_set <| by
+      rw [Set.uIcc_of_le (neg_nonpos.mpr hR), Set.uIcc_of_le (neg_le_self hR)]
+      exact Set.Icc_subset_Icc le_rfl hR
+  have hadd := intervalIntegral.integral_add_adjacent_intervals hneg h0R
+  have hcomp :
+      intervalIntegral (fun u => g (-u)) (-R) 0 MeasureTheory.volume =
+        intervalIntegral g 0 R MeasureTheory.volume := by
+    rw [intervalIntegral.integral_comp_neg (f := g)]
+    simp
+  have hcongr :
+      intervalIntegral (fun u => g (-u)) (-R) 0 MeasureTheory.volume =
+        intervalIntegral g (-R) 0 MeasureTheory.volume := by
+    apply intervalIntegral.integral_congr
+    intro u _
+    exact f.toFun_mul_two_cosh_even u
+  have hleft : intervalIntegral g (-R) 0 MeasureTheory.volume =
+      intervalIntegral g 0 R MeasureTheory.volume :=
+    hcongr.symm.trans hcomp
+  have : intervalIntegral g (-R) R MeasureTheory.volume =
+      intervalIntegral g 0 R MeasureTheory.volume +
+        intervalIntegral g 0 R MeasureTheory.volume := by
+    rw [← hadd, hleft]
+  rw [this, two_mul]
+
+/-- Dyadic cell decomposition of the nonnegative half (r493c1):
+`∫_0^R = ∑_{d < steps} ∫_{d D0}^{(d+1) D0}` once `supportBound ≤ R`.
+Each cell integral is the r493b affine integrand on that interval. -/
+theorem intervalIntegral_toFun_mul_two_cosh_eq_sum_cell {R : ℝ}
+    (hR : f.supportBound ≤ R) :
+    intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        0 R MeasureTheory.volume =
+      ∑ d ∈ Finset.range f.steps,
+        intervalIntegral
+          (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+          ((d : ℝ) * f.D0) (((d : ℝ) + 1) * f.D0) MeasureTheory.volume := by
+  set g : ℝ → ℝ := fun u => f.toFun u * (2 * Real.cosh (u / 2))
+  have hsucc (d : ℕ) :
+      ((d : ℝ) + 1) * f.D0 = ((d + 1 : ℕ) : ℝ) * f.D0 := by
+    rw [Nat.cast_succ]
+  have hsum :=
+    intervalIntegral.sum_integral_adjacent_intervals
+      (f := g) (μ := MeasureTheory.volume) (n := f.steps)
+      (a := fun k : ℕ => (k : ℝ) * f.D0)
+      (fun k _ => f.intervalIntegrable_toFun_mul_two_cosh _ _)
+  have hsum' :
+      ∑ d ∈ Finset.range f.steps,
+          intervalIntegral g ((d : ℝ) * f.D0) (((d + 1 : ℕ) : ℝ) * f.D0)
+            MeasureTheory.volume =
+        intervalIntegral g 0 f.supportBound MeasureTheory.volume := by
+    convert hsum
+    simp
+  have h0s : IntervalIntegrable g MeasureTheory.volume 0 f.supportBound :=
+    f.intervalIntegrable_toFun_mul_two_cosh _ _
+  have htail : IntervalIntegrable g MeasureTheory.volume f.supportBound R :=
+    f.intervalIntegrable_toFun_mul_two_cosh _ _
+  have hadd := intervalIntegral.integral_add_adjacent_intervals h0s htail
+  have htail0 : intervalIntegral g f.supportBound R MeasureTheory.volume = 0 := by
+    have hz : Set.EqOn g (fun _ => (0 : ℝ)) (Set.uIcc f.supportBound R) := by
+      intro u hu
+      rw [Set.uIcc_of_le hR] at hu
+      have hu0 : 0 ≤ u := le_trans f.supportBound_nonneg hu.1
+      have habs : f.supportBound ≤ |u| := by
+        rw [abs_of_nonneg hu0]
+        exact hu.1
+      change f.toFun u * (2 * Real.cosh (u / 2)) = 0
+      rw [f.toFun_eq_zero_of_supportBound_le habs, zero_mul]
+    rw [intervalIntegral.integral_congr hz, intervalIntegral.integral_zero]
+  simp_rw [hsucc]
+  rw [← hadd, htail0, add_zero, hsum']
+
+/-- Combined r493c1 identity: the two-sided pole-density integral is
+twice the sum of the nonnegative dyadic cell integrals. -/
+theorem intervalIntegral_toFun_mul_two_cosh_eq_two_mul_sum_cell {R : ℝ}
+    (hR : f.supportBound ≤ R) :
+    intervalIntegral
+        (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+        (-R) R MeasureTheory.volume =
+      2 * ∑ d ∈ Finset.range f.steps,
+        intervalIntegral
+          (fun u : ℝ => f.toFun u * (2 * Real.cosh (u / 2)))
+          ((d : ℝ) * f.D0) (((d : ℝ) + 1) * f.D0) MeasureTheory.volume := by
+  have hR0 : 0 ≤ R := le_trans f.supportBound_nonneg hR
+  rw [f.intervalIntegral_toFun_mul_two_cosh_eq_two_mul hR0,
+    f.intervalIntegral_toFun_mul_two_cosh_eq_sum_cell hR]
 
 /-- **the predefined elementwise anchor onset** (R325 target form)
 (ii)): computed from the element's support parameter ALONE, before
