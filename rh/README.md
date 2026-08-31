@@ -6953,6 +6953,18 @@ plus `rh/problem/carleson_edgeband.tex` (+ PDF +
 Not a Carleson law, not $\lambda_*$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+
+**Filon enclosure (r483,
+PRIME.RDAGGER.FILON\_ENCLOSURE.01).**
+Sealed probe
+`experiments/tfpt-discovery/filon_enclosure_probe.py`
+(smoke 17/17, full 27/27, SPEC\_SHA `54613b4a2a038342`)
+plus `rh/problem/filon_enclosure.tex` (+ PDF +
+`verify_filon_enclosure.py`, 6/6, `FILON_ENCLOSURE VERIFIED -- REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4)`).
+**Regime REDUCED: finite $S$ interval-PD; leftover $C$ HS $2.74\cdot10^{-2}$ vs budget $2.4\cdot10^{-4}$.**
+Not $\lambda_*(0.3)\ge c$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7413,6 +7425,10 @@ rh/
 │   │                     (interval-FT+IBP-tail);
 │   │                     not lambda_*.  No RH claim
 │   ├── carleson_edgeband.tex(+pdf) — r482: STUCK
+│   ├── filon_enclosure.tex(+pdf) — r483: REDUCED
+│   │                     (finite-S-interval-PD;
+│   │                     leftover-C-HS vs budget);
+│   │                     not lambda_*.  No RH claim
 │   │                     (SR_FAILS_FINITE_CENSUS;
 │   │                     large-sieve=TARGET);
 │   │                     not lambda_*.  No RH claim
@@ -8641,6 +8657,14 @@ and the restricted large sieve is the target
 `run_rh.py`, and these status lines.  It does not
 touch Lean or `experiments/next.txt`.  Suite surface:
 integrity + probes (`run_rh.py --fast --skip-lean`).
+**r483 coexistence.** Round 483 (`filon_enclosure_probe.py`)
+encloses the two integral classes of the refined Schur
+and records the leftover-$C$ deficit
+(not lambda_*).  File domain is the probe, `filon_enclosure.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

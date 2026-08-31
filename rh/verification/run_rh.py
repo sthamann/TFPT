@@ -256,6 +256,7 @@ PROBES = [
     ("r480", "kappa_high_probe.py"),
     ("r481", "schur_cert_probe.py"),
     ("r482", "carleson_edgeband_probe.py"),
+    ("r483", "filon_enclosure_probe.py"),
 ]
 
 MODULES = [

@@ -4336,6 +4336,36 @@
       "bytes": 241820
     },
     {
+      "path": "rh/problem/filon_enclosure.tex",
+      "role": "problem_statement",
+      "round": "r483",
+      "ledger_ids": [],
+      "status": "classical Weil Filon enclosure of the two integral classes at L=0.3 (round 483, PRIME.RDAGGER.FILON_ENCLOSURE.01; experiments-side, NO ledger row): VERDICT REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  Filon [0,150] rem <=2.5e-5, midpoints hit r480/r481 to 1.7e-7.  Exp-sum Ci-to-inf KILL (lminS~-1.6).  4-term IBP tail keeps finite even S PD (Higham mu>=1.20e-3, would-be c_*=1.68e-4).  Leftover ||C||_F modes 12,14 = 2.76e-2 vs IBP-inflated budget 2.4e-4 (deficit factor ~115).  Not lambda_*(0.3)>=c.  Smoke 17/17, full 27/27, SPEC_SHA 54613b4a2a038342.  Companion rh/problem/filon_enclosure.tex + verify_filon_enclosure.py FILON_ENCLOSURE VERIFIED -- REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "08cb589ebb4958674ce21efee335c2490b0d1dc8bec101ac4a10a0496aee0fec",
+      "bytes": 9491
+    },
+    {
+      "path": "rh/problem/verify_filon_enclosure.py",
+      "role": "problem_check",
+      "round": "r483 companion",
+      "ledger_ids": [],
+      "status": "machine check of filon_enclosure.tex: note tokens (REDUCED, e^{2L}, Filon, leftover, Fourier-HS not reused, Yoshida--Bombieri, sign bookkeeping), smoke run, deficit pins.  6/6 gates, final line FILON_ENCLOSURE VERIFIED -- REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4)",
+      "pin": true,
+      "sha256": "ee832ae08e15692f1547aacfd47102049c4831dc8aaa8b2b6dfbe060bc67f4c1",
+      "bytes": 3181
+    },
+    {
+      "path": "rh/problem/filon_enclosure.pdf",
+      "role": "problem_statement",
+      "round": "r483",
+      "ledger_ids": [],
+      "status": "compiled PDF of filon_enclosure.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "d1e1eca03a4a435bd84a9130e1054067b01e271e13a3d949de8e19efeed7d35c",
+      "bytes": 434029
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -5532,6 +5562,16 @@
       "pin": true,
       "sha256": "17b0866114bb272da05feadb16bc6bed92a0ffca02b7b6128f0abd34ce0bcd3b",
       "bytes": 21777
+    },
+    {
+      "path": "experiments/tfpt-discovery/filon_enclosure_probe.py",
+      "role": "sealed_probe",
+      "round": "r483",
+      "ledger_ids": [],
+      "status": "classical Weil Filon enclosure of the two integral classes at L=0.3 (round 483, PRIME.RDAGGER.FILON_ENCLOSURE.01; experiments-side, NO ledger row): VERDICT REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  Filon [0,150] rem <=2.5e-5, midpoints hit r480/r481 to 1.7e-7.  Exp-sum Ci-to-inf KILL (lminS~-1.6).  4-term IBP tail keeps finite even S PD (Higham mu>=1.20e-3, would-be c_*=1.68e-4).  Leftover ||C||_F modes 12,14 = 2.76e-2 vs IBP-inflated budget 2.4e-4 (deficit factor ~115).  Not lambda_*(0.3)>=c.  Smoke 17/17, full 27/27, SPEC_SHA 54613b4a2a038342.  Companion rh/problem/filon_enclosure.tex + verify_filon_enclosure.py FILON_ENCLOSURE VERIFIED -- REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "56a3594d0e7b003155eefebbc9cc6ef824de6c70d7302d39070de9554b1c541f",
+      "bytes": 17741
     }
   ]
 }

@@ -2811,6 +2811,28 @@ _R481_STATUS = (
     "NO anti-RH claim"
 )
 
+_R483_STATUS = (
+    "classical Weil Filon enclosure of the two integral "
+    "classes at L=0.3 "
+    "(round 483, PRIME.RDAGGER.FILON_ENCLOSURE.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT REDUCED(finite-S-interval-PD; "
+    "leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  "
+    "Filon [0,150] rem <=2.5e-5, midpoints hit r480/r481 "
+    "to 1.7e-7.  Exp-sum Ci-to-inf KILL (lminS~-1.6).  "
+    "4-term IBP tail keeps finite even S PD "
+    "(Higham mu>=1.20e-3, would-be c_*=1.68e-4).  "
+    "Leftover ||C||_F modes 12,14 = 2.76e-2 vs IBP-inflated "
+    "budget 2.4e-4 (deficit factor ~115).  "
+    "Not lambda_*(0.3)>=c.  Smoke 17/17, full 27/27, "
+    "SPEC_SHA 54613b4a2a038342.  Companion "
+    "rh/problem/filon_enclosure.tex + "
+    "verify_filon_enclosure.py FILON_ENCLOSURE VERIFIED -- "
+    "REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, "
+    "NO anti-RH claim"
+)
+
 _R482_STATUS = (
     "classical Weil Carleson anatomy at the spectral edge "
     "(round 482, PRIME.RDAGGER.CARLESON_EDGEBAND.01; "
@@ -6715,6 +6737,28 @@ ENTRIES = [
      "compiled PDF of carleson_edgeband.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+
+    ("rh/problem/filon_enclosure.tex", "problem_statement",
+     "r483",
+     [],
+     _R483_STATUS,
+     True),
+    ("rh/problem/verify_filon_enclosure.py", "problem_check",
+     "r483 companion",
+     [],
+     "machine check of filon_enclosure.tex: note tokens "
+     "(REDUCED, e^{2L}, Filon, leftover, Fourier-HS not reused, "
+     "Yoshida--Bombieri, sign bookkeeping), smoke run, "
+     "deficit pins.  6/6 gates, "
+     "final line FILON_ENCLOSURE VERIFIED -- "
+     "REDUCED(finite-S-interval-PD; leftover-C-HS=2.74e-2-vs-budget-2.4e-4)",
+     True),
+    ("rh/problem/filon_enclosure.pdf", "problem_statement",
+     "r483",
+     [],
+     "compiled PDF of filon_enclosure.tex "
+     "(recompiled artefact, registered unpinned)", False),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
@@ -7290,6 +7334,11 @@ ENTRIES = [
      "r482",
      [],
      _R482_STATUS,
+     True),
+    (f"{EXP}/filon_enclosure_probe.py", "sealed_probe",
+     "r483",
+     [],
+     _R483_STATUS,
      True),
 ]
 
