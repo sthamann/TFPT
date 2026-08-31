@@ -46,6 +46,7 @@ import Mathlib.Analysis.Complex.LocallyUniformLimit
 import Mathlib.Analysis.Analytic.Uniqueness
 import Mathlib.Analysis.Complex.Convex
 import Mathlib.Analysis.Complex.JensenFormula
+import Mathlib.Analysis.Real.Pi.Bounds
 import Mathlib.MeasureTheory.Integral.CircleAverage
 import Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic
 
@@ -4730,20 +4731,448 @@ lemma zetaFractCellMajorant_nonneg {δ : ℝ} :
     0 ≤ zetaFractCellMajorant δ :=
   tsum_nonneg fun _ => Real.rpow_nonneg (Nat.cast_nonneg _) _
 
-set_option maxHeartbeats 800000
+/-- **r511 geometry.** On `|z-(2+iT)|=7/4` one has `Re z ≥ 1/4 > 1/8`. -/
+lemma re_gt_one_div_eight_of_mem_jensen_sphere {T : ℝ} {z : ℂ}
+    (hz : z ∈ Metric.sphere ((2 : ℂ) + T * I) (7 / 4)) :
+    (1 / 8 : ℝ) < z.re := by
+  have hdist : ‖z - ((2 : ℂ) + T * I)‖ = (7 / 4 : ℝ) := by
+    simpa [dist_eq_norm] using Metric.mem_sphere.mp hz
+  have hre : |z.re - 2| ≤ (7 / 4 : ℝ) := by
+    have h := abs_re_le_norm (z - ((2 : ℂ) + T * I))
+    have hre' : (z - ((2 : ℂ) + T * I)).re = z.re - 2 := by
+      simp [sub_re, add_re, mul_re, I_re]
+    rwa [hre', hdist] at h
+  have : (1 / 4 : ℝ) ≤ z.re := by
+    have := (abs_le.mp hre).1
+    linarith
+  linarith
 
-/-- Disk form of the r509 landing site. The tall-rectangle
-`C log(2+|T|)` statement was classically too strong (that is `N(T)`).
-Mathlib API: `MeromorphicOn.circleAverage_log_norm` and the
-zero-free case `AnalyticOnNhd.circleAverage_log_norm_of_ne_zero`,
-with averages in the `Real` namespace (`Real.circleAverage`).
-The holomorphic filling `riemannZetaMulSubOne` is the integrand;
-`mono_set` restricts meromorphy to the circle. Card assembly is r511. -/
+/-- **r511 geometry.** On `|z-(2+iT)|=7/4` one has `|z| ≤ 4+|T|`. -/
+lemma norm_le_four_add_abs_of_mem_jensen_sphere {T : ℝ} {z : ℂ}
+    (hz : z ∈ Metric.sphere ((2 : ℂ) + T * I) (7 / 4)) :
+    ‖z‖ ≤ 4 + |T| := by
+  set c := (2 : ℂ) + T * I
+  have hdist : ‖z - c‖ = (7 / 4 : ℝ) := by
+    simpa [dist_eq_norm, c] using Metric.mem_sphere.mp hz
+  have hzc : ‖z‖ ≤ ‖c‖ + 7 / 4 := by
+    have hzeq : z = c + (z - c) := by rw [add_comm, sub_add_cancel]
+    rw [hzeq]
+    calc
+      ‖c + (z - c)‖ ≤ ‖c‖ + ‖z - c‖ := norm_add_le _ _
+      _ = ‖c‖ + 7 / 4 := by rw [hdist]
+  have hc : ‖c‖ ≤ 2 + |T| := by
+    calc
+      ‖c‖ ≤ ‖(2 : ℂ)‖ + ‖T * I‖ := norm_add_le _ _
+      _ = 2 + |T| := by simp [c, norm_mul, Complex.norm_I]
+  nlinarith
+
+/-- **r511.** Filling bound on the Jensen circle; `δ = 1/8` (the
+leftmost point has `Re = 1/4`, so the strict `δ < Re` of r510
+forbids `δ = 1/4`). -/
+lemma norm_riemannZetaMulSubOne_le_on_jensen_sphere (T : ℝ) {z : ℂ}
+    (hz : z ∈ Metric.sphere ((2 : ℂ) + T * I) (7 / 4)) :
+    ‖riemannZetaMulSubOne z‖ ≤
+      (4 + |T|) + (4 + |T|) * (5 + |T|) * zetaFractCellMajorant (1 / 8) := by
+  have hδ : (0 : ℝ) < 1 / 8 := by norm_num
+  have hre := re_gt_one_div_eight_of_mem_jensen_sphere hz
+  have hnorm := norm_le_four_add_abs_of_mem_jensen_sphere hz
+  have hbound := norm_riemannZetaMulSubOne_le_of_re_gt hδ hre
+  have hCI : 0 ≤ zetaFractCellMajorant (1 / 8) := zetaFractCellMajorant_nonneg
+  have hz1 : ‖z‖ + 1 ≤ (4 + |T|) + 1 := by linarith [hnorm]
+  have h51 : (4 + |T|) + 1 = 5 + |T| := by ring
+  have hbound' : ‖riemannZetaMulSubOne z‖ ≤
+      ‖z‖ + ‖z‖ * (‖z‖ + 1) * zetaFractCellMajorant (1 / 8) := by
+    simpa [zetaFractCellMajorant] using hbound
+  have hprod : ‖z‖ * (‖z‖ + 1) * zetaFractCellMajorant (1 / 8) ≤
+      (4 + |T|) * (5 + |T|) * zetaFractCellMajorant (1 / 8) := by
+    rw [← h51]
+    exact mul_le_mul_of_nonneg_right
+      (mul_le_mul hnorm hz1 (add_nonneg (norm_nonneg z) zero_le_one)
+        (add_nonneg (by norm_num : (0 : ℝ) ≤ 4) (abs_nonneg T)))
+      hCI
+  exact hbound'.trans (add_le_add hnorm hprod)
+
+noncomputable def jensenSphereMajorant (T : ℝ) : ℝ :=
+  max 1 ((4 + |T|) + (4 + |T|) * (5 + |T|) * zetaFractCellMajorant (1 / 8))
+
+lemma one_le_jensenSphereMajorant (T : ℝ) : 1 ≤ jensenSphereMajorant T :=
+  le_max_left _ _
+
+lemma norm_riemannZetaMulSubOne_le_jensenSphereMajorant (T : ℝ) {z : ℂ}
+    (hz : z ∈ Metric.sphere ((2 : ℂ) + T * I) (7 / 4)) :
+    ‖riemannZetaMulSubOne z‖ ≤ jensenSphereMajorant T :=
+  (norm_riemannZetaMulSubOne_le_on_jensen_sphere T hz).trans (le_max_right _ _)
+
+lemma riemannZetaMulSubOne_center_ne_zero (T : ℝ) :
+    riemannZetaMulSubOne ((2 : ℂ) + T * I) ≠ 0 := by
+  have hζ2 : 0 < ‖riemannZeta 2‖ := by
+    rw [norm_riemannZeta_two]; positivity
+  exact norm_pos_iff.mp
+    (lt_of_lt_of_le (inv_pos.mpr hζ2) (norm_riemannZetaMulSubOne_center_ge T))
+
+lemma riemannZetaMulSubOne_meromorphicOn_closedBall (c : ℂ) (R : ℝ) :
+    MeromorphicOn riemannZetaMulSubOne (Metric.closedBall c |R|) :=
+  (AnalyticOnNhd.mono analyticOnNhd_riemannZetaMulSubOne
+    (Set.subset_univ _)).meromorphicOn
+
+lemma riemannZetaMulSubOne_divisor_center
+    (T : ℝ) :
+    MeromorphicOn.divisor riemannZetaMulSubOne
+        (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|)
+        ((2 : ℂ) + T * I) = 0 := by
+  set c := (2 : ℂ) + T * I
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hcmem : c ∈ Metric.closedBall c |7 / 4| :=
+    Metric.mem_closedBall_self (abs_nonneg _)
+  have hfc := riemannZetaMulSubOne_center_ne_zero T
+  rw [MeromorphicOn.divisor_apply hmer hcmem,
+    (analyticAt_riemannZetaMulSubOne c).meromorphicOrderAt_eq,
+    (analyticAt_riemannZetaMulSubOne c).analyticOrderAt_eq_zero.mpr hfc]
+  simp
+
+/-- **r511 (i).** Jensen identity for the filling on `D(2+iT, 7/4)`. -/
+lemma riemannZetaMulSubOne_jensen_identity (T : ℝ) :
+    Real.circleAverage (fun z => Real.log ‖riemannZetaMulSubOne z‖)
+        ((2 : ℂ) + T * I) (7 / 4) =
+      ∑ᶠ u, (MeromorphicOn.divisor riemannZetaMulSubOne
+          (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) u : ℝ) *
+        Real.log ((7 / 4 : ℝ) * ‖((2 : ℂ) + T * I) - u‖⁻¹) +
+      Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ := by
+  set c := (2 : ℂ) + T * I
+  have hR : (7 / 4 : ℝ) ≠ 0 := by norm_num
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hj := MeromorphicOn.circleAverage_log_norm (c := c) (R := (7 / 4 : ℝ))
+    hR hmer
+  have htrail :
+      meromorphicTrailingCoeffAt riemannZetaMulSubOne c =
+        riemannZetaMulSubOne c :=
+    (analyticAt_riemannZetaMulSubOne c).meromorphicTrailingCoeffAt_of_ne_zero
+      (riemannZetaMulSubOne_center_ne_zero T)
+  have hDc := riemannZetaMulSubOne_divisor_center T
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  simpa [c, htrail, hDc, hRabs, Int.cast_zero, zero_mul, add_zero] using hj
+
+lemma riemannZetaMulSubOne_circleIntegrable_log (T : ℝ) :
+    CircleIntegrable (fun z => Real.log ‖riemannZetaMulSubOne z‖)
+      ((2 : ℂ) + T * I) (7 / 4) := by
+  set c := (2 : ℂ) + T * I
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  exact circleIntegrable_log_norm_meromorphicOn
+    (hmer.mono_set (by rw [hRabs]; exact Metric.sphere_subset_closedBall))
+
+/-- **r511 (i).** `circleAverage log‖F‖ ≤ log M` via the constant function. -/
+lemma riemannZetaMulSubOne_jensen_avg_le (T : ℝ) :
+    Real.circleAverage (fun z => Real.log ‖riemannZetaMulSubOne z‖)
+        ((2 : ℂ) + T * I) (7 / 4) ≤
+      Real.log (jensenSphereMajorant T) := by
+  refine Real.circleAverage_mono_on_of_le_circle
+    (riemannZetaMulSubOne_circleIntegrable_log T) ?_
+  intro z hz
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  have hz' : z ∈ Metric.sphere ((2 : ℂ) + T * I) (7 / 4) := by
+    simpa [hRabs] using hz
+  by_cases hfz : riemannZetaMulSubOne z = 0
+  · rw [hfz, norm_zero, Real.log_zero]
+    exact Real.log_nonneg (one_le_jensenSphereMajorant T)
+  · exact Real.log_le_log (norm_pos_iff.mpr hfz)
+      (norm_riemannZetaMulSubOne_le_jensenSphereMajorant T hz')
+
+lemma riemannZetaMulSubOne_jensen_sum_le (T : ℝ) :
+    ∑ᶠ u, (MeromorphicOn.divisor riemannZetaMulSubOne
+        (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) u : ℝ) *
+      Real.log ((7 / 4 : ℝ) * ‖((2 : ℂ) + T * I) - u‖⁻¹) ≤
+      Real.log (jensenSphereMajorant T) -
+        Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ := by
+  have hid := riemannZetaMulSubOne_jensen_identity T
+  have havg := riemannZetaMulSubOne_jensen_avg_le T
+  linarith
+
+lemma riemannZetaMulSubOne_divisor_nonneg (T : ℝ) (u : ℂ) :
+    0 ≤ (MeromorphicOn.divisor riemannZetaMulSubOne
+      (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) u : ℝ) := by
+  set c := (2 : ℂ) + T * I
+  set U := Metric.closedBall c |7 / 4|
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  by_cases hu : u ∈ U
+  · by_cases hz : riemannZetaMulSubOne u = 0
+    · have hge := riemannZetaMulSubOne_divisor_ge_one_of_zero hz hmer hu
+      exact_mod_cast (le_trans (by norm_num : (0 : ℤ) ≤ 1) hge)
+    · have hAn := analyticAt_riemannZetaMulSubOne u
+      rw [MeromorphicOn.divisor_apply hmer hu, hAn.meromorphicOrderAt_eq,
+        hAn.analyticOrderAt_eq_zero.mpr hz]
+      simp
+  · have : MeromorphicOn.divisor riemannZetaMulSubOne U u = 0 := by
+      simp [MeromorphicOn.divisor_def, hu]
+    simp [this]
+
+lemma jensen_log_weight_nonneg (T : ℝ) {u : ℂ}
+    (hu : u ∈ Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) :
+    0 ≤ Real.log ((7 / 4 : ℝ) * ‖((2 : ℂ) + T * I) - u‖⁻¹) := by
+  set c := (2 : ℂ) + T * I
+  by_cases h : c = u
+  · subst h
+    simp
+  · have hpos : 0 < ‖c - u‖ := norm_pos_iff.mpr (sub_ne_zero.mpr h)
+    have hle : ‖c - u‖ ≤ (7 / 4 : ℝ) := by
+      have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+      have : ‖u - c‖ ≤ (7 / 4 : ℝ) := by
+        simpa [dist_eq_norm, c, hRabs] using Metric.mem_closedBall.mp hu
+      rwa [norm_sub_rev] at this
+    apply Real.log_nonneg
+    rw [← div_eq_mul_inv, le_div_iff₀ hpos]
+    simpa [mul_one] using hle
+
+lemma mem_jensen_support_of_mem_disk {T : ℝ} {z : ℂ}
+    (hz : z ∈ riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)) :
+    z ∈ (MeromorphicOn.divisor riemannZetaMulSubOne
+      (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|)).support := by
+  set c := (2 : ℂ) + T * I
+  have hz' := mem_riemannZetaZerosInClosedDisk.mp hz
+  have hrabs : |(3 / 2 : ℝ)| = (3 / 2 : ℝ) := abs_of_pos (by norm_num)
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  have hzF : riemannZetaMulSubOne z = 0 :=
+    riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩
+  have hzB : z ∈ Metric.closedBall c |7 / 4| := by
+    have : (3 / 2 : ℝ) ≤ (7 / 4 : ℝ) := by norm_num
+    have hzball : z ∈ Metric.closedBall c (3 / 2) := by
+      simpa [c, hrabs] using hz'.1
+    exact Metric.closedBall_subset_closedBall (by simpa [hRabs] using this) hzball
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hge := riemannZetaMulSubOne_divisor_ge_one_of_zero hzF hmer hzB
+  exact fun h0 => by linarith [hge, h0]
+
+/-- **r511 (ii)+(iii).** Inner zeros contribute at least `log(7/6)` each. -/
+lemma zetaZerosInDisk_card_mul_log_le (T : ℝ) :
+    ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card : ℝ) *
+        Real.log (7 / 6 : ℝ) ≤
+      ∑ᶠ u, (MeromorphicOn.divisor riemannZetaMulSubOne
+          (Metric.closedBall ((2 : ℂ) + T * I) |7 / 4|) u : ℝ) *
+        Real.log ((7 / 4 : ℝ) * ‖((2 : ℂ) + T * I) - u‖⁻¹) := by
+  set c := (2 : ℂ) + T * I
+  set D := MeromorphicOn.divisor riemannZetaMulSubOne (Metric.closedBall c |7 / 4|)
+  have hmer := riemannZetaMulSubOne_meromorphicOn_closedBall c (7 / 4)
+  have hfin : D.support.Finite :=
+    D.finiteSupport (isCompact_closedBall c |7 / 4|)
+  set s := hfin.toFinset
+  set Z := riemannZetaZerosInClosedDisk c (3 / 2)
+  have hRabs : |(7 / 4 : ℝ)| = (7 / 4 : ℝ) := abs_of_pos (by norm_num)
+  have hrabs : |(3 / 2 : ℝ)| = (3 / 2 : ℝ) := abs_of_pos (by norm_num)
+  have hZsub : Z ⊆ s := by
+    intro z hz
+    exact hfin.mem_toFinset.mpr (mem_jensen_support_of_mem_disk (by simpa [Z, c] using hz))
+  have htermnn : ∀ u ∈ s, 0 ≤ (D u : ℝ) *
+      Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) := by
+    intro u hu
+    have huB : u ∈ Metric.closedBall c |7 / 4| :=
+      D.supportWithinDomain (hfin.mem_toFinset.mp hu)
+    exact mul_nonneg (riemannZetaMulSubOne_divisor_nonneg T u)
+      (jensen_log_weight_nonneg T huB)
+  have hsupp :
+      (fun u => (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹)).support ⊆ s := by
+    intro u hu
+    have : D u ≠ 0 := by
+      intro h0
+      simp [h0] at hu
+    exact hfin.mem_toFinset.mpr this
+  have hleft :
+      ∑ z ∈ Z, Real.log (7 / 6 : ℝ) ≤
+        ∑ z ∈ Z, (D z : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) := by
+    refine Finset.sum_le_sum ?_
+    intro z hz
+    have hz' := mem_riemannZetaZerosInClosedDisk.mp (by simpa [Z, c] using hz)
+    have hzF : riemannZetaMulSubOne z = 0 :=
+      riemannZetaMulSubOne_eq_zero_iff.mpr ⟨hz'.2.1, hz'.2.2⟩
+    have hzB : z ∈ Metric.closedBall c |7 / 4| := by
+      have : (3 / 2 : ℝ) ≤ (7 / 4 : ℝ) := by norm_num
+      have hzball : z ∈ Metric.closedBall c (3 / 2) := by
+        simpa [c, hrabs] using hz'.1
+      exact Metric.closedBall_subset_closedBall (by simpa [hRabs] using this) hzball
+    have hge : (1 : ℝ) ≤ (D z : ℝ) := by
+      exact_mod_cast (riemannZetaMulSubOne_divisor_ge_one_of_zero hzF hmer hzB)
+    have hzc : z ≠ c := by
+      intro h
+      exact riemannZetaMulSubOne_center_ne_zero T (by simpa [c, h] using hzF)
+    have hpos : 0 < ‖c - z‖ := norm_pos_iff.mpr (sub_ne_zero.mpr hzc.symm)
+    have hle : ‖c - z‖ ≤ (3 / 2 : ℝ) := by
+      have : dist z c ≤ (3 / 2 : ℝ) := by
+        simpa [c, hrabs, Metric.mem_closedBall] using hz'.1
+      simpa [dist_eq_norm, norm_sub_rev] using this
+    have hlogle : Real.log (7 / 6 : ℝ) ≤
+        Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) := by
+      apply Real.log_le_log (by positivity)
+      rw [← div_eq_mul_inv, div_le_div_iff₀ (by positivity) hpos]
+      nlinarith
+    have hlogpos : 0 ≤ Real.log (7 / 6 : ℝ) :=
+      le_of_lt (Real.log_pos (by norm_num))
+    nlinarith [riemannZetaMulSubOne_divisor_nonneg T z]
+  have hmid :
+      ∑ z ∈ Z, (D z : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - z‖⁻¹) ≤
+        ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+    Finset.sum_le_sum_of_subset_of_nonneg hZsub fun u hu _ => htermnn u hu
+  have hcard : ∑ z ∈ Z, Real.log (7 / 6 : ℝ) =
+      (Z.card : ℝ) * Real.log (7 / 6 : ℝ) := by simp
+  have hfinsum :
+      ∑ᶠ u, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) =
+        ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+    finsum_eq_sum_of_support_subset _ hsupp
+  calc
+    (Z.card : ℝ) * Real.log (7 / 6 : ℝ) = ∑ z ∈ Z, Real.log (7 / 6 : ℝ) := hcard.symm
+    _ ≤ ∑ u ∈ s, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) :=
+      hleft.trans hmid
+    _ = ∑ᶠ u, (D u : ℝ) * Real.log ((7 / 4 : ℝ) * ‖c - u‖⁻¹) := hfinsum.symm
+
+noncomputable def jensenSphereMajorantCoeff : ℝ :=
+  2 + 6 * zetaFractCellMajorant (1 / 8)
+
+lemma jensenSphereMajorantCoeff_pos : 0 < jensenSphereMajorantCoeff := by
+  have hCI : 0 ≤ zetaFractCellMajorant (1 / 8) :=
+    zetaFractCellMajorant_nonneg
+  unfold jensenSphereMajorantCoeff
+  linarith
+
+lemma jensenSphereMajorant_le_coeff_mul_sq (T : ℝ) :
+    jensenSphereMajorant T ≤
+      jensenSphereMajorantCoeff * (2 + |T|) ^ 2 := by
+  set s := (2 : ℝ) + |T|
+  set CI := zetaFractCellMajorant (1 / 8)
+  have hs : (1 : ℝ) ≤ s := by nlinarith [abs_nonneg T]
+  have h4 : 4 + |T| ≤ 2 * s := by nlinarith [abs_nonneg T]
+  have h5 : 5 + |T| ≤ 3 * s := by nlinarith [abs_nonneg T]
+  have hCI : 0 ≤ CI := zetaFractCellMajorant_nonneg
+  have hpoly :
+      (4 + |T|) + (4 + |T|) * (5 + |T|) * CI ≤ 2 * s + (2 * s) * (3 * s) * CI := by
+    have ha : 0 ≤ 4 + |T| := add_nonneg (by norm_num) (abs_nonneg T)
+    have hb : 0 ≤ 5 + |T| := add_nonneg (by norm_num) (abs_nonneg T)
+    have hprod1 : (4 + |T|) * (5 + |T|) ≤ (2 * s) * (3 * s) :=
+      mul_le_mul h4 h5 hb (mul_nonneg (by norm_num) (le_trans zero_le_one hs))
+    have hprod : (4 + |T|) * (5 + |T|) * CI ≤ (2 * s) * (3 * s) * CI :=
+      mul_le_mul_of_nonneg_right hprod1 hCI
+    linarith
+  have hsimp : 2 * s + (2 * s) * (3 * s) * CI ≤ (2 + 6 * CI) * s ^ 2 := by
+    have hs2 : s ≤ s ^ 2 :=
+      calc
+        s = s * 1 := (mul_one s).symm
+        _ ≤ s * s := mul_le_mul_of_nonneg_left hs (le_trans zero_le_one hs)
+        _ = s ^ 2 := (sq s).symm
+    nlinarith [hCI]
+  have hpoly' : (4 + |T|) + (4 + |T|) * (5 + |T|) * CI ≤
+      jensenSphereMajorantCoeff * s ^ 2 := by
+    unfold jensenSphereMajorantCoeff
+    exact hpoly.trans hsimp
+  have h1 : (1 : ℝ) ≤ jensenSphereMajorantCoeff * s ^ 2 := by
+    have hs2 : (1 : ℝ) ≤ s ^ 2 := one_le_pow₀ hs
+    nlinarith [jensenSphereMajorantCoeff_pos]
+  unfold jensenSphereMajorant
+  exact (max_le h1 hpoly').trans_eq (by rfl)
+
+lemma log_jensenSphereMajorant_le (T : ℝ) :
+    Real.log (jensenSphereMajorant T) ≤
+      Real.log jensenSphereMajorantCoeff + 2 * Real.log (2 + |T|) := by
+  have hK : 0 < jensenSphereMajorantCoeff := jensenSphereMajorantCoeff_pos
+  have hs : 0 < 2 + |T| := by positivity
+  have hMpos : 0 < jensenSphereMajorant T :=
+    lt_of_lt_of_le zero_lt_one (one_le_jensenSphereMajorant T)
+  have hle := jensenSphereMajorant_le_coeff_mul_sq T
+  have := Real.log_le_log hMpos hle
+  rwa [Real.log_mul (ne_of_gt hK) (pow_ne_zero 2 (ne_of_gt hs)),
+    Real.log_pow] at this
+
+lemma log_center_neg_le (T : ℝ) :
+    -Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ ≤
+      Real.log ‖riemannZeta 2‖ := by
+  have hζ2 : 0 < ‖riemannZeta 2‖ := by
+    rw [norm_riemannZeta_two]; positivity
+  have hge := norm_riemannZetaMulSubOne_center_ge T
+  have hlog : Real.log ‖riemannZeta 2‖⁻¹ ≤
+      Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ :=
+    Real.log_le_log (inv_pos.mpr hζ2) hge
+  rw [Real.log_inv] at hlog
+  linarith [hlog]
+
+/-- Explicit Jensen disk-card constant:
+`C = (log K + log‖ζ(2)‖ + 2) / log(7/6)` with
+`K = 2 + 6·∑(n+1)^{-9/8}`. -/
+noncomputable def zetaZerosInDiskCardBound : ℝ :=
+  (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 2) /
+    Real.log (7 / 6 : ℝ)
+
+lemma one_lt_jensenSphereMajorantCoeff :
+    (1 : ℝ) < jensenSphereMajorantCoeff := by
+  have h2 : (2 : ℝ) ≤ jensenSphereMajorantCoeff := by
+    unfold jensenSphereMajorantCoeff
+    linarith [zetaFractCellMajorant_nonneg (δ := 1 / 8)]
+  exact lt_of_lt_of_le (by norm_num : (1 : ℝ) < 2) h2
+
+lemma one_lt_norm_riemannZeta_two : (1 : ℝ) < ‖riemannZeta 2‖ := by
+  rw [norm_riemannZeta_two]
+  have hπ : (3 : ℝ) < Real.pi := Real.pi_gt_three
+  nlinarith
+
+lemma zetaZerosInDiskCardBound_pos : 0 < zetaZerosInDiskCardBound := by
+  have hnum : 0 < Real.log jensenSphereMajorantCoeff +
+      Real.log ‖riemannZeta 2‖ + 2 := by
+    have h1 : 0 < Real.log jensenSphereMajorantCoeff :=
+      Real.log_pos one_lt_jensenSphereMajorantCoeff
+    have h2 : 0 < Real.log ‖riemannZeta 2‖ :=
+      Real.log_pos one_lt_norm_riemannZeta_two
+    linarith
+  have hden : 0 < Real.log (7 / 6 : ℝ) := Real.log_pos (by norm_num)
+  unfold zetaZerosInDiskCardBound
+  exact div_pos hnum hden
+
+/-- **r511.** Disk zero count: `card ≤ C · (1 + log(2+|T|))`. -/
+lemma zetaZerosInDisk_card_le (T : ℝ) :
+    (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card ≤
+      zetaZerosInDiskCardBound * (1 + Real.log (2 + |T|)) := by
+  have hlog76 : 0 < Real.log (7 / 6 : ℝ) := Real.log_pos (by norm_num)
+  have hL : 0 ≤ Real.log (2 + |T|) :=
+    Real.log_nonneg (by nlinarith [abs_nonneg T])
+  have hchain :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card : ℝ) *
+          Real.log (7 / 6 : ℝ) ≤
+        Real.log (jensenSphereMajorant T) -
+          Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ :=
+    (zetaZerosInDisk_card_mul_log_le T).trans
+      (riemannZetaMulSubOne_jensen_sum_le T)
+  have hnum :
+      Real.log (jensenSphereMajorant T) -
+          Real.log ‖riemannZetaMulSubOne ((2 : ℂ) + T * I)‖ ≤
+        Real.log jensenSphereMajorantCoeff +
+          Real.log ‖riemannZeta 2‖ + 2 * Real.log (2 + |T|) := by
+    linarith [log_jensenSphereMajorant_le T, log_center_neg_le T]
+  have hA :
+      0 ≤ Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ := by
+    have h1 : 0 ≤ Real.log jensenSphereMajorantCoeff :=
+      le_of_lt (Real.log_pos one_lt_jensenSphereMajorantCoeff)
+    have h2 : 0 ≤ Real.log ‖riemannZeta 2‖ :=
+      le_of_lt (Real.log_pos one_lt_norm_riemannZeta_two)
+    linarith
+  have hpack :
+      Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ +
+          2 * Real.log (2 + |T|) ≤
+        (Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ + 2) *
+          (1 + Real.log (2 + |T|)) := by
+    nlinarith [hL, hA]
+  have hdiv :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card : ℝ) ≤
+        zetaZerosInDiskCardBound * (1 + Real.log (2 + |T|)) := by
+    have hle := hchain.trans (hnum.trans hpack)
+    unfold zetaZerosInDiskCardBound
+    rw [div_mul_eq_mul_div]
+    exact (le_div_iff₀ hlog76).mpr (by simpa [mul_comm] using hle)
+  exact_mod_cast hdiv
+
+/-- Disk form of the r509 landing site. -/
 def JensenDiskZeroCountBound : Prop :=
   ∃ C : ℝ, 0 < C ∧
     ∀ T : ℝ,
       (riemannZetaZerosInClosedDisk ((2 : ℂ) + T * I) (3 / 2)).card ≤
-        C * Real.log (2 + |T|)
+        C * (1 + Real.log (2 + |T|))
+
+theorem jensenDiskZeroCountBound : JensenDiskZeroCountBound :=
+  ⟨zetaZerosInDiskCardBound, zetaZerosInDiskCardBound_pos,
+    zetaZerosInDisk_card_le⟩
 
 /-- Height-count `N(X) ≲ X log X` on `{1/2 ≤ Re ≤ 7/2}`; needs a
 larger radius or FE-folding before a disk cover works. Named Prop,

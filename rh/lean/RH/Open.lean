@@ -707,6 +707,7 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
     r509  identity fill + `|ζ|` poly on `Re>δ`;
     r510  filling bound + centre + Jensen API;
     r511  disk card via `Real.circleAverage`;
+    r512  dyadic `N(X) ≲ X log X` + FE-fold;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
   matching the original 4--8 band if the strip
@@ -928,9 +929,32 @@ The zero-free case is
 Restriction of meromorphy is `MeromorphicOn.mono_set`.
 Disk Finset `riemannZetaZerosInClosedDisk` and
 `F=0 ↔ ζ=0 ∧ z≠1` are in.  Weighted-sum vs card
-assembly is r511.  `JensenDiskZeroCountBound` and
-`ZetaZeroCountUpToXBound` remain named Props
-(no new sorry).
+assembly is r511.  `ZetaZeroCountUpToXBound`
+remains a named Prop (no new sorry).
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r511 census (outer bridges 18, Jensen disk card)
+
+(1) Disk-Zählung KOMPLETT, sorry-free:
+`zetaZerosInDisk_card_le` —
+`(riemannZetaZerosInClosedDisk (2+iT) (3/2)).card
+≤ C · (1 + log(2+|T|))` with explicit
+`C = (log K + log‖ζ(2)‖ + 2) / log(7/6)` and
+`K = 2 + 6·∑(n+1)^{-9/8}`
+(`zetaZerosInDiskCardBound`).  The named Prop
+`jensenDiskZeroCountBound` is now a theorem.
+
+(2) Clamp path: Jensen identity
+(`riemannZetaMulSubOne_jensen_identity`);
+`circleAverage ≤ log M` vs the constant
+(`riemannZetaMulSubOne_jensen_avg_le`);
+full divisor sum ≥ inner-disk subsum
+(`zetaZerosInDisk_card_mul_log_le`);
+circle majorant `M ≤ K(2+|T|)²` with `δ=1/8`.
+
+(3) Height-count `N(X) ≲ X log X` on the
+strip (`ZetaZeroCountUpToXBound`) and the
+FE-pairing fold `β<1/4 ↦ 1-β>3/4` stay r512.
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)

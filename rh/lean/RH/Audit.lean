@@ -441,9 +441,13 @@ extends the poly bound to `{Re>δ}`.
 r510 proves the filling bound without `|s-1|≥1/2`
 and the centre lower bound `|F(2+iT)| ≥ 1/|ζ(2)|`.
 Jensen's formula is `Real.circleAverage` plus
-`MeromorphicOn.circleAverage_log_norm`; the disk
-card corollary remains a named Prop.
-Census stays 7.
+`MeromorphicOn.circleAverage_log_norm`.  r511
+proves the disk card
+(`zetaZerosInDisk_card_le`,
+`jensenDiskZeroCountBound`) with explicit
+`C = (log K + log‖ζ(2)‖ + 2) / log(7/6)`.
+The height-count `N(X) ≲ X log X` remains a
+named Prop.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -552,6 +556,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms riemannZetaMulSubOne_eq_zero_iff
 #print axioms riemannZetaMulSubOne_meromorphicOrderAt_ne_top
 #print axioms riemannZetaMulSubOne_divisor_ge_one_of_zero
+#print axioms riemannZetaMulSubOne_jensen_identity
+#print axioms riemannZetaMulSubOne_jensen_avg_le
+#print axioms riemannZetaMulSubOne_jensen_sum_le
+#print axioms zetaZerosInDisk_card_mul_log_le
+#print axioms zetaZerosInDisk_card_le
+#print axioms jensenDiskZeroCountBound
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor
