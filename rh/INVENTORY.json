@@ -4216,6 +4216,36 @@
       "bytes": 412926
     },
     {
+      "path": "rh/problem/lambdastar03.tex",
+      "role": "problem_statement",
+      "round": "r479",
+      "ledger_ids": [],
+      "status": "classical Weil lambda_*(0.3) keystone (round 479, PRIME.RDAGGER.LAMBDASTAR_03_KEYSTONE.01; experiments-side, NO ledger row): VERDICT REDUCED(kappa_high<=1.79e-2 at t*=8,N=5).  P=0 so Q=A+Pi, A multiplier, Pi rank one per parity.  t_c in [6.289835988836902, 6.289835988836904] via digamma identity; tr(K)=2L t_c/pi in [1.201270186632830, 1.201270186632832].  Minorant sigma(0)K+Pi INDEFINITE (interlacing).  Even Fourier N=2..5 PD (r478); odd n=1 r>=0.300.  At (t*,N)=(8,5): c_tail>=0.2408, kappa_low<=6.43e-3; closes iff kappa_high<=1.79e-2 (OPEN).  Not lambda_*(0.3)>=0.  Smoke 10/10, full 22/22, SPEC_SHA 7a234db34c2ec6f0.  Companion rh/problem/lambdastar03.tex + verify_lambdastar03.py LAMBDASTAR03 VERIFIED -- REDUCED(kappa_high<=1.79e-2 at t*=8,N=5).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "d1230f195d8a425e32245fc3f18db91bea447739e87108044c1a45ad43cf55c5",
+      "bytes": 10717
+    },
+    {
+      "path": "rh/problem/verify_lambdastar03.py",
+      "role": "problem_check",
+      "round": "r479 companion",
+      "ledger_ids": [],
+      "status": "machine check of lambdastar03.tex: note tokens (REDUCED, e^{2L}, Re psi, interlacing, YB), smoke run, t_c and remainder pins.  6/6 gates, final line LAMBDASTAR03 VERIFIED -- REDUCED(kappa_high<=1.79e-2 at t*=8,N=5)",
+      "pin": true,
+      "sha256": "4a40c2f37b4d6684db01bde0698096d0ee918955c753b1a5b0cea39a167510cc",
+      "bytes": 3116
+    },
+    {
+      "path": "rh/problem/lambdastar03.pdf",
+      "role": "problem_statement",
+      "round": "r479",
+      "ledger_ids": [],
+      "status": "compiled PDF of lambdastar03.tex (recompiled artefact, registered unpinned)",
+      "pin": false,
+      "sha256": "2d8984f31c8d04c12e23a5f559c905c4ed8f81a988a341605a221ff282d52694",
+      "bytes": 418055
+    },
+    {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
       "role": "frozen_library",
       "round": "r224",
@@ -4390,8 +4420,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "5ad7539cea28754900183b89d6ff65da9ec76b9e17f39f75ebc9dada600f58d9",
-      "bytes": 5581523
+      "sha256": "4ba84f6374c275bc11dcb0beee510dc1b260bd61c757204043e492e1731b7e0e",
+      "bytes": 5583395
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5372,6 +5402,16 @@
       "pin": true,
       "sha256": "109f5d4a34248be1ecd4ef4544c62e97de85548fb64322df6d2e75a31cbbf453",
       "bytes": 17562
+    },
+    {
+      "path": "experiments/tfpt-discovery/lambdastar03_probe.py",
+      "role": "sealed_probe",
+      "round": "r479",
+      "ledger_ids": [],
+      "status": "classical Weil lambda_*(0.3) keystone (round 479, PRIME.RDAGGER.LAMBDASTAR_03_KEYSTONE.01; experiments-side, NO ledger row): VERDICT REDUCED(kappa_high<=1.79e-2 at t*=8,N=5).  P=0 so Q=A+Pi, A multiplier, Pi rank one per parity.  t_c in [6.289835988836902, 6.289835988836904] via digamma identity; tr(K)=2L t_c/pi in [1.201270186632830, 1.201270186632832].  Minorant sigma(0)K+Pi INDEFINITE (interlacing).  Even Fourier N=2..5 PD (r478); odd n=1 r>=0.300.  At (t*,N)=(8,5): c_tail>=0.2408, kappa_low<=6.43e-3; closes iff kappa_high<=1.79e-2 (OPEN).  Not lambda_*(0.3)>=0.  Smoke 10/10, full 22/22, SPEC_SHA 7a234db34c2ec6f0.  Companion rh/problem/lambdastar03.tex + verify_lambdastar03.py LAMBDASTAR03 VERIFIED -- REDUCED(kappa_high<=1.79e-2 at t*=8,N=5).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "02d78deed78455987be9b93091f8981b87b1d37e4e6806580dc4b22dad8813b2",
+      "bytes": 10666
     }
   ]
 }

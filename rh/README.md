@@ -6909,6 +6909,17 @@ plus `rh/problem/endtoend_fixedl.tex` (+ PDF +
 Not $\lambda_*(0.3)\ge0$.  $L=0.8$ Fourier $3\times3$ indefinite; $K_P$ gain $\le1.010$.  No Lean this round.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
+**Lambda-star $0.3$ keystone (r479,
+PRIME.RDAGGER.LAMBDASTAR\_03\_KEYSTONE.01).**
+Sealed probe
+`experiments/tfpt-discovery/lambdastar03_probe.py`
+(smoke 10/10, full 22/22, SPEC\_SHA `7a234db34c2ec6f0`)
+plus `rh/problem/lambdastar03.tex` (+ PDF +
+`verify_lambdastar03.py`, 6/6, `LAMBDASTAR03 VERIFIED -- REDUCED(kappa_high<=1.79e-2 at t*=8,N=5)`).
+**Regime REDUCED: $t_c$ and trace sealed; minorant+$\Pi$ indefinite; high-band coupling OPEN.**
+Not $\lambda_*(0.3)\ge0$.  No Lean this round.
+Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7359,6 +7370,9 @@ rh/
 │   ├── endtoend_fixedl.tex(+pdf) — r478: PARTIAL
 │   │                     (0.3-even-5x5-PD|tail-Schur);
 │   │                     block SATZ, tail OPEN.  No RH claim
+│   ├── lambdastar03.tex(+pdf) — r479: REDUCED
+│   │                     (kappa_high<=1.79e-2 at t*=8,N=5);
+│   │                     not lambda_*.  No RH claim
 │   ├── race_proof.tex(+pdf) — r460: PARTIAL;
 │   │                     spectral reduction proved; norm route
 │   │                     refuted; spectral-overlap gap open.
@@ -8553,6 +8567,13 @@ domain is the probe, `endtoend_fixedl.tex`, the verifier,
 INVENTORY, `run_rh.py`, and these status lines.  It does
 not touch Lean or `experiments/next.txt`.  Suite surface:
 integrity + probes (`run_rh.py --fast --skip-lean`).
+**r479 coexistence.** Round 479 (`lambdastar03_probe.py`)
+reduces lambda_*(0.3)>=0 to a high-band coupling bound
+(not lambda_*).  File domain is the probe, `lambdastar03.tex`,
+the verifier, INVENTORY, `run_rh.py`, and these status
+lines.  It does not touch Lean or `experiments/next.txt`.
+Suite surface: integrity + probes
+(`run_rh.py --fast --skip-lean`).
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

@@ -252,6 +252,7 @@ PROBES = [
     ("r476", "crossterm_probe.py"),
     ("r477", "highmode_probe.py"),
     ("r478", "endtoend_fixedl_probe.py"),
+    ("r479", "lambdastar03_probe.py"),
 ]
 
 MODULES = [
