@@ -410,6 +410,10 @@ the pole, `ζ'/ζ = -1/(s-1) + analytic`, and
 `MeromorphicOn (logDeriv riemannZeta) univ`.  [2c] cut 2
 exposes `spectralPartialSum` as a finite rectangle sum
 (interface only).
+r501 scopes the zero-count (Jensen yes, `N(T)` / Hadamard
+product no) and proves the spectral kernel
+`FullWeilTest.hat` with exponential-type envelope
+(`norm_hat_le_exp`).  Strip `1/t²` decay is the next cut.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -469,6 +473,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms meromorphicAt_logDeriv_riemannZeta_univ
 #print axioms meromorphicOn_logDeriv_riemannZeta
 #print axioms mem_riemannZetaZerosOnClosedRect
+#print axioms FullWeilTest.hasCompactSupport_toFun
+#print axioms FullWeilTest.abs_toFun_le
+#print axioms FullWeilTest.hat_eq_setIntegral
+#print axioms FullWeilTest.integrable_hat_integrand
+#print axioms FullWeilTest.norm_hat_le_exp
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -29,6 +29,8 @@ import Mathlib.Analysis.Calculus.FDeriv.Analytic
 import Mathlib.Analysis.Meromorphic.Order
 import Mathlib.Topology.DiscreteSubset
 import Mathlib.Analysis.Complex.RemovableSingularity
+import Mathlib.MeasureTheory.Group.Integral
+import Mathlib.Analysis.Complex.Exponential
 
 namespace RH
 
@@ -2639,6 +2641,151 @@ noncomputable def spectralPartialSum (F : ℂ → ℂ) (σ₁ σ₂ T : ℝ) : �
     (riemannZetaMultiplicity ρ : ℂ) * F ρ
 
 end ZetaZeroFiniteness
+
+/-! ### r501: spectral kernel growth of a `FullWeilTest` ([2c] analysis)
+
+The test `g = toFun` is even, continuous, supported in `[-R,R]`, and
+an autocorrelation of a Lipschitz compactly-supported witness `h`.
+Mathlib's Fourier-convolution identity is Schwartz-only, so
+Bochner `ĝ = |ĥ|²` is not in this class without approximation; it
+is not needed for absolute convergence.
+
+This cut defines the spectral kernel and proves the compact-support
+exponential-type envelope.  Lipschitz of `g` classically gives a
+first-difference `1/t` strip bound; Lipschitz of the witness `h`
+classically gives an autocorrelation second difference `O(δ²)` and
+hence `1/t²`.  Those decay lemmas are the next cut.
+-/
+
+section WeilHatGrowth
+
+open MeasureTheory Complex Filter Set Function
+
+open scoped Topology
+
+/-- Two-sided Laplace transform of the even compactly-supported
+Weil test.  Spectral kernel for [2c] cut 3. -/
+noncomputable def FullWeilTest.hat (F : FullWeilTest) (s : ℂ) : ℂ :=
+  ∫ t : ℝ, (F.toFun t : ℂ) * exp (s * t)
+
+lemma FullWeilTest.support_subset_Icc (F : FullWeilTest) :
+    support F.toFun ⊆ Icc (-F.supportRadius) F.supportRadius := by
+  intro t ht
+  exact abs_le.mp (le_of_not_gt fun h =>
+    (mem_support.mp ht) (F.support_toFun t h))
+
+lemma FullWeilTest.hasCompactSupport_toFun (F : FullWeilTest) :
+    HasCompactSupport F.toFun :=
+  HasCompactSupport.of_support_subset_isCompact isCompact_Icc
+    F.support_subset_Icc
+
+lemma FullWeilTest.abs_toFun_le (F : FullWeilTest) :
+    ∃ M : ℝ, 0 ≤ M ∧ ∀ t : ℝ, |F.toFun t| ≤ M := by
+  obtain ⟨K, hK⟩ := F.lipschitz_toFun
+  set R := F.supportRadius
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  refine ⟨(K : ℝ) * (2 * R + 1), by positivity, fun t => ?_⟩
+  by_cases ht : R < |t|
+  · rw [F.support_toFun t ht, abs_zero]
+    positivity
+  · have hz : F.toFun (R + 1) = 0 :=
+      F.support_toFun _ (by
+        rw [abs_of_nonneg (add_nonneg hR (by positivity : (0 : ℝ) ≤ 1))]
+        exact lt_add_of_pos_right _ (by positivity))
+    have hdist := hK.dist_le_mul t (R + 1)
+    rw [Real.dist_eq, Real.dist_eq, hz, sub_zero] at hdist
+    have hlen : |t - (R + 1)| ≤ 2 * R + 1 := by
+      have htri := abs_sub_le t 0 (R + 1)
+      have htR : |t| ≤ R := le_of_not_gt ht
+      have hRp : |0 - (R + 1)| = R + 1 := by
+        rw [zero_sub, abs_neg, abs_of_nonneg (add_nonneg hR (by positivity))]
+      rw [sub_zero] at htri
+      linarith
+    exact le_trans hdist (mul_le_mul_of_nonneg_left hlen (NNReal.coe_nonneg _))
+
+lemma FullWeilTest.not_mem_Icc_radius {F : FullWeilTest} {t : ℝ}
+    (ht : t ∉ Icc (-(F.supportRadius + 1)) (F.supportRadius + 1)) :
+    F.supportRadius < |t| := by
+  have hI : ¬ (-(F.supportRadius + 1) ≤ t ∧ t ≤ F.supportRadius + 1) :=
+    mt mem_Icc.mpr ht
+  rw [not_and_or] at hI
+  rcases hI with hlt | hgt
+  · have htneg : t < 0 :=
+      lt_of_not_ge (fun h0 => hlt (le_trans (neg_nonpos.mpr
+        (add_nonneg F.supportRadius_nonneg (by positivity : (0 : ℝ) ≤ 1))) h0))
+    rw [abs_of_neg htneg]
+    linarith [F.supportRadius_nonneg]
+  · have htpos : 0 < t :=
+      lt_of_not_ge (fun h0 => hgt (le_trans h0
+        (add_nonneg F.supportRadius_nonneg (by positivity : (0 : ℝ) ≤ 1))))
+    rw [abs_of_pos htpos]
+    linarith [F.supportRadius_nonneg]
+
+lemma FullWeilTest.hat_eq_setIntegral (F : FullWeilTest) (s : ℂ) :
+    F.hat s =
+      ∫ t in Icc (-(F.supportRadius + 1)) (F.supportRadius + 1),
+        (F.toFun t : ℂ) * exp (s * t) := by
+  have h0 : ∀ t : ℝ, t ∉ Icc (-(F.supportRadius + 1)) (F.supportRadius + 1) →
+      (F.toFun t : ℂ) * exp (s * t) = 0 := by
+    intro t ht
+    rw [F.support_toFun t (F.not_mem_Icc_radius ht), ofReal_zero, zero_mul]
+  exact (setIntegral_eq_integral_of_forall_compl_eq_zero h0).symm
+
+lemma FullWeilTest.integrable_hat_integrand (F : FullWeilTest) (s : ℂ) :
+    Integrable (fun t : ℝ => (F.toFun t : ℂ) * exp (s * t)) := by
+  have hc : Continuous fun t : ℝ => (F.toFun t : ℂ) * exp (s * t) :=
+    (continuous_ofReal.comp F.continuous_toFun).mul
+      (continuous_exp.comp (continuous_const.mul continuous_ofReal))
+  have hsupp :
+      HasCompactSupport fun t : ℝ => (F.toFun t : ℂ) * exp (s * t) :=
+    HasCompactSupport.of_support_subset_isCompact isCompact_Icc
+      (fun t ht => F.support_subset_Icc (by
+        refine mem_support.mpr ?_
+        intro hg
+        have : (F.toFun t : ℂ) * exp (s * t) = 0 := by simp [hg]
+        exact (mem_support.mp ht) this))
+  exact hc.integrable_of_hasCompactSupport hsupp
+
+/-- Crude Paley--Wiener envelope (exponential type `R+1`). -/
+lemma FullWeilTest.norm_hat_le_exp (F : FullWeilTest) :
+    ∃ C : ℝ, 0 ≤ C ∧ ∀ s : ℂ,
+      ‖F.hat s‖ ≤ C * Real.exp ((F.supportRadius + 1) * |s.re|) := by
+  obtain ⟨M, hM0, hM⟩ := F.abs_toFun_le
+  set R := F.supportRadius
+  have hR : 0 ≤ R := F.supportRadius_nonneg
+  refine ⟨M * (2 * R + 2), by nlinarith, fun s => ?_⟩
+  have hpt : ∀ t ∈ Icc (-(R + 1)) (R + 1),
+      ‖(F.toFun t : ℂ) * exp (s * t)‖ ≤
+        M * Real.exp ((R + 1) * |s.re|) := by
+    intro t ht
+    rw [norm_mul, norm_exp, norm_real]
+    have hre : (s * (t : ℂ)).re = s.re * t := by simp
+    rw [hre]
+    have hexp : Real.exp (s.re * t) ≤ Real.exp ((R + 1) * |s.re|) := by
+      apply Real.exp_le_exp.mpr
+      have htabs : |t| ≤ R + 1 := abs_le.mpr ⟨ht.1, ht.2⟩
+      calc s.re * t ≤ |s.re * t| := le_abs_self _
+        _ = |s.re| * |t| := abs_mul _ _
+        _ ≤ |s.re| * (R + 1) :=
+          mul_le_mul_of_nonneg_left htabs (abs_nonneg _)
+        _ = (R + 1) * |s.re| := mul_comm _ _
+    exact mul_le_mul (hM t) hexp (Real.exp_nonneg _) hM0
+  have hμ : volume (Icc (-(R + 1)) (R + 1)) < ⊤ :=
+    isCompact_Icc.measure_lt_top
+  have hvol : volume.real (Icc (-(R + 1)) (R + 1)) = 2 * R + 2 := by
+    have hle : -(R + 1) ≤ R + 1 := by linarith
+    rw [Measure.real, Real.volume_Icc, sub_neg_eq_add, ENNReal.toReal_ofReal (by linarith)]
+    ring
+  rw [F.hat_eq_setIntegral s]
+  refine (norm_setIntegral_le_of_norm_le_const (μ := volume) hμ hpt).trans ?_
+  rw [hvol]
+  ring_nf
+  rfl
+
+-- The first-difference / `1/t` strip bound, and the autocorrelation
+-- `1/t²` upgrade, are the next [2c] cut.
+
+end WeilHatGrowth
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/

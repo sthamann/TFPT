@@ -666,6 +666,66 @@ Remaining named pieces of [2] (not extra sorries):
       the pole residue `-ĥ(1)`).
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r501 census (outer bridges 9, [2c] hat exp-type)
+
+SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
+  Mathlib v4.29.1 has NO `N(T)` / zero-count on
+  `RiemannZeta` (only trivial zeros, FE, residue).
+  `Analysis.Complex.Hadamard` is three-lines, NOT
+  Hadamard factorization of finite-order entire
+  functions -- no `ξ` product, no `∑ 1/|ρ|²` off
+  the shelf.  `Analysis.Complex.JensenFormula`
+  (`MeromorphicOn.circleAverage_log_norm`) IS
+  present, with a logarithmic counting function.
+  Fourier convolution (`fourier_convolution`) is
+  Schwartz-only, so Bochner `ĝ = |ĥ|²` is not in
+  the `FullWeilTest` class without approximation.
+
+  Minimal bound that suffices: `1/t²` decay of
+  `ĥ` on the strip plus `N(T+1)-N(T) = O(T^θ)`
+  for `θ < 1`, or even classical `N(T) ≪ T log T`.
+  A lone `1/t` decay does NOT beat `T log T`.
+  `∑ 1/|ρ|² < ∞` is the cheapest zero-side target.
+
+  Cheapest formal path to `∑ 1/|ρ|²`: Jensen on
+  the entire filling `(s-1)ζ(s)` (r500), once a
+  polynomial `|ζ|` bound on large circles is
+  available.  That bound is NOT in Mathlib;
+  the standard route is Dirichlet series on
+  `Re = 2` + functional equation + three-lines
+  (convexity).  Hadamard factorization of `ξ`
+  would also give `∑ 1/|ρ|²` from order 1, but
+  is a larger missing library (10+ rounds).
+
+  Round estimate (not extra sorries):
+    r502  `1/t²` strip decay of `hat` from the
+          autocorrelation second difference
+          (Lipschitz of the witness `h`);
+    r503--r505  `|ζ|` convexity via three-lines
+          (~3 rounds);
+    r506  Jensen → `N(R) ≪ R log R`;
+    r507  Stieltjes / `∑ 1/|ρ|² < ∞` and
+          `T → ∞` of `spectralPartialSum`;
+    then [2d] contour.
+  Total remaining [2c] analysis: ~6--8 rounds,
+  matching the original 4--8 band if r502 lands.
+
+PROVED this cut, sorry-free: spectral kernel
+`FullWeilTest.hat s = ∫ g(t) e^{s t} dt` and the
+compact-support envelope
+`‖hat F s‖ ≤ C(F) exp((R+1)|Re s|)`
+(`norm_hat_le_exp`).  Available regularity:
+`g` is Lipschitz (already); `h` is Lipschitz
+with compact support, so classically `Δ² g = O(δ²)`.
+Bochner positivity on `iℝ` is not formal here.
+
+Remaining named pieces of [2] (not extra sorries):
+  [2c] `1/t²` strip bound, then zero-count /
+      `∑ 1/|ρ|²`, then abs. conv. of
+      `spectralPartialSum`;
+  [2d] contour evaluation = three-channel form.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
