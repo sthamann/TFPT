@@ -703,9 +703,8 @@ SCOPING for `∑ m_ρ ĥ(ρ)` (honest, no claims):
     r504  Weierstrass → `1/t²` strip of `hat`;
     r505--r507  `|ζ|` convexity via three-lines
           (~3 rounds);
-    r508  Jensen → `N(R) ≪ R log R`;
-    r509  Stieltjes / `∑ 1/|ρ|² < ∞` and
-          `T → ∞` of `spectralPartialSum`;
+    r508  N=1 EM + `|ζ|` poly on `Re s>1`;
+    r509  identity fill + Jensen → `N(R)`;
     then [2d] contour.
   Total remaining [2c] analysis: ~6--8 rounds,
   matching the original 4--8 band if the strip
@@ -851,6 +850,33 @@ is r508.
 (c) Strip `|ζ| ≤ C(δ)(1+|s|)` on `Re s≥δ>0` not
 this round.  Jensen / `N(T)` / `∑ 1/|ρ|²` = r508–r509.
 `RiemannZetaStripPolyBound` remains parked.
+Census stays 7 (external 2).  NO RH CLAIM.
+
+## r508 census (outer bridges 15, N=1 Euler–Maclaurin)
+
+(1) Finite-N identity KOMPLETT (`finite_N_euler_maclaurin`):
+`∑_{k=1}^N k^{-s} = s/(s-1)·(1-(N+1)^{1-s})
+- s·∑_{n<N} cell(n) + N(N+1)^{-s}` for `s≠0,1`.
+
+(2) N→∞ on `Re s>1` KOMPLETT:
+`ζ(s) = s/(s-1) - s·zetaFractIntegral(s)`
+(`riemannZeta_eq_s_div_sub_s_mul_fractIntegral`).
+
+(3) KLEMME: holomorphy of `zetaFractIntegral` on
+`{Re s>0}` + identity-theorem fill to `{Re s>0, s≠1}`.
+Cell majorant and summability hold on `Re s>0`
+(`norm_zetaFractCell_le_rpow`, `summable_zetaFractCell`).
+Mathlib `differentiable_tsum'` wants a global
+derivative majorant independent of `s`.  Prop
+`ZetaFractIntegralHolomorphicOnRePos` is parked
+(no new sorry).  Jensen radius 1.75 reaches
+`Re=0.25`, so this fill is r509.
+
+(4) Γ-free poly bound on the valid region of (2):
+`|ζ(s)| ≤ (2+|ζ(2)|)·(1+|s|)` on `{Re s>1} ∩ {|s-1|≥1/2}`
+(`norm_riemannZeta_le_of_re_gt_one`).
+`RiemannZetaStripPolyBound` on `{Re s≥δ>0}` remains
+parked until (3).  Jensen / `N(T)` = r509.
 Census stays 7 (external 2).  NO RH CLAIM.
 
 ## r440 census (mean tau index)

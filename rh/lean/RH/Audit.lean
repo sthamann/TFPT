@@ -525,6 +525,11 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms sub_cpow_eq_s_mul_intervalIntegral
 #print axioms norm_zetaFractCellIntegrand_le
 #print axioms norm_zetaFractCell_le
+#print axioms finite_N_euler_maclaurin
+#print axioms riemannZeta_eq_s_div_sub_s_mul_fractIntegral
+#print axioms summable_zetaFractCell
+#print axioms norm_zetaFractIntegral_le_zeta_two
+#print axioms norm_riemannZeta_le_of_re_gt_one
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

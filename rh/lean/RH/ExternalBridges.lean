@@ -3677,7 +3677,7 @@ end ZetaFunctionalEquationPairing
 
 section ZetaEulerMaclaurin
 
-open Complex Set MeasureTheory
+open Complex Set MeasureTheory Filter Topology
 open scoped Interval
 
 /-- `{x} = x - n` on the half-open cell `[n, n+1)`. -/
@@ -3855,6 +3855,396 @@ lemma norm_zetaFractCell_le (n : ℕ) (s : ℂ) :
       (continuousOn_id.rpow_const (fun x hx => Or.inl
         ((show (0 : ℝ) < n + 1 by exact_mod_cast Nat.succ_pos n).trans_le hx.1).ne')))
     (fun x hx => norm_zetaFractCellIntegrand_le n s hx)
+
+/-! ### r508: assemble N=1 Euler–Maclaurin on `Re s > 1` -/
+
+lemma ofReal_mul_cpow_neg_succ {x : ℝ} (hx : 0 < x) (s : ℂ) :
+    (x : ℂ) * (x : ℂ) ^ (-s - 1) = (x : ℂ) ^ (-s) := by
+  have hx0 : (x : ℂ) ≠ 0 := ofReal_ne_zero.mpr hx.ne'
+  calc
+    (x : ℂ) * (x : ℂ) ^ (-s - 1)
+        = (x : ℂ) ^ (1 : ℂ) * (x : ℂ) ^ (-s - 1) := by rw [cpow_one]
+    _ = (x : ℂ) ^ ((1 : ℂ) + (-s - 1)) := (cpow_add _ _ hx0).symm
+    _ = (x : ℂ) ^ (-s) := by
+      congr 1
+      ring
+
+lemma intervalIntegrable_ofReal_cpow_neg (n : ℕ) (s : ℂ) :
+    IntervalIntegrable (fun x : ℝ => (x : ℂ) ^ (-s)) volume
+      (n + 1 : ℝ) (n + 2) := by
+  refine ContinuousOn.intervalIntegrable_of_Icc (by linarith) ?_
+  exact continuousOn_ofReal_cpow_Icc (by exact_mod_cast Nat.succ_pos n)
+    (by linarith) (-s)
+
+/-- FTC on a compact interval away from `0`. -/
+lemma intervalIntegral_ofReal_cpow_deriv_of_le {a b : ℝ}
+    (ha : 0 < a) (hab : a ≤ b) {r : ℂ} (hr : r ≠ 0) :
+    ∫ x in a..b, r * (x : ℂ) ^ (r - 1) = (b : ℂ) ^ r - (a : ℂ) ^ r := by
+  have hderiv : ∀ x ∈ uIcc a b,
+      HasDerivAt (fun y : ℝ => (y : ℂ) ^ r) (r * (x : ℂ) ^ (r - 1)) x := by
+    intro x hx
+    have hx0 : x ≠ 0 := by
+      rw [uIcc_of_le hab] at hx
+      exact (ha.trans_le hx.1).ne'
+    exact hasDerivAt_ofReal_cpow_const hx0 hr
+  have hint : IntervalIntegrable (fun x : ℝ => r * (x : ℂ) ^ (r - 1)) volume a b :=
+    (ContinuousOn.intervalIntegrable_of_Icc hab
+      (continuousOn_ofReal_cpow_Icc ha hab (r - 1))).const_mul r
+  simpa using intervalIntegral.integral_eq_sub_of_hasDerivAt hderiv hint
+
+lemma intervalIntegral_cpow_neg_of_le {a b : ℝ} (ha : 0 < a) (hab : a ≤ b)
+    {s : ℂ} (hs : s ≠ 1) :
+    ∫ x in a..b, (x : ℂ) ^ (-s) =
+      ((b : ℂ) ^ (1 - s) - (a : ℂ) ^ (1 - s)) / (1 - s) := by
+  have hr : (1 - s) ≠ 0 := sub_ne_zero.mpr fun h => hs (by linear_combination -h)
+  have hFTC := intervalIntegral_ofReal_cpow_deriv_of_le ha hab hr
+  have hI :
+      (1 - s) * (∫ x in a..b, (x : ℂ) ^ (-s)) =
+        (b : ℂ) ^ (1 - s) - (a : ℂ) ^ (1 - s) := by
+    trans ∫ x in a..b, (1 - s) * (x : ℂ) ^ (-s)
+    · exact (intervalIntegral.integral_const_mul
+        (r := 1 - s) (fun x : ℝ => (x : ℂ) ^ (-s))).symm
+    · have hFTC' := hFTC
+      rw [show (1 - s) - (1 : ℂ) = -s from by ring] at hFTC'
+      exact hFTC'
+  rw [eq_div_iff hr]
+  linear_combination hI
+
+lemma intervalIntegral_cpow_neg_one_to_succ (N : ℕ) {s : ℂ} (hs : s ≠ 1) :
+    ∫ x in (1 : ℝ)..(N + 1 : ℝ), (x : ℂ) ^ (-s) =
+      ((((N + 1 : ℕ) : ℂ) ^ (1 - s) - 1) / (1 - s)) := by
+  have h := intervalIntegral_cpow_neg_of_le (a := (1 : ℝ)) (b := (N + 1 : ℝ))
+    (by positivity) (le_add_of_nonneg_left (Nat.cast_nonneg N)) hs
+  have h1 : ((1 : ℝ) : ℂ) ^ (1 - s) = 1 := by
+    rw [ofReal_one, one_cpow]
+  have hN : ((N + 1 : ℝ) : ℂ) = ((N + 1 : ℕ) : ℂ) := by simp
+  rw [h, h1, hN]
+
+lemma succ_mul_sub_cpow_eq_s_mul_integral (n : ℕ) {s : ℂ} (hs : s ≠ 0) :
+    (n + 1 : ℂ) * ((n + 1 : ℂ) ^ (-s) - (n + 2 : ℂ) ^ (-s)) =
+      s * ∫ x in (n + 1 : ℝ)..(n + 2),
+        (n + 1 : ℂ) * (x : ℂ) ^ (-s - 1) := by
+  have hn : 0 < n + 1 := Nat.succ_pos n
+  have hsub := sub_cpow_eq_s_mul_intervalIntegral (n := n + 1) hn hs
+  have hcast : ((n + 2 : ℕ) : ℂ) = (n + 2 : ℂ) := by simp
+  have hcast1 : ((n + 1 : ℕ) : ℂ) = (n + 1 : ℂ) := by simp
+  rw [hcast1, hcast] at hsub
+  have hab : ((n + 1 : ℕ) : ℝ) = (n + 1 : ℝ) := by simp
+  have hab' : (n + 1 : ℝ) + 1 = (n + 2 : ℝ) := by ring
+  rw [hab] at hsub
+  rw [hab'] at hsub
+  have hint :=
+    intervalIntegral.integral_const_mul (μ := volume) (a := (n + 1 : ℝ))
+      (b := (n + 2 : ℝ)) (r := (n + 1 : ℂ))
+      (fun x : ℝ => (x : ℂ) ^ (-s - 1))
+  rw [hsub, mul_left_comm]
+  congr 1
+  exact hint.symm
+
+lemma succ_mul_cpow_eq_sub_cell_integrand (n : ℕ) (s : ℂ) {x : ℝ}
+    (hx : 0 < x) :
+    (n + 1 : ℂ) * (x : ℂ) ^ (-s - 1) =
+      (x : ℂ) ^ (-s) - zetaFractCellIntegrand n s x := by
+  unfold zetaFractCellIntegrand
+  have hsplit :
+      ((x - (n + 1 : ℝ) : ℝ) : ℂ) * (x : ℂ) ^ (-s - 1) +
+          (n + 1 : ℂ) * (x : ℂ) ^ (-s - 1) =
+        (x : ℂ) * (x : ℂ) ^ (-s - 1) := by
+    have hx' : ((x - (n + 1 : ℝ) : ℝ) : ℂ) = (x : ℂ) - (n + 1 : ℂ) := by
+      simp
+    rw [hx']
+    ring
+  rw [eq_sub_iff_add_eq, add_comm, hsplit, ofReal_mul_cpow_neg_succ hx]
+
+set_option maxHeartbeats 800000 in
+lemma intervalIntegral_succ_mul_eq_sub_cell (n : ℕ) (s : ℂ) :
+    ∫ x in (n + 1 : ℝ)..(n + 2), (n + 1 : ℂ) * (x : ℂ) ^ (-s - 1) =
+      (∫ x in (n + 1 : ℝ)..(n + 2), (x : ℂ) ^ (-s)) - zetaFractCell n s := by
+  have hpos : ∀ x ∈ uIcc (n + 1 : ℝ) (n + 2), 0 < x := by
+    intro x hx
+    rw [uIcc_of_le (by linarith)] at hx
+    exact (show (0 : ℝ) < n + 1 by exact_mod_cast Nat.succ_pos n).trans_le hx.1
+  have hcongr :
+      ∫ x in (n + 1 : ℝ)..(n + 2), (n + 1 : ℂ) * (x : ℂ) ^ (-s - 1) =
+        ∫ x in (n + 1 : ℝ)..(n + 2),
+          (x : ℂ) ^ (-s) - zetaFractCellIntegrand n s x := by
+    apply intervalIntegral.integral_congr
+    intro x hx
+    exact succ_mul_cpow_eq_sub_cell_integrand n s (hpos x hx)
+  rw [hcongr, intervalIntegral.integral_sub]
+  · rfl
+  · exact intervalIntegrable_ofReal_cpow_neg n s
+  · exact intervalIntegrable_zetaFractCellIntegrand n s
+
+lemma sum_intervalIntegral_cpow_neg (N : ℕ) (s : ℂ) :
+    ∑ n ∈ Finset.range N,
+        ∫ x in (n + 1 : ℝ)..(n + 2), (x : ℂ) ^ (-s) =
+      ∫ x in (1 : ℝ)..(N + 1 : ℝ), (x : ℂ) ^ (-s) := by
+  have hint : ∀ k < N,
+      IntervalIntegrable (fun x : ℝ => (x : ℂ) ^ (-s)) volume
+        ((k + 1 : ℕ) : ℝ) ((k + 2 : ℕ) : ℝ) := by
+    intro k _
+    convert intervalIntegrable_ofReal_cpow_neg k s <;> simp
+  have hadj :=
+    intervalIntegral.sum_integral_adjacent_intervals
+      (μ := volume) (f := fun x : ℝ => (x : ℂ) ^ (-s))
+      (a := fun k : ℕ => ((k + 1 : ℕ) : ℝ)) (n := N) hint
+  have hsum :
+      ∑ n ∈ Finset.range N,
+          ∫ x in (n + 1 : ℝ)..(n + 2), (x : ℂ) ^ (-s) =
+        ∑ k ∈ Finset.range N,
+          ∫ x in ((k + 1 : ℕ) : ℝ)..((k + 2 : ℕ) : ℝ), (x : ℂ) ^ (-s) := by
+    apply Finset.sum_congr rfl
+    intro n _
+    congr 1 <;> simp
+  rw [hsum, hadj]
+  congr 1 <;> simp
+
+/-- **r508 (1).** Finite-N Euler–Maclaurin identity. -/
+lemma finite_N_euler_maclaurin {N : ℕ} {s : ℂ} (hs0 : s ≠ 0) (hs1 : s ≠ 1) :
+    (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) =
+      s / (s - 1) * (1 - ((N + 1 : ℕ) : ℂ) ^ (1 - s)) -
+        s * ∑ n ∈ Finset.range N, zetaFractCell n s +
+        (N : ℂ) * (N + 1 : ℂ) ^ (-s) := by
+  have htel := sum_succ_mul_sub_cpow N s
+  have hterm : ∀ n ∈ Finset.range N,
+      (n + 1 : ℂ) * ((n + 1 : ℂ) ^ (-s) - (n + 2 : ℂ) ^ (-s)) =
+        s * ((∫ x in (n + 1 : ℝ)..(n + 2), (x : ℂ) ^ (-s)) -
+          zetaFractCell n s) := by
+    intro n _
+    rw [succ_mul_sub_cpow_eq_s_mul_integral n hs0,
+      intervalIntegral_succ_mul_eq_sub_cell]
+  have hsum := Finset.sum_congr rfl hterm
+  rw [htel, ← Finset.mul_sum] at hsum
+  have hsum' :
+      s * ∑ n ∈ Finset.range N,
+          ((∫ x in (n + 1 : ℝ)..(n + 2), (x : ℂ) ^ (-s)) - zetaFractCell n s) =
+        (∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) -
+          (N : ℂ) * (N + 1 : ℂ) ^ (-s) := hsum.symm
+  rw [Finset.sum_sub_distrib, mul_sub, sum_intervalIntegral_cpow_neg,
+    intervalIntegral_cpow_neg_one_to_succ N hs1] at hsum'
+  have hdiv :
+      s * ((((N + 1 : ℕ) : ℂ) ^ (1 - s) - 1) / (1 - s)) =
+        s / (s - 1) * (1 - ((N + 1 : ℕ) : ℂ) ^ (1 - s)) := by
+    have hneg : (1 - s) = -(s - 1) := by ring
+    rw [hneg, div_neg, neg_sub]
+    ring
+  rw [hdiv] at hsum'
+  have hadd := congrArg
+    (fun z => z + (N : ℂ) * (N + 1 : ℂ) ^ (-s)) hsum'
+  simpa [sub_add_cancel, add_comm] using hadd.symm
+
+lemma tendsto_nat_succ_cpow_neg {s : ℂ} (hs : 0 < s.re) :
+    Tendsto (fun N : ℕ => ((N + 1 : ℕ) : ℂ) ^ (-s)) atTop (𝓝 0) := by
+  rw [tendsto_zero_iff_norm_tendsto_zero]
+  simp_rw [norm_natCast_cpow_of_pos (Nat.succ_pos _), neg_re]
+  exact (tendsto_rpow_neg_atTop hs).comp
+    (tendsto_natCast_atTop_atTop.comp (tendsto_add_atTop_nat 1))
+
+lemma tendsto_nat_succ_cpow_one_sub {s : ℂ} (hs : 1 < s.re) :
+    Tendsto (fun N : ℕ => ((N + 1 : ℕ) : ℂ) ^ (1 - s)) atTop (𝓝 0) := by
+  rw [tendsto_zero_iff_norm_tendsto_zero]
+  simp_rw [norm_natCast_cpow_of_pos (Nat.succ_pos _), sub_re, one_re]
+  have hpos : 0 < s.re - 1 := sub_pos.mpr hs
+  have hpow : (fun N : ℕ => ((N + 1 : ℕ) : ℝ) ^ (1 - s.re)) =
+      fun N => ((N + 1 : ℕ) : ℝ) ^ (-(s.re - 1)) := by
+    ext N
+    congr 1
+    ring
+  rw [hpow]
+  exact (tendsto_rpow_neg_atTop hpos).comp
+    (tendsto_natCast_atTop_atTop.comp (tendsto_add_atTop_nat 1))
+
+lemma tendsto_nat_mul_succ_cpow_neg {s : ℂ} (hs : 1 < s.re) :
+    Tendsto (fun N : ℕ => (N : ℂ) * (N + 1 : ℂ) ^ (-s)) atTop (𝓝 0) := by
+  have hbound : ∀ N : ℕ,
+      ‖(N : ℂ) * (N + 1 : ℂ) ^ (-s)‖ ≤
+        ((N + 1 : ℕ) : ℝ) ^ (1 - s.re) := by
+    intro N
+    rw [norm_mul, Complex.norm_natCast]
+    have hcast : (N + 1 : ℂ) = ((N + 1 : ℕ) : ℂ) := by simp
+    rw [hcast, norm_natCast_cpow_of_pos (Nat.succ_pos N), neg_re]
+    have hN : (N : ℝ) ≤ ((N + 1 : ℕ) : ℝ) := by exact_mod_cast Nat.le_succ N
+    have hpow : 0 ≤ ((N + 1 : ℕ) : ℝ) ^ (-s.re) :=
+      Real.rpow_nonneg (Nat.cast_nonneg _) _
+    refine (mul_le_mul_of_nonneg_right hN hpow).trans ?_
+    have hpos : (0 : ℝ) < ((N + 1 : ℕ) : ℝ) := by exact_mod_cast Nat.succ_pos N
+    rw [mul_comm, ← Real.rpow_add_one hpos.ne']
+    refine le_of_eq ?_
+    congr 1
+    ring
+  have htend : Tendsto (fun N : ℕ => ((N + 1 : ℕ) : ℝ) ^ (1 - s.re))
+      atTop (𝓝 0) := by
+    have hpos : 0 < s.re - 1 := sub_pos.mpr hs
+    have hpow : (fun N : ℕ => ((N + 1 : ℕ) : ℝ) ^ (1 - s.re)) =
+        fun N => ((N + 1 : ℕ) : ℝ) ^ (-(s.re - 1)) := by
+      ext N
+      congr 1
+      ring
+    rw [hpow]
+    exact (tendsto_rpow_neg_atTop hpos).comp
+      (tendsto_natCast_atTop_atTop.comp (tendsto_add_atTop_nat 1))
+  exact squeeze_zero_norm hbound htend
+
+lemma norm_zetaFractCell_le_rpow (n : ℕ) {s : ℂ} (hs : -1 < s.re) :
+    ‖zetaFractCell n s‖ ≤ ((n + 1 : ℕ) : ℝ) ^ (-s.re - 1) := by
+  refine (norm_zetaFractCell_le n s).trans ?_
+  have hle : (n + 1 : ℝ) ≤ n + 2 := by linarith
+  have hpos : (0 : ℝ) < n + 1 := by exact_mod_cast Nat.succ_pos n
+  have hmono : ∀ x ∈ Icc (n + 1 : ℝ) (n + 2),
+      x ^ (-s.re - 1) ≤ ((n + 1 : ℕ) : ℝ) ^ (-s.re - 1) := by
+    intro x hx
+    have hx0 : 0 < x := hpos.trans_le hx.1
+    have hbase : (n + 1 : ℝ) ≤ x := hx.1
+    have hexp : -s.re - 1 ≤ 0 := by linarith
+    simpa using Real.rpow_le_rpow_of_nonpos hpos hbase hexp
+  have hint : IntervalIntegrable (fun x : ℝ => x ^ (-s.re - 1)) volume
+      (n + 1 : ℝ) (n + 2) :=
+    ContinuousOn.intervalIntegrable_of_Icc hle
+      (continuousOn_id.rpow_const fun x hx =>
+        Or.inl (hpos.trans_le hx.1).ne')
+  refine (intervalIntegral.integral_mono_on hle hint
+    (intervalIntegrable_const (c := ((n + 1 : ℕ) : ℝ) ^ (-s.re - 1)))
+    hmono).trans ?_
+  simp [intervalIntegral.integral_const]
+  ring_nf
+  exact le_rfl
+
+lemma summable_one_div_nat_succ_rpow {p : ℝ} (hp : 1 < p) :
+    Summable fun n : ℕ => (1 : ℝ) / ((n + 1 : ℕ) : ℝ) ^ p := by
+  have h := (Real.summable_one_div_nat_rpow (p := p)).mpr hp
+  exact (summable_nat_add_iff
+    (f := fun n : ℕ => (1 : ℝ) / (n : ℝ) ^ p) 1).mpr h
+
+lemma summable_rpow_neg_succ {p : ℝ} (hp : 1 < p) :
+    Summable fun n : ℕ => ((n + 1 : ℕ) : ℝ) ^ (-p) := by
+  refine (summable_congr fun n : ℕ => ?_).mp (summable_one_div_nat_succ_rpow hp)
+  have hn : (0 : ℝ) ≤ ((n + 1 : ℕ) : ℝ) := Nat.cast_nonneg _
+  rw [one_div]
+  exact (Real.rpow_neg hn p).symm
+
+lemma summable_zetaFractCell {s : ℂ} (hs : 0 < s.re) :
+    Summable fun n : ℕ => zetaFractCell n s := by
+  refine Summable.of_norm ?_
+  refine Summable.of_nonneg_of_le (fun _ => norm_nonneg _)
+    (fun n => norm_zetaFractCell_le_rpow n (by linarith)) ?_
+  have hp : 1 < s.re + 1 := by linarith
+  refine (summable_congr fun n : ℕ => ?_).mp (summable_rpow_neg_succ hp)
+  congr 1
+  ring
+
+lemma one_div_nat_succ_cpow_eq_cpow_neg (n : ℕ) (s : ℂ) :
+    (1 : ℂ) / (n + 1 : ℂ) ^ s = (n + 1 : ℂ) ^ (-s) := by
+  rw [nat_succ_coe_complex, one_div_natCast_cpow_eq_cpow_neg]
+
+lemma summable_rpow_neg_succ_two :
+    Summable fun n : ℕ => ((n + 1 : ℕ) : ℝ) ^ (-(2 : ℝ)) :=
+  summable_rpow_neg_succ (p := (2 : ℝ)) (by norm_num)
+
+/-- **r508 (2).** N=1 formula on `Re s > 1`:
+`ζ(s) = s/(s-1) - s · zetaFractIntegral s`. -/
+lemma riemannZeta_eq_s_div_sub_s_mul_fractIntegral {s : ℂ}
+    (hs : 1 < s.re) :
+    riemannZeta s = s / (s - 1) - s * zetaFractIntegral s := by
+  have hs1 : 1 < s.re := hs
+  have hs0 : s ≠ 0 := by
+    intro h
+    have : s.re = 0 := by rw [h]; simp
+    linarith
+  have hs_ne1 : s ≠ 1 := by
+    intro h
+    have : s.re = 1 := by rw [h]; simp
+    linarith
+  have hsummable_cell := summable_zetaFractCell (by linarith : 0 < s.re)
+  have hζ := zeta_eq_tsum_one_div_nat_add_one_cpow hs1
+  have hterm : (fun n : ℕ => (1 : ℂ) / (n + 1 : ℂ) ^ s) =
+      (fun n : ℕ => (n + 1 : ℂ) ^ (-s)) :=
+    funext fun n : ℕ => one_div_nat_succ_cpow_eq_cpow_neg n s
+  rw [hterm] at hζ
+  have hpartial := (summable_one_div_nat_add_one_cpow hs1).hasSum.tendsto_sum_nat
+  rw [hterm] at hpartial
+  rw [← hζ] at hpartial
+  have hid N := finite_N_euler_maclaurin (N := N) hs0 hs_ne1
+  have hlim :
+      Tendsto (fun N : ℕ =>
+        s / (s - 1) * (1 - ((N + 1 : ℕ) : ℂ) ^ (1 - s)) -
+          s * ∑ n ∈ Finset.range N, zetaFractCell n s +
+          (N : ℂ) * (N + 1 : ℂ) ^ (-s)) atTop
+        (𝓝 (s / (s - 1) - s * zetaFractIntegral s)) := by
+    have h1 : Tendsto (fun N : ℕ =>
+        s / (s - 1) * (1 - ((N + 1 : ℕ) : ℂ) ^ (1 - s))) atTop
+        (𝓝 (s / (s - 1) * (1 - 0))) :=
+      tendsto_const_nhds.mul <| tendsto_const_nhds.sub (tendsto_nat_succ_cpow_one_sub hs)
+    have h2 : Tendsto (fun N : ℕ =>
+        s * ∑ n ∈ Finset.range N, zetaFractCell n s) atTop
+        (𝓝 (s * zetaFractIntegral s)) :=
+      tendsto_const_nhds.mul hsummable_cell.hasSum.tendsto_sum_nat
+    have h3 := tendsto_nat_mul_succ_cpow_neg hs
+    have heq : s / (s - 1) * (1 - 0) - s * zetaFractIntegral s + 0 =
+        s / (s - 1) - s * zetaFractIntegral s := by ring
+    rw [← heq]
+    exact (h1.sub h2).add h3
+  have hlim' : Tendsto (fun N : ℕ =>
+      ∑ n ∈ Finset.range N, (n + 1 : ℂ) ^ (-s)) atTop
+      (𝓝 (s / (s - 1) - s * zetaFractIntegral s)) := by
+    convert hlim using 1
+    exact funext hid
+  exact tendsto_nhds_unique hpartial hlim'
+
+set_option maxHeartbeats 800000 in
+lemma norm_zetaFractIntegral_le_zeta_two {s : ℂ} (hs : 1 < s.re) :
+    ‖zetaFractIntegral s‖ ≤ ‖riemannZeta 2‖ := by
+  have hle : ∀ n, ‖zetaFractCell n s‖ ≤ ((n + 1 : ℕ) : ℝ) ^ (-(2 : ℝ)) :=
+    fun n => (norm_zetaFractCell_le_rpow n (by linarith)).trans <| by
+      have hb : (1 : ℝ) ≤ ((n + 1 : ℕ) : ℝ) := by
+        exact_mod_cast Nat.succ_le_succ (Nat.zero_le n)
+      exact Real.rpow_le_rpow_of_exponent_le hb
+        (by linarith : -s.re - 1 ≤ -(2 : ℝ))
+  have hnorm : Summable fun n : ℕ => ‖zetaFractCell n s‖ :=
+    Summable.of_nonneg_of_le (fun _ => norm_nonneg _) hle
+      summable_rpow_neg_succ_two
+  refine (norm_tsum_le_tsum_norm (f := fun n => zetaFractCell n s) hnorm).trans ?_
+  refine (hnorm.tsum_mono summable_rpow_neg_succ_two hle).trans ?_
+  have hn : ∀ n : ℕ, ((n + 1 : ℕ) : ℝ) ^ (-(2 : ℝ)) =
+      ‖(1 : ℂ) / (n + 1 : ℂ) ^ (2 : ℂ)‖ := fun n => by
+    rw [norm_one_div_nat_succ_cpow]
+    simp
+  rw [tsum_congr hn, tsum_norm_one_div_nat_succ_two]
+  have h2c : 1 < (2 : ℂ).re := by norm_num
+  rw [← zeta_eq_tsum_one_div_nat_add_one_cpow h2c]
+
+/-- **r508 (4), Re s > 1 cut.**  Γ-free polynomial bound on
+`{Re s > 1} ∩ {|s-1| ≥ 1/2}`.  Constant `2 + |ζ(2)|`. -/
+lemma norm_riemannZeta_le_of_re_gt_one {s : ℂ} (hs : 1 < s.re)
+    (hsep : (1 / 2 : ℝ) ≤ ‖s - 1‖) :
+    ‖riemannZeta s‖ ≤ (2 + ‖riemannZeta 2‖) * (1 + ‖s‖) := by
+  have hform := riemannZeta_eq_s_div_sub_s_mul_fractIntegral hs
+  rw [hform]
+  have hI := norm_zetaFractIntegral_le_zeta_two hs
+  have hleft : ‖s / (s - 1)‖ ≤ 2 * ‖s‖ := by
+    rw [norm_div]
+    refine (div_le_div_of_nonneg_left (norm_nonneg s)
+      (by positivity : (0 : ℝ) < 1 / 2) hsep).trans ?_
+    field_simp
+    exact le_rfl
+  have hright : ‖s * zetaFractIntegral s‖ ≤ ‖s‖ * ‖riemannZeta 2‖ := by
+    rw [norm_mul]
+    exact mul_le_mul_of_nonneg_left hI (norm_nonneg s)
+  refine (norm_sub_le _ _).trans ?_
+  refine (add_le_add hleft hright).trans ?_
+  nlinarith [norm_nonneg s, norm_nonneg (riemannZeta 2)]
+
+/-- r508 (3) clamp: the cell majorant `|cell n s| ≤ (n+1)^{-σ-1}`
+holds on `{Re s > 0}` (`norm_zetaFractCell_le_rpow` +
+`summable_zetaFractCell`), but the identity-theorem fill of
+`riemannZeta_eq_s_div_sub_s_mul_fractIntegral` from `{Re s > 1}`
+to `{Re s > 0, s ≠ 1}` needs locally-uniform holomorphy of
+`zetaFractIntegral`.  Mathlib `differentiable_tsum'` wants a
+**global** derivative majorant independent of `s`; a locally
+uniform + `AnalyticOnNhd.eqOn_of_preconnected` argument is left
+for r509 (needed: Jensen radius 1.75 reaches `Re = 0.25`). -/
+def ZetaFractIntegralHolomorphicOnRePos : Prop :=
+  DifferentiableOn ℂ zetaFractIntegral {s | 0 < s.re}
 
 end ZetaEulerMaclaurin
 
