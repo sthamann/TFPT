@@ -12732,23 +12732,214 @@ theorem horizontalEdgesTendstoZero : HorizontalEdgesTendstoZero := by
         rw [mul_zero]))
   refine ⟨T, hTlo, hTtop, hnorm hpos, hnorm hneg⟩
 
-/-- Left vertical `Re = -1/4`: FE fold
-`ζ'/ζ(s) = χ'/χ(s) - ζ'/ζ(1-s)` with `Re(1-s) = 5/4`
-(Dirichlet bound `norm_logDeriv_riemannZeta_le_at_five_four` is proved)
-plus a log bound for `χ'/χ` / digamma on this fixed line. -/
+/-- r529: Dirichlet comparison on the FE dual line `Re ≥ 17/16`. -/
+lemma norm_logDeriv_riemannZeta_le_at_seventeen_sixteen {s : ℂ}
+    (hs : (17 / 16 : ℝ) ≤ s.re) :
+    ‖logDeriv riemannZeta s‖ ≤
+      ‖logDeriv riemannZeta ((17 / 16 : ℝ) : ℂ)‖ :=
+  norm_logDeriv_riemannZeta_le_of_re_ge (by norm_num : (1 : ℝ) < 17 / 16) hs
+
+lemma riemannZeta_ne_zero_of_re_eq_neg_one_div_sixteen {s : ℂ}
+    (hs : s.re = -1 / 16) : riemannZeta s ≠ 0 :=
+  riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero
+    (by linarith [hs] : (-1 / 4 : ℝ) < s.re)
+    (by linarith [hs] : s.re < 0)
+
+/-- Explicit log-linear constant on `Re = -1/16`, `|Im| ≥ 2`. -/
+noncomputable def leftEdgeConst : ℝ :=
+  ‖logDeriv riemannZeta ((17 / 16 : ℝ) : ℂ)‖ +
+    (6 + |Real.eulerMascheroniConstant|) +
+    Real.log (2 * Real.pi) + (1 / 2 : ℝ) +
+    (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)
+
+lemma leftEdgeConst_nonneg : 0 ≤ leftEdgeConst := by
+  unfold leftEdgeConst
+  have hlog : 0 ≤ Real.log (2 * Real.pi) :=
+    Real.log_nonneg (by nlinarith [Real.pi_gt_three])
+  positivity
+
+/-- Gap-free left-edge bound: FE + Dirichlet at `17/16` + sliver `ψ`/`tan`. -/
+lemma left_edge_logDeriv_bound {s : ℂ}
+    (hre : s.re = -1 / 16) (him : (2 : ℝ) ≤ |s.im|) :
+    ‖logDeriv riemannZeta s‖ ≤
+      leftEdgeConst * (1 + Real.log (2 + |s.im|)) := by
+  have hz : riemannZeta s ≠ 0 :=
+    riemannZeta_ne_zero_of_re_eq_neg_one_div_sixteen hre
+  have hid := logDeriv_riemannZeta_functional him hz
+  have hG : ∀ n : ℕ, s ≠ -n := ne_neg_nat_of_two_le_abs_im him
+  have hcos := cos_pi_div_two_ne_zero_of_two_le_abs_im him
+  have hFE := logDeriv_zetaFEFactor hG hcos
+  have hre1 : (-1 / 16 : ℝ) ≤ s.re := le_of_eq hre.symm
+  have hre2 : s.re ≤ (1 / 2 : ℝ) := by linarith [hre]
+  have hψ := norm_digamma_le_log_of_sliver hre1 hre2 him
+  have htan :=
+    norm_tan_le_of_two_le_abs_im (z := Real.pi * s / 2)
+      (two_le_abs_im_pi_div_two him)
+  have hdualre : (17 / 16 : ℝ) ≤ (1 - s).re := by
+    simp [sub_re, hre]
+    norm_num
+  have hdual :=
+    norm_logDeriv_riemannZeta_le_at_seventeen_sixteen hdualre
+  have hπtan : ‖((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ ≤
+      (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2) := by
+    have hπ : ‖(Real.pi : ℂ)‖ = Real.pi := by
+      simp [Complex.norm_real, abs_of_pos Real.pi_pos]
+    have h2 : ‖(2 : ℂ)‖ = 2 := by norm_num
+    rw [norm_mul, norm_div, hπ, h2]
+    exact mul_le_mul_of_nonneg_left htan
+      (div_nonneg Real.pi_pos.le (by norm_num))
+  have hGnorm : ‖logDeriv zetaFEFactor s‖ ≤
+      (6 + |Real.eulerMascheroniConstant|) *
+        (1 + Real.log (2 + |s.im|)) +
+        (Real.log (2 * Real.pi) + 1 / 2 +
+          (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)) := by
+    rw [hFE]
+    have hsplit :
+        ‖-Complex.log (2 * (Real.pi : ℂ)) + digamma s
+            - ((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ ≤
+          ‖Complex.log (2 * (Real.pi : ℂ))‖ + ‖digamma s‖ +
+            ‖((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ := by
+      refine (norm_sub_le _ _).trans ?_
+      gcongr
+      simpa using
+        norm_add_le (-Complex.log (2 * (Real.pi : ℂ))) (digamma s)
+    refine hsplit.trans ?_
+    rw [norm_log_two_pi]
+    nlinarith [hψ, hπtan]
+  have htri : ‖logDeriv riemannZeta s‖ ≤
+      ‖logDeriv riemannZeta (1 - s)‖ + ‖logDeriv zetaFEFactor s‖ := by
+    rw [hid]
+    simpa using
+      (norm_sub_le (-logDeriv riemannZeta (1 - s)) (logDeriv zetaFEFactor s))
+  set L : ℝ := 1 + Real.log (2 + |s.im|)
+  have hL : (1 : ℝ) ≤ L := by
+    have : 0 ≤ Real.log (2 + |s.im|) :=
+      Real.log_nonneg (by nlinarith [abs_nonneg s.im])
+    exact le_add_of_nonneg_right this
+  set D : ℝ := ‖logDeriv riemannZeta ((17 / 16 : ℝ) : ℂ)‖
+  set Cψ : ℝ := 6 + |Real.eulerMascheroniConstant|
+  set C0 : ℝ :=
+    Real.log (2 * Real.pi) + 1 / 2 +
+      (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)
+  have hpack : D + Cψ * L + C0 ≤ (D + Cψ + C0) * L := by
+    have hD : 0 ≤ D := norm_nonneg _
+    have hCψ : 0 ≤ Cψ := by unfold Cψ; positivity
+    have hC0 : 0 ≤ C0 := by
+      unfold C0
+      have : 0 ≤ Real.log (2 * Real.pi) :=
+        Real.log_nonneg (by nlinarith [Real.pi_gt_three])
+      positivity
+    nlinarith [hL, hD, hCψ, hC0]
+  have hsum : ‖logDeriv riemannZeta s‖ ≤ D + Cψ * L + C0 :=
+    (htri.trans (add_le_add hdual hGnorm)).trans_eq (by ring)
+  have hC : D + Cψ + C0 = leftEdgeConst := by
+    unfold leftEdgeConst D Cψ C0; ring
+  simpa [L, hC] using hsum.trans hpack
+
+/-- Restated from `Re = -1/4` to the r522 contour `Re = -1/16`. -/
 def LeftEdgeLogDerivBound : Prop :=
   ∃ C : ℝ, 0 ≤ C ∧
-    ∀ {s : ℂ}, s.re = -1 / 4 →
+    ∀ {s : ℂ}, s.re = -1 / 16 → (2 : ℝ) ≤ |s.im| →
       ‖logDeriv riemannZeta s‖ ≤ C * (1 + Real.log (2 + |s.im|))
 
-/-- Limit of `contour_identity_fixed_T` along a gap sequence `T_k → ∞`:
-horizontals vanish (conditional on `HorizontalEdgeLandauBound`),
-verticals converge, spectral partial sums exhaust the r513 series. -/
+theorem leftEdgeLogDerivBound : LeftEdgeLogDerivBound :=
+  ⟨leftEdgeConst, leftEdgeConst_nonneg,
+    fun hre him => left_edge_logDeriv_bound hre him⟩
+
+lemma right_edge_logDeriv_bound {s : ℂ} (hre : s.re = 2) :
+    ‖logDeriv riemannZeta s‖ ≤ ‖logDeriv riemannZeta (2 : ℂ)‖ :=
+  norm_logDeriv_riemannZeta_le_at_two (by simp [hre])
+
+/-- Pointwise majorant of the left integrand for `|τ| ≥ 2`. -/
+lemma left_edge_integrand_norm_le (F : FullWeilTest) {C : ℝ}
+    (hhat : ∀ s : ℂ, |s.re| ≤ (1 / 16 : ℝ) →
+      ‖F.hat s‖ ≤ C / (1 + s.im ^ 2))
+    {τ : ℝ} (hτ : (2 : ℝ) ≤ |τ|) :
+    ‖logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+        F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)‖ ≤
+      leftEdgeConst * C * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) := by
+  have hre : (((-1 / 16 : ℝ) : ℂ) + τ * I).re = -1 / 16 := by simp
+  have him : (2 : ℝ) ≤ |(((-1 / 16 : ℝ) : ℂ) + τ * I).im| := by
+    simpa using hτ
+  have hζ := left_edge_logDeriv_bound hre him
+  have habs : |(((-1 / 16 : ℝ) : ℂ) + τ * I).re| ≤ (1 / 16 : ℝ) := by
+    simp [hre]
+    norm_num
+  have hh := hhat _ habs
+  have himτ : (((-1 / 16 : ℝ) : ℂ) + τ * I).im = τ := by simp
+  have hζ' : ‖logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I)‖ ≤
+      leftEdgeConst * (1 + Real.log (2 + |τ|)) := by
+    simpa [himτ] using hζ
+  have hL : 0 ≤ 1 + Real.log (2 + |τ|) :=
+    add_nonneg (by norm_num)
+      (Real.log_nonneg (by nlinarith [abs_nonneg τ]))
+  rw [norm_mul]
+  have := mul_le_mul hζ' (by simpa [himτ] using hh) (norm_nonneg _)
+    (mul_nonneg leftEdgeConst_nonneg hL)
+  simpa [mul_div_assoc, mul_assoc, mul_left_comm, mul_comm C] using this
+
+/-- Pointwise majorant of the right integrand on the whole line. -/
+lemma right_edge_integrand_norm_le (F : FullWeilTest) {C : ℝ}
+    (hhat : ∀ s : ℂ, |s.re| ≤ 2 →
+      ‖F.hat s‖ ≤ C / (1 + s.im ^ 2))
+    (τ : ℝ) :
+    ‖logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+        F.hat ((2 : ℂ) + τ * I)‖ ≤
+      ‖logDeriv riemannZeta (2 : ℂ)‖ * C / (1 + τ ^ 2) := by
+  have hre : ((2 : ℂ) + τ * I).re = 2 := by simp
+  have hζ := right_edge_logDeriv_bound hre
+  have habs : |((2 : ℂ) + τ * I).re| ≤ 2 := by
+    simp [hre]
+  have hh := hhat _ habs
+  have himτ : ((2 : ℂ) + τ * I).im = τ := by simp
+  rw [norm_mul]
+  have := mul_le_mul hζ (by simpa [himτ] using hh) (norm_nonneg _)
+    (norm_nonneg _)
+  simpa [mul_div_assoc] using this
+
+/-- A two-sided Landau gap forbids zeros on the horizontal sides. -/
+lemma abs_im_lt_of_landau_gaps {T A : ℝ} {σ₁ σ₂ : ℝ} {ρ : ℂ}
+    (hA : (0 : ℝ) < A) (hT : (2 : ℝ) ≤ T)
+    (hgapP : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    (hgapN : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im + T|)
+    (hρ : ρ ∈ riemannZetaZerosOnClosedRect σ₁ σ₂ T) :
+    |ρ.im| < T := by
+  have hmem := mem_riemannZetaZerosOnClosedRect.mp hρ
+  have hrect := mem_zetaClosedRect.mp hmem.1
+  have hle : |ρ.im| ≤ T := abs_le.mpr ⟨hrect.2.2.1, hrect.2.2.2⟩
+  refine lt_of_le_of_ne hle ?_
+  intro heq
+  have hdenpos : 0 < A * (1 + Real.log T) := by
+    have hlog : 0 ≤ Real.log T :=
+      Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT)
+    exact mul_pos hA (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1)
+      (le_add_of_nonneg_right hlog))
+  have hpos : 0 < 1 / (A * (1 + Real.log T)) := one_div_pos.mpr hdenpos
+  rcases eq_or_eq_neg_of_abs_eq heq with hp | hn
+  · have hgap := hgapP ρ hmem.2.1 hmem.2.2
+    rw [hp, sub_self, abs_zero] at hgap
+    exact (lt_irrefl (0 : ℝ) (hpos.trans_le hgap)).elim
+  · have hgap := hgapN ρ hmem.2.1 hmem.2.2
+    rw [hn, neg_add_cancel, abs_zero] at hgap
+    exact (lt_irrefl (0 : ℝ) (hpos.trans_le hgap)).elim
+
+/-- r529 clamp: horizontals vanish (r528) and both verticals are
+absolutely majorized.  Remaining for the `T→∞` identity:
+`intervalIntegral_tendsto_integral` along `T_k`, and Finset
+exhaustion of the r513 series (`|Im ρ| ≤ T_k` eventually). -/
 def ContourIdentityLimitAlongGaps : Prop :=
-  ∀ _F : FullWeilTest,
-    ∃ T : ℕ → ℝ,
-      (∀ k : ℕ, ((2 * k + 1 : ℕ) : ℝ) ≤ T k) ∧
-      Filter.Tendsto T Filter.atTop Filter.atTop
+  ∀ F : FullWeilTest,
+    I • (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+          F.hat ((2 : ℂ) + τ * I)) -
+      I • (∫ τ : ℝ, logDeriv riemannZeta
+          (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)) =
+      (2 * (Real.pi : ℂ) * I) *
+        ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+            (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
+          F.hat 1)
 
 end ContourEdges
 

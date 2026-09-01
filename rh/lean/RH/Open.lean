@@ -1248,6 +1248,22 @@ on `σ ∈ [-1/16, 2]`, `|τ|=T≥2`.
 Left edge and three-channel `T→∞` assembly remain.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r529 census (outer bridges 36, left edge)
+
+Sorry-free.  `LeftEdgeLogDerivBound` restated to
+`Re=-1/16`, `|Im|≥2`, and is a theorem:
+`|ζ′/ζ| ≤ leftEdgeConst·(1+log(2+|τ|))` via FE,
+Dirichlet at `17/16` (`norm_logDeriv_riemannZeta_le_of_re_ge`
+is not hardcoded at `5/4`), and the sliver `ψ`/`tan`
+anchor.  Gap-free: the dual is `Re=17/16>1`.
+Right edge `Re=2` is the r515 Dirichlet bound.
+Pointwise `ĥ` majorants for both verticals.
+`ContourIdentityLimitAlongGaps` restated as the
+intended `T→∞` identity; remaining clamp:
+`Integrable` of the verticals and Finset exhaustion
+of the r513 series.  Census stays 7 (external 2).
+NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

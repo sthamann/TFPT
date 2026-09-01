@@ -514,6 +514,13 @@ reflection; glued `|ζ′/ζ|` on
 `[-1/16,2]×{±T}`; `horizontalEdgesTendstoZero`.
 Left edge and `T→∞` assembly stay named.
 Census stays 7.
+r529: left edge restated to `Re=-1/16`;
+`leftEdgeLogDerivBound` is a theorem (FE +
+Dirichlet at `17/16` + sliver `ψ`/`tan`,
+gap-free).  Right-edge Dirichlet + pointwise
+`ĥ` majorants.  `T→∞` identity stays named
+(vertical `Integrable` + Finset exhaustion).
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -775,6 +782,14 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms riemannZeta_ne_zero_of_glued_gap
 #print axioms tendsto_one_add_log_cubed_div_one_add_sq
 #print axioms horizontalEdgesTendstoZero
+#print axioms norm_logDeriv_riemannZeta_le_at_seventeen_sixteen
+#print axioms riemannZeta_ne_zero_of_re_eq_neg_one_div_sixteen
+#print axioms left_edge_logDeriv_bound
+#print axioms leftEdgeLogDerivBound
+#print axioms right_edge_logDeriv_bound
+#print axioms left_edge_integrand_norm_le
+#print axioms right_edge_integrand_norm_le
+#print axioms abs_im_lt_of_landau_gaps
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
