@@ -543,6 +543,16 @@ termwise Fourier inversion and an
 `integral_tsum` swap over Dirichlet-summable
 majorants.  The `2Λ/√n` corpus gauge is pinned,
 not reconciled; census stays 7.
+r533: the left vertical is the reflected prime
+channel minus the arch clamp,
+`∫ (ζ′/ζ)(-1/16+iτ) ĥ dτ = 2π ∑ Λ(n) n⁻¹ g(-log n)
+− ∫ (χ′/χ) ĥ`
+(`leftVerticalIntegral_eq_reflected_prime_sub_arch`).
+The FE fold produces the weight `n⁻¹`, not the
+corpus `2/√n`.  Combined pairing is
+`∑ Λ(n)(1+n⁻¹)g(log n)`.  Arch integrand is
+explicit; `leftEdgeArchIntegral` is the named
+remaining clamp.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -832,6 +842,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.fourierInv_hatSlice
 #print axioms FullWeilTest.hat_fourier_inversion
 #print axioms rightVerticalIntegral_eq_prime_sum
+#print axioms leftVerticalIntegral_eq_reflected_prime_sub_arch
+#print axioms logDeriv_riemannZeta_left_edge
+#print axioms logDeriv_zetaFEFactor_left_edge
+#print axioms contourPrimePairing_eq_one_add_inv_sum
+#print axioms one_add_inv_ge_two_div_sqrt
+#print axioms integral_dual_term_mul_hat_eq_two_pi_vonMangoldt_div_n
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

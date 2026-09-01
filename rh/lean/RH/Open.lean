@@ -1323,6 +1323,36 @@ the discrepancy is real.  Left edge and
 assembly are not claimed.  Census stays 7
 (external 2).  NO RH CLAIM.
 
+## r533 census (outer bridges 40, LEFT_PRIME)
+
+Sorry-free.  The left vertical of the r522
+contour is the reflected prime channel minus
+the archimedean clamp:
+`leftVerticalIntegral_eq_reflected_prime_sub_arch`
+gives
+`∫ (ζ′/ζ)(-1/16+iτ) ĥ dτ
+  = 2π ∑ Λ(n) n⁻¹ g(-log n)
+    − ∫ (χ′/χ)(-1/16+iτ) ĥ dτ`.
+Route: FE `logDeriv_riemannZeta_left_edge` on
+the whole line (not only `|Im|≥2`), Dirichlet
+at the dual `Re=17/16`, termwise inversion
+`integral_dual_term_mul_hat_eq_two_pi_vonMangoldt_div_n`
+from r531 `hat_fourier_inversion` at
+`σ=-1/16`, `u=-log n`, and `integral_tsum`
+justified by
+`summable_integral_norm_left_edge_term`.
+THE GAUGE: the FE fold produces `n⁻¹`, not
+the corpus `2/√n`.  Combined contour pairing
+is `∑ Λ(n)(1+n⁻¹)g(log n)`
+(`contourPrimePairing_eq_one_add_inv_sum`);
+`1+n⁻¹ ≥ 2/√n` with equality only at `n=1`
+(where `Λ=0`).  Arch factor is explicit
+(`logDeriv_zetaFEFactor_left_edge`); the
+integral `leftEdgeArchIntegral` is the named
+remaining clamp, not evaluated.  Assembly
+against `combMass` is not claimed.  Census
+stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
