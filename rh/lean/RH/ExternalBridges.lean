@@ -12925,10 +12925,7 @@ lemma abs_im_lt_of_landau_gaps {T A : ℝ} {σ₁ σ₂ : ℝ} {ρ : ℂ}
     rw [hn, neg_add_cancel, abs_zero] at hgap
     exact (lt_irrefl (0 : ℝ) (hpos.trans_le hgap)).elim
 
-/-- r529 clamp: horizontals vanish (r528) and both verticals are
-absolutely majorized.  Remaining for the `T→∞` identity:
-`intervalIntegral_tendsto_integral` along `T_k`, and Finset
-exhaustion of the r513 series (`|Im ρ| ≤ T_k` eventually). -/
+/-- Intended `T→∞` identity (proved below as a theorem). -/
 def ContourIdentityLimitAlongGaps : Prop :=
   ∀ F : FullWeilTest,
     I • (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * I) *
@@ -12940,6 +12937,1086 @@ def ContourIdentityLimitAlongGaps : Prop :=
         ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
             (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
           F.hat 1)
+
+/-- Vertical line path `τ ↦ σ + τ I`. Named so composition does not
+elaborate `+` as a function `HAdd`. -/
+lemma continuous_vertical_path (σ : ℝ) :
+    Continuous (fun τ : ℝ => (σ : ℂ) + τ * I) :=
+  continuous_const.add (continuous_ofReal.mul continuous_const)
+
+lemma ne_one_of_re_eq {σ : ℝ} (hσ : σ ≠ 1) (τ : ℝ) :
+    (σ : ℂ) + τ * I ≠ 1 := by
+  intro h
+  have : σ = 1 := by
+    simpa using congrArg Complex.re h
+  exact hσ this
+
+lemma continuous_logDeriv_hat_vertical
+    (F : FullWeilTest) (σ : ℝ)
+    (h1 : σ ≠ 1)
+    (hz : ∀ τ : ℝ, riemannZeta ((σ : ℂ) + τ * I) ≠ 0) :
+    Continuous (fun τ : ℝ =>
+      logDeriv riemannZeta ((σ : ℂ) + τ * I) *
+        F.hat ((σ : ℂ) + τ * I)) := by
+  set path : ℝ → ℂ := fun τ => (σ : ℂ) + τ * I
+  have hpath : Continuous path := continuous_vertical_path σ
+  have hlog : Continuous (fun τ : ℝ => logDeriv riemannZeta (path τ)) :=
+    continuous_iff_continuousAt.mpr fun τ =>
+      ContinuousAt.comp (f := path) (g := logDeriv riemannZeta)
+        (analyticAt_logDeriv_riemannZeta
+          (show path τ ≠ 1 from ne_one_of_re_eq h1 τ)
+          (by simpa [path] using hz τ)).continuousAt
+        (hpath.continuousAt (x := τ))
+  have hhat : Continuous (fun τ : ℝ => F.hat (path τ)) :=
+    continuous_iff_continuousAt.mpr fun τ =>
+      ContinuousAt.comp (f := path) (g := F.hat)
+        (F.analyticAt_hat (path τ)).continuousAt
+        (hpath.continuousAt (x := τ))
+  simpa [path] using hlog.mul hhat
+
+lemma continuous_right_edge_integrand (F : FullWeilTest) :
+    Continuous (fun τ : ℝ =>
+      logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+        F.hat ((2 : ℂ) + τ * I)) :=
+  continuous_logDeriv_hat_vertical F 2 (by norm_num)
+    (fun τ => riemannZeta_ne_zero_of_re_eq_two (by simp))
+
+lemma continuous_left_edge_integrand (F : FullWeilTest) :
+    Continuous (fun τ : ℝ =>
+      logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+        F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)) :=
+  continuous_logDeriv_hat_vertical F (-1 / 16) (by norm_num)
+    (fun τ => riemannZeta_ne_zero_of_re_eq_neg_one_div_sixteen (by simp))
+
+lemma integrable_right_edge_integrand (F : FullWeilTest) :
+    Integrable (fun τ : ℝ =>
+      logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+        F.hat ((2 : ℂ) + τ * I)) := by
+  obtain ⟨C, hC0, hhat⟩ :=
+    F.norm_hat_le_inv_sq_of_abs_re_le 2 (by norm_num)
+  set f : ℝ → ℂ := fun τ =>
+    logDeriv riemannZeta ((2 : ℂ) + τ * I) * F.hat ((2 : ℂ) + τ * I)
+  set K : ℝ := ‖logDeriv riemannZeta (2 : ℂ)‖ * C
+  have hK0 : 0 ≤ K := mul_nonneg (norm_nonneg _) hC0
+  have hbd : ∀ τ, ‖f τ‖ ≤ K / (1 + τ ^ 2) := fun τ =>
+    right_edge_integrand_norm_le F hhat τ
+  have hmaj : Integrable (fun τ : ℝ => K * (1 + τ ^ 2)⁻¹) :=
+    integrable_inv_one_add_sq.const_mul K
+  have hmaj' : Integrable (fun τ : ℝ => K / (1 + τ ^ 2)) := by
+    simpa [div_eq_mul_inv] using hmaj
+  exact hmaj'.mono' (continuous_right_edge_integrand F).aestronglyMeasurable
+    (Filter.Eventually.of_forall hbd)
+
+/-- `1 + log(2+|τ|) ≤ (1+log 3 + 8) (1+τ²)^{1/8}`. -/
+lemma one_add_log_le_rpow_eighth (τ : ℝ) :
+    1 + Real.log (2 + |τ|) ≤
+      (1 + Real.log 3 + 8) * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) := by
+  have hbase : (1 : ℝ) ≤ 1 + τ ^ 2 := by nlinarith [sq_nonneg τ]
+  have hu : (1 : ℝ) ≤ (1 + τ ^ 2) ^ (8⁻¹ : ℝ) :=
+    Real.one_le_rpow hbase (by norm_num)
+  have hlogsq : Real.log (1 + τ ^ 2) ≤
+      8 * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) := by
+    have hpos : 0 < 1 + τ ^ 2 := by nlinarith [sq_nonneg τ]
+    have hpow : 0 < (1 + τ ^ 2) ^ (8⁻¹ : ℝ) :=
+      Real.rpow_pos_of_pos hpos _
+    have := Real.log_le_sub_one_of_pos hpow
+    have hlogpow :
+        Real.log ((1 + τ ^ 2) ^ (8⁻¹ : ℝ)) =
+          (8⁻¹ : ℝ) * Real.log (1 + τ ^ 2) :=
+      Real.log_rpow hpos _
+    have h8 : Real.log (1 + τ ^ 2) ≤
+        8 * ((1 + τ ^ 2) ^ (8⁻¹ : ℝ) - 1) := by
+      have : (8⁻¹ : ℝ) * Real.log (1 + τ ^ 2) ≤
+          (1 + τ ^ 2) ^ (8⁻¹ : ℝ) - 1 := by
+        simpa [hlogpow] using this
+      have := mul_le_mul_of_nonneg_left this (by norm_num : (0 : ℝ) ≤ 8)
+      simpa [mul_sub, mul_assoc, inv_mul_cancel₀ (by norm_num : (8 : ℝ) ≠ 0)]
+        using this
+    nlinarith [h8, hu]
+  have hcmp : 2 + |τ| ≤ 3 * (1 + τ ^ 2) := by
+    have hsq : 0 ≤ (|τ| - 1) ^ 2 := sq_nonneg _
+    have : (2 : ℝ) * |τ| ≤ 1 + τ ^ 2 := by
+      nlinarith [hsq, sq_abs τ]
+    nlinarith [abs_nonneg τ]
+  have hpos2 : 0 < 2 + |τ| := by positivity
+  have hlogle : Real.log (2 + |τ|) ≤ Real.log 3 + Real.log (1 + τ ^ 2) := by
+    have := Real.log_le_log hpos2 hcmp
+    have hmul : Real.log (3 * (1 + τ ^ 2)) =
+        Real.log 3 + Real.log (1 + τ ^ 2) :=
+      Real.log_mul (by norm_num) (by nlinarith [sq_nonneg τ])
+    exact this.trans_eq hmul
+  have hsum : 1 + Real.log (2 + |τ|) ≤
+      1 + Real.log 3 + 8 * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) := by
+    have : Real.log (2 + |τ|) ≤
+        Real.log 3 + 8 * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) :=
+      hlogle.trans (by linarith [hlogsq])
+    linarith
+  have hpack : 1 + Real.log 3 + 8 * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) ≤
+      (1 + Real.log 3 + 8) * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) := by
+    have hc : 0 ≤ 1 + Real.log 3 :=
+      add_nonneg (by norm_num) (Real.log_nonneg (by norm_num))
+    nlinarith [hu, hc]
+  exact hsum.trans hpack
+
+lemma integrable_one_add_log_mul_inv_sq :
+    Integrable (fun τ : ℝ =>
+      (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2)) := by
+  have hr : (1 : ℝ) < 7 / 4 := by norm_num
+  have hpow : Integrable
+      (fun τ : ℝ => (1 + ‖τ‖ ^ 2) ^ (-(7 / 4 : ℝ) / 2)) :=
+    integrable_rpow_neg_one_add_norm_sq
+      (by norm_num : (Module.finrank ℝ ℝ : ℝ) < 7 / 4)
+  have hpow' : Integrable (fun τ : ℝ => (1 + τ ^ 2) ^ (-(7 / 8 : ℝ))) := by
+    convert hpow using 1
+    ext τ
+    simp [sq_abs]
+    ring_nf
+  set C : ℝ := 1 + Real.log 3 + 8
+  have hC0 : 0 ≤ C := by
+    unfold C
+    exact add_nonneg (add_nonneg (by norm_num)
+      (Real.log_nonneg (by norm_num))) (by norm_num)
+  have hnn : ∀ τ : ℝ,
+      0 ≤ (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) := fun τ =>
+    div_nonneg
+      (add_nonneg (by norm_num)
+        (Real.log_nonneg (by nlinarith [abs_nonneg τ])))
+      (by nlinarith [sq_nonneg τ])
+  have hbd : ∀ τ,
+      (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) ≤
+        C * (1 + τ ^ 2) ^ (-(7 / 8 : ℝ)) := by
+    intro τ
+    have hden : 0 < 1 + τ ^ 2 := by nlinarith [sq_nonneg τ]
+    have hle := one_add_log_le_rpow_eighth τ
+    have hrw : C * (1 + τ ^ 2) ^ (8⁻¹ : ℝ) / (1 + τ ^ 2) =
+        C * (1 + τ ^ 2) ^ (-(7 / 8 : ℝ)) := by
+      have hexp : (8⁻¹ : ℝ) = (1 : ℝ) / 8 := by norm_num
+      have : (1 + τ ^ 2) ^ ((1 : ℝ) / 8) / (1 + τ ^ 2) =
+          (1 + τ ^ 2) ^ (-(7 / 8 : ℝ)) := by
+        have hadd := (Real.rpow_add hden ((1 : ℝ) / 8) (-1)).symm
+        have hsum : (1 : ℝ) / 8 + -1 = -(7 / 8) := by norm_num
+        rw [div_eq_mul_inv, ← Real.rpow_neg_one, hadd, hsum]
+      rw [hexp, mul_div_assoc, this]
+    exact (div_le_div_of_nonneg_right hle hden.le).trans_eq hrw
+  have hmaj : Integrable
+      (fun τ : ℝ => C * (1 + τ ^ 2) ^ (-(7 / 8 : ℝ))) :=
+    hpow'.const_mul C
+  have hmeas : AEStronglyMeasurable
+      (fun τ : ℝ => (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2)) volume := by
+    refine Continuous.aestronglyMeasurable ?_
+    refine Continuous.div ?_ (continuous_const.add (continuous_pow 2))
+      (fun τ => by nlinarith [sq_nonneg τ])
+    exact continuous_const.add
+      (Real.continuousOn_log.comp_continuous
+        (continuous_const.add continuous_abs)
+        fun x => ne_of_gt (add_pos_of_pos_of_nonneg
+          (by norm_num : (0 : ℝ) < 2) (abs_nonneg x)))
+  exact hmaj.mono' hmeas (Filter.Eventually.of_forall fun τ => by
+    rw [Real.norm_eq_abs, abs_of_nonneg (hnn τ)]
+    exact hbd τ)
+
+lemma exists_left_edge_compact_bound (F : FullWeilTest) :
+    ∃ M : ℝ, 0 ≤ M ∧ ∀ τ : ℝ, |τ| ≤ 2 →
+      ‖logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)‖ ≤ M := by
+  set f : ℝ → ℂ := fun τ =>
+    logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+      F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)
+  have hOn : ContinuousOn f (Icc (-2 : ℝ) 2) :=
+    (continuous_left_edge_integrand F).continuousOn
+  obtain ⟨M, hM⟩ :=
+    isCompact_Icc.exists_bound_of_continuousOn hOn
+  refine ⟨M, ?_, ?_⟩
+  · exact le_trans (norm_nonneg (f 0))
+      (hM 0 ⟨by norm_num, by norm_num⟩)
+  · intro τ hτ
+    exact hM τ (abs_le.mp hτ)
+
+lemma integrable_left_edge_integrand (F : FullWeilTest) :
+    Integrable (fun τ : ℝ =>
+      logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+        F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)) := by
+  obtain ⟨C, hC0, hhat⟩ :=
+    F.norm_hat_le_inv_sq_of_abs_re_le (1 / 16) (by norm_num)
+  obtain ⟨M, hM0, hM⟩ := exists_left_edge_compact_bound F
+  set f : ℝ → ℂ := fun τ =>
+    logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+      F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)
+  set K : ℝ := leftEdgeConst * C
+  have hK0 : 0 ≤ K := mul_nonneg leftEdgeConst_nonneg hC0
+  set g : ℝ → ℝ := fun τ =>
+    Set.indicator (Icc (-2 : ℝ) 2) (fun _ => M) τ +
+      K * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2)
+  have hind : Integrable
+      (Set.indicator (Icc (-2 : ℝ) 2) (fun _ : ℝ => M)) :=
+    (continuousOn_const.integrableOn_compact isCompact_Icc).integrable_indicator
+      measurableSet_Icc
+  have hlog := integrable_one_add_log_mul_inv_sq.const_mul K
+  have hlog' : Integrable
+      (fun τ : ℝ => K * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2)) := by
+    convert hlog using 1
+    ext τ
+    ring
+  have hmaj : Integrable g := hind.add hlog'
+  have hbd : ∀ τ, ‖f τ‖ ≤ g τ := by
+    intro τ
+    have hlognn : 0 ≤
+        K * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) := by
+      have hL : 0 ≤ 1 + Real.log (2 + |τ|) :=
+        add_nonneg (by norm_num)
+          (Real.log_nonneg (by nlinarith [abs_nonneg τ]))
+      exact div_nonneg (mul_nonneg hK0 hL)
+        (by nlinarith [sq_nonneg τ])
+    have hindnn : 0 ≤
+        Set.indicator (Icc (-2 : ℝ) 2) (fun _ => M) τ :=
+      Set.indicator_apply_nonneg (fun _ => hM0)
+    by_cases hτ : |τ| ≤ 2
+    · have hmem : τ ∈ Icc (-2 : ℝ) 2 := abs_le.mp hτ
+      have : Set.indicator (Icc (-2 : ℝ) 2) (fun _ => M) τ = M :=
+        Set.indicator_of_mem hmem (fun _ => M)
+      have hf : ‖f τ‖ ≤ M := hM τ hτ
+      simpa [g, this] using le_add_of_le_of_nonneg hf hlognn
+    · have hge : (2 : ℝ) ≤ |τ| := le_of_lt (lt_of_not_ge hτ)
+      have htail := left_edge_integrand_norm_le F hhat hge
+      have hnot : τ ∉ Icc (-2 : ℝ) 2 := fun h => hτ (abs_le.mpr h)
+      have : Set.indicator (Icc (-2 : ℝ) 2) (fun _ => M) τ = 0 :=
+        Set.indicator_of_notMem hnot (fun _ => M)
+      have hKrew : K * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) =
+          leftEdgeConst * C * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) := by
+        unfold K; ring
+      have hf : ‖f τ‖ ≤
+          leftEdgeConst * C * (1 + Real.log (2 + |τ|)) / (1 + τ ^ 2) := by
+        simpa [f, norm_mul] using htail
+      simpa [g, this, hKrew] using le_add_of_nonneg_of_le hindnn hf
+  exact hmaj.mono' (continuous_left_edge_integrand F).aestronglyMeasurable
+    (Filter.Eventually.of_forall hbd)
+
+lemma riemannZetaMultiplicity_le_of_mem_inner {T : ℝ} {z : ℂ}
+    (hz : z ∈ landauInnerDisk T) :
+    (riemannZetaMultiplicity z : ℝ) ≤
+      zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + |T|)) := by
+  have hpt : (riemannZetaMultiplicity z : ℝ) ≤
+      ∑ ρ ∈ landauInnerDisk T, (riemannZetaMultiplicity ρ : ℝ) :=
+    Finset.single_le_sum (fun _ _ => Nat.cast_nonneg _) hz
+  exact hpt.trans (sum_multiplicity_landauInnerDisk_le T)
+
+lemma abs_heightCenter_le_X_add {X T : ℝ} (hX : 0 ≤ X)
+    (hT : T ∈ zetaZeroHeightCenters X) :
+    |T| ≤ X + 5 / 4 := by
+  have h1 := abs_heightCenter_le X hT
+  have h2 := zetaZeroHeightCenterBound_cast_le X hX
+  have hmul : (zetaZeroHeightCenterBound X : ℝ) * (5 / 8) ≤
+      ((8 : ℝ) * X / 5 + 2) * (5 / 8) :=
+    mul_le_mul_of_nonneg_right h2 (by norm_num)
+  have hsimp : ((8 : ℝ) * X / 5 + 2) * (5 / 8) = X + 5 / 4 := by ring
+  linarith [h1, hmul, hsimp]
+
+lemma riemannZetaMultiplicity_le_log_of_re_ge_half {z : ℂ} {X : ℝ}
+    (hX : 0 ≤ X) (hz : z ∈ riemannZetaZerosOnClosedRect 0 1 X)
+    (hre : (1 / 2 : ℝ) ≤ z.re) :
+    (riemannZetaMultiplicity z : ℝ) ≤
+      zetaZerosInDiskCardBoundInner *
+        (1 + Real.log (2 + X + 5 / 4)) := by
+  obtain ⟨T, hT, hzD⟩ := mem_disk_of_half_strip hX hz hre
+  have hmem : z ∈ landauInnerDisk T := by
+    simpa [landauInnerDisk] using hzD
+  have hle := riemannZetaMultiplicity_le_of_mem_inner hmem
+  have hTab := abs_heightCenter_le_X_add hX hT
+  have hcmp : 2 + |T| ≤ 2 + X + 5 / 4 := by linarith
+  have hpos : 0 < 2 + |T| := by positivity
+  have hlog := Real.log_le_log hpos hcmp
+  have hC : 0 ≤ zetaZerosInDiskCardBoundInner :=
+    le_of_lt zetaZerosInDiskCardBoundInner_pos
+  have h1 : 0 ≤ 1 + Real.log (2 + |T|) :=
+    add_nonneg (by norm_num)
+      (Real.log_nonneg (by nlinarith [abs_nonneg T]))
+  refine hle.trans ?_
+  exact mul_le_mul_of_nonneg_left (add_le_add_right hlog 1) hC
+
+lemma isCriticalStrip_one_sub {z : ℂ} (hz : IsCriticalStripZetaZero z) :
+    IsCriticalStripZetaZero (1 - z) := by
+  refine ⟨riemannZeta_one_sub_eq_zero_of hz.2.1 hz.2.2 hz.1, ?_, ?_⟩
+  · simp only [sub_re, one_re]; linarith [hz.2.2]
+  · simp only [sub_re, one_re]; linarith [hz.2.1]
+
+lemma analyticOrderAt_sub_id (s : ℂ) :
+    analyticOrderAt (fun w : ℂ => s - w) s = 1 := by
+  have hf : AnalyticAt ℂ (fun w : ℂ => s - w) s := by fun_prop
+  have hz : (s - s : ℂ) = 0 := sub_self _
+  have hd : deriv (fun w : ℂ => s - w) s ≠ 0 := by
+    have hder : HasDerivAt (fun w : ℂ => s - w) (-1) s := by
+      simpa using (hasDerivAt_const s s).sub (hasDerivAt_id s)
+    simp [hder.deriv]
+  exact hf.analyticOrderAt_eq_one_of_zero_deriv_ne_zero hz hd
+
+lemma riemannZetaMultiplicity_eq_one_sub {z : ℂ}
+    (hz : IsCriticalStripZetaZero z) (him : (2 : ℝ) ≤ |z.im|) :
+    riemannZetaMultiplicity z = riemannZetaMultiplicity (1 - z) := by
+  have hG : ∀ n : ℕ, z ≠ -n := ne_neg_nat_of_two_le_abs_im him
+  have hχ0 := zetaFEFactor_ne_zero_of_two_le_abs_im him
+  have hχ : AnalyticAt ℂ zetaFEFactor z := by
+    refine analyticAt_iff_eventually_differentiableAt.mpr ?_
+    refine Filter.eventually_of_mem
+        (Metric.ball_mem_nhds z (by norm_num : (0 : ℝ) < 1)) ?_
+    intro w hw
+    have hd : ‖w - z‖ < 1 := mem_ball_iff_norm.mp hw
+    have himle : |w.im - z.im| ≤ ‖w - z‖ := by
+      simpa [sub_im] using abs_im_le_norm (w - z)
+    have hlower : (1 : ℝ) ≤ |w.im| := by
+      have htri : |z.im| ≤ |w.im| + |w.im - z.im| := by
+        calc |z.im| = |w.im + (z.im - w.im)| := by ring_nf
+          _ ≤ |w.im| + |z.im - w.im| := abs_add_le _ _
+          _ = |w.im| + |w.im - z.im| := by rw [abs_sub_comm]
+      linarith [him, himle, htri, le_of_lt hd]
+    exact differentiableAt_zetaFEFactor (ne_neg_nat_of_im_ne_zero
+      (fun him0 => by rw [him0, abs_zero] at hlower; linarith))
+  have hζz : AnalyticAt ℂ riemannZeta z :=
+    analyticAt_riemannZeta (isCriticalStripZetaZero_ne_one hz)
+  have hζ1 : AnalyticAt ℂ riemannZeta (1 - z) := by
+    refine analyticAt_riemannZeta ?_
+    intro h
+    have : z = 0 := by linear_combination -(h)
+    exact isCriticalStripZetaZero_ne_zero hz this
+  set oneSub : ℂ → ℂ := fun w => 1 - w
+  have hg : AnalyticAt ℂ oneSub z := by fun_prop
+  have hcomp := hζ1.analyticOrderAt_comp hg
+  have hsub : analyticOrderAt (fun w : ℂ => oneSub w - oneSub z) z = 1 := by
+    have : (fun w : ℂ => oneSub w - oneSub z) = fun w => z - w := by
+      ext w; unfold oneSub; ring
+    simpa [this] using analyticOrderAt_sub_id z
+  have hcomp' : analyticOrderAt (riemannZeta ∘ oneSub) z =
+      analyticOrderAt riemannZeta (1 - z) := by
+    rw [hcomp, hsub, mul_one]
+  have hfe := eventuallyEq_riemannZeta_one_sub_factor him
+  have hmul : analyticOrderAt (fun w => zetaFEFactor w * riemannZeta w) z =
+      analyticOrderAt zetaFEFactor z + analyticOrderAt riemannZeta z :=
+    analyticOrderAt_mul hχ hζz
+  have hχord : analyticOrderAt zetaFEFactor z = 0 :=
+    analyticOrderAt_eq_zero.mpr (Or.inr hχ0)
+  have hfeord : analyticOrderAt
+      (fun w : ℂ => riemannZeta (1 - w)) z =
+        analyticOrderAt riemannZeta z := by
+    rw [analyticOrderAt_congr hfe, hmul, hχord, zero_add]
+  have hord : analyticOrderAt riemannZeta z =
+      analyticOrderAt riemannZeta (1 - z) :=
+    hfeord.symm.trans hcomp'
+  unfold riemannZetaMultiplicity analyticOrderNatAt
+  simp [hord]
+
+lemma riemannZetaMultiplicity_le_log {z : ℂ}
+    (hz : IsCriticalStripZetaZero z)
+    (him : (2 : ℝ) ≤ |z.im| ∨ (1 / 2 : ℝ) ≤ z.re) :
+    (riemannZetaMultiplicity z : ℝ) ≤
+      zetaZerosInDiskCardBoundInner *
+        (1 + Real.log (2 + |z.im| + 5 / 4)) := by
+  have hX : 0 ≤ |z.im| := abs_nonneg _
+  have hrect : z ∈ riemannZetaZerosOnClosedRect 0 1 |z.im| :=
+    mem_rect_of_criticalStrip hz le_rfl
+  rcases him with h2 | hre
+  · by_cases hre : (1 / 2 : ℝ) ≤ z.re
+    · exact riemannZetaMultiplicity_le_log_of_re_ge_half hX hrect hre
+    · have h1z := isCriticalStrip_one_sub hz
+      have hre' : (1 / 2 : ℝ) ≤ (1 - z).re := by
+        simp only [sub_re, one_re]; linarith [lt_of_not_ge hre]
+      have him1 : |(1 - z).im| = |z.im| := by simp [sub_im, abs_neg]
+      have hrect1 : 1 - z ∈
+          riemannZetaZerosOnClosedRect 0 1 |(1 - z).im| :=
+        mem_rect_of_criticalStrip h1z le_rfl
+      have hle :=
+        riemannZetaMultiplicity_le_log_of_re_ge_half
+          (abs_nonneg _) hrect1 hre'
+      have heq := riemannZetaMultiplicity_eq_one_sub hz h2
+      simpa [heq, him1] using hle
+  · exact riemannZetaMultiplicity_le_log_of_re_ge_half hX hrect hre
+
+lemma tendsto_intervalIntegral_neg_to (f : ℝ → ℂ) {T : ℕ → ℝ}
+    (hf : Integrable f) (hT : Tendsto T atTop atTop) :
+    Tendsto (fun k => ∫ τ : ℝ in (-T k)..(T k), f τ) atTop
+      (𝓝 (∫ τ : ℝ, f τ)) :=
+  intervalIntegral_tendsto_integral hf
+    (tendsto_neg_atTop_atBot.comp hT) hT
+
+lemma tendsto_right_edge_interval (F : FullWeilTest) {T : ℕ → ℝ}
+    (hT : Tendsto T atTop atTop) :
+    Tendsto (fun k =>
+      ∫ τ : ℝ in (-T k)..(T k),
+        logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+          F.hat ((2 : ℂ) + τ * I)) atTop
+      (𝓝 (∫ τ : ℝ,
+        logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+          F.hat ((2 : ℂ) + τ * I))) :=
+  tendsto_intervalIntegral_neg_to _
+    (integrable_right_edge_integrand F) hT
+
+lemma tendsto_left_edge_interval (F : FullWeilTest) {T : ℕ → ℝ}
+    (hT : Tendsto T atTop atTop) :
+    Tendsto (fun k =>
+      ∫ τ : ℝ in (-T k)..(T k),
+        logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)) atTop
+      (𝓝 (∫ τ : ℝ,
+        logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I))) :=
+  tendsto_intervalIntegral_neg_to _
+    (integrable_left_edge_integrand F) hT
+
+lemma tendsto_finset_atTop_of_monotone {α : Type*} [DecidableEq α]
+    (s : ℕ → Finset α) (hmono : Monotone s)
+    (hexh : ∀ x : α, ∃ n, x ∈ s n) :
+    Tendsto s atTop atTop := by
+  refine tendsto_atTop_atTop.mpr fun t => ?_
+  classical
+  let N : ℕ := t.sup fun x => Classical.choose (hexh x)
+  refine ⟨N, fun n hn => ?_⟩
+  intro x hx
+  have hxN : Classical.choose (hexh x) ≤ N :=
+    Finset.le_sup (f := fun y => Classical.choose (hexh y)) hx
+  exact hmono (le_trans hxN hn) (Classical.choose_spec (hexh x))
+
+noncomputable def stripZerosBelow (T : ℝ) :
+    Finset {z : ℂ // IsCriticalStripZetaZero z} := by
+  classical
+  exact (riemannZetaZerosOnClosedRect 0 1 T).subtype
+    IsCriticalStripZetaZero
+
+lemma mem_stripZerosBelow {T : ℝ}
+    {ρ : {z : ℂ // IsCriticalStripZetaZero z}} :
+    ρ ∈ stripZerosBelow T ↔
+      ρ.val ∈ riemannZetaZerosOnClosedRect 0 1 T := by
+  classical
+  simpa [stripZerosBelow] using
+    (Finset.mem_subtype (p := IsCriticalStripZetaZero)
+      (s := riemannZetaZerosOnClosedRect 0 1 T) (x := ρ))
+
+lemma spectralPartialSum_eq_subtype (F : ℂ → ℂ) (T : ℝ) :
+    spectralPartialSum F 0 1 T =
+      ∑ ρ ∈ stripZerosBelow T,
+        (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F ρ := by
+  classical
+  unfold spectralPartialSum
+  refine Eq.symm ?_
+  refine Finset.sum_bij
+    (fun (ρ : {z : ℂ // IsCriticalStripZetaZero z})
+        (_ : ρ ∈ stripZerosBelow T) => (ρ : ℂ)) ?_ ?_ ?_ ?_
+  · intro ρ hρ
+    exact (mem_stripZerosBelow.mp hρ)
+  · intro ρ σ _ _ h
+    exact Subtype.ext h
+  · intro x hx
+    exact ⟨⟨x, isCriticalStrip_of_mem_rect hx⟩, mem_stripZerosBelow.mpr hx, rfl⟩
+  · intro ρ _
+    rfl
+
+lemma stripZerosBelow_mono {T₁ T₂ : ℝ} (h : T₁ ≤ T₂) :
+    stripZerosBelow T₁ ⊆ stripZerosBelow T₂ := by
+  intro ρ hρ
+  have hz := (mem_stripZerosBelow.mp hρ)
+  have hz' := mem_riemannZetaZerosOnClosedRect.mp hz
+  have hrect := mem_zetaClosedRect.mp hz'.1
+  refine mem_stripZerosBelow.mpr
+    (mem_riemannZetaZerosOnClosedRect.mpr ⟨?_, hz'.2.1, hz'.2.2⟩)
+  exact mem_zetaClosedRect.mpr ⟨hrect.1, hrect.2.1,
+    le_trans (neg_le_neg h) hrect.2.2.1, le_trans hrect.2.2.2 h⟩
+
+/-- Weight ` (1+log(2+|Im|+5/4)) / (1+Im^2) ` on strip zeros. -/
+noncomputable def stripZeroWeight (z : ℂ) : ℝ :=
+  (1 + Real.log (2 + |z.im| + 5 / 4)) / (1 + z.im ^ 2)
+
+lemma stripZeroWeight_nonneg (z : ℂ) : 0 ≤ stripZeroWeight z :=
+  div_nonneg
+    (add_nonneg (by norm_num)
+      (Real.log_nonneg (by nlinarith [abs_nonneg z.im])))
+    (by nlinarith [sq_nonneg z.im])
+
+lemma exists_weighted_hat_bound (F : FullWeilTest) :
+    ∃ C : ℝ, 0 ≤ C ∧
+      ∀ ρ : {z : ℂ // IsCriticalStripZetaZero z},
+        ‖(riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ‖ ≤
+          C * stripZeroWeight (ρ : ℂ) := by
+  obtain ⟨Chat, hChat0, hhat⟩ := F.norm_hat_le_inv_sq
+  classical
+  set S := riemannZetaZerosOnClosedRect 0 1 2
+  set M : ℝ :=
+    ∑ z ∈ S, ‖(riemannZetaMultiplicity z : ℂ) * F.hat z‖
+  have hM0 : 0 ≤ M := Finset.sum_nonneg fun _ _ => norm_nonneg _
+  have hCin0 : 0 ≤ zetaZerosInDiskCardBoundInner :=
+    le_of_lt zetaZerosInDiskCardBoundInner_pos
+  set C : ℝ := zetaZerosInDiskCardBoundInner * Chat + 5 * M
+  have hC0 : 0 ≤ C :=
+    add_nonneg (mul_nonneg hCin0 hChat0) (mul_nonneg (by norm_num) hM0)
+  refine ⟨C, hC0, fun ρ => ?_⟩
+  have hnn :
+      0 ≤ 1 + Real.log (2 + |(ρ : ℂ).im| + 5 / 4) :=
+    add_nonneg (by norm_num)
+      (Real.log_nonneg (by nlinarith [abs_nonneg (ρ : ℂ).im]))
+  have hdenpos : 0 < 1 + (ρ : ℂ).im ^ 2 :=
+    by nlinarith [sq_nonneg (ρ : ℂ).im]
+  by_cases him : (2 : ℝ) ≤ |(ρ : ℂ).im|
+  · have hm := riemannZetaMultiplicity_le_log ρ.property (Or.inl him)
+    have hIcc : (ρ : ℂ).re ∈ Icc (0 : ℝ) 1 :=
+      ⟨le_of_lt ρ.property.2.1, le_of_lt ρ.property.2.2⟩
+    have hh := hhat (ρ : ℂ) hIcc
+    have hmn :
+        ‖(riemannZetaMultiplicity (ρ : ℂ) : ℂ)‖ =
+          (riemannZetaMultiplicity (ρ : ℂ) : ℝ) := by
+      rw [← Complex.ofReal_natCast, Complex.norm_real]
+      exact abs_of_nonneg (Nat.cast_nonneg _)
+    have hprod :
+        ‖(riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ‖ =
+          (riemannZetaMultiplicity (ρ : ℂ) : ℝ) * ‖F.hat ρ‖ := by
+      rw [norm_mul, hmn]
+    have hmul :=
+      mul_le_mul hm hh (norm_nonneg _)
+        (mul_nonneg hCin0 hnn)
+    have hCin : zetaZerosInDiskCardBoundInner * Chat ≤ C :=
+      le_add_of_nonneg_right (mul_nonneg (by norm_num) hM0)
+    calc ‖(riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ‖
+        = (riemannZetaMultiplicity (ρ : ℂ) : ℝ) * ‖F.hat ρ‖ := hprod
+      _ ≤ (zetaZerosInDiskCardBoundInner *
+            (1 + Real.log (2 + |(ρ : ℂ).im| + 5 / 4))) *
+              (Chat / (1 + (ρ : ℂ).im ^ 2)) := hmul
+      _ = (zetaZerosInDiskCardBoundInner * Chat) *
+            stripZeroWeight (ρ : ℂ) := by
+          unfold stripZeroWeight
+          field_simp [hdenpos.ne']
+      _ ≤ C * stripZeroWeight (ρ : ℂ) :=
+          mul_le_mul_of_nonneg_right hCin (stripZeroWeight_nonneg _)
+  · have hlt : |(ρ : ℂ).im| < 2 := lt_of_not_ge him
+    have hmem : (ρ : ℂ) ∈ S :=
+      mem_rect_of_criticalStrip ρ.property (le_of_lt hlt)
+    have hsingle :=
+      Finset.single_le_sum
+        (f := fun z : ℂ =>
+          ‖(riemannZetaMultiplicity z : ℂ) * F.hat z‖)
+        (fun _ _ => norm_nonneg _) hmem
+    have himlt := abs_lt.mp hlt
+    have hdenlt : 1 + (ρ : ℂ).im ^ 2 < 5 := by
+      nlinarith [himlt.1, himlt.2]
+    have hlog0 : 0 ≤ Real.log (2 + |(ρ : ℂ).im| + 5 / 4) :=
+      Real.log_nonneg (by nlinarith [abs_nonneg (ρ : ℂ).im])
+    have hw : (1 : ℝ) / 5 ≤ stripZeroWeight (ρ : ℂ) := by
+      have hinv : (1 : ℝ) / 5 ≤ 1 / (1 + (ρ : ℂ).im ^ 2) :=
+        (one_div_le_one_div (by norm_num : (0 : ℝ) < 5) hdenpos).mpr
+          (le_of_lt hdenlt)
+      have hlo : 1 / (1 + (ρ : ℂ).im ^ 2) ≤ stripZeroWeight (ρ : ℂ) := by
+        unfold stripZeroWeight
+        exact div_le_div_of_nonneg_right
+          (le_add_of_nonneg_right hlog0) hdenpos.le
+      exact hinv.trans hlo
+    have h5M : (5 : ℝ) * M ≤ C :=
+      le_add_of_nonneg_left (mul_nonneg hCin0 hChat0)
+    have hMle : M ≤ (5 : ℝ) * M * stripZeroWeight (ρ : ℂ) := by
+      have hwnn := stripZeroWeight_nonneg (ρ : ℂ)
+      nlinarith [hw, hM0, hwnn]
+    have hC5 : (5 : ℝ) * M * stripZeroWeight (ρ : ℂ) ≤
+        C * stripZeroWeight (ρ : ℂ) :=
+      mul_le_mul_of_nonneg_right h5M (stripZeroWeight_nonneg _)
+    exact hsingle.trans (hMle.trans hC5)
+
+lemma log_dyadic_weight_le (j : ℕ) :
+    1 + Real.log (2 + (2 : ℝ) ^ (j + 1) + 5 / 4) ≤
+      3 * ((j : ℝ) + 3) := by
+  have hge2 : (2 : ℝ) ≤ (2 : ℝ) ^ (j + 1) := by
+    have hpow1 : (2 : ℝ) ^ (j + 1) = 2 * (2 : ℝ) ^ j := by ring
+    have hone : (1 : ℝ) ≤ (2 : ℝ) ^ j := one_le_pow₀ (by norm_num)
+    nlinarith [hpow1, hone]
+  have h2 : 2 + (2 : ℝ) ^ (j + 1) + 5 / 4 ≤ (2 : ℝ) ^ (j + 3) := by
+    have hpow : (2 : ℝ) ^ (j + 3) = 4 * (2 : ℝ) ^ (j + 1) := by ring
+    nlinarith [hpow, hge2]
+  have hpos : 0 < 2 + (2 : ℝ) ^ (j + 1) + 5 / 4 := by positivity
+  have hlog : Real.log (2 + (2 : ℝ) ^ (j + 1) + 5 / 4) ≤
+      Real.log ((2 : ℝ) ^ (j + 3)) :=
+    Real.log_le_log hpos h2
+  have hlogpow : Real.log ((2 : ℝ) ^ (j + 3)) =
+      (j + 3 : ℝ) * Real.log 2 := by
+    simpa [Nat.cast_add, Nat.cast_ofNat] using Real.log_pow (2 : ℝ) (j + 3)
+  have hlog2 : Real.log 2 ≤ 1 := by
+    have := Real.log_le_sub_one_of_pos (by norm_num : (0 : ℝ) < 2)
+    linarith
+  nlinarith [hlog, hlogpow, hlog2]
+
+lemma stripZeroWeight_dyadic_le {j : ℕ} {z : ℂ}
+    (hz : z ∈ zetaZeroDyadicBlock j) :
+    stripZeroWeight z ≤
+      3 * ((j : ℝ) + 3) * ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+  have him := (mem_dyadicBlock.mp hz).2
+  have hnum : 1 + Real.log (2 + |z.im| + 5 / 4) ≤
+      3 * ((j : ℝ) + 3) := by
+    have hcmp : 2 + |z.im| + 5 / 4 ≤
+        2 + (2 : ℝ) ^ (j + 1) + 5 / 4 := by linarith [le_of_lt him.2]
+    have hpos : 0 < 2 + |z.im| + 5 / 4 := by positivity
+    have hlog := Real.log_le_log hpos hcmp
+    have hnum' : 1 + Real.log (2 + |z.im| + 5 / 4) ≤
+        1 + Real.log (2 + (2 : ℝ) ^ (j + 1) + 5 / 4) := by
+      linarith [hlog]
+    exact hnum'.trans (log_dyadic_weight_le j)
+  have h2j : 0 < (2 : ℝ) ^ j := pow_pos (by norm_num) _
+  have hsq : ((2 : ℝ) ^ j) ^ 2 ≤ z.im ^ 2 := by
+    have : ((2 : ℝ) ^ j) ^ 2 ≤ |z.im| ^ 2 :=
+      sq_le_sq.mpr (by simpa [abs_of_nonneg h2j.le] using him.1)
+    simpa [sq_abs] using this
+  have hdenpos : 0 < 1 + z.im ^ 2 := by nlinarith [sq_nonneg z.im]
+  have hge : ((2 : ℝ) ^ j) ^ 2 ≤ 1 + z.im ^ 2 := by nlinarith [hsq]
+  have hinv : (1 + z.im ^ 2)⁻¹ ≤ ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+    have h4 : 0 < ((2 : ℝ) ^ j) ^ 2 := sq_pos_of_pos h2j
+    have := (inv_le_inv₀ hdenpos h4).mpr hge
+    simpa [inv_pow] using this
+  unfold stripZeroWeight
+  rw [div_eq_mul_inv]
+  exact mul_le_mul hnum hinv (inv_nonneg.mpr hdenpos.le) (by positivity)
+
+noncomputable def zetaZeroWeightBlockBound : ℝ :=
+  24 * zetaZeroCountUpToXBoundConst
+
+lemma zetaZeroWeightBlockBound_nonneg : 0 ≤ zetaZeroWeightBlockBound :=
+  mul_nonneg (by norm_num) (le_of_lt zetaZeroCountUpToXBoundConst_pos)
+
+lemma dyadicBlock_weight_sum_le (j : ℕ) :
+    ∑ z ∈ zetaZeroDyadicBlock j, stripZeroWeight z ≤
+      zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j := by
+  set B := zetaZeroDyadicBlock j
+  have hX : 0 ≤ (2 : ℝ) ^ (j + 1) := pow_nonneg (by norm_num) _
+  have hcard := card_zeros_le ((2 : ℝ) ^ (j + 1)) hX
+  have hBcard : (B.card : ℝ) ≤
+      ((riemannZetaZerosOnClosedRect 0 1 ((2 : ℝ) ^ (j + 1))).card : ℝ) :=
+    Nat.cast_le.mpr (Finset.card_le_card (Finset.filter_subset _ _))
+  have hterm : ∀ z ∈ B, stripZeroWeight z ≤
+      3 * ((j : ℝ) + 3) * ((2 : ℝ) ^ j)⁻¹ ^ 2 :=
+    fun z hz => stripZeroWeight_dyadic_le hz
+  have hsum : ∑ z ∈ B, stripZeroWeight z ≤
+      (B.card : ℝ) * (3 * ((j : ℝ) + 3) * ((2 : ℝ) ^ j)⁻¹ ^ 2) := by
+    have := Finset.sum_le_card_nsmul B stripZeroWeight
+      (3 * ((j : ℝ) + 3) * ((2 : ℝ) ^ j)⁻¹ ^ 2) hterm
+    simpa [nsmul_eq_mul] using this
+  have hC := le_of_lt zetaZeroCountUpToXBoundConst_pos
+  have hpack : (B.card : ℝ) * ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤
+      zetaZeroCountUpToXBoundConst * (1 + (2 : ℝ) ^ (j + 1)) *
+        (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) * ((2 : ℝ) ^ j)⁻¹ ^ 2 := by
+    have h1 := hBcard.trans hcard
+    exact mul_le_mul_of_nonneg_right h1 (sq_nonneg _)
+  have hfac := dyadic_count_factor_le j
+  have hcardinv :
+      zetaZeroCountUpToXBoundConst * (1 + (2 : ℝ) ^ (j + 1)) *
+          (1 + Real.log (2 + (2 : ℝ) ^ (j + 1))) * ((2 : ℝ) ^ j)⁻¹ ^ 2 ≤
+        zetaZeroCountUpToXBoundConst * (8 * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j) := by
+    convert mul_le_mul_of_nonneg_left hfac hC using 1 <;> ring
+  have hnn3 : 0 ≤ 3 * ((j : ℝ) + 3) := by positivity
+  have hsum' : ∑ z ∈ B, stripZeroWeight z ≤
+      (zetaZeroCountUpToXBoundConst * (8 * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j)) *
+        (3 * ((j : ℝ) + 3)) := by
+    have h1 := hsum.trans
+      (by
+        have := mul_le_mul_of_nonneg_right hpack hnn3
+        convert this using 1
+        ring)
+    exact h1.trans (mul_le_mul_of_nonneg_right hcardinv hnn3)
+  have hfin :
+      (zetaZeroCountUpToXBoundConst * (8 * ((j : ℝ) + 2) * (2 : ℝ)⁻¹ ^ j)) *
+          (3 * ((j : ℝ) + 3)) ≤
+        zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j := by
+    unfold zetaZeroWeightBlockBound
+    have hle : ((j : ℝ) + 2) * ((j : ℝ) + 3) ≤ ((j : ℝ) + 3) ^ 2 := by
+      nlinarith
+    nlinarith [hC, hle, pow_nonneg (by norm_num : (0 : ℝ) ≤ 2⁻¹) j]
+  exact hsum'.trans hfin
+
+set_option maxHeartbeats 400000 in
+lemma summable_nat_add_three_sq_mul_two_pow_neg :
+    Summable fun j : ℕ => ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j := by
+  have hr : ‖(2 : ℝ)⁻¹‖ < 1 := by norm_num
+  have h2 : Summable fun n : ℕ => (n : ℝ) ^ 2 * (2 : ℝ)⁻¹ ^ n :=
+    summable_pow_mul_geometric_of_norm_lt_one 2 hr
+  have h1 : Summable fun n : ℕ => (n : ℝ) * (2 : ℝ)⁻¹ ^ n := by
+    simpa using summable_pow_mul_geometric_of_norm_lt_one 1 hr
+  have h0 : Summable fun n : ℕ => (2 : ℝ)⁻¹ ^ n :=
+    summable_geometric_of_lt_one (by norm_num) (by norm_num)
+  convert (h2.add (h1.mul_left 6)).add (h0.mul_left 9) using 1
+  ext n
+  ring
+
+lemma summable_dyadic_weight_majorant :
+    Summable fun j : ℕ =>
+      zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j := by
+  convert (summable_nat_add_three_sq_mul_two_pow_neg).mul_left
+    zetaZeroWeightBlockBound using 1
+  ext j
+  ring
+
+open scoped ENNReal
+open Classical
+
+noncomputable def stripZeroWeightENN (z : ℂ) : ℝ≥0∞ :=
+  if IsCriticalStripZetaZero z then ENNReal.ofReal (stripZeroWeight z) else 0
+
+lemma stripZeroWeightENN_eq_ofReal {z : ℂ}
+    (hz : IsCriticalStripZetaZero z) :
+    stripZeroWeightENN z = ENNReal.ofReal (stripZeroWeight z) :=
+  if_pos hz
+
+lemma tsum_weight_compact :
+    ∑' z : (zetaZeroCompactBlock : Set ℂ), stripZeroWeightENN z =
+      ∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z := by
+  rw [← Finset.tsum_subtype zetaZeroCompactBlock stripZeroWeightENN]
+  rfl
+
+lemma tsum_weight_dyadic (j : ℕ) :
+    ∑' z : (zetaZeroDyadicBlock j : Set ℂ), stripZeroWeightENN z =
+      ∑ z ∈ zetaZeroDyadicBlock j, stripZeroWeightENN z := by
+  rw [← Finset.tsum_subtype (zetaZeroDyadicBlock j) stripZeroWeightENN]
+  rfl
+
+lemma sum_weightENN_eq_ofReal (s : Finset ℂ)
+    (hs : ∀ z ∈ s, IsCriticalStripZetaZero z) :
+    ∑ z ∈ s, stripZeroWeightENN z =
+      ENNReal.ofReal (∑ z ∈ s, stripZeroWeight z) := by
+  have hcongr : ∑ z ∈ s, stripZeroWeightENN z =
+      ∑ z ∈ s, ENNReal.ofReal (stripZeroWeight z) :=
+    Finset.sum_congr rfl fun z hz => stripZeroWeightENN_eq_ofReal (hs z hz)
+  rw [hcongr, ENNReal.ofReal_sum_of_nonneg fun z _ => stripZeroWeight_nonneg z]
+
+lemma sum_weight_compact_ne_top :
+    (∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z) ≠ ∞ := by
+  rw [sum_weightENN_eq_ofReal _ fun z hz => isCritical_of_mem_compact hz]
+  exact ENNReal.ofReal_ne_top
+
+lemma sum_weight_dyadic_le (j : ℕ) :
+    ∑ z ∈ zetaZeroDyadicBlock j, stripZeroWeightENN z ≤
+      ENNReal.ofReal
+        (zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j) := by
+  rw [sum_weightENN_eq_ofReal _ fun z hz => isCritical_of_mem_dyadic hz]
+  exact ENNReal.ofReal_le_ofReal (dyadicBlock_weight_sum_le j)
+
+lemma tsum_weight_strip_le :
+    ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, stripZeroWeightENN z ≤
+      ∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z +
+        ∑' j : ℕ, ENNReal.ofReal
+          (zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j) := by
+  have hunion := stripZeros_eq_blocks
+  have h1 :
+      ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, stripZeroWeightENN z =
+        ∑' z : ↥((zetaZeroCompactBlock : Set ℂ) ∪
+            ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ)), stripZeroWeightENN z :=
+    tsum_congr_set_coe _ hunion
+  have h2 := ENNReal.tsum_union_le stripZeroWeightENN
+    (zetaZeroCompactBlock : Set ℂ)
+    (⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ))
+  have h3 := ENNReal.tsum_iUnion_le_tsum stripZeroWeightENN
+    fun j : ℕ => (zetaZeroDyadicBlock j : Set ℂ)
+  have hcomp : ∑' z : (zetaZeroCompactBlock : Set ℂ), stripZeroWeightENN z =
+      ∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z := tsum_weight_compact
+  have hdy : ∑' j : ℕ,
+      ∑' z : (zetaZeroDyadicBlock j : Set ℂ), stripZeroWeightENN z ≤
+      ∑' j : ℕ, ENNReal.ofReal
+        (zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ j) := by
+    refine ENNReal.tsum_le_tsum fun j => ?_
+    rw [tsum_weight_dyadic]
+    exact sum_weight_dyadic_le j
+  calc
+    ∑' z : {z : ℂ | IsCriticalStripZetaZero z}, stripZeroWeightENN z =
+        ∑' z : ↥((zetaZeroCompactBlock : Set ℂ) ∪
+            ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ)), stripZeroWeightENN z := h1
+    _ ≤ ∑' z : (zetaZeroCompactBlock : Set ℂ), stripZeroWeightENN z +
+          ∑' z : ⋃ j : ℕ, (zetaZeroDyadicBlock j : Set ℂ),
+            stripZeroWeightENN z := h2
+    _ ≤ ∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z +
+          ∑' j : ℕ, ∑' z : (zetaZeroDyadicBlock j : Set ℂ),
+            stripZeroWeightENN z := by
+        rw [hcomp]; exact add_le_add le_rfl h3
+    _ ≤ ∑ z ∈ zetaZeroCompactBlock, stripZeroWeightENN z +
+          ∑' j : ℕ, ENNReal.ofReal
+            (zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 *
+              (2 : ℝ)⁻¹ ^ j) :=
+        add_le_add le_rfl hdy
+
+lemma tsum_dyadic_weight_majorant_ne_top :
+    (∑' j : ℕ, ENNReal.ofReal
+        (zetaZeroWeightBlockBound * ((j : ℝ) + 3) ^ 2 *
+          (2 : ℝ)⁻¹ ^ j)) ≠ ∞ := by
+  have hf : ∀ n : ℕ, 0 ≤
+      zetaZeroWeightBlockBound * ((n : ℝ) + 3) ^ 2 * (2 : ℝ)⁻¹ ^ n :=
+    fun n =>
+      mul_nonneg (mul_nonneg zetaZeroWeightBlockBound_nonneg (sq_nonneg _))
+        (pow_nonneg (by norm_num) _)
+  rw [← ENNReal.ofReal_tsum_of_nonneg hf summable_dyadic_weight_majorant]
+  exact ENNReal.ofReal_ne_top
+
+lemma tsum_weight_strip_ne_top :
+    (∑' z : {z : ℂ | IsCriticalStripZetaZero z}, stripZeroWeightENN z) ≠ ∞ := by
+  have hle := tsum_weight_strip_le
+  exact ne_top_of_le_ne_top
+    (ENNReal.add_ne_top.mpr ⟨sum_weight_compact_ne_top,
+      tsum_dyadic_weight_majorant_ne_top⟩) hle
+
+lemma tsum_ofReal_weight_ne_top :
+    (∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+      ENNReal.ofReal (stripZeroWeight (ρ : ℂ))) ≠ ∞ := by
+  have heq :
+      (fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+        ENNReal.ofReal (stripZeroWeight (ρ : ℂ))) =
+        fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+          stripZeroWeightENN ρ.val :=
+    funext fun ρ => (stripZeroWeightENN_eq_ofReal ρ.property).symm
+  rw [heq]
+  exact tsum_weight_strip_ne_top
+
+lemma summable_stripZeroWeight :
+    Summable fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+      stripZeroWeight (ρ : ℂ) := by
+  have htop := tsum_ofReal_weight_ne_top
+  have hNN := ENNReal.summable_toNNReal_of_tsum_ne_top htop
+  refine (summable_congr fun ρ => ?_).mpr (NNReal.summable_coe.mpr hNN)
+  exact (ENNReal.toReal_ofReal (stripZeroWeight_nonneg (ρ : ℂ))).symm
+
+lemma summable_weighted_hat (F : FullWeilTest) :
+    Summable fun ρ : {z : ℂ // IsCriticalStripZetaZero z} =>
+      (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ := by
+  obtain ⟨C, hC0, hbd⟩ := exists_weighted_hat_bound F
+  refine Summable.of_norm
+    (Summable.of_nonneg_of_le (fun _ => norm_nonneg _) hbd
+      (summable_stripZeroWeight.mul_left C))
+
+lemma landau_gap_T_mono {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) :
+    Monotone T := by
+  intro a b hab
+  rcases eq_or_lt_of_le hab with h | h
+  · subst h; exact le_rfl
+  · have ha : T a ≤ ((2 * a + 3 : ℕ) : ℝ) + 1 := (hTbd a).2
+    have hb : ((2 * b + 3 : ℕ) : ℝ) ≤ T b := (hTbd b).1
+    have hnat : (2 * a + 3 : ℕ) + 1 ≤ 2 * b + 3 := by
+      have : a + 1 ≤ b := Nat.succ_le_of_lt h
+      omega
+    have hstep : ((2 * a + 3 : ℕ) : ℝ) + 1 ≤ ((2 * b + 3 : ℕ) : ℝ) :=
+      by exact_mod_cast hnat
+    exact ha.trans (hstep.trans hb)
+
+lemma landau_gap_T_tendsto {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) :
+    Tendsto T atTop atTop :=
+  tendsto_atTop_mono (fun k =>
+    le_trans (by exact_mod_cast (by omega : k ≤ 2 * k + 3)) (hTbd k).1)
+    tendsto_natCast_atTop_atTop
+
+lemma landau_gap_T_two_le {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) (k : ℕ) :
+    (2 : ℝ) ≤ T k :=
+  le_trans (by norm_num : (2 : ℝ) ≤ 3)
+    (le_trans (by exact_mod_cast
+      (Nat.le_add_left 3 (2 * k) : 3 ≤ 2 * k + 3)) (hTbd k).1)
+
+lemma stripZerosBelow_landau_mono {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) :
+    Monotone fun k => stripZerosBelow (T k) :=
+  fun _ _ h => stripZerosBelow_mono (landau_gap_T_mono hTbd h)
+
+lemma exists_mem_stripZerosBelow_landau {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1)
+    (ρ : {z : ℂ // IsCriticalStripZetaZero z}) :
+    ∃ k, ρ ∈ stripZerosBelow (T k) := by
+  obtain ⟨k, hk⟩ :=
+    (tendsto_atTop_atTop.mp (landau_gap_T_tendsto hTbd)) |(ρ : ℂ).im|
+  refine ⟨k, mem_stripZerosBelow.mpr
+    (mem_rect_of_criticalStrip ρ.property (hk k le_rfl))⟩
+
+lemma tendsto_stripZerosBelow_landau {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) :
+    Tendsto (fun k => stripZerosBelow (T k)) atTop atTop :=
+  tendsto_finset_atTop_of_monotone _
+    (stripZerosBelow_landau_mono hTbd)
+    (exists_mem_stripZerosBelow_landau hTbd)
+
+lemma tendsto_spectralPartialSum_tsum (F : FullWeilTest) {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1) :
+    Tendsto (fun k => spectralPartialSum F.hat (-1 / 16) 2 (T k)) atTop
+      (𝓝 (∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+        (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ)) := by
+  have hsum := (summable_weighted_hat F).hasSum
+  have hfin := tendsto_stripZerosBelow_landau hTbd
+  have hsub :
+      Tendsto (fun k =>
+        ∑ ρ ∈ stripZerosBelow (T k),
+          (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) atTop
+        (𝓝 (∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+          (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ)) :=
+    hsum.comp hfin
+  refine hsub.congr fun k => ?_
+  rw [spectralPartialSum_eq_critical F.hat (by norm_num) (by norm_num),
+    spectralPartialSum_eq_subtype]
+
+lemma tendsto_horizontal_edges_of_landau (F : FullWeilTest) {T : ℕ → ℝ}
+    (hTbd : ∀ k : ℕ, ((2 * k + 3 : ℕ) : ℝ) ≤ T k ∧
+      T k ≤ ((2 * k + 3 : ℕ) : ℝ) + 1)
+    (hgapP : ∀ k : ℕ, ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (ordinateGapConstLandau * (1 + Real.log (T k))) ≤
+        |ρ.im - T k|) :
+    Tendsto (fun k =>
+      ∫ x : ℝ in (-1 / 16 : ℝ)..2,
+        logDeriv riemannZeta ((x : ℂ) + T k * I) *
+          F.hat ((x : ℂ) + T k * I)) atTop (nhds 0) ∧
+    Tendsto (fun k =>
+      ∫ x : ℝ in (-1 / 16 : ℝ)..2,
+        logDeriv riemannZeta ((x : ℂ) + (-(T k) : ℝ) * I) *
+          F.hat ((x : ℂ) + (-(T k) : ℝ) * I)) atTop (nhds 0) := by
+  obtain ⟨C, hC0, hhat⟩ := F.norm_hat_le_inv_sq_on_Icc (-1 / 16 : ℝ) 2
+  set A : ℝ := ordinateGapConstLandau
+  have hA : (1 : ℝ) ≤ A := ordinateGapConstLandau_one_le
+  have hσ : (-1 / 16 : ℝ) ≤ (2 : ℝ) := by norm_num
+  have hT2 : ∀ k, (2 : ℝ) ≤ T k := landau_gap_T_two_le hTbd
+  have hTtop : Tendsto T atTop atTop := landau_gap_T_tendsto hTbd
+  set L : ℕ → ℝ := fun k => 1 + Real.log (T k)
+  set B : ℕ → ℝ := fun k => A * sliverEdgeConst * L k ^ 3
+  have hB0 : ∀ k, 0 ≤ B k := fun k => by
+    have hLk : 0 ≤ L k :=
+      add_nonneg (by norm_num)
+        (Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) (hT2 k)))
+    exact mul_nonneg (mul_nonneg
+      (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA) sliverEdgeConst_nonneg)
+      (pow_nonneg hLk 3)
+  set K : ℝ := (2 + 1 / 16 : ℝ) * A * sliverEdgeConst * C
+  have hK0 : 0 ≤ K :=
+    mul_nonneg (mul_nonneg (mul_nonneg (by norm_num)
+      (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA)) sliverEdgeConst_nonneg) hC0
+  have hlen : (2 : ℝ) - (-1 / 16) = 2 + 1 / 16 := by ring
+  have hedge (τ : ℕ → ℝ) (hτ : ∀ k, |τ k| = T k) (k : ℕ) :
+      ‖∫ x : ℝ in (-1 / 16 : ℝ)..2,
+          logDeriv riemannZeta ((x : ℂ) + τ k * I) *
+            F.hat ((x : ℂ) + τ k * I)‖ ≤
+        K * (L k ^ 3 / (1 + T k ^ 2)) := by
+    have hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+        1 / (A * (1 + Real.log (T k))) ≤ |ρ.im - T k| := hgapP k
+    have hbd : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        ‖logDeriv riemannZeta ((σ : ℂ) + τ k * I)‖ ≤ B k :=
+      fun σ hσs => horizontalEdgeBound_glued hA (hT2 k) hgap
+        hσs.1 hσs.2 (hτ k)
+    have hnz : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        riemannZeta ((σ : ℂ) + τ k * I) ≠ 0 :=
+      fun σ hσs => riemannZeta_ne_zero_of_glued_gap hA (hT2 k) hgap
+        hσs.1 hσs.2 (hτ k)
+    have hne1 : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        (σ : ℂ) + τ k * I ≠ 1 :=
+      fun _ _ => horizontal_ne_one_of_abs (hT2 k) (hτ k)
+    have hle := norm_horizontal_logDeriv_hat_integral_le_with
+      F hσ (hB0 k) hC0 hne1 hnz hbd hhat
+    have hsq : 1 + τ k ^ 2 = 1 + T k ^ 2 := by
+      have : |τ k| ^ 2 = T k ^ 2 := by simp [hτ]
+      simpa [sq_abs] using this
+    convert hle using 1
+    unfold B L K
+    rw [hsq, hlen]
+    ring
+  have hdecay : Tendsto (fun k => L k ^ 3 / (1 + T k ^ 2))
+      atTop (nhds 0) :=
+    tendsto_one_add_log_cubed_div_one_add_sq.comp hTtop
+  have hpos := hedge (fun k => T k)
+    (fun k => abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) (hT2 k)))
+  have hneg := hedge (fun k => -(T k)) (fun k => by simp [abs_neg,
+    abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) (hT2 k))])
+  have hnorm {I : ℕ → ℂ}
+      (hle : ∀ k, ‖I k‖ ≤ K * (L k ^ 3 / (1 + T k ^ 2))) :
+      Tendsto I atTop (nhds 0) :=
+    tendsto_zero_iff_norm_tendsto_zero.mpr
+      (squeeze_zero (fun _ => norm_nonneg _) hle (by
+        convert hdecay.const_mul K
+        rw [mul_zero]))
+  exact ⟨hnorm hpos, hnorm hneg⟩
+
+lemma rectangleIntegral_logDeriv_hat (F : FullWeilTest) (T : ℝ) :
+    rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+      (((-1 / 16 : ℝ) : ℂ) + (-T : ℝ) * I)
+      (((2 : ℝ) : ℂ) + (T : ℝ) * I) =
+    (∫ x : ℝ in (-1 / 16 : ℝ)..2,
+        logDeriv riemannZeta ((x : ℂ) + (-T : ℝ) * I) *
+          F.hat ((x : ℂ) + (-T : ℝ) * I)) -
+    (∫ x : ℝ in (-1 / 16 : ℝ)..2,
+        logDeriv riemannZeta ((x : ℂ) + (T : ℝ) * I) *
+          F.hat ((x : ℂ) + (T : ℝ) * I)) +
+    I • (∫ y : ℝ in (-T)..T,
+        logDeriv riemannZeta ((2 : ℂ) + y * I) * F.hat ((2 : ℂ) + y * I)) -
+    I • (∫ y : ℝ in (-T)..T,
+        logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + y * I) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + y * I)) := by
+  unfold rectangleIntegral
+  have hzre : (((-1 / 16 : ℝ) : ℂ) + (-T : ℝ) * I).re = -1 / 16 := by simp
+  have hwre : (((2 : ℝ) : ℂ) + (T : ℝ) * I).re = 2 := by simp
+  have hzim : (((-1 / 16 : ℝ) : ℂ) + (-T : ℝ) * I).im = -T := by simp
+  have hwim : (((2 : ℝ) : ℂ) + (T : ℝ) * I).im = T := by simp
+  simp [hzre, hwre, hzim, hwim]
+
+set_option maxHeartbeats 800000 in
+theorem contourIdentityLimitAlongGaps : ContourIdentityLimitAlongGaps := by
+  intro F
+  obtain ⟨T, hTbd, hgapP, hgapN⟩ := exists_gap_sequence_landau
+  obtain ⟨hTop, hBot⟩ := tendsto_horizontal_edges_of_landau F hTbd hgapP
+  have hT2 := landau_gap_T_two_le hTbd
+  have hTpos : ∀ k, (0 : ℝ) < T k :=
+    fun k => lt_of_lt_of_le (by norm_num : (0 : ℝ) < 2) (hT2 k)
+  have hTtop := landau_gap_T_tendsto hTbd
+  have hA0 : (0 : ℝ) < ordinateGapConstLandau :=
+    lt_of_lt_of_le (by norm_num) ordinateGapConstLandau_one_le
+  have hord : ∀ k, ∀ ρ ∈ riemannZetaZerosOnClosedRect (-1 / 16) 2 (T k),
+      |ρ.im| < T k :=
+    fun k ρ hρ =>
+      abs_im_lt_of_landau_gaps hA0 (hT2 k) (hgapP k) (hgapN k) hρ
+  have hid : ∀ k,
+      rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+        (((-1 / 16 : ℝ) : ℂ) + (-(T k) : ℝ) * I)
+        (((2 : ℝ) : ℂ) + (T k : ℝ) * I) =
+        (2 * (Real.pi : ℂ) * I) *
+          (spectralPartialSum F.hat (-1 / 16) 2 (T k) - F.hat 1) :=
+    fun k => contour_identity_fixed_T_neg_one_div_sixteen F (hTpos k) (hord k)
+  have hright := tendsto_right_edge_interval F hTtop
+  have hleft := tendsto_left_edge_interval F hTtop
+  have hspec := tendsto_spectralPartialSum_tsum F hTbd
+  have hsides :
+      Tendsto (fun k =>
+        (∫ x : ℝ in (-1 / 16 : ℝ)..2,
+            logDeriv riemannZeta ((x : ℂ) + (-(T k) : ℝ) * I) *
+              F.hat ((x : ℂ) + (-(T k) : ℝ) * I)) -
+        (∫ x : ℝ in (-1 / 16 : ℝ)..2,
+            logDeriv riemannZeta ((x : ℂ) + (T k : ℝ) * I) *
+              F.hat ((x : ℂ) + (T k : ℝ) * I)) +
+        I • (∫ y : ℝ in (-(T k))..(T k),
+            logDeriv riemannZeta ((2 : ℂ) + y * I) *
+              F.hat ((2 : ℂ) + y * I)) -
+        I • (∫ y : ℝ in (-(T k))..(T k),
+            logDeriv riemannZeta (((-1 / 16 : ℝ) : ℂ) + y * I) *
+              F.hat (((-1 / 16 : ℝ) : ℂ) + y * I))) atTop
+        (𝓝 (I • (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+              F.hat ((2 : ℂ) + τ * I)) -
+            I • (∫ τ : ℝ, logDeriv riemannZeta
+              (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+              F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)))) := by
+    convert ((hBot.sub hTop).add (hright.const_smul I)).sub
+      (hleft.const_smul I) using 1
+    simp
+  have hrect :
+      Tendsto (fun k =>
+        rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+          (((-1 / 16 : ℝ) : ℂ) + (-(T k) : ℝ) * I)
+          (((2 : ℝ) : ℂ) + (T k : ℝ) * I)) atTop
+        (𝓝 (I • (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * I) *
+              F.hat ((2 : ℂ) + τ * I)) -
+            I • (∫ τ : ℝ, logDeriv riemannZeta
+              (((-1 / 16 : ℝ) : ℂ) + τ * I) *
+              F.hat (((-1 / 16 : ℝ) : ℂ) + τ * I)))) :=
+    hsides.congr fun k => (rectangleIntegral_logDeriv_hat F (T k)).symm
+  have hspec' :
+      Tendsto (fun k =>
+        (2 * (Real.pi : ℂ) * I) *
+          (spectralPartialSum F.hat (-1 / 16) 2 (T k) - F.hat 1)) atTop
+        (𝓝 ((2 * (Real.pi : ℂ) * I) *
+          ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+              (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
+            F.hat 1))) :=
+    (hspec.sub tendsto_const_nhds).const_mul _
+  exact tendsto_nhds_unique (hrect.congr hid) hspec'
 
 end ContourEdges
 

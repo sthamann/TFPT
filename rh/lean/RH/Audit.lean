@@ -521,6 +521,13 @@ gap-free).  Right-edge Dirichlet + pointwise
 `ĥ` majorants.  `T→∞` identity stays named
 (vertical `Integrable` + Finset exhaustion).
 Census stays 7.
+r530: vertical integrands are `Integrable` on `ℝ`
+(right: Dirichlet × `1/(1+τ²)`; left: compact
+bound plus `log/(1+τ²)` tail).  Weighted
+`Summable (m_ρ ĥ(ρ))` by dyadic log-weight
+blocks; Finset exhaustion along Landau `T_k`;
+`contourIdentityLimitAlongGaps` is a theorem.
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -790,6 +797,21 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms left_edge_integrand_norm_le
 #print axioms right_edge_integrand_norm_le
 #print axioms abs_im_lt_of_landau_gaps
+#print axioms continuous_vertical_path
+#print axioms continuous_right_edge_integrand
+#print axioms continuous_left_edge_integrand
+#print axioms integrable_right_edge_integrand
+#print axioms integrable_one_add_log_mul_inv_sq
+#print axioms integrable_left_edge_integrand
+#print axioms riemannZetaMultiplicity_eq_one_sub
+#print axioms riemannZetaMultiplicity_le_log
+#print axioms tendsto_right_edge_interval
+#print axioms tendsto_left_edge_interval
+#print axioms spectralPartialSum_eq_subtype
+#print axioms exists_weighted_hat_bound
+#print axioms summable_weighted_hat
+#print axioms tendsto_spectralPartialSum_tsum
+#print axioms contourIdentityLimitAlongGaps
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

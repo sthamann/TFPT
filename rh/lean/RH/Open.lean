@@ -1264,6 +1264,22 @@ intended `T→∞` identity; remaining clamp:
 of the r513 series.  Census stays 7 (external 2).
 NO RH CLAIM.
 
+## r530 census (outer bridges 37, LIMIT_IDENTITY)
+
+Sorry-free.  Both vertical integrands of
+`(ζ′/ζ) ĥ` are `Integrable` on `ℝ`.
+Weighted `Summable (m_ρ ĥ(ρ))` via the
+Jensen log-multiplicity times `ĥ ≤ C/(1+Im²)`,
+majorized by dyadic `log/(1+t²)` blocks.
+Rectangle Finsets along Landau `T_k` are
+monotone and cofinal, so
+`spectralPartialSum → tsum`.  Horizontals
+`→ 0` (r528), verticals `→` improper
+integrals, and the fixed-`T` identity along
+gaps assemble to the theorem
+`contourIdentityLimitAlongGaps`.  Census
+stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
