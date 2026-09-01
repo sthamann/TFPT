@@ -1280,6 +1280,26 @@ gaps assemble to the theorem
 `contourIdentityLimitAlongGaps`.  Census
 stays 7 (external 2).  NO RH CLAIM.
 
+## r531 census (outer bridges 38, HAT_INVERSION)
+
+The r463 opaque `standardExplicitFormula` is
+retired: it is now the r530 spectral pairing
+`Re(∑ m_ρ ĥ(ρ) − ĥ(1))`.  The identification
+`fullWeilForm = standardExplicitFormula`
+remains a typed `sorry` (honest: three-channel
+ℝ-form vs spectral, not a tautology).
+Paley--Wiener kernel: `hatSlice σ t = g(t) e^{σ t}`,
+`ĥ(σ − 2π ξ i) = 𝓕 (hatSlice σ) ξ`, and Mathlib
+`Continuous.fourierInv_fourier_eq` gives
+`𝓕⁻ (𝓕 (hatSlice σ)) = hatSlice σ`, and
+the `2π`-frequency form
+`∫ ĥ(σ+iτ) e^{-iτ u} dτ = 2π g(u) e^{σ u}`
+is `hat_fourier_inversion`.  Right-edge
+`integral_tsum`, left-edge FE fold, and
+assembly against `combMass = 2Λ/√n` are
+not claimed.  Census stays 7 (external 2).
+NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

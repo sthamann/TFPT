@@ -528,6 +528,14 @@ bound plus `log/(1+τ²)` tail).  Weighted
 blocks; Finset exhaustion along Landau `T_k`;
 `contourIdentityLimitAlongGaps` is a theorem.
 Census stays 7.
+r531: `standardExplicitFormula` is the spectral
+pairing `Re(∑ m_ρ ĥ(ρ) − ĥ(1))` (opaque retired).
+Paley--Wiener slice `hatSlice`,
+`hat_eq_fourier_slice`, integrable Fourier
+transform, `fourierInv_hatSlice`, and the
+`2π` form `hat_fourier_inversion` are
+theorems.  Identification sorry stays; census
+stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -812,6 +820,10 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms summable_weighted_hat
 #print axioms tendsto_spectralPartialSum_tsum
 #print axioms contourIdentityLimitAlongGaps
+#print axioms FullWeilTest.hat_eq_fourier_slice
+#print axioms FullWeilTest.integrable_fourier_hatSlice
+#print axioms FullWeilTest.fourierInv_hatSlice
+#print axioms FullWeilTest.hat_fourier_inversion
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

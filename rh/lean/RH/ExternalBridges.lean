@@ -61,6 +61,7 @@ import Mathlib.Analysis.SpecialFunctions.Trigonometric.Arctan
 import Mathlib.Analysis.Complex.BorelCaratheodory
 import Mathlib.Analysis.Complex.HasPrimitives
 import Mathlib.Analysis.Complex.AbsMax
+import Mathlib.Analysis.Fourier.Inversion
 
 namespace RH
 
@@ -997,9 +998,9 @@ Weil test class, now visibly decomposed by channel. -/
 noncomputable def fullWeilForm (F : FullWeilTest) : ℝ :=
   fullWeilArchSide F - fullWeilCombSide F + fullWeilPoleSide F
 
-/-- The standard Weil explicit-formula quadratic form, independently
-of the TFPT finite-window construction. -/
-opaque standardExplicitFormula : FullWeilTest → ℝ
+/- The standard Weil explicit-formula quadratic form is defined after
+the r530 spectral sum: `Re(∑ m_ρ ĥ(ρ) − ĥ(1))`.  The r463 opaque is
+retired; the three-channel identification remains open. -/
 
 /-- Fixed-support approximation data.  `grid n` never exceeds the
 target support, converges uniformly there, and converges in `L¹` on
@@ -14020,6 +14021,198 @@ theorem contourIdentityLimitAlongGaps : ContourIdentityLimitAlongGaps := by
 
 end ContourEdges
 
+/-- Spectral pairing supplied by the r530 contour limit:
+`Re(∑ m_ρ ĥ(ρ) − ĥ(1))`.  Independently of the finite-window
+three-channel construction.  The identification
+`fullWeilForm = standardExplicitFormula` is the open dictionary. -/
+noncomputable def standardExplicitFormula (F : FullWeilTest) : ℝ :=
+  ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+      (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) - F.hat 1).re
+
+section HatFourierInversion
+
+open MeasureTheory Filter Function
+open scoped FourierTransform Topology RealInnerProductSpace
+
+/-- Slice `t ↦ g(t) e^{σ t}` of a compactly supported Weil test. -/
+noncomputable def FullWeilTest.hatSlice (F : FullWeilTest) (σ : ℝ) : ℝ → ℂ :=
+  fun t => (F.toFun t : ℂ) * Complex.exp (σ * t)
+
+lemma FullWeilTest.continuous_hatSlice (F : FullWeilTest) (σ : ℝ) :
+    Continuous (F.hatSlice σ) :=
+  (Complex.continuous_ofReal.comp F.continuous_toFun).mul
+    (Complex.continuous_exp.comp (continuous_const.mul Complex.continuous_ofReal))
+
+lemma FullWeilTest.hasCompactSupport_hatSlice (F : FullWeilTest) (σ : ℝ) :
+    HasCompactSupport (F.hatSlice σ) :=
+  HasCompactSupport.of_support_subset_isCompact isCompact_Icc
+    (fun t ht => F.support_subset_Icc (by
+      refine mem_support.mpr ?_
+      intro hg
+      have : F.hatSlice σ t = 0 := by
+        unfold FullWeilTest.hatSlice
+        simp [hg]
+      exact (mem_support.mp ht) this))
+
+lemma FullWeilTest.integrable_hatSlice (F : FullWeilTest) (σ : ℝ) :
+    Integrable (F.hatSlice σ) :=
+  (F.continuous_hatSlice σ).integrable_of_hasCompactSupport
+    (F.hasCompactSupport_hatSlice σ)
+
+lemma FullWeilTest.hat_eq_fourier_slice (F : FullWeilTest) (σ ξ : ℝ) :
+    F.hat ((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I) = 𝓕 (F.hatSlice σ) ξ := by
+  unfold FullWeilTest.hat FullWeilTest.hatSlice
+  rw [Real.fourier_eq']
+  refine integral_congr_ae (Eventually.of_forall fun t => ?_)
+  have hinter : ⟪t, ξ⟫ = t * ξ := mul_comm ξ t
+  dsimp
+  have hmul :
+      ((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I) * (t : ℂ) =
+        (σ : ℂ) * t + ((-(2 * Real.pi) * ξ) * Complex.I) * t := by
+    simp [add_mul]
+  have hexp :
+      Complex.exp (((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I) * t) =
+        Complex.exp ((σ : ℂ) * t) *
+          Complex.exp (((-(2 * Real.pi) * ξ) * Complex.I) * t) := by
+    rw [hmul, Complex.exp_add]
+  have hfour :
+      Complex.exp ((↑(-2 * Real.pi * ⟪t, ξ⟫) * Complex.I)) =
+        Complex.exp (((-(2 * Real.pi) * ξ) * Complex.I) * t) := by
+    simp [hinter, mul_comm, mul_left_comm, mul_assoc]
+  calc
+    (F.toFun t : ℂ) * Complex.exp
+        (((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I) * t) =
+        (F.toFun t : ℂ) * (Complex.exp ((σ : ℂ) * t) *
+          Complex.exp (((-(2 * Real.pi) * ξ) * Complex.I) * t)) := by
+      rw [hexp]
+    _ = Complex.exp ((↑(-2 * Real.pi * ⟪t, ξ⟫) * Complex.I)) *
+          ((F.toFun t : ℂ) * Complex.exp (σ * t)) := by
+      rw [hfour]
+      ring
+
+lemma integrable_inv_one_add_scaled_sq :
+    Integrable fun ξ : ℝ => (1 + (2 * Real.pi * ξ) ^ 2)⁻¹ := by
+  have hmaj : Integrable fun ξ : ℝ => (1 + ξ ^ 2)⁻¹ :=
+    integrable_inv_one_add_sq
+  have hcont : Continuous fun ξ : ℝ => (1 + (2 * Real.pi * ξ) ^ 2)⁻¹ :=
+    Continuous.inv₀
+      (continuous_const.add ((continuous_const.mul continuous_id).pow 2))
+      fun ξ => by nlinarith [sq_nonneg (2 * Real.pi * ξ)]
+  refine hmaj.mono' hcont.aestronglyMeasurable
+    (Eventually.of_forall fun ξ => ?_)
+  have hle : 1 + ξ ^ 2 ≤ 1 + (2 * Real.pi * ξ) ^ 2 := by
+    have : (1 : ℝ) ≤ (2 * Real.pi) ^ 2 := by
+      nlinarith [Real.pi_gt_three]
+    nlinarith [sq_nonneg ξ, this]
+  have hpos : 0 < 1 + ξ ^ 2 := by nlinarith [sq_nonneg ξ]
+  have hpos' : 0 < 1 + (2 * Real.pi * ξ) ^ 2 := by
+    nlinarith [sq_nonneg (2 * Real.pi * ξ)]
+  rw [Real.norm_eq_abs, abs_of_nonneg (inv_nonneg.mpr hpos'.le)]
+  exact (inv_le_inv₀ hpos' hpos).mpr hle
+
+lemma FullWeilTest.integrable_fourier_hatSlice (F : FullWeilTest) (σ : ℝ) :
+    Integrable (𝓕 (F.hatSlice σ)) := by
+  obtain ⟨C, hC0, hhat⟩ :=
+    F.norm_hat_le_inv_sq_of_abs_re_le |σ| (abs_nonneg _)
+  have hbd : ∀ ξ : ℝ, ‖𝓕 (F.hatSlice σ) ξ‖ ≤
+      C * (1 + (2 * Real.pi * ξ) ^ 2)⁻¹ := by
+    intro ξ
+    have hre :
+        |(((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I).re)| ≤ |σ| := by
+      simp
+    have him :
+        ((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I).im =
+          -(2 * Real.pi * ξ) := by
+      simp
+    have heq := F.hat_eq_fourier_slice σ ξ
+    have hle : ‖F.hat ((σ : ℂ) + (-(2 * Real.pi) * ξ) * Complex.I)‖ ≤
+        C / (1 + (2 * Real.pi * ξ) ^ 2) := by
+      have hle0 := hhat _ hre
+      convert hle0 using 2
+      rw [him]
+      ring
+    rw [← heq]
+    simpa [div_eq_mul_inv] using hle
+  have hmaj : Integrable fun ξ : ℝ =>
+      C * (1 + (2 * Real.pi * ξ) ^ 2)⁻¹ :=
+    integrable_inv_one_add_scaled_sq.const_mul C
+  have hmeas : AEStronglyMeasurable (𝓕 (F.hatSlice σ)) volume :=
+    (VectorFourier.fourierIntegral_continuous Real.continuous_fourierChar
+      (continuous_inner (𝕜 := ℝ)) (F.integrable_hatSlice σ)).aestronglyMeasurable
+  exact hmaj.mono' hmeas (Eventually.of_forall hbd)
+
+/-- Mathlib Fourier inversion on the Paley--Wiener slice
+`t ↦ g(t) e^{σ t}`. -/
+lemma FullWeilTest.fourierInv_hatSlice (F : FullWeilTest) (σ : ℝ) :
+    𝓕⁻ (𝓕 (F.hatSlice σ)) = F.hatSlice σ :=
+  (F.continuous_hatSlice σ).fourierInv_fourier_eq
+    (F.integrable_hatSlice σ) (F.integrable_fourier_hatSlice σ)
+
+/-- The `2π`-frequency form of the Paley--Wiener inversion:
+`∫ ĥ(σ+iτ) e^{-iτ u} dτ = 2π g(u) e^{σ u}`. -/
+lemma FullWeilTest.hat_fourier_inversion (F : FullWeilTest) (σ u : ℝ) :
+    (∫ τ : ℝ, F.hat ((σ : ℂ) + τ * Complex.I) *
+        Complex.exp (-(τ : ℂ) * Complex.I * u)) =
+      (2 * Real.pi : ℂ) * F.hatSlice σ u := by
+  set g : ℝ → ℂ := fun τ =>
+    Complex.exp (-(τ : ℂ) * Complex.I * u) *
+      F.hat ((σ : ℂ) + τ * Complex.I)
+  have hinter : ∀ ξ : ℝ, ⟪ξ, u⟫ = ξ * u := fun ξ => mul_comm u ξ
+  have hpoint : ∀ ξ : ℝ,
+      Complex.exp ((↑(2 * Real.pi * ⟪ξ, u⟫) * Complex.I)) *
+          𝓕 (F.hatSlice σ) ξ =
+        g (-(2 * Real.pi) * ξ) := by
+    intro ξ
+    dsimp [g]
+    rw [← F.hat_eq_fourier_slice σ ξ]
+    simp [hinter ξ, mul_comm, mul_left_comm, mul_assoc]
+  have hFinv :
+      𝓕⁻ (𝓕 (F.hatSlice σ)) u =
+        ∫ ξ : ℝ, Complex.exp ((↑(2 * Real.pi * ⟪ξ, u⟫) * Complex.I)) *
+          𝓕 (F.hatSlice σ) ξ := by
+    rw [Real.fourierInv_eq']
+    refine integral_congr_ae (Eventually.of_forall fun ξ => ?_)
+    simp [smul_eq_mul]
+  have hscale :
+      (∫ ξ : ℝ, Complex.exp ((↑(2 * Real.pi * ⟪ξ, u⟫) * Complex.I)) *
+          𝓕 (F.hatSlice σ) ξ) =
+        ∫ ξ : ℝ, g (-(2 * Real.pi) * ξ) :=
+    integral_congr_ae (Eventually.of_forall hpoint)
+  have hcomp := Measure.integral_comp_mul_left g (-(2 * Real.pi))
+  have habs : |(-(2 * Real.pi))⁻¹| = (2 * Real.pi)⁻¹ := by
+    rw [abs_inv, abs_neg, abs_of_pos]
+    exact mul_pos (by norm_num) Real.pi_pos
+  have h0 : 𝓕⁻ (𝓕 (F.hatSlice σ)) u = F.hatSlice σ u :=
+    congrArg (fun f : ℝ → ℂ => f u) (F.fourierInv_hatSlice σ)
+  have hslice : F.hatSlice σ u =
+      ((2 * Real.pi)⁻¹ : ℂ) * ∫ τ : ℝ, g τ := by
+    calc
+      F.hatSlice σ u = 𝓕⁻ (𝓕 (F.hatSlice σ)) u := h0.symm
+      _ = ∫ ξ : ℝ, Complex.exp ((↑(2 * Real.pi * ⟪ξ, u⟫) * Complex.I)) *
+            𝓕 (F.hatSlice σ) ξ := hFinv
+      _ = ∫ ξ : ℝ, g (-(2 * Real.pi) * ξ) := hscale
+      _ = |(-(2 * Real.pi))⁻¹| • ∫ τ : ℝ, g τ := hcomp
+      _ = ((2 * Real.pi)⁻¹ : ℝ) • ∫ τ : ℝ, g τ := by rw [habs]
+      _ = ((2 * Real.pi)⁻¹ : ℂ) * ∫ τ : ℝ, g τ := by
+        rw [Complex.real_smul]
+        norm_cast
+  have hgoal :
+      (∫ τ : ℝ, F.hat ((σ : ℂ) + τ * Complex.I) *
+          Complex.exp (-(τ : ℂ) * Complex.I * u)) =
+        ∫ τ : ℝ, g τ :=
+    integral_congr_ae (Eventually.of_forall fun τ => by
+      dsimp [g]; ring)
+  rw [hgoal]
+  have hπ : (2 * Real.pi : ℂ) ≠ 0 := by
+    exact_mod_cast (mul_ne_zero (by norm_num : (2 : ℝ) ≠ 0) Real.pi_ne_zero)
+  calc
+    ∫ τ : ℝ, g τ =
+        (2 * Real.pi : ℂ) * (((2 * Real.pi)⁻¹ : ℂ) * ∫ τ : ℝ, g τ) := by
+      field_simp [hπ]
+    _ = (2 * Real.pi : ℂ) * F.hatSlice σ u := by
+      rw [← hslice]
+
+end HatFourierInversion
 
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
