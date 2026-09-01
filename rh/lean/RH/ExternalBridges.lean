@@ -10949,15 +10949,17 @@ lemma sum_digamma_kernel_tail_le {z : ℂ} {N M : ℕ}
     field_simp
   exact hsum.trans (hfactor.trans_le (htail.trans_eq hdiv))
 
-/-- Mathlib v4.29.1: `digamma = logDeriv Gamma`, recurrence
-`digamma_apply_add_one`, values at `0,1,1/2`.  No Weierstrass
-series, no Stirling, no Gauss integral (TODO on Digamma.lean).
-Euler `GammaSeq_tendsto_Gamma` exists but logDeriv-interchange
-is the remaining anchor.  Named, not a `sorry`. -/
+/-- Sliver remainder (FE consumer: `Re ∈ [1/2, 17/16]`).
+r525 chose route A: `convexOn_log_Gamma` ⇒ monotone real `ψ`,
+sandwich `ψ(x+n)` vs `ψ(n+1)`, Weierstrass series on `(1,2)`,
+identity theorem on `{1/4 < Re < 2}`.  The real-from-complex
+`HasDerivAt.real_of_complex` bridge did not close this cut.
+Route B (`TendstoLocallyUniformlyOn.deriv` of `GammaSeq`) needs
+locally uniform Euler-limit, not in Mathlib.  Named, not sorry. -/
 def DigammaHorizontalLogBound : Prop :=
   ∃ C : ℝ, 0 ≤ C ∧
-    ∀ {z : ℂ}, |z.re| ≤ 3 → (2 : ℝ) ≤ |z.im| →
-      (∀ m : ℕ, z ≠ -m) →
+    ∀ {z : ℂ}, (1 / 2 : ℝ) ≤ z.re → z.re ≤ (17 / 16 : ℝ) →
+      (2 : ℝ) ≤ |z.im| →
         ‖digamma z‖ ≤ C * (1 + Real.log (2 + |z.im|))
 
 lemma norm_intervalIntegral_le_length_mul

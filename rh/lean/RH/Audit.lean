@@ -495,6 +495,10 @@ A · `landauHorizontalConst`) and
 n>T tail `sum_digamma_kernel_tail_le`.
 `DigammaHorizontalLogBound` stays named
 (Mathlib: `logDeriv Gamma`, no series).
+r525: route A (real convexity → series on
+`(1,2)` → identity on the sliver strip)
+chosen; the real-from-complex glue did not
+close.  Prop narrowed to `Re ∈ [1/2, 17/16]`.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 

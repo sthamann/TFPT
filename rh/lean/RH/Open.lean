@@ -1199,6 +1199,18 @@ logDeriv anchor).  Remaining: `|ψ|` on the sliver,
 FE/`cot`, horizontals→0, left edge, `T→∞`.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r525 census (outer bridges 32, ψ-anchor)
+
+Honest cut, sorry-free.  Route A chosen (cheaper than
+GammaSeq-TLU): real `convexOn_log_Gamma` ⇒ monotone `ψ`,
+series on `(1,2)`, identity on the sliver strip.  The
+real-from-complex derivative bridge did not close.
+`DigammaHorizontalLogBound` is narrowed to the FE
+consumer `Re ∈ [1/2, 17/16]` and stays named.
+Remaining: close that Prop (route A glue), FE/`cot`,
+horizontals→0, left edge, `T→∞`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
