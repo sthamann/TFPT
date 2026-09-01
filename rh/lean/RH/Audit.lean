@@ -485,6 +485,12 @@ instance; r499 Finset bridge; two-sided
 length×sup template.  `HorizontalEdgesTendstoZero`
 stays a named Prop (sliver FE/`ψ` and the
 `A=1` vs `ordinateGapConst` gap).
+r523: wide `exists_gap_sequence_landau`
+(Landau-disk window) and the `ψ` kernel
+`sum_digamma_kernel_norm_le`.  General-A
+Landau packing and the sliver FE stay open.
+`DigammaHorizontalLogBound` and
+`HorizontalEdgesTendstoZero` stay named.
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -657,6 +663,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms exists_gap_height_abs
 #print axioms exists_gap_sequence_abs
 #print axioms norm_horizontal_logDeriv_hat_integral_le
+#print axioms exists_gap_height_landau
+#print axioms exists_gap_sequence_landau
+#print axioms landau_gap_of_wide_window
+#print axioms digamma_add_nat
+#print axioms sum_range_inv_succ_le_one_add_log
+#print axioms sum_digamma_kernel_norm_le
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

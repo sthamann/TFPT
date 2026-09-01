@@ -1166,6 +1166,23 @@ Landau `A=1` vs r518 `ordinateGapConst`-gap,
 left edge, `T→∞`, three-channel id.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r523 census (outer bridges 30, horizontal clamps)
+
+Honest cut, sorry-free.  PROVED: wide `[N-2, N+3]`
+Lücken-Lemma `exists_gap_sequence_landau` (covers
+the Landau disk `D(2+iT, 13/8)`; two-sided `|Im|`
+gap for FE) and the `ψ` working lemmas
+(`digamma_add_nat`, term bound, harmonic
+`H_n ≤ 1+log(n+1)`, n-le-T kernel
+`sum_digamma_kernel_norm_le`).  The r521 `A=1`
+theorem is unchanged; general-A packing of Q'/Q
+did not close this cut.  Named, not sorry:
+`DigammaHorizontalLogBound` and
+`HorizontalEdgesTendstoZero`.  Remaining:
+general-A Landau, sliver FE (`cot` + `|ψ|`
+identity + Landau at `-T`), left edge, `T→∞`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
