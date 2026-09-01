@@ -7189,6 +7189,29 @@ nonnegative, and both representations return a positive value: NO
 counterexample, NO anti-positivity statement.
 NO ledger row, NO L\* claim, NO RH CLAIM, NO anti-RH claim.
 
+
+**Outer bridges r517–r532 (Lean-only campaign).**
+No sealed probe, no ledger row, no status upgrade.
+Sixteen sorry-free Lean rounds on
+`RH/ExternalBridges.lean` (commits `4bf75f4f`–
+`7fb2dbb0`): CONTOUR\_IDENTITY, GAP\_WIRED, BC\_WIRED,
+LANDAU\_SUM\_WIRED, LANDAU\_WIRED, CONTOUR\_RESTATED,
+WINDOW+PSI, LANDAU\_A, PSI\_OPEN, PSI\_ANCHORED,
+SLIVER\_WIRED, HORIZONTALS\_CLOSED, LEFT\_EDGE,
+LIMIT\_IDENTITY (`contourIdentityLimitAlongGaps` —
+full spectral side of the explicit formula),
+HAT\_INVERSION (`hat_fourier_inversion`;
+`standardExplicitFormula` concretely the spectral
+pairing), RIGHT\_PRIME
+(`rightVerticalIntegral_eq_prime_sum`; $2\Lambda/\sqrt{n}$
+gauge pinned, unresolved).  Named bridges now theorems:
+`fullWeil_dyadic_sample_convergence`,
+`gridPoleHatIntegralIdentity`,
+`fullWeil_channel_continuity`.  Still OPEN:
+`standard_explicit_formula_identification`,
+`fullWeil_separates_offCritical_zeros`.  Sorry census
+**stays 7** (external 2).  NO RH CLAIM.
+
 ## Folder guide
 
 ```
@@ -7315,12 +7338,19 @@ rh/
 │       │                    density, grid fold, sign split; k=5/9/10
 │       │                    pins match lean_fidelity_probe).  Zero sorry;
 │       │                    NO RH CLAIM
-│       ├── ExternalBridges.lean — r463/r487/r489/r491 bridges;
-│       │                    +2cosh sign fixed; full arch concrete;
-│       │                    explicit support-fitting dyadic sampler;
-│       │                    three-part completion sorry remains.
-│       │                    Three external sorries; census 8.
-│       │                    NO RH CLAIM
+│       ├── ExternalBridges.lean — r463/r487/r489/r491 plus
+│       │                    r517–r532 Lean-only outer-bridge
+│       │                    campaign.  Theorems (not OPEN):
+│       │                    fullWeil_dyadic_sample_convergence,
+│       │                    gridPoleHatIntegralIdentity,
+│       │                    fullWeil_channel_continuity;
+│       │                    contourIdentityLimitAlongGaps,
+│       │                    hat_fourier_inversion,
+│       │                    rightVerticalIntegral_eq_prime_sum.
+│       │                    Remaining external sorrys:
+│       │                    standard_explicit_formula_identification,
+│       │                    fullWeil_separates_offCritical_zeros.
+│       │                    Census 7 (external 2).  NO RH CLAIM
 │       ├── OneDefect.lean — r406: general one-defect absorption
 │       │                    (indNeg_sub_rankOne_le_one,
 │       │                    oneDefect_update_posDef_iff,
@@ -8624,6 +8654,37 @@ alternative rational-certificate route).  Real-window Loewner
 remainder `SelectedACapPsdImpliesPlainReads` (Hankel/`fullRead`,
 not the dual-resolvent cone).  Zero new `sorry`; census
 **stays 5**.  NO RH CLAIM.
+**r517–r532 Lean-only outer-bridge campaign.**
+`RH/ExternalBridges.lean` / `RH/Open.lean` /
+`RH/Audit.lean` (commits `4bf75f4f`–`7fb2dbb0`; no
+sealed probe).  Sorry-free throughout except the
+standing census of 7.  r517 `contour_identity_fixed_T`;
+r518 ĥ-decay + `exists_gap_height`; r519 Borel–
+Carathéodory wrappers + `norm_logDeriv_le_of_log_norm_le`;
+r520 Landau gap sum; r521 `horizontalEdgeLandauBound`
+**PROVED**; r522 parametric `contour_identity_fixed_T_of`;
+r523 `exists_gap_sequence_landau` + ψ kernel; r524
+A-parametric Landau; r525 route A; r526
+`DigammaHorizontalLogBound` **PROVED**; r527 FE sliver;
+r528 `horizontalEdgesTendstoZero` **PROVED**; r529
+`leftEdgeLogDerivBound` **PROVED**; r530
+`contourIdentityLimitAlongGaps` **PROVED** (full spectral
+side of the explicit formula); r531 `hat_fourier_inversion`
+**PROVED** (`standardExplicitFormula` is the spectral
+pairing; identification stays a typed `sorry`); r532
+`rightVerticalIntegral_eq_prime_sum` **PROVED** (`2Λ/√n`
+gauge pinned, unclaimed).  Previously OPEN named
+bridges now theorems:
+`fullWeil_dyadic_sample_convergence`,
+`gridPoleHatIntegralIdentity`,
+`fullWeil_channel_continuity`.  Still OPEN:
+`standard_explicit_formula_identification`,
+`fullWeil_separates_offCritical_zeros`.  Census
+**stays 7** (external 2; internal 5:
+`lstar_canonical`, `terminal_q_canonical`,
+`pair_terminal_dictionary`,
+`mainWindow_iff_builtFromPrimeSource`,
+`arch_gauss_mellin_digamma_identity`).  NO RH CLAIM.
 **r431 coexistence.** Round 431 (`source_potapov.tex`) is
 additive on the reviewer Potapov discovery lane after
 DCCXCVII; it does not touch `rh/lean/`. Suite surface of
@@ -9044,6 +9105,16 @@ in parallel), the main verification/ledger/docset, or
 `INVENTORY.json` and this README (which also picks up the missing r496
 status block).  Suite surface: integrity + probes
 (`run_rh.py --fast --skip-lean`).
+**r517–r532 coexistence.** Rounds 517–532 are a Lean-only
+outer-bridge campaign (no sealed probe, no pin on
+`ExternalBridges.lean` because a parallel editor owns that
+file).  File domain is `RH/ExternalBridges.lean`,
+`RH/Open.lean`, `RH/Audit.lean`, `make_inventory.py`,
+`INVENTORY.json`, `run_rh.py`, and this README.  It does
+not touch `experiments/next.txt`, the main
+verification/ledger/docset, or any probe.  Suite surface:
+integrity + probes (`run_rh.py --fast --skip-lean`).
+Census stays 7.  NO RH CLAIM.
 **r364 coexistence.** Round 364 (`xn_invariant.tex`) does not
 touch `rh/lean/`. DualResolvent.lean on disk is the committed r362
 transcription. A parallel Lean worker may hold a red `lake build`

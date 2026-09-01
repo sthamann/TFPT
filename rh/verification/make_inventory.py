@@ -7378,6 +7378,52 @@ ENTRIES = [
      "compiled PDF of l08_judgment.tex "
      "(recompiled artefact, registered unpinned)", False),
 
+    ("rh/lean/RH/ExternalBridges.lean", "lean_module",
+     "r517-r532",
+     [],
+     "Lean-only outer-bridge campaign r517-r532 "
+     "(commits 4bf75f4f..7fb2dbb0; no sealed probe).  "
+     "r517 CONTOUR_IDENTITY contour_identity_fixed_T; "
+     "r518 GAP_WIRED exists_gap_height; r519 BC_WIRED "
+     "norm_logDeriv_le_of_log_norm_le; r520 LANDAU_SUM_WIRED "
+     "gap sum O(log^2 T); r521 LANDAU_WIRED "
+     "horizontalEdgeLandauBound theorem; r522 CONTOUR_RESTATED "
+     "contour_identity_fixed_T_of; r523 WINDOW+PSI "
+     "exists_gap_sequence_landau; r524 LANDAU_A "
+     "horizontalEdgeLandauBound_of_gap; r525 PSI_OPEN route A; "
+     "r526 PSI_ANCHORED DigammaHorizontalLogBound theorem; "
+     "r527 SLIVER_WIRED sliverEdgeBound_negIm; r528 "
+     "HORIZONTALS_CLOSED horizontalEdgesTendstoZero; r529 "
+     "LEFT_EDGE leftEdgeLogDerivBound; r530 LIMIT_IDENTITY "
+     "contourIdentityLimitAlongGaps (spectral side of the "
+     "explicit formula); r531 HAT_INVERSION hat_fourier_inversion "
+     "(standardExplicitFormula now the spectral pairing); "
+     "r532 RIGHT_PRIME rightVerticalIntegral_eq_prime_sum "
+     "(2 Lambda/sqrt(n) gauge pinned, unclaimed).  "
+     "Theorems (not OPEN): fullWeil_dyadic_sample_convergence, "
+     "gridPoleHatIntegralIdentity, fullWeil_channel_continuity.  "
+     "Remaining external sorrys: "
+     "standard_explicit_formula_identification, "
+     "fullWeil_separates_offCritical_zeros.  "
+     "Sorry census stays 7 (external 2, internal 5).  "
+     "Living document (parallel editor on this file).  "
+     "NO RH CLAIM",
+     False),
+    ("rh/lean/RH/Open.lean", "lean_module",
+     "r517-r532",
+     [],
+     "r517-r532 census blocks (outer bridges 24-39) in "
+     "RH/Open.lean; each round sorry-free unless the standing "
+     "census.  Census stays 7 (external 2).  NO RH CLAIM",
+     True),
+    ("rh/lean/RH/Audit.lean", "lean_module",
+     "r517-r532",
+     [],
+     "r517-r532 axiom/audit trail of the outer-bridge campaign "
+     "(contour identity through RIGHT_PRIME).  Census stays 7.  "
+     "NO RH CLAIM",
+     True),
+
     # -- frozen libraries the modules embed byte-exact --
     (f"{EXP}/tau_symbolic_probe.py", "frozen_library",
      "r224",
