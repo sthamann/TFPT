@@ -478,6 +478,13 @@ horizontal `[1/2, 2]`; logDeriv dictionary,
 r521: `horizontalEdgeLandauBound` — `g = F/P`
 update-fill, mid-sphere max modulus, r519
 kernel; Prop closed on `σ ∈ [1/2, 2]`.
+r522: parametric `contour_identity_fixed_T_of`
+on `σ₁ ∈ (-1/4, 0)` and the `-1/16`
+instance; r499 Finset bridge; two-sided
+`exists_gap_height_abs`; horizontal
+length×sup template.  `HorizontalEdgesTendstoZero`
+stays a named Prop (sliver FE/`ψ` and the
+`A=1` vs `ordinateGapConst` gap).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -644,6 +651,12 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms norm_landauQuotient_le_on_mid_closedBall
 #print axioms log_norm_landauQuotient_center_ge
 #print axioms horizontalEdgeLandauBound
+#print axioms riemannZetaZerosOnClosedRect_eq_critical
+#print axioms contour_identity_fixed_T_of
+#print axioms contour_identity_fixed_T_neg_one_div_sixteen
+#print axioms exists_gap_height_abs
+#print axioms exists_gap_sequence_abs
+#print axioms norm_horizontal_logDeriv_hat_integral_le
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

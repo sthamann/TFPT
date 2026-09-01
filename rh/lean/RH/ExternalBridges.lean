@@ -7859,6 +7859,208 @@ lemma riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero {s : ℂ}
     linarith
   exact riemannZeta_ne_zero_of_one_le_re hre1 hz1
 
+lemma riemannZeta_ne_zero_of_neg_quarter_lt_re_le_zero {s : ℂ}
+    (hlo : -1 / 4 < s.re) (hhi : s.re ≤ 0) :
+    riemannZeta s ≠ 0 := by
+  rcases lt_or_eq_of_le hhi with hlt | heq
+  · exact riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero hlo hlt
+  · exact riemannZeta_ne_zero_of_re_eq_zero heq
+
+/-- r499 Finset bridge: zeros in `Q_T(σ₁,2)` for `σ₁ ∈ (-1/4, 0)`
+are exactly the critical-strip zeros in `[0,1] × [-T,T]`.
+The open strip `(-1/4, 0)` and the line `Re = 0` are zero-free,
+and `Re ≥ 1` is zero-free except the pole (excluded). -/
+lemma riemannZetaZerosOnClosedRect_eq_critical
+    {σ₁ T : ℝ} (hlo : -1 / 4 < σ₁) (hhi : σ₁ < 0) :
+    riemannZetaZerosOnClosedRect σ₁ 2 T =
+      riemannZetaZerosOnClosedRect 0 1 T := by
+  ext z
+  constructor
+  · intro hz
+    have hmem := mem_riemannZetaZerosOnClosedRect.mp hz
+    have hQ := mem_zetaClosedRect.mp hmem.1
+    have hre0 : 0 ≤ z.re := by
+      have hnot : ¬ z.re ≤ 0 := fun hle =>
+        (riemannZeta_ne_zero_of_neg_quarter_lt_re_le_zero
+          (lt_of_lt_of_le hlo hQ.1) hle) hmem.2.1
+      exact le_of_not_ge hnot
+    have hre1 : z.re ≤ 1 := by
+      have hnot : ¬ (1 : ℝ) ≤ z.re := fun hge =>
+        riemannZeta_ne_zero_of_one_le_re hge hmem.2.1
+      exact le_of_lt (lt_of_not_ge hnot)
+    exact mem_riemannZetaZerosOnClosedRect.mpr
+      ⟨mem_zetaClosedRect.mpr ⟨hre0, hre1, hQ.2.2.1, hQ.2.2.2⟩,
+        hmem.2.1, hmem.2.2⟩
+  · intro hz
+    have hmem := mem_riemannZetaZerosOnClosedRect.mp hz
+    have hQ := mem_zetaClosedRect.mp hmem.1
+    have hσ : σ₁ ≤ z.re := (le_of_lt hhi).trans hQ.1
+    have h2 : z.re ≤ 2 := hQ.2.1.trans (by norm_num : (1 : ℝ) ≤ 2)
+    exact mem_riemannZetaZerosOnClosedRect.mpr
+      ⟨mem_zetaClosedRect.mpr ⟨hσ, h2, hQ.2.2.1, hQ.2.2.2⟩,
+        hmem.2.1, hmem.2.2⟩
+
+lemma riemannZetaZerosOnClosedRect_eq_of_neg_quarter
+    {σ₁ σ₁' T : ℝ}
+    (hlo : -1 / 4 < σ₁) (hhi : σ₁ < 0)
+    (hlo' : -1 / 4 < σ₁') (hhi' : σ₁' < 0) :
+    riemannZetaZerosOnClosedRect σ₁ 2 T =
+      riemannZetaZerosOnClosedRect σ₁' 2 T := by
+  rw [riemannZetaZerosOnClosedRect_eq_critical hlo hhi,
+    riemannZetaZerosOnClosedRect_eq_critical hlo' hhi']
+
+lemma spectralPartialSum_eq_critical
+    (F : ℂ → ℂ) {σ₁ T : ℝ} (hlo : -1 / 4 < σ₁) (hhi : σ₁ < 0) :
+    spectralPartialSum F σ₁ 2 T = spectralPartialSum F 0 1 T := by
+  simp [spectralPartialSum,
+    riemannZetaZerosOnClosedRect_eq_critical hlo hhi]
+
+lemma hord_iff_critical {σ₁ T : ℝ}
+    (hlo : -1 / 4 < σ₁) (hhi : σ₁ < 0) :
+    (∀ ρ ∈ riemannZetaZerosOnClosedRect σ₁ 2 T, |ρ.im| < T) ↔
+      (∀ ρ ∈ riemannZetaZerosOnClosedRect 0 1 T, |ρ.im| < T) := by
+  constructor <;> intro h ρ hρ
+  · exact h ρ (by simpa [riemannZetaZerosOnClosedRect_eq_critical hlo hhi]
+      using hρ)
+  · exact h ρ (by simpa [riemannZetaZerosOnClosedRect_eq_critical hlo hhi]
+      using hρ)
+
+/-- Parametric r517 identity on every left edge `σ₁ ∈ (-1/4, 0)`.
+The r517 argument is symmetric: left-edge cleanliness is the r518
+zero-free strip, which holds for every such `σ₁`.  The r499 Finset
+is the critical-strip Finset (`riemannZetaZerosOnClosedRect_eq_critical`). -/
+lemma contour_identity_fixed_T_of (F : FullWeilTest) {σ₁ T : ℝ}
+    (hσlo : -1 / 4 < σ₁) (hσhi : σ₁ < 0) (hT : 0 < T)
+    (hord : ∀ ρ ∈ riemannZetaZerosOnClosedRect σ₁ 2 T,
+      |ρ.im| < T) :
+    rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+      ((σ₁ : ℂ) + (-T : ℝ) * I)
+      (((2 : ℝ) : ℂ) + (T : ℝ) * I) =
+      (2 * (Real.pi : ℂ) * I) *
+        (spectralPartialSum F.hat σ₁ 2 T - F.hat 1) := by
+  set z : ℂ := (σ₁ : ℂ) + (-T : ℝ) * I
+  set w : ℂ := (((2 : ℝ) : ℂ) + (T : ℝ) * I)
+  have hzre : z.re = σ₁ := by simp [z]
+  have hwre : w.re = 2 := by simp [w]
+  have hzim : z.im = -T := by simp [z]
+  have hwim : w.im = T := by simp [w]
+  have hre_le : σ₁ ≤ 2 :=
+    le_trans (le_of_lt hσhi) (by norm_num : (0 : ℝ) ≤ 2)
+  have him_le : -T ≤ T := neg_le_self hT.le
+  have hrect :
+      [[z.re, w.re]] ×ℂ [[z.im, w.im]] =
+        zetaClosedRect σ₁ 2 T := by
+    simp [zetaClosedRect, hzre, hwre, hzim, hwim,
+      uIcc_of_le hre_le, uIcc_of_le him_le]
+  let zeros := riemannZetaZerosOnClosedRect σ₁ 2 T
+  let poles := contourPoles σ₁ 2 T
+  let H := logDerivHatRemainderFilled F.analyticOnNhd_hat σ₁ 2 T
+  let r : ℂ → ℂ := fun p =>
+    if p = 1 then -F.hat 1
+    else (riemannZetaMultiplicity p : ℂ) * F.hat p
+  have h1z : (1 : ℂ) ∉ zeros :=
+    one_not_mem_riemannZetaZerosOnClosedRect σ₁ 2 T
+  have hH : DifferentiableOn ℂ H ([[z.re, w.re]] ×ℂ [[z.im, w.im]]) := by
+    rw [hrect]
+    exact differentiableOn_logDerivHatRemainderFilled
+      F.analyticOnNhd_hat σ₁ 2 T
+  have hp : ∀ p ∈ insert (1 : ℂ) zeros,
+      z.re < p.re ∧ p.re < w.re ∧ z.im < p.im ∧ p.im < w.im := by
+    intro p hp
+    rw [hzre, hwre, hzim, hwim]
+    rcases Finset.mem_insert.mp hp with hp1 | hpz
+    · subst hp1
+      refine ⟨lt_trans hσhi (by norm_num : (0 : ℝ) < 1), by norm_num,
+        neg_lt_zero.mpr hT, hT⟩
+    · have hmem := mem_riemannZetaZerosOnClosedRect.mp hpz
+      have hQ := mem_zetaClosedRect.mp hmem.1
+      have hre1 : σ₁ < p.re := lt_of_le_of_ne hQ.1 fun h =>
+        (riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero
+          (by rwa [← h]) (by rwa [← h])) hmem.2.1
+      have hre2 : p.re < 2 := lt_of_le_of_ne hQ.2.1 fun h =>
+        (riemannZeta_ne_zero_of_re_eq_two h) hmem.2.1
+      have him : |p.im| < T := hord p hpz
+      exact ⟨hre1, hre2, (abs_lt.mp him).1, (abs_lt.mp him).2⟩
+  have hside : ∀ q : ℂ,
+      q.re = σ₁ ∨ q.re = 2 ∨ q.im = -T ∨ q.im = T →
+        q ∉ poles := by
+    intro q hq hqp
+    rw [mem_contourPoles] at hqp
+    rcases hqp with hq1 | hqz
+    · subst hq1
+      rcases hq with hre | hre | him | him
+      · have : σ₁ = 1 := hre.symm
+        linarith [hσhi]
+      · norm_num at hre
+      · exact (neg_lt_zero.mpr hT).ne him.symm
+      · exact hT.ne' him.symm
+    · have hmem := mem_riemannZetaZerosOnClosedRect.mp hqz
+      rcases hq with hre | hre | him | him
+      · exact (riemannZeta_ne_zero_of_neg_quarter_lt_re_lt_zero
+          (by rwa [hre]) (by rwa [hre])) hmem.2.1
+      · exact (riemannZeta_ne_zero_of_re_eq_two hre) hmem.2.1
+      · have : |q.im| < T := hord q hqz
+        rw [him, abs_neg, abs_of_nonneg hT.le] at this
+        exact lt_irrefl T this
+      · have : |q.im| < T := hord q hqz
+        rw [him, abs_of_nonneg hT.le] at this
+        exact lt_irrefl T this
+  have hfun :
+      rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ) z w =
+        rectangleIntegral
+          (fun ζ => (∑ p ∈ insert (1 : ℂ) zeros, r p / (ζ - p)) + H ζ)
+          z w := by
+    refine rectangleIntegral_congr_sides _ _ z w ?bot ?top ?right ?left
+    · intro x _hx
+      dsimp
+      have hq : ((x : ℂ) + z.im * I).im = -T := by simp [hzim]
+      have hnp := hside _ (Or.inr (Or.inr (Or.inl hq)))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat σ₁ 2 T _ h1z]
+    · intro x _hx
+      dsimp
+      have hq : ((x : ℂ) + w.im * I).im = T := by simp [hwim]
+      have hnp := hside _ (Or.inr (Or.inr (Or.inr hq)))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat σ₁ 2 T _ h1z]
+    · intro y _hy
+      dsimp
+      have hq : ((w.re : ℂ) + y * I).re = 2 := by simp [hwre]
+      have hnp := hside _ (Or.inr (Or.inl hq))
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat σ₁ 2 T _ h1z]
+    · intro y _hy
+      dsimp
+      have hq : ((z.re : ℂ) + y * I).re = σ₁ := by simp [hzre]
+      have hnp := hside _ (Or.inl hq)
+      rw [logDeriv_mul_eq_sum_add_filled F.analyticOnNhd_hat hnp,
+        contour_sum_r_eq F.hat σ₁ 2 T _ h1z]
+  have hcauchy :=
+    rectangleIntegral_sum_simple_poles H z w (insert (1 : ℂ) zeros) r hH hp
+  rw [hfun, hcauchy]
+  have hsumr : ∑ p ∈ insert (1 : ℂ) zeros, r p =
+      spectralPartialSum F.hat σ₁ 2 T - F.hat 1 := by
+    have hr1 : r 1 = -F.hat 1 := if_pos rfl
+    have hrp : ∀ ρ ∈ zeros,
+        r ρ = (riemannZetaMultiplicity ρ : ℂ) * F.hat ρ :=
+      fun ρ hρ => if_neg (mem_riemannZetaZerosOnClosedRect.mp hρ).2.2
+    rw [Finset.sum_insert h1z, hr1, spectralPartialSum, sub_eq_add_neg,
+      add_comm]
+    congr 1
+    exact Finset.sum_congr rfl fun ρ hρ => hrp ρ hρ
+  rw [hsumr]
+
+lemma contour_identity_fixed_T_neg_one_div_sixteen
+    (F : FullWeilTest) {T : ℝ} (hT : 0 < T)
+    (hord : ∀ ρ ∈ riemannZetaZerosOnClosedRect (-1 / 16) 2 T,
+      |ρ.im| < T) :
+    rectangleIntegral (fun ζ => logDeriv riemannZeta ζ * F.hat ζ)
+      (((-1 / 16 : ℝ) : ℂ) + (-T : ℝ) * I)
+      (((2 : ℝ) : ℂ) + (T : ℝ) * I) =
+      (2 * (Real.pi : ℂ) * I) *
+        (spectralPartialSum F.hat (-1 / 16) 2 T - F.hat 1) :=
+  contour_identity_fixed_T_of F (by norm_num) (by norm_num) hT hord
+
 set_option maxHeartbeats 800000 in
 lemma exists_point_far_from_finset (s : Finset ℝ) {a b : ℝ}
     (hab : a ≤ b) (_hs : ∀ x ∈ s, a ≤ x ∧ x ≤ b) :
@@ -8237,6 +8439,267 @@ lemma exists_gap_sequence :
     exists_gap_height ((2 * k + 1 : ℕ) : ℝ) (hN k)
   exact ⟨T, fun k => ⟨(hT k).1, (hT k).2.1⟩,
     fun k z hz hlo hhi => (hT k).2.2 z hz hlo hhi⟩
+
+/-- Two-sided unit window: pigeonhole against `|Im ρ| ∈ [N, N+1]`.
+A gap `| |ρ.im| - T | ≥ δ` is `|ρ.im - T| ≥ δ` on the positive
+side and `|ρ.im + T| ≥ δ` on the negative side, so the FE fold
+`Im ↦ -Im` stays on a gap edge. -/
+noncomputable def ordinateGapConstAbs : ℝ :=
+  2 * ordinateGapConst
+
+lemma ordinateGapConstAbs_pos : 0 < ordinateGapConstAbs :=
+  mul_pos (by norm_num : (0 : ℝ) < 2) ordinateGapConst_pos
+
+lemma card_window_zeros_neg_unit (N : ℝ) :
+    ((riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ)).filter
+        (fun z => -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ -N)).card
+      ≤ (riemannZetaZerosInClosedDisk
+          ((2 : ℂ) + ((-(N + 1 : ℝ) + (1 / 2 : ℝ)) : ℝ) * I) (13 / 8)).card +
+        (riemannZetaZerosInClosedDisk
+          ((2 : ℂ) + (N + 1 / 2 : ℝ) * I) (13 / 8)).card := by
+  set R := riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ)
+  set S := R.filter fun z => -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ -N
+  set Sge := R.filter fun z =>
+    (1 / 2 : ℝ) ≤ z.re ∧ -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ -N
+  set Slt := R.filter fun z =>
+    z.re < (1 / 2 : ℝ) ∧ -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ -N
+  have hunion : Sge ∪ Slt = S := by
+    ext z
+    constructor
+    · intro hz
+      rcases Finset.mem_union.mp hz with h | h
+      · exact Finset.mem_filter.mpr ⟨(Finset.mem_filter.mp h).1,
+          (Finset.mem_filter.mp h).2.2⟩
+      · exact Finset.mem_filter.mpr ⟨(Finset.mem_filter.mp h).1,
+          (Finset.mem_filter.mp h).2.2⟩
+    · intro hz
+      have hz' := Finset.mem_filter.mp hz
+      by_cases hre : (1 / 2 : ℝ) ≤ z.re
+      · exact Finset.mem_union.mpr
+          (Or.inl (Finset.mem_filter.mpr ⟨hz'.1, hre, hz'.2⟩))
+      · exact Finset.mem_union.mpr
+          (Or.inr (Finset.mem_filter.mpr ⟨hz'.1, lt_of_not_ge hre, hz'.2⟩))
+  have hdisj : Disjoint Sge Slt := by
+    refine Finset.disjoint_left.mpr ?_
+    intro z hzge hzlt
+    have := (Finset.mem_filter.mp hzge).2.1
+    have := (Finset.mem_filter.mp hzlt).2.1
+    linarith
+  have hpart : S.card = Sge.card + Slt.card := by
+    rw [← hunion, Finset.card_union_of_disjoint hdisj]
+  have hge : Sge.card ≤
+      (riemannZetaZerosInClosedDisk
+        ((2 : ℂ) + ((-(N + 1 : ℝ) + (1 / 2 : ℝ)) : ℝ) * I) (13 / 8)).card := by
+    refine Finset.card_le_card ?_
+    intro z hz
+    have hzf := Finset.mem_filter.mp hz
+    have hzR := mem_riemannZetaZerosOnClosedRect.mp hzf.1
+    have hrect := mem_zetaClosedRect.mp hzR.1
+    refine mem_riemannZetaZerosInClosedDisk.mpr ⟨?_, hzR.2.1, hzR.2.2⟩
+    have him : -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ (-(N + 1 : ℝ) + 1) :=
+      ⟨hzf.2.2.1, by linarith [hzf.2.2.2]⟩
+    exact mem_unit_height_inner_disk (N := -(N + 1 : ℝ))
+      hzf.2.1 hrect.2.1 him
+  have hlt : Slt.card ≤
+      (riemannZetaZerosInClosedDisk
+        ((2 : ℂ) + (N + 1 / 2 : ℝ) * I) (13 / 8)).card := by
+    have hinj : Function.Injective fun z : ℂ => 1 - z :=
+      fun a b h => sub_right_inj.mp h
+    have himage : Slt.image (fun z => 1 - z) ⊆
+        riemannZetaZerosInClosedDisk
+          ((2 : ℂ) + (N + 1 / 2 : ℝ) * I) (13 / 8) := by
+      intro w hw
+      obtain ⟨z, hzlt, rfl⟩ := Finset.mem_image.mp hw
+      have hzf := Finset.mem_filter.mp hzlt
+      have hzR := mem_riemannZetaZerosOnClosedRect.mp hzf.1
+      have hrect := mem_zetaClosedRect.mp hzR.1
+      have hre0 : 0 < z.re :=
+        lt_of_le_of_ne hrect.1 fun h0 =>
+          riemannZeta_ne_zero_of_re_eq_zero h0.symm hzR.2.1
+      have hre1 : z.re < 1 := lt_of_lt_of_le hzf.2.1 (by norm_num)
+      have hwz := one_sub_mem_closedRect hzf.1 hre0 hre1
+      have hwR := mem_riemannZetaZerosOnClosedRect.mp hwz
+      have hre_ge : (1 / 2 : ℝ) ≤ (1 - z).re := by
+        rw [re_one_sub]; linarith [hzf.2.1]
+      have hre_le : (1 - z).re ≤ 1 := by
+        rw [re_one_sub]; linarith [hrect.1]
+      have him : N ≤ (1 - z).im ∧ (1 - z).im ≤ (N + 1 : ℝ) := by
+        have himz : (1 - z).im = -z.im := by simp [sub_im]
+        rw [himz]
+        constructor <;> linarith [hzf.2.2.1, hzf.2.2.2]
+      refine mem_riemannZetaZerosInClosedDisk.mpr ⟨?_, hwR.2.1, hwR.2.2⟩
+      exact mem_unit_height_inner_disk hre_ge hre_le him
+    exact (Finset.card_image_of_injective Slt hinj).symm.trans_le
+      (Finset.card_le_card himage)
+  linarith [hpart, hge, hlt]
+
+lemma card_window_zeros_abs_le (N : ℝ) (hN : 1 ≤ N) :
+    (((riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ)).filter
+        (fun z => N ≤ |z.im| ∧ |z.im| ≤ (N + 1 : ℝ))).card : ℝ)
+      ≤ 4 * zetaZerosInDiskCardBoundInner *
+        (1 + Real.log (2 + N + 1)) := by
+  set R := riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ)
+  set W := R.filter fun z => N ≤ |z.im| ∧ |z.im| ≤ (N + 1 : ℝ)
+  set Wp := R.filter fun z => N ≤ z.im ∧ z.im ≤ (N + 1 : ℝ)
+  set Wm := R.filter fun z => -(N + 1 : ℝ) ≤ z.im ∧ z.im ≤ -N
+  have hsub : W ⊆ Wp ∪ Wm := by
+    intro z hz
+    have hzf := Finset.mem_filter.mp hz
+    rcases le_total 0 z.im with hpos | hneg
+    · have habs : |z.im| = z.im := abs_of_nonneg hpos
+      exact Finset.mem_union.mpr (Or.inl
+        (Finset.mem_filter.mpr ⟨hzf.1, by simpa [habs] using hzf.2⟩))
+    · have habs : |z.im| = -z.im := abs_of_nonpos hneg
+      refine Finset.mem_union.mpr (Or.inr
+        (Finset.mem_filter.mpr ⟨hzf.1, ?_, ?_⟩))
+      · linarith [hzf.2.1, habs]
+      · linarith [hzf.2.2, habs]
+  have hcard : (W.card : ℝ) ≤ (Wp.card : ℝ) + (Wm.card : ℝ) := by
+    have h1 : W.card ≤ (Wp ∪ Wm).card := Finset.card_le_card hsub
+    have h2 : (Wp ∪ Wm).card ≤ Wp.card + Wm.card :=
+      Finset.card_union_le Wp Wm
+    exact (Nat.cast_le.mpr (h1.trans h2)).trans_eq (Nat.cast_add _ _)
+  have hp := card_window_zeros_unit_le N hN
+  have hC0 : (0 : ℝ) ≤ zetaZerosInDiskCardBoundInner :=
+    le_of_lt zetaZerosInDiskCardBoundInner_pos
+  have hnat := card_window_zeros_neg_unit N
+  set τp : ℝ := N + (1 / 2 : ℝ)
+  set τm : ℝ := -(N + 1 : ℝ) + (1 / 2 : ℝ)
+  have hτp0 : 0 ≤ τp := by unfold τp; linarith [hN]
+  have hτpabs : |τp| = τp := abs_of_nonneg hτp0
+  have hτmabs : |τm| = τp := by
+    have : τm = -τp := by unfold τp τm; ring
+    rw [this, abs_neg, hτpabs]
+  have hlogp : 1 + Real.log (2 + |τp|) ≤ 1 + Real.log (2 + N + 1) := by
+    have hle : 2 + |τp| ≤ 2 + N + 1 := by
+      rw [hτpabs]; unfold τp; linarith
+    have hx : 0 < 2 + |τp| := by
+      rw [hτpabs]; unfold τp; linarith [hN]
+    exact add_le_add_right (Real.log_le_log hx hle) 1
+  have hlogm : 1 + Real.log (2 + |τm|) ≤ 1 + Real.log (2 + N + 1) := by
+    have hle : 2 + |τm| ≤ 2 + N + 1 := by
+      rw [hτmabs]; unfold τp; linarith
+    have hx : 0 < 2 + |τm| := by
+      rw [hτmabs]; unfold τp; linarith [hN]
+    exact add_le_add_right (Real.log_le_log hx hle) 1
+  have hDp := zetaZerosInDisk_card_le_inner τp
+  have hDm := zetaZerosInDisk_card_le_inner τm
+  have hpD :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τp * I) (13 / 8)).card : ℝ) ≤
+        zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) :=
+    hDp.trans (mul_le_mul_of_nonneg_left hlogp hC0)
+  have hmD :
+      ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τm * I) (13 / 8)).card : ℝ) ≤
+        zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) :=
+    hDm.trans (mul_le_mul_of_nonneg_left hlogm hC0)
+  have hm : (Wm.card : ℝ) ≤
+      2 * zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) := by
+    set τm' : ℝ := (-(N + 1 : ℝ) + (1 / 2 : ℝ) : ℝ)
+    set τp' : ℝ := (N + 1 / 2 : ℝ)
+    have hcast : (Wm.card : ℝ) ≤
+        ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τm' * I) (13 / 8)).card : ℝ) +
+          ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τp' * I) (13 / 8)).card : ℝ) :=
+      (Nat.cast_le.mpr hnat).trans_eq (Nat.cast_add _ _)
+    have hDm' := zetaZerosInDisk_card_le_inner τm'
+    have hDp' := zetaZerosInDisk_card_le_inner τp'
+    have hlogm' : 1 + Real.log (2 + |τm'|) ≤ 1 + Real.log (2 + N + 1) := by
+      have : τm' = τm := by unfold τm' τm; rfl
+      simpa [this] using hlogm
+    have hlogp' : 1 + Real.log (2 + |τp'|) ≤ 1 + Real.log (2 + N + 1) := by
+      have : τp' = τp := by unfold τp' τp; rfl
+      simpa [this] using hlogp
+    have hm1 :
+        ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τm' * I) (13 / 8)).card : ℝ) ≤
+          zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) :=
+      hDm'.trans (mul_le_mul_of_nonneg_left hlogm' hC0)
+    have hp1 :
+        ((riemannZetaZerosInClosedDisk ((2 : ℂ) + τp' * I) (13 / 8)).card : ℝ) ≤
+          zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) :=
+      hDp'.trans (mul_le_mul_of_nonneg_left hlogp' hC0)
+    exact hcast.trans ((add_le_add hm1 hp1).trans_eq (by ring))
+  have hsum := add_le_add hp hm
+  have h4 :
+      2 * zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) +
+        2 * zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) =
+        4 * zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) := by
+    ring
+  exact hcard.trans (hsum.trans_eq h4)
+
+lemma exists_gap_height_abs (N : ℝ) (hN : 1 ≤ N) :
+    ∃ T : ℝ, N ≤ T ∧ T ≤ (N + 1 : ℝ) ∧
+      ∀ z ∈ riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ),
+        N ≤ |z.im| → |z.im| ≤ (N + 1 : ℝ) →
+          1 / (ordinateGapConstAbs * (1 + Real.log (2 + N + 1))) ≤
+            |(|z.im| - T)| := by
+  set W := (riemannZetaZerosOnClosedRect 0 1 (N + 1 : ℝ)).filter
+    fun z => N ≤ |z.im| ∧ |z.im| ≤ (N + 1 : ℝ)
+  set s := W.image fun z : ℂ => |z.im|
+  have hs : ∀ x ∈ s, N ≤ x ∧ x ≤ (N + 1 : ℝ) := by
+    intro x hx
+    obtain ⟨z, hz, rfl⟩ := Finset.mem_image.mp hx
+    exact (Finset.mem_filter.mp hz).2
+  obtain ⟨T, hTlo, hThi, hfar⟩ :=
+    exists_point_far_from_finset s
+      (le_add_of_nonneg_right (by norm_num : (0 : ℝ) ≤ 1)) hs
+  refine ⟨T, hTlo, hThi, ?_⟩
+  intro z hz himlo himhi
+  have hzW : z ∈ W := Finset.mem_filter.mpr ⟨hz, himlo, himhi⟩
+  have hims : |z.im| ∈ s := Finset.mem_image.mpr ⟨z, hzW, rfl⟩
+  have hdist := hfar |z.im| hims
+  have hL : (1 : ℝ) ≤ 1 + Real.log (2 + N + 1) :=
+    le_add_of_nonneg_right (Real.log_nonneg
+      (by linarith [hN] : (1 : ℝ) ≤ 2 + N + 1))
+  have hsc : (s.card : ℝ) ≤
+      4 * zetaZerosInDiskCardBoundInner * (1 + Real.log (2 + N + 1)) :=
+    (Nat.cast_le.mpr Finset.card_image_le).trans (card_window_zeros_abs_le N hN)
+  have hC := le_of_lt zetaZerosInDiskCardBoundInner_pos
+  have hstep : (s.card : ℝ) + 1 ≤
+      (4 * zetaZerosInDiskCardBoundInner + 1) * (1 + Real.log (2 + N + 1)) := by
+    nlinarith [hsc, hC, hL]
+  have hconst : ordinateGapConstAbs =
+      2 * (4 * zetaZerosInDiskCardBoundInner + 2) := by
+    unfold ordinateGapConstAbs ordinateGapConst; ring
+  have hstep' : (s.card : ℝ) + 1 ≤
+      (4 * zetaZerosInDiskCardBoundInner + 2) *
+        (1 + Real.log (2 + N + 1)) := by
+    nlinarith [hstep, hC, hL]
+  have hden : 2 * (s.card + 1 : ℝ) ≤
+      ordinateGapConstAbs * (1 + Real.log (2 + N + 1)) := by
+    rw [hconst, mul_assoc]
+    exact mul_le_mul_of_nonneg_left hstep' (by norm_num : (0 : ℝ) ≤ 2)
+  have hB : 0 < 2 * (s.card + 1 : ℝ) := by positivity
+  have hA : 0 < ordinateGapConstAbs * (1 + Real.log (2 + N + 1)) :=
+    mul_pos ordinateGapConstAbs_pos
+      (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hL)
+  have hinv :
+      1 / (ordinateGapConstAbs * (1 + Real.log (2 + N + 1))) ≤
+        1 / (2 * (s.card + 1 : ℝ)) :=
+    (one_div_le_one_div hA hB).mpr hden
+  have hlen : ((N + 1 : ℝ) - N) / (2 * (s.card + 1 : ℝ)) =
+      1 / (2 * (s.card + 1 : ℝ)) := by ring
+  have hdist' : 1 / (2 * (s.card + 1 : ℝ)) ≤ |(|z.im| - T)| := by
+    simpa [hlen, abs_sub_comm T |z.im|] using hdist
+  exact le_trans hinv hdist'
+
+lemma exists_gap_sequence_abs :
+    ∃ T : ℕ → ℝ,
+      (∀ k : ℕ, ((2 * k + 1 : ℕ) : ℝ) ≤ T k ∧
+        T k ≤ ((2 * k + 1 : ℕ) : ℝ) + 1) ∧
+      (∀ k : ℕ, ∀ z ∈ riemannZetaZerosOnClosedRect 0 1
+          (((2 * k + 1 : ℕ) : ℝ) + 1),
+        ((2 * k + 1 : ℕ) : ℝ) ≤ |z.im| →
+          |z.im| ≤ ((2 * k + 1 : ℕ) : ℝ) + 1 →
+            1 / (ordinateGapConstAbs *
+              (1 + Real.log (2 + ((2 * k + 1 : ℕ) : ℝ) + 1))) ≤
+              |(|z.im| - T k)|) := by
+  have hN : ∀ k : ℕ, (1 : ℝ) ≤ (2 * k + 1 : ℕ) := by
+    intro k
+    exact_mod_cast (Nat.le_add_left 1 (2 * k) : 1 ≤ 2 * k + 1)
+  choose T hT using fun k : ℕ =>
+    exists_gap_height_abs ((2 * k + 1 : ℕ) : ℝ) (hN k)
+  exact ⟨T, fun k => ⟨(hT k).1, (hT k).2.1⟩,
+    fun k z hz hlo hhi => (hT k).2.2 z hz hlo hhi⟩
+
 
 lemma borelCaratheodory_ball {f : ℂ → ℂ} {c : ℂ} {M R : ℝ} {z : ℂ}
     (hM : 0 < M) (hR : 0 < R)
@@ -9877,6 +10340,93 @@ theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
       simp [landauHorizontalConst, Cin]
     exact hsumle.trans (hbig.trans_eq this.symm)
   simpa [s, L] using hfinal
+
+lemma norm_intervalIntegral_le_length_mul
+    {f : ℝ → ℂ} {a b C : ℝ} (hab : a ≤ b)
+    (hf : IntervalIntegrable f volume a b)
+    (hbd : ∀ x, a ≤ x → x ≤ b → ‖f x‖ ≤ C) :
+    ‖∫ x in a..b, f x‖ ≤ (b - a) * C := by
+  have hC : 0 ≤ C :=
+    (norm_nonneg (f a)).trans (hbd a le_rfl hab)
+  refine (intervalIntegral.norm_integral_le_integral_norm hab).trans ?_
+  have hnorm : IntervalIntegrable (fun x => ‖f x‖) volume a b := hf.norm
+  have hconst : IntervalIntegrable (fun _ : ℝ => C) volume a b :=
+    intervalIntegrable_const
+  refine (intervalIntegral.integral_mono_on hab hnorm hconst
+    fun x hx => hbd x hx.1 hx.2).trans_eq ?_
+  simp [intervalIntegral.integral_const, smul_eq_mul,
+    abs_of_nonneg (sub_nonneg.mpr hab)]
+
+/-- Length × sup bound for a horizontal edge of `(ζ′/ζ) ĥ`.
+The edge must miss zeros and the pole so the integrand is continuous.
+`|ζ′/ζ|` is an input (Landau on `[1/2, 2]`; FE/`ψ` on the sliver). -/
+lemma norm_horizontal_logDeriv_hat_integral_le
+    (F : FullWeilTest) {σ₁ σ₂ τ B : ℝ}
+    (hσ : σ₁ ≤ σ₂) (hB : 0 ≤ B)
+    (hne1 : ∀ σ, σ ∈ Icc σ₁ σ₂ → (σ : ℂ) + τ * I ≠ 1)
+    (hnz : ∀ σ, σ ∈ Icc σ₁ σ₂ → riemannZeta ((σ : ℂ) + τ * I) ≠ 0)
+    (hbd : ∀ σ, σ ∈ Icc σ₁ σ₂ →
+      ‖logDeriv riemannZeta ((σ : ℂ) + τ * I)‖ ≤ B) :
+    ∃ C : ℝ, 0 ≤ C ∧
+      ‖∫ x : ℝ in σ₁..σ₂,
+          logDeriv riemannZeta ((x : ℂ) + τ * I) *
+            F.hat ((x : ℂ) + τ * I)‖ ≤
+        (σ₂ - σ₁) * B * C / (1 + τ ^ 2) := by
+  obtain ⟨C, hC0, hhat⟩ := F.norm_hat_le_inv_sq_on_Icc σ₁ σ₂
+  refine ⟨C, hC0, ?_⟩
+  set f : ℝ → ℂ := fun x =>
+    logDeriv riemannZeta ((x : ℂ) + τ * I) * F.hat ((x : ℂ) + τ * I)
+  have hpathOn : ContinuousOn (fun x : ℝ => (x : ℂ) + τ * I) (Icc σ₁ σ₂) :=
+    continuous_ofReal.continuousOn.add continuousOn_const
+  have hlogOn : ContinuousOn (logDeriv riemannZeta)
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) := by
+    intro z hz
+    obtain ⟨x, hx, rfl⟩ := hz
+    exact (analyticAt_logDeriv_riemannZeta (hne1 x hx) (hnz x hx)).continuousAt.continuousWithinAt
+  have hFOn : ContinuousOn F.hat
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) :=
+    fun _ _ => (F.analyticAt_hat _).continuousAt.continuousWithinAt
+  have hmaps : Set.MapsTo (fun x : ℝ => (x : ℂ) + τ * I) (Icc σ₁ σ₂)
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) :=
+    Set.mapsTo_image _ _
+  have hcont : ContinuousOn f (Icc σ₁ σ₂) :=
+    (hlogOn.comp hpathOn hmaps).mul (hFOn.comp hpathOn hmaps)
+  have hf : IntervalIntegrable f volume σ₁ σ₂ :=
+    hcont.intervalIntegrable_of_Icc hσ
+  have hbound : ∀ x, σ₁ ≤ x → x ≤ σ₂ → ‖f x‖ ≤ B * C / (1 + τ ^ 2) := by
+    intro x hx1 hx2
+    have hx : x ∈ Icc σ₁ σ₂ := ⟨hx1, hx2⟩
+    have hζ := hbd x hx
+    have hh := hhat ((x : ℂ) + τ * I) (by simp [hx])
+    have him : ((x : ℂ) + τ * I).im = τ := by simp
+    dsimp [f]
+    rw [norm_mul]
+    have := mul_le_mul hζ (by simpa [him] using hh) (norm_nonneg _) hB
+    simpa [mul_div_assoc] using this
+  have hle := norm_intervalIntegral_le_length_mul hσ hf hbound
+  have : (σ₂ - σ₁) * (B * C / (1 + τ ^ 2)) =
+      (σ₂ - σ₁) * B * C / (1 + τ ^ 2) := by ring
+  exact hle.trans_eq this
+
+/-- Named remainder: full horizontals `[-1/16, 2]` along a gap
+sequence.  Closed on this cut: the `[1/2, 2]` length×sup template,
+the two-sided Lücken-Lemma `exists_gap_height_abs`, and ĥ-decay.
+Open: sliver `|ζ′/ζ|` via FE (`χ′/χ` + `|ψ|` on `Im = ±T`), and
+the r521 `A = 1` Landau gap is stronger than the r518
+`ordinateGapConst`-gap (Landau-disk overflow past a unit window). -/
+def HorizontalEdgesTendstoZero : Prop :=
+  ∀ F : FullWeilTest,
+    ∃ T : ℕ → ℝ,
+      (∀ k : ℕ, ((2 * k + 1 : ℕ) : ℝ) ≤ T k) ∧
+      Tendsto T atTop atTop ∧
+      Tendsto (fun k =>
+        ∫ x : ℝ in (-1 / 16 : ℝ)..2,
+          logDeriv riemannZeta ((x : ℂ) + T k * I) *
+            F.hat ((x : ℂ) + T k * I)) atTop (nhds 0) ∧
+      Tendsto (fun k =>
+        ∫ x : ℝ in (-1 / 16 : ℝ)..2,
+          logDeriv riemannZeta ((x : ℂ) + (-(T k)) * I) *
+            F.hat ((x : ℂ) + (-(T k)) * I)) atTop (nhds 0)
 
 /-- Left vertical `Re = -1/4`: FE fold
 `ζ'/ζ(s) = χ'/χ(s) - ζ'/ζ(1-s)` with `Re(1-s) = 5/4`

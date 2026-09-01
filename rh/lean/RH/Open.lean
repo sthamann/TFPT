@@ -1146,6 +1146,26 @@ Remaining: sliver `[-1/16, 1/2]`, horizontals
 → 0, left edge, `T→∞`, three-channel id.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r522 census (outer bridges 29, [2d] contour restated)
+
+[2d] contour restated, honest cut, sorry-free.
+PROVED: parametric `contour_identity_fixed_T_of`
+on every `σ₁ ∈ (-1/4, 0)`, the `-1/16` instance,
+and the r499 Finset bridge
+(`riemannZetaZerosOnClosedRect_eq_critical`:
+zeros in `Q_T(σ₁,2)` are the critical-strip
+Finset).  Two-sided Lücken-Lemma
+`exists_gap_height_abs` (`|Im|` window; FE
+fold stays on a gap edge).  Horizontal
+length×sup template
+(`norm_horizontal_logDeriv_hat_integral_le`)
+times ĥ-decay.  Named, not sorry:
+`HorizontalEdgesTendstoZero`.  Remaining:
+sliver `|ζ′/ζ|` via FE (`χ′/χ` + `|ψ|`),
+Landau `A=1` vs r518 `ordinateGapConst`-gap,
+left edge, `T→∞`, three-channel id.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
