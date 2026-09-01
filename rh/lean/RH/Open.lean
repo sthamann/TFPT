@@ -1235,6 +1235,19 @@ at the dual.  Upper edge `+iT` stays dual-Landau
 (`sliverEdgeBound_of_dual`).  Horizontals not closed.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r528 census (outer bridges 35, horizontals)
+
+Sorry-free.  Schwarz reflection `ζ(conj s)=conj(ζ s)`
+on `{1}ᶜ` (Dirichlet series on `Re>1`, identity
+theorem).  Hence `|ζ′/ζ(σ+iT)|=|ζ′/ζ(σ−iT)|`.
+Upper sliver and lower Landau by conjugation.
+Glued bound `|ζ′/ζ| ≤ A·sliverEdgeConst·(1+log T)³`
+on `σ ∈ [-1/16, 2]`, `|τ|=T≥2`.
+`horizontalEdgesTendstoZero` along
+`exists_gap_sequence_landau` (`log³/T² → 0`).
+Left edge and three-channel `T→∞` assembly remain.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

@@ -508,6 +508,12 @@ r527: tan/cot on `|Im|≥2`; `ψ` sliver via
 recurrence; FE `logDeriv`; lower-edge
 `sliverEdgeBound_negIm`.  Horizontals stay
 named.  Census stays 7.
+r528: Schwarz `ζ(conj s)=conj(ζ s)` off the
+pole; upper sliver + lower Landau by
+reflection; glued `|ζ′/ζ|` on
+`[-1/16,2]×{±T}`; `horizontalEdgesTendstoZero`.
+Left edge and `T→∞` assembly stay named.
+Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -758,6 +764,17 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms sliver_cubic_pack
 #print axioms sliverEdgeBound_of_dual
 #print axioms sliverEdgeBound_negIm
+#print axioms riemannZeta_conj_of_one_lt_re
+#print axioms riemannZeta_conj
+#print axioms deriv_riemannZeta_conj
+#print axioms logDeriv_riemannZeta_conj
+#print axioms norm_logDeriv_riemannZeta_conj
+#print axioms sliverEdgeBound_posIm
+#print axioms horizontalEdgeLandauBound_negIm
+#print axioms horizontalEdgeBound_glued
+#print axioms riemannZeta_ne_zero_of_glued_gap
+#print axioms tendsto_one_add_log_cubed_div_one_add_sq
+#print axioms horizontalEdgesTendstoZero
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

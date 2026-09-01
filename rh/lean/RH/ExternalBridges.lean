@@ -41,6 +41,8 @@ import Mathlib.MeasureTheory.Integral.IntervalIntegral.FundThmCalculus
 import Mathlib.MeasureTheory.Integral.IntervalIntegral.IntegrationByParts
 import Mathlib.Analysis.SpecialFunctions.Pow.Deriv
 import Mathlib.Analysis.SpecialFunctions.Pow.Continuity
+import Mathlib.Analysis.Calculus.Deriv.Star
+import Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics
 import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
 import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
 import Mathlib.Analysis.Complex.LocallyUniformLimit
@@ -49,6 +51,7 @@ import Mathlib.Analysis.Analytic.IsolatedZeros
 import Mathlib.Analysis.Complex.Convex
 import Mathlib.Analysis.Complex.JensenFormula
 import Mathlib.Analysis.Real.Pi.Bounds
+import Mathlib.Analysis.Complex.ExponentialBounds
 import Mathlib.MeasureTheory.Integral.CircleAverage
 import Mathlib.Analysis.SpecialFunctions.Integrability.LogMeromorphic
 import Mathlib.Analysis.SpecificLimits.Normed
@@ -7566,7 +7569,7 @@ end ContourIdentity
 section ContourEdges
 
 open Complex Filter Function Set MeasureTheory
-open scoped Topology Interval
+open scoped Topology Interval ComplexConjugate
 
 /-- Weierstrass factor: on `|τ| ≥ 1` and `|Re s| ≤ M`,
 `1 + e^{σδ} ≥ 1 + e^{-Mπ}`. -/
@@ -12201,6 +12204,272 @@ lemma sliverEdgeBound_negIm {T A σ : ℝ}
     exact hz1 rfl
   exact sliverEdgeBound_of_dual hA hT hre1 hre2 himT hz hdual'
 
+/-- r528: Dirichlet series has real coefficients, so `ζ(conj s)=conj(ζ s)`
+on `Re > 1`. -/
+lemma riemannZeta_conj_of_one_lt_re {s : ℂ} (hs : 1 < s.re) :
+    riemannZeta (conj s) = conj (riemannZeta s) := by
+  have hs' : 1 < (conj s).re := by simpa [conj_re] using hs
+  rw [zeta_eq_tsum_one_div_nat_add_one_cpow hs,
+    zeta_eq_tsum_one_div_nat_add_one_cpow hs', conj_tsum]
+  refine tsum_congr fun n => ?_
+  have harg : arg (n + 1 : ℂ) ≠ Real.pi := by
+    have hn : (n + 1 : ℂ) = ((n + 1 : ℕ) : ℂ) := by norm_cast
+    rw [hn, natCast_arg]
+    exact Real.pi_ne_zero.symm
+  have hcpow : (n + 1 : ℂ) ^ conj s = conj ((n + 1 : ℂ) ^ s) := by
+    simpa using cpow_conj (n + 1 : ℂ) s harg
+  simp [one_div, hcpow, map_inv₀]
+
+lemma conj_ne_one {s : ℂ} (hs : s ≠ 1) : conj s ≠ 1 := by
+  intro h
+  exact hs (by simpa [star_star] using congrArg conj h)
+
+lemma differentiableOn_riemannZeta_conj_conj :
+    DifferentiableOn ℂ (conj ∘ riemannZeta ∘ conj) ({1}ᶜ) := by
+  intro s hs
+  have hdiff : DifferentiableAt ℂ (conj ∘ riemannZeta ∘ conj) s := by
+    simpa [star_star] using
+      (differentiableAt_riemannZeta (conj_ne_one hs)).conj_conj
+  exact hdiff.differentiableWithinAt
+
+lemma analyticOnNhd_riemannZeta_conj_conj :
+    AnalyticOnNhd ℂ (conj ∘ riemannZeta ∘ conj) ({1}ᶜ) :=
+  differentiableOn_riemannZeta_conj_conj.analyticOnNhd isOpen_compl_singleton
+
+lemma eventuallyEq_riemannZeta_conj_conj_two :
+    (conj ∘ riemannZeta ∘ conj) =ᶠ[𝓝 (2 : ℂ)] riemannZeta := by
+  have hball : Metric.ball (2 : ℂ) (1 / 2) ⊆ {z : ℂ | 1 < z.re} := by
+    intro z hz
+    have hd : ‖z - 2‖ < (1 / 2 : ℝ) := mem_ball_iff_norm.mp hz
+    have hre : |z.re - 2| ≤ ‖z - 2‖ := by
+      simpa [sub_re] using abs_re_le_norm (z - 2)
+    have habs : |z.re - 2| < (1 / 2 : ℝ) := hre.trans_lt hd
+    have hlo : -((1 : ℝ) / 2) < z.re - 2 := (abs_lt.mp habs).1
+    have h32 : (3 / 2 : ℝ) < z.re := by
+      have := add_lt_add_right hlo (2 : ℝ)
+      convert this using 1
+      · norm_num
+      · ring
+    exact lt_trans (by norm_num : (1 : ℝ) < 3 / 2) h32
+  refine Filter.eventuallyEq_of_mem
+      (Metric.ball_mem_nhds (2 : ℂ) (by norm_num : (0 : ℝ) < 1 / 2)) ?_
+  intro z hz
+  have h := riemannZeta_conj_of_one_lt_re (hball hz)
+  simp [Function.comp_apply, h]
+
+lemma eqOn_riemannZeta_conj_conj :
+    EqOn (conj ∘ riemannZeta ∘ conj) riemannZeta ({1}ᶜ) :=
+  analyticOnNhd_riemannZeta_conj_conj.eqOn_of_preconnected_of_eventuallyEq
+    analyticOnNhd_riemannZeta_compl_one isPreconnected_compl_one
+    (by norm_num : (2 : ℂ) ≠ 1) eventuallyEq_riemannZeta_conj_conj_two
+
+/-- r528: Schwarz reflection for `ζ` off the pole. -/
+lemma riemannZeta_conj {s : ℂ} (hs : s ≠ 1) :
+    riemannZeta (conj s) = conj (riemannZeta s) := by
+  have h : conj (riemannZeta (conj s)) = riemannZeta s := by
+    simpa [Function.comp_apply] using eqOn_riemannZeta_conj_conj hs
+  calc riemannZeta (conj s)
+      = conj (conj (riemannZeta (conj s))) := (star_star _).symm
+    _ = conj (riemannZeta s) := by rw [h]
+
+lemma conj_ofReal_add_real_mul_I (σ τ : ℝ) :
+    conj ((σ : ℂ) + τ * I) = (σ : ℂ) - τ * I := by
+  rw [map_add, conj_ofReal, map_mul, conj_ofReal, conj_I]
+  ring
+
+lemma riemannZeta_ne_zero_conj {s : ℂ} (hs : s ≠ 1)
+    (hz : riemannZeta s ≠ 0) :
+    riemannZeta (conj s) ≠ 0 := by
+  rw [riemannZeta_conj hs]
+  exact fun h => hz ((map_eq_zero (starRingEnd ℂ)).mp h)
+
+lemma deriv_riemannZeta_conj {s : ℂ} (hs : s ≠ 1) :
+    deriv riemannZeta (conj s) = conj (deriv riemannZeta s) := by
+  have hopen : {1}ᶜ ∈ 𝓝 s := isOpen_compl_singleton.mem_nhds hs
+  have heq : (conj ∘ riemannZeta ∘ conj) =ᶠ[𝓝 s] riemannZeta :=
+    eventuallyEq_iff_exists_mem.2 ⟨{1}ᶜ, hopen, eqOn_riemannZeta_conj_conj⟩
+  have hder : deriv (conj ∘ riemannZeta ∘ conj) s = deriv riemannZeta s :=
+    heq.deriv_eq
+  have hcc : deriv (conj ∘ riemannZeta ∘ conj) s =
+      conj (deriv riemannZeta (conj s)) := by
+    simp [deriv_conj_conj]
+  have h : conj (deriv riemannZeta (conj s)) = deriv riemannZeta s :=
+    hcc.symm.trans hder
+  calc deriv riemannZeta (conj s)
+      = conj (conj (deriv riemannZeta (conj s))) := (star_star _).symm
+    _ = conj (deriv riemannZeta s) := by rw [h]
+
+lemma logDeriv_riemannZeta_conj {s : ℂ} (hs : s ≠ 1)
+    (_hz : riemannZeta s ≠ 0) :
+    logDeriv riemannZeta (conj s) = conj (logDeriv riemannZeta s) := by
+  rw [logDeriv_apply, logDeriv_apply, deriv_riemannZeta_conj hs,
+    riemannZeta_conj hs, map_div₀]
+
+lemma norm_logDeriv_riemannZeta_conj {s : ℂ} (hs : s ≠ 1)
+    (hz : riemannZeta s ≠ 0) :
+    ‖logDeriv riemannZeta (conj s)‖ = ‖logDeriv riemannZeta s‖ := by
+  rw [logDeriv_riemannZeta_conj hs hz, norm_conj]
+
+lemma landauHorizontalConst_le_sliverEdgeConst :
+    landauHorizontalConst ≤ sliverEdgeConst := by
+  unfold sliverEdgeConst
+  have hrest : 0 ≤
+      2 * (6 + |Real.eulerMascheroniConstant|) +
+        Real.log (2 * Real.pi) + (1 / 2 : ℝ) +
+        (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2) := by
+    have : 0 ≤ Real.log (2 * Real.pi) :=
+      Real.log_nonneg (by nlinarith [Real.pi_gt_three])
+    positivity
+  linarith [landauHorizontalConst_pos.le]
+
+lemma riemannZeta_ne_zero_of_sliver_negIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ (1 / 2 : ℝ))
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) :
+    riemannZeta ((σ : ℂ) - T * I) ≠ 0 := by
+  set s : ℂ := (σ : ℂ) - T * I
+  have himT : |s.im| = T := by
+    have him : s.im = -T := by simp [s]
+    rw [him, abs_neg, abs_of_nonneg
+      (le_trans (by norm_num : (0 : ℝ) ≤ 2) hT)]
+  have him : (2 : ℝ) ≤ |s.im| := by rw [himT]; exact hT
+  have h1s : (1 : ℂ) - s = (1 - σ : ℂ) + T * I := by
+    simp [s]; ring
+  have hz1 : riemannZeta (1 - s) ≠ 0 := by
+    simpa [h1s, ofReal_sub, ofReal_one] using
+      riemannZeta_ne_zero_of_landau_gap (A := A) (σ := 1 - σ)
+        (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA) hT hgap
+  intro hz0
+  have hFE := riemannZeta_one_sub_factor (ne_neg_nat_of_two_le_abs_im him)
+    (ne_one_of_two_le_abs_im him)
+  rw [hFE, hz0, mul_zero] at hz1
+  exact hz1 rfl
+
+/-- Upper sliver `σ + iT` by conjugating the lower edge. -/
+lemma sliverEdgeBound_posIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ (1 / 2 : ℝ))
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) :
+    ‖logDeriv riemannZeta ((σ : ℂ) + T * I)‖ ≤
+      A * sliverEdgeConst * (1 + Real.log T) ^ 3 := by
+  have hT0 : 0 ≤ T := le_trans (by norm_num : (0 : ℝ) ≤ 2) hT
+  have him : (2 : ℝ) ≤ |((σ : ℂ) - T * I).im| := by
+    have : ((σ : ℂ) - T * I).im = -T := by simp
+    rw [this, abs_neg, abs_of_nonneg hT0]
+    exact hT
+  have hs : ((σ : ℂ) - T * I) ≠ 1 := ne_one_of_two_le_abs_im him
+  have hz := riemannZeta_ne_zero_of_sliver_negIm hA hT hσ1 hσ2 hgap
+  have hconj : conj ((σ : ℂ) - T * I) = (σ : ℂ) + T * I := by
+    simpa [sub_eq_add_neg, neg_neg] using conj_ofReal_add_real_mul_I σ (-T)
+  rw [← hconj, norm_logDeriv_riemannZeta_conj hs hz]
+  exact sliverEdgeBound_negIm hA hT hσ1 hσ2 hgap
+
+lemma riemannZeta_ne_zero_of_sliver_posIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ (1 / 2 : ℝ))
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) :
+    riemannZeta ((σ : ℂ) + T * I) ≠ 0 := by
+  have hT0 : 0 ≤ T := le_trans (by norm_num : (0 : ℝ) ≤ 2) hT
+  have him : (2 : ℝ) ≤ |((σ : ℂ) - T * I).im| := by
+    have : ((σ : ℂ) - T * I).im = -T := by simp
+    rw [this, abs_neg, abs_of_nonneg hT0]
+    exact hT
+  have hs : ((σ : ℂ) - T * I) ≠ 1 := ne_one_of_two_le_abs_im him
+  have hz := riemannZeta_ne_zero_of_sliver_negIm hA hT hσ1 hσ2 hgap
+  have hconj : conj ((σ : ℂ) - T * I) = (σ : ℂ) + T * I := by
+    simpa [sub_eq_add_neg, neg_neg] using conj_ofReal_add_real_mul_I σ (-T)
+  simpa [hconj] using riemannZeta_ne_zero_conj hs hz
+
+lemma horizontalEdgeLandauBound_negIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    (hσ1 : (1 / 2 : ℝ) ≤ σ) (hσ2 : σ ≤ 2) :
+    ‖logDeriv riemannZeta ((σ : ℂ) - T * I)‖ ≤
+      (A * landauHorizontalConst) * (1 + Real.log T) ^ 3 := by
+  have hs : ((σ : ℂ) + T * I) ≠ 1 := horizontal_ne_one (σ := σ) hT
+  have hz : riemannZeta ((σ : ℂ) + T * I) ≠ 0 :=
+    riemannZeta_ne_zero_of_landau_gap (A := A) (σ := σ)
+      (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA) hT hgap
+  rw [← conj_ofReal_add_real_mul_I σ T, norm_logDeriv_riemannZeta_conj hs hz]
+  exact horizontalEdgeLandauBound_of_gap hA hT hgap hσ1 hσ2
+
+lemma riemannZeta_ne_zero_of_landau_gap_negIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) :
+    riemannZeta ((σ : ℂ) - T * I) ≠ 0 := by
+  have hs : ((σ : ℂ) + T * I) ≠ 1 := horizontal_ne_one (σ := σ) hT
+  have hz : riemannZeta ((σ : ℂ) + T * I) ≠ 0 :=
+    riemannZeta_ne_zero_of_landau_gap (A := A) (σ := σ)
+      (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA) hT hgap
+  simpa [conj_ofReal_add_real_mul_I] using riemannZeta_ne_zero_conj hs hz
+
+/-- Glued horizontal bound on `σ ∈ [-1/16, 2]`, `|τ| = T ≥ 2`. -/
+lemma horizontalEdgeBound_glued {T A σ τ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ 2)
+    (hτ : |τ| = T) :
+    ‖logDeriv riemannZeta ((σ : ℂ) + τ * I)‖ ≤
+      A * sliverEdgeConst * (1 + Real.log T) ^ 3 := by
+  have hL : (1 : ℝ) ≤ 1 + Real.log T :=
+    le_add_of_nonneg_right
+      (Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT))
+  have hscale
+      (hle : ‖logDeriv riemannZeta ((σ : ℂ) + τ * I)‖ ≤
+        A * landauHorizontalConst * (1 + Real.log T) ^ 3) :
+      ‖logDeriv riemannZeta ((σ : ℂ) + τ * I)‖ ≤
+        A * sliverEdgeConst * (1 + Real.log T) ^ 3 :=
+    hle.trans (mul_le_mul_of_nonneg_right
+      (mul_le_mul_of_nonneg_left landauHorizontalConst_le_sliverEdgeConst
+        (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA))
+      (pow_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 1) hL) 3))
+  rcases eq_or_eq_neg_of_abs_eq hτ with hτp | hτn
+  · subst hτp
+    rcases le_total σ (1 / 2 : ℝ) with hlo | hhi
+    · exact sliverEdgeBound_posIm hA hT hσ1 hlo hgap
+    · exact hscale (horizontalEdgeLandauBound_of_gap hA hT hgap hhi hσ2)
+  · subst hτn
+    rcases le_total σ (1 / 2 : ℝ) with hlo | hhi
+    · simpa [sub_eq_add_neg] using sliverEdgeBound_negIm hA hT hσ1 hlo hgap
+    · refine hscale ?_
+      simpa [sub_eq_add_neg] using
+        horizontalEdgeLandauBound_negIm hA hT hgap hhi hσ2
+
+lemma riemannZeta_ne_zero_of_glued_gap {T A σ τ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ 2)
+    (hτ : |τ| = T) :
+    riemannZeta ((σ : ℂ) + τ * I) ≠ 0 := by
+  rcases eq_or_eq_neg_of_abs_eq hτ with hτp | hτn
+  · subst hτp
+    rcases le_total σ (1 / 2 : ℝ) with hlo | hhi
+    · exact riemannZeta_ne_zero_of_sliver_posIm hA hT hσ1 hlo hgap
+    · exact riemannZeta_ne_zero_of_landau_gap (A := A) (σ := σ)
+        (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA) hT hgap
+  · subst hτn
+    rcases le_total σ (1 / 2 : ℝ) with hlo | hhi
+    · simpa [sub_eq_add_neg] using
+        riemannZeta_ne_zero_of_sliver_negIm hA hT hσ1 hlo hgap
+    · simpa [sub_eq_add_neg] using
+        riemannZeta_ne_zero_of_landau_gap_negIm (A := A) (σ := σ)
+          hA hT hgap
+
+lemma horizontal_ne_one_of_abs {σ τ T : ℝ}
+    (hT : (2 : ℝ) ≤ T) (hτ : |τ| = T) :
+    (σ : ℂ) + τ * I ≠ 1 := by
+  have him : (2 : ℝ) ≤ |((σ : ℂ) + τ * I).im| := by
+    simp
+    rwa [hτ]
+  exact ne_one_of_two_le_abs_im him
+
 lemma norm_intervalIntegral_le_length_mul
     {f : ℝ → ℂ} {a b C : ℝ} (hab : a ≤ b)
     (hf : IntervalIntegrable f volume a b)
@@ -12268,12 +12537,57 @@ lemma norm_horizontal_logDeriv_hat_integral_le
       (σ₂ - σ₁) * B * C / (1 + τ ^ 2) := by ring
   exact hle.trans_eq this
 
-/-- Named remainder: full horizontals `[-1/16, 2]` along a gap
-sequence.  r524 closed general-A Landau
-(`horizontalEdgeLandauBound_of_gap`, B = A · landauHorizontalConst)
-wired to `exists_gap_sequence_landau`.  Open: `|ψ|` series /
-`GammaSeq` logDeriv, sliver FE (`cot` + Landau at `-T`),
-left edge, `T→∞`. -/
+/-- Same bound with a pre-chosen hat constant (uniform in the height). -/
+lemma norm_horizontal_logDeriv_hat_integral_le_with
+    (F : FullWeilTest) {σ₁ σ₂ τ B C : ℝ}
+    (hσ : σ₁ ≤ σ₂) (hB : 0 ≤ B) (hC0 : 0 ≤ C)
+    (hne1 : ∀ σ, σ ∈ Icc σ₁ σ₂ → (σ : ℂ) + τ * I ≠ 1)
+    (hnz : ∀ σ, σ ∈ Icc σ₁ σ₂ → riemannZeta ((σ : ℂ) + τ * I) ≠ 0)
+    (hbd : ∀ σ, σ ∈ Icc σ₁ σ₂ →
+      ‖logDeriv riemannZeta ((σ : ℂ) + τ * I)‖ ≤ B)
+    (hhat : ∀ s : ℂ, s.re ∈ Icc σ₁ σ₂ →
+      ‖F.hat s‖ ≤ C / (1 + s.im ^ 2)) :
+    ‖∫ x : ℝ in σ₁..σ₂,
+        logDeriv riemannZeta ((x : ℂ) + τ * I) *
+          F.hat ((x : ℂ) + τ * I)‖ ≤
+      (σ₂ - σ₁) * B * C / (1 + τ ^ 2) := by
+  set f : ℝ → ℂ := fun x =>
+    logDeriv riemannZeta ((x : ℂ) + τ * I) * F.hat ((x : ℂ) + τ * I)
+  have hpathOn : ContinuousOn (fun x : ℝ => (x : ℂ) + τ * I) (Icc σ₁ σ₂) :=
+    continuous_ofReal.continuousOn.add continuousOn_const
+  have hlogOn : ContinuousOn (logDeriv riemannZeta)
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) := by
+    intro z hz
+    obtain ⟨x, hx, rfl⟩ := hz
+    exact (analyticAt_logDeriv_riemannZeta (hne1 x hx)
+      (hnz x hx)).continuousAt.continuousWithinAt
+  have hFOn : ContinuousOn F.hat
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) :=
+    fun _ _ => (F.analyticAt_hat _).continuousAt.continuousWithinAt
+  have hmaps : Set.MapsTo (fun x : ℝ => (x : ℂ) + τ * I) (Icc σ₁ σ₂)
+      ((fun x : ℝ => (x : ℂ) + τ * I) '' Icc σ₁ σ₂) :=
+    Set.mapsTo_image _ _
+  have hcont : ContinuousOn f (Icc σ₁ σ₂) :=
+    (hlogOn.comp hpathOn hmaps).mul (hFOn.comp hpathOn hmaps)
+  have hf : IntervalIntegrable f volume σ₁ σ₂ :=
+    hcont.intervalIntegrable_of_Icc hσ
+  have hbound : ∀ x, σ₁ ≤ x → x ≤ σ₂ → ‖f x‖ ≤ B * C / (1 + τ ^ 2) := by
+    intro x hx1 hx2
+    have hx : x ∈ Icc σ₁ σ₂ := ⟨hx1, hx2⟩
+    have hζ := hbd x hx
+    have hh := hhat ((x : ℂ) + τ * I) (by simp [hx])
+    have him : ((x : ℂ) + τ * I).im = τ := by simp
+    dsimp [f]
+    rw [norm_mul]
+    have := mul_le_mul hζ (by simpa [him] using hh) (norm_nonneg _) hB
+    simpa [mul_div_assoc] using this
+  have hle := norm_intervalIntegral_le_length_mul hσ hf hbound
+  have : (σ₂ - σ₁) * (B * C / (1 + τ ^ 2)) =
+      (σ₂ - σ₁) * B * C / (1 + τ ^ 2) := by ring
+  exact hle.trans_eq this
+
+/-- r528: full horizontals `[-1/16, 2]` along the Landau gap
+sequence.  Closed by the glued `|ζ′/ζ|` bound and `log³/T² → 0`. -/
 def HorizontalEdgesTendstoZero : Prop :=
   ∀ F : FullWeilTest,
     ∃ T : ℕ → ℝ,
@@ -12285,8 +12599,138 @@ def HorizontalEdgesTendstoZero : Prop :=
             F.hat ((x : ℂ) + T k * I)) atTop (nhds 0) ∧
       Tendsto (fun k =>
         ∫ x : ℝ in (-1 / 16 : ℝ)..2,
-          logDeriv riemannZeta ((x : ℂ) + (-(T k)) * I) *
-            F.hat ((x : ℂ) + (-(T k)) * I)) atTop (nhds 0)
+          logDeriv riemannZeta ((x : ℂ) + (-(T k) : ℝ) * I) *
+            F.hat ((x : ℂ) + (-(T k) : ℝ) * I)) atTop (nhds 0)
+
+lemma tendsto_one_add_log_cubed_div_one_add_sq :
+    Tendsto (fun t : ℝ => (1 + Real.log t) ^ 3 / (1 + t ^ 2))
+      atTop (nhds 0) := by
+  have hlog : Tendsto (fun t : ℝ => Real.log t ^ 3 / t ^ 2)
+      atTop (nhds 0) := by
+    have h := Real.tendsto_pow_log_div_mul_add_atTop (1 : ℝ) 0 3 one_ne_zero
+    have hinv : Tendsto (fun t : ℝ => t⁻¹) atTop (nhds 0) :=
+      tendsto_inv_atTop_zero
+    have hmul : Tendsto
+        (fun t : ℝ => (Real.log t ^ 3 / (1 * t + 0)) * t⁻¹)
+        atTop (nhds 0) := by
+      convert h.mul hinv
+      rw [mul_zero]
+    refine hmul.congr' ?_
+    filter_upwards [eventually_gt_atTop (0 : ℝ)] with t ht
+    simp [one_mul, add_zero]
+    field_simp [ht.ne']
+  have hle : ∀ᶠ t in atTop,
+      0 ≤ (1 + Real.log t) ^ 3 / (1 + t ^ 2) ∧
+        (1 + Real.log t) ^ 3 / (1 + t ^ 2) ≤
+          8 * (Real.log t ^ 3 / t ^ 2) := by
+    filter_upwards [eventually_ge_atTop (3 : ℝ)] with t ht
+    have ht0 : (0 : ℝ) < t := lt_of_lt_of_le (by norm_num : (0 : ℝ) < 3) ht
+    have ht1 : (1 : ℝ) ≤ t := le_trans (by norm_num : (1 : ℝ) ≤ 3) ht
+    have hlog0 : 0 ≤ Real.log t := Real.log_nonneg ht1
+    have hlog1 : (1 : ℝ) ≤ Real.log t := by
+      rw [Real.le_log_iff_exp_le ht0]
+      exact le_trans Real.exp_one_lt_three.le ht
+    have h1 : 1 + Real.log t ≤ 2 * Real.log t := by linarith
+    have hnum : (1 + Real.log t) ^ 3 ≤ (2 * Real.log t) ^ 3 :=
+      pow_le_pow_left₀ (add_nonneg (by norm_num : (0 : ℝ) ≤ 1) hlog0) h1 3
+    have h8 : (2 * Real.log t) ^ 3 = 8 * Real.log t ^ 3 := by ring
+    have hden : t ^ 2 ≤ 1 + t ^ 2 := le_add_of_nonneg_left (by norm_num)
+    have hnum8 : (1 + Real.log t) ^ 3 ≤ 8 * Real.log t ^ 3 := by
+      rwa [← h8]
+    have hnn : 0 ≤ (1 + Real.log t) ^ 3 / (1 + t ^ 2) :=
+      div_nonneg (pow_nonneg (add_nonneg (by norm_num : (0 : ℝ) ≤ 1) hlog0) 3)
+        (add_nonneg (by norm_num : (0 : ℝ) ≤ 1) (sq_nonneg t))
+    refine ⟨hnn, ?_⟩
+    have h1' : (1 + Real.log t) ^ 3 / (1 + t ^ 2) ≤
+        (1 + Real.log t) ^ 3 / t ^ 2 :=
+      div_le_div_of_nonneg_left
+        (pow_nonneg (add_nonneg (by norm_num : (0 : ℝ) ≤ 1) hlog0) 3)
+        (pow_pos ht0 2) hden
+    have h2' : (1 + Real.log t) ^ 3 / t ^ 2 ≤
+        (8 * Real.log t ^ 3) / t ^ 2 :=
+      div_le_div_of_nonneg_right hnum8 (pow_nonneg ht0.le 2)
+    have h3' : (8 * Real.log t ^ 3) / t ^ 2 =
+        8 * (Real.log t ^ 3 / t ^ 2) := by ring
+    exact h1'.trans (h2'.trans_eq h3')
+  refine squeeze_zero' (hle.mono fun _ h => h.1) (hle.mono fun _ h => h.2) ?_
+  convert hlog.const_mul (8 : ℝ)
+  rw [mul_zero]
+
+theorem horizontalEdgesTendstoZero : HorizontalEdgesTendstoZero := by
+  intro F
+  obtain ⟨T, hTbd, hgapP, _hgapN⟩ := exists_gap_sequence_landau
+  obtain ⟨C, hC0, hhat⟩ := F.norm_hat_le_inv_sq_on_Icc (-1 / 16 : ℝ) 2
+  set A : ℝ := ordinateGapConstLandau
+  have hA : (1 : ℝ) ≤ A := ordinateGapConstLandau_one_le
+  have hσ : (-1 / 16 : ℝ) ≤ (2 : ℝ) := by norm_num
+  have hT2 : ∀ k, (2 : ℝ) ≤ T k := fun k =>
+    le_trans (by norm_num : (2 : ℝ) ≤ 3)
+      (le_trans (by exact_mod_cast
+        (Nat.le_add_left 3 (2 * k) : 3 ≤ 2 * k + 3)) (hTbd k).1)
+  have hTlo : ∀ k, ((2 * k + 1 : ℕ) : ℝ) ≤ T k := fun k =>
+    le_trans (by exact_mod_cast
+      (Nat.le_add_right (2 * k + 1) 2 : 2 * k + 1 ≤ 2 * k + 3))
+      (hTbd k).1
+  have hTtop : Tendsto T atTop atTop :=
+    tendsto_atTop_mono (fun k =>
+      le_trans (by exact_mod_cast (by omega : k ≤ 2 * k + 3)) (hTbd k).1)
+      tendsto_natCast_atTop_atTop
+  set L : ℕ → ℝ := fun k => 1 + Real.log (T k)
+  set B : ℕ → ℝ := fun k => A * sliverEdgeConst * L k ^ 3
+  have hB0 : ∀ k, 0 ≤ B k := fun k => by
+    have hLk : 0 ≤ L k :=
+      add_nonneg (by norm_num)
+        (Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) (hT2 k)))
+    exact mul_nonneg (mul_nonneg
+      (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA) sliverEdgeConst_nonneg)
+      (pow_nonneg hLk 3)
+  set K : ℝ := (2 + 1 / 16 : ℝ) * A * sliverEdgeConst * C
+  have hK0 : 0 ≤ K :=
+    mul_nonneg (mul_nonneg (mul_nonneg (by norm_num)
+      (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA)) sliverEdgeConst_nonneg) hC0
+  have hlen : (2 : ℝ) - (-1 / 16) = 2 + 1 / 16 := by ring
+  have hedge (τ : ℕ → ℝ) (hτ : ∀ k, |τ k| = T k) (k : ℕ) :
+      ‖∫ x : ℝ in (-1 / 16 : ℝ)..2,
+          logDeriv riemannZeta ((x : ℂ) + τ k * I) *
+            F.hat ((x : ℂ) + τ k * I)‖ ≤
+        K * (L k ^ 3 / (1 + T k ^ 2)) := by
+    have hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+        1 / (A * (1 + Real.log (T k))) ≤ |ρ.im - T k| := hgapP k
+    have hbd : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        ‖logDeriv riemannZeta ((σ : ℂ) + τ k * I)‖ ≤ B k :=
+      fun σ hσs => horizontalEdgeBound_glued hA (hT2 k) hgap
+        hσs.1 hσs.2 (hτ k)
+    have hnz : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        riemannZeta ((σ : ℂ) + τ k * I) ≠ 0 :=
+      fun σ hσs => riemannZeta_ne_zero_of_glued_gap hA (hT2 k) hgap
+        hσs.1 hσs.2 (hτ k)
+    have hne1 : ∀ σ, σ ∈ Icc (-1 / 16 : ℝ) 2 →
+        (σ : ℂ) + τ k * I ≠ 1 :=
+      fun _ _ => horizontal_ne_one_of_abs (hT2 k) (hτ k)
+    have hle := norm_horizontal_logDeriv_hat_integral_le_with
+      F hσ (hB0 k) hC0 hne1 hnz hbd hhat
+    have hsq : 1 + τ k ^ 2 = 1 + T k ^ 2 := by
+      have : |τ k| ^ 2 = T k ^ 2 := by simp [hτ]
+      simpa [sq_abs] using this
+    convert hle using 1
+    unfold B L K
+    rw [hsq, hlen]
+    ring
+  have hdecay : Tendsto (fun k => L k ^ 3 / (1 + T k ^ 2))
+      atTop (nhds 0) :=
+    tendsto_one_add_log_cubed_div_one_add_sq.comp hTtop
+  have hpos := hedge (fun k => T k)
+    (fun k => abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) (hT2 k)))
+  have hneg := hedge (fun k => -(T k)) (fun k => by simp [abs_neg,
+    abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) (hT2 k))])
+  have hnorm {I : ℕ → ℂ}
+      (hle : ∀ k, ‖I k‖ ≤ K * (L k ^ 3 / (1 + T k ^ 2))) :
+      Tendsto I atTop (nhds 0) :=
+    tendsto_zero_iff_norm_tendsto_zero.mpr
+      (squeeze_zero (fun _ => norm_nonneg _) hle (by
+        convert hdecay.const_mul K
+        rw [mul_zero]))
+  refine ⟨T, hTlo, hTtop, hnorm hpos, hnorm hneg⟩
 
 /-- Left vertical `Re = -1/4`: FE fold
 `ζ'/ζ(s) = χ'/χ(s) - ζ'/ζ(1-s)` with `Re(1-s) = 5/4`
