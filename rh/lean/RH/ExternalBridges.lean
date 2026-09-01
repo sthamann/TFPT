@@ -45,6 +45,7 @@ import Mathlib.Analysis.SpecialFunctions.ImproperIntegrals
 import Mathlib.Analysis.Calculus.ParametricIntervalIntegral
 import Mathlib.Analysis.Complex.LocallyUniformLimit
 import Mathlib.Analysis.Analytic.Uniqueness
+import Mathlib.Analysis.Analytic.IsolatedZeros
 import Mathlib.Analysis.Complex.Convex
 import Mathlib.Analysis.Complex.JensenFormula
 import Mathlib.Analysis.Real.Pi.Bounds
@@ -10949,18 +10950,755 @@ lemma sum_digamma_kernel_tail_le {z : ℂ} {N M : ℕ}
     field_simp
   exact hsum.trans (hfactor.trans_le (htail.trans_eq hdiv))
 
+/-- Positive reals are never non-positive integers, as complex
+values.  Uses `congrArg re`, not `exact_mod_cast`. -/
+lemma ofReal_ne_neg_nat {x : ℝ} (hx : 0 < x) (m : ℕ) :
+    (x : ℂ) ≠ -m := by
+  intro h
+  have hre : x = -(m : ℝ) := by
+    simpa using congrArg Complex.re h
+  have hneg : -(m : ℝ) ≤ 0 := neg_nonpos.mpr (Nat.cast_nonneg _)
+  linarith
+
+lemma pos_ne_neg_nat {x : ℝ} (hx : 0 < x) (m : ℕ) : x ≠ -m := by
+  intro h
+  have hneg : -(m : ℝ) ≤ 0 := neg_nonpos.mpr (Nat.cast_nonneg _)
+  linarith
+
+/-- r526 bridge: `deriv (Real.log ∘ Real.Gamma) x = (digamma ↑x).re`
+for `x > 0`.  Route: `HasDerivAt.real_of_complex` on
+`Complex.Gamma`, `Real.Gamma t = (Complex.Gamma ↑t).re`, then
+`congrArg re` on `ψ = Γ'/Γ` and `div_ofReal_re` (the quotient of
+two via-real values).  Not `exact_mod_cast`. -/
+lemma hasDerivAt_re_Gamma_ofReal {x : ℝ} (hx : 0 < x) :
+    HasDerivAt (fun t : ℝ => Real.log (Real.Gamma t))
+      (digamma (x : ℂ)).re x := by
+  have hG : DifferentiableAt ℂ Gamma (x : ℂ) :=
+    differentiableAt_Gamma _ (ofReal_ne_neg_nat hx)
+  have hreG : HasDerivAt (fun t : ℝ => (Gamma t).re)
+      (deriv Gamma (x : ℂ)).re x :=
+    hG.hasDerivAt.real_of_complex
+  have hGreal : HasDerivAt Real.Gamma (deriv Gamma (x : ℂ)).re x :=
+    hreG
+  have hpos : 0 < Real.Gamma x := Real.Gamma_pos_of_pos hx
+  have hlog : HasDerivAt (fun t : ℝ => Real.log (Real.Gamma t))
+      ((deriv Gamma (x : ℂ)).re / Real.Gamma x) x :=
+    hGreal.log hpos.ne'
+  have hψ : (digamma (x : ℂ)).re =
+      (deriv Gamma (x : ℂ)).re / Real.Gamma x := by
+    have hlogD : digamma (x : ℂ) =
+        deriv Gamma (x : ℂ) / Gamma (x : ℂ) := by
+      rw [digamma_def, logDeriv_apply]
+    have hre := congrArg Complex.re hlogD
+    rw [Gamma_ofReal, div_ofReal_re] at hre
+    exact hre
+  exact hlog.congr_deriv hψ.symm
+
+lemma deriv_Gamma_ofReal {x : ℝ} (hx : 0 < x) :
+    deriv Gamma (x : ℂ) = ↑(deriv (fun t : ℝ => Real.Gamma t) x) := by
+  have hC : HasDerivAt (fun t : ℝ => Gamma (t : ℂ))
+      (deriv Gamma (x : ℂ)) x :=
+    (differentiableAt_Gamma _ (ofReal_ne_neg_nat hx)).hasDerivAt.comp_ofReal
+  have hR0 : HasDerivAt Real.Gamma
+      (deriv (fun t : ℝ => Real.Gamma t) x) x :=
+    (Real.differentiableAt_Gamma (pos_ne_neg_nat hx)).hasDerivAt
+  have hR : HasDerivAt (fun t : ℝ => (Real.Gamma t : ℂ))
+      ↑(deriv (fun t : ℝ => Real.Gamma t) x) x :=
+    hR0.ofReal_comp
+  have hC' : HasDerivAt (fun t : ℝ => (Real.Gamma t : ℂ))
+      (deriv Gamma (x : ℂ)) x :=
+    hC.congr_of_eventuallyEq
+      (Eventually.of_forall fun t => (Gamma_ofReal t).symm)
+  exact HasDerivAt.unique hC' hR
+
+/-- On `(0, ∞)` the complex digamma is real-valued. -/
+lemma digamma_ofReal {x : ℝ} (hx : 0 < x) :
+    digamma (x : ℂ) = ↑((digamma (x : ℂ)).re) := by
+  have hdiv : digamma (x : ℂ) =
+      deriv Gamma (x : ℂ) / Gamma (x : ℂ) := by
+    rw [digamma_def, logDeriv_apply]
+  have hre : (digamma (x : ℂ)).re =
+      deriv (fun t : ℝ => Real.Gamma t) x / Real.Gamma x := by
+    have hlog := (hasDerivAt_re_Gamma_ofReal hx).deriv
+    have hG := (Real.differentiableAt_Gamma (pos_ne_neg_nat hx)).hasDerivAt
+    have hlog' := (hG.log (Real.Gamma_pos_of_pos hx).ne').deriv
+    exact hlog.symm.trans hlog'
+  calc
+    digamma (x : ℂ) = deriv Gamma (x : ℂ) / Gamma (x : ℂ) := hdiv
+    _ = ↑(deriv (fun t : ℝ => Real.Gamma t) x) / ↑(Real.Gamma x) := by
+        rw [deriv_Gamma_ofReal hx, Gamma_ofReal]
+    _ = ↑(deriv (fun t : ℝ => Real.Gamma t) x / Real.Gamma x) :=
+        (ofReal_div _ _).symm
+    _ = ↑((digamma (x : ℂ)).re) := by rw [hre]
+
+lemma monotoneOn_log_Gamma_deriv :
+    MonotoneOn (deriv (fun t : ℝ => Real.log (Real.Gamma t))) (Ioi 0) :=
+  Real.convexOn_log_Gamma.monotoneOn_deriv fun _t ht =>
+    (Real.differentiableAt_Gamma
+        (pos_ne_neg_nat (mem_Ioi.mp ht))).log
+      (Real.Gamma_pos_of_pos (mem_Ioi.mp ht)).ne'
+
+lemma monotoneOn_re_digamma :
+    MonotoneOn (fun t : ℝ => (digamma (t : ℂ)).re) (Ioi 0) := by
+  intro a ha b hb hab
+  have h := monotoneOn_log_Gamma_deriv ha hb hab
+  have ha' := (hasDerivAt_re_Gamma_ofReal (mem_Ioi.mp ha)).deriv
+  have hb' := (hasDerivAt_re_Gamma_ofReal (mem_Ioi.mp hb)).deriv
+  rwa [ha', hb'] at h
+
+lemma re_digamma_add_nat {x : ℝ} (hx : 0 < x) (n : ℕ) :
+    (digamma ((x : ℂ) + n)).re =
+      (digamma (x : ℂ)).re + ∑ k ∈ Finset.range n, (x + k)⁻¹ := by
+  have hz : ∀ m : ℕ, (x : ℂ) ≠ -m := ofReal_ne_neg_nat hx
+  rw [digamma_add_nat hz n, add_re, re_sum]
+  refine congrArg _ (Finset.sum_congr rfl fun k _ => ?_)
+  have hxk : 0 < x + (k : ℝ) := by positivity
+  have : ((x : ℂ) + k)⁻¹ = ↑((x + k)⁻¹ : ℝ) := by
+    rw [← ofReal_natCast k, ← ofReal_add, ofReal_inv]
+  rw [this, ofReal_re]
+
+lemma re_digamma_nat_succ (n : ℕ) :
+    (digamma ((n + 1 : ℕ) : ℂ)).re =
+      -Real.eulerMascheroniConstant +
+        ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) := by
+  have h1 : (1 : ℝ) > 0 := by norm_num
+  have hcast : ((n + 1 : ℕ) : ℂ) = (1 : ℂ) + n := by
+    rw [Nat.cast_succ, add_comm]
+  have hre := re_digamma_add_nat h1 n
+  have hψ1 : (digamma (1 : ℂ)).re = -Real.eulerMascheroniConstant := by
+    rw [digamma_one, neg_re, ofReal_re]
+  have hsum : ∑ k ∈ Finset.range n, ((1 : ℝ) + k)⁻¹ =
+      ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) := by
+    refine Finset.sum_congr rfl fun k _ => ?_
+    field_simp
+    ring
+  simpa [hcast, hψ1, hsum] using hre
+
+lemma summable_one_div_succ_sq :
+    Summable fun n : ℕ => (1 : ℝ) / ((n + 1 : ℝ) ^ 2) := by
+  have h := (Real.summable_one_div_nat_add_rpow (1 : ℝ) 2).mpr
+    (by norm_num : (1 : ℝ) < 2)
+  convert h using 1
+  ext n
+  have hn : 0 < (n + 1 : ℝ) := by positivity
+  rw [abs_of_pos hn, Real.rpow_two]
+
+lemma summable_digamma_kernel_real {x : ℝ} (hx1 : 1 < x) (_hx2 : x < 2) :
+    Summable fun n : ℕ => (1 : ℝ) / (n + 1) - 1 / (n + x) := by
+  refine Summable.of_norm_bounded summable_one_div_succ_sq fun n => ?_
+  have hx0 : 0 < x := lt_trans (by norm_num : (0 : ℝ) < 1) hx1
+  have hden : 0 < (n + 1 : ℝ) := by positivity
+  have hdenx : 0 < (n : ℝ) + x := by positivity
+  have hterm : (1 : ℝ) / (n + 1) - 1 / (n + x) =
+      (x - 1) / ((n + 1) * (n + x)) := by
+    field_simp
+    ring
+  have hnn : ‖(1 : ℝ) / (n + 1) - 1 / (n + x)‖ =
+      |x - 1| / ((n + 1) * (n + x)) := by
+    rw [hterm, Real.norm_eq_abs, abs_div, abs_mul, abs_of_pos hden,
+      abs_of_pos hdenx]
+  have hx1abs : |x - 1| = x - 1 := abs_of_pos (sub_pos.mpr hx1)
+  have hle : (x - 1) / ((n + 1) * (n + x)) ≤
+      (1 : ℝ) / ((n + 1) ^ 2) := by
+    have hnum : x - 1 ≤ 1 := by linarith
+    have hdenle : (n + 1 : ℝ) ^ 2 ≤ (n + 1) * (n + x) := by
+      have : (n + 1 : ℝ) ≤ n + x := by linarith
+      nlinarith
+    have hpos : 0 < (n + 1 : ℝ) ^ 2 := by positivity
+    rw [div_le_div_iff₀ (mul_pos hden hdenx) hpos]
+    nlinarith [sq_nonneg (n + 1 : ℝ)]
+  rw [hnn, hx1abs]
+  simpa [Real.norm_eq_abs, abs_of_nonneg (div_nonneg (sq_nonneg _) hden.le)]
+    using hle
+
+lemma sandwich_partial_digamma_kernel {x : ℝ} (hx1 : 1 < x) (hx2 : x < 2)
+    (n : ℕ) :
+    0 ≤ (digamma (x : ℂ)).re + Real.eulerMascheroniConstant -
+        ∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)) ∧
+    (digamma (x : ℂ)).re + Real.eulerMascheroniConstant -
+        ∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)) ≤
+      (1 : ℝ) / (n + 1) := by
+  have hx0 : 0 < x := lt_trans (by norm_num : (0 : ℝ) < 1) hx1
+  have hmono := monotoneOn_re_digamma
+  have hn1 : (n + 1 : ℝ) ∈ Ioi (0 : ℝ) := mem_Ioi.mpr (by positivity)
+  have hxn : x + n ∈ Ioi (0 : ℝ) := mem_Ioi.mpr (by positivity)
+  have hn2 : (n + 2 : ℝ) ∈ Ioi (0 : ℝ) := mem_Ioi.mpr (by positivity)
+  have hlo : (n + 1 : ℝ) ≤ x + n := by linarith
+  have hhi : x + n ≤ (n + 2 : ℝ) := by linarith
+  have hle1 := hmono hn1 hxn hlo
+  have hle2 := hmono hxn hn2 hhi
+  have hψn1 : (digamma ((n + 1 : ℝ) : ℂ)).re =
+      -Real.eulerMascheroniConstant +
+        ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) := by
+    have hcast : ((n + 1 : ℝ) : ℂ) = ((n + 1 : ℕ) : ℂ) := by
+      norm_cast
+    rw [hcast, re_digamma_nat_succ]
+  have hsum1 : ∑ k ∈ Finset.range (n + 1), (1 : ℝ) / (k + 1) =
+      ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) + 1 / (n + 1) :=
+    Finset.sum_range_succ _ n
+  have hψn2 : (digamma ((n + 2 : ℝ) : ℂ)).re =
+      -Real.eulerMascheroniConstant +
+        (∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) + 1 / (n + 1)) := by
+    have hcast : ((n + 2 : ℝ) : ℂ) = ((n + 1 + 1 : ℕ) : ℂ) := by
+      norm_cast
+    rw [hcast, re_digamma_nat_succ (n + 1), hsum1]
+  have hψxn : (digamma ((x + n : ℝ) : ℂ)).re =
+      (digamma (x : ℂ)).re + ∑ k ∈ Finset.range n, (x + k)⁻¹ := by
+    have hcast : ((x + n : ℝ) : ℂ) = (x : ℂ) + n := by
+      rw [ofReal_add, ofReal_natCast]
+    rw [hcast, re_digamma_add_nat hx0 n]
+  have hleft : -Real.eulerMascheroniConstant +
+        ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) ≤
+      (digamma (x : ℂ)).re + ∑ k ∈ Finset.range n, (x + k)⁻¹ := by
+    have h : (digamma ((n + 1 : ℝ) : ℂ)).re ≤
+        (digamma ((x + n : ℝ) : ℂ)).re := hle1
+    rwa [hψn1, hψxn] at h
+  have hright :
+      (digamma (x : ℂ)).re + ∑ k ∈ Finset.range n, (x + k)⁻¹ ≤
+        -Real.eulerMascheroniConstant +
+          (∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) + 1 / (n + 1)) := by
+    have h : (digamma ((x + n : ℝ) : ℂ)).re ≤
+        (digamma ((n + 2 : ℝ) : ℂ)).re := hle2
+    rwa [hψxn, hψn2] at h
+  have hdiff :
+      ∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)) =
+        ∑ k ∈ Finset.range n, (1 : ℝ) / (k + 1) -
+          ∑ k ∈ Finset.range n, (x + k)⁻¹ := by
+    simp_rw [sub_eq_add_neg, Finset.sum_add_distrib, Finset.sum_neg_distrib]
+    congr 2
+    refine Finset.sum_congr rfl fun k _ => ?_
+    simp [add_comm]
+  constructor
+  · linarith [hleft, hdiff]
+  · linarith [hright, hdiff]
+
+lemma tendsto_partial_digamma_kernel_real {x : ℝ}
+    (hx1 : 1 < x) (hx2 : x < 2) :
+    Tendsto (fun n : ℕ =>
+        ∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)))
+      atTop (𝓝 ((digamma (x : ℂ)).re + Real.eulerMascheroniConstant)) := by
+  set L := (digamma (x : ℂ)).re + Real.eulerMascheroniConstant
+  have hbound : ∀ n : ℕ,
+      |∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)) - L| ≤
+        (1 : ℝ) / (n + 1) := by
+    intro n
+    obtain ⟨h0, h1⟩ := sandwich_partial_digamma_kernel hx1 hx2 n
+    have : 0 ≤ L - ∑ k ∈ Finset.range n,
+        ((1 : ℝ) / (k + 1) - 1 / (k + x)) := by
+      simpa [L, sub_eq_add_neg, add_comm, add_left_comm, add_assoc] using h0
+    have hle : L - ∑ k ∈ Finset.range n,
+        ((1 : ℝ) / (k + 1) - 1 / (k + x)) ≤ (1 : ℝ) / (n + 1) := by
+      simpa [L, sub_eq_add_neg, add_comm, add_left_comm, add_assoc] using h1
+    rw [abs_sub_comm]
+    exact abs_le.mpr ⟨by linarith, by linarith⟩
+  have hsqueeze :
+      Tendsto (fun n : ℕ =>
+        |∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x)) - L|)
+        atTop (𝓝 0) := by
+    refine squeeze_zero (fun _ => abs_nonneg _) hbound ?_
+    exact (tendsto_const_nhds (x := (1 : ℝ))).div_atTop
+      ((tendsto_natCast_atTop_atTop.comp (tendsto_add_atTop_nat 1)).congr
+        fun n => Nat.cast_succ n)
+  exact tendsto_iff_dist_tendsto_zero.mpr
+    (hsqueeze.congr fun n =>
+      (Real.dist_eq
+        (∑ k ∈ Finset.range n, ((1 : ℝ) / (k + 1) - 1 / (k + x))) L).symm)
+
+lemma re_digamma_weierstrass_Ioo {x : ℝ} (hx1 : 1 < x) (hx2 : x < 2) :
+    (digamma (x : ℂ)).re = -Real.eulerMascheroniConstant +
+      ∑' n : ℕ, ((1 : ℝ) / (n + 1) - 1 / (n + x)) := by
+  have hf : ∀ n : ℕ, 0 ≤ (1 : ℝ) / (n + 1) - 1 / (n + x) := by
+    intro n
+    have : (n + 1 : ℝ) ≤ n + x := by linarith
+    exact sub_nonneg.mpr (one_div_le_one_div_of_le (by positivity) this)
+  have hsum :
+      HasSum (fun n : ℕ => (1 : ℝ) / (n + 1) - 1 / (n + x))
+        ((digamma (x : ℂ)).re + Real.eulerMascheroniConstant) :=
+    (hasSum_iff_tendsto_nat_of_nonneg hf _).2
+      (tendsto_partial_digamma_kernel_real hx1 hx2)
+  linarith [hsum.tsum_eq]
+
+lemma ofReal_digamma_kernel {x : ℝ} {n : ℕ} (hx : 0 < x) :
+    ↑((1 : ℝ) / (n + 1) - 1 / (n + x)) =
+      ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + x)⁻¹) := by
+  have hn : (n + 1 : ℝ) ≠ 0 := by positivity
+  have hxk : (n : ℝ) + x ≠ 0 := by positivity
+  rw [ofReal_sub, ofReal_div, ofReal_one, ofReal_div, ofReal_one,
+    ofReal_add, ofReal_natCast, ofReal_add, ofReal_natCast]
+  simp [add_comm]
+
+lemma digamma_eq_weierstrass_ofReal_Ioo {x : ℝ} (hx1 : 1 < x) (hx2 : x < 2) :
+    digamma (x : ℂ) = -(Real.eulerMascheroniConstant : ℂ) +
+      ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + x)⁻¹) := by
+  have hx0 : 0 < x := lt_trans (by norm_num : (0 : ℝ) < 1) hx1
+  have hre := re_digamma_weierstrass_Ioo hx1 hx2
+  have hreal := digamma_ofReal hx0
+  have hterm : ∀ n : ℕ,
+      ↑((1 : ℝ) / (n + 1) - 1 / (n + x)) =
+        ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + x)⁻¹) :=
+    fun n => ofReal_digamma_kernel hx0
+  calc
+    digamma (x : ℂ) = ↑((digamma (x : ℂ)).re) := hreal
+    _ = ↑(-Real.eulerMascheroniConstant +
+          ∑' n : ℕ, ((1 : ℝ) / (n + 1) - 1 / (n + x))) := by
+        rw [hre]
+    _ = -(Real.eulerMascheroniConstant : ℂ) +
+          ↑(∑' n : ℕ, ((1 : ℝ) / (n + 1) - 1 / (n + x))) := by
+        rw [ofReal_add, ofReal_neg]
+    _ = -(Real.eulerMascheroniConstant : ℂ) +
+          ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + x)⁻¹) := by
+        rw [ofReal_tsum]
+        exact congrArg _ (tsum_congr hterm)
+
+def digammaStrip : Set ℂ :=
+  {z | (1 / 4 : ℝ) < z.re ∧ z.re < (2 : ℝ)}
+
+lemma isOpen_digammaStrip : IsOpen digammaStrip :=
+  (isOpen_lt continuous_const continuous_re).inter
+    (isOpen_lt continuous_re continuous_const)
+
+lemma isPreconnected_digammaStrip : IsPreconnected digammaStrip :=
+  ((convex_halfSpace_re_gt (1 / 4 : ℝ)).inter
+    (convex_halfSpace_re_lt (2 : ℝ))).isPreconnected
+
+lemma mem_digammaStrip_ne_neg_nat {z : ℂ} (hz : z ∈ digammaStrip)
+    (m : ℕ) : z ≠ -m := by
+  intro h
+  have hre : z.re = -(m : ℝ) := by simp [h]
+  have hstrip : (1 / 4 : ℝ) < z.re := hz.1
+  have hnonpos : z.re ≤ (0 : ℝ) := by
+    rw [hre]
+    exact neg_nonpos.mpr (show (0 : ℝ) ≤ (m : ℝ) from Nat.cast_nonneg m)
+  linarith
+
+lemma nat_add_ne_zero_of_mem_digammaStrip {z : ℂ} (hz : z ∈ digammaStrip)
+    (n : ℕ) : (n : ℂ) + z ≠ 0 := by
+  intro h
+  have : (n : ℝ) + z.re = 0 := by
+    simpa [add_re, natCast_re] using congrArg Complex.re h
+  have hstrip : (1 / 4 : ℝ) < z.re := hz.1
+  have hn : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+  linarith
+
+lemma analyticAt_Gamma_of_mem_digammaStrip {z : ℂ} (hz : z ∈ digammaStrip) :
+    AnalyticAt ℂ Gamma z :=
+  (DifferentiableOn.analyticOnNhd
+      (fun w hw => (differentiableAt_Gamma w
+        (mem_digammaStrip_ne_neg_nat hw)).differentiableWithinAt)
+      isOpen_digammaStrip)
+    z hz
+
+lemma analyticAt_digamma_of_mem_digammaStrip {z : ℂ} (hz : z ∈ digammaStrip) :
+    AnalyticAt ℂ digamma z :=
+  (analyticAt_Gamma_of_mem_digammaStrip hz).deriv.div
+    (analyticAt_Gamma_of_mem_digammaStrip hz)
+    (Complex.Gamma_ne_zero_of_re_pos
+      (lt_trans (by norm_num : (0 : ℝ) < 1 / 4) hz.1))
+
+lemma analyticOnNhd_digamma_strip : AnalyticOnNhd ℂ digamma digammaStrip :=
+  fun z hz => analyticAt_digamma_of_mem_digammaStrip hz
+
+lemma digamma_kernel_term_norm_le_strip {z : ℂ} {n : ℕ}
+    (hz : z ∈ digammaStrip) :
+    ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+      4 * ‖z - 1‖ / ((n + 1 : ℝ) ^ 2) := by
+  have hne := nat_add_ne_zero_of_mem_digammaStrip hz n
+  have ht := digamma_kernel_term_norm_le hne
+  have hn0 : (0 : ℝ) ≤ n := Nat.cast_nonneg n
+  have hstrip : (1 / 4 : ℝ) < z.re := hz.1
+  have hre : (n : ℝ) + (1 / 4 : ℝ) ≤ ‖(n : ℂ) + z‖ := by
+    have habs : |((n : ℂ) + z).re| ≤ ‖(n : ℂ) + z‖ := abs_re_le_norm _
+    have hreval : ((n : ℂ) + z).re = n + z.re := by simp
+    have hpos : (0 : ℝ) ≤ n + z.re := by linarith
+    have : n + z.re ≤ ‖(n : ℂ) + z‖ := by
+      simpa [hreval, abs_of_nonneg hpos] using habs
+    linarith
+  have hden : 0 < (n + 1 : ℝ) := by positivity
+  have hquarter : 0 < (n : ℝ) + 1 / 4 := by positivity
+  have hle := ht.trans (div_le_div_of_nonneg_left (norm_nonneg (z - 1))
+    (mul_pos hden hquarter)
+    (mul_le_mul_of_nonneg_left hre hden.le))
+  have hfinal : ‖z - 1‖ / ((n + 1 : ℝ) * (n + 1 / 4)) ≤
+      4 * ‖z - 1‖ / ((n + 1 : ℝ) ^ 2) := by
+    have hpos : 0 < (n + 1 : ℝ) ^ 2 := by positivity
+    have hpos' : 0 < (n + 1 : ℝ) * (n + 1 / 4) := by positivity
+    rw [div_le_div_iff₀ hpos' hpos]
+    have hcoeff : (n + 1 : ℝ) ≤ 4 * (n + 1 / 4) := by linarith
+    have hnn : 0 ≤ ‖z - 1‖ := norm_nonneg _
+    have hn1 : 0 ≤ (n + 1 : ℝ) := hden.le
+    calc
+      ‖z - 1‖ * (n + 1) ^ 2
+          = ‖z - 1‖ * (n + 1) * (n + 1) := by ring
+      _ ≤ ‖z - 1‖ * (n + 1) * (4 * (n + 1 / 4)) :=
+          mul_le_mul_of_nonneg_left hcoeff (mul_nonneg hnn hn1)
+      _ = 4 * ‖z - 1‖ * ((n + 1) * (n + 1 / 4)) := by ring
+  exact hle.trans hfinal
+
+lemma summable_digamma_kernel {z : ℂ} (hz : z ∈ digammaStrip) :
+    Summable fun n : ℕ => ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹) :=
+  Summable.of_norm_bounded
+    (summable_one_div_succ_sq.mul_left (4 * ‖z - 1‖)) fun n => by
+      simpa [div_eq_mul_inv, mul_comm, mul_left_comm, mul_assoc]
+        using digamma_kernel_term_norm_le_strip (n := n) hz
+
+lemma differentiableOn_digamma_kernel (n : ℕ) :
+    DifferentiableOn ℂ (fun z => ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹))
+      digammaStrip := by
+  intro z hz
+  have hconst : DifferentiableAt ℂ (fun _ : ℂ => ((n + 1 : ℂ)⁻¹)) z :=
+    differentiableAt_const _
+  have hadd : DifferentiableAt ℂ (fun w : ℂ => (n : ℂ) + w) z :=
+    differentiableAt_const (n : ℂ) |>.add differentiableAt_id
+  have hinv : DifferentiableAt ℂ (fun w : ℂ => ((n : ℂ) + w)⁻¹) z :=
+    hadd.inv (nat_add_ne_zero_of_mem_digammaStrip hz n)
+  exact (hconst.sub hinv).differentiableWithinAt
+
+lemma analyticAt_digammaWeierstrass {z0 : ℂ} (hz0 : z0 ∈ digammaStrip) :
+    AnalyticAt ℂ (fun z =>
+        -(Real.eulerMascheroniConstant : ℂ) +
+          ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)) z0 := by
+  have h1 : 0 < z0.re - 1 / 4 := sub_pos.mpr hz0.1
+  have h2 : 0 < 2 - z0.re := sub_pos.mpr hz0.2
+  let r := min (min (z0.re - 1 / 4) (2 - z0.re)) (1 : ℝ) / 2
+  have hr : 0 < r := by
+    have : 0 < min (min (z0.re - 1 / 4) (2 - z0.re)) (1 : ℝ) := by
+      refine lt_min (lt_min h1 h2) (by norm_num)
+    positivity
+  have hball : Metric.ball z0 r ⊆ digammaStrip := by
+    intro z hz
+    have hd : ‖z - z0‖ < r := by simpa [dist_eq_norm] using hz
+    have hre : |z.re - z0.re| ≤ ‖z - z0‖ := abs_re_le_norm (z - z0)
+    have hre' := abs_lt.mp (hre.trans_lt hd)
+    have hrle1 : r ≤ (z0.re - 1 / 4) / 2 := by
+      have : r ≤ min (z0.re - 1 / 4) (2 - z0.re) / 2 := by
+        have hmin : min (min (z0.re - 1 / 4) (2 - z0.re)) (1 : ℝ) ≤
+            min (z0.re - 1 / 4) (2 - z0.re) := min_le_left _ _
+        dsimp [r]
+        linarith
+      have : min (z0.re - 1 / 4) (2 - z0.re) ≤ z0.re - 1 / 4 :=
+        min_le_left _ _
+      linarith
+    have hrle2 : r ≤ (2 - z0.re) / 2 := by
+      have : r ≤ min (z0.re - 1 / 4) (2 - z0.re) / 2 := by
+        have hmin : min (min (z0.re - 1 / 4) (2 - z0.re)) (1 : ℝ) ≤
+            min (z0.re - 1 / 4) (2 - z0.re) := min_le_left _ _
+        dsimp [r]
+        linarith
+      have : min (z0.re - 1 / 4) (2 - z0.re) ≤ 2 - z0.re :=
+        min_le_right _ _
+      linarith
+    constructor
+    · linarith
+    · linarith
+  let M := r + ‖z0 - 1‖ + 1
+  have hMpos : 0 < M := by positivity
+  have hterm : ∀ (n : ℕ) (z : ℂ), z ∈ Metric.ball z0 r →
+      ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+        4 * M / ((n + 1 : ℝ) ^ 2) := by
+    intro n z hz
+    have hzS := hball hz
+    have hle := digamma_kernel_term_norm_le_strip (n := n) hzS
+    have hd : ‖z - z0‖ < r := by simpa [dist_eq_norm] using hz
+    have hz1 : ‖z - 1‖ ≤ r + ‖z0 - 1‖ := by
+      have hdecomp : z - 1 = (z - z0) + (z0 - 1) := by abel
+      rw [hdecomp]
+      exact (norm_add_le _ _).trans (add_le_add hd.le le_rfl)
+    have hz1M : ‖z - 1‖ ≤ M := by
+      dsimp [M]; linarith
+    have hden : 0 < (n + 1 : ℝ) ^ 2 := by positivity
+    exact hle.trans (div_le_div_of_nonneg_right
+      (mul_le_mul_of_nonneg_left hz1M (by norm_num : (0 : ℝ) ≤ 4))
+      hden.le)
+  have hu : Summable fun n : ℕ => 4 * M / ((n + 1 : ℝ) ^ 2) := by
+    simpa [div_eq_mul_inv, mul_comm, mul_left_comm, mul_assoc]
+      using summable_one_div_succ_sq.mul_left (4 * M)
+  have hdiff : DifferentiableOn ℂ
+      (fun z => ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹))
+      (Metric.ball z0 r) :=
+    differentiableOn_tsum_of_summable_norm hu
+      (fun n => (differentiableOn_digamma_kernel n).mono hball)
+      Metric.isOpen_ball hterm
+  have htsum := (hdiff.analyticOnNhd Metric.isOpen_ball) z0
+    (Metric.mem_ball_self hr)
+  exact analyticAt_const.add htsum
+
+lemma analyticOnNhd_digammaWeierstrass :
+    AnalyticOnNhd ℂ (fun z =>
+        -(Real.eulerMascheroniConstant : ℂ) +
+          ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹))
+      digammaStrip :=
+  fun z hz => analyticAt_digammaWeierstrass hz
+
+lemma three_halves_mem_digammaStrip :
+    ((3 / 2 : ℝ) : ℂ) ∈ digammaStrip := by
+  constructor <;> (simp; norm_num)
+
+lemma xs_Ioo_three_halves (n : ℕ) :
+    (3 / 2 : ℝ) + 1 / (n + 3) ∈ Ioo (1 : ℝ) 2 := by
+  have hn : 0 < (n + 3 : ℝ) := by positivity
+  constructor
+  · have : 0 < (1 : ℝ) / (n + 3) := one_div_pos.mpr hn
+    linarith
+  · have : (1 : ℝ) / (n + 3) ≤ 1 / 3 := by
+      exact one_div_le_one_div_of_le (by norm_num : (0 : ℝ) < 3)
+        (by linarith : (3 : ℝ) ≤ n + 3)
+    linarith
+
+set_option maxHeartbeats 400000 in
+lemma tendsto_ofReal_punctured_three_halves :
+    Tendsto (fun n : ℕ => (((3 / 2 : ℝ) + 1 / (n + 3) : ℝ) : ℂ))
+      atTop (𝓝[≠] ((3 / 2 : ℝ) : ℂ)) := by
+  rw [tendsto_nhdsWithin_iff]
+  constructor
+  · have hden : Tendsto (fun n : ℕ => (n : ℝ) + 3) atTop atTop :=
+      (tendsto_natCast_atTop_atTop.comp (tendsto_add_atTop_nat 3)).congr
+        fun n => by simp [Nat.cast_add]
+    have hx : Tendsto (fun n : ℕ => (3 / 2 : ℝ) + 1 / (n + 3))
+        atTop (𝓝 (3 / 2 : ℝ)) := by
+      simpa using
+        (tendsto_const_nhds (x := (3 / 2 : ℝ))).add
+          ((tendsto_const_nhds (x := (1 : ℝ))).div_atTop hden)
+    exact (continuous_ofReal.tendsto (3 / 2 : ℝ)).comp hx
+  · refine Eventually.of_forall fun n => ?_
+    have hpos : (0 : ℝ) < 1 / (n + 3) := by positivity
+    have hne : (3 / 2 : ℝ) + 1 / (n + 3) ≠ (3 / 2 : ℝ) := by
+      intro h
+      linarith [hpos]
+    exact ofReal_injective.ne hne
+
+lemma frequently_eq_digamma_weierstrass_three_halves :
+    ∃ᶠ z in 𝓝[≠] ((3 / 2 : ℝ) : ℂ),
+      digamma z = -(Real.eulerMascheroniConstant : ℂ) +
+        ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹) := by
+  refine tendsto_ofReal_punctured_three_halves.frequently
+    (Frequently.of_forall fun n => ?_)
+  obtain ⟨hx1, hx2⟩ := xs_Ioo_three_halves n
+  simpa using digamma_eq_weierstrass_ofReal_Ioo hx1 hx2
+
+lemma digamma_eq_weierstrass_on_strip :
+    EqOn digamma (fun z =>
+        -(Real.eulerMascheroniConstant : ℂ) +
+          ∑' n : ℕ, ((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹))
+      digammaStrip :=
+  analyticOnNhd_digamma_strip.eqOn_of_preconnected_of_frequently_eq
+    analyticOnNhd_digammaWeierstrass
+    isPreconnected_digammaStrip
+    three_halves_mem_digammaStrip
+    frequently_eq_digamma_weierstrass_three_halves
+
+lemma mem_digammaStrip_of_horizontal {z : ℂ}
+    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (17 / 16 : ℝ)) :
+    z ∈ digammaStrip := by
+  constructor <;> linarith
+
+lemma sum_Ico_add_eq_sum_range {N M : ℕ} (f : ℕ → ℝ) :
+    ∑ n ∈ Finset.Ico N (N + M), f n =
+      ∑ k ∈ Finset.range M, f (N + k) := by
+  induction M with
+  | zero => simp
+  | succ M ih =>
+    rw [Nat.add_succ, Finset.sum_Ico_succ_top (Nat.le_add_right N M), ih,
+      Finset.sum_range_succ]
+
+lemma tsum_digamma_kernel_norm_tail_le {z : ℂ} {N : ℕ}
+    (hN : 0 < N) (hne : ∀ n : ℕ, (n : ℂ) + z ≠ 0)
+    (hzN : (2 : ℝ) * ‖z‖ ≤ N)
+    (hsum : Summable fun n : ℕ =>
+      ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖) :
+    ∑' k : ℕ, ‖(((k + N : ℕ) + 1 : ℂ)⁻¹ -
+        (((k + N : ℕ) : ℂ) + z)⁻¹)‖ ≤
+      (2 : ℝ) * ‖z - 1‖ / N := by
+  set f : ℕ → ℝ := fun n =>
+    ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖
+  have hshift : Summable fun k : ℕ => f (k + N) := by
+    simpa [add_comm] using (summable_nat_add_iff N).mpr hsum
+  have hlim :
+      Tendsto (fun M : ℕ => ∑ k ∈ Finset.range M, f (k + N))
+        atTop (𝓝 (∑' k : ℕ, f (k + N))) :=
+    hshift.hasSum.tendsto_sum_nat
+  have hle : ∀ M : ℕ,
+      ∑ k ∈ Finset.range M, f (k + N) ≤ (2 : ℝ) * ‖z - 1‖ / N := by
+    intro M
+    have hIco :
+        ∑ k ∈ Finset.range M, f (k + N) =
+          ∑ n ∈ Finset.Ico N (N + M), f n := by
+      simpa [add_comm] using
+        (sum_Ico_add_eq_sum_range (N := N) (M := M) f).symm
+    rw [hIco]
+    exact sum_digamma_kernel_tail_le hN (Nat.le_add_right N M) hne hzN
+  exact le_of_tendsto hlim (Eventually.of_forall hle)
+
+set_option maxHeartbeats 800000 in
+lemma norm_digamma_le_log_of_horizontal {z : ℂ}
+    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (17 / 16 : ℝ))
+    (him : (2 : ℝ) ≤ |z.im|) :
+    ‖digamma z‖ ≤
+      (6 + |Real.eulerMascheroniConstant|) *
+        (1 + Real.log (2 + |z.im|)) := by
+  have hzS : z ∈ digammaStrip := mem_digammaStrip_of_horizontal hre1 hre2
+  have hid := digamma_eq_weierstrass_on_strip hzS
+  have hne : ∀ n : ℕ, (n : ℂ) + z ≠ 0 :=
+    nat_add_ne_zero_of_mem_digammaStrip hzS
+  have hsumN : Summable fun n : ℕ =>
+      ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ :=
+    Summable.of_nonneg_of_le (fun _ => norm_nonneg _)
+      (fun n => digamma_kernel_term_norm_le_strip hzS)
+      (by
+        simpa [div_eq_mul_inv, mul_comm, mul_left_comm, mul_assoc]
+          using summable_one_div_succ_sq.mul_left (4 * ‖z - 1‖))
+  set T : ℝ := |z.im|
+  have hT : (2 : ℝ) ≤ T := him
+  have hTpos : 0 < T := lt_of_lt_of_le (by norm_num : (0 : ℝ) < 2) hT
+  have hz1 : ‖z - 1‖ ≤ (1 / 2 : ℝ) + T := by
+    have hreim := norm_le_abs_re_add_abs_im (z - 1)
+    have hre1bound : |z.re - 1| ≤ 1 / 2 := by
+      rw [abs_le]; constructor <;> linarith
+    simpa [sub_re, sub_im, one_re, one_im] using
+      hreim.trans (add_le_add hre1bound le_rfl)
+  have hznorm : ‖z‖ ≤ (17 / 16 : ℝ) + T := by
+    have hreabs : |z.re| ≤ 17 / 16 := by
+      rw [abs_le]; constructor <;> linarith
+    exact (norm_le_abs_re_add_abs_im z).trans (add_le_add hreabs le_rfl)
+  have hzge : T ≤ ‖z‖ := by simpa [T] using abs_im_le_norm z
+  let N : ℕ := Nat.ceil (2 * ‖z‖)
+  have hNreal : (2 : ℝ) * ‖z‖ ≤ N := Nat.le_ceil _
+  have hNposR : (4 : ℝ) ≤ N := by
+    have : (4 : ℝ) ≤ 2 * ‖z‖ := by nlinarith [hzge, hT]
+    exact this.trans hNreal
+  have hNpos : 0 < N := Nat.cast_pos.mp (lt_of_lt_of_le (by norm_num) hNposR)
+  have hNlt : (N : ℝ) < 2 * ‖z‖ + 1 :=
+    Nat.ceil_lt_add_one (mul_nonneg (by norm_num) (norm_nonneg _))
+  have hγ : ‖-(Real.eulerMascheroniConstant : ℂ)‖ =
+      |Real.eulerMascheroniConstant| := by
+    simp [norm_neg]
+  have htri : ‖digamma z‖ ≤ |Real.eulerMascheroniConstant| +
+      ∑' n : ℕ, ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ := by
+    rw [hid]
+    exact (norm_add_le _ _).trans
+      (add_le_add (le_of_eq hγ) (norm_tsum_le_tsum_norm hsumN))
+  have hsplit := hsumN.sum_add_tsum_nat_add N
+  have hhead :=
+    sum_digamma_kernel_norm_le (z := z) (N := N) (T := T) hT le_rfl hne
+  have htail :=
+    tsum_digamma_kernel_norm_tail_le (z := z) (N := N)
+      hNpos hne hNreal hsumN
+  set L := (1 : ℝ) + Real.log (2 + T)
+  have hL : (1 : ℝ) ≤ L := by
+    have : 0 ≤ Real.log (2 + T) :=
+      Real.log_nonneg (by nlinarith [hT])
+    linarith
+  have hNlog : 1 + Real.log ((N : ℝ) + 1) ≤ 3 * L := by
+    have hpow : (N : ℝ) + 1 ≤ (2 + T) ^ 3 := by
+      have hN1 : (N : ℝ) + 1 < 2 * ‖z‖ + 2 := by linarith
+      have hbound : 2 * ‖z‖ + 2 ≤ 2 * ((17 / 16 : ℝ) + T) + 2 := by
+        nlinarith [hznorm]
+      have hsimp : 2 * ((17 / 16 : ℝ) + T) + 2 ≤ 5 + 2 * T := by
+        norm_num
+        linarith
+      have hcube : 5 + 2 * T ≤ (2 + T) ^ 3 := by
+        nlinarith [sq_nonneg (T - 2), pow_nonneg (by linarith : (0 : ℝ) ≤ T) 3,
+          hT]
+      linarith
+    have hposN : (0 : ℝ) < (N : ℝ) + 1 := by positivity
+    have hposT : (0 : ℝ) < 2 + T := by positivity
+    have hlog := Real.log_le_log hposN hpow
+    have hlogpow : Real.log ((2 + T) ^ 3) = 3 * Real.log (2 + T) :=
+      Real.log_pow (2 + T) 3
+    have hstep : 1 + Real.log ((N : ℝ) + 1) ≤
+        1 + 3 * Real.log (2 + T) := by linarith [hlog, hlogpow]
+    have hpackL : 1 + 3 * Real.log (2 + T) ≤ 3 * L := by
+      have hlognn : 0 ≤ Real.log (2 + T) :=
+        Real.log_nonneg (by nlinarith [hT] : (1 : ℝ) ≤ 2 + T)
+      dsimp [L]
+      nlinarith [hlognn]
+    exact hstep.trans hpackL
+  have hhead' : ∑ n ∈ Finset.range N,
+        ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+      (15 / 4 : ℝ) * L := by
+    have hfac : ‖z - 1‖ / T ≤ (5 / 4 : ℝ) := by
+      have h1 : ‖z - 1‖ / T ≤ ((1 / 2 : ℝ) + T) / T :=
+        div_le_div_of_nonneg_right hz1 hTpos.le
+      have h2 : ((1 / 2 : ℝ) + T) / T = 1 / (2 * T) + 1 := by
+        field_simp
+      have h3 : 1 / (2 * T) + 1 ≤ (5 / 4 : ℝ) := by
+        have : 1 / (2 * T) ≤ 1 / 4 := by
+          rw [one_div_le_one_div (mul_pos (by norm_num) hTpos) (by norm_num)]
+          nlinarith [hT]
+        linarith
+      linarith
+    have hlog0 : 0 ≤ 1 + Real.log ((N : ℝ) + 1) := by
+      have hNnn : (0 : ℝ) ≤ N := Nat.cast_nonneg N
+      have : (1 : ℝ) ≤ (N : ℝ) + 1 := by linarith [hNnn]
+      linarith [Real.log_nonneg this]
+    have hmul :=
+      mul_le_mul hfac hNlog hlog0 (by norm_num : (0 : ℝ) ≤ 5 / 4)
+    have hring : (5 / 4 : ℝ) * (3 * L) = (15 / 4) * L := by ring
+    exact hhead.trans (hmul.trans_eq hring)
+  have htail' :
+      ∑' k : ℕ, ‖(((k + N : ℕ) + 1 : ℂ)⁻¹ -
+          (((k + N : ℕ) : ℂ) + z)⁻¹)‖ ≤
+        (5 / 4 : ℝ) := by
+    have hNge : 0 < (N : ℝ) := Nat.cast_pos.mpr hNpos
+    have h2z : 0 < 2 * ‖z‖ := by nlinarith [hzge, hT]
+    have h1 : (2 : ℝ) * ‖z - 1‖ / N ≤
+        2 * ((1 / 2 : ℝ) + T) / N :=
+      div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hz1 (by norm_num)) hNge.le
+    have h2 : 2 * ((1 / 2 : ℝ) + T) / N ≤
+        2 * ((1 / 2 : ℝ) + T) / (2 * ‖z‖) :=
+      div_le_div_of_nonneg_left (by positivity) h2z hNreal
+    have h3 : 2 * ((1 / 2 : ℝ) + T) / (2 * ‖z‖) =
+        ((1 / 2 : ℝ) + T) / ‖z‖ := by
+      field_simp
+    have h4 : ((1 / 2 : ℝ) + T) / ‖z‖ ≤ ((1 / 2 : ℝ) + T) / T :=
+      div_le_div_of_nonneg_left (by positivity) hTpos hzge
+    have h5 : ((1 / 2 : ℝ) + T) / T = 1 / (2 * T) + 1 := by
+      field_simp
+    have h6 : 1 / (2 * T) + 1 ≤ (5 / 4 : ℝ) := by
+      have : 1 / (2 * T) ≤ 1 / 4 := by
+        rw [one_div_le_one_div (mul_pos (by norm_num) hTpos) (by norm_num)]
+        nlinarith [hT]
+      linarith
+    exact htail.trans (h1.trans (h2.trans (h3.trans_le (h4.trans (h5.trans_le h6)))))
+  have hsumle :
+      ∑' n : ℕ, ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+        (15 / 4 : ℝ) * L + 5 / 4 := by
+    calc
+      ∑' n : ℕ, ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖
+          = ∑ n ∈ Finset.range N,
+              ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ +
+            ∑' k : ℕ, ‖(((k + N : ℕ) + 1 : ℂ)⁻¹ -
+                (((k + N : ℕ) : ℂ) + z)⁻¹)‖ := hsplit.symm
+      _ ≤ (15 / 4 : ℝ) * L + 5 / 4 := add_le_add hhead' htail'
+  have hpack : |Real.eulerMascheroniConstant| +
+        ((15 / 4 : ℝ) * L + 5 / 4) ≤
+      (6 + |Real.eulerMascheroniConstant|) * L := by
+    have hγL : |Real.eulerMascheroniConstant| ≤
+        |Real.eulerMascheroniConstant| * L :=
+      le_mul_of_one_le_right (abs_nonneg _) hL
+    have h54 : (5 / 4 : ℝ) ≤ (5 / 4) * L :=
+      le_mul_of_one_le_right (by norm_num) hL
+    nlinarith
+  have hmid : |Real.eulerMascheroniConstant| +
+        ∑' n : ℕ, ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+      |Real.eulerMascheroniConstant| + ((15 / 4 : ℝ) * L + 5 / 4) :=
+    add_le_add le_rfl hsumle
+  exact (htri.trans hmid).trans hpack
+
 /-- Sliver remainder (FE consumer: `Re ∈ [1/2, 17/16]`).
-r525 chose route A: `convexOn_log_Gamma` ⇒ monotone real `ψ`,
-sandwich `ψ(x+n)` vs `ψ(n+1)`, Weierstrass series on `(1,2)`,
-identity theorem on `{1/4 < Re < 2}`.  The real-from-complex
-`HasDerivAt.real_of_complex` bridge did not close this cut.
-Route B (`TendstoLocallyUniformlyOn.deriv` of `GammaSeq`) needs
-locally uniform Euler-limit, not in Mathlib.  Named, not sorry. -/
+r526 closed route A: real convexity ⇒ Weierstrass on `(1,2)` ⇒
+identity on `{1/4 < Re < 2}` ⇒ `|ψ|` log bound. -/
 def DigammaHorizontalLogBound : Prop :=
   ∃ C : ℝ, 0 ≤ C ∧
     ∀ {z : ℂ}, (1 / 2 : ℝ) ≤ z.re → z.re ≤ (17 / 16 : ℝ) →
       (2 : ℝ) ≤ |z.im| →
         ‖digamma z‖ ≤ C * (1 + Real.log (2 + |z.im|))
+
+theorem digammaHorizontalLogBound : DigammaHorizontalLogBound :=
+  ⟨6 + |Real.eulerMascheroniConstant|,
+    add_nonneg (by norm_num) (abs_nonneg _),
+    fun {z} hre1 hre2 him =>
+      norm_digamma_le_log_of_horizontal hre1 hre2 him⟩
 
 lemma norm_intervalIntegral_le_length_mul
     {f : ℝ → ℂ} {a b C : ℝ} (hab : a ≤ b)

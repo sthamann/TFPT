@@ -1211,6 +1211,18 @@ Remaining: close that Prop (route A glue), FE/`cot`,
 horizontals→0, left edge, `T→∞`.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r526 census (outer bridges 33, ψ log bound)
+
+Sorry-free.  Route A closed: `hasDerivAt_re_Gamma_ofReal`
+(`real_of_complex` + `div_ofReal_re`, not `exact_mod_cast`)
+gives real convexity ⇒ Weierstrass on `(1,2)` ⇒ identity
+on `{1/4 < Re < 2}` ⇒ `|ψ| ≤ C(1+log(2+|Im z|))` on the
+FE sliver `Re ∈ [1/2, 17/16]`, `|Im| ≥ 2`.
+`DigammaHorizontalLogBound` is a theorem.
+Remaining: cot-Schranke + `logDeriv` of the cos FE,
+horizontals→0, left edge, `T→∞`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

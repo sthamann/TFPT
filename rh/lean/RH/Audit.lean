@@ -499,6 +499,11 @@ r525: route A (real convexity → series on
 `(1,2)` → identity on the sliver strip)
 chosen; the real-from-complex glue did not
 close.  Prop narrowed to `Re ∈ [1/2, 17/16]`.
+r526: `hasDerivAt_re_Gamma_ofReal` via
+`HasDerivAt.real_of_complex` + `div_ofReal_re`;
+Weierstrass on `(1,2)`; identity on
+`{1/4 < Re < 2}`; `|ψ|` log bound.  The Prop
+is now a theorem (`digammaHorizontalLogBound`).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -682,6 +687,44 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms sum_range_inv_succ_le_one_add_log
 #print axioms sum_digamma_kernel_norm_le
 #print axioms sum_digamma_kernel_tail_le
+#print axioms ofReal_ne_neg_nat
+#print axioms pos_ne_neg_nat
+#print axioms hasDerivAt_re_Gamma_ofReal
+#print axioms deriv_Gamma_ofReal
+#print axioms digamma_ofReal
+#print axioms monotoneOn_log_Gamma_deriv
+#print axioms monotoneOn_re_digamma
+#print axioms re_digamma_add_nat
+#print axioms re_digamma_nat_succ
+#print axioms summable_one_div_succ_sq
+#print axioms summable_digamma_kernel_real
+#print axioms sandwich_partial_digamma_kernel
+#print axioms tendsto_partial_digamma_kernel_real
+#print axioms re_digamma_weierstrass_Ioo
+#print axioms ofReal_digamma_kernel
+#print axioms digamma_eq_weierstrass_ofReal_Ioo
+#print axioms isOpen_digammaStrip
+#print axioms isPreconnected_digammaStrip
+#print axioms mem_digammaStrip_ne_neg_nat
+#print axioms nat_add_ne_zero_of_mem_digammaStrip
+#print axioms analyticAt_Gamma_of_mem_digammaStrip
+#print axioms analyticAt_digamma_of_mem_digammaStrip
+#print axioms analyticOnNhd_digamma_strip
+#print axioms digamma_kernel_term_norm_le_strip
+#print axioms summable_digamma_kernel
+#print axioms differentiableOn_digamma_kernel
+#print axioms analyticAt_digammaWeierstrass
+#print axioms analyticOnNhd_digammaWeierstrass
+#print axioms three_halves_mem_digammaStrip
+#print axioms xs_Ioo_three_halves
+#print axioms tendsto_ofReal_punctured_three_halves
+#print axioms frequently_eq_digamma_weierstrass_three_halves
+#print axioms digamma_eq_weierstrass_on_strip
+#print axioms mem_digammaStrip_of_horizontal
+#print axioms sum_Ico_add_eq_sum_range
+#print axioms tsum_digamma_kernel_norm_tail_le
+#print axioms norm_digamma_le_log_of_horizontal
+#print axioms digammaHorizontalLogBound
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
