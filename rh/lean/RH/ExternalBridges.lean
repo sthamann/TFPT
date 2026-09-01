@@ -8713,6 +8713,11 @@ lemma ordinateGapConstLandau_pos : 0 < ordinateGapConstLandau := by
   unfold ordinateGapConstLandau
   positivity
 
+lemma ordinateGapConstLandau_one_le : (1 : ℝ) ≤ ordinateGapConstLandau := by
+  unfold ordinateGapConstLandau
+  have hC := zetaZerosInDiskCardBoundInner_pos
+  nlinarith
+
 lemma log_three_lt_two : Real.log 3 < 2 := by
   have hlt : Real.log 3 < Real.log 4 :=
     Real.log_lt_log (by norm_num : (0 : ℝ) < 3) (by norm_num)
@@ -10405,11 +10410,53 @@ lemma landau_cubic_pack {Cin L a b c d : ℝ}
   rw [hpowU, hpowL, hpowL3]
   simpa [P, Q, U] using hgoal
 
+/-- r524: A≥1 scales the A=1 cubic pack; the extra factor sits on B. -/
+lemma landau_cubic_pack_scale {Cin L a b c d A : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hC : 0 ≤ Cin) (hL : 1 ≤ L)
+    (ha : 0 ≤ a) (hb : 0 ≤ b) (hc : 0 ≤ c) (hd : 0 ≤ d) :
+    16384 * (1 + (a + b + 4 + 2 * Cin * (c + (2 * Cin + 1)) +
+        2 * Cin * d) * L ^ 2) + 2 * A * Cin * L ^ 2 + 1 ≤
+      A * (100000000 * (1 + Cin) ^ 3 * (1 + a + b + c + d + 4) * L ^ 3) := by
+  have hpack := landau_cubic_pack (Cin := Cin) (L := L) (a := a) (b := b)
+    (c := c) (d := d) hC hL ha hb hc hd
+  set Q : ℝ := a + b + 4 + 2 * Cin * (c + (2 * Cin + 1)) + 2 * Cin * d
+  set U : ℝ := 16384 * (1 + Q * L ^ 2) + 1
+  set V : ℝ := 2 * Cin * L ^ 2
+  have hQ0 : 0 ≤ Q := by
+    have : 0 ≤ 2 * Cin := by linarith
+    nlinarith
+  have hU0 : 0 ≤ U := by
+    have hL2 : 0 ≤ L ^ 2 := sq_nonneg L
+    unfold U; nlinarith
+  have hV0 : 0 ≤ V := by
+    have hL2 : 0 ≤ L ^ 2 := sq_nonneg L
+    unfold V; nlinarith
+  have hscale : U + A * V ≤ A * (U + V) := by
+    have hx : U ≤ A * U := le_mul_of_one_le_left hU0 hA
+    nlinarith [hx]
+  have hUV : U + V =
+      16384 * (1 + Q * L ^ 2) + 2 * Cin * L ^ 2 + 1 := by
+    unfold U V; ring
+  have hUA : U + A * V =
+      16384 * (1 + Q * L ^ 2) + 2 * A * Cin * L ^ 2 + 1 := by
+    unfold U V; ring
+  have hpack' : U + V ≤
+      100000000 * (1 + Cin) ^ 3 * (1 + a + b + c + d + 4) * L ^ 3 := by
+    simpa [hUV, Q] using hpack
+  have hmul : A * (U + V) ≤
+      A * (100000000 * (1 + Cin) ^ 3 * (1 + a + b + c + d + 4) * L ^ 3) :=
+    mul_le_mul_of_nonneg_left hpack' (le_trans (by norm_num : (0 : ℝ) ≤ 1) hA)
+  rw [← hUA]
+  exact hscale.trans hmul
+
 set_option maxHeartbeats 800000 in
-theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
-  refine ⟨(1 : ℝ), landauHorizontalConst, by norm_num,
-    landauHorizontalConst_pos, ?_⟩
-  intro T hT hgap σ hσ1 hσ2
+lemma horizontalEdgeLandauBound_of_gap {T A : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|)
+    {σ : ℝ} (hσ1 : (1 / 2 : ℝ) ≤ σ) (hσ2 : σ ≤ 2) :
+    ‖logDeriv riemannZeta (σ + T * I)‖ ≤
+      (A * landauHorizontalConst) * (1 + Real.log T) ^ 3 := by
   set c := (2 : ℂ) + T * I
   set s := (σ : ℂ) + T * I
   set L := (1 : ℝ) + Real.log T
@@ -10436,10 +10483,12 @@ theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
       simp [Cin, L]; ring
     simpa [S, hNreal, heq] using h
   have hs1 : s ≠ 1 := horizontal_ne_one (σ := σ) hT
+  have hApos : (0 : ℝ) < A :=
+    lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA
   have hζ : riemannZeta s ≠ 0 :=
-    riemannZeta_ne_zero_of_landau_gap (A := 1) (by norm_num) hT hgap
+    riemannZeta_ne_zero_of_landau_gap (A := A) hApos hT hgap
   have hsnot : s ∉ S :=
-    not_mem_landauInnerDisk_of_gap (A := 1) (by norm_num) hT hgap
+    not_mem_landauInnerDisk_of_gap (A := A) hApos hT hgap
   have hPne : ∀ ρ ∈ S, s ≠ ρ :=
     fun ρ hρ heq => hsnot (by simpa [S, heq] using hρ)
   have hsplit := logDeriv_riemannZeta_eq_landauQuotient_add (T := T) hs1
@@ -10447,17 +10496,16 @@ theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
   have hPlog := logDeriv_landauPoly (T := T) (s := s)
     (by simpa [S] using hPne)
   have him : s.im = T := by simp [s]
-  have hPnormL : ‖logDeriv (landauPoly T) s‖ ≤ 2 * Cin * L ^ 2 := by
-    have h := norm_sum_multiplicity_inv_le_of_gap (A := (1 : ℝ))
-      (by norm_num) hT hgap him
+  have hPnormL : ‖logDeriv (landauPoly T) s‖ ≤ 2 * A * Cin * L ^ 2 := by
+    have h := norm_sum_multiplicity_inv_le_of_gap (A := A) hApos hT hgap him
     have h' : ‖logDeriv (landauPoly T) s‖ ≤
-        Cin * (1 + Real.log (2 + |T|)) * L := by
+        Cin * (1 + Real.log (2 + |T|)) * (A * L) := by
       rw [hPlog]
       simpa [S, Cin, L] using h
     have := h'.trans (mul_le_mul_of_nonneg_right
       (mul_le_mul_of_nonneg_left (one_add_log_two_add_abs_le hT) hCin.le)
-      (le_of_lt hLpos))
-    nlinarith [hCin.le, hL]
+      (mul_nonneg hApos.le hLpos.le))
+    nlinarith [hCin.le, hL, hA]
   have hs1norm : ‖(1 : ℂ) / (s - 1)‖ ≤ (1 : ℝ) := by
     have hne : s - 1 ≠ 0 := sub_ne_zero.mpr hs1
     have himle : T ≤ ‖s - 1‖ := by
@@ -10667,20 +10715,37 @@ theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound := by
     have h3 : ‖-(1 / (s - 1))‖ = ‖(1 : ℂ) / (s - 1)‖ := norm_neg _
     linarith [h1, h2, h3]
   have hsumle := htri.trans (add_le_add (add_le_add hgL hPnormL) hs1norm)
-  have hfinal : ‖logDeriv riemannZeta s‖ ≤ landauHorizontalConst * L ^ 3 := by
-    have hbig := landau_cubic_pack (Cin := Cin) (L := L)
+  have hfinal : ‖logDeriv riemannZeta s‖ ≤
+      (A * landauHorizontalConst) * L ^ 3 := by
+    have hbig := landau_cubic_pack_scale (Cin := Cin) (L := L) (A := A)
       (a := Real.log jensenSphereMajorantCoeff)
       (b := Real.log ‖riemannZeta 2‖)
       (c := Real.log 32)
       (d := Real.log (13 / 8 : ℝ))
-      hCin.le hL hlogKn hlogzn hlog32n hlog138n
-    have : landauHorizontalConst * L ^ 3 =
-        100000000 * (1 + Cin) ^ 3 *
+      hA hCin.le hL hlogKn hlogzn hlog32n hlog138n
+    have hconst : A * landauHorizontalConst * L ^ 3 =
+        A * (100000000 * (1 + Cin) ^ 3 *
           (1 + Real.log jensenSphereMajorantCoeff + Real.log ‖riemannZeta 2‖ +
-            Real.log 32 + Real.log (13 / 8) + 4) * L ^ 3 := by
-      simp [landauHorizontalConst, Cin]
-    exact hsumle.trans (hbig.trans_eq this.symm)
+            Real.log 32 + Real.log (13 / 8) + 4) * L ^ 3) := by
+      simp [landauHorizontalConst, Cin]; ring
+    exact hsumle.trans (hbig.trans_eq hconst.symm)
   simpa [s, L] using hfinal
+
+theorem horizontalEdgeLandauBound : HorizontalEdgeLandauBound :=
+  ⟨(1 : ℝ), landauHorizontalConst, by norm_num, landauHorizontalConst_pos,
+    fun {T} hT hgap σ hσ1 hσ2 => by
+      simpa using horizontalEdgeLandauBound_of_gap (A := (1 : ℝ))
+        le_rfl hT hgap hσ1 hσ2⟩
+
+lemma horizontalEdgeLandauBound_landauGap {T : ℝ}
+    (hT : (2 : ℝ) ≤ T)
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (ordinateGapConstLandau * (1 + Real.log T)) ≤ |ρ.im - T|)
+    {σ : ℝ} (hσ1 : (1 / 2 : ℝ) ≤ σ) (hσ2 : σ ≤ 2) :
+    ‖logDeriv riemannZeta (σ + T * I)‖ ≤
+      (ordinateGapConstLandau * landauHorizontalConst) *
+        (1 + Real.log T) ^ 3 :=
+  horizontalEdgeLandauBound_of_gap ordinateGapConstLandau_one_le hT hgap hσ1 hσ2
 
 lemma digamma_add_nat {z : ℂ} (hz : ∀ m : ℕ, z ≠ -m) (n : ℕ) :
     digamma (z + n) = digamma z + ∑ k ∈ Finset.range n, (z + k)⁻¹ := by
@@ -10813,6 +10878,82 @@ lemma sum_digamma_kernel_norm_le {z : ℂ} {N : ℕ} {T : ℝ}
   exact hle.trans (hfactor.trans_le
     (mul_le_mul_of_nonneg_left hH (div_nonneg hz1 hTpos.le)))
 
+lemma sum_Ico_inv_telescope {N M : ℕ} (hN : 0 < N) (hNM : N ≤ M) :
+    ∑ n ∈ Finset.Ico N M, ((1 : ℝ) / (n : ℝ) - 1 / ((n : ℝ) + 1)) =
+      (1 : ℝ) / N - 1 / M := by
+  induction M, hNM using Nat.le_induction with
+  | base => simp
+  | succ M hNM ih =>
+    rw [Finset.sum_Ico_succ_top hNM, ih, Nat.cast_succ]
+    ring
+
+lemma norm_nat_add_ge_sub (n : ℕ) (z : ℂ) :
+    (n : ℝ) - ‖z‖ ≤ ‖(n : ℂ) + z‖ := by
+  have h := norm_sub_le ((n : ℂ) + z) z
+  have hn : ‖(n : ℂ)‖ = (n : ℝ) := Complex.norm_natCast n
+  have : (n : ℝ) ≤ ‖(n : ℂ) + z‖ + ‖z‖ := by
+    simpa [hn, add_sub_cancel_right] using h
+  linarith
+
+/-- r524 n>T half: for `n ≥ N` and `2‖z‖ ≤ N`, each Weierstrass
+term is `O(1/n²)`; the telescope `Σ 1/(n(n+1)) = 1/N - 1/M`. -/
+lemma sum_digamma_kernel_tail_le {z : ℂ} {N M : ℕ}
+    (hN : 0 < N) (hNM : N ≤ M)
+    (hne : ∀ n : ℕ, (n : ℂ) + z ≠ 0)
+    (hz : (2 : ℝ) * ‖z‖ ≤ N) :
+    ∑ n ∈ Finset.Ico N M,
+      ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+        (2 : ℝ) * ‖z - 1‖ / N := by
+  have hz1 : 0 ≤ ‖z - 1‖ := norm_nonneg _
+  have hNpos : (0 : ℝ) < N := Nat.cast_pos.mpr hN
+  have hzN : ‖z‖ ≤ (N : ℝ) / 2 :=
+    (le_div_iff₀ (by norm_num : (0 : ℝ) < 2)).mpr (by simpa [mul_comm] using hz)
+  have hterm : ∀ n ∈ Finset.Ico N M,
+      ‖((n + 1 : ℂ)⁻¹ - ((n : ℂ) + z)⁻¹)‖ ≤
+        (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / n - 1 / ((n : ℝ) + 1)) := by
+    intro n hn
+    have hnN : N ≤ n := (Finset.mem_Ico.mp hn).1
+    have hn1 : (1 : ℝ) ≤ (n : ℝ) := by
+      exact_mod_cast (Nat.succ_le_of_lt (lt_of_lt_of_le hN hnN))
+    have hge : (n : ℝ) / 2 ≤ ‖(n : ℂ) + z‖ := by
+      have hsub : (n : ℝ) - ‖z‖ ≤ ‖(n : ℂ) + z‖ := norm_nat_add_ge_sub n z
+      have : (n : ℝ) / 2 ≤ (n : ℝ) - ‖z‖ := by
+        have hNle : (N : ℝ) ≤ n := Nat.cast_le.mpr hnN
+        nlinarith [hzN, hNle]
+      exact this.trans hsub
+    have ht := digamma_kernel_term_norm_le (hne n)
+    have hden : 0 < (n + 1 : ℝ) := by positivity
+    have hnhalf : 0 < (n : ℝ) / 2 := by positivity
+    have hle := ht.trans (div_le_div_of_nonneg_left hz1
+      (mul_pos hden hnhalf)
+      (mul_le_mul_of_nonneg_left hge hden.le))
+    have hid : ‖z - 1‖ / ((n + 1 : ℝ) * ((n : ℝ) / 2)) =
+        (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / n - 1 / ((n : ℝ) + 1)) := by
+      have hn0 : (n : ℝ) ≠ 0 := ne_of_gt (lt_of_lt_of_le zero_lt_one hn1)
+      field_simp [hn0]
+      ring
+    exact hle.trans_eq hid
+  have hsum := Finset.sum_le_sum hterm
+  have htel := sum_Ico_inv_telescope hN hNM
+  have hfactor :
+      ∑ n ∈ Finset.Ico N M,
+          (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / n - 1 / ((n : ℝ) + 1)) =
+        (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / N - 1 / M) := by
+    rw [← Finset.mul_sum, htel]
+  have htail : (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / N - 1 / M) ≤
+      (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / N) := by
+    have hM : (0 : ℝ) ≤ (1 : ℝ) / M := div_nonneg zero_le_one (Nat.cast_nonneg _)
+    have : (1 : ℝ) / N - 1 / M ≤ (1 : ℝ) / N := sub_le_self _ hM
+    exact mul_le_mul_of_nonneg_left this (mul_nonneg (by norm_num) hz1)
+  have hdiv : (2 : ℝ) * ‖z - 1‖ * ((1 : ℝ) / N) = (2 : ℝ) * ‖z - 1‖ / N := by
+    field_simp
+  exact hsum.trans (hfactor.trans_le (htail.trans_eq hdiv))
+
+/-- Mathlib v4.29.1: `digamma = logDeriv Gamma`, recurrence
+`digamma_apply_add_one`, values at `0,1,1/2`.  No Weierstrass
+series, no Stirling, no Gauss integral (TODO on Digamma.lean).
+Euler `GammaSeq_tendsto_Gamma` exists but logDeriv-interchange
+is the remaining anchor.  Named, not a `sorry`. -/
 def DigammaHorizontalLogBound : Prop :=
   ∃ C : ℝ, 0 ≤ C ∧
     ∀ {z : ℂ}, |z.re| ≤ 3 → (2 : ℝ) ≤ |z.im| →
@@ -10887,11 +11028,11 @@ lemma norm_horizontal_logDeriv_hat_integral_le
   exact hle.trans_eq this
 
 /-- Named remainder: full horizontals `[-1/16, 2]` along a gap
-sequence.  r523 closed the wide Landau-disk window
-(`exists_gap_sequence_landau`) and the `ψ` kernel
-(`sum_digamma_kernel_norm_le`).  Open: general-A Q′/Q
-packing, sliver `|ζ′/ζ|` via FE (`cot` + series identity
-for `|ψ|` + Landau at `-T`), left edge, `T→∞`. -/
+sequence.  r524 closed general-A Landau
+(`horizontalEdgeLandauBound_of_gap`, B = A · landauHorizontalConst)
+wired to `exists_gap_sequence_landau`.  Open: `|ψ|` series /
+`GammaSeq` logDeriv, sliver FE (`cot` + Landau at `-T`),
+left edge, `T→∞`. -/
 def HorizontalEdgesTendstoZero : Prop :=
   ∀ F : FullWeilTest,
     ∃ T : ℕ → ℝ,

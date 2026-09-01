@@ -487,10 +487,14 @@ stays a named Prop (sliver FE/`ψ` and the
 `A=1` vs `ordinateGapConst` gap).
 r523: wide `exists_gap_sequence_landau`
 (Landau-disk window) and the `ψ` kernel
-`sum_digamma_kernel_norm_le`.  General-A
-Landau packing and the sliver FE stay open.
-`DigammaHorizontalLogBound` and
-`HorizontalEdgesTendstoZero` stay named.
+`sum_digamma_kernel_norm_le`.
+r524: A-parametric
+`horizontalEdgeLandauBound_of_gap` (B =
+A · `landauHorizontalConst`) and
+`horizontalEdgeLandauBound_landauGap`;
+n>T tail `sum_digamma_kernel_tail_le`.
+`DigammaHorizontalLogBound` stays named
+(Mathlib: `logDeriv Gamma`, no series).
 Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
@@ -657,6 +661,10 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms norm_landauQuotient_le_on_mid_closedBall
 #print axioms log_norm_landauQuotient_center_ge
 #print axioms horizontalEdgeLandauBound
+#print axioms horizontalEdgeLandauBound_of_gap
+#print axioms landau_cubic_pack_scale
+#print axioms horizontalEdgeLandauBound_landauGap
+#print axioms ordinateGapConstLandau_one_le
 #print axioms riemannZetaZerosOnClosedRect_eq_critical
 #print axioms contour_identity_fixed_T_of
 #print axioms contour_identity_fixed_T_neg_one_div_sixteen
@@ -669,6 +677,8 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms digamma_add_nat
 #print axioms sum_range_inv_succ_le_one_add_log
 #print axioms sum_digamma_kernel_norm_le
+#print axioms sum_digamma_kernel_tail_le
+#print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun
 #print axioms GridElement.elementAnchor_le_fullAnchor

@@ -1183,6 +1183,22 @@ general-A Landau, sliver FE (`cot` + `|ψ|`
 identity + Landau at `-T`), left edge, `T→∞`.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r524 census (outer bridges 31, Landau-A + ψ scope)
+
+Honest cut, sorry-free.  PROVED: A-parametric
+`horizontalEdgeLandauBound_of_gap` (A ≥ 1; B =
+A · `landauHorizontalConst`; the A=1 Prop is the
+instance) and the landau-gap wiring
+`horizontalEdgeLandauBound_landauGap`.  Also the
+n>T kernel tail `sum_digamma_kernel_tail_le`
+(telescope Σ 1/(n(n+1))).  Mathlib Digamma is
+`logDeriv Gamma` + recurrence + Euler `GammaSeq`;
+no series / Stirling / Gauss.  Named, not sorry:
+`DigammaHorizontalLogBound` (needs a `GammaSeq`
+logDeriv anchor).  Remaining: `|ψ|` on the sliver,
+FE/`cot`, horizontals→0, left edge, `T→∞`.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
