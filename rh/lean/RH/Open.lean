@@ -1223,6 +1223,18 @@ Remaining: cot-Schranke + `logDeriv` of the cos FE,
 horizontals→0, left edge, `T→∞`.
 Census stays 7 (external 2).  NO RH CLAIM.
 
+## r527 census (outer bridges 34, FE sliver)
+
+Sorry-free.  Tan bound `|tan z|² ≤ 1+1/sinh²(Im z)` on
+`Im ≠ 0`, hence `|tan| ≤ √(1+1/sinh² 2)` for `|Im|≥2`.
+`ψ` on the sliver via recurrence + the r526 log bound
+on `Re ∈ [1/2, 3/2]`.  Cosine FE: `ζ(1-s)=G(s)ζ(s)`
+and `(ζ′/ζ)(s) = −(ζ′/ζ)(1-s) − G′/G(s)`.
+`sliverEdgeBound_negIm`: lower edge `σ−iT` via Landau
+at the dual.  Upper edge `+iT` stays dual-Landau
+(`sliverEdgeBound_of_dual`).  Horizontals not closed.
+Census stays 7 (external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.

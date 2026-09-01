@@ -504,7 +504,10 @@ r526: `hasDerivAt_re_Gamma_ofReal` via
 Weierstrass on `(1,2)`; identity on
 `{1/4 < Re < 2}`; `|ψ|` log bound.  The Prop
 is now a theorem (`digammaHorizontalLogBound`).
-Census stays 7.
+r527: tan/cot on `|Im|≥2`; `ψ` sliver via
+recurrence; FE `logDeriv`; lower-edge
+`sliverEdgeBound_negIm`.  Horizontals stay
+named.  Census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -725,6 +728,36 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms tsum_digamma_kernel_norm_tail_le
 #print axioms norm_digamma_le_log_of_horizontal
 #print axioms digammaHorizontalLogBound
+#print axioms normSq_cos
+#print axioms normSq_sin
+#print axioms cos_ne_zero_of_im_ne_zero
+#print axioms norm_tan_sq_le_of_im_ne_zero
+#print axioms norm_tan_le_of_two_le_abs_im
+#print axioms ne_neg_nat_of_two_le_abs_im
+#print axioms ne_one_of_two_le_abs_im
+#print axioms digamma_eq_succ_sub_inv
+#print axioms norm_digamma_le_log_of_sliver
+#print axioms riemannZeta_one_sub_factor
+#print axioms two_mul_pi_ne_zero
+#print axioms logDeriv_neg_cpow_two_pi
+#print axioms hasDerivAt_pi_mul_div_two
+#print axioms logDeriv_cos_pi_div_two
+#print axioms differentiableAt_zetaFEFactor
+#print axioms logDeriv_zetaFEFactor
+#print axioms ne_neg_nat_of_im_ne_zero
+#print axioms ne_one_of_im_ne_zero
+#print axioms im_pi_mul_div_two
+#print axioms cos_pi_div_two_ne_zero_of_two_le_abs_im
+#print axioms two_le_abs_im_pi_div_two
+#print axioms zetaFEFactor_ne_zero_of_two_le_abs_im
+#print axioms eventuallyEq_riemannZeta_one_sub_factor
+#print axioms hasDerivAt_one_sub
+#print axioms logDeriv_riemannZeta_functional
+#print axioms norm_log_two_pi
+#print axioms sliverEdgeConst_nonneg
+#print axioms sliver_cubic_pack
+#print axioms sliverEdgeBound_of_dual
+#print axioms sliverEdgeBound_negIm
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

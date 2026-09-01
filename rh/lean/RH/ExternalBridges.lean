@@ -11487,7 +11487,7 @@ lemma digamma_eq_weierstrass_on_strip :
     frequently_eq_digamma_weierstrass_three_halves
 
 lemma mem_digammaStrip_of_horizontal {z : ℂ}
-    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (17 / 16 : ℝ)) :
+    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (3 / 2 : ℝ)) :
     z ∈ digammaStrip := by
   constructor <;> linarith
 
@@ -11530,7 +11530,7 @@ lemma tsum_digamma_kernel_norm_tail_le {z : ℂ} {N : ℕ}
 
 set_option maxHeartbeats 800000 in
 lemma norm_digamma_le_log_of_horizontal {z : ℂ}
-    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (17 / 16 : ℝ))
+    (hre1 : (1 / 2 : ℝ) ≤ z.re) (hre2 : z.re ≤ (3 / 2 : ℝ))
     (him : (2 : ℝ) ≤ |z.im|) :
     ‖digamma z‖ ≤
       (6 + |Real.eulerMascheroniConstant|) *
@@ -11555,8 +11555,8 @@ lemma norm_digamma_le_log_of_horizontal {z : ℂ}
       rw [abs_le]; constructor <;> linarith
     simpa [sub_re, sub_im, one_re, one_im] using
       hreim.trans (add_le_add hre1bound le_rfl)
-  have hznorm : ‖z‖ ≤ (17 / 16 : ℝ) + T := by
-    have hreabs : |z.re| ≤ 17 / 16 := by
+  have hznorm : ‖z‖ ≤ (3 / 2 : ℝ) + T := by
+    have hreabs : |z.re| ≤ 3 / 2 := by
       rw [abs_le]; constructor <;> linarith
     exact (norm_le_abs_re_add_abs_im z).trans (add_le_add hreabs le_rfl)
   have hzge : T ≤ ‖z‖ := by simpa [T] using abs_im_le_norm z
@@ -11590,9 +11590,9 @@ lemma norm_digamma_le_log_of_horizontal {z : ℂ}
   have hNlog : 1 + Real.log ((N : ℝ) + 1) ≤ 3 * L := by
     have hpow : (N : ℝ) + 1 ≤ (2 + T) ^ 3 := by
       have hN1 : (N : ℝ) + 1 < 2 * ‖z‖ + 2 := by linarith
-      have hbound : 2 * ‖z‖ + 2 ≤ 2 * ((17 / 16 : ℝ) + T) + 2 := by
+      have hbound : 2 * ‖z‖ + 2 ≤ 2 * ((3 / 2 : ℝ) + T) + 2 := by
         nlinarith [hznorm]
-      have hsimp : 2 * ((17 / 16 : ℝ) + T) + 2 ≤ 5 + 2 * T := by
+      have hsimp : 2 * ((3 / 2 : ℝ) + T) + 2 ≤ 5 + 2 * T := by
         norm_num
         linarith
       have hcube : 5 + 2 * T ≤ (2 + T) ^ 3 := by
@@ -11698,7 +11698,508 @@ theorem digammaHorizontalLogBound : DigammaHorizontalLogBound :=
   ⟨6 + |Real.eulerMascheroniConstant|,
     add_nonneg (by norm_num) (abs_nonneg _),
     fun {z} hre1 hre2 him =>
-      norm_digamma_le_log_of_horizontal hre1 hre2 him⟩
+      norm_digamma_le_log_of_horizontal hre1
+        (hre2.trans (by norm_num : (17 / 16 : ℝ) ≤ 3 / 2)) him⟩
+
+/-- r527: `|cos(x+iy)|² = cos²x + sinh²y`. -/
+lemma normSq_cos (z : ℂ) :
+    ‖cos z‖ ^ 2 = Real.cos z.re ^ 2 + Real.sinh z.im ^ 2 := by
+  have hz : cos z =
+      (Real.cos z.re * Real.cosh z.im : ℝ) +
+        (-(Real.sin z.re * Real.sinh z.im) : ℝ) * I := by
+    rw [cos_eq]
+    simp [← ofReal_cos, ← ofReal_sin, ← ofReal_cosh, ← ofReal_sinh,
+      sub_eq_add_neg, neg_mul]
+  rw [hz, norm_add_mul_I, Real.sq_sqrt (add_nonneg (sq_nonneg _) (sq_nonneg _))]
+  ring_nf
+  have hcosh2 : Real.cosh z.im ^ 2 = 1 + Real.sinh z.im ^ 2 := Real.cosh_sq' _
+  nlinarith [Real.sin_sq_add_cos_sq z.re]
+
+lemma normSq_sin (z : ℂ) :
+    ‖sin z‖ ^ 2 = Real.sin z.re ^ 2 + Real.sinh z.im ^ 2 := by
+  have hz : sin z =
+      (Real.sin z.re * Real.cosh z.im : ℝ) +
+        (Real.cos z.re * Real.sinh z.im : ℝ) * I := by
+    rw [sin_eq]
+    simp [← ofReal_sin, ← ofReal_cos, ← ofReal_cosh, ← ofReal_sinh]
+  rw [hz, norm_add_mul_I, Real.sq_sqrt (add_nonneg (sq_nonneg _) (sq_nonneg _))]
+  ring_nf
+  have hcosh2 : Real.cosh z.im ^ 2 = 1 + Real.sinh z.im ^ 2 := Real.cosh_sq' _
+  nlinarith [Real.sin_sq_add_cos_sq z.re]
+
+lemma cos_ne_zero_of_im_ne_zero {z : ℂ} (h : z.im ≠ 0) : cos z ≠ 0 := by
+  have hsinh : Real.sinh z.im ≠ 0 := Real.sinh_ne_zero.mpr h
+  intro hcos
+  have hsq0 : ‖cos z‖ ^ 2 = 0 := by simp [hcos]
+  have hsqpos : 0 < ‖cos z‖ ^ 2 := by
+    rw [normSq_cos]
+    nlinarith [sq_pos_of_ne_zero hsinh, sq_nonneg (Real.cos z.re)]
+  linarith
+
+/-- r527: `|tan z|² ≤ 1 + 1/sinh²(Im z)` for `Im z ≠ 0`. -/
+lemma norm_tan_sq_le_of_im_ne_zero {z : ℂ} (h : z.im ≠ 0) :
+    ‖tan z‖ ^ 2 ≤ 1 + 1 / Real.sinh z.im ^ 2 := by
+  have hsinh : Real.sinh z.im ≠ 0 := Real.sinh_ne_zero.mpr h
+  rw [tan_eq_sin_div_cos, norm_div, div_pow, normSq_sin, normSq_cos]
+  have hsinhpos : 0 < Real.sinh z.im ^ 2 := sq_pos_of_ne_zero hsinh
+  have hle : Real.sin z.re ^ 2 + Real.sinh z.im ^ 2 ≤
+      1 + Real.sinh z.im ^ 2 := by
+    nlinarith [Real.sin_sq_le_one z.re]
+  have hge : Real.sinh z.im ^ 2 ≤
+      Real.cos z.re ^ 2 + Real.sinh z.im ^ 2 := by
+    nlinarith [sq_nonneg (Real.cos z.re)]
+  have hfrac :
+      (Real.sin z.re ^ 2 + Real.sinh z.im ^ 2) /
+          (Real.cos z.re ^ 2 + Real.sinh z.im ^ 2) ≤
+        (1 + Real.sinh z.im ^ 2) / Real.sinh z.im ^ 2 :=
+    (div_le_div_of_nonneg_left
+        (add_nonneg (sq_nonneg _) (sq_nonneg _)) hsinhpos hge).trans
+      (div_le_div_of_nonneg_right hle hsinhpos.le)
+  have hsimp : (1 + Real.sinh z.im ^ 2) / Real.sinh z.im ^ 2 =
+      1 + 1 / Real.sinh z.im ^ 2 := by
+    field_simp
+    ring
+  exact hfrac.trans_eq hsimp
+
+/-- r527: on `|Im z| ≥ 2`, `|tan z| ≤ √(1 + 1/sinh² 2)`. -/
+lemma norm_tan_le_of_two_le_abs_im {z : ℂ} (h : (2 : ℝ) ≤ |z.im|) :
+    ‖tan z‖ ≤ Real.sqrt (1 + 1 / Real.sinh 2 ^ 2) := by
+  have him : z.im ≠ 0 := by
+    intro hz
+    have : |z.im| = 0 := by simp [hz]
+    linarith
+  have hsq := norm_tan_sq_le_of_im_ne_zero him
+  have hmono : Real.sinh 2 ≤ Real.sinh |z.im| := Real.sinh_le_sinh.mpr h
+  have hsinh2 : Real.sinh 2 ≤ |Real.sinh z.im| := by
+    rwa [Real.abs_sinh]
+  have h2pos : 0 < Real.sinh 2 := Real.sinh_pos_iff.mpr (by norm_num)
+  have hden : Real.sinh 2 ^ 2 ≤ Real.sinh z.im ^ 2 := by
+    have : Real.sinh 2 ^ 2 ≤ |Real.sinh z.im| ^ 2 := by
+      nlinarith [hsinh2, h2pos]
+    simpa [sq_abs] using this
+  have hle : 1 + 1 / Real.sinh z.im ^ 2 ≤ 1 + 1 / Real.sinh 2 ^ 2 := by
+    have hpos : 0 < Real.sinh 2 ^ 2 := sq_pos_of_pos h2pos
+    have hnum : (0 : ℝ) ≤ 1 := by norm_num
+    simpa [add_comm] using
+      add_le_add_left (div_le_div_of_nonneg_left hnum hpos hden) (1 : ℝ)
+  exact Real.le_sqrt_of_sq_le (hsq.trans hle)
+
+lemma ne_neg_nat_of_two_le_abs_im {s : ℂ} (h : (2 : ℝ) ≤ |s.im|)
+    (n : ℕ) : s ≠ -n := by
+  intro hs
+  simp [hs] at h
+  linarith
+
+lemma ne_one_of_two_le_abs_im {s : ℂ} (h : (2 : ℝ) ≤ |s.im|) : s ≠ 1 := by
+  intro hs
+  simp [hs] at h
+  linarith
+
+lemma digamma_eq_succ_sub_inv {s : ℂ} (h : (2 : ℝ) ≤ |s.im|) :
+    digamma s = digamma (s + 1) - s⁻¹ :=
+  eq_sub_of_add_eq (digamma_apply_add_one s (ne_neg_nat_of_two_le_abs_im h)).symm
+
+lemma norm_digamma_le_log_of_sliver {s : ℂ}
+    (hre1 : (-1 / 16 : ℝ) ≤ s.re) (hre2 : s.re ≤ (1 / 2 : ℝ))
+    (him : (2 : ℝ) ≤ |s.im|) :
+    ‖digamma s‖ ≤
+      (6 + |Real.eulerMascheroniConstant|) *
+        (1 + Real.log (2 + |s.im|)) + 1 / 2 := by
+  have hrec := digamma_eq_succ_sub_inv him
+  have hre1' : (1 / 2 : ℝ) ≤ (s + 1).re := by
+    simp [add_re]; linarith
+  have hre2' : (s + 1).re ≤ (3 / 2 : ℝ) := by
+    simp [add_re]; linarith
+  have him' : (2 : ℝ) ≤ |(s + 1).im| := by
+    simpa [add_im] using him
+  have hψ := norm_digamma_le_log_of_horizontal hre1' hre2' him'
+  have hψ' : ‖digamma (s + 1)‖ ≤
+      (6 + |Real.eulerMascheroniConstant|) *
+        (1 + Real.log (2 + |s.im|)) := by
+    simpa [add_im] using hψ
+  have hinv : ‖s⁻¹‖ ≤ (1 / 2 : ℝ) := by
+    have hge : (2 : ℝ) ≤ ‖s‖ := him.trans (abs_im_le_norm s)
+    rw [norm_inv]
+    simpa [one_div] using
+      inv_anti₀ (by norm_num : (0 : ℝ) < 2) hge
+  have htri : ‖digamma s‖ ≤ ‖digamma (s + 1)‖ + ‖s⁻¹‖ := by
+    rw [hrec]; exact norm_sub_le _ _
+  linarith [hψ', hinv, htri]
+
+noncomputable def zetaFEFactor (s : ℂ) : ℂ :=
+  2 * (2 * (Real.pi : ℂ)) ^ (-s) * Gamma s * cos (Real.pi * s / 2)
+
+lemma riemannZeta_one_sub_factor {s : ℂ}
+    (hs : ∀ n : ℕ, s ≠ -n) (hs1 : s ≠ 1) :
+    riemannZeta (1 - s) = zetaFEFactor s * riemannZeta s := by
+  simpa [zetaFEFactor, mul_assoc] using riemannZeta_one_sub hs hs1
+
+lemma two_mul_pi_ne_zero : (2 * (Real.pi : ℂ)) ≠ 0 :=
+  mul_ne_zero two_ne_zero (ofReal_ne_zero.mpr Real.pi_ne_zero)
+
+lemma logDeriv_neg_cpow_two_pi (s : ℂ) :
+    logDeriv (fun w : ℂ => (2 * (Real.pi : ℂ)) ^ (-w)) s =
+      - Complex.log (2 * (Real.pi : ℂ)) := by
+  have hc := two_mul_pi_ne_zero
+  have h := (hasDerivAt_neg s).const_cpow (Or.inl hc)
+  have hne : (2 * (Real.pi : ℂ)) ^ (-s) ≠ 0 :=
+    cpow_ne_zero_iff.mpr (Or.inl hc)
+  rw [logDeriv_apply, h.deriv]
+  field_simp [hne]
+
+lemma hasDerivAt_pi_mul_div_two (s : ℂ) :
+    HasDerivAt (fun w : ℂ => (Real.pi : ℂ) * w / 2)
+      ((Real.pi : ℂ) / 2) s := by
+  convert ((hasDerivAt_id s).const_mul (Real.pi : ℂ)).div_const 2 using 1
+  ring
+
+lemma logDeriv_cos_pi_div_two {s : ℂ}
+    (hcos : cos (Real.pi * s / 2) ≠ 0) :
+    logDeriv (fun w : ℂ => cos (Real.pi * w / 2)) s =
+      - ((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2) := by
+  have hd := hasDerivAt_pi_mul_div_two s
+  have hf : DifferentiableAt ℂ cos (Real.pi * s / 2) :=
+    (hasDerivAt_cos _).differentiableAt
+  have hld : logDeriv cos (Real.pi * s / 2) = - tan (Real.pi * s / 2) := by
+    rw [logDeriv_apply, Complex.deriv_cos, tan_eq_sin_div_cos]
+    field_simp [hcos]
+  have hcomp :=
+    logDeriv_comp (f := cos)
+      (g := fun w : ℂ => (Real.pi : ℂ) * w / 2) hf hd.differentiableAt
+  have hfun : (fun w : ℂ => cos (Real.pi * w / 2)) =
+      cos ∘ fun w : ℂ => (Real.pi : ℂ) * w / 2 := rfl
+  rw [hfun, hcomp, hld, hd.deriv]
+  ring
+
+lemma differentiableAt_zetaFEFactor {s : ℂ}
+    (hG : ∀ n : ℕ, s ≠ -n) :
+    DifferentiableAt ℂ zetaFEFactor s := by
+  have hc := two_mul_pi_ne_zero
+  have hcpow :
+      DifferentiableAt ℂ (fun w : ℂ => (2 * (Real.pi : ℂ)) ^ (-w)) s :=
+    ((hasDerivAt_neg s).const_cpow (Or.inl hc)).differentiableAt
+  have hΓ : DifferentiableAt ℂ Gamma s := differentiableAt_Gamma s hG
+  have hcos : DifferentiableAt ℂ (fun w : ℂ => cos (Real.pi * w / 2)) s :=
+    ((hasDerivAt_cos _).comp s (hasDerivAt_pi_mul_div_two s)).differentiableAt
+  have hfun : zetaFEFactor = fun w =>
+      (2 : ℂ) * ((2 * (Real.pi : ℂ)) ^ (-w) *
+        (Gamma w * cos (Real.pi * w / 2))) := by
+    funext w; unfold zetaFEFactor; ring
+  rw [hfun]
+  exact (hcpow.mul (hΓ.mul hcos)).const_mul _
+
+lemma logDeriv_zetaFEFactor {s : ℂ}
+    (hG : ∀ n : ℕ, s ≠ -n)
+    (hcos : cos (Real.pi * s / 2) ≠ 0) :
+    logDeriv zetaFEFactor s =
+      - Complex.log (2 * (Real.pi : ℂ)) + digamma s
+        - ((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2) := by
+  have hc := two_mul_pi_ne_zero
+  have hcpow0 : (2 * (Real.pi : ℂ)) ^ (-s) ≠ 0 :=
+    cpow_ne_zero_iff.mpr (Or.inl hc)
+  have hΓ0 : Gamma s ≠ 0 := Complex.Gamma_ne_zero hG
+  have hdiffC :
+      DifferentiableAt ℂ (fun w : ℂ => (2 * (Real.pi : ℂ)) ^ (-w)) s :=
+    ((hasDerivAt_neg s).const_cpow (Or.inl hc)).differentiableAt
+  have hdiffΓ : DifferentiableAt ℂ Gamma s := differentiableAt_Gamma s hG
+  have hdiffCos : DifferentiableAt ℂ (fun w : ℂ => cos (Real.pi * w / 2)) s :=
+    ((hasDerivAt_cos _).comp s (hasDerivAt_pi_mul_div_two s)).differentiableAt
+  have hfun : zetaFEFactor =
+      fun w => (2 : ℂ) * ((2 * (Real.pi : ℂ)) ^ (-w) *
+        (Gamma w * cos (Real.pi * w / 2))) := by
+    funext w; unfold zetaFEFactor; ring
+  have hprod0 : Gamma s * cos (Real.pi * s / 2) ≠ 0 :=
+    mul_ne_zero hΓ0 hcos
+  rw [hfun]
+  rw [logDeriv_const_mul (f := fun w =>
+      (2 * (Real.pi : ℂ)) ^ (-w) *
+        (Gamma w * cos (Real.pi * w / 2))) s (2 : ℂ) two_ne_zero]
+  rw [logDeriv_mul (f := fun w => (2 * (Real.pi : ℂ)) ^ (-w))
+      (g := fun w => Gamma w * cos (Real.pi * w / 2))
+      s hcpow0 hprod0 hdiffC (hdiffΓ.mul hdiffCos)]
+  rw [logDeriv_mul (f := Gamma)
+      (g := fun w => cos (Real.pi * w / 2))
+      s hΓ0 hcos hdiffΓ hdiffCos]
+  rw [logDeriv_neg_cpow_two_pi, logDeriv_cos_pi_div_two hcos, digamma_def]
+  ring
+
+lemma ne_neg_nat_of_im_ne_zero {s : ℂ} (h : s.im ≠ 0) (n : ℕ) : s ≠ -n := by
+  intro hs
+  simp [hs] at h
+
+lemma ne_one_of_im_ne_zero {s : ℂ} (h : s.im ≠ 0) : s ≠ 1 := by
+  intro hs
+  simp [hs] at h
+
+lemma im_pi_mul_div_two (s : ℂ) :
+    ((Real.pi : ℂ) * s / 2).im = Real.pi * s.im / 2 := by
+  simp [div_eq_mul_inv, mul_im]
+
+lemma cos_pi_div_two_ne_zero_of_two_le_abs_im {s : ℂ}
+    (h : (2 : ℝ) ≤ |s.im|) :
+    cos (Real.pi * s / 2) ≠ 0 := by
+  have him : ((Real.pi : ℂ) * s / 2).im ≠ 0 := by
+    rw [im_pi_mul_div_two]
+    have hs : s.im ≠ 0 := by
+      intro hz; simp [hz] at h; linarith
+    exact div_ne_zero (mul_ne_zero Real.pi_ne_zero hs) two_ne_zero
+  exact cos_ne_zero_of_im_ne_zero him
+
+lemma two_le_abs_im_pi_div_two {s : ℂ} (h : (2 : ℝ) ≤ |s.im|) :
+    (2 : ℝ) ≤ |((Real.pi : ℂ) * s / 2).im| := by
+  rw [im_pi_mul_div_two, abs_div, abs_mul, abs_of_pos Real.pi_pos,
+    abs_of_pos (by norm_num : (0 : ℝ) < 2)]
+  have hπ : (3 : ℝ) < Real.pi := Real.pi_gt_three
+  nlinarith
+
+lemma zetaFEFactor_ne_zero_of_two_le_abs_im {s : ℂ}
+    (h : (2 : ℝ) ≤ |s.im|) :
+    zetaFEFactor s ≠ 0 := by
+  have hG : ∀ n : ℕ, s ≠ -n := ne_neg_nat_of_two_le_abs_im h
+  unfold zetaFEFactor
+  refine mul_ne_zero (mul_ne_zero (mul_ne_zero two_ne_zero ?_) ?_)
+    (cos_pi_div_two_ne_zero_of_two_le_abs_im h)
+  · exact cpow_ne_zero_iff.mpr (Or.inl two_mul_pi_ne_zero)
+  · exact Complex.Gamma_ne_zero hG
+
+lemma eventuallyEq_riemannZeta_one_sub_factor {s : ℂ}
+    (h : (2 : ℝ) ≤ |s.im|) :
+    (fun w : ℂ => riemannZeta (1 - w)) =ᶠ[𝓝 s]
+      fun w => zetaFEFactor w * riemannZeta w := by
+  have hball : Metric.ball s 1 ⊆ {w : ℂ | (1 : ℝ) ≤ |w.im|} := by
+    intro w hw
+    have hd : ‖w - s‖ < 1 := mem_ball_iff_norm.mp hw
+    have himle : |w.im - s.im| ≤ ‖w - s‖ := by
+      simpa [sub_im] using abs_im_le_norm (w - s)
+    have htri : |s.im| ≤ |w.im| + |w.im - s.im| := by
+      calc
+        |s.im| = |w.im + (s.im - w.im)| := by ring_nf
+        _ ≤ |w.im| + |s.im - w.im| := abs_add_le _ _
+        _ = |w.im| + |w.im - s.im| := by rw [abs_sub_comm]
+    have hlower : |s.im| - ‖w - s‖ ≤ |w.im| := by
+      linarith [htri, himle]
+    have hone : (1 : ℝ) ≤ |s.im| - ‖w - s‖ := by
+      linarith [h, le_of_lt hd]
+    exact hone.trans hlower
+  refine Filter.eventuallyEq_of_mem
+      (Metric.ball_mem_nhds s (by norm_num : (0 : ℝ) < 1)) ?_
+  intro w hw
+  have him : w.im ≠ 0 := by
+    have : (1 : ℝ) ≤ |w.im| := hball hw
+    intro hz; simp [hz] at this; linarith
+  exact riemannZeta_one_sub_factor (ne_neg_nat_of_im_ne_zero him)
+    (ne_one_of_im_ne_zero him)
+
+lemma hasDerivAt_one_sub (s : ℂ) :
+    HasDerivAt (fun w : ℂ => 1 - w) (-1) s := by
+  convert (hasDerivAt_const s (1 : ℂ)).sub (hasDerivAt_id s) using 1
+  ring
+
+lemma logDeriv_riemannZeta_functional {s : ℂ}
+    (h : (2 : ℝ) ≤ |s.im|) (hz : riemannZeta s ≠ 0) :
+    logDeriv riemannZeta s =
+      - logDeriv riemannZeta (1 - s) - logDeriv zetaFEFactor s := by
+  have hs1 : s ≠ 1 := ne_one_of_two_le_abs_im h
+  have h1s : 1 - s ≠ 1 := by
+    intro heq
+    have him0 : s.im = 0 := by
+      have : (1 - s).im = (1 : ℂ).im := congrArg Complex.im heq
+      simpa [sub_im] using this
+    simp [him0] at h
+    linarith
+  have hG : ∀ n : ℕ, s ≠ -n := ne_neg_nat_of_two_le_abs_im h
+  have hGne := zetaFEFactor_ne_zero_of_two_le_abs_im h
+  have hfe := eventuallyEq_riemannZeta_one_sub_factor h
+  have hld :
+      logDeriv (fun w : ℂ => riemannZeta (1 - w)) s =
+        logDeriv (fun w => zetaFEFactor w * riemannZeta w) s := by
+    rw [logDeriv_apply, logDeriv_apply, hfe.deriv_eq, hfe.eq_of_nhds]
+  have hd := hasDerivAt_one_sub s
+  have hf : DifferentiableAt ℂ riemannZeta (1 - s) :=
+    differentiableAt_riemannZeta h1s
+  have hL : logDeriv (fun w : ℂ => riemannZeta (1 - w)) s =
+      - logDeriv riemannZeta (1 - s) := by
+    have hcomp :=
+      logDeriv_comp (f := riemannZeta) (g := fun w : ℂ => 1 - w)
+        hf hd.differentiableAt
+    have hfun : (fun w : ℂ => riemannZeta (1 - w)) =
+        riemannZeta ∘ fun w : ℂ => 1 - w := rfl
+    rw [hfun, hcomp, hd.deriv]
+    ring
+  have hR : logDeriv (fun w => zetaFEFactor w * riemannZeta w) s =
+      logDeriv zetaFEFactor s + logDeriv riemannZeta s :=
+    logDeriv_mul s hGne hz (differentiableAt_zetaFEFactor hG)
+      (differentiableAt_riemannZeta hs1)
+  have hsum : logDeriv zetaFEFactor s + logDeriv riemannZeta s =
+      - logDeriv riemannZeta (1 - s) := by
+    rw [← hR, ← hld, hL]
+  exact eq_sub_of_add_eq (add_comm (logDeriv zetaFEFactor s) _ ▸ hsum)
+
+lemma norm_log_two_pi :
+    ‖Complex.log (2 * (Real.pi : ℂ))‖ = Real.log (2 * Real.pi) := by
+  have hpos : 0 < (2 : ℝ) * Real.pi :=
+    mul_pos (by norm_num) Real.pi_pos
+  have h1 : (1 : ℝ) ≤ 2 * Real.pi := by
+    have : (2 : ℝ) * 3 < 2 * Real.pi :=
+      mul_lt_mul_of_pos_left Real.pi_gt_three (by norm_num)
+    linarith
+  have hcoe : (2 * (Real.pi : ℂ)) = (↑((2 : ℝ) * Real.pi) : ℂ) := by
+    rw [ofReal_mul, ofReal_ofNat]
+  calc
+    ‖Complex.log (2 * (Real.pi : ℂ))‖
+        = ‖Complex.log (↑((2 : ℝ) * Real.pi))‖ := by rw [hcoe]
+    _ = ‖(Real.log (2 * Real.pi) : ℂ)‖ := by rw [← ofReal_log hpos.le]
+    _ = |Real.log (2 * Real.pi)| := Complex.norm_real _
+    _ = Real.log (2 * Real.pi) := abs_of_nonneg (Real.log_nonneg h1)
+
+noncomputable def sliverEdgeConst : ℝ :=
+  landauHorizontalConst +
+    2 * (6 + |Real.eulerMascheroniConstant|) +
+    Real.log (2 * Real.pi) + (1 / 2 : ℝ) +
+    (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)
+
+lemma sliverEdgeConst_nonneg : 0 ≤ sliverEdgeConst := by
+  have hL := landauHorizontalConst_pos.le
+  have hlog : 0 ≤ Real.log (2 * Real.pi) :=
+    Real.log_nonneg (by nlinarith [Real.pi_gt_three])
+  unfold sliverEdgeConst
+  positivity
+
+lemma sliver_cubic_pack {A L LHC Cψ C0 d g : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hL : (1 : ℝ) ≤ L)
+    (hLHC : 0 ≤ LHC) (hCψ : 0 ≤ Cψ) (hC0 : 0 ≤ C0)
+    (hd : d ≤ A * LHC * L ^ 3)
+    (hg : g ≤ Cψ * (2 * L) + C0) :
+    d + g ≤ A * (LHC + 2 * Cψ + C0) * L ^ 3 := by
+  have hL3 : L ≤ L ^ 3 := le_self_pow₀ hL (by norm_num : (3 : ℕ) ≠ 0)
+  have h1L : (1 : ℝ) ≤ L ^ 3 := le_trans hL hL3
+  have hg' : g ≤ (2 * Cψ + C0) * L ^ 3 := by
+    have hψ : Cψ * (2 * L) ≤ 2 * Cψ * L ^ 3 := by
+      nlinarith [hCψ, hL3]
+    have h0 : C0 ≤ C0 * L ^ 3 := by nlinarith [hC0, h1L]
+    nlinarith [hg, hψ, h0]
+  have hrest : (2 * Cψ + C0) * L ^ 3 ≤ A * (2 * Cψ + C0) * L ^ 3 :=
+    mul_le_mul_of_nonneg_right (le_mul_of_one_le_left (by positivity) hA)
+      (pow_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 1) hL) 3)
+  nlinarith [hd, hg', hrest, hA, hLHC]
+
+lemma sliverEdgeBound_of_dual {s : ℂ} {T A : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hre1 : (-1 / 16 : ℝ) ≤ s.re) (hre2 : s.re ≤ (1 / 2 : ℝ))
+    (himT : |s.im| = T) (hz : riemannZeta s ≠ 0)
+    (hdual : ‖logDeriv riemannZeta (1 - s)‖ ≤
+      A * landauHorizontalConst * (1 + Real.log T) ^ 3) :
+    ‖logDeriv riemannZeta s‖ ≤
+      A * sliverEdgeConst * (1 + Real.log T) ^ 3 := by
+  have him : (2 : ℝ) ≤ |s.im| := by rw [himT]; exact hT
+  have hG : ∀ n : ℕ, s ≠ -n := ne_neg_nat_of_two_le_abs_im him
+  have hcos := cos_pi_div_two_ne_zero_of_two_le_abs_im him
+  have hid := logDeriv_riemannZeta_functional him hz
+  have hFE := logDeriv_zetaFEFactor hG hcos
+  have hψ := norm_digamma_le_log_of_sliver hre1 hre2 him
+  have htan :=
+    norm_tan_le_of_two_le_abs_im (z := Real.pi * s / 2)
+      (two_le_abs_im_pi_div_two him)
+  set L : ℝ := 1 + Real.log T
+  have hL : (1 : ℝ) ≤ L := by
+    have : 0 ≤ Real.log T :=
+      Real.log_nonneg (le_trans (by norm_num : (1 : ℝ) ≤ 2) hT)
+    exact le_add_of_nonneg_right this
+  have hlog2 : 1 + Real.log (2 + |s.im|) ≤ 2 * L := by
+    have hTabs : |T| = T :=
+      abs_of_nonneg (le_trans (by norm_num : (0 : ℝ) ≤ 2) hT)
+    rw [himT, ← hTabs]
+    simpa [L] using one_add_log_two_add_abs_le hT
+  have hπtan : ‖((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ ≤
+      (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2) := by
+    have hπ : ‖(Real.pi : ℂ)‖ = Real.pi := by
+      simp [Complex.norm_real, abs_of_pos Real.pi_pos]
+    have h2 : ‖(2 : ℂ)‖ = 2 := by norm_num
+    rw [norm_mul, norm_div, hπ, h2]
+    exact mul_le_mul_of_nonneg_left htan (div_nonneg Real.pi_pos.le (by norm_num))
+  have hGnorm : ‖logDeriv zetaFEFactor s‖ ≤
+      (6 + |Real.eulerMascheroniConstant|) * (1 + Real.log (2 + |s.im|)) +
+        (Real.log (2 * Real.pi) + 1 / 2 +
+          (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)) := by
+    rw [hFE]
+    have hsplit :
+        ‖-Complex.log (2 * (Real.pi : ℂ)) + digamma s
+            - ((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ ≤
+          ‖Complex.log (2 * (Real.pi : ℂ))‖ + ‖digamma s‖ +
+            ‖((Real.pi : ℂ) / 2) * tan (Real.pi * s / 2)‖ := by
+      refine (norm_sub_le _ _).trans ?_
+      gcongr
+      simpa using norm_add_le (-Complex.log (2 * (Real.pi : ℂ))) (digamma s)
+    refine hsplit.trans ?_
+    rw [norm_log_two_pi]
+    nlinarith [hψ, hπtan]
+  have htri : ‖logDeriv riemannZeta s‖ ≤
+      ‖logDeriv riemannZeta (1 - s)‖ + ‖logDeriv zetaFEFactor s‖ := by
+    rw [hid]
+    simpa using
+      (norm_sub_le (-logDeriv riemannZeta (1 - s)) (logDeriv zetaFEFactor s))
+  set Cψ : ℝ := 6 + |Real.eulerMascheroniConstant|
+  set C0 : ℝ :=
+    Real.log (2 * Real.pi) + 1 / 2 +
+      (Real.pi / 2) * Real.sqrt (1 + 1 / Real.sinh 2 ^ 2)
+  have hg : ‖logDeriv zetaFEFactor s‖ ≤ Cψ * (2 * L) + C0 := by
+    refine hGnorm.trans ?_
+    have : Cψ * (1 + Real.log (2 + |s.im|)) ≤ Cψ * (2 * L) :=
+      mul_le_mul_of_nonneg_left hlog2 (by positivity)
+    nlinarith [this]
+  have hpack :=
+    sliver_cubic_pack (A := A) (L := L) (LHC := landauHorizontalConst)
+      (Cψ := Cψ) (C0 := C0)
+      (d := ‖logDeriv riemannZeta (1 - s)‖)
+      (g := ‖logDeriv zetaFEFactor s‖)
+      hA hL landauHorizontalConst_pos.le
+      (by unfold Cψ; positivity)
+      (by
+        unfold C0
+        have : 0 ≤ Real.log (2 * Real.pi) :=
+          Real.log_nonneg (by nlinarith [Real.pi_gt_three])
+        positivity)
+      hdual hg
+  have hC : landauHorizontalConst + 2 * Cψ + C0 = sliverEdgeConst := by
+    unfold sliverEdgeConst Cψ C0; ring
+  simpa [L, hC] using htri.trans hpack
+
+lemma sliverEdgeBound_negIm {T A σ : ℝ}
+    (hA : (1 : ℝ) ≤ A) (hT : (2 : ℝ) ≤ T)
+    (hσ1 : (-1 / 16 : ℝ) ≤ σ) (hσ2 : σ ≤ (1 / 2 : ℝ))
+    (hgap : ∀ ρ : ℂ, riemannZeta ρ = 0 → ρ ≠ 1 →
+      1 / (A * (1 + Real.log T)) ≤ |ρ.im - T|) :
+    ‖logDeriv riemannZeta ((σ : ℂ) - T * I)‖ ≤
+      A * sliverEdgeConst * (1 + Real.log T) ^ 3 := by
+  set s : ℂ := (σ : ℂ) - T * I
+  have hre1 : (-1 / 16 : ℝ) ≤ s.re := by simpa [s] using hσ1
+  have hre2 : s.re ≤ (1 / 2 : ℝ) := by simpa [s] using hσ2
+  have himT : |s.im| = T := by
+    have him : s.im = -T := by simp [s]
+    rw [him, abs_neg, abs_of_nonneg
+      (le_trans (by norm_num : (0 : ℝ) ≤ 2) hT)]
+  have hdualσ1 : (1 / 2 : ℝ) ≤ 1 - σ := by linarith
+  have hdualσ2 : 1 - σ ≤ 2 := by linarith
+  have hdual :=
+    horizontalEdgeLandauBound_of_gap (T := T) (A := A) hA hT hgap
+      (σ := 1 - σ) hdualσ1 hdualσ2
+  have h1s : (1 : ℂ) - s = (1 - σ : ℂ) + T * I := by
+    simp [s]; ring
+  have hdual' : ‖logDeriv riemannZeta (1 - s)‖ ≤
+      A * landauHorizontalConst * (1 + Real.log T) ^ 3 := by
+    simpa [h1s] using hdual
+  have him : (2 : ℝ) ≤ |s.im| := by rw [himT]; exact hT
+  have hz1 : riemannZeta (1 - s) ≠ 0 := by
+    simpa [h1s, ofReal_sub, ofReal_one] using
+      riemannZeta_ne_zero_of_landau_gap (A := A) (σ := 1 - σ)
+        (lt_of_lt_of_le (by norm_num : (0 : ℝ) < 1) hA) hT hgap
+  have hz : riemannZeta s ≠ 0 := by
+    intro hz0
+    have hFE := riemannZeta_one_sub_factor (ne_neg_nat_of_two_le_abs_im him)
+      (ne_one_of_two_le_abs_im him)
+    rw [hFE, hz0, mul_zero] at hz1
+    exact hz1 rfl
+  exact sliverEdgeBound_of_dual hA hT hre1 hre2 himT hz hdual'
 
 lemma norm_intervalIntegral_le_length_mul
     {f : ℝ → ℂ} {a b C : ℝ} (hab : a ≤ b)
