@@ -14214,6 +14214,378 @@ lemma FullWeilTest.hat_fourier_inversion (F : FullWeilTest) (σ u : ℝ) :
 
 end HatFourierInversion
 
+section RightEdgePrime
+
+open MeasureTheory Filter
+open scoped LSeries.notation
+
+/-- Bare von-Mangoldt pairing: `∑ Λ(n) g(log n)`.  Finite because
+`g` vanishes for `log n > R`.  This is the Re=2 contour prime
+content, not the corpus comb channel. -/
+noncomputable def FullWeilTest.primeEval (F : FullWeilTest) : ℝ :=
+  ∑' n : ℕ, ArithmeticFunction.vonMangoldt n * F.toFun (Real.log n)
+
+lemma FullWeilTest.toFun_log_eq_zero_of_lt_anchor
+    (F : FullWeilTest) {n : ℕ} (hn : F.fullAnchor < n) :
+    F.toFun (Real.log n) = 0 := by
+  have hceil : Nat.ceil (Real.exp F.supportRadius) ≤ F.fullAnchor :=
+    le_max_right _ _
+  have hnR : (Nat.ceil (Real.exp F.supportRadius) : ℝ) < (n : ℝ) :=
+    mod_cast (lt_of_le_of_lt hceil hn)
+  have hexp : Real.exp F.supportRadius < (n : ℝ) :=
+    lt_of_le_of_lt (Nat.le_ceil _) hnR
+  have hlog : F.supportRadius < Real.log n := by
+    have := Real.log_lt_log (Real.exp_pos F.supportRadius) hexp
+    simpa [Real.log_exp] using this
+  have habs : |Real.log n| = Real.log n :=
+    abs_of_nonneg (le_trans F.supportRadius_nonneg hlog.le)
+  exact F.support_toFun _ (by rwa [habs])
+
+lemma FullWeilTest.primeEval_eq_sum (F : FullWeilTest) :
+    F.primeEval =
+      ∑ n ∈ Finset.range (F.fullAnchor + 1),
+        ArithmeticFunction.vonMangoldt n * F.toFun (Real.log n) := by
+  unfold FullWeilTest.primeEval
+  exact tsum_eq_sum fun n hn => by
+    have hlt : F.fullAnchor < n := by
+      have : ¬ n < F.fullAnchor + 1 := fun h => hn (Finset.mem_range.mpr h)
+      omega
+    rw [F.toFun_log_eq_zero_of_lt_anchor hlt, mul_zero]
+
+/-- Corpus comb channel is the r310 gauge `2Λ/√n`, not bare `Λ`. -/
+lemma fullWeilCombSide_eq_two_div_sqrt_sum (F : FullWeilTest) :
+    fullWeilCombSide F =
+      ∑ n ∈ windowAtoms F.fullAnchor,
+        (2 / Real.sqrt n) * ArithmeticFunction.vonMangoldt n *
+          F.toFun (Real.log n) := by
+  unfold fullWeilCombSide
+  refine Finset.sum_congr rfl fun n _ => ?_
+  rw [combMass_eq_gauge, mul_assoc]
+
+lemma logDeriv_riemannZeta_right_edge (τ : ℝ) :
+    logDeriv riemannZeta ((2 : ℂ) + τ * Complex.I) =
+      - L ↗ArithmeticFunction.vonMangoldt ((2 : ℂ) + τ * Complex.I) :=
+  logDeriv_riemannZeta_eq_neg_LSeries_vonMangoldt (by simp)
+
+lemma norm_LSeries_term_vonMangoldt_right_edge (n : ℕ) (τ : ℝ) :
+    ‖LSeries.term ↗ArithmeticFunction.vonMangoldt
+        ((2 : ℂ) + τ * Complex.I) n‖ =
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ := by
+  rcases eq_or_ne n 0 with rfl | hn
+  · simp
+  · have hpos : 0 < n := Nat.pos_of_ne_zero hn
+    rw [LSeries.term_of_ne_zero hn, LSeries.term_of_ne_zero hn,
+      norm_div, norm_div, Complex.norm_natCast_cpow_of_pos hpos,
+      Complex.norm_natCast_cpow_of_pos hpos]
+    simp
+
+lemma continuous_hat_right_edge (F : FullWeilTest) :
+    Continuous fun τ : ℝ => F.hat ((2 : ℂ) + τ * Complex.I) :=
+  continuous_iff_continuousAt.mpr fun τ =>
+    ContinuousAt.comp (f := fun τ : ℝ => (2 : ℂ) + τ * Complex.I)
+      (g := F.hat) (F.analyticAt_hat _).continuousAt
+      (continuous_vertical_path 2).continuousAt
+
+lemma continuous_LSeries_term_vonMangoldt_right_edge (n : ℕ) :
+    Continuous fun τ : ℝ =>
+      LSeries.term ↗ArithmeticFunction.vonMangoldt
+        ((2 : ℂ) + τ * Complex.I) n := by
+  rcases eq_or_ne n 0 with rfl | hn
+  · simpa using continuous_const
+  · have hpos : (n : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hn
+    have hpow : Continuous fun τ : ℝ =>
+        (n : ℂ) ^ ((2 : ℂ) + τ * Complex.I) :=
+      (continuous_vertical_path 2).const_cpow (Or.inl hpos)
+    have hdiv : Continuous fun τ : ℝ =>
+        (ArithmeticFunction.vonMangoldt n : ℂ) /
+          (n : ℂ) ^ ((2 : ℂ) + τ * Complex.I) :=
+      Continuous.div continuous_const hpow fun τ => by
+        simp [Complex.cpow_eq_zero_iff, hpos]
+    convert hdiv using 1
+    funext τ
+    rw [LSeries.term_of_ne_zero hn]
+
+lemma integrable_right_edge_term_mul_hat (F : FullWeilTest) (n : ℕ) :
+    Integrable fun τ : ℝ =>
+      LSeries.term ↗ArithmeticFunction.vonMangoldt
+          ((2 : ℂ) + τ * Complex.I) n *
+        F.hat ((2 : ℂ) + τ * Complex.I) := by
+  obtain ⟨C, hC0, hhat⟩ :=
+    F.norm_hat_le_inv_sq_of_abs_re_le 2 (by norm_num)
+  have hcont :
+      Continuous fun τ : ℝ =>
+        LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I) :=
+    (continuous_LSeries_term_vonMangoldt_right_edge n).mul
+      (continuous_hat_right_edge F)
+  have hbd : ∀ τ : ℝ,
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I)‖ ≤
+        ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+          C / (1 + τ ^ 2) := by
+    intro τ
+    have hre : |((2 : ℂ) + τ * Complex.I).re| ≤ 2 := by simp
+    have him : ((2 : ℂ) + τ * Complex.I).im = τ := by simp
+    have hh := hhat _ hre
+    rw [Complex.norm_mul, norm_LSeries_term_vonMangoldt_right_edge]
+    have := mul_le_mul_of_nonneg_left (by simpa [him] using hh)
+      (norm_nonneg (LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n))
+    simpa [mul_div_assoc] using this
+  have hmaj : Integrable fun τ : ℝ =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+        C / (1 + τ ^ 2) := by
+    simpa [div_eq_mul_inv, mul_assoc] using
+      (integrable_inv_one_add_sq.const_mul
+        (‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ * C))
+  exact hmaj.mono' hcont.aestronglyMeasurable (Eventually.of_forall hbd)
+
+lemma summable_integral_norm_right_edge_term (F : FullWeilTest) :
+    Summable fun n : ℕ =>
+      ∫ τ : ℝ,
+        ‖LSeries.term ↗ArithmeticFunction.vonMangoldt
+              ((2 : ℂ) + τ * Complex.I) n *
+            F.hat ((2 : ℂ) + τ * Complex.I)‖ := by
+  obtain ⟨C, hC0, hhat⟩ :=
+    F.norm_hat_le_inv_sq_of_abs_re_le 2 (by norm_num)
+  have h2 : 1 < (2 : ℂ).re := by simp
+  have hΛ : Summable fun n : ℕ =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ := by
+    rw [summable_norm_iff]
+    exact ArithmeticFunction.LSeriesSummable_vonMangoldt h2
+  have hint : Integrable fun τ : ℝ => C / (1 + τ ^ 2) := by
+    simpa [div_eq_mul_inv] using integrable_inv_one_add_sq.const_mul C
+  have hbd : ∀ n : ℕ,
+      (∫ τ : ℝ,
+          ‖LSeries.term ↗ArithmeticFunction.vonMangoldt
+                ((2 : ℂ) + τ * Complex.I) n *
+              F.hat ((2 : ℂ) + τ * Complex.I)‖) ≤
+        ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+          ∫ τ : ℝ, C / (1 + τ ^ 2) := by
+    intro n
+    have hle : ∀ τ : ℝ,
+        ‖LSeries.term ↗ArithmeticFunction.vonMangoldt
+              ((2 : ℂ) + τ * Complex.I) n *
+            F.hat ((2 : ℂ) + τ * Complex.I)‖ ≤
+          ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+            (C / (1 + τ ^ 2)) := by
+      intro τ
+      have hre : |((2 : ℂ) + τ * Complex.I).re| ≤ 2 := by simp
+      have him : ((2 : ℂ) + τ * Complex.I).im = τ := by simp
+      have hh := hhat _ hre
+      rw [Complex.norm_mul, norm_LSeries_term_vonMangoldt_right_edge]
+      have := mul_le_mul_of_nonneg_left (by simpa [him] using hh)
+        (norm_nonneg (LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n))
+      simpa [mul_div_assoc] using this
+    have hmeas : Integrable fun τ : ℝ =>
+        ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+          (C / (1 + τ ^ 2)) :=
+      hint.const_mul _
+    refine (integral_mono_of_nonneg
+      (Eventually.of_forall fun _ => norm_nonneg _)
+      hmeas (Eventually.of_forall hle)).trans_eq ?_
+    rw [integral_const_mul]
+  have hsum : Summable fun n : ℕ =>
+      ‖LSeries.term ↗ArithmeticFunction.vonMangoldt (2 : ℂ) n‖ *
+        ∫ τ : ℝ, C / (1 + τ ^ 2) :=
+    hΛ.mul_right _
+  exact Summable.of_nonneg_of_le
+    (fun _ => integral_nonneg fun _ => norm_nonneg _) hbd hsum
+
+lemma logDeriv_hat_eq_tsum_neg_term_hat (F : FullWeilTest) (τ : ℝ) :
+    logDeriv riemannZeta ((2 : ℂ) + τ * Complex.I) *
+        F.hat ((2 : ℂ) + τ * Complex.I) =
+      ∑' n : ℕ,
+        -(LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I)) := by
+  have hs : 1 < ((2 : ℂ) + τ * Complex.I).re := by simp
+  have _hL := ArithmeticFunction.LSeriesSummable_vonMangoldt hs
+  rw [logDeriv_riemannZeta_right_edge, LSeries, neg_mul, ← tsum_mul_right,
+    tsum_neg]
+
+lemma LSeries_term_vonMangoldt_right_edge_eq_exp
+    {n : ℕ} (hn : n ≠ 0) (τ : ℝ) :
+    LSeries.term ↗ArithmeticFunction.vonMangoldt
+        ((2 : ℂ) + τ * Complex.I) n =
+      (ArithmeticFunction.vonMangoldt n : ℂ) *
+        Complex.exp (-((2 : ℂ) + τ * Complex.I) * Real.log n) := by
+  have hpos : (n : ℂ) ≠ 0 := Nat.cast_ne_zero.mpr hn
+  have hlog : Complex.log (n : ℂ) = (Real.log n : ℂ) := by
+    rw [← Complex.ofReal_natCast]
+    exact (Complex.ofReal_log (Nat.cast_nonneg n)).symm
+  rw [LSeries.term_of_ne_zero hn, div_eq_mul_inv, ← Complex.cpow_neg]
+  rw [Complex.cpow_def_of_ne_zero hpos, hlog]
+  ring_nf
+
+lemma integral_term_mul_hat_eq_two_pi_vonMangoldt
+    (F : FullWeilTest) {n : ℕ} (hn : n ≠ 0) :
+    (∫ τ : ℝ,
+        LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I)) =
+      (2 * Real.pi : ℂ) *
+        (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (F.toFun (Real.log n) : ℂ) := by
+  have hinv := F.hat_fourier_inversion 2 (Real.log n)
+  have hslice : F.hatSlice 2 (Real.log n) =
+      (F.toFun (Real.log n) : ℂ) *
+        Complex.exp ((2 : ℂ) * Real.log n) := rfl
+  have hpoint : ∀ τ : ℝ,
+      LSeries.term ↗ArithmeticFunction.vonMangoldt
+          ((2 : ℂ) + τ * Complex.I) n *
+        F.hat ((2 : ℂ) + τ * Complex.I) =
+        (ArithmeticFunction.vonMangoldt n : ℂ) *
+          Complex.exp (-(2 : ℂ) * Real.log n) *
+            (F.hat ((2 : ℂ) + τ * Complex.I) *
+              Complex.exp (-(τ : ℂ) * Complex.I * Real.log n)) := by
+    intro τ
+    rw [LSeries_term_vonMangoldt_right_edge_eq_exp hn τ]
+    have hsplit :
+        Complex.exp (-((2 : ℂ) + τ * Complex.I) * Real.log n) =
+          Complex.exp (-(2 : ℂ) * Real.log n) *
+            Complex.exp (-(τ : ℂ) * Complex.I * Real.log n) := by
+      rw [← Complex.exp_add]
+      ring_nf
+    rw [hsplit]
+    ring
+  set c : ℂ :=
+    (ArithmeticFunction.vonMangoldt n : ℂ) *
+      Complex.exp (-(2 : ℂ) * Real.log n)
+  have hrew :
+      (∫ τ : ℝ,
+          LSeries.term ↗ArithmeticFunction.vonMangoldt
+              ((2 : ℂ) + τ * Complex.I) n *
+            F.hat ((2 : ℂ) + τ * Complex.I)) =
+        c * ∫ τ : ℝ,
+              F.hat ((2 : ℂ) + τ * Complex.I) *
+                Complex.exp (-(τ : ℂ) * Complex.I * Real.log n) := by
+    have heq :
+        (fun τ : ℝ =>
+            LSeries.term ↗ArithmeticFunction.vonMangoldt
+                ((2 : ℂ) + τ * Complex.I) n *
+              F.hat ((2 : ℂ) + τ * Complex.I)) =
+          fun τ : ℝ =>
+            c * (F.hat ((2 : ℂ) + τ * Complex.I) *
+              Complex.exp (-(τ : ℂ) * Complex.I * Real.log n)) :=
+      funext hpoint
+    have heq' :
+        (fun τ : ℝ =>
+            c * (F.hat ((2 : ℂ) + τ * Complex.I) *
+              Complex.exp (-(τ : ℂ) * Complex.I * Real.log n))) =
+          fun τ : ℝ =>
+            c • (F.hat ((2 : ℂ) + τ * Complex.I) *
+              Complex.exp (-(τ : ℂ) * Complex.I * Real.log n)) :=
+      funext fun _ => (smul_eq_mul _ _).symm
+    rw [heq, heq', integral_smul, smul_eq_mul]
+  rw [hrew]
+  have hinv' :
+      (∫ τ : ℝ, F.hat ((2 : ℂ) + τ * Complex.I) *
+          Complex.exp (-(τ : ℂ) * Complex.I * Real.log n)) =
+        (2 * Real.pi : ℂ) * F.hatSlice 2 (Real.log n) := hinv
+  rw [hinv', hslice]
+  have hcancel :
+      Complex.exp (-(2 : ℂ) * Real.log n) *
+          Complex.exp ((2 : ℂ) * Real.log n) = 1 := by
+    rw [← Complex.exp_add]
+    ring_nf
+    simp
+  have hfactor :
+      c * ((2 * Real.pi : ℂ) *
+        ((F.toFun (Real.log n) : ℂ) *
+          Complex.exp ((2 : ℂ) * Real.log n))) =
+        (2 * Real.pi : ℂ) *
+          (F.toFun (Real.log n) : ℂ) *
+          (c * Complex.exp ((2 : ℂ) * Real.log n)) := by
+    ring
+  have hcval :
+      c * Complex.exp ((2 : ℂ) * Real.log n) =
+        (ArithmeticFunction.vonMangoldt n : ℂ) := by
+    unfold c
+    rw [mul_assoc, hcancel, mul_one]
+  rw [hfactor, hcval]
+  ring
+
+lemma integral_term_mul_hat_eq_two_pi_vonMangoldt_all
+    (F : FullWeilTest) (n : ℕ) :
+    (∫ τ : ℝ,
+        LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I)) =
+      (2 * Real.pi : ℂ) *
+        (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (F.toFun (Real.log n) : ℂ) := by
+  rcases eq_or_ne n 0 with rfl | hn
+  · simp [LSeries.term_zero]
+  · exact integral_term_mul_hat_eq_two_pi_vonMangoldt F hn
+
+lemma primeEval_complex_eq (F : FullWeilTest) :
+    (∑' n : ℕ,
+        (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (F.toFun (Real.log n) : ℂ)) =
+      (F.primeEval : ℂ) := by
+  have hzero : ∀ n : ℕ, n ∉ Finset.range (F.fullAnchor + 1) →
+      (ArithmeticFunction.vonMangoldt n : ℂ) *
+        (F.toFun (Real.log n) : ℂ) = 0 := by
+    intro n hn
+    have hlt : F.fullAnchor < n := by
+      have : ¬ n < F.fullAnchor + 1 := fun h => hn (Finset.mem_range.mpr h)
+      omega
+    rw [F.toFun_log_eq_zero_of_lt_anchor hlt, Complex.ofReal_zero, mul_zero]
+  rw [tsum_eq_sum hzero, F.primeEval_eq_sum]
+  simp [Complex.ofReal_sum, Complex.ofReal_mul]
+
+/-- Right vertical integral equals `-2π ∑ Λ(n) g(log n)`. -/
+lemma rightVerticalIntegral_eq_prime_sum (F : FullWeilTest) :
+    (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * Complex.I) *
+        F.hat ((2 : ℂ) + τ * Complex.I)) =
+      - (2 * Real.pi : ℂ) * (F.primeEval : ℂ) := by
+  have hpt :
+      (∫ τ : ℝ, logDeriv riemannZeta ((2 : ℂ) + τ * Complex.I) *
+          F.hat ((2 : ℂ) + τ * Complex.I)) =
+        ∫ τ : ℝ,
+          ∑' n : ℕ,
+            -(LSeries.term ↗ArithmeticFunction.vonMangoldt
+                ((2 : ℂ) + τ * Complex.I) n *
+              F.hat ((2 : ℂ) + τ * Complex.I)) :=
+    integral_congr_ae (Eventually.of_forall
+      (logDeriv_hat_eq_tsum_neg_term_hat F))
+  have hswap :=
+    integral_tsum_of_summable_integral_norm
+      (F := fun (n : ℕ) (τ : ℝ) =>
+        -(LSeries.term ↗ArithmeticFunction.vonMangoldt
+            ((2 : ℂ) + τ * Complex.I) n *
+          F.hat ((2 : ℂ) + τ * Complex.I)))
+      (fun n => (integrable_right_edge_term_mul_hat F n).neg)
+      (by
+        simpa [norm_neg] using
+          summable_integral_norm_right_edge_term F)
+  rw [hpt, ← hswap]
+  simp_rw [integral_neg, integral_term_mul_hat_eq_two_pi_vonMangoldt_all F]
+  have hsummable :
+      Summable fun n : ℕ =>
+        (ArithmeticFunction.vonMangoldt n : ℂ) *
+          (F.toFun (Real.log n) : ℂ) :=
+    summable_of_ne_finset_zero fun n hn => by
+      have hlt : F.fullAnchor < n := by
+        have : ¬ n < F.fullAnchor + 1 := fun h => hn (Finset.mem_range.mpr h)
+        omega
+      rw [F.toFun_log_eq_zero_of_lt_anchor hlt, Complex.ofReal_zero, mul_zero]
+  have hfactor :
+      (∑' n : ℕ,
+          (2 * Real.pi : ℂ) *
+            (ArithmeticFunction.vonMangoldt n : ℂ) *
+              (F.toFun (Real.log n) : ℂ)) =
+        (2 * Real.pi : ℂ) * (F.primeEval : ℂ) := by
+    rw [← primeEval_complex_eq F]
+    rw [← tsum_mul_left]
+    exact tsum_congr fun n => by ring
+  rw [tsum_neg, hfactor]
+  ring
+
+end RightEdgePrime
+
 /-- Missing bridge 2: identify the continued custom three-channel form
 with the standard Weil explicit formula. -/
 def StandardExplicitFormulaIdentification : Prop :=

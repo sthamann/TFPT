@@ -536,6 +536,13 @@ transform, `fourierInv_hatSlice`, and the
 `2π` form `hat_fourier_inversion` are
 theorems.  Identification sorry stays; census
 stays 7.
+r532: the right vertical is the prime channel,
+`∫ (ζ′/ζ)(2+iτ) ĥ dτ = -2π ∑ Λ(n) g(log n)`
+(`rightVerticalIntegral_eq_prime_sum`), via
+termwise Fourier inversion and an
+`integral_tsum` swap over Dirichlet-summable
+majorants.  The `2Λ/√n` corpus gauge is pinned,
+not reconciled; census stays 7.
 The internal endpoint is deliberately not named RH. -/
 
 #print axioms dyadicSampleGrid_supportBound_le
@@ -824,6 +831,7 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms FullWeilTest.integrable_fourier_hatSlice
 #print axioms FullWeilTest.fourierInv_hatSlice
 #print axioms FullWeilTest.hat_fourier_inversion
+#print axioms rightVerticalIntegral_eq_prime_sum
 #print axioms sum_Ico_inv_telescope
 #print axioms gridPoleIntegralIdentification_of_hat
 #print axioms FullWeilTest.FixedSupportGridApproximation.tendsto_toFun

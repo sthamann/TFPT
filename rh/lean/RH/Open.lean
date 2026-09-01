@@ -1300,6 +1300,29 @@ assembly against `combMass = 2Λ/√n` are
 not claimed.  Census stays 7 (external 2).
 NO RH CLAIM.
 
+## r532 census (outer bridges 39, RIGHT_PRIME)
+
+Sorry-free.  The right vertical of the r522
+contour is the prime channel:
+`rightVerticalIntegral_eq_prime_sum` gives
+`∫ (ζ′/ζ)(2+iτ) ĥ(2+iτ) dτ = -2π ∑ Λ(n) g(log n)`.
+Route: `logDeriv_riemannZeta_right_edge`
+(Dirichlet series at `Re = 2`), termwise
+`integral_term_mul_hat_eq_two_pi_vonMangoldt`
+from r531 `hat_fourier_inversion`, and the
+`integral_tsum` swap justified by
+`summable_integral_norm_right_edge_term`
+(Dirichlet weights times `C/(1+τ²)`).
+`primeEval` is the bare `∑ Λ(n) g(log n)`,
+finite because `g` dies past `fullAnchor`.
+The gauge gap stays pinned and unclaimed:
+`fullWeilCombSide_eq_two_div_sqrt_sum` shows
+the corpus comb is `2Λ/√n`, so the left-edge
+FE fold must supply the `2/√n` -- otherwise
+the discrepancy is real.  Left edge and
+assembly are not claimed.  Census stays 7
+(external 2).  NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
