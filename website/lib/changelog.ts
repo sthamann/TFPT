@@ -42,6 +42,1030 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-09-02",
+    "dateLabel": "2026-09-02 · CLI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(directed "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " readout "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Coxeter–Euler completion graduate as "
+      },
+      {
+        "k": "c",
+        "v": "v1018"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1019"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1010 \\to 1012"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1174 \\to 1176"
+      },
+      {
+        "k": "t",
+        "v": ", two new rows; Python-only / Wolfram mirror deferred as for v974–v1017, engine still "
+      },
+      {
+        "k": "c",
+        "v": "DEFERRED_NO_ENGINE"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1018_ e8_ directed_ readout.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "47/47"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "c",
+        "v": "E8.DIRECTED.READOUT.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "Identity, exact over "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Z/\\mathbb Q"
+      },
+      {
+        "k": "t",
+        "v": ". Re-derived (no probe imports) from r609 ("
+      },
+      {
+        "k": "c",
+        "v": "e8_ directed_ readout_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "49/49"
+      },
+      {
+        "k": "t",
+        "v": ", verdict "
+      },
+      {
+        "k": "c",
+        "v": "E8_ READOUT_ SEALED(7/8)"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "3edfb824"
+      },
+      {
+        "k": "t",
+        "v": "…). Seven exact cells: Seifert "
+      },
+      {
+        "k": "m",
+        "v": "S+S^{\\mathsf T}=A_{E_8}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{charpoly}(-S^{-1}S^{\\mathsf T})=\\Phi_{30}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{rank}(S-S^{\\mathsf T})=8"
+      },
+      {
+        "k": "t",
+        "v": "; Hamming enumerator "
+      },
+      {
+        "k": "m",
+        "v": "1+14y^4+y^8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "240=16+14\\cdot16"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "S(3,4,8)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{srg}(120,56,28,24)"
+      },
+      {
+        "k": "t",
+        "v": " eig "
+      },
+      {
+        "k": "m",
+        "v": "56/8/-4"
+      },
+      {
+        "k": "t",
+        "v": " mult "
+      },
+      {
+        "k": "m",
+        "v": "1/35/84"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "N(n)=240\\sigma_3(n)"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "n\\le10"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "A_P(n)/A_P(1)=\\tau(n)"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "n\\le8"
+      },
+      {
+        "k": "t",
+        "v": " on three axes, "
+      },
+      {
+        "k": "m",
+        "v": "E_4^3-E_6^2=1728\\Delta"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "(\\mathbb Z/30\\mathbb Z)^{\\times}\\cong C_2\\times C_4"
+      },
+      {
+        "k": "t",
+        "v": " (orders "
+      },
+      {
+        "k": "m",
+        "v": "\\{1,2,2,2,4,4,4,4\\}"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "m",
+        "v": "D_\\chi=L(s,\\chi)L(s-3,\\chi)"
+      },
+      {
+        "k": "t",
+        "v": " for "
+      },
+      {
+        "k": "m",
+        "v": "n\\le200"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "E_6\\oplus A_2"
+      },
+      {
+        "k": "t",
+        "v": " index "
+      },
+      {
+        "k": "m",
+        "v": "3"
+      },
+      {
+        "k": "t",
+        "v": ", Smith "
+      },
+      {
+        "k": "m",
+        "v": "(1^6,3,3)"
+      },
+      {
+        "k": "t",
+        "v": ", glue "
+      },
+      {
+        "k": "m",
+        "v": "78/81/81"
+      },
+      {
+        "k": "t",
+        "v": ". C7 Gauss-code transform stays OPEN ("
+      },
+      {
+        "k": "c",
+        "v": "rem:c7-audit"
+      },
+      {
+        "k": "t",
+        "v": "). NO RH CLAIM. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2)"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v1019_ coxeter_ euler_ completion.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "46/46"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "4.5"
+      },
+      {
+        "k": "t",
+        "v": " s): "
+      },
+      {
+        "k": "c",
+        "v": "E8.COXETER.EULER.COMPLETION.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": "Identity plus Numerical Euler products. Re-derived from r617 (SPEC "
+      },
+      {
+        "k": "c",
+        "v": "5aa3935b"
+      },
+      {
+        "k": "t",
+        "v": "…, FILE "
+      },
+      {
+        "k": "c",
+        "v": "6ac6bab2"
+      },
+      {
+        "k": "t",
+        "v": "…, "
+      },
+      {
+        "k": "m",
+        "v": "45/45"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "COMPLETION_EXACT"
+      },
+      {
+        "k": "t",
+        "v": "). Exact: "
+      },
+      {
+        "k": "m",
+        "v": "\\det(I-xC)=\\Phi_{30}"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Tr}\\,C=-1"
+      },
+      {
+        "k": "t",
+        "v": "; classical Moebius "
+      },
+      {
+        "k": "m",
+        "v": "\\Phi_{30}"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "U=1\\oplus C"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Tr}\\,U=0"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\det(I-xU)=1-x^2-x^3+x^6+x^7-x^9"
+      },
+      {
+        "k": "t",
+        "v": ". Global "
+      },
+      {
+        "k": "m",
+        "v": "Z_C"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "D_{E_8}"
+      },
+      {
+        "k": "t",
+        "v": " as zeta quotients, abs. conv. "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Re}\\,s>1/2"
+      },
+      {
+        "k": "t",
+        "v": ". Numerical ("
+      },
+      {
+        "k": "m",
+        "v": "X=10^5"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "m",
+        "v": "D_{E_8}"
+      },
+      {
+        "k": "t",
+        "v": " residual "
+      },
+      {
+        "k": "m",
+        "v": "4.76{\\times}10^{-4}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "s=0.75"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "4.16{\\times}10^{-12}"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "s=1.5"
+      },
+      {
+        "k": "t",
+        "v": ". Class: vanishing linear term generic from "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Tr}\\,C=-1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "A_1\\to1/\\zeta(2s)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "A_2\\to1/\\zeta(3s)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "E_6\\to\\zeta(4s)\\zeta(6s)/[\\zeta(2s)\\zeta(3s)\\zeta(12s)]"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "B_2"
+      },
+      {
+        "k": "t",
+        "v": " still contains "
+      },
+      {
+        "k": "m",
+        "v": "1/\\zeta(s)"
+      },
+      {
+        "k": "t",
+        "v": "); "
+      },
+      {
+        "k": "m",
+        "v": "E_8"
+      },
+      {
+        "k": "t",
+        "v": " selects only the divisor set of "
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": ". Beurling-generic. Fence (verbatim, no marker upgrade): The trace-free completion is zero-free and pole-free in "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{Re}\\,s>1/2"
+      },
+      {
+        "k": "t",
+        "v": ". The splitting into the scalar zeta channel and the Coxeter channel is open and RH-equivalent. No RH claim. NO-GO "
+      },
+      {
+        "k": "c",
+        "v": "E8.COXETER.REGULARIZED_SPLIT.NO_GO.01"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\det_2"
+      },
+      {
+        "k": "t",
+        "v": " cannot isolate "
+      },
+      {
+        "k": "m",
+        "v": "1/\\zeta(s)"
+      },
+      {
+        "k": "t",
+        "v": ". Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " (i) "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Prop. 1 (v1018) and a new paragraph after Prop. 1 (v1019); "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction harvest notes; "
+      },
+      {
+        "k": "c",
+        "v": "note_e8_gaussian_code"
+      },
+      {
+        "k": "t",
+        "v": " C6 citation (C7 stays open); website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "primeFront.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-01",
+    "dateLabel": "2026-09-01 · CL",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(kernel-Loewner positivity at "
+      },
+      {
+        "k": "m",
+        "v": "L=0.3"
+      },
+      {
+        "k": "t",
+        "v": " graduates as "
+      },
+      {
+        "k": "c",
+        "v": "v1017"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1009 \\to 1010"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1173 \\to 1174"
+      },
+      {
+        "k": "t",
+        "v": ", one new Numerical/certified row (NOT [E]); Python-only / Wolfram mirror deferred as for v974–v1016, engine still "
+      },
+      {
+        "k": "c",
+        "v": "DEFERRED_NO_ENGINE"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "c",
+        "v": "v1017_ kernel_ loewner_ positivity.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "26/26"
+      },
+      {
+        "k": "t",
+        "v": "): "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.RDAGGER.KERNEL_LOEWNER.01"
+      },
+      {
+        "k": "t",
+        "v": " Numerical/certified float64 (NOT "
+      },
+      {
+        "k": "s",
+        "v": "E"
+      },
+      {
+        "k": "t",
+        "v": ", NOT interval). Re-derived (no probe imports): "
+      },
+      {
+        "k": "m",
+        "v": "Q_W(h)\\ge 2.1{\\times}10^{-3}\\|h\\|_2^2"
+      },
+      {
+        "k": "t",
+        "v": " on "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{supp}(h)\\subset[-0.3,0.3]"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "2L=0.6<\\log 2"
+      },
+      {
+        "k": "t",
+        "v": ", prime term empty). G1 identity vs defining digamma ("
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_A(0)=-5.3721834192256654"
+      },
+      {
+        "k": "t",
+        "v": ", Dirichlet Rayleigh "
+      },
+      {
+        "k": "m",
+        "v": "1.180{\\times}10^{-2}"
+      },
+      {
+        "k": "t",
+        "v": ", odd sector "
+      },
+      {
+        "k": "m",
+        "v": "0.2226"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "c_L"
+      },
+      {
+        "k": "t",
+        "v": " in hull). G2 Loewner: "
+      },
+      {
+        "k": "m",
+        "v": "I-\\mathrm{Re}\\,R_x"
+      },
+      {
+        "k": "t",
+        "v": " PSD after zero-extension to "
+      },
+      {
+        "k": "m",
+        "v": "L^2(\\mathbb R)"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "m",
+        "v": "\\kappa_w"
+      },
+      {
+        "k": "t",
+        "v": " booked. G3 "
+      },
+      {
+        "k": "m",
+        "v": "401"
+      },
+      {
+        "k": "t",
+        "v": "-dim Legendre of a degree-"
+      },
+      {
+        "k": "m",
+        "v": "48"
+      },
+      {
+        "k": "t",
+        "v": " Chebyshev surrogate "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " Bernstein HS tail charged "
+      },
+      {
+        "k": "m",
+        "v": "3\\times"
+      },
+      {
+        "k": "t",
+        "v": ": enclosed floor "
+      },
+      {
+        "k": "m",
+        "v": "2.122{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " (claimed "
+      },
+      {
+        "k": "m",
+        "v": "c=2.1{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": "). Independent r495: translation identity "
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": " exact over "
+      },
+      {
+        "k": "m",
+        "v": "\\mathbb Q"
+      },
+      {
+        "k": "t",
+        "v": " with strictly positive boundary-strip mass; doubled-"
+      },
+      {
+        "k": "m",
+        "v": "c_L"
+      },
+      {
+        "k": "t",
+        "v": " budget "
+      },
+      {
+        "k": "m",
+        "v": "-2.188"
+      },
+      {
+        "k": "t",
+        "v": " (false-world). BOUNDARY: r496 "
+      },
+      {
+        "k": "c",
+        "v": "NO_GO"
+      },
+      {
+        "k": "t",
+        "v": "(compact-tail@"
+      },
+      {
+        "k": "m",
+        "v": "L=0.8"
+      },
+      {
+        "k": "t",
+        "v": ") named — the compact-tail method does not scale past the prime-free zone; this row does NOT claim "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_*(L)\\ge 0"
+      },
+      {
+        "k": "t",
+        "v": " for general "
+      },
+      {
+        "k": "m",
+        "v": "L"
+      },
+      {
+        "k": "t",
+        "v": ". NO RH CLAIM. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " new subsection after wave-14; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " wave-14 follow-on paragraph; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " introduction harvest note; "
+      },
+      {
+        "k": "c",
+        "v": "rh/paper/rh_program.tex"
+      },
+      {
+        "k": "t",
+        "v": " kernel-Loewner theorem + certification box at the end of rh_program.tex §2; website "
+      },
+      {
+        "k": "c",
+        "v": "papers.ts"
+      },
+      {
+        "k": "t",
+        "v": " / "
+      },
+      {
+        "k": "c",
+        "v": "primeFront.ts"
+      },
+      {
+        "k": "t",
+        "v": " / VerificationDag."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-08-31",
     "dateLabel": "2026-08-31 · CXLIX",
     "heading": [

@@ -32,7 +32,7 @@ const TRANSCRIPT: { heading: string; body: string }[] = [
   },
   {
     heading: "Alpha fixed point (0:39)",
-    body: "The flagship line is alpha inverse, 137.0359992168. The verifier finds it as the unique positive stationary root of the boundary U(1) Ward identity. It is not fitted to the measured value, mutate the permitted terms and the root does not survive. E₈ is the checksum behind the discrete construction, 240 roots lock the D₅ and A₃ sectors into one even, unimodular rank eight lattice. In the current corpus, 1009 machine-checked verification modules test this architecture, its numerical identities, its reductions and its failures. Every load-bearing claim has a script and a claim identifier. The status ledger, not the rhetoric, decides whether a line is exact, conditional, open or a kill test.",
+    body: "The flagship line is alpha inverse, 137.0359992168. The verifier finds it as the unique positive stationary root of the boundary U(1) Ward identity. It is not fitted to the measured value, mutate the permitted terms and the root does not survive. E₈ is the checksum behind the discrete construction, 240 roots lock the D₅ and A₃ sectors into one even, unimodular rank eight lattice. In the current corpus, 1012 machine-checked verification modules test this architecture, its numerical identities, its reductions and its failures. Every load-bearing claim has a script and a claim identifier. The status ledger, not the rhetoric, decides whether a line is exact, conditional, open or a kill test.",
   },
   {
     heading: "Dual status (1:23)",

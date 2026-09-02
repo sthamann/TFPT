@@ -5,7 +5,15 @@
 Runs, in order:
   (1) INTEGRITY  -- SHA-256 of every pinned rh/INVENTORY.json entry
                     (pinned drift = FAIL; unpinned living documents = INFO),
-                    (2) PROBES     -- the sealed campaign probes r250-r491+r494 from
+                    (2) PROBES     -- the sealed campaign probes
+                    r250-r496 + r535-r537 + r539-r541 + r544 +
+                    r548 + r549 + r551 + r553 + r560 + r561 +
+                    r563 + r565 + r567 + r591 + r592 +
+                    r601 + r603 + r604 + r605N + r606 + r607 +
+                    r608 + r609 + r611 + r613 + r615 +
+                    r616 + r617 + r618 + r619 + r620 +
+                    r621 + r622 + r623 + r625 + r626 +
+                    r627 + r628 + r629 + r630 + r632 + r633 from
                     experiments/tfpt-discovery/ in --smoke mode,
   (3) MODULES    -- the twenty RH verification modules v955/v956/v958/
                     v959/v960/v961/v962/v963/v964/v965/v966/v967/v968/
@@ -46,12 +54,154 @@ LEAN_DIR = os.path.join(REPO, "rh", "lean")
 VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
                        "bin", "python")
 
-# the sealed campaign probe list r250-r491+r494 (order = round order); every
-# entry supports --smoke.  This list is frozen with the wave; extend it in
-# the same change that extends INVENTORY.json.
+# the sealed campaign probe list r250-r496 + r535-r537 + r539-r541
+# + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565
+# + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 +
+# r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 +
+# r619 + r620 + r621 + r622 + r623 + r625 + r626 +
+# r627 + r628 + r629 + r630 + r632 + r633
+# (order = round order); every entry supports --smoke.  This list
+# is frozen with the wave; extend it in the same change that
+# extends INVENTORY.json.
 # Lean-only rounds (no sealed probe): r305, r310, r310b, r320, C1,
 # r362, r373, r376, r380, r384, r397, r406, r412, r426, r430, r434,
-# r517-r532 (outer-bridge campaign; census stays 7; no new probe).
+# r517-r532 (outer-bridge campaign; no new probe),
+# r534 (outer-bridges round 41; honest-contour identification
+# proved sorry-free; no new probe),
+# r538 (outer-bridges round 42; honest Weil identification
+# fullWeilFormHonest = standardExplicitFormula proved sorry-free;
+# no new probe),
+# r542 (GaborSeparation.lean; identities + reduction chain;
+# no new probe),
+# r543 (GaborIntegral.lean; pureGaborHat integral representation;
+# no new probe),
+# r545 (Trudgian roadmap Path A; no artefact),
+# r546 (ZeroIncrement.lean; zeta_unit_increment sorry-free;
+# no new probe),
+# r547 (GaborSeparation endpoint on two named inputs;
+# census 7 -> 9; no new probe),
+# r550 (GaborSeparation.lean EF renormalized to combMass
+# 2*Lambda/sqrt(n); no new probe),
+# r552 (GaborThetaBound.lean discrete theta lobe; no new probe),
+# r555 (GaborHatAnalytic.lean; entirety/FE/three-lobe;
+# no new probe),
+# r556 (Open.lean / paper §7 documentation; no new probe),
+# r557 (GaborZeroSummable/HorizontalEdges/ContourResidue;
+# no new probe),
+# r558 (GaborExplicitFormula.lean wiring; GaborSeparation
+# split Precheck/ForAllZeros; no new probe),
+# r559 (L2 honest-Weil adjudication; no artefact),
+# r562 (GaborDominance.lean first cut; no new probe),
+# r564 (GaborVertical.lean + EF of_parts; no new probe),
+# r566 (L2 canonical-repair adjudication; no artefact),
+# r568 (GaborDominance.lean canonical bound; no new probe),
+# r569 (GaborDominanceProof.lean; T_gap=0 + host Q<0; no new probe),
+# r570 (GaborLeftVertical.lean; left vertical closed; no new probe),
+# r571 (GaborDominanceAssembly.lean; GaborDominanceBound theorem;
+# no new probe),
+# r572 (GaborAutocorrelation.lean; ACF closed form; no new probe),
+# r573 (L2 dominance statement audit STATEMENT_WEAKENED; no artefact),
+# r574 (GaborDominanceLog.lean; log cap at counting theorem;
+# no new probe),
+# r575 (GaborDominanceBoundLog theorem; no new probe),
+# r576 (GaborVerticalLimit.lean; contour T->inf; no new probe),
+# r577 (GaborArchDigamma.lean; chi'/chi on the critical line;
+# no new probe),
+# r578 (GaborArchContour.lean; pairing + fixed-T residue;
+# no new probe),
+# r579 (GaborSpectralBridge.lean; log-occupancy transfer;
+# no new probe),
+# r580 (log-weighted theta / multiplicity-weighted hat summable;
+# honest LogMajorantLeHonestBudget false; no new probe),
+# r581 (EF sorry fallen: gabor_vertical_arithmetic_remainder
+# theorem; census 9 -> 8; no new probe),
+# r582 (GaborFEMultiplicity.lean; FE multiplicity on the open
+# strip + weighted truncation compliance; BoundLog2 pack
+# sorry-free; no new probe),
+# r583 (GaborDominanceLog2.lean; GaborRemainderBudgetLog2
+# closed; GaborDominanceBoundLog2 theorem; no new probe),
+# r584-r588 (spectral identifications: tsum<=Closed,
+# On/Off-split, weighted Bridge-6; Lean-only; no new probe),
+# r589 (window->BoundLog2 bridge theorem; L2 verdict
+# BRIDGE_A_IS_RH_CORE; no new probe),
+# r590 (GaborArithmeticSeparator.lean; existential
+# arithmetic endpoint + parallel Mathlib chain; no new probe).
+# r593/r594 (GaborOuterTail.lean; outer-tail theorem;
+# no new probe),
+# r595 (GaborWindowGlue.lean; three-term glue + per-T
+# checkpoint; no new probe).
+# r596-r598 (GaborAnchoredWitness.lean; no new probe).
+# r599 cancelled (vacuity adjudication; replaced by r600).
+# r600 (zero-side endpoints + VACUOUS markers; no new probe).
+# r602 (Open.lean / paper / README docs; no new probe).
+# r612 (GaborCountableCriterion.lean; rational-packet iff
+# introduced with GaborZeroSideContinuous; asserting
+# gabor_separationForAllZeros retired; census 8 -> 7;
+# no new probe),
+# r612C (gaborZeroSideContinuous_holds; rational iff
+# unconditional; named-open list shrinks by one;
+# census stays 7; no new probe),
+# r617L (CoxeterCompletion.lean + PrimeLogIndependence.lean;
+# module count 54 -> 56; census stays 7; no new probe),
+# r631L (sorry classification R/T/A; GaborContourResidue
+# docstring: GaborContourLimitRemainder PROVED; census stays 7;
+# no new probe),
+# r634L (gabor_explicitFormula_pure unconditional; prime-side
+# rational criterion gabor_primeSide_rational_criterion_iff_rh;
+# census stays 7; no new probe),
+# r605A (quantifier audit; FORALL_ZERO_OVERSPECIFIED; no new probe).
+# r605B+C (GaborExposedOrbit.lean; no new probe).
+# r605C-AUDIT (independent STATEMENT_SOUND; no new probe).
+# r544 is the sealed Gabor-uniformity scout (not Lean-only).
+# r548/r549/r551/r553/r560/r561/r563/r565/r567/r591/r592/r601/
+# r603/r604/r605N/r606/r607/r608/r609/r611/r613/r615/r616/r617/r618/
+# r619/r620/r621/r622/r623/r625/r626/r627/r628/r629/r630/r632/r633
+# are sealed Gabor/prime/event/E8/Connes/Jensen/support
+# scouts (not Lean-only).
+# r601 is the sealed zero-side dominance subfamily scout.
+# r603 is the sealed two-key GP inequality search.
+# r604 is the sealed TFPT-spectrum/zero cross-correlation
+# scout (no --smoke flag; extra argv ignored; full ~28 s).
+# r605N is the sealed exposed-orbit + phase-lock scout.
+# r606/r606b is the sealed Connes prolate residual-gap scout.
+# r607 is the sealed event-Lindblad two-key scout.
+# r608 is the sealed Gabor tropical-heat scout.
+# r609 is the sealed E8 directed-readout scout (smoke: C1/C2/C5/C6).
+# r610 Lean-only (GaborLowHeightZeroFree; no new probe).
+# r611 is the sealed Connes observable Aubin-Nitsche scout.
+# r613 is the sealed ordered-E8 Herglotz scout.
+# r615 is the sealed semilocal first-prime-step scout.
+# r616 is the sealed higher-moment inertia scout.
+# r617 is the sealed E8 Coxeter Euler completion scout.
+# r617L Lean-only (CoxeterCompletion + PrimeLogIndependence;
+# no new probe; module count 54 -> 56; census stays 7).
+# r618 is the sealed Jensen/E8-compiler rigidity scout.
+# r619 is the sealed support-relay census scout.
+# r620 is the sealed P2 reflection-factor scout.
+# r621 is the sealed P2 digamma-duplication scout.
+# r622 is the sealed support Darboux-transport scout.
+# r623 is the sealed semilocal P2-dilation scout
+# (merged r623 tower + r624 dilation; r624 has no separate probe).
+# r625 is the sealed IIKS vanishing-metric scout.
+# r626 is the sealed Xi finite-free collision scout.
+# r627 is the sealed A-F two-moment optimizer scout.
+# r628 is the sealed window-box verifier scout.
+# r629 is the sealed certificate-class atlas scout.
+# r631L Lean-only (sorry classification R/T/A; census stays 7).
+# r632 is the sealed jet-deflated L_det scout.
+# r630 is the sealed margin-law symbolic-regression scout
+# (r630b N-limited-artifact addendum on the same file).
+# r633 is the sealed frontier-followups scout.
+# r606/r606b is the sealed Connes prolate residual-gap scout
+# (r606b closure on the same file).
+# r634L Lean-only (pure EF unconditional + prime-side
+# rational criterion; census stays 7).
+# r554 mixture scout is sealed in INVENTORY but not smoked
+# here (leftover proxy later superseded by r560).
+# r561 pin is checked even though r563/r566 signed-refute
+# the uniform rule; r567 is the canonical repair.
+# r591 is the sealed fixed-packet cofinal-negativity scout.
+# r592 is the sealed window-adaptive tail scout.
 PROBES = [
     ("r250", "centered_basefiber_probe.py"),
     ("r251a", "corner_provenance_probe.py"),
@@ -269,6 +419,53 @@ PROBES = [
     ("r494", "kernel_loewner_probe.py"),
     ("r495", "kernel_redteam_probe.py"),
     ("r496", "kernel_loewner08_probe.py"),
+    ("r535", "weil_separation_redteam_probe.py"),
+    ("r536", "kernel_loewner_window_probe.py"),
+    ("r537", "honest_contour_audit_probe.py"),
+    ("r539", "weil_gaussian_separation_probe.py"),
+    ("r540", "weil_online_null_separation_probe.py"),
+    ("r541", "weil_gabor_separation_probe.py"),
+    ("r544", "gabor_uniform_inequality_probe.py"),
+    ("r548", "weil_gabor_explicit_formula_probe.py"),
+    ("r549", "gabor_density_transfer_probe.py"),
+    ("r551", "gabor_extremal_selection_probe.py"),
+    ("r553", "gabor_config_first_probe.py"),
+    ("r560", "gabor_honest_weil_game_probe.py"),
+    # r561 sealed pin still checked; signed-refuted by r563/r566,
+    # canonically repaired in r567.
+    ("r561", "gabor_uniform_dominance_probe.py"),
+    ("r563", "gabor_dominance_redteam_probe.py"),
+    ("r565", "gabor_scramble_gate_probe.py"),
+    ("r567", "gabor_canonical_dominance_probe.py"),
+    ("r591", "gabor_fixed_packet_cofinal_probe.py"),
+    ("r592", "gabor_window_adaptive_tail_probe.py"),
+    ("r601", "gabor_weil_positivity_subfamily_probe.py"),
+    ("r603", "prime_inequality_evosearch_probe.py"),
+    ("r604", "tfpt_spectrum_zero_crosscorr_probe.py"),
+    ("r605N", "gabor_exposed_orbit_probe.py"),
+    ("r607", "event_lindblad_twokey_probe.py"),
+    ("r608", "gabor_tropical_heat_probe.py"),
+    ("r609", "e8_directed_readout_probe.py"),
+    ("r606", "connes_prolate_residual_gap_probe.py"),
+    ("r611", "connes_observable_aubin_nitsche_probe.py"),
+    ("r613", "prime_e8_ordered_herglotz_probe.py"),
+    ("r615", "semilocal_firststep_probe.py"),
+    ("r616", "inertia_highermoment_probe.py"),
+    ("r617", "e8_coxeter_euler_completion_probe.py"),
+    ("r618", "jensen_compiler_rigidity_probe.py"),
+    ("r619", "support_relay_census_probe.py"),
+    ("r620", "p2_reflection_factor_probe.py"),
+    ("r621", "p2_digamma_duplication_probe.py"),
+    ("r622", "support_darboux_probe.py"),
+    ("r623", "semilocal_p2_dilation_probe.py"),
+    ("r625", "iiks_vanishing_metric_probe.py"),
+    ("r626", "xi_finitefree_collision_probe.py"),
+    ("r627", "af_twomoment_optimizer_probe.py"),
+    ("r628", "window_box_verifier_probe.py"),
+    ("r629", "certificate_class_atlas_probe.py"),
+    ("r630", "margin_law_symreg_probe.py"),
+    ("r632", "jet_deflated_ldet_probe.py"),
+    ("r633", "frontier_followups_probe.py"),
 ]
 
 MODULES = [
@@ -384,7 +581,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r459 + r431-audit, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r496 + r535-r537 + r539-r541 + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565 + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 + r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 + r619 + r620 + r621 + r622 + r623 + r625 + r626 + r627 + r628 + r629 + r630 + r632 + r633, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:

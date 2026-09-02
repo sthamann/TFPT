@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`1009` registered scripts · `1173` ledger claims · `10` clusters.
+`1012` registered scripts · `1176` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (490 scripts)
+### `core` — Compiler core & the E₈ glue  (493 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -991,6 +991,12 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: PRIME.LSTAR.MARGIN_CHAIN.01 (the chain the duality reparametrizes), PRIME.LSTAR.SUBORDINATION.01 (the open center, unchanged), v981 · cited: research contracts
 - **v982_dirichlet_matched_frame** [E] `PRIME.WORLD.DIRICHLET_MATCHED_FRAME.01` — EXAKT (keine Proben-Importe): die GRH-treue χ-Arch-Seite ABGELEITET, symbolisch aus Λ(s,χ) = (q/π)^{(s+a)/2}Γ((s+a)/2)L(s,χ): F_A^χ(ξ) == −log(π/q) + Re ψ((1+2a)/4 + iξ/2) für a = 
   - deps: PRIME.LSTAR.MARGIN_CHAIN.01 (the legislation the frame tests), PRIME.L2.COVER_GROWTH_K2.01 (K2's third test), PRIME.LSTAR.DUAL_HOLE.01 (the binding-regime reading), v982 · cited: research contracts
+- **v1017_kernel_loewner_positivity** [E] `PRIME.RDAGGER.KERNEL_LOEWNER.01` — PRIME.RDAGGER.KERNEL_LOEWNER.01 [Numerical/certified] (2026-09-01, Runden 494/495): Kernel-Loewner-Positivitaet bei L=0.3 -- neu abgeleitet (keine Proben-Importe): Q_W(h) >= 2.1e-3
+  - deps: v1017 · cited: introduction, 4 frontier, research contracts
+- **v1018_e8_directed_readout** [E/O] `E8.DIRECTED.READOUT.01` — E8.DIRECTED.READOUT.01 [E] (2026-09-02, Runde r609): sieben exakte E8-Ablese-Zellen (C7 offen) -- neu abgeleitet (keine Proben-Importe): Seifert/Phi_30, Hamming 1+14y^4+y^8, srg(12
+  - deps: v1018 · cited: introduction, note e8 gaussian code, 4 frontier
+- **v1019_coxeter_euler_completion** [E] `E8.COXETER.EULER.COMPLETION.01` — E8.COXETER.EULER.COMPLETION.01 [E]+Numerical (2026-09-02, Runde r617): Coxeter-Euler-Vervollstaendigung -- neu abgeleitet. Exakt: det(I-xC)=Phi_30, Tr C=-1; Moebius Phi_30=(1-x^2)(
+  - deps: v1019 · cited: introduction, 4 frontier
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -2089,9 +2095,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v1005_relative_pencil_bridges** — `(no claim)`
-- **v1006_mmst_lemma_battery** — `(no claim)`
-- **v1007_det16_stability_battery** — `(no claim)`
 - **v1008_master_assembly_scaffold** — `(no claim)`
 - **v1009_rho0_minimizer** — `(no claim)`
 - **v1010_simplicity_bridge_census** — `(no claim)`
@@ -2101,4 +2104,7 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v1014_bridge_refinements** — `(no claim)`
 - **v1015_axiom_core_closure** — `(no claim)`
 - **v1016_state_gap_batteries** — `(no claim)`
+- **v1017_kernel_loewner_positivity** — `PRIME.RDAGGER.KERNEL_LOEWNER.01`
+- **v1018_e8_directed_readout** — `E8.DIRECTED.READOUT.01`
+- **v1019_coxeter_euler_completion** — `E8.COXETER.EULER.COMPLETION.01`
 

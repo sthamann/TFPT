@@ -15298,6 +15298,26 @@ noncomputable def FullWeilTest.leftEdgeArchIntegral
       (((-1 / 16 : ℝ) : ℂ) + τ * Complex.I) *
     F.hat (((-1 / 16 : ℝ) : ℂ) + τ * Complex.I)
 
+/-- r534: the arch clamp with its three honest factors exposed:
+the `-log(2π)` constant, the digamma term, and the tangent term.
+This is a pointwise substitution under the already convergent combined
+integral; splitting the three improper integrals separately still
+requires individual digamma/tangent integrability estimates. -/
+lemma leftEdgeArchIntegral_eq_explicit_factor_integral
+    (F : FullWeilTest) :
+    F.leftEdgeArchIntegral =
+      ∫ τ : ℝ,
+        (- Complex.log (2 * (Real.pi : ℂ)) +
+            digamma (((-1 / 16 : ℝ) : ℂ) + τ * Complex.I) -
+            ((Real.pi : ℂ) / 2) *
+              tan (Real.pi *
+                (((-1 / 16 : ℝ) : ℂ) + τ * Complex.I) / 2)) *
+          F.hat (((-1 / 16 : ℝ) : ℂ) + τ * Complex.I) := by
+  unfold FullWeilTest.leftEdgeArchIntegral
+  apply integral_congr_ae
+  filter_upwards with τ
+  rw [logDeriv_zetaFEFactor_left_edge]
+
 /-- Left vertical integral equals
 `2π ∑ Λ(n) n⁻¹ g(-log n)` minus the arch clamp. -/
 lemma leftVerticalIntegral_eq_reflected_prime_sub_arch
@@ -15369,15 +15389,253 @@ lemma leftVerticalIntegral_eq_reflected_prime_sub_arch
 
 end LeftEdgePrime
 
+/-- r534 honest contour assembly, before taking real parts.  Horizontal
+edges have vanished in `contourIdentityLimitAlongGaps`; the pole at `1`
+is the explicit `-F.hat 1` on the spectral side.  The two vertical
+prime channels have weights `Λ(n)` and `Λ(n)/n`, respectively. -/
+theorem contourExplicitFormula_honest_complex (F : FullWeilTest) :
+    (2 * (Real.pi : ℂ)) *
+        ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+            (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
+          F.hat 1) =
+      F.leftEdgeArchIntegral -
+        (2 * (Real.pi : ℂ)) *
+          ((F.primeEval : ℂ) + (F.reflectedPrimeEval : ℂ)) := by
+  have hcont := contourIdentityLimitAlongGaps F
+  rw [rightVerticalIntegral_eq_prime_sum F,
+    leftVerticalIntegral_eq_reflected_prime_sub_arch F] at hcont
+  simp only [smul_eq_mul] at hcont
+  apply mul_left_cancel₀ Complex.I_ne_zero
+  calc
+    Complex.I * ((2 * (Real.pi : ℂ)) *
+        ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+            (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
+          F.hat 1)) =
+        (2 * (Real.pi : ℂ) * Complex.I) *
+          ((∑' ρ : {z : ℂ // IsCriticalStripZetaZero z},
+              (riemannZetaMultiplicity (ρ : ℂ) : ℂ) * F.hat ρ) -
+            F.hat 1) := by ring
+    _ = Complex.I *
+          (- (2 * Real.pi : ℂ) * (F.primeEval : ℂ)) -
+        Complex.I *
+          ((2 * Real.pi : ℂ) * (F.reflectedPrimeEval : ℂ) -
+            F.leftEdgeArchIntegral) := hcont.symm
+    _ = Complex.I *
+        (F.leftEdgeArchIntegral -
+          (2 * (Real.pi : ℂ)) *
+            ((F.primeEval : ℂ) + (F.reflectedPrimeEval : ℂ))) := by ring
+
+/-- r534 honest three-channel contour identity in the real normalization
+used by `standardExplicitFormula`.  This is the actual contour output:
+arch clamp minus the `(1+n⁻¹)` prime comb, with the pole subtraction
+already present in `standardExplicitFormula`. -/
+theorem contourExplicitFormula_honest (F : FullWeilTest) :
+    (2 * Real.pi) * standardExplicitFormula F =
+      F.leftEdgeArchIntegral.re -
+        (2 * Real.pi) *
+          (∑ n ∈ Finset.range (F.fullAnchor + 1),
+            ArithmeticFunction.vonMangoldt n * (1 + (n : ℝ)⁻¹) *
+              F.toFun (Real.log n)) := by
+  have h := congrArg Complex.re (contourExplicitFormula_honest_complex F)
+  rw [← contourPrimePairing_eq_one_add_inv_sum F]
+  simpa [standardExplicitFormula] using h
+
+/-- Corrected r534 identification target: the spectral explicit formula
+equals the honest contour assembly after multiplication by `2π`.
+Unlike `StandardExplicitFormulaIdentification`, its prime channel is
+`Λ(n)(1+n⁻¹)`, exactly as proved by the two vertical-edge inversions. -/
+def HonestContourExplicitFormulaIdentification : Prop :=
+  ∀ F : FullWeilTest,
+    (2 * Real.pi) * standardExplicitFormula F =
+      F.leftEdgeArchIntegral.re -
+        (2 * Real.pi) *
+          (∑ n ∈ Finset.range (F.fullAnchor + 1),
+            ArithmeticFunction.vonMangoldt n * (1 + (n : ℝ)⁻¹) *
+              F.toFun (Real.log n))
+
+/-- r534: the corrected honest identification is a theorem of the
+completed contour and Fourier-inversion machinery. -/
+theorem honest_contour_explicit_formula_identification :
+    HonestContourExplicitFormulaIdentification :=
+  contourExplicitFormula_honest
+
+/-- The arithmetic channel delivered by the completed contour: the finite
+`Λ(n)(1+n⁻¹)` sum at the full-test support anchor. -/
+noncomputable def fullWeilHonestPrimeSide (F : FullWeilTest) : ℝ :=
+  ∑ n ∈ Finset.range (F.fullAnchor + 1),
+    ArithmeticFunction.vonMangoldt n * (1 + (n : ℝ)⁻¹) *
+      F.toFun (Real.log n)
+
+/-- The contour arch clamp in the real normalization of the Weil form. -/
+noncomputable def fullWeilHonestArchSide (F : FullWeilTest) : ℝ :=
+  F.leftEdgeArchIntegral.re / (2 * Real.pi)
+
+/-- There is no additional arithmetic-side pole channel in the honest
+contour normalization: `-F.hat 1` is already present on the spectral side
+of `standardExplicitFormula`. -/
+noncomputable def fullWeilHonestPoleSide (_F : FullWeilTest) : ℝ := 0
+
+/-- r538 honest full Weil form.  This is exactly the real normalization of
+`contourExplicitFormula_honest`: contour arch clamp minus the
+`Λ(n)(1+n⁻¹)` prime channel, with `-F.hat 1` already booked spectrally. -/
+noncomputable def fullWeilFormHonest (F : FullWeilTest) : ℝ :=
+  fullWeilHonestArchSide F - fullWeilHonestPrimeSide F +
+    fullWeilHonestPoleSide F
+
+/-- r538 bridge 2 for the honestly weighted form.  The contour theorem's
+spectral side is literally `standardExplicitFormula`, so no spectral-limit
+seam remains. -/
+theorem standard_explicit_formula_identification_honest
+    (F : FullWeilTest) (_hF : F.admissible) :
+    fullWeilFormHonest F = standardExplicitFormula F := by
+  have hcont := contourExplicitFormula_honest F
+  unfold fullWeilFormHonest fullWeilHonestArchSide
+    fullWeilHonestPrimeSide fullWeilHonestPoleSide
+  have hπ : 2 * Real.pi ≠ 0 := mul_ne_zero (by norm_num) Real.pi_ne_zero
+  calc
+    F.leftEdgeArchIntegral.re / (2 * Real.pi) -
+          (∑ n ∈ Finset.range (F.fullAnchor + 1),
+            ArithmeticFunction.vonMangoldt n * (1 + (n : ℝ)⁻¹) *
+              F.toFun (Real.log n)) + 0 =
+        (F.leftEdgeArchIntegral.re - (2 * Real.pi) *
+          (∑ n ∈ Finset.range (F.fullAnchor + 1),
+            ArithmeticFunction.vonMangoldt n * (1 + (n : ℝ)⁻¹) *
+              F.toFun (Real.log n))) / (2 * Real.pi) := by
+      field_simp [hπ]
+      ring
+    _ = ((2 * Real.pi) * standardExplicitFormula F) /
+          (2 * Real.pi) := by rw [hcont]
+    _ = standardExplicitFormula F := by field_simp [hπ]
+
+
+/-- Honest-form positivity is exactly standard explicit-formula positivity
+on the admissible full test class. -/
+theorem fullWeilFormHonest_nonneg_iff_standard_nonneg :
+    (∀ F : FullWeilTest, F.admissible → 0 ≤ fullWeilFormHonest F) ↔
+      (∀ F : FullWeilTest, F.admissible → 0 ≤ standardExplicitFormula F) := by
+  constructor
+  · intro h F hF
+    rw [← standard_explicit_formula_identification_honest F hF]
+    exact h F hF
+  · intro h F hF
+    rw [standard_explicit_formula_identification_honest F hF]
+    exact h F hF
+
+/-- The corpus comb, although indexed only by prime powers up to the
+window's squared anchor, equals the support-truncated range sum. -/
+lemma fullWeilCombSide_eq_range_sum (F : FullWeilTest) :
+    fullWeilCombSide F =
+      ∑ n ∈ Finset.range (F.fullAnchor + 1),
+        (2 / Real.sqrt n) * ArithmeticFunction.vonMangoldt n *
+          F.toFun (Real.log n) := by
+  let term : ℕ → ℝ := fun n =>
+    combMass n * F.toFun (Real.log n)
+  have ha1 : 1 ≤ F.fullAnchor := le_max_left _ _
+  have hatoms : ∀ n : ℕ, n ∉ windowAtoms F.fullAnchor → term n = 0 := by
+    intro n hn
+    by_cases hpp : IsPrimePow n
+    · have hgt : F.fullAnchor ^ 2 < n := by
+        by_contra hle
+        exact hn (Finset.mem_filter.mpr
+          ⟨Finset.mem_range.mpr (by omega), hpp⟩)
+      have hanchor : F.fullAnchor < n := by nlinarith
+      unfold term
+      rw [F.toFun_log_eq_zero_of_lt_anchor hanchor, mul_zero]
+    · have hΛ : ArithmeticFunction.vonMangoldt n = 0 := by
+        by_contra hne
+        exact hpp (ArithmeticFunction.vonMangoldt_ne_zero_iff.mp hne)
+      simp [term, combMass, hΛ]
+  have hrange : ∀ n : ℕ, n ∉ Finset.range (F.fullAnchor + 1) →
+      term n = 0 := by
+    intro n hn
+    have hanchor : F.fullAnchor < n := by
+      have : ¬n < F.fullAnchor + 1 := fun h => hn (Finset.mem_range.mpr h)
+      omega
+    unfold term
+    rw [F.toFun_log_eq_zero_of_lt_anchor hanchor, mul_zero]
+  calc
+    fullWeilCombSide F =
+        ∑ n ∈ windowAtoms F.fullAnchor, term n := by rfl
+    _ = ∑' n : ℕ, term n := (tsum_eq_sum hatoms).symm
+    _ = ∑ n ∈ Finset.range (F.fullAnchor + 1), term n :=
+      tsum_eq_sum hrange
+    _ = ∑ n ∈ Finset.range (F.fullAnchor + 1),
+          (2 / Real.sqrt n) * ArithmeticFunction.vonMangoldt n *
+            F.toFun (Real.log n) := by
+      refine Finset.sum_congr rfl fun n _ => ?_
+      unfold term
+      rw [combMass_eq_gauge, mul_assoc]
+
+/-- The positive perfect-square excess of the honest contour comb over
+the corpus `2Λ/√n` comb, on the common support-truncated range. -/
+noncomputable def surplusComb (F : FullWeilTest) : ℝ :=
+  ∑ n ∈ Finset.range (F.fullAnchor + 1),
+    ArithmeticFunction.vonMangoldt n *
+      (1 - (Real.sqrt n)⁻¹) ^ 2 * F.toFun (Real.log n)
+
+lemma one_add_inv_eq_two_div_sqrt_add_sq {n : ℕ} (hn : 0 < n) :
+    1 + (n : ℝ)⁻¹ =
+      2 / Real.sqrt n + (1 - (Real.sqrt n)⁻¹) ^ 2 := by
+  have hnR : (0 : ℝ) < n := Nat.cast_pos.mpr hn
+  have hsqrt : Real.sqrt n ≠ 0 := (Real.sqrt_pos.mpr hnR).ne'
+  have hsqrt_sq : Real.sqrt n * Real.sqrt n = (n : ℝ) :=
+    Real.mul_self_sqrt hnR.le
+  field_simp [hsqrt, hnR.ne']
+  nlinarith
+
+/-- r538 arithmetic bridge: the honest prime channel is exactly the corpus
+prime channel plus the perfect-square surplus. -/
+theorem fullWeilFormHonest_eq_corpus_add_surplus (F : FullWeilTest) :
+    fullWeilHonestPrimeSide F = fullWeilCombSide F + surplusComb F := by
+  unfold fullWeilHonestPrimeSide surplusComb
+  rw [fullWeilCombSide_eq_range_sum, ← Finset.sum_add_distrib]
+  refine Finset.sum_congr rfl fun n _ => ?_
+  by_cases hn : n = 0
+  · subst n
+    simp [combMass]
+  · have hweight := one_add_inv_eq_two_div_sqrt_add_sq
+      (Nat.pos_of_ne_zero hn)
+    rw [hweight]
+    ring
+
+/-- Total non-prime gauge difference between the corpus continuation and
+the contour normalization.  It includes the corpus pole integral because
+the honest contour books `-F.hat 1` directly on the spectral side. -/
+noncomputable def archGaugeDelta (F : FullWeilTest) : ℝ :=
+  (fullWeilArchSide F + fullWeilPoleSide F) -
+    (fullWeilHonestArchSide F + fullWeilHonestPoleSide F)
+
+/-- Sign-correct old/new decomposition.  The corpus form is the honest
+form plus the heavier-comb surplus plus the remaining arch/pole gauge. -/
+theorem fullWeilForm_eq_honest_add_surplus_add_archGaugeDelta
+    (F : FullWeilTest) :
+    fullWeilForm F =
+      fullWeilFormHonest F + surplusComb F + archGaugeDelta F := by
+  unfold fullWeilForm fullWeilFormHonest archGaugeDelta
+  rw [fullWeilFormHonest_eq_corpus_add_surplus F]
+  ring
+
+
 /-- Missing bridge 2: identify the continued custom three-channel form
-with the standard Weil explicit formula. -/
+with the standard Weil explicit formula.
+
+r534 normalization obstruction: `fullWeilForm` subtracts the corpus
+comb `2Λ(n)/√n`, whereas `contourExplicitFormula_honest` subtracts the
+strictly heavier contour comb `Λ(n)(1+n⁻¹)` (away from `n = 1`, where
+`Λ(1)=0`).  The proved contour therefore does not establish this Prop.
+The r538 honest route defines `fullWeilFormHonest` with the contour
+weights and proves
+`standard_explicit_formula_identification_honest`.  The original corpus
+form stays blocked; its exact discrepancy is exposed by `surplusComb`
+and `archGaugeDelta`, not hidden in a dictionary lemma. -/
 def StandardExplicitFormulaIdentification : Prop :=
   ∀ F : FullWeilTest, F.admissible →
     fullWeilForm F = standardExplicitFormula F
 
-/-- OPEN CLASSICAL BRIDGE 2 (r463): this must prove the prime,
-archimedean, pole, and spectral/zero dictionaries with matching
-normalizations. -/
+/-- OPEN CLASSICAL BRIDGE 2 (r463; obstruction documented r534):
+the corpus arch/comb/pole form cannot be identified by the present
+contour without an additional theorem reconciling the unequal prime
+weights and the corresponding arch/pole conventions. -/
 theorem standard_explicit_formula_identification :
     StandardExplicitFormulaIdentification := by
   sorry
@@ -15430,6 +15688,17 @@ theorem standard_weil_criterion_to_mathlib_rh_of_separation
   obtain ⟨F, hF, hneg⟩ :=
     hseparate s ⟨hz, htrivial, hpole⟩ hcritical
   exact (not_lt_of_ge (hpos F hF)) hneg
+
+
+/-- r538 honest criterion wiring.  This consumes the same off-critical
+separation hypothesis as the standard criterion; honest positivity adds no
+new route around that classical brick. -/
+theorem honest_weil_criterion_to_mathlib_rh
+    (hseparate : FullWeilSeparatesOffCriticalZeros)
+    (hpos : ∀ F : FullWeilTest, F.admissible → 0 ≤ fullWeilFormHonest F) :
+    RiemannHypothesis := by
+  apply standard_weil_criterion_to_mathlib_rh_of_separation hseparate
+  exact fullWeilFormHonest_nonneg_iff_standard_nonneg.mp hpos
 
 /-- OPEN CLASSICAL BRICK 3 (r487): Weil's off-critical separation
 construction.  The logical conversion to Mathlib `RiemannHypothesis`

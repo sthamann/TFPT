@@ -12,6 +12,7 @@
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{longtable}
 \usepackage{enumitem}
 \usepackage{xcolor}
 \usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
@@ -50,7 +51,7 @@
 \title{The TFPT Prime-Front RH Program:\\
 Certified Finite Reductions and the Remaining Arithmetic Edge}
 \author{TFPT verification programme --- \texttt{rh/} workspace}
-\date{2026-08-27 \quad (research documentation, no RH claim)}
+\date{2026-09-02 \quad (research documentation, no RH claim)}
 
 \begin{document}
 \maketitle
@@ -137,6 +138,12 @@ The reduction mincut stays \textbf{base 4 / refined 5}: the two named open
 edges of Section~\ref{sec:edges} (fiber and base/orientation), plus the
 frozen upstream contracts, none of which is moved by a dictionary.  The
 wall itself is contracted as \texttt{PRIME.CASE.PAIRCORR.CONTRACT.01}~\mO.
+A parallel \emph{conditional} Gabor-wavepacket route
+(Section~\ref{sec:gabor}) does not move this mincut: its live Lean
+criterion is positivity of \texttt{gaborZeroSide} ($\mathrm{hpos}^*$);
+the historical wrapper \texttt{gabor\_inputs\_to\_mathlib\_rh} is
+VACUOUS (r600); the r541 numeric precheck is not a completed
+separation.
 
 %======================================================================
 \section{Certified finite theorems}\label{sec:certified}
@@ -346,6 +353,47 @@ PRIME.PORT.FULLSOURCE.PREFIX\_RESUMMATION.01 [O]}%
 \texttt{budget\_anatomy\_probe.py} (27/27, SPEC \texttt{28026ae6b0750098}),
 \texttt{parametrix\_pass\_probe.py} (19/19, SPEC \texttt{e79da4f43d63213a});
 rounds r256--r259.}
+
+\subsection{Kernel-Loewner positivity at $L=0.3$ (v1017)}
+
+\begin{theorem}[Kernel-Loewner floor at $L=0.3$]\label{thm:kernel-loewner-03}
+Let $h\in L^2(\mathbb R)$ be supported in $[-0.3,0.3]$ (so $2L=0.6<\log 2$ and
+the classical prime term is empty).  Write $g=h*h(-{\cdot})$ and
+\[
+  Q_W(h)=\int_0^{2L} k(x)\bigl(g(0)-g(x)\bigr)\,dx - c_L\,g(0)+\Pi(h),
+\]
+with $k(x)=e^{x/2}/\sinh x$ and
+$\Pi(h)=2\bigl(\langle h,\cosh(x/2)\rangle^2-\langle h,\sinh(x/2)\rangle^2\bigr)$.
+Then
+\[
+  Q_W(h)\;\ge\; 2.1{\times}10^{-3}\,\|h\|_2^2.
+\]
+The enclosed floor is $2.122{\times}10^{-3}$ as a \emph{float64}
+machine check (not interval arithmetic, not an~\mE\ exact/interval
+certificate): a quintic $C^2$ cutoff books the
+near-diagonal as $\kappa_w$, a $401$-dimensional Legendre section of a
+degree-$48$ Chebyshev surrogate is enclosed by Bernstein HS bounds, and the
+exact tail is charged three times.  Independently, the zero-extension identity
+$2(g(0)-g(x))=\|h-\tau_x h\|_{L^2(\mathbb R)}^2$ holds exactly over $\mathbb Q$
+on two step functions (boundary-strip mass strictly positive), and doubling
+$c_L$ produces a negative certificate budget.
+\end{theorem}
+
+This is a \emph{single-length} operator inequality.  It is not
+$\lambda_*(L)\ge 0$ for general $L$.  Round r496 is a method no-go for the
+same compact-tail completion at $L=0.8$ (Section~\ref{sec:nogos}).
+No RH claim.
+
+\certbox{PRIME.RDAGGER.KERNEL\_LOEWNER.01 [Numerical/certified]}%
+{verification/v1017\_kernel\_loewner\_positivity.py}%
+{FLOAT64 certificate (Gauss--Legendre $+$ Chebyshev/Bernstein $+$ HS tail),
+not interval arithmetic, not~\mE.  Probes (stay experiments-side; module re-derives):
+\texttt{kernel\_loewner\_probe.py} (r494, $17/17$,
+VERDICT \texttt{PROVED(c=2.1e-3)}, SPEC \texttt{2e6d71138dff4540}),
+\texttt{kernel\_redteam\_probe.py} (r495, $11/11$ smoke /
+\texttt{CONFIRMED(c=2.1e-3)}, SPEC \texttt{431251a9bcfd40a1}).
+Boundary: \texttt{kernel\_loewner08\_probe.py} (r496,
+\texttt{NO\_GO} compact-tail@$L=0.8$).}
 
 %======================================================================
 \section{The two-branch theorem and the surface closure (v960)}\label{sec:twobranch}
@@ -2818,7 +2866,9 @@ at $L=0.8$ the best booked $101$-section is already negative
 ($-1.61\cdot10^{-4}$), its full $3\times$ archimedean HS charge is
 $27.37$, and the bounded prime translations are noncompact
 (measured off-block norm $0.9395$); the r494 compact completion
-cannot treat the prime section as the operator & r496\\
+cannot treat the prime section as the operator.
+\emph{The $L=0.3$ certificate itself stands}
+(Theorem~\ref{thm:kernel-loewner-03}, v1017) & r496\\
 \bottomrule
 \end{tabular}
 \end{center}
@@ -2876,6 +2926,396 @@ both the right endpoint and a definite dynamics} --- a genuine $s$-tool
 must couple the border drive into the resolvent structure without reducing
 to the wall bound (the r266 question, Section~\ref{sec:edges}).
 
+\noindent Round r607 (probe \texttt{event\_lindblad\_twokey\_probe.py},
+SHA \texttt{3c1db81b}, SPEC \texttt{3abe6b9b}, $15/15$) is a method
+no-go: \textsc{killed(recoordinatization)}.  Lindblad CP
+$\Leftrightarrow\lambda_{\min}(Q_W)$ to $10^{-15}$ in
+\textsc{true}/\textsc{scramble}/\textsc{epstein}/\textsc{wperm};
+the diagonal compensator $\Sigma\lambda$ diverges $\sim 2e^{X/2}$;
+Euler--Pick Gram needs $10$ scalars; labels are decorative.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent (2026-09-02) Prolate hyperbolicity route.  Connes--Consani--Moscovici,
+\texttt{arXiv:2310.18423}, the proposition after Lemma~3.3, gives
+$F_\mu(\mathcal{E}(\psi))(s)=R(s)\cdot\Xi(s)$, so $\hat k_\lambda$
+contains $\Xi$ as a factor.  Real-rootedness of $\hat k_\lambda$ is
+therefore RH together with real-rootedness of $R_\lambda$, and the
+ratio $F_4/F_0$ cancels $\Xi$.  Typed
+\textsc{killed(factorization)}; no probe needed.
+\textbf{No RH claim.}
+
+\noindent (2026-09-02) Herglotz closure reduction.  The statement
+``finite Herglotz functions $m_j\to-\Phi'/\Phi$,
+$\Phi(z)=\xi(\tfrac12+\sqrt{z})$, on a set with an accumulation point
+in $\mathcal{U}=\{\mathrm{Re}\sqrt{z}>1/2\}\cap\mathbb{H}$, bounded at
+one point $\Rightarrow$ RH'' is correct classical analysis (normal
+family of Herglotz functions, identity theorem, pole contradiction),
+but its hypothesis implies RH.  Recorded as a reduction.
+Round r611 (probe \texttt{connes\_observable\_aubin\_nitsche\_probe.py},
+SHA \texttt{93607746}, SPEC \texttt{647335a6}, $12/12$) returns
+\textsc{obs\_not\_converging}: hybrid $Q_\lambda$ has
+$\lambda_{\min}\approx-10^{-5}$ for $L\ge0.5$ (r606 discretisation
+crash removed, $t_{\mathrm{cut}}$-stable);
+$\eta_{\mathrm{obs}}(1.2)$ on TRUE is $0.667/6.3\cdot10^{-3}/3.7\cdot10^{-4}$
+at $L=0.3/0.4/0.5$ then \emph{rises}
+$1.6\cdot10^{-2}/5.6\cdot10^{-2}/9.0\cdot10^{-2}/0.150$ at $L=0.6$--$1.0$
+($p=-8.1$).  OFFLINE $\approx$ TRUE ($0.109$ at $L=1.0$), so the
+observable is blind to an injected off-line zero at $\gamma=20$;
+WPERM $0.69$, SCRAMBLE $0.20$; identity~(8) residual $4.6\cdot10^{-11}$.
+The Herglotz/Aubin--Nitsche closure route (Solution~1) is STOP as a
+lane; \texttt{PROLATE.GABOR.ALIGN} is moot.  r606b is CLOSED
+(\textsc{inconclusive}(evals-not-converged, disc-disagree$>5$pct);
+superseded by r611 and the \textsc{killed}(factorization) typing of
+the prolate route; diagnostic only).  Experiments only.
+\textbf{No RH claim.}
+
+\noindent (2026-09-02) Dyadic heat-semigroup criterion.  For the Lean
+pure-Gabor family the cross term $2e^{(\delta^2-\omega^2)/2a}$ carries
+residual $-\delta^2/(2a^2)\ne0$, so $U=\sqrt{a}\,Z$ is not a heat
+solution.  The dyadic-in-$a$ heat-semigroup reduction is unavailable
+and is replaced by the countable rational-packet criterion (r612).
+Parent analysis 2026-09-02; confirmed numerically at r608 (rel $3\cdot10^{-9}$
+on traveling lobes).  \textbf{No RH claim.}
+
+\noindent Round r613 (probe \texttt{prime\_e8\_ordered\_herglotz\_probe.py},
+SHA \texttt{c89fc1ce}, SPEC \texttt{01b4a8be}) returns
+\textsc{no\_identification}: the Weyl function is Herglotz
+(min Im-eig $+3.5\cdot10^{-3}$), $(JH)^2=0$ exact; at $\varepsilon=0$
+all jumps commute so order is decorative (max $10^{-14}$, same lesson
+as r607); at $\varepsilon=0.05$ order/labels are non-decorative
+($16.6/12.0$) but residuals at Euler points TRUE $0.66$--$2.5$ agree
+with SCRAMBLE/WPERM $0.66/0.64$ and $2.36/2.36$; the twirl chain
+$E_{\mathrm{full}}<E_7<E_3$ breaks ($4.5>3.1$).  The ordered-E8
+Herglotz canonical system (Paket~C,
+\texttt{PRIME.E8.ORDERED.HERGLOTZ.01}) is dead as a lane.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r615 (probe \texttt{semilocal\_firststep\_probe.py},
+SHA \texttt{3a0741de}, SPEC \texttt{04f9c9ec}, $26/26$) confirms the
+r496 certificate obstruction on every window that contains a prime:
+the shift cross-block norm is $0.50$ for $N=40/80/160$ (no decay), and
+the Schur requirement is $R=0.25/\lambda^*=1.4\cdot10^{3}$ at
+$L=0.40$ up to $4.45\cdot10^{6}$ at $L=0.549$.  First-prime-step
+windows are therefore not certifiable by the compact-tail/Schur route.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Typed no-go \texttt{E8.COXETER.REGULARIZED\_SPLIT.NO\_GO.01}
+(round r617, probe \texttt{e8\_coxeter\_euler\_completion\_probe.py},
+SHA \texttt{6ac6bab2}, SPEC \texttt{5aa3935b}, $45/45$,
+\textsc{completion\_exact}): $\det_2$ removes exactly the trace term;
+the RH content is the analytic continuation of
+$P(s)=\sum\mu(k)/k\log\zeta(ks)$; constructions that control only the
+Hilbert--Schmidt part cannot isolate $1/\zeta(s)$ (this is the
+conceptual content of r607/r613).  Fence: ``The trace-free completion
+is zero-free and pole-free in $\mathrm{Re}\,s>1/2$. The splitting into
+the scalar zeta channel and the Coxeter channel is open and
+RH-equivalent. No RH claim.''  Promotion to \texttt{verification/}
+(v1018/v1019) is in progress.  Experiments only.
+
+\noindent Round r618 (probe \texttt{jensen\_compiler\_rigidity\_probe.py},
+SHA \texttt{29ccf1c7}, SPEC \texttt{bc8d8624}, $43/43$) returns
+\textsc{compilers\_structurally\_rigid}.  Two no-gos:
+(A)~Seifert-compiler rigidity --- the Coxeter monodromy spectrum is a
+congruence invariant ($\Phi_{30}$ for $12$ random $MSM^*$);
+Cayley-transformed Jensen polynomials $\mathcal{C}_{n,8}$ of $\Xi$
+vary with $n$ and miss the $30$th-root grid by $\ge 0.0168$; blocks
+$d=2..7$ give $\Phi_2^2$, $\Phi_2\Phi_3$, $\Phi_5$, $\Phi_2\Phi_8$,
+$\Phi_3\Phi_{12}$, $\Phi_2\Phi_{18}$;
+(B)~rank-one MSS mixed characteristic polynomial equals
+$\det(xI-\sum A_e)$ exactly; required coefficient ratios
+$c_{n+1}/c_n$ ($0.0231\to 0.0169$, $n=0..6$) are nonlinear in zero
+power sums.  Both compilers are generic real-rootedness certificates;
+existence for all $(n,d)$ is equivalent to RH; the E8 data are
+RH-neutral.  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r621 (probe \texttt{p2\_digamma\_duplication\_probe.py},
+SHA \texttt{dff2e1b3}, SPEC \texttt{78f47c87}, $37/37$) returns
+\textsc{duplication\_constant\_only}.  The duplication identity
+$\psi(z)+\psi(z+\tfrac12)=2\psi(2z)-2\log 2$ holds to
+$2\cdot 10^{-25}$ and the operator identity
+$\mathrm{ARCH}_{1/4}=\mathrm{ARCH}_{\mathbb C}-\mathrm{ARCH}_{3/4}
+-2\log 2\cdot G$ to $2\cdot 10^{-15}$, but the prime-2 operator
+$P_2=-w_2 T_{\log 2}$ versus $\mathrm{span}\{\mathrm{ARCH}_{3/4},G\}$
+has residual $0.997$--$0.998$ on the whole odd space (HS cosine
+$\le 0.005$, fitted $\beta\approx 0.06$ not $-2\log 2$).
+Translation is not a constant.  The $\mathbb Q(i)$ form
+$\mathrm{POLE}+\mathrm{ARCH}_{\mathbb C}$ stays positive without
+its norm-$2$ prime ($\lambda_{\min}+0.59$ at $0.549$);
+$\Gamma_{\mathbb C}$ without the constant fails at $0.38$ like
+$\zeta$ --- the conductor constant carries, not the $3/4$
+channel.  No-go: the prime-$2$ repair is not a duplication
+factor of the archimedean operator.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r622 (probe \texttt{support\_darboux\_probe.py},
+SHA \texttt{845bb937}, SPEC \texttt{27ffd017}, PAYLOAD
+\texttt{e1031d17}, $64/64$) returns
+\textsc{transport\_feasible\_norule}.  On the scaled family
+$\widetilde Q(L)=U_L^*Q_L U_L$ the transport identity
+$\partial_L\widetilde Q+X^*\widetilde Q+\widetilde Q X+c\widetilde Q=Y^*Y$
+is feasible at $X=0$ for the scalar
+$c=c_0(L)=-\lambda_{\min}(\widetilde Q^{-1/2}(\partial_L\widetilde Q)\widetilde Q^{-1/2})$
+(finite: $26$ at $0.25$, spike $368$ at prime entry, $1614$ at
+$0.549$), but there is no two-term closed-form law for $c(L)$
+(rms $347$; fails at the kink and at $0.549$); the forbidden
+$X_0=-\tfrac12\widetilde Q^{-1}\partial_L\widetilde Q$ is not in
+the source algebra (projection residual $0.88\to 1.0$); the
+algebra produces rate $0$ versus required $31.8/46.0$.  The
+prime is not the PSD obstruction --- it spikes $c_0$.  No-go:
+Darboux transport in the source algebra yields no rule and no
+rate.  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r619 (probe \texttt{support\_relay\_census\_probe.py},
+SHA \texttt{fcfa7771}, SPEC \texttt{7299737d}, RESULT
+\texttt{e0379485}, $12/12$) returns \textsc{relay\_universal},
+but the $\mathrm{RELAY\_UNIVERSAL}$ criteria ($\Delta_j\ge 0$,
+$g<0$, newest-weight repair) are consequences of $Q_j\succeq 0$
+(RH-consistency), not a mechanism.  Relay-as-mechanism is
+therefore a no-go: the informative content is the nearly
+constant leads, the control breaks at entry+lead, the
+super-exponential $\lambda^*$ decay (r619 log-slopes
+$-77/-79$ at $L=0.9$--$1.4$ were measured at fixed $N=80$
+beyond the SVD floor and are $N$-artifacts, corrected by
+r630b to $-50.6$ on $0.3$--$0.6$ and $-116$ on $0.6$--$1.0$;
+the $\mathrm{RELAY\_UNIVERSAL}$ verdict, leads
+$\Delta\approx 0.015$, and $L_{\mathrm{det}}$ table are
+unaffected), and $L_{\mathrm{det}}$.
+Windows with $L\gtrsim 0.5$ are hypersensitive off-line
+detectors, so relay steps beyond $L\approx 0.5$ are RH-in-a-box
+statements, not elementary finite problems.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r623 (probe \texttt{semilocal\_p2\_dilation\_probe.py},
+SHA \texttt{d1bec728}, SPEC \texttt{5890676d}, $128/128$) returns
+\textsc{p2\_dilation\_structurally\_blocked}.  The $2$-adic channel
+of the Weil form is the multiplier
+$m_2(t)=\log 2\cdot(1-P_r(t\log 2))$ with $r=2^{-1/2}$ and $P_r$
+the Poisson kernel (boundary value of the de~Branges--Rovnyak
+kernel of the Blaschke factor $b(z)=(z-r)/(1-rz)$); one Euler
+factor generates the whole rung ladder $2^k$ (active rungs:
+$[2]$ for $L\le 0.65$, $[2,4]+3$ for $L\in\{0.72,0.80\}$);
+identity residual $4.9\cdot10^{-12}$.  Obstructions to the
+proposed PSD block $\bigl[\begin{smallmatrix}A_S&B^*\\B&C\end{smallmatrix}\bigr]$
+with Schur complement $Q_L$: the ancestor $\mathrm{POLE}+\mathrm{ARCH}$
+has $\lambda_{\min}=-0.078$ ($L=0.40$), $-0.229$, $-0.367$,
+$-0.430$ ($0.549$), $-0.536$, $-0.636$, $-0.773$, $-0.926$
+($0.80$) and therefore cannot be a PSD principal block; the
+$2$-channel operator $M_2$ is indefinite ($n_+/n_-$ $9/9$ at
+$0.40$ \ldots $14/10$ at $0.80$) with numerical $\mathrm{rank}/N$
+$0.75$--$1.0$ (not rank one) and therefore cannot be
+$-B^*C^{-1}B$; the generic dilation
+$\bigl[\begin{smallmatrix}Q+M_{2-}&\sqrt{M_{2-}}\\\sqrt{M_{2-}}&I\end{smallmatrix}\bigr]$
+has $\lambda_{\min}$ tracking $\lambda^*(L)$
+($1.82\cdot10^{-4}$ vs $1.81\cdot10^{-4}$ at $0.40$) ---
+tautological.  No manifest local SOS in the named factors:
+$\lVert N\rVert/\lambda_{\min}(P)=2.75$--$5.27$ (negative part
+never dominated).  Literature: Connes--Consani 2021 (Selecta)
+Thm~1 positivity only for support $[2^{-1/2},2^{1/2}]$
+(archimedean); CCM arXiv:2310.18423 \S4.6 Sonin space without a
+positivity theorem; arXiv:2403.01247 Jacobi matrices for
+$S=\{\infty,p\}$ ($q=1/p$); $\zeta$-cycles numerical --- no
+published unconditional first prime step.  The semilocal
+dilation lane is not opened.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r625 (probe \texttt{iiks\_vanishing\_metric\_probe.py},
+SHA \texttt{973a1ce2}, SPEC \texttt{7a4257e3}, NUM
+\texttt{2d066e2d}, $19/19$) returns
+\textsc{iiks\_no\_metric\_in\_class}, recorded in prose as
+\textsc{not\_testable\_in\_corpus\_form}.  For the corpus's
+discrete IIKS/CD object the jump $J_s=I-2\pi i s\,fg^{\mathsf T}$
+on the real CD nodes fails Zhou's requirement $J^*=J^{-1}$
+(rel $2.56\cdot10^{-2}$ on WPERM kz9), and $\det J=1$ at $s^*$
+while $\tau(s^*)=\det(I-s^*E)=0$ ($\log\lvert\tau\rvert\approx-38$):
+this $J$ is not the RHP jump equivalent to $\tau(s)\ne0$.  The
+$H=I$ ``dissipativity'' $J+J^*\succeq0$ (holds on TRUE with min
+eigenvalue $1.93$--$1.99$ \emph{and} on WPERM despite $\tau$-zeros)
+is the wrong sufficient condition and is dropped.  Best
+source-explicit contractive metric
+$H=\mathrm{diag}(\mathrm{arch}^{1.50},\mathrm{arch}^{1.50})$:
+TRUE worst margin $-8.17\cdot10^{-10}$ (first pass
+$-3.36\cdot10^{-7}$; bar $-10^{-12}$), WPERM
+$-7.9\cdot10^{-9}\ldots-4.4\cdot10^{-4}$, EPSTEIN
+$-2.7\cdot10^{-2}\ldots-6\cdot10^{11}$, SCRAMBLE
+$-3\cdot10^{6}\ldots-9\cdot10^{57}$; controls fail pointwise
+before their $\tau$-zero ($5/5$).  The vanishing-lemma route is
+not testable on the corpus object.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r626 (probe \texttt{xi\_finitefree\_collision\_probe.py},
+SHA \texttt{c4750063}, SPEC \texttt{c7cef974}, NUM
+\texttt{f533d168}, $51/51$) returns
+\textsc{collision\_detector\_calibrated\_no\_barrier}.  The
+identity $d/dt\log\lvert\mathrm{Disc}(P_t)\rvert=4\cdot\Phi_N(P_t)$
+along the de~Bruijn--Newman heat flow (rel error
+$8.9\cdot10^{-11}$) makes the ``collision barrier''
+$\int\Phi\,dt<\infty$ equivalent to $\mathrm{Disc}\ne0$ along the
+path (no independent content).  Taylor sections of $\Xi$ are not
+real-rooted at $t=0$ ($N=6/8/12$ have $0$ real roots; the
+$\gamma_1$ pair becomes real only at $N=16$--$20$); $t_0(N)$ is
+always a spurious far-pair collision; inner collisions occur at
+$t_c>0$ for every $N$.  Detector calibrated on the hyperbolic
+control $S_N=\prod(1-x^2/\gamma_k^2)$:
+$\varepsilon_{\mathrm{crit}}=-3.65\cdot10^{-4}$ ($a_1$, $N=8$),
+$t_c=0.597$, $\log_{10}\lvert\Phi\rvert$ up to $7.90$.  Tur\'an
+on $c_n=n!a_n$ holds (min ratio $1.02$); Newton/Laguerre on the
+sections fails ($0.51$); no simple coefficient inequality
+implies inner $\mathrm{Disc}>0$.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r627 (probe \texttt{af\_twomoment\_optimizer\_probe.py},
+SHA \texttt{da1a9118}, SPEC \texttt{9b95f564}, $17/17$) returns
+\textsc{no\_gain}.  Contract \texttt{PRIME.INERTIA.TWOMOMENT.OPT.01}.
+The A--F two-moment functional
+$R(\psi)=[\int\psi^2+\iint\lvert u-v\rvert\psi(u)\psi(v)]/(\int\psi)^2$
+with $p=2-R$ on $\mathrm{supp}\,\psi\subset[-\tfrac12,\tfrac12]$
+has Euler--Lagrange $(I+K)\psi=\lambda\cdot 1$, hence
+$\psi''+2\psi=0$ and unique critical point
+$\psi^*=\cos(\sqrt{2}\,t)$ (Montgomery--Taylor),
+$p^*=0.6725007037$ ($N=8$--$64$ identical, $\omega$-scan optimum
+$\sqrt{2}$); positivity slack $\min 0.760>3/4$.  The proved ceiling
+$0.6818287$ bounds the richer two-moment $+$ on/off-block
+certificate, not the window optimum; the gap $9.3\cdot10^{-3}$ is
+not closable by window optimization.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r628 (probe \texttt{window\_box\_verifier\_probe.py},
+SHA \texttt{9c99ed6a}, SPEC \texttt{36c0e66a}, NUM
+\texttt{84aaf685}, $12/12$) returns
+\textsc{compression\_certified\_box\_numerical}.  Contract
+\texttt{PRIME.WINDOW.BOX.VERIFIER.01}.  Interval-certified
+($40$ digits, interval Cholesky/Weyl) positivity of the finite
+window compression:
+$\lambda_{\min}\ge 1.05\cdot10^{-7}$ ($L=0.55$, $N=24$, primes
+$\{2,3\}$), $\ge 6.1\cdot10^{-11}$ ($0.65$, $N=40$),
+$\ge 9.3\cdot10^{-17}$ ($0.80$, $N=40$, $\{2,3,4\}$) ---
+cancellation depth up to $6\cdot10^{14}$.  A rigorous zero-free
+box is \emph{not} closed: the unconditional on-line majorant via
+Trudgian $\lvert S(T)\rvert\le 0.112\log T+0.278\log\log T+2.51$
+(JNT 134, 2014) is $\sim 10^{7}$ too loose; the numerical box is
+nonempty ($L=0.80$: $\beta_{\min}=0.55$ for $\gamma\le 25$ and
+$50/60$; $0.70$ at $30$; $0.80$--$0.90$ at $35$--$45$);
+$\log\Gamma_{\mathrm{num}}=-1.24+6.86\,L$ ($\sigma=0.1$).
+Missing lemma: a local zero-density bound or enumerated zeros
+(then Booker/Turing-equivalent).  Typed as the explicit-formula
+verification method (Booker, Exp.\ Math.\ 15 (2006)) in window form.
+Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r629 (probe \texttt{certificate\_class\_atlas\_probe.py},
+SHA \texttt{4dae1fbe}, SPEC \texttt{0bf7c64f}, $15/15$) returns
+\textsc{atlas\_no\_new\_unconditional\_gain}.  Contract
+\texttt{PRIME.CERTIFICATE.ATLAS.01}.  LP over hypothetical zero
+configurations: A1 two-moment reproduces $1-p_0=0.3181713$
+($p_0=0.6818287$); A2 $+N(T)/S(T)$: unchanged; A3 $+$ prime-free
+window positivity (CC 2021): redundancy $0$ (min slack
+$2.2\cdot10^{-4}$); A6 $+$ Huxley zero density: unchanged
+(off-line mass forced to $\sigma\le 1/12$, already at
+$\sigma\to 0$).  Conditional rows: GUE $k=3\to 5/6$,
+$k=4\to 31/36$; pair correlation $\alpha_{\max}=1.5/2/\infty\to
+0.7046/0.7159/0.7500$.  Reading: only correlation input beyond
+support $1$ buys proportion.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r632 (probe \texttt{jet\_deflated\_ldet\_probe.py},
+SHA \texttt{63ecb68f}, SPEC \texttt{31a29760}, RESULT
+\texttt{6299cedc}, $14/14$) returns \textsc{jet\_gain\_small}.
+Contract \texttt{PRIME.WINDOW.JETDEFLATION.01} (reviewer-proposed).
+Baseline reproduces r619 $L_{\mathrm{det}}$ ($0.55/0.50/0.80$).
+Deflation $\hat f^{(r)}(20)=0$: $m=0$ no gain ($G=0$), $m=1$
+$G=0.40$ ($L_{\mathrm{det}}$ $0.55\to 0.95$ at $(0.6,20)$);
+control at $\gamma=50$ moves $0.10$--$0.20$; deflating the first
+eight true zeros: $G=0.65$ and sector Ritz floor at $L=0.6$ jumps
+$1.76\cdot10^{-9}\to 2.02$.  Coverage kill: deflating all zeros up
+to $\Gamma=50$ already needs $\dim K/N=0.50$ (above Nyquist $31.8$),
+$\Gamma=100\to 1.45$ (sector collapses), $\Gamma=200\to 3.95$ ---
+sectorization is not a cheap RH-free statement
+(recoordinatization).  Deflation at $20$ does not touch the
+odd-sector failure (peak frequency $4.6/3.9$).  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r630 (probe \texttt{margin\_law\_symreg\_probe.py},
+SHA \texttt{5b3d1125}, SPEC \texttt{87febb97}, RESULT
+\texttt{a0765d7f}, $19/19$, $166\,\mathrm{s}$, dual-run
+identical) returns \textsc{margin\_law\_unresolved}.  Contract
+\texttt{PRIME.MARGIN.LAW.SYMREG.01}.  First-run facts:
+$L_{\mathrm{cross}}=0.3716$, double-precision SVD floor
+$L=0.78$.  Addendum r630b (tall QR, $40$ digits,
+$N\in\{40,60,80,120,160\}$, $L\in[0.30,1.40]$) decides
+\textsc{n\_limited\_artifact}: $\lambda^*(L)$ converges in $N$
+for $L\le 1$ ($35/36$ points, relative change $120\to 160$
+median $4.8\cdot10^{-2}$) but not for $L>1$ ($0/20$);
+converged log-slopes $-50.6$ (band $0.3$--$0.6$, $N$-stable
+to $3$ digits) and $-116$ (band $0.6$--$1.0$, stable for
+$N\ge 80$); $\lambda^*_{160}(0.6)=1.65\cdot10^{-9}$,
+$\lambda^*_{160}(1.0)=9.93\cdot10^{-30}$; no converged
+holdout, descriptive quadratic $C=95.5$ (neither
+$2\gamma_1=28.27$ nor $\gamma_1^2/\pi=63.6$) --- both the
+Widom-$L^2$ and the $-2\gamma_1 L^2$ readings unsupported.
+N2: the converged minimizer nulls $4707$--$4831$ of $5000$
+zeros (frequency-sparse).  N3 synthetic controls
+($\alpha=$ fitted decay constant): true $169$,
+constant-density $101$, all ordinates scaled to first zero
+at $10$: $105$, at $20$: $271$, only first zero moved to
+$20$: $172$ --- density-driven (Landau--Widom plunge from the
+unconditional $N(T)$ profile of the low band), not
+band-edge; RH-neutral.  N4 dBN gap functional $B_k$ on
+$4999$ gaps: $\max 41.8$, $p_{99}=11.5$, median $2.13$,
+fraction $B_k<2=0.470$ ($0.515$ after compressing one gap
+by $0.3$) --- no universal gap barrier.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r633 (probe \texttt{frontier\_followups\_probe.py},
+SHA \texttt{9f5287e7}, SPEC \texttt{ee7c7ba7}, RESULT
+\texttt{814abdf5}, $16/16$, $18\,\mathrm{s}$, dual-run
+identical) returns four follow-up verdicts on sealed objects.
+Contract \texttt{PRIME.FRONTIER.FOLLOWUPS.01}.
+F1 \textsc{a\_compact\_other}($p\approx 1.02$):
+$a_{\max}(\sigma,\gamma^*)=c\,\sigma^{1.024}(\log\gamma^*)^{-1.65}$
+($r^2=0.945$, $n=24$), linear in $\sigma$, not $\sigma^2$
+(mechanism: phase threshold
+$\cos(\sigma(\gamma-\omega)/2a)<0\Leftrightarrow
+a<\sigma\lvert\gamma^*-\omega\rvert/\pi$, not the amplitude
+gain); $a_0=0.720$ at $(\sigma,\gamma^*)=(\tfrac12,20)$,
+extrapolated $0.714$ at $\gamma_1$; true zeros
+$\min_\omega Z(a,\omega)>0$ for
+$a\in\{1,5,25,100,250\}$; adversarial $\sigma=\tfrac12$
+negative only at $a=1$ ($Z=-3.86\cdot10^{-4}$ at $\gamma_1$).
+Parent typing: the compactification removes only the
+$a\to\infty$ end (RH-blind wide-frequency packets); the
+RH-relevant end $a\to 0$ stays unbounded; a Lean theorem
+would need an external explicit $N(T)$/gap bridge ---
+cosmetic, not pursued.
+F2 \textsc{forward\_increases\_margin}: Hellmann--Feynman
+equals Loewner to $10^{-15}$;
+$c(L)=\partial_t\log\lambda^*=+0.315/+0.582/+0.764$ at
+$L=0.40/0.55/0.80$ ($\lambda^*$
+$1.89\cdot10^{-4}/5.70\cdot10^{-8}/2.02\cdot10^{-17}$),
+$t^*=-3.18/-1.72/-1.31$ ($O(1)$, not vacuous); with
+injection $(\beta,\gamma)=(0.6,20)$ at $L=0.55$:
+$\partial_t\lambda^*<0$.  Typing: the sign discriminates
+on/off-line but the monotonicity runs in the proof-useless
+direction --- detector, no lever.
+F3 \textsc{random\_euler\_refuted}:
+$\lambda_{\min}(\mathrm{POLE}+\mathrm{ARCH})=-0.0783/-0.430/-0.926$
+at $L=0.40/0.549/0.80$ (reproduces r623 to $10^{-3}$);
+MC $200$ Haar phase draws at $L=0.55$: mean
+$\lambda_{\min}=-0.496$, std $0.317$, $99.5\%$ negative, vs
+true $\lambda^*=5.70\cdot10^{-8}$; coherence $C(L)=1$ at
+$h_0$ (all $g_{h_0}(\log q)$ same sign); Baker: required
+$\delta=O(1)$ vs toy linear-forms bound $4.6\cdot10^{-8}$ ---
+$7.3$ decades.  Typing: window positivity beyond
+$L_{\mathrm{cross}}$ is arithmetic phase coherence of the
+prime terms; magnitude-only and Diophantine-approximation
+arguments are dead as a class (measured no-go; promotion
+candidate with r615/r619).
+F4 \textsc{lead\_law\_invariant}: growth exponent
+$\alpha=8.18$ (target $2p+1=7$); argmin of the fitted
+margin $+$ overlap laws predicts $0/18$ leads within
+$20\%$ --- $\Delta\approx 0.015$ is not a corollary of
+those laws; open descriptive invariant.
+Experiments only.  \textbf{No RH claim.}
+
 %======================================================================
 \section{External position: the rank-trace ceiling (r267)}\label{sec:external}
 
@@ -2916,8 +3356,27 @@ correlation beyond support one or a certificate class outside two trace
 moments --- which is precisely where the program's bordered terminal
 scalar already lives.
 
+\noindent Round r616 (probe \texttt{inertia\_highermoment\_probe.py},
+SHA \texttt{26ee62ae}, SPEC \texttt{fef4a72f}, $16/16$) returns
+\textsc{c\_capped} as a follow-up to r267.  The $k=2$ reconstruction
+reproduces Alp\"oge--Furman $2/3$ ($\psi_0$) and the ceiling
+$0.6818287$.  $\mathrm{Tr}(W^3)$ at bandwidth one is not
+unconditional ($\sum\lvert\xi_j\rvert\le 3>2=$ Rudnick--Sarnak 1996
+support for $\zeta$; Hejhal 1994 hexagon under RH; Montgomery 1973 and
+Goldston--Montgomery 1987 under RH; the Montgomery--Vaughan diagonal
+$X^k\le T^{2-\varepsilon}$ fails for $k\ge 3$), hence
+$p_3^{\mathrm{uncond}}=p_2=0.6818$.  GUE ideal input $n_+$:
+$0.75\to 5/6\to 31/36$; simple-on-line $0.6818\to 0.6818\to 0.7222$.
+Finite moments never force negative index $0$.  Experiments only.
+\textbf{No RH claim.}
+
 %======================================================================
 \section{The remaining edges and the campaign}\label{sec:edges}
+
+\noindent The kernel-Loewner compact-tail lane is not among these edges:
+Theorem~\ref{thm:kernel-loewner-03} machine-checks $\lambda_*(0.3)\ge 2.1{\times}10^{-3}$ in float64
+(not interval, not~\mE),
+and Section~\ref{sec:nogos} records the method no-go at $L=0.8$.
 
 \begin{openproblem}[Edge A: terminal cross-ratio, cofinal]
 Prove $q_N<1$ on the cofinal ladder --- equivalently derive the true floor
@@ -2966,6 +3425,88 @@ are executed and consumed in wave 6 (\texttt{v963},
 Section~\ref{sec:lstar}); the open center continues in canonical form
 as \texttt{PRIME.LSTAR.SUBORDINATION.01}~\mO.
 \end{openproblem}
+
+\begin{openproblem}[Odd-sector edge of the first prime step]
+For odd $h$ supported on $[-L,L]$,
+\[
+  \langle h,(\mathrm{POLE}+\mathrm{ARCH})h\rangle
+  + w_2\bigl(\lVert f_+\rVert^2-\lVert f_-\rVert^2\bigr)
+  \;\ge\; 0,
+\]
+where $f_\pm$ are the even/odd parts of $h$ relative to the
+reflection $(Rf)(x)=f(d-x)$ at $d=\log 2$ (overlap
+$I=[d-L,L]$).  Round r620 retypes the parent's earlier
+$\lvert g\rvert$ lemma: the prime term $-w_2 g$ stabilizes the
+symmetric edge sector and destabilizes the antisymmetric one,
+so a $\lvert g\rvert$ bound was mis-stated (the prime hurts on
+$P_-$).  The negative direction of $\mathrm{POLE}+\mathrm{ARCH}$
+migrates from the inner region to the $R$-symmetric edge
+sector (mass inner$/+$/$-$: $0.85/0.15/0.005$ at $L=0.38$ to
+$0.06/0.94/0.001$ at $L=0.549$); the antisymmetric edge
+sector is safe without the prime
+($\lambda_{\min}(A|_{P_-})-w_2=+5.7\to +0.29$).
+The repair is a quantitative dominance with margin
+$\lambda^*(L)=\lambda_{\min}(A^{\mathrm{odd}}+w_2(P_+-P_-))$,
+not an exact sector identity.
+Registered as \texttt{PRIME.SEMILOCAL.ODDSECTOR.EDGE.01}~\mO
+(r615; retyped r620 to the oriented form).
+Window forms with $L\lesssim 16$ cannot detect off-line zeros
+(r605 scaling $a=\sigma^2/64$ needs $u$-support $\sim 8/\sigma$),
+so the first prime step is far weaker than RH.
+\textbf{No RH claim.}
+\end{openproblem}
+
+\paragraph{Relay architecture (r619--r622).}
+The support-relay organizes the window by a canonical interval
+per prime power $q$: entry $L_j=\tfrac12\log q$, with continuity
+$Q_j(L_j)=Q_{j-1}(L_j)$ (the newest event is added at the
+endpoint of the previous interval).  The conjunction
+$\forall j\,R_j$ of the finite relay steps is equivalent to
+Weil positivity of the window form.  After r619--r622 the
+honest status is: the $\mathrm{RELAY\_UNIVERSAL}$ criteria
+($\Delta_j\ge 0$, $g<0$, newest-weight repair) are
+\emph{consequences} of $Q_j\succeq 0$ (RH-consistency), not a
+mechanism; there is no source-algebra Darboux rule for the
+rate (r622); the prime-2 repair is not a duplication factor of
+the archimedean operator (r621); and relay steps beyond
+$L\approx 0.5$ are RH-in-a-box statements (hypersensitive
+off-line detectors, r619 $L_{\mathrm{det}}$), not elementary
+finite problems.  The r619 log-slopes $-77/-79$ at
+$L=0.9$--$1.4$ (fixed $N=80$ beyond the SVD floor) are
+$N$-artifacts, corrected by r630b to $-50.6$ ($0.3$--$0.6$)
+and $-116$ ($0.6$--$1.0$); the $\mathrm{RELAY\_UNIVERSAL}$
+verdict, leads $\Delta\approx 0.015$, and $L_{\mathrm{det}}$
+table are unaffected.  \textbf{No RH claim.}
+
+\paragraph{Prime-place dilation and IIKS vanishing (r623, r625, r626).}
+The proposed principal-block / Schur-complement dilation of the
+first $2$-adic Weil channel is structurally blocked (r623
+\textsc{p2\_dilation\_structurally\_blocked}):
+$\mathrm{POLE}+\mathrm{ARCH}$ is not a PSD principal block,
+$M_2$ is indefinite and not rank one, the generic dilation
+tracks $\lambda^*(L)$ tautologically, and the literature stops
+at the archimedean window $\sqrt{2}$
+(Connes--Consani 2021, Thm~1).  The IIKS vanishing-lemma metric
+is not an open lane: the corpus discrete jump is the wrong RHP
+object (r625, enum \textsc{iiks\_no\_metric\_in\_class}, prose
+\textsc{not\_testable\_in\_corpus\_form}), and no
+source-explicit metric in the named class is contractive.  The
+finite-free collision barrier is tautological (r626).  Together
+with the first cut (r619--r622) every tested positivity route
+reduces to Weil positivity in a new coordinate or to an
+RH-strength hypothesis.  The standing assets remain the
+unconditional rational Gabor criterion (r612C), the three
+RH-neutral exact theorems (Eisenstein bridge, commensurability,
+Coxeter completion), the first-prime-step mechanism (r615/r620,
+oriented lemma~\mO) and the relay census with $L_{\mathrm{det}}$
+(r619).  Recommendation: pause the active positivity campaign
+pending a genuinely new mechanism.  Subsequent sealed scouts
+r627 (A--F window optimum $=$ Montgomery--Taylor, \textsc{no\_gain}),
+r628 (box verifier: compression certified, rigor blocked by
+$S(T)$ looseness), r629 (certificate-class atlas: no
+unconditional gain), and r632 (jet deflation: coverage collapse)
+do not reopen a positivity lane.
+\textbf{No RH claim.}
 
 \subsection{The master target form (r273)}\label{sec:master}
 Since r273 the two edges are carried by \emph{one} augmented positivity
@@ -3204,19 +3745,814 @@ crossing the two-moment ceiling?  (Adjudicated \textsc{no\_import} for the
 verbatim import; the renormalized variant is open.)
 \end{itemize}
 
+\subsection{The Gabor reduction chain (r541--r634L)}\label{sec:gabor}
+
+The window-L* / compact Weil extraction of the preceding subsections
+remains the program's live mincut (base~4 / refined~5; Level~C of
+Remark~\ref{rem:threelevels}).  In parallel, rounds r541--r555 assembled a
+\emph{conditional} Gabor-wavepacket reduction, formalized in
+\texttt{RH/GaborSeparation.lean}.  The historical endpoint
+\texttt{gabor\_inputs\_to\_mathlib\_rh} is a sorry-free logical wrapper:
+the two named analytic inputs \texttt{GaborExplicitFormula} and
+\texttt{GaborSeparationInequality} imply Mathlib's
+\texttt{RiemannHypothesis}.  As of the r599/r600 vacuity audit that
+wrapper is \textbf{VACUOUS}: it consumed positivity of
+\texttt{gaborSpectralFormula}, which is not the Weil functional.
+The live object is \texttt{gaborZeroSide}.  The implication is
+conditional; it is not a proof of RH.  Round r612 deleted the
+asserting theorem \texttt{gabor\_separationForAllZeros}; the Prop
+\texttt{GaborSeparationForAllZeros} is retained unasserted
+(\textsc{overspecified}/believed-false).  Separation stays
+open (\mO).  \textbf{No unconditional claim.}
+
+\paragraph{Proved bricks (sorry-free).}
+Three analytic pieces are closed as Lean theorems and are not the
+remaining mincut:
+(i)~the Gaussian integral representation of the pure Gabor test
+(\texttt{RH/GaborIntegral.lean}, r543);
+(ii)~the unit-increment bound \texttt{GaborIncrementBound}, discharged by
+\texttt{gaborIncrementBound\_holds} with explicit constant
+$C=2\cdot\texttt{zetaZerosInDiskCardBoundInner}$
+(\texttt{RH/ZeroIncrement.lean}, r546/r547);
+(iii)~the Jacobi-theta majorant of unit-bin Gaussian maxima, together with
+bin partial summation, giving a $\gamma$-uniform on-line Gaussian mass
+bound $\le C\cdot\Theta_{\mathrm{lobe}}$
+(\texttt{RH/GaborThetaBound.lean}, theorems
+\texttt{gauss\_online\_mass\_uniform} and companions, r552).
+None of these three statements implies the uniform Gabor inequality.
+
+\paragraph{Explicit formula for the Gabor class.}
+The arithmetic landing site of \texttt{GaborExplicitFormula} is the
+classical prime comb $2\Lambda(n)/\sqrt{n}$ (r550), not the compact
+honest weight $\Lambda(n)(1+n^{-1})$ refuted for $\hat h_W$ at r548.
+The identity is numerically confirmed on a sealed 36-cell battery
+(r548, verdict \textsc{ef\_confirmed}, 36/36, residuals
+$\sim10^{-15}$).  Round r581 discharged the Lean remainder:
+\texttt{gabor\_vertical\_arithmetic\_remainder} is a theorem (no
+\texttt{sorryAx}).
+
+\paragraph{Quantifier distinction (binding).}
+Round r541 (\textsc{separation\_go\_gabor}) is a \emph{certified numeric
+precheck} against one synthetic functional-equation quadruple: $42/42$
+cells through $\gamma=10^4$.  It is \emph{not} a discharge of
+\texttt{gabor\_separationInequality}, and it is not a configuration-first
+statement.  The configuration-first game --- $\forall$ increment-conforming
+off-line configurations, $\exists$ a Gabor witness --- is a strictly
+stronger quantifier.  Round r553 (\textsc{witness\_loses}) shows that
+both the one-packet and the two-packet Gabor classes lose that game
+under pure counting control (clusters of equally extreme quadruples).
+Round r551 shows that extremal selection alone does not close the gap:
+the equal-extremal tie factor is $e^{\pi^2/128}\approx 1.080$ against a
+counting budget $141\times$ the available margin.  A spectral-gap
+hypothesis $\sigma'/\sigma\le 0.9194$ would compress that counting
+budget; it is not assumed here.  The live attack is mixed-sign /
+adaptive-nulling witnesses (r554).  Reading r541 as a completed
+separation \texttt{sorry} is a category error.
+
+All Gabor probes remain sealed in \texttt{rh/INVENTORY.json}; the RH
+suite is green.  Nothing in this subsection is evidence for or against
+RH.  \textbf{No RH claim.}
+
+\paragraph{Vacuity audit (r599/r600, 2026-09-01/02).}
+\texttt{gaborSpectralFormula} is \emph{not} the Weil functional: it
+subtracts the pole term $\hat h(1)$.  For $F_0=\texttt{pureGaborTest}\,1\,0$
+the zero-side sum is $\approx 3\cdot 10^{-43}$ while
+$\mathrm{Re}\,\hat h(F_0,1)=\pi e^{1/8}\approx 3.5599$, so
+\texttt{gaborSpectralFormula}\,$F_0\approx -3.56$ unconditionally.
+The old hypothesis $\mathrm{hpos}:=\forall F\text{ admissible},\ 0\le
+\texttt{gaborSpectralFormula}\,F$ is therefore \textbf{false} (not merely
+unproven), and every Mathlib endpoint that consumed it was vacuous.
+The live object is \texttt{gaborZeroSide} (spectral sum without pole
+subtraction); $\mathrm{hpos}^*:=\forall F\text{ admissible},\ 0\le
+\texttt{gaborZeroSide}\,F$ is the RH-core.  Through r611 this was
+equivalently the asserting \texttt{sorry}
+\texttt{gabor\_separationForAllZeros}; r612 deleted that theorem and
+retained the Prop unasserted.
+\texttt{GaborSpectralToArithmetic} is a proved theorem
+(\texttt{GaborSpectralToArithmetic\_holds}): the pole-sign lemma
+$\hat h(1)\ge 0$, \emph{not} the RH-core.
+Round r605A records that
+\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh} takes a separator
+premise \texttt{hsep} (\texttt{GaborZeroSideForAllZeros}, prescribed
+packet \texttt{scalingGaborTest}$(a=\sigma^2/64,\omega=\gamma-\pi a/\sigma)$)
+and is \textsc{forall\_zero\_overspecified}.
+The live unconditional statement is
+\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh\_unconditional}
+(Section~\ref{sec:exposed-orbit}).
+For the full quartic family the iff still carries \texttt{hline}.
+Old endpoints kept as a VACUOUS (r600) audit trail:
+\texttt{GaborSeparatesOffCriticalZeros},
+\texttt{gabor\_separation\_of\_inputs},
+\texttt{gabor\_criterion\_to\_mathlib\_rh},
+\texttt{gabor\_inputs\_to\_mathlib\_rh},
+\texttt{gabor\_separation\_of\_arithmetic\_separators},
+\texttt{gabor\_arithmetic\_inputs\_to\_mathlib\_rh},
+\texttt{gabor\_window\_adaptive\_inputs\_to\_mathlib\_rh}.
+Live replacements:
+\texttt{GaborZeroSideSeparatesOffCriticalZeros},
+\texttt{gabor\_zeroSide\_inputs\_to\_mathlib\_rh},
+\texttt{gabor\_arithmetic\_zeroSide\_inputs\_to\_mathlib\_rh},
+\texttt{gabor\_window\_adaptive\_zeroSide\_inputs\_to\_mathlib\_rh}.
+Named open (no claim): a rigorous tsum bound $Z(F_0)<\pi e^{1/8}$ for an
+unconditional spectral refutation; on-line positivity for general even
+quartics (beyond $\langle 1,0,0\rangle$) so the iff holds without
+\texttt{hline}.  Tactic-sorry census stayed $8$ through r605; $8\to 7$ at r612; no \texttt{sorryAx}.
+\textbf{No RH claim.}
+
+\paragraph{Numerical evidence (experiments only, no RH claim).}
+Round r601 (probe \texttt{gabor\_zeroside\_dominance}, SHA
+\texttt{b7089c71}) returns \textsc{dominance\_fails}: $132$ cells, explicit-formula
+sanity $\le 1.4\cdot 10^{-15}$ with $2000$ zeros, no negative cell.
+Positivity is certified only for $\omega\ge\omega_0(a)$
+($\omega_0\approx 500$ at $a=0.5$, down to $10$ at $a\ge 3$); no $a\le 5$
+is $\omega$-uniform.  The cancellation exponent
+$e^{(1/8+d^2/2)/a}$ near zeros is confirmed.  Conclusion: the Gabor family
+with fixed $a$ is a Bombieri / Connes--Consani-type sub-family, not a
+proof of $\mathrm{hpos}^*$.
+Round r603 (probe \texttt{prime\_inequality\_evosearch}, SHA
+\texttt{06d2ac9a}, $13/13$, byte-identical) is a two-key genetic search
+over $\Lambda(n)$, $n\le 10^6$: mechanically green, discriminatively
+empty.  The $1378$ grid-survivors are comparisons of convergent constants
+on $\mathrm{Re}\,s=1$
+($\lvert\mathrm{Sc}(1,2)\rvert\le\lvert\mathrm{Sc}(1,14.13)\rvert
+\leftrightarrow 0.42\le 1.62$ via $-\mathrm{Re}\,\zeta'/\zeta(1+it)$)
+or grid artefacts.  Controls C1--C4 are all density-only: local jitter
+$p^{0.6}$ moves $\psi$ by only $\sim 10^2$, and a $\beta=0.75$ fake zero
+has amplitude $2100<6900$ (visible only from $X\approx 10^{10}$).
+Lesson recorded: at accessible $X$, RH-level and $0.75$-level are
+indistinguishable by proven-constant inequalities.
+Round r604 (probe \texttt{tfpt\_spectrum\_zero\_crosscorr\_probe.py}, SHA
+\texttt{748ae509}, $7/7$) returns \textsc{artifact}: TFPT-native spectra
+(Moran-kernel complex dimensions, comb tones $\omega_1,\omega_2,\omega_3$,
+E8-clock integers) versus the first $4000$ zeta ordinates.  Positive
+controls $\log 2,3,5,7$ fire at $z\ge 5$; every candidate with $z\ge 5$
+is a $\log p^k$ alias (the only raw hit $\omega_1+2\omega_2=\log 89$ dies
+under unfolding).  Nearest-neighbour and clock-moduli tests are null.
+Experiments only.  \textbf{No RH claim.}
+Round r606 (probe \texttt{connes\_prolate\_residual\_gap\_probe.py},
+SHA \texttt{aeef52a6}, SPEC \texttt{115c0409}; r606 first-run
+$6$--$9$ mode, $t_{\mathrm{cut}}=150$) is
+\textsc{inconclusive}: the CCM Poisson candidate $k_\lambda$ has
+Davis--Kahan ratio $\eta=0.13/0.093/0.029$ at $L=0.3/0.4/0.5$, with
+breakdown for $L\ge 0.6$ attributed to the uniform position grid
+(small blocks fail at $L=0.8$; cf.\ r478); $\mu$ jumped to $5.9$
+and $g<0$ at $L\ge 0.6$ (discretisation artefact).  Addendum r606b
+(two runs byte-identical, $\sim 0.4\,\mathrm{s}$) returns
+\textsc{inconclusive}(evals-not-converged, disc-disagree$>5$pct):
+no $L$ meets successive-$N<1\%$ and Slepian/Fourier agreement
+$<5\%$; the wall is discretisation (Slepian $\lambda_2$ pollution
+beyond $N=12$--$24$, Fourier odd-mode $\sim 2\%$,
+$t_{\mathrm{cut}}=1000$ blocked by spatial Nyquist), not a
+GO/STOP on $\eta$.  The r606 $\mu\approx 5.9$ jump is gone
+($k$ tracks $\lambda_1$); $\lambda_1^{e}$ slightly negative
+($-3\cdot10^{-6}$--$-8\cdot10^{-6}$) at $L\ge 0.5$ but
+unconverged --- not a Chuk contradiction; $\widehat\theta[0,30]$
+NREAL $2,3,3,4,4,4$ vs Riemann count $3$ (plateaus at $4$).
+Lane CLOSED --- superseded by r611
+(\textsc{obs\_not\_converging}) and the
+\textsc{killed}(factorization) typing of the prolate route;
+diagnostic only.  Experiments only.  \textbf{No RH claim.}
+Round r608 (probe \texttt{gabor\_tropical\_heat\_probe.py}, SHA
+\texttt{574c1cc2}, $9/9$) returns \textsc{tropical\_confirmed}:
+$2a\cdot\log\lvert Z\rvert\to F(\omega)$ with error
+$\le 6.77\cdot a\cdot\log(1/a)$.  On-line,
+$F=-\mathrm{dist}(\omega,\{\gamma\})^2\le 0$; a synthetic $\beta=0.9$
+orbit gives $F=+\sigma^2=0.16$.  The hat obeys
+$\partial_a\hat h=\tfrac12\partial_\omega^2\hat h-\hat h/(2a)$ on the
+two Gaussian lobes only --- the cross lobe
+$2e^{(\delta^2-\omega^2)/2a}$ carries residual $-\delta^2/(2a^2)$, so
+$\sqrt{a}\,Z$ is \emph{not} a heat solution and a dyadic-in-$a$
+reduction via the heat semigroup is unavailable for this family.
+Source-side cancellation budget $B(a)=2.05/4.18/13.6$ at
+$a=0.2/0.1/0.05$, i.e.\ $B\sim e^{1/(8a)}$: deriving $F\le 0$ from the
+prime side needs cancellation to relative precision
+$e^{-(1/8+\lvert F\rvert/2)/a}$ with primes up to $n=e^{1/(2a)}$ --- the
+quantitative form of the NOGO-T1 wall.  Consequence: the HEAT.SOURCE
+lane is a NOGO T1 (RH-strength cancellation) and is STOP.
+Experiments only.  \textbf{No RH claim.}
+Round r609 (probe \texttt{e8\_directed\_readout\_probe.py}, SHA
+\texttt{9ab0a638}, SPEC \texttt{3edfb824}, $49/49$) returns
+\textsc{e8\_readout\_sealed}($7/8$): Seifert $S+S^T=A$,
+$\mathrm{charpoly}(-S^{-1}S^T)=\Phi_{30}$, $\mathrm{rank}(S-S^T)=8$;
+$H_8$ weight enumerator $1+14y^4+y^8$; $240=16+14\cdot16$; Steiner
+$S(3,4,8)$; $\mathrm{srg}(120,56,28,24)$ eigenvalues $56/8/-4$ with
+multiplicities $1/35/84$; $N(n)=240\sigma_3(n)$ for $n\le10$;
+$\tau(n)$ for $n\le8$ ($A_P(1)=1658880$); $E_4^3-E_6^2=1728\Delta$;
+$(\mathbb{Z}/30)^\times\cong C_2\times C_4\not\cong C_2^3$, character
+table $=H_2\otimes F_4$; $E_6\oplus A_2$ index $3$, Smith
+$(1^6,3,3)$, roots $72+6+162$.  C7 was \textsc{not\_tested} at probe
+time and was later supplied in \texttt{note\_e8\_gaussian\_code.tex}
+(explicit $8\times8=H_2\otimes F_4$, permutation
+$[0,1,4,3,5,2,7,6]$); the Gauss-code transform remains undefined
+(open remark \texttt{rem:c7-audit}).  TFPT-side exact structure; no
+prime bridge is shown; promotion to \texttt{verification/} is a
+pending user decision.  Experiments only.  \textbf{No RH claim.}
+Round r611 is recorded in Section~\ref{sec:nogos}
+(\textsc{obs\_not\_converging}; Herglotz/Aubin--Nitsche STOP).
+Round r613 is recorded in Section~\ref{sec:nogos}
+(\textsc{no\_identification}; ordered-E8 canonical system dead).
+These are sealed experiments (r606/r606b CLOSED as a diagnostic
+on the same file; superseded by r611), not verification modules.
+
+\noindent Round r615 (probe \texttt{semilocal\_firststep\_probe.py},
+SHA \texttt{3a0741de}, SPEC \texttt{04f9c9ec}, $26/26$) returns
+\textsc{firststep\_leakage\_controlled}.  The Weil window form with
+exactly one prime ($L\in(0.3466,0.5493)$,
+$w_2=\sqrt{2}\log 2=0.98026$) has Ritz $\lambda^*(L)$ equal to
+zero-side leakage to $10^{-4}$--$10^{-5}$ at all tested $L$; the
+extremal vector is Slepian-like (overlap with $\psi_0\ge 0.9989$,
+$\ge 99.8\%$ spectral mass below $\gamma_1=14.1347$) with no
+character change at the prime entry.
+$\lambda^*(0.30)=7.57\cdot10^{-3}$ (v1017 padded floor
+$2.1\cdot10^{-3}$, factor $3.6$),
+$\lambda^*(0.40)=1.85\cdot10^{-4}$,
+$\lambda^*(0.549)=5.80\cdot10^{-8}$ with POLE $+1.30$ / ARCH $-1.29$ /
+PRIME $1.78\cdot10^{-2}$ (cancellation depth $2.25\cdot10^{7}$).
+Pinning at $L=0.52$: $\delta_{\mathrm{crit}}=2.5\cdot10^{-5}$
+relative on $w_2$, $\varepsilon_{\mathrm{crit}}=+4.1\cdot10^{-5}/-1.7\cdot10^{-6}$
+on the atom position, WPERM $-0.135$, SCRAMBLE $-0.33/-0.18/-0.047$.
+Mechanism (T9): the minimizer of the fictitious prime-free form
+POLE$+$ARCH is purely odd, with
+$\mathrm{POLE}=-2\langle h,\sinh(u/2)\rangle^2<0$ and $\mathrm{ARCH}<0$,
+and $g(\log 2)<0$, so $-w_2 g(\log 2)$ carries the positivity
+($L=0.40$: $-0.018-0.060+0.130=+0.053$).  The odd sector turns
+negative at $L\approx 0.372$; prime $2$ enters at $0.3466$
+(margin $\Delta L\approx 0.025$).  Named open lemma
+\texttt{PRIME.SEMILOCAL.ODDSECTOR.EDGE.01}~\mO, retyped at r620
+to the oriented form: for odd $h$ on $[-L,L]$,
+$\langle h,(\mathrm{POLE}+\mathrm{ARCH})h\rangle
++w_2(\lVert f_+\rVert^2-\lVert f_-\rVert^2)\ge 0$;
+the negative direction of $\mathrm{POLE}+\mathrm{ARCH}$ migrates
+from the inner region to the $R$-symmetric edge sector; the
+antisymmetric edge sector is safe without the prime.  The
+repair is a quantitative dominance with margin $\lambda^*(L)$,
+not an exact sector identity.
+Fence: window forms with $L\lesssim 16$ cannot detect off-line zeros
+(r605 scaling $a=\sigma^2/64$ needs $u$-support $\sim 8/\sigma$), so
+the first prime step is far weaker than RH.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r617 (probe \texttt{e8\_coxeter\_euler\_completion\_probe.py},
+SHA \texttt{6ac6bab2}, SPEC \texttt{5aa3935b}, $45/45$) returns
+\textsc{completion\_exact}.
+$\mathrm{Tr}\,C=-1$; the $\Phi_{30}$ M\"obius identity holds;
+$(1-x)\Phi_{30}=1-x^2-x^3+x^6+x^7-x^9$;
+$D_{E8}(s)=\zeta(6s)\zeta(10s)\zeta(15s)/[\zeta(2s)\zeta(3s)\zeta(5s)\zeta(30s)]$
+has residuals at $X=10^6$ of $1.28\cdot10^{-4}$ ($s=0.75$) and
+$3.5\cdot10^{-14}$ ($1.5$); $\det_2$ scalar control
+$e^{P(s)}/\zeta(s)$ residual $1.75\cdot10^{-14}$.  Class statement:
+scalar $-1$ gives $A_1\to 1/\zeta(2s)$, $A_2\to 1/\zeta(3s)$,
+$E_6\to\zeta(4s)\zeta(6s)/[\zeta(2s)\zeta(3s)\zeta(12s)]$; negative
+control $B_2$ (trace $0$) gives $\zeta(2s)/[\zeta(s)\zeta(4s)]$,
+divergent at $0.75$.  The identity is Beurling-generic.  Typed no-go
+\texttt{E8.COXETER.REGULARIZED\_SPLIT.NO\_GO.01} is recorded in
+Section~\ref{sec:nogos}.  Fence: ``The trace-free completion is
+zero-free and pole-free in $\mathrm{Re}\,s>1/2$. The splitting into
+the scalar zeta channel and the Coxeter channel is open and
+RH-equivalent. No RH claim.''  Promotion to \texttt{verification/}
+(v1018/v1019) is in progress.  Experiments only.
+
+\noindent Round r618 (probe \texttt{jensen\_compiler\_rigidity\_probe.py},
+SHA \texttt{29ccf1c7}, SPEC \texttt{bc8d8624}, $43/43$) returns
+\textsc{compilers\_structurally\_rigid}.  Data:
+$a_0=\xi(1/2)=0.497120778$, Tur\'an inequalities for $n\le 12$,
+$J_{n,d}$ hyperbolic for $d\le 8$, $n\le 4$ (consistent with
+GORZ 2019; nothing new).  The two structural no-gos are recorded in
+Section~\ref{sec:nogos}.  Fence: both compilers are generic
+real-rootedness certificates; existence for all $(n,d)$ is equivalent
+to RH; the E8 data are RH-neutral.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r619 (probe \texttt{support\_relay\_census\_probe.py},
+SHA \texttt{fcfa7771}, SPEC \texttt{7299737d}, RESULT
+\texttt{e0379485}, $12/12$) returns \textsc{relay\_universal}.
+Prime powers $q\le 32$ ($18$ events), entry
+$L_j=\tfrac12\log q$.  Every ancestor form $Q_{j-1}$ (without
+the newest event) fails a finite lead after entry:
+\begin{center}\small
+\begin{tabular}{@{}rccccccccc@{}}
+\toprule
+$q$ & 2 & 3 & 4 & 5 & 7 & 8 & 9 & 11 & 13\\
+$\Delta_j$ & 0.0279 & 0.0123 & 0.0146 & 0.0111 & 0.0105 & 0.0140 & 0.0125 & 0.0116 & 0.0131\\
+\midrule
+$q$ & 16 & 17 & 19 & 23 & 25 & 27 & 29 & 31 & 32\\
+$\Delta_j$ & 0.0166 & 0.0126 & 0.0144 & 0.0141 & 0.0170 & 0.0181 & 0.0151 & 0.0147 & 0.0221\\
+\bottomrule
+\end{tabular}
+\end{center}
+$\Delta_j=0.011$--$0.028$ (nearly constant).  The failing mode
+is always odd, reflection-symmetric edge sector w.r.t.\ the
+newest event ($g<0$), edge mass $0.07$--$0.65$; the newest
+weight restores positivity (all $18$).  $\lambda^*$ decay
+slopes per interval $-50/-77/-79$ at fixed $N=80$
+(global $-68.6$; Slepian $-28.3$; r615 $-44.8$) --- the
+$-77/-79$ values at $L=0.9$--$1.4$ are $N$-artifacts
+(corrected by r630b: trustworthy slopes $-50.6$ on
+$0.3$--$0.6$ and $-116$ on $0.6$--$1.0$;
+$\mathrm{RELAY\_UNIVERSAL}$, leads $\Delta\approx 0.015$,
+and $L_{\mathrm{det}}$ unaffected) --- super-exponential
+(Landau--Widom plunge); $\lambda^*$ underflows the SVD range
+beyond $L\approx 1.4$.  Controls: SCRAMBLE first failure $0.376$,
+WPERM $0.402$, EPSTEIN ($2^k$ only) $0.564\approx L_3+0.015$
+--- each control breaks at entry+lead.
+\begin{center}\small
+\begin{tabular}{@{}lc@{}}
+\toprule
+$(\beta,\gamma)$ & $L_{\mathrm{det}}$\\
+\midrule
+$(0.6,20)$ & $0.55$\\
+$(0.75,20)$ & $0.55$\\
+$(0.6,50)$ & $0.80$\\
+$(0.9,20)$ & $0.50$\\
+\bottomrule
+\end{tabular}
+\end{center}
+\textbf{Parent typing.}  The \textsc{relay\_universal} criteria
+($\Delta_j\ge 0$, $g<0$, repair) are consequences of
+$Q_j\succeq 0$ (RH-consistency), not a mechanism.  The
+informative results are the constant leads (``greedy
+consumption'': each prime power becomes load-bearing within
+$\Delta L\approx 0.015$), the control breaks at entry+lead,
+the super-exponential decay, and $L_{\mathrm{det}}$ --- which
+shows that windows with $L\gtrsim 0.5$ are hypersensitive
+off-line detectors (a nulled zero displaced by $\sigma$
+contributes $-\sigma^2\lvert\partial\hat f\rvert^2$, beating
+the tiny $\lambda^*$), hence relay steps beyond $L\approx 0.5$
+are RH-in-a-box statements, not elementary finite problems.
+Fence: window positivity for the scanned $L$ is RH-consistent.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r620 (probe \texttt{p2\_reflection\_factor\_probe.py},
+SHA \texttt{194fe9e5}, SPEC \texttt{7c8e73b7}, $73/73$) returns
+\textsc{mixed\_sector}.  Exact identity for odd $h$,
+$d=\log 2$, overlap $I=[d-L,L]$, reflection
+$(Rf)(x)=f(d-x)$:
+$g_h(d)=-(\lVert f_+\rVert^2-\lVert f_-\rVert^2)$; the prime
+term $-w_2 g=w_2(\lVert f_+\rVert^2-\lVert f_-\rVert^2)$
+stabilizes the symmetric edge sector and destabilizes the
+antisymmetric one.  $\dim E_-(A^{\mathrm{odd}})=1$ for
+$L\ge 0.38$ ($\lambda_{\min}-2.4\cdot 10^{-2}$ at $0.38$ to
+$-0.43$ at $0.549$).  Mass of the negative vector
+inner$/+$/$-$: $0.85/0.15/0.005$ ($0.38$), $0.71/0.28/0.01$
+($0.40$), $0.50/0.48/0.02$ ($0.43$), $0.06/0.94/0.001$
+($0.549$) --- migrates from inner to $R$-symmetric edge.  The
+antisymmetric sector is safe without the prime
+($\lambda_{\min}(A|_{P_-})-w_2=+5.7\to +0.29$); cross term
+$0.12$--$0.28$.  Oriented inequality
+$\lambda_{\min}(A^{\mathrm{odd}}+w_2(P_+-P_-))=\lambda^*(L)\ge 0$
+everywhere.  The contract
+\texttt{PRIME.SEMILOCAL.ODDSECTOR.EDGE.01}~\mO is retyped to
+this oriented statement; the repair is a quantitative
+dominance with margin $\lambda^*(L)$, not an exact sector
+identity.  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r621 (probe \texttt{p2\_digamma\_duplication\_probe.py},
+SHA \texttt{dff2e1b3}, SPEC \texttt{78f47c87}, $37/37$) returns
+\textsc{duplication\_constant\_only} (recorded as a no-go in
+Section~\ref{sec:nogos}).  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r622 (probe \texttt{support\_darboux\_probe.py},
+SHA \texttt{845bb937}, SPEC \texttt{27ffd017}, PAYLOAD
+\texttt{e1031d17}, $64/64$) returns
+\textsc{transport\_feasible\_norule} (recorded as a no-go in
+Section~\ref{sec:nogos}).  The transport formulation relocates
+the tiny margins into the scalar $c_0(L)$ (relative form of
+the wall); no source-side rule.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r623 (probe \texttt{semilocal\_p2\_dilation\_probe.py},
+SHA \texttt{d1bec728}, SPEC \texttt{5890676d}, $128/128$) returns
+\textsc{p2\_dilation\_structurally\_blocked} (recorded as a no-go
+in Section~\ref{sec:nogos}).  The $2$-adic identity
+$m_2(t)=\log 2\cdot(1-P_r(t\log 2))$ holds to
+$4.9\cdot10^{-12}$; the proposed PSD dilation is obstructed at
+the principal block, at $M_2$, and as a tautology of
+$\lambda^*(L)$.  The lane is not opened.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r625 (probe \texttt{iiks\_vanishing\_metric\_probe.py},
+SHA \texttt{973a1ce2}, SPEC \texttt{7a4257e3}, NUM
+\texttt{2d066e2d}, $19/19$) returns
+\textsc{iiks\_no\_metric\_in\_class} (recorded as a no-go in
+Section~\ref{sec:nogos}; prose
+\textsc{not\_testable\_in\_corpus\_form}).  Zhou's vanishing
+lemma is not testable on the corpus discrete IIKS/CD object:
+the jump is not the RHP jump equivalent to $\tau(s)\ne0$, and
+no metric in the source-explicit class is contractive.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r626 (probe \texttt{xi\_finitefree\_collision\_probe.py},
+SHA \texttt{c4750063}, SPEC \texttt{c7cef974}, NUM
+\texttt{f533d168}, $51/51$) returns
+\textsc{collision\_detector\_calibrated\_no\_barrier}
+(recorded as a no-go in Section~\ref{sec:nogos}).  The
+collision barrier $\int\Phi\,dt<\infty$ is equivalent to
+$\mathrm{Disc}\ne0$ along the path; Taylor sections of $\Xi$
+are not real-rooted at $t=0$; the detector is calibrated on a
+hyperbolic control.  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r627 (probe \texttt{af\_twomoment\_optimizer\_probe.py},
+SHA \texttt{da1a9118}, SPEC \texttt{9b95f564}, $17/17$) returns
+\textsc{no\_gain} (recorded as a no-go in
+Section~\ref{sec:nogos}).  Window optimum in the A--F two-moment
+class is Montgomery--Taylor $p^*=0.6725007037$; the proved ceiling
+$0.6818287$ is a richer certificate, not a window bound.  Gap
+$9.3\cdot10^{-3}$ not closable by window optimization.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r628 (probe \texttt{window\_box\_verifier\_probe.py},
+SHA \texttt{9c99ed6a}, SPEC \texttt{36c0e66a}, NUM
+\texttt{84aaf685}, $12/12$) returns
+\textsc{compression\_certified\_box\_numerical}
+(recorded as a no-go in Section~\ref{sec:nogos}).  Finite-window
+positivity is interval-certified; a rigorous zero-free box is
+blocked by Trudgian $\lvert S(T)\rvert$ looseness
+($\sim 10^{7}$).  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r629 (probe \texttt{certificate\_class\_atlas\_probe.py},
+SHA \texttt{4dae1fbe}, SPEC \texttt{0bf7c64f}, $15/15$) returns
+\textsc{atlas\_no\_new\_unconditional\_gain}
+(recorded as a no-go in Section~\ref{sec:nogos}).  Unconditional
+rows do not improve on $p_0=0.6818287$; only pair-correlation
+input beyond support $1$ buys proportion.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r632 (probe \texttt{jet\_deflated\_ldet\_probe.py},
+SHA \texttt{63ecb68f}, SPEC \texttt{31a29760}, RESULT
+\texttt{6299cedc}, $14/14$) returns \textsc{jet\_gain\_small}
+(recorded as a no-go in Section~\ref{sec:nogos}).  Local
+$L_{\mathrm{det}}$ gain collapses under coverage
+($\dim K/N$ above Nyquist).  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r630 (probe \texttt{margin\_law\_symreg\_probe.py},
+SHA \texttt{5b3d1125}, SPEC \texttt{87febb97}, RESULT
+\texttt{a0765d7f}, $19/19$) returns
+\textsc{margin\_law\_unresolved} with r630b addendum
+\textsc{n\_limited\_artifact} (recorded as a no-go in
+Section~\ref{sec:nogos}).  Converged log-slopes $-50.6$
+($0.3$--$0.6$) and $-116$ ($0.6$--$1.0$); the margin law is
+density-driven from the unconditional $N(T)$ profile
+(RH-neutral); the dBN gap functional $B_k$ is not a
+universal barrier (fraction $B_k<2=0.470$).  Experiments
+only.  \textbf{No RH claim.}
+
+\noindent Round r633 (probe \texttt{frontier\_followups\_probe.py},
+SHA \texttt{9f5287e7}, SPEC \texttt{ee7c7ba7}, RESULT
+\texttt{814abdf5}, $16/16$) returns four follow-up verdicts
+(recorded as a no-go in Section~\ref{sec:nogos}).
+\textsc{random\_euler\_refuted} is a measured class no-go
+(magnitude-only and Diophantine-approximation arguments
+dead); $a$-compactification is cosmetic (the RH-relevant
+end $a\to 0$ stays unbounded); forward Loewner is a
+detector, not a lever; $\Delta\approx 0.015$ is not a
+corollary of the fitted margin/overlap laws.  Experiments
+only.  \textbf{No RH claim.}
+
+\noindent Round r631L (Lean-only, no probe).  Classification of
+the seven tracked \texttt{sorry}s: R-class Canonical.lean:264
+\texttt{lstar\_canonical}, :273 \texttt{terminal\_q\_canonical};
+T-class but blocked Canonical.lean:396
+\texttt{pair\_terminal\_dictionary}, Source.lean:1008
+\texttt{mainWindow\_iff\_builtFromPrimeSource}; A-class
+Elementwise.lean:1589 \texttt{arch\_gauss\_mellin\_digamma\_identity},
+ExternalBridges.lean:15641
+\texttt{standard\_explicit\_formula\_identification}, :15708
+\texttt{fullWeil\_separates\_offCritical\_zeros}.  No closure.
+Docstring fix: \texttt{GaborContourLimitRemainder} is proved
+(\texttt{gaborContourLimitRemainder\_holds}, r576).  Census stays
+$7$.  \textbf{No RH claim.}
+
+\noindent Round r634L (Lean-only, no probe).
+\texttt{gabor\_explicitFormula\_pure} is unconditional for
+admissible pure $F$;
+\texttt{gabor\_primeSide\_rational\_criterion\_iff\_rh} is the
+prime-side rational $\Pi_1$ form of RH (axioms
+\texttt{propext}/\texttt{Classical.choice}/\texttt{Quot.sound}).
+Remaining EF brick: \texttt{GaborHatQuarticExplicitRemainder}
+(non-pure quartics only).  Census stays $7$.
+\textbf{No RH claim.}
+
+\paragraph{Two-key filter (externalization package).}
+A proposed route counts as RH-relevant only if it (key~1) fails under
+prime-position scrambling that preserves densities and (key~2) fails when
+the functional equation / an off-line zero quadruple is injected.
+Round r565 showed the Gabor dominance margin is scramble-invariant
+(key~1 fails $\Rightarrow$ it is zero-geometry, not arithmetic).
+
+\paragraph{Outlook (2026).}
+arXiv:2608.13637 (Aug.~2026, Lean-verified,
+\texttt{github.com/anthropics/zeta-23-lean}, Apache-2.0) obtains that at
+least $2/3$ of the zeros are simple and on the line ($0.6725$ with a
+Montgomery--Taylor window) via a rank--trace inequality plus Sylvester
+inertia on a finite compression of Weil's Hermitian form; the prime side
+is the Montgomery--Vaughan diagonal only; \S7.2 proves a
+``bandwidth-one ceiling'' $\approx 0.6819$, beyond which prime-pair
+information (Hardy--Littlewood strength, Fourier support $>1$) or higher
+trace moments in the Rudnick--Sarnak range are required.
+arXiv:2602.04022 (Connes, Feb.~2026) together with Connes--Consani--Moscovici
+``Zeta spectral triples'' (EMS 2026) show that for each cutoff $c$ the
+even ground state of the truncated Weil form has Mellin zeros on the
+critical line (Connes--van Suijlekom); convergence to $\zeta$-zeros is
+the open RH-core.
+arXiv:2608.24827 (Aug.~2026) gives unconditional window positivity
+$Q(f)\ge 8.9\cdot 10^{-18}\|f\|^2$ for support $1.6$, with
+$-\ln\lambda^*(L)\simeq 2\pi^2 N(T^*)/\ln N(T^*)$,
+$T^*=2\pi e^{2L}$; pointwise certificates need frequencies up to
+$2\pi\exp(4e^L)$ (a doubly exponential barrier).
+Our reading: all three meet the same wall as our r565/r603 findings ---
+local (Euler-factor) information is RH-blind; progress beyond the ceiling
+needs prime-pair (support $>1$) control.
+\textbf{No RH claim.}
+
+\subsection{The exposed-orbit separator (r605)}\label{sec:exposed-orbit}
+
+Round r605A: \texttt{GaborZeroSideForAllZeros} is the prescribed-packet
+pointwise form $\forall\rho$ with
+\texttt{scalingGaborTest}$(a=\sigma^2/64,\ \omega=\gamma-\pi a/\sigma)$
+and is \textsc{forall\_zero\_overspecified};
+\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh} takes \texttt{hsep}
+as a premise.
+
+Round r605N (probe \texttt{gabor\_exposed\_orbit\_probe.py},
+SHA \texttt{c99998c4}, SPEC \texttt{1a4bf949}, $40/40$, byte-identical)
+returns \textsc{exposed\_orbit\_holds}: $9/9$ configs negative at $n=0$,
+normalised limit $-4m(\rho^*)$ exact, tail bound holds.
+
+Rounds r605B+C add \texttt{RH/GaborExposedOrbit.lean} ($1734$ lines,
+sorry-free).  The module supplies \texttt{gaborScore}, the
+\texttt{ExposedOrbit} structure, \texttt{exists\_exposedOrbit\_of\_not\_rh},
+phase lock $\cos=-1$, the three-lobe majorant
+$\mathrm{Re}\,\hat h(\rho^*)\le -(\pi/4a)\,e^{M/2a}+(3\pi/4a)\,e^{(M-\Delta)/2a}$,
+\texttt{gaborExposedOrbitAssembly\_holds}, and the endpoints
+\texttt{exists\_negative\_pureGabor\_of\_not\_rh} (\texttt{hasm}),
+\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh\_of\_assembly}
+(\texttt{hasm}), and
+\[
+\bigl(\forall a,\omega\ (a>0):\ 
+0\le\texttt{gaborZeroSide}(\texttt{pureGaborTest}\,a\,\omega)\bigr)
+\;\Longleftrightarrow\;
+\texttt{RiemannHypothesis}
+\]
+(\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh\_unconditional};
+$\#$print axioms $=\{\texttt{propext},\ \texttt{Classical.choice},\ \texttt{Quot.sound}\}$).
+Tactic-sorry census at this landing $8$ (Canonical $3$, Source $1$,
+Elementwise $1$, GaborSeparation $1$, ExternalBridges $2$);
+live census $7$ after r612 (GaborSeparation $0$).
+Independent audit r605C-AUDIT: \textsc{statement\_sound}
+(\texttt{gaborZeroSide} is $\mathrm{Re}\sum'$ over
+\texttt{IsCriticalStripZetaZero} weighted by
+\texttt{riemannZetaMultiplicity}; summable for every pure packet by
+\texttt{gaborMultiplicityWeightedHatSummable}; $\leftarrow$ is on-line
+positivity $\hat h(\tfrac12+it)=$ a real square $\ge 0$; every
+\texttt{ExposedOrbit} field is discharged from $\neg$RH).
+
+\textbf{Mandatory wording.}
+RH $\Longleftrightarrow$ nonnegativity of the pure Gabor zero-side on
+the two-parameter family $(a,\omega)$.  The sharpest live formal
+statement (r634L) is the prime-side rational criterion
+\texttt{gabor\_primeSide\_rational\_criterion\_iff\_rh}:
+RH $\Longleftrightarrow$ $\forall$ rational $(a,\omega)$ with $a>0$,
+$\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}\ge 0$ on
+$\texttt{pureGaborTest}\,a\,\omega$.
+Positivity of \texttt{gaborZeroSide} itself remains open.
+This is not an RH proof.  The Weil test space is reduced to a
+two-parameter pure Gabor family.
+\textbf{No RH claim.}
+
+\paragraph{Low-height zero-free and spectral refutation (r610).}
+Lean-only, in \texttt{RH/GaborSeparation.lean}.
+\texttt{GaborLowHeightZeroFree} is an unasserted Prop at $T_0=4$
+(classically true: the first zero is $14.1347$, not in Mathlib).
+The pole term is exactly $\pi e^{1/8}$
+(\texttt{gaborHat\_pure\_one\_zero}); the zero side is $\le 19/20$ of
+it, and \texttt{gaborSpectralFormula\_refuted\_of\_lowHeight} is a
+theorem.  $\#$print axioms
+$=\{\texttt{propext},\ \texttt{Classical.choice},\ \texttt{Quot.sound}\}$.
+Conditional/finite only.  \textbf{No RH claim.}
+
+\paragraph{Countable rational-packet criterion (r612/r612C).}
+The asserting theorem \texttt{gabor\_separationForAllZeros} is deleted.
+The Prop \texttt{GaborSeparationForAllZeros} is retained unasserted with
+an OVERSPECIFIED / believed-false docstring.
+Module \texttt{RH/GaborCountableCriterion.lean} ($551$ lines,
+imported in \texttt{RH.lean}).  Round r612C proves
+\texttt{gaborZeroSideContinuous\_holds} (joint continuity of
+$Z(a,\omega):=\texttt{gaborZeroSide}(\texttt{pureGaborTest}\,a\,\omega)$
+on $\{a>0\}\times\mathbb{R}$ via a local uniform Gaussian majorant
+$\lVert\hat h\rVert\le(\pi/a_0)\exp((1/8+\omega_1^2/2)/a_0)\exp(-t^2/(4a_1))$
+and \texttt{continuousOn\_tsum}; summability via
+\texttt{summable\_gauss\_over\_zeros}).  The rational-packet
+criterion is now \emph{unconditional}:
+\[
+\texttt{gabor\_zeroSide\_rational\_criterion\_iff\_rh\_unconditional}
+\;:\;
+\bigl(\forall a,\omega\in\mathbb{Q},\; a>0:\ 
+0\le\texttt{gaborZeroSide}(\texttt{pureGaborTest}\,a\,\omega)\bigr)
+\;\Longleftrightarrow\;
+\texttt{RiemannHypothesis}.
+\]
+$\#$print axioms
+$=\{\texttt{propext},\ \texttt{Classical.choice},\ \texttt{Quot.sound}\}$.
+Named-open list shrinks by one (\texttt{GaborZeroSideContinuous}
+is proved).  Tracked sorry census stays $7$.  Module count
+$53\to 54$ at r612.  Conditional/finite only in the sense that
+positivity of \texttt{gaborZeroSide} itself remains open.
+\textbf{No RH claim.}
+
+\paragraph{Prime-side rational criterion (r634L).}
+The pure-class explicit formula
+\texttt{gabor\_explicitFormula\_pure} is now a theorem
+(unconditional: both remainders are theorems).  Transporting the
+r612C rational-packet criterion across that identity yields the
+sharpest live $\Pi_1$ form
+\texttt{gabor\_primeSide\_rational\_criterion\_iff\_rh}
+($568$ lines in \texttt{RH/GaborCountableCriterion.lean}):
+\[
+\bigl(\forall a,\omega\in\mathbb{Q},\; a>0:\ 
+0\le\texttt{gaborPoleSide}(\texttt{pureGaborTest}\,a\,\omega)
+-\texttt{gaborPrimeComb}(\texttt{pureGaborTest}\,a\,\omega)
++\texttt{gaborArchSide}(\texttt{pureGaborTest}\,a\,\omega)\bigr)
+\;\Longleftrightarrow\;
+\texttt{RiemannHypothesis}.
+\]
+$\#$print axioms
+$=\{\texttt{propext},\ \texttt{Classical.choice},\ \texttt{Quot.sound}\}$.
+The remaining EF brick \texttt{GaborHatQuarticExplicitRemainder}
+applies only to non-pure even quartics and is not used by the
+criterion.  Positivity of \texttt{gaborZeroSide} itself remains
+open.  This is not an RH proof.
+\textbf{No RH claim.}
+
 %======================================================================
 \section{Lean 4 formalization status}\label{sec:lean}
 
 Following the r267 recommendation (layer by provability), the workspace
 \texttt{rh/lean} contains a Lean~4 project (toolchain v4.29.1, mathlib
 pinned; builds green on the reference machine).  Status at the time of
-writing:
+writing: fifty-six modules under \texttt{rh/lean/RH/} (r617L:
+$54\to 56$).  Tactic-sorry
+census $7$ (Canonical~$3$, Source~$1$, Elementwise~$1$,
+ExternalBridges~$2$; GaborSeparation~$0$); all other modules $0$.
+Round r631L classifies the seven as
+\textbf{R-class} (RH-core, Canonical.lean:264 \texttt{lstar\_canonical},
+:273 \texttt{terminal\_q\_canonical} --- $L^*$-positivity / terminal
+gate $q_N<1$; opaque \texttt{canonicalCompletion});
+\textbf{T-class but blocked} (Canonical.lean:396
+\texttt{pair\_terminal\_dictionary}, OP dictionary $Z=r_{N-1}$ missing;
+Source.lean:1008 \texttt{mainWindow\_iff\_builtFromPrimeSource}, both
+sides opaque);
+\textbf{A-class} (Elementwise.lean:1589
+\texttt{arch\_gauss\_mellin\_digamma\_identity};
+ExternalBridges.lean:15641
+\texttt{standard\_explicit\_formula\_identification}, comb
+$2\Lambda/\sqrt{n}$ vs $\Lambda(1+n^{-1})$; :15708
+\texttt{fullWeil\_separates\_offCritical\_zeros}, classical Weil
+separator).  No closure at r631L.  The inventory below is the live census.  Historical status notes that
+follow it retain their original wording and are not a second count.
 
-\begin{center}\small
-\begin{tabular}{@{}llp{0.36\linewidth}@{}}
+\paragraph{Gabor explicit-formula brick chain (r555--r598).}
+\begin{sloppypar}
+The Gabor route's analytic spine is a sorry-free brick chain, recorded
+module-by-module in the inventory.  In order: hat analyticity
+(\texttt{GaborHatAnalytic}, r555); horizontal edges
+(\texttt{GaborHorizontalEdges}, r557); right and left vertical
+identification (\texttt{GaborVertical}, r564;
+\texttt{GaborLeftVertical}, r570); fixed-$T$ contour residue
+(\texttt{GaborContourResidue}, r557); arch contour shift and Digamma
+fold (\texttt{GaborArchContour}/\texttt{GaborArchDigamma}, r577--r581);
+autocorrelation closed form (\texttt{GaborAutocorrelation}, r572);
+zero summability (\texttt{GaborZeroSummable}, r557);
+functional-equation multiplicity (\texttt{GaborFEMultiplicity}, r582);
+spectral bridge with on/off split and fundamental-domain exhaustion
+(\texttt{GaborSpectralBridge}, r579--r589); dominance Log/Log2
+(\texttt{GaborDominanceLog}, r575; \texttt{GaborDominanceLog2},
+r583/r589); outer tail (\texttt{GaborOuterTail}, r593/r594); window
+glue and anchored witness (\texttt{GaborWindowGlue}, r595;
+\texttt{GaborAnchoredWitness}, r598).  Round r617L adds two
+sorry-free modules outside this Gabor spine:
+\texttt{CoxeterCompletion} ($\Phi_{30}$ identities and
+$\mathrm{Tr}\,C=-1$) and \texttt{PrimeLogIndependence}
+($\mathbb Q$-linear independence of $\{\log p\}$; Mathlib had no such
+lemma).  Round r634L discharges the pure-class explicit formula
+as a theorem: \texttt{gabor\_explicitFormula\_pure} states that for
+every admissible pure $F$ (coeffs $\langle 1,0,0\rangle$)
+\[
+\texttt{gaborZeroSide}\,F
+=\texttt{gaborPoleSide}\,F
+-\texttt{gaborPrimeComb}\,F
++\texttt{gaborArchSide}\,F,
+\]
+unconditionally --- both named remainders
+\texttt{gaborContourLimitRemainder\_holds} (r576) and
+\texttt{gabor\_vertical\_arithmetic\_remainder} (r581, via
+\texttt{gaborArchDigammaIdentification\_holds}) are theorems.
+The implication wrappers
+\texttt{gabor\_explicitFormula\_pure\_of\_remainders} and
+\texttt{gabor\_explicitFormula\_of\_remainders} remain sorry-free.
+The only remaining EF brick is
+\texttt{GaborHatQuarticExplicitRemainder} (non-pure even quartics;
+the prime-side criterion does not need it).
+The sharpest live $\Pi_1$ statement is
+\texttt{gabor\_primeSide\_rational\_criterion\_iff\_rh}:
+$(\forall a,\omega\in\mathbb{Q},\; a>0:\ 
+0\le\texttt{gaborPoleSide}-\texttt{gaborPrimeComb}+\texttt{gaborArchSide}
+\text{ of }\texttt{pureGaborTest}\,a\,\omega)
+\Longleftrightarrow\texttt{RiemannHypothesis}$,
+axioms $\{\texttt{propext},\texttt{Classical.choice},\texttt{Quot.sound}\}$.
+\textbf{No RH claim.}
+\end{sloppypar}
+
+\begingroup\small
+\begin{longtable}{@{}
+  >{\raggedright\arraybackslash}p{0.28\linewidth}
+  >{\raggedright\arraybackslash}p{0.40\linewidth}
+  >{\raggedright\arraybackslash}p{0.18\linewidth}
+  c@{}}
+\toprule
+\textbf{Module} & \textbf{Role} & \textbf{Round(s)} & \texttt{sorry}\\
+\midrule
+\endfirsthead
+\multicolumn{4}{c}{\small\itshape Complete Lean module inventory (continued)}\\
+\toprule
+\textbf{Module} & \textbf{Role} & \textbf{Round(s)} & \texttt{sorry}\\
+\midrule
+\endhead
+\texttt{Audit} & axiom audit of the main theorem chain & C1 & 0\\
+\texttt{Augmented} & $L^{\dagger}$ unification of $L^*$ and the terminal statement & r332 & 0\\
+\texttt{Basic} & abstract coupled-tau chain data & r256--r259 & 0\\
+\texttt{Canonical} & canonical final domain (three typed holes) & C1 / r326 & 3\\
+\texttt{Closure} & reconstruction of master positivity from $L^*$ and terminal & r305 & 0\\
+\texttt{Counterexamples} & permanent r273 reviewer refutation guards & r273 / r320 & 0\\
+\texttt{CoxeterCompletion} & $\Phi_{30}$ identities and $\mathrm{Tr}\,C=-1$ & r617L & 0\\
+\texttt{DualResolvent} & $L^{\dagger}\Leftrightarrow R^{\dagger}\succ\tfrac12 I$ as finite matrix identity & r362 / r430 & 0\\
+\texttt{EdgeBalance} & edge-balance chain as finite real algebra & r417--r426 & 0\\
+\texttt{Elementwise} & elementwise extraction without a mesh ladder & r326 & 1\\
+\texttt{ExternalBridges} & typed bridges from native class to Mathlib RH & r463 & 2\\
+\texttt{FaithfulFold} & production-window transcription (source to grid fold) & r459 / r463 & 0\\
+\texttt{FlankEntry} & flank-entry lemma against the pivot layer & r384 & 0\\
+\texttt{FrequentlySelected} & semidefinite $+$ infinitely-often extraction & r430 & 0\\
+\texttt{GaborAnchoredWitness} & anchored singleton fragment and tail modulus & r598 & 0\\
+\texttt{GaborArchContour} & $\chi'/\chi$ contour shift onto the critical line & r578 / r581 & 0\\
+\texttt{GaborArchDigamma} & left-edge Digamma identification of $\chi'/\chi$ & r577 / r581 & 0\\
+\texttt{GaborArithmeticSeparator} & existential arithmetic Gabor separator & r590 / r600 & 0\\
+\texttt{GaborAutocorrelation} & closed form of the pure Gabor ACF & r572 & 0\\
+\texttt{GaborContourResidue} & fixed-$T$ residue identity for $(\zeta'/\zeta)\hat h$ & r557 & 0\\
+\texttt{GaborCountableCriterion} & rational-packet zero-side iff RH (unconditional, r612C); prime-side iff r634L; $568$ lines & r612/r612C/r634L & 0\\
+\texttt{GaborDominance} & canonical isolation-shrink dominance & r569 & 0\\
+\texttt{GaborDominanceAssembly} & packing and remainder-budget assembly & r571 & 0\\
+\texttt{GaborDominanceLog} & counting-theorem (log occupancy) dominance & r575 & 0\\
+\texttt{GaborDominanceLog2} & log-compatible remainder BoundLog2 & r583 / r589 & 0\\
+\texttt{GaborDominanceProof} & remaining isolation-shrink dominance bricks & r569 & 0\\
+\texttt{GaborExplicitFormula} & EF implication from named remainders; pure EF unconditional (r634L); $220$ lines & r558 / r581 / r634L & 0\\
+\texttt{GaborExposedOrbit} & existential pure-Gabor zero-side separator & r605 & 0\\
+\texttt{GaborFEMultiplicity} & FE-invariant analytic order of zeros & r582 & 0\\
+\texttt{GaborHatAnalytic} & entirety and FE-symmetry of \texttt{gaborHat} & r555 & 0\\
+\texttt{GaborHorizontalEdges} & horizontal contour edges vanish & r557 & 0\\
+\texttt{GaborInequality} & symbolic Gabor-inequality boundary & r544 / r552 & 0\\
+\texttt{GaborIntegral} & bilateral Gaussian integral for the pure test & r543 & 0\\
+\texttt{GaborLeftVertical} & left-edge prime reflection & r570 & 0\\
+\texttt{GaborOuterTail} & window-adaptive outer quadrupole tail & r593 / r594 & 0\\
+\texttt{GaborSeparation} & Gabor-wavepacket separation architecture; $2181$ lines & r542--r634L & 0\\
+\texttt{GaborSpectralBridge} & spectral on/off split and FD exhaustion & r579--r589 & 0\\
+\texttt{GaborThetaBound} & Gauss-bin majorant and partial summation & r552 & 0\\
+\texttt{GaborVertical} & right/left vertical $T\to\infty$ identification & r564 & 0\\
+\texttt{GaborVerticalLimit} & Landau-gap $T\to\infty$ contour glue & r576 & 0\\
+\texttt{GaborWindowGlue} & three-term window-plus-tail comparison & r595 & 0\\
+\texttt{GaborZeroSummable} & summability of $\hat h_W$ over nontrivial zeros & r557 / r587 & 0\\
+\texttt{GraphResolvent} & graph-resolvent dictionary (finite algebra) & r412 & 0\\
+\texttt{Haynsworth} & Haynsworth inertia additivity & r373 & 0\\
+\texttt{InnerBridges} & finite inner-bridge algebra of the $A$-cap & r464 & 0\\
+\texttt{Inertia} & matrix-theorem / Sylvester layer & r305 & 0\\
+\texttt{OneDefect} & one-defect absorption theorems & r406 & 0\\
+\texttt{Open} & ladder bookkeeping of the former open edges & r273 & 0\\
+\texttt{PairBound} & finite pair-bound theorem of the coupled-tau lane & r269 / r271 / r320 & 0\\
+\texttt{PivotCoordinate} & finite-algebra lemmas in source pivot coordinates & r380 & 0\\
+\texttt{PrimeLogIndependence} & $\mathbb Q$-linear independence of $\{\log p\}$ & r617L & 0\\
+\texttt{Recursion} & proved coupled-tau core identities & r256--r263 & 0\\
+\texttt{Selected} & exact real selected-window domain & r397 & 0\\
+\texttt{Source} & explicit prime-window source interface & r310 / r320 & 1\\
+\texttt{Window} & \texttt{VonMangoldtWindow} structure and master theorem & r273 / r305 & 0\\
+\texttt{ZeroIncrement} & local zero-count increment bound & r546 / r547 & 0\\
+\bottomrule
+\end{longtable}
+\endgroup
+
+\noindent Detail on the historically named spine (live sorry counts are
+those of the inventory, not the older notes below):
+
+\begingroup\small
+\begin{longtable}{@{}llp{0.36\linewidth}@{}}
 \toprule
 \textbf{File} & \textbf{Status} & \textbf{Content}\\
 \midrule
+\endfirsthead
+\multicolumn{3}{c}{\small\itshape Principal modules (continued)}\\
+\toprule
+\textbf{File} & \textbf{Status} & \textbf{Content}\\
+\midrule
+\endhead
 \texttt{RH/Basic.lean} & proved & abstract chain data; $\tau\ne0$ on
 regular windows\\
 \texttt{RH/Recursion.lean} & \textbf{proved, no \texttt{sorry}} &
@@ -3352,14 +4688,78 @@ $\Delta_k=2^{-r_k}\log 2$, $a_k\to\infty$, $\Delta_k\to 0$
 \texttt{fullRead} along the sequence; consumes the existing
 arch \texttt{sorry}); named mincut
 \texttt{selected\_augDualResolvent\_gt\_half}.  NO RH CLAIM\\
+\texttt{RH/GaborIntegral.lean} & \textbf{proved, no \texttt{sorry}} &
+r543 Gaussian integral representation of the pure Gabor test
+(Section~\ref{sec:gabor}).  NO RH CLAIM\\
+\texttt{RH/ZeroIncrement.lean} & \textbf{proved, no \texttt{sorry}} &
+r546/r547 unit-increment bound \texttt{GaborIncrementBound} with
+constant $2\cdot\texttt{zetaZerosInDiskCardBoundInner}$.  NO RH CLAIM\\
+\texttt{RH/GaborThetaBound.lean} & \textbf{proved, no \texttt{sorry}} &
+r552 theta majorant $+$ bin partial summation; on-line Gauss mass
+$\gamma$-uniform $\le C\cdot\Theta_{\mathrm{lobe}}$.  NO RH CLAIM\\
+\texttt{RH/GaborSeparation.lean} & 0 named \texttt{sorry};
+census 7 (r634L, 2026-09-02); $2181$ lines &
+live: \texttt{gabor\_zeroSide\_inputs\_to\_mathlib\_rh}
+($\mathrm{hpos}^*$ on \texttt{gaborZeroSide}).  Historical
+\texttt{gabor\_inputs\_to\_mathlib\_rh} \textbf{VACUOUS} (r600).
+\texttt{GaborZeroSideForAllZeros} \textsc{forall\_zero\_overspecified}
+(r605A).  r610: \texttt{GaborLowHeightZeroFree} $T_0=4$ unasserted;
+\texttt{gaborSpectralFormula\_refuted\_of\_lowHeight}.
+r612: asserting \texttt{gabor\_separationForAllZeros} deleted;
+Prop retained unasserted.  r541 is a
+numeric precheck, not a configuration statement.  NO RH CLAIM\\
+\texttt{RH/GaborExposedOrbit.lean} & \textbf{proved, no \texttt{sorry}}
+(r605B+C) &
+existential pure-Gabor separator;
+\texttt{gabor\_zeroSide\_pure\_criterion\_iff\_rh\_unconditional}.
+RH $\Longleftrightarrow$ nonnegativity of the pure Gabor zero-side on
+the two-parameter family $(a,\omega)$.  Sharpest live statement
+(r634L): RH $\Leftrightarrow$ $\forall$ rational $(a,\omega)$,
+$\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}\ge 0$.  Positivity of
+\texttt{gaborZeroSide} itself remains open.  Not an RH proof.
+Census at landing 8; live 7 after r612.  NO RH CLAIM\\
+\texttt{RH/GaborCountableCriterion.lean} & \textbf{proved, no \texttt{sorry}}
+(r612/r612C/r634L) &
+rational-packet criterion
+\texttt{gabor\_zeroSide\_rational\_criterion\_iff\_rh\_unconditional}
+(continuity of $Z(a,\omega)$ is the theorem
+\texttt{gaborZeroSideContinuous\_holds}; $568$ lines).
+r634L: prime-side criterion
+\texttt{gabor\_primeSide\_rational\_criterion\_iff\_rh}
+(RH $\Leftrightarrow$ $\forall$ rational $(a,\omega)$:
+$\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}\ge 0$).
+Asserting \texttt{gabor\_separationForAllZeros} retired.
+Census $8\to 7$ at r612; stays $7$ at r612C/r634L.
+Modules $53\to 54$.  NO RH CLAIM\\
+\texttt{RH/CoxeterCompletion.lean} & \textbf{proved, no \texttt{sorry}}
+(r617L) &
+$\Phi_{30}$ identities, vanishing linear coefficient,
+$\mathrm{Tr}\,C=-1$ from the cyclotomic characteristic polynomial.
+Axioms \texttt{propext}/\texttt{Classical.choice}/\texttt{Quot.sound}.
+Census stays $7$; modules $54\to 56$.  NO RH CLAIM\\
+\texttt{RH/PrimeLogIndependence.lean} & \textbf{proved, no \texttt{sorry}}
+(r617L) &
+\texttt{linearIndependent\_log\_primes} (Mathlib had no such lemma)
+and \texttt{log\_ratio\_irrational}.  Finite-order clocks cannot carry
+$\{\log p\}$.  Census stays $7$.  NO RH CLAIM\\
 \bottomrule
-\end{tabular}
-\end{center}
+\end{longtable}
+\endgroup
 
 \noindent r397: \texttt{lstar\_canonical}/\texttt{terminal\_q\_canonical}
 are degraded to the alternative (rational-certificate) route; the
 named open kernel is \texttt{selected\_augDualResolvent\_gt\_half}.
 Sorry census stays five.  NO RH CLAIM.
+
+\noindent r556/r600: a parallel Gabor route
+(\texttt{RH/GaborSeparation.lean}) is documented in
+Section~\ref{sec:gabor}.  The historical wrapper
+\texttt{gabor\_inputs\_to\_mathlib\_rh} is \textbf{VACUOUS} (r600);
+the live wrapper is \texttt{gabor\_zeroSide\_inputs\_to\_mathlib\_rh}.
+The former asserting Gabor sorry \texttt{gabor\_separationForAllZeros}
+was deleted at r612 (Prop retained unasserted) and is
+\emph{not} part of the window-local census below.  r541 is a numeric
+precheck, not a configuration statement.  NO RH CLAIM.
 
 \noindent The \texttt{sorry} declarations (\textbf{eight in total}
 since the r326 Level-C round: five window-local since the
@@ -3424,7 +4824,12 @@ state is the repository ledger; the canonical prose is
 \statusbox{\textbf{Closing status.}  Research documentation.  The certified
 content is finite and window-level (\mE); the two edges of
 Section~\ref{sec:edges} are open (\mO); the mincut is base 4 / refined 5.
-\textbf{Nothing in this document is evidence for or against the Riemann
-Hypothesis in either direction.  NO RH CLAIM.}}
+The Gabor chain of Section~\ref{sec:gabor} is a parallel conditional
+reduction: the live criterion is positivity of \texttt{gaborZeroSide}
+($\mathrm{hpos}^*$); the historical
+\texttt{gabor\_inputs\_to\_mathlib\_rh} is VACUOUS (r600); r541 is a
+precheck, not a configuration statement; separation stays open.
+\textbf{Nothing in this document is
+evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.}}
 
 \end{document}

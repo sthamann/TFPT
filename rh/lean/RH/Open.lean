@@ -33,6 +33,133 @@ This file keeps the `WindowLadder` bookkeeping structure (it correctly
 records the measured structural facts and feeds the counterexample
 guards) and the campaign kill lists.  It states no open theorem anymore.
 
+r556: a parallel conditional Gabor reduction lives in
+RH/GaborSeparation.lean.  The historical wrapper
+`gabor_inputs_to_mathlib_rh` (`GaborExplicitFormula` +
+`GaborSeparationInequality` ⇒ mathlib `RiemannHypothesis`)
+is VACUOUS (r600): it consumed positivity of
+`gaborSpectralFormula`, which is not the Weil functional.
+Live wrappers: `gabor_zeroSide_inputs_to_mathlib_rh` and
+companions.  r605A `GaborZeroSideForAllZeros` = prescribed
+`scalingGaborTest(a=σ²/64, ω=γ−πa/σ)` → FORALL_ZERO_OVERSPECIFIED;
+`gabor_zeroSide_pure_criterion_iff_rh` takes `hsep`.
+r605B+C `GaborExposedOrbit.lean` sorry-free; live endpoint
+`gabor_zeroSide_pure_criterion_iff_rh_unconditional` :
+`(∀ a ω ha, 0 ≤ gaborZeroSide (pureGaborTest a ω ha)) ↔ RiemannHypothesis`,
+axioms propext/choice/Quot.sound.
+RH ⇔ nonnegativity of the pure Gabor zero-side on the two-parameter family (a, ω). r634L: `gabor_explicitFormula_pure` is UNCONDITIONAL (both remainders `gaborContourLimitRemainder_holds` and `gabor_vertical_arithmetic_remainder` are theorems); sharpest live statement `gabor_primeSide_rational_criterion_iff_rh` : (∀ (a ω : ℚ) (ha : 0 < a), 0 ≤ gaborPoleSide − gaborPrimeComb + gaborArchSide of pureGaborTest a ω) ↔ RiemannHypothesis, axioms {propext, Classical.choice, Quot.sound}. Remaining EF brick: `GaborHatQuarticExplicitRemainder` (non-pure quartics only). Census stays 7. Not an RH proof: the Weil test space is reduced to a two-parameter pure Gabor family; positivity of gaborZeroSide itself remains open.
+r605C-AUDIT STATEMENT_SOUND. Census 7 (r612: asserting
+`gabor_separationForAllZeros` retired; Prop retained unasserted).
+r612 `GaborCountableCriterion.lean` rung (b):
+`gabor_zeroSide_rational_criterion_iff_rh` (takes `hcont`).
+r612C: `gaborZeroSideContinuous_holds` proves
+`GaborZeroSideContinuous`; the rational iff
+`gabor_zeroSide_rational_criterion_iff_rh_unconditional`
+is unconditional. Named-open list shrinks by one;
+census stays 7; no new `sorry`.
+r607 experiments-only KILLED(RECOORDINATIZATION).
+r610 rung (b): one named hypothesis `GaborLowHeightZeroFree 4`
+(classically true, first zero at 14.1347, not in Mathlib);
+`gaborSpectralFormula_refuted_of_lowHeight`.
+This file still states no Gabor theorem; the
+r487--r538 compact-Weil mincut comments below are status text only.
+r541 `SEPARATION_GO_GABOR` is a numeric precheck against one synthetic
+FE quadruple, not a discharged separation sorry.  r553 `WITNESS_LOSES`
+is historical leftover-scale; r559 settled leftover as a non-faithful
+Weil proxy, r560 sealed `HONEST_WITNESS_WINS`, r566/r567 canonicalised
+the dominance rule (`CANONICAL_DOMINANCE_HOLDS` on 119 cells).  The
+`∀Z` proof stays open.
+r581: the Gabor EF remainder
+`gabor_vertical_arithmetic_remainder` is a theorem
+(no asserting sorry).  r582/r583: log-compatible
+`GaborDominanceBoundLog2` is a theorem (finite/conditional
+proxy).  r584–r588: tsum≤Closed attachment
+`gaborLogThreeLobeMajorant_le_closed` is a theorem;
+unrestricted On/Off-split `gaborZeroSideEqOffPlusOn_holds`
+is a theorem; weighted Bridge-6 identification
+`gaborWeightedQuadrupoleLimitEqOffLineMass_holds` is a
+theorem (honest FD, weight 4; real-axis remainder
+proved zero via ζ≠0 on (0,1)).  Unweighted
+identification only `_of_simple`.  r589: every nonempty
+weighted FD window is a BoundLog2 input
+(`gaborWeightedTruncationNegLog_holds` theorem;
+singleton card=1 supplies gammaDistinct+hostIsolated).
+r589 L2: singleton Bridge A is RH-core, not a
+translation lemma (`BRIDGE_A_IS_RH_CORE`); Bridge B has
+no Isolation→Scaling monotonicity transfer.  r590:
+existential arithmetic endpoint
+`GaborArithmeticSeparatesOffCriticalZeros` plus a
+parallel Mathlib chain without `scalingGaborTest`
+(sorry-free logic; unasserted separator).  r591:
+`GaborFixedPacketCofinalNegAt` is numerically tenable
+only with an extremality gap (strict σ′≤σ−0.02 holds
+9/9; tie / free σ′ break).  r592: window-adaptive
+packets vs outer tail are CONDITIONAL (IEEE ω-floor
+at extreme near-tie; host-σ-max retune per height/T).
+r593/r594: outer-tail theorem (strip width beats
+window distance; `GaborOuterTailTsumLeExp` and
+`GaborOuterTailSmallerThanLocalMargin` are theorems).
+r595: three-term window+tail glue and per-T
+checkpoint are theorems; named gap
+`GaborWindowAdaptiveUniformDelta` (T-uniform δ
+missing because of lex host-retune — r592 condition,
+not missing algebra).  r596–r598: L2 verdict
+`ANKER_TEILWEISE`; log-glue theorem; witness ⇒
+zeroSide < 0 at the own packet; Cover is the
+remaining geometric rest.
+`GaborSpectralToArithmetic` is a proved pole-sign
+lemma (`GaborSpectralToArithmetic_holds`, ĥ(1) ≥ 0),
+NOT RH-core.  RH-core is hpos* := ∀ F admissible,
+0 ≤ `gaborZeroSide` F, equivalently the unasserted
+Prop `GaborSeparationForAllZeros` (asserting theorem
+retired r612).
+`GaborAnchoredWitnessExists` is
+NOT asserted (ordinate clusters / multi-point
+window open).  L2 STOP: no UniformDelta /
+separator / existence claims.  Remaining named
+rest: `GaborAnchoredCoverAt` (ordinate isolation
+of genuine zeros), `GaborAnchoredWitnessExists`,
+`GaborWindowAdaptiveUniformDelta`,
+`GaborTruncationUniformNeg` (does NOT follow from
+BoundLog2 — packet retunes),
+`GaborWeightedTruncationGammaDistinct`,
+`GaborFixedPacketCofinalNegAt` (extremality gap),
+and the unasserted Prop `GaborSeparationForAllZeros`
+(asserting theorem retired r612).
+r599/r600 vacuity audit (2026-09-01/02):
+`gaborSpectralFormula` subtracts the pole ĥ(1);
+for F₀ = `pureGaborTest 1 0` the zero-side sum is
+≈ 3·10⁻⁴³ while Re ĥ(F₀,1) = π·e^{1/8} ≈ 3.5599,
+so `gaborSpectralFormula F₀` ≈ −3.56 unconditionally.
+Old hpos on `gaborSpectralFormula` is FALSE; live
+object is `gaborZeroSide`.  Old Mathlib endpoints
+marked VACUOUS (r600); live endpoints in the
+r599/r600 census below.  r605A `GaborZeroSideForAllZeros` = prescribed
+`scalingGaborTest(a=σ²/64, ω=γ−πa/σ)` → FORALL_ZERO_OVERSPECIFIED;
+`gabor_zeroSide_pure_criterion_iff_rh` takes `hsep`.
+r605B+C `GaborExposedOrbit.lean` sorry-free; live endpoint
+`gabor_zeroSide_pure_criterion_iff_rh_unconditional` :
+`(∀ a ω ha, 0 ≤ gaborZeroSide (pureGaborTest a ω ha)) ↔ RiemannHypothesis`,
+axioms propext/choice/Quot.sound.
+RH ⇔ nonnegativity of the pure Gabor zero-side on the two-parameter family (a, ω). r634L: `gabor_explicitFormula_pure` is UNCONDITIONAL (both remainders `gaborContourLimitRemainder_holds` and `gabor_vertical_arithmetic_remainder` are theorems); sharpest live statement `gabor_primeSide_rational_criterion_iff_rh` : (∀ (a ω : ℚ) (ha : 0 < a), 0 ≤ gaborPoleSide − gaborPrimeComb + gaborArchSide of pureGaborTest a ω) ↔ RiemannHypothesis, axioms {propext, Classical.choice, Quot.sound}. Remaining EF brick: `GaborHatQuarticExplicitRemainder` (non-pure quartics only). Census stays 7. Not an RH proof: the Weil test space is reduced to a two-parameter pure Gabor family; positivity of gaborZeroSide itself remains open.
+r605C-AUDIT STATEMENT_SOUND. Census 7 (r612: asserting
+`gabor_separationForAllZeros` retired; Prop retained unasserted).
+r612 `GaborCountableCriterion.lean` rung (b):
+`gabor_zeroSide_rational_criterion_iff_rh` (takes `hcont`).
+r612C: `gaborZeroSideContinuous_holds` proves
+`GaborZeroSideContinuous`; the rational iff
+`gabor_zeroSide_rational_criterion_iff_rh_unconditional`
+is unconditional. Named-open list shrinks by one;
+census stays 7; no new `sorry`.
+r607 experiments-only KILLED(RECOORDINATIZATION).
+r610 rung (b): one named hypothesis `GaborLowHeightZeroFree 4`
+(classically true, first zero at 14.1347, not in Mathlib);
+`gaborSpectralFormula_refuted_of_lowHeight`.
+Named open (no claim): on-line positivity for general even
+quartics (beyond ⟨1,0,0⟩) so the iff holds without `hline`.
+Tracked census stays 7.
+NO RH CLAIM.
+
 KILL LIST (measured no-gos any future proof of edge A must avoid):
   - mass majorants (sup / Cauchy-Schwarz / triangle on masses): 0/42
     coverage, median x490 excess, break locus 0.97N            (r258)
@@ -388,7 +515,43 @@ is PROVED.  Its only classical remainder is sorry
 formula is named as `GuinandWeilExplicitFormula`.  Mathlib has no
 ready Guinand--Weil theorem, but does provide `MellinTransform`,
 `MellinInversion`, and `MellinEqDirichlet`.  Census 8 -> 9 because
-the old dense-extension sorry was honestly split in two.  NO RH CLAIM.
+the old dense-extension sorry was honestly split in two.
+
+LATER (r556/r600): a parallel conditional Gabor route exists in
+`RH/GaborSeparation.lean`.  Historical wrapper
+`gabor_inputs_to_mathlib_rh` (`GaborExplicitFormula` +
+`GaborSeparationInequality` ⇒ mathlib `RiemannHypothesis`)
+is VACUOUS (r600): it consumed false hpos on
+`gaborSpectralFormula`.  Live wrapper:
+`gabor_zeroSide_inputs_to_mathlib_rh`.  r605A `GaborZeroSideForAllZeros` = prescribed
+`scalingGaborTest(a=σ²/64, ω=γ−πa/σ)` → FORALL_ZERO_OVERSPECIFIED;
+`gabor_zeroSide_pure_criterion_iff_rh` takes `hsep`.
+r605B+C `GaborExposedOrbit.lean` sorry-free; live endpoint
+`gabor_zeroSide_pure_criterion_iff_rh_unconditional` :
+`(∀ a ω ha, 0 ≤ gaborZeroSide (pureGaborTest a ω ha)) ↔ RiemannHypothesis`,
+axioms propext/choice/Quot.sound.
+RH ⇔ nonnegativity of the pure Gabor zero-side on the two-parameter family (a, ω). r634L: `gabor_explicitFormula_pure` is UNCONDITIONAL (both remainders `gaborContourLimitRemainder_holds` and `gabor_vertical_arithmetic_remainder` are theorems); sharpest live statement `gabor_primeSide_rational_criterion_iff_rh` : (∀ (a ω : ℚ) (ha : 0 < a), 0 ≤ gaborPoleSide − gaborPrimeComb + gaborArchSide of pureGaborTest a ω) ↔ RiemannHypothesis, axioms {propext, Classical.choice, Quot.sound}. Remaining EF brick: `GaborHatQuarticExplicitRemainder` (non-pure quartics only). Census stays 7. Not an RH proof: the Weil test space is reduced to a two-parameter pure Gabor family; positivity of gaborZeroSide itself remains open.
+r605C-AUDIT STATEMENT_SOUND. Census 7 (r612: asserting
+`gabor_separationForAllZeros` retired; Prop retained unasserted).
+r612 `GaborCountableCriterion.lean` rung (b):
+`gabor_zeroSide_rational_criterion_iff_rh` (takes `hcont`).
+r612C: `gaborZeroSideContinuous_holds` proves
+`GaborZeroSideContinuous`; the rational iff
+`gabor_zeroSide_rational_criterion_iff_rh_unconditional`
+is unconditional. Named-open list shrinks by one;
+census stays 7; no new `sorry`.
+r607 experiments-only KILLED(RECOORDINATIZATION).
+r610 rung (b): one named hypothesis `GaborLowHeightZeroFree 4`
+(classically true, first zero at 14.1347, not in Mathlib);
+`gaborSpectralFormula_refuted_of_lowHeight`.
+r541 `SEPARATION_GO_GABOR`
+is a numeric precheck against one synthetic FE quadruple (42/42, γ≤10⁴),
+NOT a discharge of `gabor_separationForAllZeros`.  r553
+`WITNESS_LOSES` is historical leftover-scale.  r559 settled leftover
+as a non-faithful Weil proxy; r560 sealed `HONEST_WITNESS_WINS`
+(all=52); r566/r567 canonicalised the dominance rule
+(`CANONICAL_DOMINANCE_HOLDS`, 119 cells).  The `∀Z` proof stays
+open.  Compact-Weil live mincut above is unchanged.  NO RH CLAIM.
 
 ## r489 census (outer bridges 2)
 
@@ -1353,6 +1516,26 @@ remaining clamp, not evaluated.  Assembly
 against `combMass` is not claimed.  Census
 stays 7 (external 2).  NO RH CLAIM.
 
+## r534/r538 census (honest contour identification)
+
+r534 completes the contour half of bridge 2:
+`contourExplicitFormula_honest` identifies the exact spectral sum
+with the arch clamp minus `Λ(n)(1+n⁻¹)`.  r538 packages that output as
+`fullWeilFormHonest` and proves its identification with
+`standardExplicitFormula`.  The original corpus form remains blocked,
+with its discrepancy now explicit as `surplusComb + archGaugeDelta`;
+the Mathlib RH endpoint still requires off-critical separation.
+Census stays 7 (external 2).
+
+PARALLEL (r556/r600): the Gabor class is a second, noncompact
+conditional route.  Historical `gabor_inputs_to_mathlib_rh` is
+VACUOUS (r600); live `gabor_zeroSide_inputs_to_mathlib_rh`.
+Do not read r541 `SEPARATION_GO_GABOR` as closing
+`fullWeil_separates_offCritical_zeros` or
+`gabor_separationInequality`.  See the r556 and r599/r600
+censuses.
+NO RH CLAIM.
+
 ## r440 census (mean tau index)
 
 Finite identities, no analytic bound, no new sorry.
@@ -1421,7 +1604,381 @@ Mincut unchanged: still
 `frequently_selected_augDualResolvent_ge_half` at
 `W.cap`.  r449–r455 retyped as anatomy of the
 prime-blind zone (r303 dictionary).  Census
-unchanged at 5.  NO RH CLAIM.
+unchanged at 5.
+PARALLEL (r556): this mincut is the compact selected-window
+cone, not the Gabor route.  See the r556 census.
+NO RH CLAIM.
+
+## r556 census (Gabor chain, documentation)
+
+Documentation only; no new sorry, no code change.
+
+PARALLEL CONDITIONAL ROUTE (not the compact-Weil / window-L*
+mincut of r487--r538): `RH/GaborSeparation.lean` recorded the
+logical wrapper
+  `gabor_inputs_to_mathlib_rh` :
+    `GaborExplicitFormula` →
+    `GaborSeparationInequality` →
+    (admissible Gabor spectral nonnegativity) →
+    mathlib `RiemannHypothesis`.
+That wrapper is VACUOUS (r600): the consumed hpos on
+`gaborSpectralFormula` is FALSE.  Live wrapper:
+`gabor_zeroSide_inputs_to_mathlib_rh` (hpos* on
+`gaborZeroSide`).  The asserting theorem
+`gabor_separationForAllZeros` is retired r612
+(Prop retained unasserted).  r581 closed the EF hole:
+`gabor_vertical_arithmetic_remainder` is a theorem
+(no `sorryAx`).  Increment Path A is
+already discharged: `GaborIncrementBound` /
+`gaborIncrementBound_holds` (r546/r547,
+`RH/ZeroIncrement.lean`) with constant
+`2 * zetaZerosInDiskCardBoundInner`.
+
+PROVED, sorry-free bricks (do not imply the inequality):
+  * `RH/GaborIntegral.lean` (r543) Gaussian integral
+    representation of the pure Gabor test;
+  * `GaborIncrementBound` as above;
+  * `RH/GaborThetaBound.lean` (r552)
+    `gauss_online_mass_uniform`: on-line Gauss mass
+    γ-uniform ≤ C · Θ_lobe.
+
+EXPLICIT FORMULA: r548 sealed `EF_CONFIRMED` 36/36,
+residuals ~1e-15, prime channel the classical comb
+`2Λ(n)/√n` (r550).  Lean EF remainder closed r581
+(`gabor_vertical_arithmetic_remainder` is a theorem).
+
+QUANTIFIER WARNING (binding): r541 `SEPARATION_GO_GABOR`
+is a certified numeric precheck against ONE synthetic FE
+quadruple (42/42 cells, γ≤10⁴).  It does not discharge
+`GaborSeparationForAllZeros`.  r553 `WITNESS_LOSES` is
+historical leftover-scale (1- and 2-packet classes lose
+the leftover game under pure counting control).  r559
+settled leftover as a non-faithful Weil proxy and specified
+`W_honest = Q_off + R_on`.  r560 sealed
+`HONEST_WITNESS_WINS` (all=52).  r561 `DOMINANCE_UNIFORM`
+was signed-refuted by r563/r566 (γ<0 double-count); r567
+sealed `CANONICAL_DOMINANCE_HOLDS` (cells=119,
+worst_margin=0.990408).  The `∀Z` Lean proof stays open
+(`gabor_separationForAllZeros`).
+r551: extremal selection alone is not enough (tie factor
+e^{π²/128} ≈ 1.080 against a 141× counting-budget margin).
+A spectral-gap hypothesis σ′/σ ≤ 0.9194 would compress
+that budget; it is not assumed.
+
+Window-L* / compact-Weil live mincut of r487--r538 is
+unchanged.  Separation stays [O].  NO RH CLAIM.
+
+## r582/r583 census (FE multiplicity + BoundLog2)
+
+Documentation only; no new sorry, no census-gate change.
+
+r582: `RH/GaborFEMultiplicity.lean` proves
+`riemannZetaMultiplicity_eq_one_sub_all` (`m(z)=m(1-z)`
+on the open strip via `Λ(s)=Λ(1-s)`) and
+`sum_multiplicity_stripZerosWindow_le` (Jensen+FE fold:
+unit window `∑m ≤ 2 C_inner(1+log(|N|+3))`).  Weighted
+truncation compliance is a theorem.  Spectral-bridge
+pack: `R_on_log = max((1+log)·proxy, ĥ-log majorant)`;
+`GaborDominanceBoundLog2` packed sorry-free; remainder
+was the budget.
+
+r583: `GaborRemainderBudgetLog2` closed;
+`GaborDominanceBoundLog2` is a theorem (both
+`R_on_log/E` branches via `online_exp_le_log`; ĥ-side
+closed linear-central+far-tail form
+`gaborOnlineLogBudget = C_hat · gaborLogThreeLobeClosed`).
+Axioms `[propext, Classical.choice, Quot.sound]`; no
+`sorryAx`.
+
+## r584–r588 census (spectral identifications)
+
+Documentation only; no new sorry, no census-gate change.
+
+r584: `gaborLogThreeLobeMajorant_le_closed` is a theorem
+(Closed budget dominates the Finset-transfer majorant);
+pure On/Off split `gaborZeroSide_eq_off_plus_on_pure` /
+`_of_summable`.
+
+r585: `riemannZetaMultiplicity_eq_conj` (`m(ρ̄)=m(ρ)`),
+`gaborHat_star_pure`, `gaborHat_fe_quadrupole_eq_four_re`,
+`gaborCriticalLineMassLeLogMajorant_holds`.  Honest:
+weight-4 quadrupole tsum over all Im>0 double-counts.
+
+r586: `gaborOffLineMassEqWeightedQuadrupoleTsum_holds` is
+a theorem in honest FD form (Re>1/2 ∧ Im>0, weight 4,
++ real-axis remainder).  Double-count prop documented
+dead.  Orbit toolkit (`stripStarEquiv` / `stripFEEquiv` /
+`stripOrbitEquiv`).
+
+r587: poly-in-t majorant `norm_gaborHat_le_poly_three_lobe`
+and quartic summability are theorems.  Unrestricted
+On/Off-split `gaborZeroSideEqOffPlusOn_holds` is a
+theorem.
+
+r588: `gaborWeightedQuadrupoleLimitEqFDTsum_holds`;
+`riemannZeta_ne_zero_of_mem_Ioo` (ζ≠0 on (0,1) real,
+via the r509 Euler–Maclaurin identity, not Eta);
+`gaborOffLineRealAxisMass_eq_zero`.  Weighted Bridge-6
+identification
+`gaborWeightedQuadrupoleLimitEqOffLineMass_holds` is a
+theorem.  Unweighted identification only `_of_simple`
+(simple zeros); unconditional prop stays unasserted.
+Living chain retargeted to the weighted form
+(`gaborZeroSide_le_of_weighted_truncation_of_pure`).
+
+Remaining named rest after r588 (not sorrys except the last):
+`GaborTruncationUniformNeg` (uniform negativity of
+weighted windows ≤ −δ — next analytic cut), close the
+on-line majorant against the uniform off-line packet,
+isolation / gammaDistinct / Dominance pack for genuine
+zeros, and the unasserted Prop `GaborSeparationForAllZeros`
+(asserting theorem retired r612).
+
+## r589–r595 census (window→BoundLog2 + outer tail + glue)
+
+Documentation only; no new sorry, no census-gate change.
+
+r589: window→BoundLog2 bridge is a theorem — every nonempty
+weighted FD window is BoundLog2 input
+(`gaborWeightedTruncation_boundLog2_hyps`,
+`gaborWeightedTruncationNegLog_holds`:
+W_log(isolationShrink) < (9/10−η)·E < 0; lock margin
+n-free via `gaborWeightedTruncation_lockMargin`).
+Singleton card=1 supplies gammaDistinct+gammaHostIsolated.
+`gabor_dominanceLog2_implies_separation` is pure logic on
+two named bridge hypotheses.  Named, not proved:
+`GaborWeightedTruncationGammaDistinct`,
+`GaborTruncationUniformNeg` (does NOT follow from BoundLog2
+— the isolation packet retunes with the window).
+
+L2 adjudication r589: verdict `BRIDGE_A_IS_RH_CORE`.
+The singleton route (W_honest(Singleton)<0 ⇒ arithmetic
+formula<0) is not a translation lemma: it hides full
+off-line tail control (foreign quadrupoles, factor
+exp((σ′²−σ²)/2a), no fixed sign; R_on_log majorizes only
+on-line).  Bridge B (Isolation a≤σ²/512 → Scaling a=σ²/64)
+has no monotonicity transfer.
+
+r590: `RH/GaborArithmeticSeparator.lean` records the
+existential arithmetic endpoint
+`GaborArithmeticSeparatesOffCriticalZeros` (∀ off-critical
+zero ∃ admissible F: gaborArithmeticFormula F < 0).
+Historical: `gabor_separation_of_arithmetic_separators`
+(EF + separator ⇒ `GaborSeparatesOffCriticalZeros`) and
+`gabor_arithmetic_inputs_to_mathlib_rh` (parallel Mathlib
+chain without `scalingGaborTest`) are VACUOUS (r600).
+Live: `gabor_arithmetic_zeroSide_inputs_to_mathlib_rh`
+(GaborArithmeticSeparator.lean:68).
+Named, unasserted: `GaborFixedPacketCofinalNegAt` and
+`gabor_arithmetic_separator_of_cofinal_neg`.
+
+r591: sealed probe `gabor_fixed_packet_cofinal_probe.py`
+(FILE_SHA256 b614d583…, SPEC_SHA cd9af7ce…).  Fixed-packet
+cofinal negativity is numerically tenable only with an
+extremality gap: strict σ′≤σ−0.02 COFINAL_NEG_HOLDS 9/9
+(worst −0.995); weak (tie allowed) and free σ′
+COFINAL_NEG_BREAKS 0/9.  Not as r590 formulated without
+the gap.
+
+r592: sealed probe `gabor_window_adaptive_tail_probe.py`
+(FILE_SHA256 1a77a650…, SPEC_SHA de35efea…).  Window-adaptive
+packets (isolationShrink on W_R, a=min(σ²/512,shrink)) vs
+outer tail 𝒯(a).  A MIXED (r591 center/merge/shrink holds;
+near-tie δ=1e-8 float64 ω-collapse W_red=+1, IEEE artefact).
+B/C/D HOLDS, 𝒯=0 ≪ margin, L2-numerator sup=−0.77 NOT_REACHED.
+local-adaptive-global-fixed CONDITIONAL (IEEE ω-floor at
+extreme near-tie; host-σ-max retune per height/T).
+
+r593: `RH/GaborOuterTail.lean` — strip-width beats window
+distance (`gaborOuterTail_num_le_neg_quarter`); exact ℝ
+near-tie (`gaborWindowAdaptiveRule_exists`; no ℝ counterpart
+of the r592 float64 collapse).  Historical endpoint
+`gabor_window_adaptive_inputs_to_mathlib_rh` is VACUOUS
+(r600).  Live: `gabor_window_adaptive_zeroSide_inputs_to_mathlib_rh`
+(GaborOuterTail.lean:1299).
+Named unasserted: `GaborWindowAdaptiveCofinalNeg`,
+`gabor_arithmetic_separator_of_window_adaptive` (Bridge A
+= RH-core).  Tail Props closed in r594.
+
+r594: both tail Props are theorems —
+`gaborOuterTail_tsum_le_exp` / `GaborOuterTailTsumLeExp_holds`
+(FD indicator tsum over |Im ρ − ω| ≥ R);
+`GaborOuterTailSmallerThanLocalMargin_holds`
+(∀ε ∃a₀(ω,ε)≤1 ∀a<a₀: tail < ε·E(σ★,a)).  Multiplicity-
+weighted Finset bound mass-independent, rate kept.
+Axioms `[propext, Classical.choice, Quot.sound]`.
+
+r595: `RH/GaborWindowGlue.lean` — three-term glue
+(`gaborHonestWeil_window_add_outer`,
+`gaborHonestWeil_le_window_plus_theta`);
+catalog negativity
+(`gaborCanonicalConfig_honestWeil_neg`,
+`gaborHonestWeil_glue_neg_of_small_isolation`);
+per-T checkpoint
+(`gaborWeightedTruncation_windowAdaptive_existsDelta`,
+`gaborWeightedTruncation_windowAdaptive_lockDelta`).
+Named unasserted: `GaborWindowAdaptiveUniformDelta`
+(T-uniform δ missing because of lex host-retune — r592
+condition, not missing algebra) and
+`gabor_window_adaptive_uniform_to_cofinal`.
+
+Living sorry of this file retired r612
+(`gabor_separationForAllZeros` deleted; Prop unasserted).
+Tracked census stays 7
+(Source 1, Elementwise 1, Canonical 3, ExternalBridges 2).  Finite/conditional proxy only.
+Separation stays [O].
+NO RH CLAIM.
+
+## r596–r598 census (anchored witness)
+
+Documentation only; no new sorry, no census-gate change.
+
+L2 adjudication after r595: verdict `ANKER_TEILWEISE`.
+A window frozen at a target fund-domain zero removes
+host-retune of growing T-catalogs (r592) and the r592
+float64 ω-collapse (no ℝ counterpart, r593).  Three
+named gaps, not claimed: (i) window geometry must be
+self-consistent relative to the *final* packet centre
+ω; (ii) equal-ordinate σ-clusters (`gammaDistinct` of
+genuine zeros) stay open; (iii) r595 glue used constant
+`R_on`, the full transition needs the log budget.
+L2 STOP: no UniformDelta / separator / existence claims.
+Arithmetic identification (`GaborSpectralToArithmetic`) is
+the pole-sign lemma ĥ(1) ≥ 0, NOT RH-core (proved r600 as
+`GaborSpectralToArithmetic_holds`).  RH-core is hpos* on
+`gaborZeroSide` / `gabor_separationForAllZeros`.
+
+r596: `RH/GaborAnchoredWitness.lean` — type-bundle
+`GaborAnchoredWindowWitnessAt` (all hyps explicit,
+`hcover` ω-self-consistent).  Sorry-free log-glue
+(`R_on → R_on_log`) and the conditional
+`gaborAnchored_zeroSide_neg_of_isolationPacket`
+(witness ⇒ spectral zero-side < 0 at shrink width).
+Named unasserted at this cut:
+`GaborBoundLog2AtAdmissibleWidth`,
+`GaborAnchoredWitnessExists`,
+`GaborSpectralToArithmetic` (then unasserted; r600
+proved it as the pole-sign lemma ĥ(1) ≥ 0, NOT RH-core),
+`gabor_anchored_to_arithmetic_separator`.
+
+r597: `GaborBoundLog2AtAdmissibleWidth` discharged
+(`gaborBoundLog2AtAdmissibleWidth_holds`).  Free-width
+chain (`isolationShrinkOfConfig_admissible_of_le`,
+`foreign_not_in_peakWindow_of_le`, the Log/Log2
+`_of_le` majorants).  Main result
+`gaborAnchored_zeroSide_neg`: witness ⇒ zeroSide < 0
+at the OWN `(a,ω)`.  ω-lobe non-monotonicity absorbed
+by existing ω≤γ caps; peak emptiness is a radius fact.
+
+r598: singleton fragment + `htail` at retuned `ω(a)`
+(`exists_gaborFundSingleton_htail`).  Cover isolated
+as `GaborAnchoredCoverAt` (ordinate isolation);
+`exists_gaborAnchored_of_cover` /
+`gaborAnchoredCoverAt_to_nonempty` (Cover ⇒ nonempty
+witness).  HONEST: `hcover` for genuine zeros open
+(ordinate clusters); multi-point window open.
+`GaborAnchoredWitnessExists` is NOT asserted.
+
+Living sorry of GaborSeparation retired r612
+(Prop `GaborSeparationForAllZeros` unasserted).
+Tracked census stays 7.  Finite/conditional proxy only.
+Separation stays [O].
+NO RH CLAIM.
+
+## r599/r600 census (vacuity audit)
+
+Documentation only; no new sorry, no census-gate change.
+Date 2026-09-01/02.  L3 verdict r599; Lean repair r600.
+
+`gaborSpectralFormula` in GaborSeparation.lean is NOT the
+Weil functional: it subtracts the pole term ĥ(1).  For
+F₀ = `pureGaborTest 1 0` the zero-side sum is ≈ 3·10⁻⁴³
+while Re ĥ(F₀,1) = π·e^{1/8} ≈ 3.5599, so
+`gaborSpectralFormula F₀` ≈ −3.56 unconditionally.  Hence
+the old hypothesis hpos := ∀ F admissible,
+0 ≤ `gaborSpectralFormula` F is FALSE (not merely unproven),
+and every Mathlib endpoint that consumed it was vacuous.
+
+r600 Lean state (`lake build` green, tactic-sorry census 8
+at that round; r612 census 7 after retiring
+`gabor_separationForAllZeros`),
+no `sorryAx`): live object is `gaborZeroSide` (spectral sum
+without pole subtraction); hpos* := ∀ F admissible,
+0 ≤ `gaborZeroSide` F is the true RH-core.  Theorems:
+`gaborHat_criticalLine_nonneg`, `gaborHat_one_nonneg`
+(pure family ⟨1,0,0⟩), `gaborSpectralFormula_eq`,
+`gaborSpectralFormula_neg_of_small_zero_side`,
+`gaborSpectralFormula_refuted_of_bound` (hypothesis form) and
+r610 `gaborSpectralFormula_refuted_of_lowHeight` (rung (b):
+`GaborLowHeightZeroFree 4`; classically true, first zero at
+14.1347, not in Mathlib).  New
+endpoints: `GaborZeroSideSeparatesOffCriticalZeros`,
+`GaborZeroSideCriterionToMathlibRH`,
+`gabor_zeroSide_criterion_to_mathlib_rh`,
+`gabor_zeroSide_inputs_to_mathlib_rh`
+(GaborSeparation.lean ~695–725),
+`gabor_arithmetic_zeroSide_inputs_to_mathlib_rh`
+(GaborArithmeticSeparator.lean:68),
+`gabor_window_adaptive_zeroSide_inputs_to_mathlib_rh`
+(GaborOuterTail.lean:1299); `rh_implies_gaborZeroSide_nonneg`
+(pure), `gabor_zeroSide_pure_criterion_iff_rh` (pure family,
+unconditional iff), `gabor_zeroSide_criterion_iff_rh`
+(all F, carries extra hypothesis `hline`).
+
+`GaborSpectralToArithmetic` is now a proved theorem
+(`GaborSpectralToArithmetic_holds`,
+GaborAnchoredWitness.lean:1227) — the pole-sign lemma
+ĥ(1) ≥ 0, NOT the RH-core.  The RH-core is hpos*
+(positivity of `gaborZeroSide`) resp. the unasserted
+Prop `GaborSeparationForAllZeros` (asserting theorem
+retired r612).
+
+Old endpoints kept but marked VACUOUS (r600):
+`GaborSeparatesOffCriticalZeros`,
+`gabor_separation_of_inputs`,
+`gabor_criterion_to_mathlib_rh`,
+`gabor_inputs_to_mathlib_rh`,
+`gabor_separation_of_arithmetic_separators`,
+`gabor_arithmetic_inputs_to_mathlib_rh`,
+`gabor_window_adaptive_inputs_to_mathlib_rh`.
+
+Named open (no claim): on-line positivity for general even
+quartics (beyond ⟨1,0,0⟩) so the iff holds without `hline`.
+r610 discharged the F₀ tsum bound to the named hypothesis
+`GaborLowHeightZeroFree 4`.
+
+Tracked census stays 7.  Finite/conditional proxy only.
+Separation stays [O].
+NO RH CLAIM.
+
+## r612 census (countable criterion; GaborSeparation sorry retired)
+
+Documentation only of the r612 Lean cut.  Date 2026-09-02.
+
+Asserting theorem `gabor_separationForAllZeros` deleted.
+`GaborSeparationForAllZeros` remains an unasserted Prop:
+OVERSPECIFIED prescribed packet, believed false by r605N T3,
+superseded by `gabor_zeroSide_pure_criterion_iff_rh_unconditional`.
+New module `RH/GaborCountableCriterion.lean`, rung (b):
+`gabor_zeroSide_rational_criterion_iff_rh` (takes `hcont`;
+local DCT of the ĥ-tsum).  No new `sorry`.
+Tracked census 8 → 7 (Source 1, Elementwise 1, Canonical 3,
+ExternalBridges 2).  NO RH CLAIM.
+
+## r612C census (continuity holds; rational iff unconditional)
+
+Documentation only of the r612C Lean cut.  Date 2026-09-02.
+Module now 551 lines.  `gaborZeroSideContinuous_holds` proves
+`GaborZeroSideContinuous` (joint continuity on `{a>0}×ℝ` via
+local uniform Gaussian majorant
+`‖ĥ‖ ≤ (π/a₀)exp((1/8+ω₁²/2)/a₀)exp(−t²/(4a₁))` and
+`continuousOn_tsum`; summability via `summable_gauss_over_zeros`).
+`gabor_zeroSide_rational_criterion_iff_rh_unconditional` :
+(∀ (a ω : ℚ) (ha : 0 < (a:ℝ)),
+0 ≤ gaborZeroSide (pureGaborTest a ω ha)) ↔ RiemannHypothesis —
+UNCONDITIONAL; axioms propext / Classical.choice / Quot.sound.
+Named-open list shrinks by one (`GaborZeroSideContinuous` is
+proven).  Tracked census stays 7.  NO RH CLAIM.
 -/
 
 end RH

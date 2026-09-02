@@ -141,6 +141,18 @@ mutants) but the engine is deferred; v1016 is numerical (euclidean cap /
 TEL-B remainder / CAR nuclearity / DFP series roots).  No Wolfram
 exact-check count change; GATE.WOLFRAM.01 stays 116/116.
 
+**2026-09-01 kernel-Loewner positivity (v1017).** Still
+`DEFERRED_NO_ENGINE`.  v1017 is numerical (Legendre finite-section +
+Bernstein HS enclosure of a Weil/Loewner quadratic form at a single
+support $L=0.3$); no exact algebraic identity for the Wolfram path.
+No Wolfram exact-check count change; GATE.WOLFRAM.01 stays 116/116.
+
+**2026-09-02 directed readout + Coxeter--Euler completion (v1018/v1019).** Still
+`DEFERRED_NO_ENGINE`.  v1018 is sympy-exact (seven $E_8$ readout identities over
+$\mathbb Z/\mathbb Q$; C7 stays open) and would be Wolfram-eligible when the engine
+returns; v1019 mixes exact cyclotomic identities with mpmath Euler-product numerics
+at cutoff $X=10^5$.  No Wolfram exact-check count change; GATE.WOLFRAM.01 stays 116/116.
+
 ## Provenance note
 
 As with the Lean archive (whose local reproduction is pending on the reviewer's

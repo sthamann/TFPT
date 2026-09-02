@@ -437,7 +437,10 @@ checkExact["branch divisor = (scalaron,A_Lambda): sum roots=-7/3=-scalaron/N_fam
    eigensolves; W-bridge is sympy-exact but Wolfram engine DEFERRED_NO_ENGINE).
    2026-08-31 Monday-morning harvest: v1015 axiom-core closure (sympy-exact P-dem)
    and v1016 state/gap batteries (euclidean cap / TEL-B / nuclearity / DFP)
-   stay Python-only; engine still DEFERRED_NO_ENGINE. *)
+   stay Python-only; engine still DEFERRED_NO_ENGINE.
+   2026-09-02: v1018 (sympy-exact E8 readout identities; C7 open) and v1019
+   (exact cyclotomic + mpmath Euler products) stay Python-only;
+   engine still DEFERRED_NO_ENGINE. *)
 
 (* ---- (v983) SEAM.SIMPLECURRENT.GENERATOR.01: glue vector lambda = (omega_s, omega_f) ---- *)
 Module[{omegaS, omegaF, lam, inD5, inA3, inL0, gensD5, gensA3, dots,

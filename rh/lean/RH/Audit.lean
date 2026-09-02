@@ -39,6 +39,11 @@ import RH.GraphResolvent
 import RH.EdgeBalance
 import RH.FrequentlySelected
 import RH.ExternalBridges
+import RH.GaborExplicitFormula
+import RH.GaborDominance
+import RH.GaborCountableCriterion
+import RH.CoxeterCompletion
+import RH.PrimeLogIndependence
 
 namespace RH
 
@@ -867,5 +872,90 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms standard_weil_criterion_to_mathlib_rh_of_separation
 #print axioms fullWeil_separates_offCritical_zeros
 #print axioms standard_weil_criterion_to_mathlib_rh
+
+/-! ## r558 Gabor split and EF wiring
+Expected: `gabor_explicitFormula_of_remainders`,
+`gabor_explicitFormula_pure_of_remainders`,
+`gabor_contour_identity_along`,
+`gabor_separation_of_inputs`,
+`gabor_inputs_to_mathlib_rh`,
+`gabor_separationInequality_of_parts`,
+`gaborSeparationForAllZeros_of_inequality`
+are `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+r581: `gabor_vertical_arithmetic_remainder` is a theorem
+(no `sorryAx`).  r612: the asserting theorem
+`gabor_separationForAllZeros` is retired; `GaborSeparationForAllZeros`
+is an unasserted Prop.  Census 8 → 7.
+r564: `gabor_rightVerticalIntegral_eq_prime_sum`,
+`gabor_hat_fourier_inversion`, and
+`gabor_vertical_arithmetic_of_parts` are
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+r612C: `gaborZeroSideContinuous_holds` and
+`gabor_zeroSide_rational_criterion_iff_rh_unconditional` are
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+Named-open list shrinks by one; census stays 7.
+r634L: `gabor_explicitFormula_pure` and
+`gabor_primeSide_rational_criterion_iff_rh` are
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+Census stays 7. -/
+#print axioms gabor_contour_identity_along
+#print axioms gabor_explicitFormula_pure_of_remainders
+#print axioms gabor_explicitFormula_pure
+#print axioms gabor_explicitFormula_of_remainders
+#print axioms gabor_vertical_arithmetic_of_parts
+#print axioms gabor_rightVerticalIntegral_eq_prime_sum
+#print axioms gabor_hat_fourier_inversion
+#print axioms gabor_vertical_arithmetic_remainder
+#print axioms scalingGaborTest_coeffs
+#print axioms gaborSeparationForAllZeros_of_inequality
+#print axioms gaborSeparationPrecheck_of_inequality
+#print axioms gabor_separationInequality_of_parts
+#print axioms gabor_separation_of_inputs
+#print axioms gabor_separation_of_inequality
+#print axioms gabor_inputs_to_mathlib_rh
+#print axioms gabor_inputs_to_mathlib_rh_of_inequality
+#print axioms gabor_zeroSide_rational_of_rh
+#print axioms gabor_zeroSide_nonneg_of_rational
+#print axioms gabor_zeroSide_rational_criterion_iff_rh
+#print axioms gaborZeroSideContinuous_holds
+#print axioms gabor_zeroSide_rational_criterion_iff_rh_unconditional
+#print axioms gabor_primeSide_rational_criterion_iff_rh
+
+/-! ## r568 canonical isolation-shrink dominance bricks
+Expected: Q-evenness, phase-coherence, plus-lobe majorant, host-merge,
+ω>0 shrink existence / greatest-a, and the logical wrapper are
+`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+`GaborDominanceBound` and the two named translation bridges are
+unasserted Props, not holes.  Census unchanged at 9. -/
+#print axioms truncated_theta_binMax_sum_le
+#print axioms truncated_theta_tsum_le
+#print axioms gaborQuadrupole_eq_four_re_hat
+#print axioms gaborQuadrupole_eq_four_re_integral
+#print axioms gaborQuadrupole_even_gamma
+#print axioms gabor_phase_coherent_cos
+#print axioms gaborPlusAmp_le_exp_neg_omega_sq
+#print axioms gaborPlusLobe_majorant
+#print axioms gaborHostMerge_minusLobe
+#print axioms exists_isolationShrink
+#print axioms exists_isolationShrink_omega
+#print axioms exists_greatest_isolationShrink
+#print axioms isolationShrink_spec
+#print axioms isolationShrink_exceptionWindow_empty
+#print axioms gabor_dominance_implies_separation
+
+/-! ## r617L Coxeter completion and prime-log independence
+Expected: `cyclotomic30_explicit`, `moebius_identity_30`,
+`completion_linear_coeff_zero`, `completion_explicit`,
+`trace_eq_neg_one_of_charpoly_cyclotomic30`,
+`linearIndependent_log_primes`, `log_ratio_irrational`
+are `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
+Census unchanged at 7. -/
+#print axioms cyclotomic30_explicit
+#print axioms moebius_identity_30
+#print axioms completion_linear_coeff_zero
+#print axioms completion_explicit
+#print axioms trace_eq_neg_one_of_charpoly_cyclotomic30
+#print axioms linearIndependent_log_primes
+#print axioms log_ratio_irrational
 
 end RH

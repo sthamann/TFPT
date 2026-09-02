@@ -2824,8 +2824,12 @@ _R491_STATUS = (
     "bound.  Remaining exact targets: sampled autocorrelation "
     "convergence, singular arch continuity, finite-hat pole integral.  "
     "Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  "
-    "Lean sorry census 8 -> 8 (external 3).  NO L* claim, "
-    "NO R-dagger claim, NO RH claim, NO anti-RH claim"
+    "Lean sorry census 8 -> 8 (external 3).  r547 census-gate "
+    "update: project-sorry-census expected 7 -> 9 (tracked set "
+    "Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; "
+    "GaborSeparation carries 2 named inputs).  Probe SHA "
+    "re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger "
+    "claim, NO RH claim, NO anti-RH claim"
 )
 
 _R492_STATUS = (
@@ -3026,6 +3030,1737 @@ _R502_STATUS = (
     "no R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
+_R535_STATUS = (
+    "numerical red-team of fullWeil_separates_offCritical_zeros "
+    "(round 535, PRIME.RDAGGER.WEIL_SEPARATION_REDTEAM.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT INCONCLUSIVE(truncation=beta=0.51,gamma=1000.00,"
+    "margin=-5.118815e-07,tail_heur=1.267461e+00,"
+    "reason=omitted_online_uncontrolled).  "
+    "49/49 injected off-critical zeros truncated-negative, but "
+    "gamma=1000 is not certified (omitted on-line mass ~+1.27 "
+    "swamps margins; Lipschitz tail certifies 0/49).  "
+    "Do NOT attack the Lean separation sorry before a "
+    "height-uniform construction exists.  Smoke-capable, "
+    "SPEC_SHA "
+    "c1d7caf1002067e6103f44d5470ddcdc4db321fd4918337ef813924dce8a0a15.  "
+    "Separation stays [O].  No L* claim, no R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
+_R536_STATUS = (
+    "kernel-Loewner lambda*(L) window map "
+    "(round 536, PRIME.RDAGGER.KERNEL_LOEWNER.WINDOW.01; "
+    "experiments-side method result, NO ledger row): "
+    "VERDICT WINDOW_MAPPED(L_max=0.300000, "
+    "lambda_at_Lmax=2.1220149285e-03, "
+    "tail_alt=GO(block-Schur-tail)).  "
+    "Frozen r494 method on the grid 0.30-0.80; only L=0.30 "
+    "certifies; dies at the 3x HS tail before the first prime "
+    "node (L=0.3125 fail); block-Schur tail (2||off||+||rest||, "
+    "m=800) recovers +7.152e-4 at L=0.3125.  "
+    "FRAMING: r502 already closed the lambda*-ladder as a PROOF "
+    "route for L >= 0.45 -- r536 is a method result about tail "
+    "bounds, NOT a reopened positivity window.  "
+    "SPEC_SHA "
+    "82d1409e6924d928e7442fe805486d840f0220b858a89387a3b1de3706e40dca.  "
+    "No L* claim, no R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
+_R537_STATUS = (
+    "external mpmath audit of the r534 honest contour identity "
+    "(round 537, experiments-side, NO ledger row): "
+    "VERDICT AUDIT_CLEAN(max_rel_err=5.8852501e-5)+"
+    "DICTIONARY_RESOLVES(map=g_tilde(u)=g(u)*cosh(u/2);"
+    "class_not_preserved=true).  "
+    "200 zeros, 40 digits: all identities confirmed within the "
+    "truncation budget, NO Lean definition bug.  The "
+    "(1+n^{-1}) vs 2/sqrt(n) mismatch is pointwise resolvable "
+    "via g -> g*cosh(u/2) but that map does NOT preserve the "
+    "autocorrelation class (mapped Fourier transforms go "
+    "negative), so same-test identification stays genuinely "
+    "obstructed; surplus Lambda(n)(1-n^{-1/2})^2 has no "
+    "universal positivity direction on the class.  "
+    "Terminology: the actual right contour edge is Re=2 "
+    "(not 17/16; 17/16 is the reflected left-edge Dirichlet "
+    "line).  Determinism fix: RUNTIME_SECONDS wall-clock line "
+    "removed from stdout; smoke now byte-identical.  "
+    "SPEC_SHA "
+    "00075ab3233b7630a3d0a4652ba079b88e8a5afc3718810c6f9221f8e8531dc8.  "
+    "Corpus identification stays [O].  No L* claim, "
+    "no R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
+_R539_STATUS = (
+    "centered even Hermite-Gaussian Weil-separation precheck "
+    "(round 539, PRIME.RDAGGER.WEIL_GAUSSIAN_SEPARATION.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT INCONCLUSIVE_TRUNCATION(worst=beta=0.51,gamma=5,"
+    "trunc=-9.377491e-13,n_trunc_neg=25/56,n_cert_neg=25/56).  "
+    "Exponential hat decay FIXES the r535 tail (certified omitted "
+    "on-line charge = 0 on all 25 winning cells, Trudgian JNT 134 "
+    "(2014) CERTIFIED label + crude-safe C=4); 25/56 cells "
+    "certified-negative for gamma<=14.13 with live prime coupling "
+    "(no Yoshida collapse); ALL gamma>=30 fail at truncation -- a "
+    "transform centered at 0 has no mass at t~gamma.  No Lean "
+    "Gaussian-campaign mandate; diagnosis: frequency shift needed.  "
+    "SPEC_SHA "
+    "87a2a2356e937e30a69a19db6ab6976257d40619074d6c3531545a89a9465657.  "
+    "Separation stays [O].  No L* claim, no R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
+_R540_STATUS = (
+    "on-line nulling inside the compact Weil class "
+    "(round 540, PRIME.RDAGGER.WEIL_ONLINE_NULL_SEPARATION.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT SUPPORT_VS_HEIGHT(frontier=R=2,N=20:none;R=4,N=20:none;"
+    "R=8,N=20:none;R=2,N=50:none;R=4,N=50:none;R=8,N=50:none;"
+    "R=2,N=100:none;R=4,N=100:none;R=8,N=100:none).  "
+    "Nullspaces nontrivial (dim 50-180, residual <=3.8e-13), "
+    "r535 regression anchor exact, but 0/135 cells "
+    "Lipschitz-certified (tail charge +77..+2.5e4 vs margins "
+    "<=96); gamma=1000 does not even couple "
+    "(Nyquist omega_max=K*pi/R <= 346).  Compact-class nulling "
+    "is CLOSED as a certification path; confirms noncompact "
+    "route priority.  SPEC_SHA "
+    "d09ff8f680650958c528b618285d50b22b51d1a5d397e6cc9ce196109c2fed26.  "
+    "Separation stays [O].  No L* claim, no R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
+_R541_STATUS = (
+    "Gabor/wavepacket height-uniform Weil-separation precheck "
+    "(round 541, PRIME.RDAGGER.WEIL_GABOR_SEPARATION.01; "
+    "experiments-side, NO ledger row): "
+    "VERDICT SEPARATION_GO_GABOR(min_certified_margin=-3.557041e+00, "
+    "worst=beta=0.51,gamma=1e+04, "
+    "scaling=a~const,omega~gamma-pi*a/sigma).  "
+    "Gabor wavepackets h=p(t)e^{-a t^2}cos(omega t) (p even deg<=4) "
+    "separate 42/42 cells INCLUDING gamma=10000 with certified "
+    "on-line mass (exact first 100 ordinates + Trudgian envelope "
+    "integral around +/-omega -- NO zetazero enumeration at height "
+    "10^4).  Clean scaling law a=sigma^2/64, "
+    "omega=gamma-pi*sigma/64 (sigma=beta-1/2), off-line "
+    "enhancement e^{sigma^2/2a}=e^{32}; prime coupling live "
+    "(eta in [1.3e-2,0.998], no Yoshida collapse); 11/11 checks, "
+    "G5 anchor reproduces r539 to 8.9e-16.  Honest boundary: "
+    "finite quadratic-form search in a 3-D subclass + cited "
+    "Trudgian majorant -- a negative certified Rayleigh is NOT "
+    "yet a theorem for the class; the three Lean lemmas needed "
+    "are named (class def, closed-form/enhancement identity, "
+    "Trudgian on-line majorant).  Certified numerical precheck, "
+    "Lean campaign licensed, no claim.  SPEC_SHA "
+    "f7c832d6640c84390982309065a70f426ccee42a0388e0636af2f110882af919.  "
+    "Separation stays [O].  No L* claim, no R-dagger claim, "
+    "NO RH claim, NO anti-RH claim"
+)
+
+_R542_STATUS = (
+    "Gabor-wavepacket reduction architecture "
+    "(rounds 542-550, PRIME.RDAGGER.WEIL_GABOR.SEPARATION_ARCH.01; "
+    "Lean-only then sealed scout; NO ledger row, NO RH claim): "
+    "RH/GaborSeparation.lean types the noncompact Gabor class, "
+    "closed-form identities (sorry-free), and the logical "
+    "reduction gabor_inputs_to_mathlib_rh.  r543 discharged the "
+    "pure-Gabor integral representation (Mathlib "
+    "integral_cexp_quadratic).  r546/r547 discharged the "
+    "Path-A increment (GaborIncrementBound = "
+    "2*zetaZerosInDiskCardBoundInner).  r548/r550 renormalized "
+    "GaborExplicitFormula to the classical identity "
+    "Z = Pole - Prime_comb + Arch with combMass = 2*Lambda/sqrt(n); "
+    "gaborPrimeSide (1+1/n) removed as a false contour inversion; "
+    "new defs gaborZeroSide/gaborPrimeComb/gaborPoleSide/"
+    "gaborArchSide; gabor_explicitFormula_to_spectral sorry-free.  "
+    "Endpoint still depends on GaborSeparationForAllZeros [O].  "
+    "r558 split GaborSeparationPrecheck / ForAllZeros; "
+    "GaborExplicitFormula moved to RH/GaborExplicitFormula.lean "
+    "r581 discharged gabor_vertical_arithmetic_remainder "
+    "(now a theorem).  "
+    "r610: GaborLowHeightZeroFree T0=4 unasserted Prop "
+    "(classically true, first zero 14.1347, not in Mathlib); "
+    "pole term exactly pi*e^{1/8} (gaborHat_pure_one_zero); "
+    "zero side <= 19/20 of it; "
+    "gaborSpectralFormula_refuted_of_lowHeight; axioms "
+    "propext/Classical.choice/Quot.sound.  "
+    "r612: asserting theorem gabor_separationForAllZeros deleted; "
+    "Prop GaborSeparationForAllZeros retained unasserted "
+    "(OVERSPECIFIED/believed-false).  This file has 0 sorry.  "
+    "r599/r600 vacuity audit: gaborSpectralFormula subtracts "
+    "hat(1) and is not the Weil functional; old hpos is FALSE.  "
+    "Live object gaborZeroSide (hpos*).  Live endpoints "
+    "GaborZeroSideSeparatesOffCriticalZeros, "
+    "GaborZeroSideCriterionToMathlibRH, "
+    "gabor_zeroSide_criterion_to_mathlib_rh, "
+    "gabor_zeroSide_inputs_to_mathlib_rh, "
+    "gabor_zeroSide_pure_criterion_iff_rh (pure family, "
+    "takes hsep = GaborZeroSideForAllZeros; r605A "
+    "FORALL_ZERO_OVERSPECIFIED), gabor_zeroSide_criterion_iff_rh "
+    "(all F, extra hypothesis hline).  Historical wrappers "
+    "VACUOUS (r600).  Theorems: gaborHat_criticalLine_nonneg, "
+    "gaborHat_one_nonneg, gaborSpectralFormula_eq, "
+    "gaborSpectralFormula_neg_of_small_zero_side, "
+    "gaborSpectralFormula_refuted (conditional on "
+    "Z(F0) < pi e^{1/8}).  Trudgian is inactive Path B "
+    "(named Prop, no sorry).  "
+    "r605A: GaborZeroSideForAllZeros is the prescribed-packet "
+    "pointwise form (scalingGaborTest a=sigma^2/64, "
+    "omega=gamma-pi a/sigma) and is OVERSPECIFIED.  "
+    "Conditional reduction only; Input 1 (integral) and Input 2 "
+    "(increment) PROVED, Input 3 (EF) PROVED as a theorem "
+    "(r581); r634L: pureGaborTest_coeffs (rfl) and "
+    "pureGaborTest_admissible (GaborSeparation.lean L156-162); "
+    "feeds gabor_explicitFormula_pure.  Separation stays [O].  "
+    "Tracked sorry census 9 -> 8 at r581 (GaborSeparation 1; "
+    "GaborExplicitFormula 0); stays 8 through r605; 8 -> 7 at "
+    "r612 (GaborSeparation 0); stays 7 at r634L.  "
+    "File 2181 lines, 0 sorry.  NO RH CLAIM"
+)
+
+_R543_STATUS = (
+    "pure-Gabor bilateral Gaussian integral "
+    "(round 543, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborIntegral.lean proves "
+    "pureGaborHat_integral_representation sorry-free via "
+    "Mathlib integral_cexp_quadratic (complex Gaussian).  "
+    "No zeta-zero statement, no RH claim.  Closes one of the "
+    "four named r542 classical inputs (the integral "
+    "representation).  Census of the tracked set later "
+    "moves 11 -> 10 at this discharge, then 10 -> 9 at r547.  "
+    "NO RH CLAIM"
+)
+
+_R544_STATUS = (
+    "Gabor uniformity scout "
+    "(round 544, PRIME.RDAGGER.WEIL_GABOR.UNIFORM_INEQUALITY.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT SCOUT_NEGATIVE_ALL_GRID_BUT_GLOBAL_PROOF_BLOCKED.  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_uniform_inequality_probe.py; 15/15 scan points "
+    "strongly negative; two byte-identical runs.  "
+    "SPEC_SHA 82da6ced1dc11fcf1224a33e8d606440de8e13e4534e2c2ca3d0619fd524c7bd; "
+    "probe SHA 0f00e346b3080752e0ec15bd393ba0c02c3bf3461bfb4b3a78f8ad24f3ac6df0.  "
+    "Pole term helps and is exponentially suppressed.  "
+    "Unit-bin counting without Gaussian-density transfer "
+    "yields only R lesssim log gamma -- NOT a global "
+    "inequality.  Two missing controls named: (1) Gauss "
+    "density transfer from the discrete zero sum to the "
+    "continuous envelope; (2) off-line zeros outside the "
+    "selected FE quadruple.  Companion RH/GaborInequality.lean "
+    "is sorry-free (symbolic kernel only; does not discharge "
+    "GaborSeparationInequality).  Separation stays [O].  "
+    "NO RH CLAIM"
+)
+
+_R545_STATUS = (
+    "Trudgian roadmap (round 545, analysis only, no artefact): "
+    "Path A chosen -- unit increment from existing repo lemmas "
+    "(zetaZerosInDiskCardBoundInner).  Path B (exact Trudgian "
+    "constants) stays inactive.  No Lean change, no probe, "
+    "no RH claim"
+)
+
+_R546_STATUS = (
+    "local zero-count increment bound "
+    "(round 546, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/ZeroIncrement.lean proves zeta_unit_increment and "
+    "gaborIncrementBound_holds sorry-free.  Explicit constant "
+    "2*zetaZerosInDiskCardBoundInner.  Owns gaborZeroCount so "
+    "GaborSeparation can import without a cycle.  Path A "
+    "increment is a theorem; Trudgian remains inactive Path B.  "
+    "This counting bound is NOT by itself a uniform Gabor "
+    "inequality (r544 remaining bricks stand).  NO RH CLAIM"
+)
+
+_R547_STATUS = (
+    "GaborSeparation Path-A discharge "
+    "(round 547, Lean-only rebuild of RH/GaborSeparation.lean; "
+    "NO sealed probe, NO ledger row): "
+    "Trudgian premise unloaded; live counting input is the "
+    "proved GaborIncrementBound.  Endpoint "
+    "gabor_inputs_to_mathlib_rh depends only on "
+    "GaborExplicitFormula + GaborSeparationInequality.  "
+    "Tracked sorry census 10 -> 9 (GaborSeparation carries 2).  "
+    "Conditional reduction only; no RH claim; separation "
+    "stays [O]"
+)
+
+_R548_STATUS = (
+    "Gabor explicit-formula numerical identity "
+    "(round 548; experiments-side sealed probe, NO ledger row): "
+    "VERDICT EF_CONFIRMED(max_resid=9.36e-3, A=36/36, "
+    "B_scharf=0/24).  Probe experiments/tfpt-discovery/"
+    "weil_gabor_explicit_formula_probe.py.  Classical identity "
+    "Z = Pole - Prime_comb + Arch confirmed; Lean (1+1/n) prime "
+    "side identified as a false contour inversion (comb "
+    "2*Lambda/sqrt(n) is the correct gauge).  SPEC_SHA "
+    "1c641853ec1f7ad00b3c2c3e0708c224ecd43d107b8f79a2c6f848c658068048; "
+    "probe SHA "
+    "16f8f59638b091f09fef3e44561f70388f6ba7d26e0093471c77fbd7a03191b9.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R549_STATUS = (
+    "Gabor discrete density-transfer scout "
+    "(round 549, PRIME.RDAGGER.WEIL_GABOR.DENSITY_TRANSFER.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT TRANSFER_UNIFORM(bound=15079.6447372) + "
+    "OFFLINE_ADVERSARIAL(config=beta=0.51,gamma=14,"
+    "beta_prime=0.99,gamma_prime=13.9995091261,"
+    "Q=1.03983262001e+33374).  Probe experiments/tfpt-discovery/"
+    "gabor_density_transfer_probe.py.  Discrete Gaussian "
+    "density transfer is uniform; an increment-compliant "
+    "off-line configuration remains adversarial.  SPEC_SHA "
+    "60dbea7a517ede8a2de1e1d0b1d29be97a91ac11eba6fa4d2e008b782e7aeb2f; "
+    "probe SHA "
+    "2304b734386e08823747759fa6df4f70677d789299d9fd56cbc5fcb10a749b05.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R551_STATUS = (
+    "Gabor extremal-selection scout "
+    "(round 551, PRIME.RDAGGER.WEIL_GABOR.EXTREMAL_SELECTION.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT SELECTION_CONDITIONAL(condition=spectral_gap:"
+    "sigma_prime/sigma<=0.919354897686;gleichstand_unrepaired;"
+    "even_phase_inadmissible).  Probe experiments/tfpt-discovery/"
+    "gabor_extremal_selection_probe.py.  Budget "
+    "B/|Q_sel|=141.62 is gamma-free; off-line control stays "
+    "conditional (tie unrepaired; even phase inadmissible).  "
+    "SPEC_SHA "
+    "616d5a4adb9727ace94ea27201966d4ea4ac0085bc8e64c796c3e9ca35a4b4d3; "
+    "probe SHA "
+    "603d13420612e26febd2e271b16b2381a683b02ab14bc4b0ad50fd2bb99d6277.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R552_STATUS = (
+    "discrete Gaussian theta-lobe bound "
+    "(round 552, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborThetaBound.lean proves gauss_binMax_tsum_le <= "
+    "Theta_lobe(a) = 3 + 2*Sum exp(-m^2/2a) center-independently, "
+    "plus bin_partial_summation and gauss_online_mass_uniform, "
+    "sorry-free.  RH.lean imports the module.  "
+    "RH/GaborInequality.lean adds the alias "
+    "gauss_density_transfer_binMax.  Discrete density transfer "
+    "is PROVED; the log-factor remainder and the continuous "
+    "TrudgianGaussianMeasureTransfer stay open.  This is not "
+    "a uniform Gabor separation inequality.  r579 adds "
+    "varC / bin_partial_summation_varC (log occupancy).  "
+    "Separation stays [O].  Tracked sorry census 9 -> 8 at "
+    "r581.  NO RH CLAIM"
+)
+
+_R552_INEQ_STATUS = (
+    "Gabor inequality kernel plus discrete transfer alias "
+    "(rounds 544/552; NO ledger row): r544 companion "
+    "RH/GaborInequality.lean is sorry-free (symbolic kernel; "
+    "does not discharge GaborSeparationInequality).  r552 adds "
+    "the alias gauss_density_transfer_binMax to the proved "
+    "discrete bin-max bound in GaborThetaBound.lean.  "
+    "r579/r580 add gauss_density_transfer_binMax_log "
+    "(log-occupancy Finset transfer).  "
+    "Continuous TrudgianGaussianMeasureTransfer remains open.  "
+    "Separation stays [O].  NO RH CLAIM"
+)
+
+_R553_STATUS = (
+    "Gabor config-first quantifier-flip scout "
+    "(round 553, PRIME.RDAGGER.WEIL_GABOR.CONFIG_FIRST.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT_A WITNESS_LOSES(config=cluster:k=5:unit|s=0.25|g=14), "
+    "VERDICT_B WITNESS_LOSES(config=game:k=10:w=5*sqrt(a)).  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_config_first_probe.py.  Quantifier flip tested: "
+    "neither the 1-packet nor the 2-packet Gabor class beats "
+    "every increment-compliant configuration; class extension "
+    "(2-packet) is not sufficient.  Honest negative: the Gabor "
+    "class alone does not prove the forall-Z exists-h form "
+    "under pure counting control.  SPEC_SHA "
+    "d9e4e335f14afbca51cf0ed9e6b98ce82ed062d05a11106c247e8e4bb52985ee; "
+    "probe SHA "
+    "f2d763032196b55755cf9ef1a8195552e886927f1fe81b4701b402434bdd058b.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R554_STATUS = (
+    "Gabor mixture-witness scout "
+    "(round 554, PRIME.RDAGGER.WEIL_GABOR.MIXTURE_WITNESS.01; "
+    "experiments-side sealed probe, NO ledger row): leftover "
+    "scale is nonlinear; r553 loss claimed as a pick artefact "
+    "(dissent).  Later settled by r559/r560: leftover is not a "
+    "faithful Weil proxy.  Probe experiments/tfpt-discovery/"
+    "gabor_mixture_witness_probe.py.  SPEC_SHA "
+    "7af671184671880b47d80353cc447891b998162cbdd325f971e90cb5259bfeb8; "
+    "probe SHA "
+    "f0f8ed3e070abef09a0a5c54a358c48a9ef3a851d86df25dda53f9820a7a9457.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R555_STATUS = (
+    "Gabor hat analytic foundations "
+    "(rounds 555/587, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborHatAnalytic.lean proves entirety, FE-symmetry "
+    "hat_W(1-s)=hat_W(s), three-lobe bound, and Gaussian strip "
+    "decay, sorry-free.  r587: poly-in-t majorant "
+    "norm_gaborHat_le_poly_three_lobe "
+    "(||hat|| <= C(sigma)*(1+|t|)^8*threeLobe) is a THEOREM.  "
+    "Does not prove GaborExplicitFormula.  "
+    "Tracked sorry census stays 8.  NO RH CLAIM"
+)
+
+_R557_SUM_STATUS = (
+    "Gabor zero-summability "
+    "(rounds 557/587, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborZeroSummable.lean proves "
+    "summable_gaborHat_over_zeros sorry-free.  "
+    "r587: summable_gaborHat_over_zeros_quartic is a THEOREM.  "
+    "Tracked sorry census stays 8.  NO RH CLAIM"
+)
+
+_R557_HORIZ_STATUS = (
+    "Gabor horizontal edges "
+    "(round 557, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborHorizontalEdges.lean proves "
+    "gabor_horizontal_edges_tendsto_zero sorry-free.  "
+    "Tracked sorry census stays 9.  NO RH CLAIM"
+)
+
+_R557_CONT_STATUS = (
+    "Gabor contour residue identity "
+    "(rounds 557/r631L, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborContourResidue.lean proves "
+    "gabor_contour_identity_fixed_T sorry-free.  "
+    "r631L docstring: GaborContourLimitRemainder is PROVED "
+    "(gaborContourLimitRemainder_holds, r576); not an unasserted "
+    "hole.  Tracked sorry census stays 7.  NO RH CLAIM"
+)
+
+_R558_EF_STATUS = (
+    "Gabor explicit-formula wiring "
+    "(rounds 558/564/570/572/576/581/r634L, Lean-only, NO sealed "
+    "probe, NO ledger row): RH/GaborExplicitFormula.lean (220 "
+    "lines) proves gabor_explicitFormula_of_remainders sorry-free.  "
+    "r564 adds right-vertical inversion, Fourier inversion, and "
+    "of_parts.  r570/r572/r576 reduce of_parts to the arch "
+    "remainder; r581 discharges gabor_vertical_arithmetic_remainder "
+    "as a THEOREM (gaborArchContourShift_holds + "
+    "gaborArchDigammaIdentification_holds; no sorryAx).  "
+    "r634L: gabor_explicitFormula_pure is UNCONDITIONAL for "
+    "admissible pure F (coeffs <1,0,0>): gaborZeroSide F = "
+    "gaborPoleSide F - gaborPrimeComb F + gaborArchSide F "
+    "(both remainders theorems).  Remaining EF brick: "
+    "GaborHatQuarticExplicitRemainder (non-pure quartics only).  "
+    "Tracked sorry census stays 7.  NO RH CLAIM"
+)
+
+_R560_STATUS = (
+    "Gabor honest Weil game "
+    "(round 560, PRIME.RDAGGER.WEIL_GABOR.HONEST_FORM.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT HONEST_WITNESS_WINS(all=52, "
+    "worst_margin=-6.03480709688e+123).  Probe "
+    "experiments/tfpt-discovery/gabor_honest_weil_game_probe.py.  "
+    "W_honest = Q_off + R_on (no R_ref, no -3.56 credit).  "
+    "Settles the r553/r554 leftover dispute on this catalog; "
+    "the forall-Z proof stays open.  SPEC_SHA "
+    "4e27e628ac1d6634b96f21a05ff6cf9cffc5f3debe9c02503b72e4e5d97f8682; "
+    "probe SHA "
+    "990ccd20719cade97374a5134238301a15f77cb9266803a603e86e352ee208bd.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R561_STATUS = (
+    "Gabor uniform dominance scout "
+    "(round 561, PRIME.RDAGGER.WEIL_GABOR.UNIFORM_DOMINANCE.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT DOMINANCE_UNIFORM(rule="
+    "isolation_shrink_from_lock_afac=1/8, ...).  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_uniform_dominance_probe.py.  Signed-refuted by "
+    "r563/r566 (gamma<0 double-count / plus-lobe); canonically "
+    "repaired in r567.  Pin kept because the probe is sealed.  "
+    "SPEC_SHA "
+    "80beb0a2cf0dd049ba72a25e9f39300737a74a5ad859f121cc9bf7991bc0d138; "
+    "probe SHA "
+    "519a3895668a96bd13f887ab915fefb41e6196a05171878fb11b5b1098c18993.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R562_DOM_STATUS = (
+    "Gabor isolation-shrink dominance "
+    "(rounds 562/568/569/571/589, Lean-only, NO sealed probe, "
+    "NO ledger row): RH/GaborDominance.lean first cut (r562) "
+    "proves truncated theta, Q=4 Re hat_W, isolationShrink "
+    "sorry-free.  r568 replaces GaborDominanceBound by the "
+    "canonical weighted form (GaborCanonicalConfig, gamma>0, "
+    "omega>0, floor-free).  r569/r571 discharge T_gap=0 after "
+    "isolation, host quadrupole Q<0 under a0=gaborSmallnessA, "
+    "and assembly; GaborDominanceBound IS A THEOREM "
+    "(no sorryAx).  r573 audit STATEMENT_WEAKENED: finite "
+    "proxy (K_bin=43 unproved for genuine zeros; R_on defined "
+    "only; singleton junction).  r589 L2: Bridge A docstring "
+    "BRIDGE_A_IS_RH_CORE (not a translation lemma); Bridge B "
+    "has no Isolation->Scaling monotonicity transfer.  Does "
+    "not discharge gabor_separationForAllZeros.  Tracked "
+    "sorry census 9 -> 8 at r581.  NO RH CLAIM"
+)
+
+_R563_STATUS = (
+    "Gabor dominance red-team "
+    "(round 563, PRIME.RDAGGER.WEIL_GABOR.DOMINANCE_REDTEAM.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT REDTEAM_BREAKS(config=sec:equal_sigma_twin_at_-omega, "
+    "...).  Probe experiments/tfpt-discovery/"
+    "gabor_dominance_redteam_probe.py.  Breaks the r561 rule on "
+    "a gamma<0 plus-lobe twin; 0/46 breaks on gamma>0 cells.  "
+    "SPEC_SHA "
+    "32df8b0424e1b7ba67339b2e734976dc8cf194be8f850e457f3189b87909dbd9; "
+    "probe SHA "
+    "21a4bbffccdbf05bb8534aab6b4ef20a6185b3873a0a605dcecb7ee04fdaa794.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R564_VERT_STATUS = (
+    "Gabor vertical T->inf identification "
+    "(rounds 564/r581, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborVertical.lean proves "
+    "gabor_rightVerticalIntegral_eq_prime_sum and "
+    "gabor_hat_fourier_inversion sorry-free; no asserting "
+    "sorry in this file.  GaborVerticalArithmeticRemainder is "
+    "proved (r581) via gaborArchDigammaIdentification_holds; "
+    "r634L docstring correction.  Remaining EF brick for "
+    "non-pure quartics: GaborHatQuarticExplicitRemainder.  "
+    "Tracked sorry census stays 7.  NO RH CLAIM"
+)
+
+_R565_STATUS = (
+    "Gabor scramble-gate late declaration "
+    "(round 565, PRIME.RDAGGER.WEIL_GABOR.SCRAMBLE_GATE.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT GATE_PASS(mode=needs_no_cancellation, "
+    "worst_cell=sig=0.4900/gam=14.0000/r541_lock).  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_scramble_gate_probe.py.  Full r541/r548 Weil form "
+    "is scramble-insensitive because the bound uses no prime "
+    "cancellation.  SPEC_SHA "
+    "e8ffb5ca6267092ac07491aa6afd3c4c47cc059f92a1ebe773db308229c3f267; "
+    "probe SHA "
+    "8be16697e3ea910276364fc9236dcd44a09d02080507759e5ccce20c6afb7830.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R567_STATUS = (
+    "Gabor canonical dominance "
+    "(round 567, PRIME.RDAGGER.WEIL_GABOR.CANONICAL_DOMINANCE.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT CANONICAL_DOMINANCE_HOLDS(cells=119, "
+    "worst_margin=0.990408, bound_conservative=all).  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_canonical_dominance_probe.py.  Canonical rule+bound "
+    "on 119/119 cells; forall-Z proof stays open.  SPEC_SHA "
+    "0073591b08fc8c30397af12242c25f09c73c5a54b0e03acb77a26bf8a9e978f8; "
+    "probe SHA "
+    "c0781a083cdfdfef0ff166bd415644c2963a3a96b3a140b795859da52b88af63.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_RH_ROOT_STATUS = (
+    "RH.lean root imports (r542-r617L): ZeroIncrement before "
+    "GaborSeparation; also imports GaborHatAnalytic, "
+    "GaborInequality, GaborThetaBound, GaborZeroSummable, "
+    "GaborFEMultiplicity, GaborHorizontalEdges, "
+    "GaborContourResidue, GaborVertical, "
+    "GaborAutocorrelation, GaborLeftVertical, GaborArchDigamma, "
+    "GaborArchContour, GaborVerticalLimit, "
+    "GaborExplicitFormula, GaborDominance, GaborDominanceProof, "
+    "GaborDominanceAssembly, GaborDominanceLog, "
+    "GaborSpectralBridge, GaborDominanceLog2, "
+    "GaborArithmeticSeparator, GaborExposedOrbit, "
+    "GaborCountableCriterion, "
+    "GaborOuterTail, "
+    "GaborWindowGlue, GaborAnchoredWitness, "
+    "CoxeterCompletion, PrimeLogIndependence.  GaborIntegral "
+    "is imported via GaborSeparation.  EF for the Gabor class "
+    "is a theorem (r581).  GaborDominanceBoundLog2 is a "
+    "theorem (r583).  r590: existential arithmetic "
+    "separator module.  r593/r595: outer-tail + window-glue "
+    "modules.  r596-r600: anchored-witness module "
+    "(log-glue + zeroSide<0 at own packet; cover residual; "
+    "r600: GaborSpectralToArithmetic_holds is the pole-sign "
+    "lemma hat(1)>=0, NOT RH-core).  r599/r600 vacuity: "
+    "live object gaborZeroSide (hpos*); historical "
+    "gabor_inputs_to_mathlib_rh VACUOUS.  "
+    "r605: GaborExposedOrbit module (sorry-free existential "
+    "pure-Gabor separator).  "
+    "r610: GaborLowHeightZeroFree T0 unasserted Prop in "
+    "GaborSeparation; gaborSpectralFormula_refuted_of_lowHeight.  "
+    "r612: GaborCountableCriterion module; asserting "
+    "gabor_separationForAllZeros retired; tracked sorry census "
+    "8 -> 7; module count 53 -> 54.  "
+    "r617L: CoxeterCompletion + PrimeLogIndependence modules; "
+    "module count 54 -> 56; tracked sorry census stays 7.  "
+    "Conditional Gabor reduction only; "
+    "no RH claim"
+)
+
+
+_R569_PROOF_STATUS = (
+    "Gabor dominance T_gap / host quadrupole "
+    "(rounds 569/597, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborDominanceProof.lean proves T_gap=0 after isolation, "
+    "host quadrupole Q<0 under cap a0=gaborSmallnessA "
+    "(gamma^2/512 term uniform in gamma>0), and eta>9/10.  "
+    "GaborDominanceBound is assembled in GaborDominanceAssembly "
+    "(named remainder X at this cut).  r597: "
+    "isolationShrinkOfConfig_admissible_of_le (free-width "
+    "chain for the anchored witness).  Does not discharge "
+    "gabor_separationForAllZeros.  NO RH CLAIM"
+)
+
+_R570_LEFT_STATUS = (
+    "Gabor left vertical "
+    "(round 570, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborLeftVertical.lean closes the left vertical "
+    "(gaborLeftPrimeReflection_holds via FE + dual L-series "
+    "inversion).  of_parts reduced to (hlim, harch, hhalf).  "
+    "Digamma spec sharpened: psi(1/4)=-gamma-3log2-pi/2.  "
+    "NO RH CLAIM"
+)
+
+_R571_ASM_STATUS = (
+    "Gabor dominance assembly "
+    "(rounds 571/597, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborDominanceAssembly.lean is sorry-free "
+    "(packing + budget: T_far<=1/70, T_plus<=1/100, "
+    "R_on/E<=1/100 vs eta>9/10).  GaborDominanceBound IS A "
+    "THEOREM (no sorryAx).  r573 later types the statement as "
+    "STATEMENT_WEAKENED (finite proxy).  r597: "
+    "foreign_not_in_peakWindow_of_le (peak emptiness is a "
+    "radius fact on the free-width chain).  Does not discharge "
+    "gabor_separationForAllZeros.  NO RH CLAIM"
+)
+
+_R572_ACF_STATUS = (
+    "Gabor autocorrelation closed form "
+    "(round 572, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborAutocorrelation.lean proves the ACF closed form "
+    "and GaborHalfCombReal sorry-free.  of_parts reduced to "
+    "(hlim, harch).  NO RH CLAIM"
+)
+
+_R574_LOG_STATUS = (
+    "Gabor dominance log cap "
+    "(rounds 574/575/597/598, Lean-only, NO sealed probe, "
+    "NO ledger row): "
+    "RH/GaborDominanceLog.lean sets gaborKBinAt gamma = "
+    "2*C_inner*(1+log(gamma+3)) exactly at the counting "
+    "theorem; counting => log-compliance PROVED "
+    "(singleton+strip).  r575: GaborDominanceBoundLog IS A "
+    "THEOREM (LogFarPacking+RemainderBudgetLog+AssemblyLog "
+    "sorry-free under sharpened far-cap gaborFarSmallnessA).  "
+    "r597: gaborHonestWeilLeMajorantLog_of_le (free-width "
+    "chain).  r598: helpers gaborFarTailLog_mono_abs, "
+    "gaborLogWeightedTheta_two_le_gammaCap "
+    "(|omega(a)|<=gamma-star) for retuned-omega htail.  "
+    "Does not discharge gabor_separationForAllZeros.  "
+    "NO RH CLAIM"
+)
+
+_R576_VLIM_STATUS = (
+    "Gabor contour vertical limit "
+    "(round 576, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborVerticalLimit.lean proves "
+    "gaborContourVerticalLimit_holds sorry-free (Landau-gap "
+    "T-sequence, horizontal edges Gauss*log^3, rectangle "
+    "exhaustion).  of_parts reduced to (harch).  NO RH CLAIM"
+)
+
+_R577_DIG_STATUS = (
+    "Gabor arch Digamma on the critical line "
+    "(round 577, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborArchDigamma.lean proves chi'/chi(1/2+it)=omega(t) "
+    "sorry-free via GammaR reflection "
+    "(logDeriv_zetaFEFactor_criticalLine).  Digamma "
+    "identification leaves 2 named remainders (closed r581).  "
+    "NO RH CLAIM"
+)
+
+_R578_ARCH_STATUS = (
+    "Gabor arch contour pairing "
+    "(rounds 578/581, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborArchContour.lean closes the pairing "
+    "(gaborArchCriticalPairingReal_holds) and proves the "
+    "fixed-T residue oint (chi'/chi) hat = -2*pi*i*hat(0) "
+    "(pole split, strip pole-freeness).  r581 discharges "
+    "T->inf: gaborArchContourShift_holds (T_k=k+2, no Landau).  "
+    "NO RH CLAIM"
+)
+
+_R579_SPEC_STATUS = (
+    "Gabor spectral bridges "
+    "(rounds 579-589, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborSpectralBridge.lean: log-occupancy Gauss transfer "
+    "(varC/binMax_log), three-lobe Finset bound, unweighted "
+    "truncation compliance of genuine zeros, exhaustion "
+    "algebra.  r584: gaborLogThreeLobeMajorant_le_closed "
+    "THEOREM (Closed budget dominates the Finset-transfer "
+    "majorant); pure On/Off split of_summable / of_pure.  "
+    "r585: gaborHat_star_pure, "
+    "gaborHat_fe_quadrupole_eq_four_re, "
+    "gaborCriticalLineMassLeLogMajorant_holds; HONEST: "
+    "weight-4 quadrupole tsum over all Im>0 double-counts.  "
+    "r586: gaborOffLineMassEqWeightedQuadrupoleTsum_holds "
+    "THEOREM in honest FD form (Re>1/2 and Im>0, weight 4, "
+    "+ real-axis remainder); double-count prop documented "
+    "dead.  r587: unrestricted On/Off-split "
+    "gaborZeroSideEqOffPlusOn_holds is a THEOREM; quartic "
+    "weighted hat summability.  r588: "
+    "gaborWeightedQuadrupoleLimitEqFDTsum_holds; "
+    "riemannZeta_ne_zero_of_mem_Ioo (zeta != 0 on (0,1) "
+    "real, via r509 Euler-Maclaurin, not Eta); "
+    "gaborOffLineRealAxisMass_eq_zero; weighted Bridge-6 "
+    "identification "
+    "gaborWeightedQuadrupoleLimitEqOffLineMass_holds is a "
+    "THEOREM.  Unweighted identification only _of_simple.  "
+    "r589: FD window -> BoundLog2 hypotheses "
+    "(gaborWeightedTruncation_boundLog2_hyps); named "
+    "GaborWeightedTruncationGammaDistinct and "
+    "GaborWeightedTruncationNegLog; GaborTruncationUniformNeg "
+    "does NOT follow from BoundLog2 (packet retunes).  "
+    "Remaining named rest: GaborTruncationUniformNeg, "
+    "GaborWeightedTruncationGammaDistinct, living sorry "
+    "gabor_separationForAllZeros.  Tracked sorry census "
+    "stays 8.  Finite/conditional only.  NO RH CLAIM"
+)
+
+_R582_FE_STATUS = (
+    "Gabor FE multiplicity on the open strip "
+    "(rounds 582/585, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborFEMultiplicity.lean proves "
+    "riemannZetaMultiplicity_eq_one_sub_all (m(z)=m(1-z) via "
+    "Lambda(s)=Lambda(1-s) on the open strip) and "
+    "sum_multiplicity_stripZerosWindow_le (Jensen+FE fold: "
+    "unit window sum m <= 2*C_inner*(1+log(|N|+3))), "
+    "sorry-free.  Weighted truncation compliance is a "
+    "theorem.  r585: riemannZetaMultiplicity_eq_conj "
+    "(m(bar rho)=m(rho) via Schwarz reflection) sorry-free.  "
+    "Does not discharge gabor_separationForAllZeros.  "
+    "Tracked sorry census stays 8.  NO RH CLAIM"
+)
+
+_R583_LOG2_STATUS = (
+    "Gabor dominance BoundLog2 "
+    "(rounds 582/583/589/597, Lean-only, NO sealed probe, "
+    "NO ledger row): "
+    "RH/GaborDominanceLog2.lean.  r582 packs BoundLog2 "
+    "(omega-dependent R_on_log) sorry-free; r583 closes "
+    "GaborRemainderBudgetLog2 and proves "
+    "GaborDominanceBoundLog2 as a THEOREM (both R_on_log/E "
+    "branches via online_exp_le_log; hat-side closed "
+    "linear-central+far-tail form).  Axioms [propext, "
+    "Classical.choice, Quot.sound]; no sorryAx.  "
+    "r584-r588 discharge the r583 named remainders as "
+    "theorems (tsum<=Closed; unrestricted On/Off-split; "
+    "weighted Bridge-6 identification).  r589: every nonempty "
+    "weighted FD window is BoundLog2 input "
+    "(gaborWeightedTruncationNegLog_holds theorem; lock "
+    "margin n-free; singleton card=1 supplies "
+    "gammaDistinct+hostIsolated); "
+    "gabor_dominanceLog2_implies_separation is pure logic "
+    "on two named bridge hypotheses.  r597: free-width "
+    "chain gaborHonestWeilLeMajorantLog2_of_le, "
+    "gaborRemainderBudgetLog2_of_le, "
+    "gaborHonestWeilLog_lt_etaMargin_of_le / "
+    "_lockMargin_of_le (feeds anchored zeroSide<0 at own "
+    "packet).  Finite/conditional proxy only.  Does not "
+    "discharge gabor_separationForAllZeros.  Tracked sorry "
+    "census stays 8.  NO RH CLAIM"
+)
+
+_R590_ARITH_STATUS = (
+    "Gabor existential arithmetic separator "
+    "(round 590, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborArithmeticSeparator.lean.  Named unasserted "
+    "GaborArithmeticSeparatesOffCriticalZeros (forall "
+    "off-critical zero exists admissible F with "
+    "gaborArithmeticFormula F < 0).  Sorry-free: "
+    "gabor_separation_of_arithmetic_separators (EF + "
+    "separator => GaborSeparatesOffCriticalZeros) and "
+    "gabor_arithmetic_inputs_to_mathlib_rh (parallel "
+    "Mathlib chain WITHOUT scalingGaborTest; old chain "
+    "unchanged).  Named unasserted: "
+    "GaborFixedPacketCofinalNegAt and "
+    "gabor_arithmetic_separator_of_cofinal_neg.  L2 r589 "
+    "verdict BRIDGE_A_IS_RH_CORE recorded in docstring.  "
+    "r600: live gabor_arithmetic_zeroSide_inputs_to_mathlib_rh; "
+    "historical gabor_separation_of_arithmetic_separators / "
+    "gabor_arithmetic_inputs_to_mathlib_rh marked VACUOUS.  "
+    "r605A: gabor_zeroSide_pure_criterion_iff_rh takes hsep "
+    "as premise (GaborZeroSideForAllZeros / prescribed "
+    "scalingGaborTest packet) and is OVERSPECIFIED; live "
+    "unconditional iff is "
+    "gabor_zeroSide_pure_criterion_iff_rh_unconditional in "
+    "GaborExposedOrbit.lean.  "
+    "Living sorry remains gabor_separationForAllZeros.  "
+    "Tracked sorry census stays 8.  Finite/conditional "
+    "only.  NO RH CLAIM"
+)
+
+_R591_STATUS = (
+    "Gabor fixed-packet cofinal-negativity scout "
+    "(round 591, PRIME.RDAGGER.WEIL_GABOR.FIXED_PACKET_COFINAL.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT (a) strict sigma'<=sigma-0.02 "
+    "COFINAL_NEG_HOLDS(hosts=9, worst_Wred=-0.995192); "
+    "(b) weak (tie allowed) COFINAL_NEG_BREAKS 0/9 "
+    "(r551 killer, Wred=+14.005); (c) free sigma'<=0.49 "
+    "COFINAL_NEG_BREAKS 0/9 (r549, +inf).  epsilon floor: "
+    "0.005 holds 9/9, 0.001 MIXED 8/9.  Interpretation: "
+    "GaborFixedPacketCofinalNegAt tenable ONLY WITH "
+    "EXTREMALITY, not as r590 formulated without the gap.  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_fixed_packet_cofinal_probe.py.  SPEC_SHA "
+    "cd9af7ce0c1ed42786d3ebc006c0de6c28d912e6738e9195967578c3bfebb26f; "
+    "probe SHA "
+    "b614d5833f4e3ee9b41044116b6c0df6d58dc10ce52abd2454077f10fd0accd7.  "
+    "Two runs bit-identical, seed 20260902, CHECKS 7/7.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R592_STATUS = (
+    "Gabor window-adaptive tail scout "
+    "(round 592, PRIME.RDAGGER.WEIL_GABOR.WINDOW_ADAPTIVE_TAIL.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT locally-adaptive-globally-fixed CONDITIONAL.  "
+    "A MIXED 36 rescued / 12 broken (all 12 = float64 omega "
+    "collapse at near-tie delta=1e-8, W_red=+1, IEEE artefact); "
+    "B/C/D HOLDS + TAIL_METRIC_OK (worst W_red=-0.9904, T=0 "
+    "underflow).  L2-numerator sup=-0.7687 NOT_REACHED.  "
+    "Probe experiments/tfpt-discovery/"
+    "gabor_window_adaptive_tail_probe.py.  SPEC_SHA "
+    "de35efea8c8cd4ac803aef1cc4c4f33b5fdde7c7dc8d434e061c037231ad8d4b; "
+    "probe SHA "
+    "1a77a6502251236cda405e782f4fe147e483c44838815b698b99e8d778144603.  "
+    "Two runs bit-identical, seed 20260902, CHECKS 15/15.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R593_STATUS = (
+    "Gabor outer tail (rounds 593/594, Lean-only, NO sealed "
+    "probe, NO ledger row): RH/GaborOuterTail.lean.  "
+    "r593: strip-width beats window distance "
+    "(gaborOuterTail_num_le_neg_quarter, "
+    "abs_gaborQuadrupole_outer_le_exp); exact R near-tie "
+    "(gaborWindowAdaptiveRule_exists; r592 float64 collapse "
+    "has NO R counterpart); endpoint "
+    "gabor_window_adaptive_inputs_to_mathlib_rh sorry-free.  "
+    "r594: BOTH tail Props are THEOREMS -- "
+    "gaborOuterTail_tsum_le_exp / GaborOuterTailTsumLeExp_holds "
+    "(FD indicator tsum over |Im rho - omega| >= R); "
+    "GaborOuterTailSmallerThanLocalMargin_holds "
+    "(forall eps exists a0(omega,eps)<=1 forall a<a0: "
+    "tail < eps*E).  Multiplicity-weighted Finset bound "
+    "mass-independent, rate exp(-1/(8a)) kept.  Axioms "
+    "[propext, Classical.choice, Quot.sound]; no sorryAx.  "
+    "Named unasserted: GaborWindowAdaptiveCofinalNeg, "
+    "gabor_arithmetic_separator_of_window_adaptive.  "
+    "r600: live gabor_window_adaptive_zeroSide_inputs_to_mathlib_rh; "
+    "historical gabor_window_adaptive_inputs_to_mathlib_rh "
+    "marked VACUOUS (consumed false hpos).  Living sorry remains "
+    "gabor_separationForAllZeros.  Tracked sorry census "
+    "stays 8.  Finite/conditional only.  NO RH CLAIM"
+)
+
+_R595_STATUS = (
+    "Gabor three-term window+tail glue "
+    "(round 595, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborWindowGlue.lean sorry-free.  Three-term glue "
+    "(gaborHonestWeil_window_add_outer, "
+    "gaborHonestWeil_le_window_plus_theta); catalog negativity "
+    "(gaborCanonicalConfig_honestWeil_neg, "
+    "gaborHonestWeil_glue_neg_of_small_isolation); per-T "
+    "checkpoint (gaborWeightedTruncation_windowAdaptive_"
+    "existsDelta / lockDelta; factor T-free, E not).  Named "
+    "unasserted: GaborWindowAdaptiveUniformDelta (T-uniform "
+    "delta missing because of lex host-retune -- r592 "
+    "condition, not missing algebra) and "
+    "gabor_window_adaptive_uniform_to_cofinal.  Axioms "
+    "[propext, Classical.choice, Quot.sound]; no sorryAx.  "
+    "Living sorry remains gabor_separationForAllZeros.  "
+    "Tracked sorry census stays 8.  Finite/conditional only.  "
+    "NO RH CLAIM"
+)
+
+_R596_STATUS = (
+    "Gabor anchored window witness "
+    "(rounds 596-600, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/GaborAnchoredWitness.lean.  L2 verdict ANKER_TEILWEISE "
+    "(anchor removes host-retune + float64 collapse; three "
+    "gaps: omega-self-consistent window, equal-ordinate "
+    "sigma-clusters, log-budget glue).  r596: "
+    "GaborAnchoredWindowWitnessAt type-bundle (all hyps "
+    "explicit, hcover omega-self-consistent); sorry-free "
+    "log-glue (R_on -> R_on_log); "
+    "gaborAnchored_zeroSide_neg_of_isolationPacket "
+    "(witness => spectral zero-side < 0 at shrink width).  "
+    "r597: GaborBoundLog2AtAdmissibleWidth discharged "
+    "(gaborBoundLog2AtAdmissibleWidth_holds); "
+    "gaborAnchored_zeroSide_neg (witness => zeroSide < 0 "
+    "at OWN (a,omega)).  r598: singleton fragment + htail "
+    "at retuned omega(a) (exists_gaborFundSingleton_htail); "
+    "cover isolated as GaborAnchoredCoverAt (ordinate "
+    "isolation); exists_gaborAnchored_of_cover / "
+    "gaborAnchoredCoverAt_to_nonempty.  HONEST: hcover "
+    "for genuine zeros open (ordinate clusters); "
+    "multi-point window open.  GaborAnchoredWitnessExists "
+    "NOT asserted.  r600: GaborSpectralToArithmetic_holds "
+    "is a THEOREM (pole-sign lemma hat(1)>=0, NOT RH-core); "
+    "also gaborArithmeticFormula_neg_of_zeroSide_neg, "
+    "rh_implies_gaborZeroSide_nonneg (pure), "
+    "rh_implies_gaborZeroSide_nonneg_of_onLine.  Named "
+    "unasserted: GaborAnchoredWitnessExists, "
+    "gabor_anchored_to_arithmetic_separator.  "
+    "L2 STOP: no UniformDelta / separator / existence "
+    "claims.  Axioms [propext, Classical.choice, "
+    "Quot.sound]; no sorryAx.  Living sorry remains "
+    "gabor_separationForAllZeros.  Tracked sorry census "
+    "stays 8.  Finite/conditional only.  NO RH CLAIM"
+)
+
+_R601_STATUS = (
+    "Gabor Weil positivity subfamily scout "
+    "(round 601; experiments-side sealed probe, NO ledger row): "
+    "VERDICT DOMINANCE_FAILS.  132 cells, EF sanity <= 1.4e-15 "
+    "with 2000 zeros, NEG_NUM=0, POS_CERT 38 only for "
+    "omega >= omega0(a) (~500 at a=0.5 down to 10 at a>=3); "
+    "no a<=5 omega-uniform.  Cancellation exponent "
+    "exp((1/8+d^2/2)/a) near zeros confirmed (pred 3.01 / "
+    "meas 3.53).  Fixed-a Gabor family is a Bombieri/"
+    "Connes-Consani sub-family, not hpos*.  Probe "
+    "experiments/tfpt-discovery/"
+    "gabor_weil_positivity_subfamily_probe.py.  SPEC_SHA "
+    "cae570b458e53de6252745af0c881b6a2ebf4bcfc33d2e2c98985f52057e75cc; "
+    "probe SHA "
+    "b7089c71de9918c90a2b80bbea489ef938723a3021370baaebc183dd7494354b.  "
+    "Two runs bit-identical.  Separation stays [O].  No RH claim"
+)
+
+_R603_STATUS = (
+    "Two-key GP inequality search on Lambda(n) "
+    "(round 603, PRIME.INEQUALITY.EVOSEARCH.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "Grid verdict SURVIVORS_FOUND(1378) but parent audit "
+    "discriminatively EMPTY -- survivors are convergent-constant "
+    "comparisons on Re s=1 (|Sc(1,2)| <= |Sc(1,14.134725)| "
+    "<-> 0.4218 <= 1.6238 = |Re zeta'/zeta(1+it)|) or grid "
+    "artefacts (sine-sum zero at X=15737).  Controls C1-C4 "
+    "all DENSITY (local jitter p^{0.6} moves psi ~1e2; "
+    "beta=0.75 fake zero amplitude 2108 < 6908 = 0.5*sqrt(X)*log X "
+    "at 1e6, visible only from X~1e10).  Lessons: relative "
+    "jitter ~5 percent, beta=0.9 kill world, only s=1/2 "
+    "error-term terminals.  Probe experiments/tfpt-discovery/"
+    "prime_inequality_evosearch_probe.py.  SPEC_SHA "
+    "0f29c05bdfd8440b35eafb3fe51a957ac0148990dce666f0f401832beec20c43; "
+    "probe SHA "
+    "06d2ac9a6b7fe0f648e6c22052ba6ad0491bc1a05d954ab0eb23e078733511e2.  "
+    "CHECKS 13/13, two runs bit-identical.  Separation stays [O].  "
+    "No RH claim"
+)
+
+_R604_STATUS = (
+    "TFPT-spectrum vs zeta-ordinate cross-correlation scout "
+    "(round 604; experiments-side sealed probe, NO ledger row): "
+    "VERDICT ARTIFACT.  Positives fire z(log 2/3/5/7) = "
+    "6.00/7.96/9.12/9.33.  Candidates omega1=2.583 z=-0.58 "
+    "(0.018 from log 13); only z>=5 is omega1+2*omega2 = 4.489 "
+    "= log 89, dies under unfolding (prime-line alias).  "
+    "T2: 274 complex dims vs 138 gamma<=300, mean |Delta|=0.912, "
+    "p_shift=0.922, p_poisson=0.821, p_gue=0.008 (null-calibration "
+    "residual, not signal).  Resonance 18.097 mid-gap.  T3 "
+    "Kuiper p>=0.28 all four moduli.  Probe "
+    "experiments/tfpt-discovery/tfpt_spectrum_zero_crosscorr_probe.py.  "
+    "SPEC_SHA "
+    "264e0c53b87a36a069750ea6f402e0a8d38d3952671b69f6a4f8b71ea23633e9; "
+    "probe SHA "
+    "748ae5098d87b49a83e6efb1cb7f66813b50f9700d6adc67a95c7cad6c4df853; "
+    "PAYLOAD_SHA prefix 7fdab80e; ZEROS_SHA prefix 2a3fd52c "
+    "(N=4000 from verified_zeros_n7000.npy).  CHECKS 7/7, two "
+    "runs diff empty, ~28 s.  Separation stays [O].  No RH claim"
+)
+
+_R605N_STATUS = (
+    "Gabor exposed-orbit + phase-lock scout "
+    "(round 605N, PRIME.RDAGGER.GABOR.EXPOSED_ORBIT.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT EXPOSED_ORBIT_HOLDS.  9/9 configs negative at n=0, "
+    "normalised limit -4m(rho*) exact, tail bound holds, "
+    "40/40 checks, byte-identical reruns.  Probe "
+    "experiments/tfpt-discovery/gabor_exposed_orbit_probe.py.  "
+    "SPEC_SHA "
+    "1a4bf9493be71ad1c33d1eb25123e3e1021cd0fa0e3d3ded5d1a0663b69e4cde; "
+    "probe SHA "
+    "c99998c4ef8371eee59c2ef392a7a247a4babcda0d7697ffd4881db1ffacb273.  "
+    "Separation stays [O].  No RH claim"
+)
+
+_R605BC_STATUS = (
+    "Gabor exposed-orbit existential separator "
+    "(rounds 605B+C, Lean-only module, NO ledger row; "
+    "r605C-AUDIT independent read-only STATEMENT_SOUND): "
+    "RH/GaborExposedOrbit.lean (1734 lines, new module) "
+    "sorry-free.  gaborScore, ExposedOrbit structure, "
+    "exists_exposedOrbit_of_not_rh, phase lock cos=-1, "
+    "three-lobe majorant Re hat(rho*) <= "
+    "-(pi/4a)e^{M/2a}+(3pi/4a)e^{(M-Delta)/2a}, "
+    "gaborExposedOrbitAssembly_holds, endpoints "
+    "exists_negative_pureGabor_of_not_rh (hasm), "
+    "gabor_zeroSide_pure_criterion_iff_rh_of_assembly (hasm), "
+    "gabor_zeroSide_pure_criterion_iff_rh_unconditional : "
+    "(forall a omega ha, 0 <= gaborZeroSide "
+    "(pureGaborTest a omega ha)) <-> RiemannHypothesis.  "
+    "#print axioms = [propext, Classical.choice, Quot.sound].  "
+    "Census at landing 8 (Canonical 3, Source 1, Elementwise 1, "
+    "GaborSeparation 1, ExternalBridges 2); live 7 after r612.  "
+    "RH <=> nonnegativity of the pure Gabor zero-side on the "
+    "two-parameter family (a, omega); zero-side only -- no "
+    "prime-side/explicit-formula claim; positivity of "
+    "gaborZeroSide itself remains open.  This is NOT an RH "
+    "proof: the Weil test space is reduced to a two-parameter "
+    "pure Gabor family on the zero side.  r605A: prescribed "
+    "packet GaborZeroSideForAllZeros is "
+    "FORALL_ZERO_OVERSPECIFIED.  NO RH CLAIM"
+)
+
+_R606_STATUS = (
+    "Connes prolate residual-gap scout "
+    "(rounds 606/606b, experiments-side sealed probe, NO ledger row): "
+    "FIRST RUN (r606, 6-9 mode, t_cut=150): VERDICT INCONCLUSIVE; "
+    "mu jumped to 5.9 and g<0 at L>=0.6 (discretisation artefact; "
+    "r478 small blocks fail at L=0.8); CCM Poisson k_lambda "
+    "Davis-Kahan eta=0.13/0.093/0.029 at L=0.3/0.4/0.5, breakdown "
+    "L>=0.6 attributed to the uniform position grid.  "
+    "ADDENDUM r606b (tall ladder; dual-run byte-identical, ~0.4 s): "
+    "VERDICT INCONCLUSIVE(evals-not-converged, disc-disagree>5pct).  "
+    "No L meets successive-N < 1 pct AND Slepian/Fourier "
+    "discretisation agreement < 5 pct; the wall is discretisation "
+    "(Slepian lambda_2 pollution beyond N=12-24, Fourier odd-mode "
+    "~2 pct, t_cut=1000 blocked by spatial Nyquist), not a GO/STOP "
+    "on eta.  The r606 mu~5.9 jump is gone (k tracks lambda_1); "
+    "lambda_1^e slightly negative (-3e-6..-8e-6) at L>=0.5 but "
+    "unconverged -> NOT a Chuk contradiction; NREAL theta-hat[0,30] "
+    "= 2,3,3,4,4,4 vs Riemann count 3 (plateaus at 4, does not tend "
+    "to the Riemann count).  Lane CLOSED -- superseded by r611 "
+    "(OBS_NOT_CONVERGING) and the KILLED(FACTORIZATION) typing of "
+    "the prolate route; diagnostic only.  Probe "
+    "experiments/tfpt-discovery/connes_prolate_residual_gap_probe.py.  "
+    "SPEC_SHA "
+    "115c0409a907d44308da58ab7308f0242dcc8036ed167d1c30f43e3af33529fe; "
+    "probe SHA "
+    "aeef52a6d40cbcbe5c19b4cccf84b987cfa3e4002813abbf4b29159be4cd8295.  "
+    "No RH claim"
+)
+
+_R607_STATUS = (
+    "Event Lindblad two-key scout "
+    "(round 607, PRIME.EVENT.LINDBLAD.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT KILLED(RECOORDINATIZATION).  Lindblad CP <=> "
+    "lambda_min(Q_W) to 1e-15 in TRUE/SCRAMBLE/EPSTEIN/WPERM "
+    "worlds; diagonal compensator Sigma lambda diverges "
+    "~2e^{X/2}; Euler-Pick Gram needs 10 scalars; labels "
+    "decorative; 15/15 checks.  Probe "
+    "experiments/tfpt-discovery/event_lindblad_twokey_probe.py.  "
+    "SPEC_SHA "
+    "3abe6b9b7964aee4dc15d3e1e0fa466224c5fb4b85574f7a35c8a8581a9ddd71; "
+    "probe SHA "
+    "3c1db81b1dcf10fce59bc836670846fa3881312cfe2182b4706a9fcd5b25cff0.  "
+    "Method no-go.  Separation stays [O].  No RH claim"
+)
+
+_R608_STATUS = (
+    "Gabor tropical heat / source-budget scout "
+    "(round 608, GABOR.TROPICAL.01; experiments-side sealed probe, "
+    "NO ledger row): VERDICT TROPICAL_CONFIRMED.  "
+    "2a*log|Z| -> F(omega) with error <= 6.77*a*log(1/a); "
+    "on-line F = -dist(omega,{gamma})^2 <= 0; synthetic beta=0.9 "
+    "gives F=+0.16.  Correct heat equation "
+    "d_a hat = (1/2) d_ww hat - hat/(2a) (rel 3e-9) on traveling "
+    "lobes; cross lobe 2e^{(delta^2-omega^2)/2a} carries residual "
+    "-delta^2/(2a^2) so U=sqrt(a)*Z is NOT a heat solution "
+    "(dyadic heat-semigroup criterion FALSE for this family).  "
+    "Source-side budget B(a)=2.05/4.18/13.6 at a=0.2/0.1/0.05, "
+    "c~1/8, saddle n=e^{1/(2a)}; EF residual 4e-11 at a=0.2 with "
+    "2000 zeros.  Consequence: HEAT.SOURCE lane = NOGO T1 "
+    "(RH-strength cancellation), STOP.  Probe "
+    "experiments/tfpt-discovery/gabor_tropical_heat_probe.py.  "
+    "SPEC_DESIGN "
+    "0008f535ddf1aec0f7a5651a12eed28d2db01603995390827c16ae6cc801b5ec; "
+    "sealed-run SPEC prefix 6fcc507d; probe SHA "
+    "574c1cc2888169b918bfe97e5d5c127b039f07f2063e081e73d22ef6995107ec.  "
+    "CHECKS 9/9.  Separation stays [O].  No RH claim"
+)
+
+_R609_STATUS = (
+    "E8 directed readout scout "
+    "(round 609; experiments-side sealed probe, NO ledger row): "
+    "VERDICT E8_READOUT_SEALED(7/8).  Seifert S+S^T=A, "
+    "charpoly(-S^{-1}S^T)=Phi_30, rank(S-S^T)=8; H_8 weight "
+    "enumerator 1+14y^4+y^8, 240=16+14*16, S(3,4,8), "
+    "srg(120,56,28,24) eig 56/8/-4 mult 1/35/84; N(n)=240 sigma_3(n) "
+    "n<=10; tau(n) n<=8 (A_P(1)=1658880); E_4^3-E_6^2=1728 Delta; "
+    "(Z/30)^x ~= C_2 x C_4 != C_2^3, character table = H_2 tensor F_4; "
+    "E_6 oplus A_2 index 3, Smith (1^6,3,3), roots 72+6+162.  "
+    "C7 NOT_TESTED at probe time; C7 later supplied in "
+    "note_e8_gaussian_code.tex L372-461 (explicit 8x8 = H_2 tensor F_4, "
+    "permutation [0,1,4,3,5,2,7,6]); Gauss-code transform still "
+    "undefined (open remark rem:c7-audit).  TFPT-side exact "
+    "structure; no prime bridge shown; promotion to verification/ "
+    "is a pending user decision.  Probe "
+    "experiments/tfpt-discovery/e8_directed_readout_probe.py.  "
+    "SPEC_SHA "
+    "3edfb82499d80cecff6afb8da3b4533888b1dd042e7a8943e8caea1bdee581a3; "
+    "probe SHA "
+    "9ab0a6386b084ef4f45f938970dee8d3b78db2a7839edda3f8ac3acac71333c8.  "
+    "CHECKS 49/49.  No RH claim"
+)
+
+_R611_STATUS = (
+    "Connes observable Aubin-Nitsche scout "
+    "(round 611, CONNES.OBSERVABLE.AUBIN-NITSCHE.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT OBS_NOT_CONVERGING.  Hybrid Q_lambda lambda_min ~ -1e-5 "
+    "for L>=0.5 (r606 discretisation crash removed, t_cut-stable); "
+    "eta_obs(1.2) TRUE 0.667/6.3e-3/3.7e-4 at L=0.3/0.4/0.5 then "
+    "RISING 1.6e-2/5.6e-2/9.0e-2/0.150 at L=0.6-1.0 (p=-8.1); "
+    "OFFLINE ~ TRUE (0.109 at L=1.0) -> blind to injected off-line "
+    "zero at gamma=20; WPERM 0.69, SCRAMBLE 0.20; identity (8) "
+    "4.6e-11.  Consequence: Herglotz/Aubin-Nitsche closure route "
+    "(Solution 1) STOP as a lane; PROLATE.GABOR.ALIGN moot.  "
+    "r606b CLOSED (INCONCLUSIVE(evals-not-converged, disc-disagree>5pct); superseded by r611 OBS_NOT_CONVERGING and KILLED(FACTORIZATION); diagnostic only).  "
+    "Probe experiments/tfpt-discovery/"
+    "connes_observable_aubin_nitsche_probe.py.  SPEC_SHA "
+    "647335a638ef8c589f116a1e7aba7e7b651fc585e5d79c4d8006848c8786c002; "
+    "probe SHA "
+    "9360774660b4e3ba79066642c92e461d6f49c3c8163f13eff1e2d45639a6af69.  "
+    "CHECKS 12/12.  Method no-go.  Separation stays [O].  No RH claim"
+)
+
+_R612_STATUS = (
+    "Gabor countable rational-packet criterion "
+    "(round 612, Lean-only module, NO sealed probe, NO ledger row): "
+    "RH/GaborCountableCriterion.lean (historical r612 pin; 163 lines then).  "
+    "SUPERSEDED by _R612C_STATUS (continuity proved).  Historical r612 theorem "
+    "gabor_zeroSide_rational_criterion_iff_rh (hcont) : "
+    "(forall (a omega : Q) (ha : 0<(a:R)), "
+    "0 <= gaborZeroSide (pureGaborTest a omega ha)) "
+    "<-> RiemannHypothesis; gabor_zeroSide_rational_of_rh "
+    "(converse without continuity); "
+    "gabor_zeroSide_nonneg_of_rational.  "
+    "#print axioms = [propext, Classical.choice, Quot.sound].  "
+    "Companion r612 edit in GaborSeparation.lean: asserting "
+    "theorem gabor_separationForAllZeros deleted; Prop "
+    "GaborSeparationForAllZeros retained unasserted with "
+    "OVERSPECIFIED/believed-false docstring.  "
+    "Tracked sorry census 8 -> 7 (Canonical 3, Source 1, "
+    "Elementwise 1, ExternalBridges 2; GaborSeparation 0).  "
+    "Module count 53 -> 54.  Conditional/finite only.  NO RH CLAIM"
+)
+
+_R613_STATUS = (
+    "Ordered-E8 Herglotz canonical-system scout "
+    "(round 613, PRIME.E8.ORDERED.HERGLOTZ.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT NO_IDENTIFICATION.  Weyl function Herglotz "
+    "(min Im-eig +3.5e-3), (JH)^2=0 exact; at eps=0 all jumps "
+    "commute -> order decorative (max 1e-14) (same lesson as r607); "
+    "at eps=0.05 order/labels non-decorative (16.6/12.0) but "
+    "residuals at Euler points TRUE 0.66-2.5 ~ SCRAMBLE/WPERM "
+    "0.66/0.64, 2.36/2.36; twirl chain E_full<E7<E3 breaks "
+    "(4.5>3.1).  Consequence: ordered-E8 Herglotz canonical "
+    "system (Paket C) dead as a lane.  Probe "
+    "experiments/tfpt-discovery/prime_e8_ordered_herglotz_probe.py.  "
+    "SPEC_SHA "
+    "01b4a8be9dd1530a817a83c38a5aba9e1b2ba483cafd93405dede71516da2ac9; "
+    "probe SHA "
+    "c89fc1ceb70f7ec8e1f0ce9d3af630c4c4329b7f972684cce78a717b44c5aeb9.  "
+    "Method no-go.  Separation stays [O].  No RH claim"
+)
+
+_R615_STATUS = (
+    "Semilocal first-prime-step scout "
+    "(round 615, PRIME.SEMILOCAL.FIRSTSTEP.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT FIRSTSTEP_LEAKAGE_CONTROLLED.  Weil window form with "
+    "exactly one prime (L in (0.3466, 0.5493), w2 = sqrt(2) log 2 = 0.98026).  "
+    "Ritz lambda*(L) equals zero-side leakage to 1e-4-1e-5 at all L; "
+    "extremal vector Slepian-like (overlap with psi0 >= 0.9989, "
+    ">= 99.8 percent spectral mass below gamma1 = 14.1347), no character "
+    "change at the prime entry.  lambda*(0.30) = 7.57e-3 (v1017 padded "
+    "floor 2.1e-3, factor 3.6), lambda*(0.40) = 1.85e-4, "
+    "lambda*(0.549) = 5.80e-8 with POLE +1.30 / ARCH -1.29 / PRIME 1.78e-2 "
+    "(cancellation depth 2.25e7).  Pinning at L=0.52: delta_crit = 2.5e-5 "
+    "relative on w2, eps_crit = +4.1e-5/-1.7e-6 on the atom position, "
+    "WPERM -0.135, SCRAMBLE -0.33/-0.18/-0.047.  Certificate obstruction: "
+    "shift cross-block norm 0.50 for N=40/80/160 (no decay), Schur "
+    "requirement R = 0.25/lambda* = 1.4e3 (L=0.40) ... 4.45e6 (0.549) "
+    "=> r496 confirmed for every window containing a prime.  Mechanism (T9): "
+    "minimizer of fictitious prime-free POLE+ARCH is purely odd with "
+    "POLE = -2 <h, sinh(u/2)>^2 < 0 and ARCH < 0, g(log 2) < 0, so "
+    "-w2 g(log 2) carries positivity (L=0.40: -0.018 - 0.060 + 0.130 = +0.053); "
+    "odd sector turns negative at L ~ 0.372, prime 2 enters at 0.3466 "
+    "(margin Delta L ~ 0.025).  Named open lemma "
+    "PRIME.SEMILOCAL.ODDSECTOR.EDGE.01 [O]: for odd h on [-L,L], "
+    "w2 |g_h(log 2)| >= 2 <h, sinh(u/2)>^2 + |ARCH_-(h)|.  Fence: window "
+    "forms with L ~< 16 cannot detect off-line zeros (r605 scaling "
+    "a = sigma^2/64 needs u-support ~8/sigma); first prime step is far "
+    "weaker than RH.  Probe experiments/tfpt-discovery/"
+    "semilocal_firststep_probe.py.  SPEC_SHA "
+    "04f9c9ec20f8cea556d79c39c26567eecc9e83fb99a48dedfc98b1ce7be5df1e; "
+    "probe SHA "
+    "3a0741def031cfa41f54cdf11fc332bb77723ad5c4efd8e0900ed16a13ac5052.  "
+    "CHECKS 26/26.  No RH claim"
+)
+
+_R616_STATUS = (
+    "Higher-moment inertia scout "
+    "(round 616, PRIME.INERTIA.HIGHERMOMENT.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT C_CAPPED.  k=2 reproduces Alpoge-Furman 2/3 (psi0) and "
+    "ceiling 0.6818287.  Tr(W^3) at bandwidth one is not unconditional "
+    "(Sum |xi_j| <= 3 > 2 = Rudnick-Sarnak 1996 support for zeta; "
+    "Hejhal 1994 hexagon under RH; Montgomery 1973 and "
+    "Goldston-Montgomery 1987 under RH; MV diagonal X^k <= T^{2-eps} "
+    "fails for k >= 3) => p3^uncond = p2 = 0.6818.  GUE ideal input n+: "
+    "0.75 -> 5/6 -> 31/36; simple-on-line 0.6818 -> 0.6818 -> 0.7222.  "
+    "Finite moments never force negative index 0.  Probe "
+    "experiments/tfpt-discovery/inertia_highermoment_probe.py.  SPEC_SHA "
+    "fef4a72f6ab38aa64e8bd9256e51f16bd6ca30945a4ba0038af6a8e252446a6b; "
+    "probe SHA "
+    "26ee62ae2b13de0dd31ea7c5abbb17fb731a29b1fef52cef9ab58c85454e9d29.  "
+    "CHECKS 16/16.  Follow-up to r267; no RH claim"
+)
+
+_R617_STATUS = (
+    "E8 Coxeter Euler completion scout "
+    "(round 617, E8.COXETER.EULER.COMPLETION.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT COMPLETION_EXACT.  Tr C = -1; Phi_30 Moebius identity; "
+    "(1-x) Phi_30 = 1 - x^2 - x^3 + x^6 + x^7 - x^9; "
+    "D_E8(s) = zeta(6s) zeta(10s) zeta(15s)/[zeta(2s) zeta(3s) zeta(5s) zeta(30s)] "
+    "residuals at X=10^6: 1.28e-4 (s=0.75), 3.5e-14 (1.5); det2 scalar "
+    "control e^{P(s)}/zeta(s) 1.75e-14; class statement (scalar -1, "
+    "A1 -> 1/zeta(2s); A2 -> 1/zeta(3s); E6 -> zeta(4s) zeta(6s)/"
+    "[zeta(2s) zeta(3s) zeta(12s)]; negative control B2 (trace 0) -> "
+    "zeta(2s)/[zeta(s) zeta(4s)] divergent at 0.75); Beurling-generic.  "
+    "Typed no-go E8.COXETER.REGULARIZED_SPLIT.NO_GO.01: det2 removes "
+    "exactly the trace term; RH content = analytic continuation of "
+    "P(s) = Sum mu(k)/k log zeta(k s); constructions controlling only "
+    "the Hilbert-Schmidt part cannot isolate 1/zeta(s) (explains "
+    "r607/r613 conceptually).  Fence: The trace-free completion is "
+    "zero-free and pole-free in Re s > 1/2. The splitting into the "
+    "scalar zeta channel and the Coxeter channel is open and "
+    "RH-equivalent. No RH claim.  Promotion to verification/ "
+    "(v1018/v1019) is in progress.  Probe experiments/tfpt-discovery/"
+    "e8_coxeter_euler_completion_probe.py.  SPEC_SHA "
+    "5aa3935bd4d5698caa889d62dafba4b7efe62a7b3132d07ab62299c22dd03f8c; "
+    "probe SHA "
+    "6ac6bab28a355d3b2b3a98114c32586211cbdec0b2712e8e6c60511e03d12c21.  "
+    "CHECKS 45/45.  No RH claim"
+)
+
+_R618_STATUS = (
+    "Jensen / E8-compiler rigidity scout "
+    "(round 618, PRIME.JENSEN.E8COMPILER.RIGIDITY.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT COMPILERS_STRUCTURALLY_RIGID.  Two no-gos: (A) Seifert-compiler "
+    "rigidity -- Coxeter monodromy spectrum is a congruence invariant "
+    "(Phi_30 for 12 random M S M*); Cayley-transformed Jensen polynomials "
+    "C_{n,8} of Xi vary with n and miss the 30th-root grid by >= 0.0168; "
+    "blocks d=2..7 give Phi_2^2, Phi_2 Phi_3, Phi_5, Phi_2 Phi_8, "
+    "Phi_3 Phi_12, Phi_2 Phi_18; (B) rank-one MSS mixed characteristic "
+    "polynomial = det(xI - Sum A_e) exactly; required coefficient ratios "
+    "c_{n+1}/c_n (0.0231 -> 0.0169, n=0..6) nonlinear in zero power sums.  "
+    "Data: a0 = xi(1/2) = 0.497120778, Turan n <= 12, J_{n,d} hyperbolic "
+    "d <= 8, n <= 4 (consistent with GORZ 2019, nothing new).  Fence: "
+    "both compilers are generic real-rootedness certificates; existence "
+    "for all (n,d) <=> RH; E8 RH-neutral.  Probe "
+    "experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py.  "
+    "SPEC_SHA "
+    "bc8d86246dc253c3944a41f0db23d8791c4275fbb2c4af9f8011006e612cc774; "
+    "probe SHA "
+    "29ccf1c7d9c2557aa2b4567795598dc6f485835d74dc20b0b2c805d5369463de.  "
+    "CHECKS 43/43.  No RH claim"
+)
+
+_R617L_COX_STATUS = (
+    "E8 Coxeter completion algebraic core "
+    "(round 617L, Lean-only module, NO sealed probe, NO ledger row): "
+    "RH/CoxeterCompletion.lean (96 lines, imported in RH.lean).  "
+    "Theorems cyclotomic30_explicit, moebius_identity_30, "
+    "completion_explicit, completion_linear_coeff_zero, "
+    "trace_eq_neg_one_of_charpoly_cyclotomic30.  "
+    "#print axioms = [propext, Classical.choice, Quot.sound].  "
+    "Analytic Euler-product corollary not formalized.  Fence: "
+    "The trace-free completion is zero-free and pole-free in Re s > 1/2. "
+    "The splitting into the scalar zeta channel and the Coxeter channel "
+    "is open and RH-equivalent.  Tracked sorry census stays 7.  "
+    "Module count 54 -> 56 (with PrimeLogIndependence).  NO RH CLAIM"
+)
+
+_R617L_LOG_STATUS = (
+    "Q-linear independence of {log p} "
+    "(round 617L, Lean-only module, NO sealed probe, NO ledger row): "
+    "RH/PrimeLogIndependence.lean (160 lines, imported in RH.lean).  "
+    "Theorems linearIndependent_log_primes (full Q-linear independence "
+    "of {log p}; Mathlib had no such lemma) and log_ratio_irrational.  "
+    "#print axioms = [propext, Classical.choice, Quot.sound].  "
+    "Corollary (prose): finite-order clocks cannot carry {log p}.  "
+    "Tracked sorry census stays 7.  Module count 54 -> 56 "
+    "(with CoxeterCompletion).  NO RH CLAIM"
+)
+
+_R612C_STATUS = (
+    "Gabor countable rational-packet criterion "
+    "(rounds 612/612C, Lean-only module, NO sealed probe, "
+    "NO ledger row): RH/GaborCountableCriterion.lean "
+    "(568 lines, imported in RH.lean).  r612: asserting "
+    "theorem gabor_separationForAllZeros deleted; Prop "
+    "GaborSeparationForAllZeros retained unasserted with "
+    "OVERSPECIFIED/believed-false docstring; census 8 -> 7.  "
+    "r612C: gaborZeroSideContinuous_holds proves "
+    "GaborZeroSideContinuous (joint continuity on {a>0} x R "
+    "via local uniform Gaussian majorant "
+    "||hat|| <= (pi/a0) exp((1/8+omega1^2/2)/a0) "
+    "exp(-t^2/(4 a1)) and continuousOn_tsum; summability via "
+    "summable_gauss_over_zeros); theorem "
+    "gabor_zeroSide_rational_criterion_iff_rh_unconditional : "
+    "(forall (a omega : Q) (ha : 0<(a:R)), "
+    "0 <= gaborZeroSide (pureGaborTest a omega ha)) "
+    "<-> RiemannHypothesis -- UNCONDITIONAL.  "
+    "r634L: gabor_primeSide_rational_criterion_iff_rh : "
+    "(forall (a omega : Q) (ha : 0<(a:R)), "
+    "0 <= gaborPoleSide - gaborPrimeComb + gaborArchSide "
+    "of pureGaborTest a omega) <-> RiemannHypothesis -- "
+    "fully prime/archimedean-side Pi1 form, UNCONDITIONAL "
+    "(uses gabor_explicitFormula_pure).  "
+    "#print axioms = [propext, Classical.choice, Quot.sound].  "
+    "Named-open list shrinks by one at r612C; tracked sorry "
+    "census stays 7.  NO RH CLAIM"
+)
+
+_R619_STATUS = (
+    "Support-relay census scout "
+    "(round 619, PRIME.SUPPORT.RELAY.CENSUS.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT RELAY_UNIVERSAL.  Prime powers q <= 32 "
+    "(18 events), entry L_j = (1/2) log q; every ancestor "
+    "form Q_{j-1} (without the newest event) fails a finite "
+    "lead after entry: Delta_j = 0.011-0.028, nearly constant "
+    "(2: 0.0279, 3: 0.0123, 4: 0.0146, 5: 0.0111, 7: 0.0105, "
+    "8: 0.0140, 9: 0.0125, 11: 0.0116, 13: 0.0131, 16: 0.0166, "
+    "17: 0.0126, 19: 0.0144, 23: 0.0141, 25: 0.0170, "
+    "27: 0.0181, 29: 0.0151, 31: 0.0147, 32: 0.0221); failing "
+    "mode always odd, reflection-symmetric edge sector w.r.t. "
+    "the newest event (g < 0), edge mass 0.07-0.65; newest "
+    "weight restores positivity (all 18).  lambda* decay "
+    "slopes per interval -50 / -77 / -79 (global -68.6; "
+    "Slepian -28.3; r615 -44.8) -> super-exponential "
+    "(Landau-Widom plunge); lambda* underflows SVD range "
+    "beyond L ~ 1.4.  Controls: SCRAMBLE first failure 0.376, "
+    "WPERM 0.402, EPSTEIN (2^k only) 0.564 ~ L_3 + 0.015 -- "
+    "each control breaks at entry + lead.  Detection "
+    "threshold (synthetic off-line zero injected into the "
+    "zero side): L_det(beta=0.6, gamma=20) = 0.55, "
+    "(0.75, 20) = 0.55, (0.6, 50) = 0.80, (0.9, 20) = 0.50.  "
+    "PARENT TYPING: the RELAY_UNIVERSAL criteria "
+    "(Delta_j >= 0, g < 0, repair) are consequences of "
+    "Q_j succeq 0 (RH-consistency), not a mechanism; the "
+    "informative results are the constant leads "
+    "(\"greedy consumption\": each prime power becomes "
+    "load-bearing within Delta L ~ 0.015), the control "
+    "breaks at entry+lead, the super-exponential decay, and "
+    "L_det -- windows with L >~ 0.5 are hypersensitive "
+    "off-line detectors (a nulled zero displaced by sigma "
+    "contributes -sigma^2 |d hat f|^2, beating the tiny "
+    "lambda*), hence relay steps beyond L ~ 0.5 are "
+    "RH-in-a-box statements, not elementary finite problems.  "
+    "Fence: window positivity for the scanned L is "
+    "RH-consistent; no RH claim.  Probe "
+    "experiments/tfpt-discovery/support_relay_census_probe.py.  "
+    "SPEC_SHA "
+    "7299737ded85418e4e88fea1356f378ec4c2c077c7d35a09211cc7980a88553d; "
+    "RESULT_SHA prefix e0379485; probe SHA "
+    "fcfa7771f2522e4458a7f2cb4dc20a68974bb2ca4f0239ea7c877da76193da4a.  "
+    "CHECKS 12/12.  No RH claim"
+)
+
+_R620_STATUS = (
+    "P2 reflection-factor scout "
+    "(round 620, PRIME.P2.REFLECTION.FACTOR.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT MIXED_SECTOR.  Exact identity for odd h, "
+    "d = log 2, overlap I = [d-L, L], reflection "
+    "(Rf)(x) = f(d-x): g_h(d) = -(||f_+||^2 - ||f_-||^2); "
+    "prime term -w2 g = w2(||f_+||^2 - ||f_-||^2) "
+    "(stabilizes symmetric edge sector, destabilizes "
+    "antisymmetric).  dim E_-(A^{odd}) = 1 for L >= 0.38 "
+    "(lambda_min -2.4e-2 at 0.38 -> -0.43 at 0.549); mass "
+    "of the negative vector inner/+/ -: 0.85/0.15/0.005 "
+    "(0.38), 0.71/0.28/0.01 (0.40), 0.50/0.48/0.02 (0.43), "
+    "0.06/0.94/0.001 (0.549) -- migrates from inner to "
+    "R-symmetric edge; antisymmetric sector safe without "
+    "the prime (lambda_min(A|P_-) - w2 = +5.7 -> +0.29); "
+    "cross term 0.12-0.28; oriented inequality "
+    "lambda_min(A^{odd} + w2(P_+ - P_-)) = lambda*(L) >= 0 "
+    "everywhere.  The parent's earlier |g| lemma is "
+    "mis-stated (prime hurts on P_-) -> RETYPE the contract "
+    "PRIME.SEMILOCAL.ODDSECTOR.EDGE.01 to the oriented form: "
+    "for odd h on [-L, L]: <h, (POLE+ARCH) h> + "
+    "w2(||f_+||^2 - ||f_-||^2) >= 0; the negative direction "
+    "of POLE+ARCH migrates from the inner region to the "
+    "R-symmetric edge sector; the antisymmetric edge sector "
+    "is safe without the prime -- status stays [O]; the "
+    "repair is a quantitative dominance with margin "
+    "lambda*(L), not an exact sector identity.  Probe "
+    "experiments/tfpt-discovery/p2_reflection_factor_probe.py.  "
+    "SPEC_SHA "
+    "7c8e73b7d4f27fedd0e34b8d6c4df7b6e95120e369b0a76b0ab51cc840edc1ee; "
+    "probe SHA "
+    "194fe9e5abcb4886bd927bf6b3fa921008917afc0d82364f742f4891706bc438.  "
+    "CHECKS 73/73.  No RH claim"
+)
+
+_R621_STATUS = (
+    "P2 digamma-duplication scout "
+    "(round 621, PRIME.P2.DIGAMMA.DUPLICATION.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT DUPLICATION_CONSTANT_ONLY.  Duplication "
+    "psi(z)+psi(z+1/2) = 2 psi(2z) - 2 log 2 verified 2e-25; "
+    "operator identity ARCH_1/4 = ARCH_C - ARCH_3/4 - "
+    "2 log 2 * G to 2e-15; the prime-2 operator "
+    "P_2 = -w2 T_{log 2} vs span{ARCH_3/4, G}: residual "
+    "0.997-0.998 on the whole odd space (0.71 -> 0.23 on "
+    "E_-), HS cosine <= 0.005, fitted beta ~ 0.06 "
+    "(not -2 log 2).  Translation != constant.  T4: the "
+    "Q(i) form POLE + ARCH_C stays positive without its "
+    "norm-2 prime (lambda_min +0.59 at 0.549); Gamma_C "
+    "without the constant fails at 0.38 like zeta -- the "
+    "conductor constant carries, not the 3/4 channel.  "
+    "No-go: the prime-2 repair is not a duplication factor "
+    "of the archimedean operator.  Probe "
+    "experiments/tfpt-discovery/"
+    "p2_digamma_duplication_probe.py.  SPEC_SHA "
+    "78f47c87a6877ada8cf96969e0e7b0c79969fa723bdf3036f10ca6efc8f6992e; "
+    "probe SHA "
+    "dff2e1b3d9c9155434625cf8e5f80049d368633fc6ea6097bebdb88896b17557.  "
+    "CHECKS 37/37.  No RH claim"
+)
+
+_R622_STATUS = (
+    "Support Darboux-transport scout "
+    "(round 622, PRIME.SUPPORT.DARBOUX.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT TRANSPORT_FEASIBLE_NORULE.  Scaled family "
+    "Qtilde(L) = U_L^* Q_L U_L on L^2[-1,1]; transport "
+    "identity d_L Qtilde + X^* Qtilde + Qtilde X + c Qtilde "
+    "= Y^* Y: with X = 0 feasible for "
+    "c = c0(L) = -lambda_min(Qtilde^{-1/2} d_L Qtilde "
+    "Qtilde^{-1/2}) (finite: 26 at 0.25, 63 at 0.3466-, "
+    "spike 368 at prime entry, 84 at 0.38, 1614 at 0.549); "
+    "prime-free c0 ~ -d log lambda*/dL (ratio 1.06-1.52), "
+    "with prime up to 33x larger (extra modes) but << 1/lambda*; "
+    "no two-term closed-form law for c(L) (rms 347; fails "
+    "at the kink and at 0.549); forbidden "
+    "X0 = -1/2 Qtilde^{-1} d_L Qtilde not in the source "
+    "algebra (projection residual 0.88 -> 1.0); the algebra "
+    "produces rate 0 vs required 31.8/46.0; the prime is "
+    "not the PSD obstruction, it spikes c0.  Typing: the "
+    "transport formulation relocates the tiny margins into "
+    "the scalar c0(L) (relative form of the wall); no "
+    "source-side rule.  Probe "
+    "experiments/tfpt-discovery/support_darboux_probe.py.  "
+    "SPEC_SHA "
+    "27ffd017df86ec8f321032c075598e946a5892610f41881cb8eee4b782f6a90b; "
+    "PAYLOAD prefix e1031d17; probe SHA "
+    "845bb93720b7cecae55d003fcb11021ac1338d79f292a45f0f0267f96c49bbd5.  "
+    "CHECKS 64/64.  No RH claim"
+)
+
+_R623_STATUS = (
+    "Semilocal P2 dilation scout "
+    "(round 623, PRIME.SEMILOCAL.P2.DILATION.01; merged user rounds "
+    "r623 tower + r624 dilation; experiments-side sealed probe, "
+    "NO ledger row): VERDICT P2_DILATION_STRUCTURALLY_BLOCKED.  "
+    "The 2-adic channel of the Weil form is the multiplier "
+    "m2(t) = log 2 * (1 - P_r(t log 2)), r = 2^{-1/2}, P_r the "
+    "Poisson kernel (= boundary value of the de Branges-Rovnyak "
+    "kernel of the Blaschke factor b(z) = (z-r)/(1-r z)); one Euler "
+    "factor generates the whole rung ladder 2^k (active rungs: [2] "
+    "for L <= 0.65, [2,4]+3 for L in {0.72, 0.80}); identity residual "
+    "4.9e-12.  Obstructions to the proposed PSD block "
+    "[[A_S, B*],[B, C]] with Schur complement Q_L: the ancestor "
+    "POLE+ARCH has lambda_min = -0.078 (L=0.40), -0.229, -0.367, "
+    "-0.430 (0.549), -0.536, -0.636, -0.773, -0.926 (0.80) -> cannot "
+    "be a PSD principal block; the 2-channel operator M2 is indefinite "
+    "(n+/n- 9/9 at 0.40 ... 14/10 at 0.80) with numerical rank/N "
+    "0.75-1.0 (not rank one) -> cannot be -B* C^{-1} B; the generic "
+    "dilation [[Q+M2-, sqrt(M2-)],[sqrt(M2-), I]] has lambda_min "
+    "tracking lambda*(L) (1.82e-4 vs 1.81e-4 at 0.40) -> tautological.  "
+    "No manifest local SOS in the named factors: ||N||/lambda_min(P) = "
+    "2.75-5.27 (negative part never dominated).  Literature: "
+    "Connes-Consani 2021 (Selecta) Thm 1 positivity only for support "
+    "[2^{-1/2}, 2^{1/2}] (archimedean); CCM arXiv:2310.18423 §4.6 Sonin "
+    "space without a positivity theorem; arXiv:2403.01247 Jacobi matrices "
+    "for S={infty,p} (q = 1/p); zeta-cycles numerical -> no published "
+    "unconditional first prime step.  Typing (parent): each prime is a "
+    "positive channel entering the Weil form with the wrong sign "
+    "(constant minus Poisson kernel); positivity is not manifest; the "
+    "semilocal dilation lane is NOT opened (user rule: dead on No).  "
+    "Probe experiments/tfpt-discovery/semilocal_p2_dilation_probe.py.  "
+    "SPEC_SHA "
+    "5890676d194739b1de05adf74482dc1fb6498ba56b16d663522801035df9e6b3; "
+    "probe SHA "
+    "d1bec728c5329dd8d20c2c50752f2dd165bddd17da23505b0dd79563b0b8215b.  "
+    "CHECKS 128/128.  No RH claim"
+)
+
+_R625_STATUS = (
+    "IIKS vanishing-metric scout "
+    "(round 625, PRIME.IIKS.VANISHING.METRIC.01; experiments-side "
+    "sealed probe, NO ledger row): VERDICT IIKS_NO_METRIC_IN_CLASS "
+    "(prose: NOT_TESTABLE_IN_CORPUS_FORM).  For the corpus discrete "
+    "IIKS/CD object (v563/PIK/tau_symbolic/v955, r265 cross-ratio ODE "
+    "reproduced 3.9e-9) the jump J_s = I - 2 pi i s f g^T on the real "
+    "CD nodes; Zhou vanishing lemma there requires J* = J^{-1}, which "
+    "FAILS (rel 2.56e-2 on WPERM kz9), and det J = 1 at s* while "
+    "tau(s*) = det(I - s* E) = 0 (log|tau| ~ -38) -> this J is NOT "
+    "the RHP jump equivalent to tau(s) != 0; the H = I dissipativity "
+    "J + J* succeq 0 (holds on TRUE with min eigenvalue 1.93-1.99 AND "
+    "on WPERM despite tau-zeros) is the wrong sufficient condition "
+    "and is dropped.  Contractive metrics H - J* H J succeq 0 in "
+    "source-explicit classes (scalar, diag(w1,w2) with "
+    "w in {|z|^alpha, e^{beta |z|}, arch^gamma, comb^delta}, "
+    "s-dependent scalars, Sylvester rho): best H = diag(arch^1.50, "
+    "arch^1.50), TRUE worst margin -8.17e-10 (r625 first pass "
+    "-3.36e-7; bar -1e-12), WPERM -7.9e-9 ... -4.4e-4, EPSTEIN "
+    "-2.7e-2 ... -6e11, SCRAMBLE -3e6 ... -9e57; controls fail "
+    "pointwise before their tau-zero (5/5).  Typing (parent): the "
+    "vanishing-lemma route is NOT testable on the corpus discrete "
+    "object -- it first needs the genuine Riemann-Hilbert problem "
+    "whose solvability is equivalent to the window determinant "
+    "(continuous IIKS kernel, correct contour/symmetry); the "
+    "near-miss margins are therefore not evidence either way.  "
+    "Probe experiments/tfpt-discovery/iiks_vanishing_metric_probe.py.  "
+    "SPEC_SHA "
+    "7a4257e3d9e7185a3e447d4e3320b259ade5e4212ed91793c04dc0c358593db9; "
+    "NUM_SHA prefix 2d066e2d; probe SHA "
+    "973a1ce25d042acb14574b484b38b00bda8922ad05a41c84e31969f6c33aae2b.  "
+    "CHECKS 19/19.  No RH claim"
+)
+
+_R626_STATUS = (
+    "Xi finite-free collision scout "
+    "(round 626, XI.FINITEFREE.COLLISION.01; exploration scout; "
+    "experiments-side sealed probe, NO ledger row): VERDICT "
+    "COLLISION_DETECTOR_CALIBRATED_NO_BARRIER.  Identity "
+    "d/dt log|Disc(P_t)| = 4 * Phi_N(P_t) along the dBN heat flow "
+    "(rel error 8.9e-11) -> the collision barrier int Phi dt < inf "
+    "is equivalent to Disc != 0 along the path (no independent "
+    "content).  Taylor sections of Xi are not real-rooted at t = 0: "
+    "N = 6/8/12 have 0 real roots; the gamma_1 pair becomes real "
+    "only at N = 16-20 (|z - gamma_1| = 4.4e-4 / 1.1e-7), the second "
+    "real root is not gamma_2 (17.23/19.39 vs 21.02); t0(N) = 7.78, "
+    "9.13, 11.43, 13.08, 14.97 is always a spurious far-pair "
+    "collision; inner collisions at t_c > 0 for every N.  Detector "
+    "calibrated on the hyperbolic control "
+    "S_N = Pi (1 - x^2/gamma_k^2): eps_crit = -3.65e-4 (a1, N = 8), "
+    "t_c = 0.597, log10|Phi| up to 7.90.  Coefficient side: Turan on "
+    "c_n = n! a_n holds (min ratio 1.02), Newton/Laguerre on the "
+    "sections fails (0.51); no simple coefficient inequality implies "
+    "inner Disc > 0.  Probe "
+    "experiments/tfpt-discovery/xi_finitefree_collision_probe.py.  "
+    "SPEC_SHA "
+    "c7cef97475d9d66be6c877081aaee6ef91a8bf7b059c72b91d0ceeeb4111417c; "
+    "NUM_SHA prefix f533d168; probe SHA "
+    "c475006327b042819a06f449f8f1ffd89052d23bdac533a5e3bf8814be78b918.  "
+    "CHECKS 51/51.  No RH claim"
+)
+
+_R627_STATUS = (
+    "A-F two-moment optimizer scout "
+    "(round 627, PRIME.INERTIA.TWOMOMENT.OPT.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT NO_GAIN.  A-F two-moment functional "
+    "R(psi) = [int psi^2 + iint |u-v| psi(u) psi(v)]/(int psi)^2, "
+    "p = 2 - R on supp psi subset [-1/2, 1/2]; Euler-Lagrange "
+    "(I+K)psi = lambda * 1 => psi'' + 2 psi = 0 => unique "
+    "critical point psi* = cos(sqrt(2) t) (Montgomery-Taylor), "
+    "p* = 0.6725007037 (N = 8-64 identical, omega-scan optimum "
+    "sqrt(2)); positivity slack (min 0.760 > 3/4); the proved "
+    "ceiling 0.6818287 bounds the richer two-moment + on/off-block "
+    "certificate, not the window optimum; gap 9.3e-3 not closable "
+    "by window optimization.  Probe "
+    "experiments/tfpt-discovery/af_twomoment_optimizer_probe.py.  "
+    "SPEC_SHA "
+    "9b95f564e71001d728d4801abb1c23a2c094d9f3c6a663883519d08ec231e451; "
+    "probe SHA "
+    "da1a91181661b8c0775539fb0e3894e1ab088b2cea7fbf8209a8ed4f613b8eb3.  "
+    "CHECKS 17/17.  No RH claim"
+)
+
+_R628_STATUS = (
+    "Window-box verifier scout "
+    "(round 628, PRIME.WINDOW.BOX.VERIFIER.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT COMPRESSION_CERTIFIED_BOX_NUMERICAL.  Interval-certified "
+    "(40 digits, interval Cholesky/Weyl) positivity of the finite "
+    "window compression: lambda_min >= 1.05e-7 (L = 0.55, N = 24, "
+    "primes {2,3}), >= 6.1e-11 (0.65, N = 40), >= 9.3e-17 "
+    "(0.80, N = 40, {2,3,4}) -- cancellation depth up to 6e14.  "
+    "Rigorous zero-free box NOT closed: the unconditional on-line "
+    "majorant via Trudgian |S(T)| <= 0.112 log T + 0.278 log log T "
+    "+ 2.51 (JNT 134, 2014) is ~1e7 too loose; numerical box "
+    "nonempty (L = 0.80: beta_min = 0.55 for gamma <= 25 and 50/60; "
+    "0.70 at 30; 0.80-0.90 at 35-45); log Gamma_num = -1.24 + 6.86 L "
+    "(sigma = 0.1).  Missing lemma: local zero-density bound or "
+    "enumerated zeros (then Booker/Turing-equivalent).  Typed as "
+    "the explicit-formula verification method (Booker, Exp. Math. 15 "
+    "(2006)) in window form.  Probe "
+    "experiments/tfpt-discovery/window_box_verifier_probe.py.  "
+    "SPEC_SHA "
+    "36c0e66a71c6b8a3dc7db7682e8d63b4eaa63876ecb5396b68fbdd778faf749e; "
+    "NUM_SHA prefix 84aaf685; probe SHA "
+    "9c99ed6a19881be92944ad144e871c5e7b06d48f39f273d33aad56be2f724570.  "
+    "CHECKS 12/12.  No RH claim"
+)
+
+_R629_STATUS = (
+    "Certificate-class atlas scout "
+    "(round 629, PRIME.CERTIFICATE.ATLAS.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT ATLAS_NO_NEW_UNCONDITIONAL_GAIN.  LP over hypothetical "
+    "zero configurations: A1 two-moment reproduces 1 - p0 = 0.3181713 "
+    "(p0 = 0.6818287); A2 + N(T)/S(T): unchanged; A3 + prime-free "
+    "window positivity (CC 2021): redundancy 0 (min slack 2.2e-4); "
+    "A6 + Huxley zero density: unchanged (off-line mass forced to "
+    "sigma <= 1/12, already at sigma -> 0).  Conditional rows: "
+    "GUE k = 3 -> 5/6, k = 4 -> 31/36; pair correlation "
+    "alpha_max = 1.5/2/inf -> 0.7046/0.7159/0.7500.  Reading: only "
+    "correlation input beyond support 1 buys proportion.  Probe "
+    "experiments/tfpt-discovery/certificate_class_atlas_probe.py.  "
+    "SPEC_SHA "
+    "0bf7c64f8b1d463157abac3d6f1840aa5081c0e0e6186c18eff04e44311b0481; "
+    "probe SHA "
+    "4dae1fbe3d02f0b323692bc63a7a80ff6002835b7da064bb847c4bcf8646a448.  "
+    "CHECKS 15/15.  No RH claim"
+)
+
+_R632_STATUS = (
+    "Jet-deflated L_det scout "
+    "(round 632, PRIME.WINDOW.JETDEFLATION.01; reviewer-proposed; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT JET_GAIN_SMALL.  Baseline reproduces r619 L_det "
+    "(0.55/0.50/0.80).  Deflation hat f^{(r)}(20) = 0: m = 0 no "
+    "gain (G = 0), m = 1 G = 0.40 (L_det 0.55 -> 0.95 at (0.6, 20)), "
+    "control at gamma = 50 moves 0.10-0.20; deflating the first "
+    "eight true zeros: G = 0.65 and sector Ritz floor at L = 0.6 "
+    "jumps 1.76e-9 -> 2.02.  Coverage kill: deflating all zeros up "
+    "to Gamma = 50 already needs dim K/N = 0.50 (above Nyquist 31.8), "
+    "Gamma = 100 -> 1.45 (sector collapses), Gamma = 200 -> 3.95 -> "
+    "sectorization is not a cheap RH-free statement "
+    "(recoordinatization).  Deflation at 20 does not touch the "
+    "odd-sector failure (peak frequency 4.6/3.9).  Probe "
+    "experiments/tfpt-discovery/jet_deflated_ldet_probe.py.  "
+    "SPEC_SHA "
+    "31a29760f5a13f17427fc45069730153c2786c91355252f7ea44f4795bb92688; "
+    "RESULT_SHA prefix 6299cedc; probe SHA "
+    "63ecb68fa164746d0004db2948496c563b0588cf9dc613f5851835c67338f9c1.  "
+    "CHECKS 14/14.  No RH claim"
+)
+
+_R630_STATUS = (
+    "Margin-law symbolic-regression scout "
+    "(rounds 630/630b, PRIME.MARGIN.LAW.SYMREG.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "FIRST RUN: VERDICT MARGIN_LAW_UNRESOLVED.  L_cross = 0.3716, "
+    "double-precision SVD floor L = 0.78; 19/19, 166 s, dual-run "
+    "identical.  ADDENDUM r630b (tall QR, 40 digits, "
+    "N in {40,60,80,120,160}, L in [0.30,1.40]): decision "
+    "N_LIMITED_ARTIFACT -- lambda*(L) converges in N for L<=1 "
+    "(35/36 points, rel. change 120->160 median 4.8e-2) but NOT "
+    "for L>1 (0/20); converged log-slopes -50.6 (band 0.3-0.6, "
+    "N-stable to 3 digits) and -116 (band 0.6-1.0, stable for "
+    "N>=80); lambda*_160(0.6) = 1.65e-9, lambda*_160(1.0) = "
+    "9.93e-30; no converged holdout, descriptive quadratic C = 95.5 "
+    "(neither 2 gamma_1 = 28.27 nor gamma_1^2/pi = 63.6) -- both "
+    "the Widom-L^2 and the -2 gamma_1 L^2 readings unsupported.  "
+    "N2: converged minimizer nulls 4707-4831 of 5000 zeros "
+    "(frequency-sparse).  N3 synthetic controls (alpha = fitted "
+    "decay constant): true 169, constant-density 101, all ordinates "
+    "scaled to first zero at 10: 105, at 20: 271, only first zero "
+    "moved to 20: 172 -> density-driven (Landau-Widom plunge from "
+    "the unconditional N(T) profile of the low band), not "
+    "band-edge; RH-neutral.  N4 dBN gap functional B_k on 4999 "
+    "gaps: max 41.8, p99 11.5, median 2.13, fraction B_k < 2 = "
+    "0.470 (0.515 after compressing one gap by 0.3) -> no universal "
+    "gap barrier.  The r619 log-slopes -77/-79 at L = 0.9-1.4 were "
+    "measured at fixed N = 80 beyond the SVD floor and are "
+    "N-artifacts (corrected by r630b); r619 verdicts RELAY_UNIVERSAL, "
+    "leads Delta ~ 0.015, L_det table are unaffected.  Probe "
+    "experiments/tfpt-discovery/margin_law_symreg_probe.py.  "
+    "SPEC_SHA "
+    "87febb97aaee5dcdad9b9d5a543fd5f22c4803059c16232b2f2c9ef8cc843aee; "
+    "RESULT_SHA prefix a0765d7f; probe SHA "
+    "5b3d112576ff6d8672bb42d3f80077eb7916f6b524e8dbaa380076b6f2e7b90f.  "
+    "CHECKS 19/19.  No RH claim"
+)
+
+_R633_STATUS = (
+    "Frontier follow-ups scout "
+    "(round 633, PRIME.FRONTIER.FOLLOWUPS.01; follow-ups on sealed "
+    "objects; experiments-side sealed probe, NO ledger row): "
+    "16/16, 18 s, dual-run identical.  F1 A_COMPACT_OTHER(p~1.02): "
+    "a_max(sigma, gamma*) = c sigma^{1.024} (log gamma*)^{-1.65} "
+    "(r^2 0.945, n = 24), linear in sigma, not sigma^2 (mechanism: "
+    "phase threshold cos(sigma(gamma-omega)/2a) < 0 <=> "
+    "a < sigma|gamma*-omega|/pi, not the amplitude gain); a0 = 0.720 "
+    "at (sigma, gamma*) = (1/2, 20), extrapolated 0.714 at gamma_1; "
+    "true zeros min_omega Z(a, omega) > 0 for a in {1,5,25,100,250}; "
+    "adversarial sigma = 1/2 negative only at a = 1 "
+    "(Z = -3.86e-4 at gamma_1).  Parent typing: compactification "
+    "removes only the a -> inf end (RH-blind wide-frequency packets); "
+    "the RH-relevant end a -> 0 stays unbounded; a Lean theorem would "
+    "need an external explicit N(T)/gap bridge -> cosmetic, not "
+    "pursued.  F2 FORWARD_INCREASES_MARGIN: Hellmann-Feynman = "
+    "Loewner to 1e-15; c(L) = d_t log lambda* = +0.315/+0.582/+0.764 "
+    "at L = 0.40/0.55/0.80 (lambda* 1.89e-4/5.70e-8/2.02e-17), "
+    "t* = -3.18/-1.72/-1.31 (O(1), not vacuous); with injection "
+    "(beta, gamma) = (0.6, 20) at L = 0.55: d_t lambda* < 0.  Typing: "
+    "sign discriminates on/off-line but the monotonicity runs in the "
+    "proof-useless direction -> detector, no lever.  "
+    "F3 RANDOM_EULER_REFUTED: lambda_min(POLE+ARCH) = "
+    "-0.0783/-0.430/-0.926 at L = 0.40/0.549/0.80 (reproduces r623 "
+    "to 1e-3); MC 200 Haar phase draws at L = 0.55: mean lambda_min "
+    "= -0.496, std 0.317, 99.5 pct negative, vs true lambda* = "
+    "5.70e-8; coherence C(L) = 1 at h0 (all g_{h0}(log q) same sign); "
+    "Baker: required delta = O(1) vs toy linear-forms bound 4.6e-8 "
+    "-> 7.3 decades.  Typing: window positivity beyond L_cross is "
+    "arithmetic phase coherence of the prime terms; magnitude-only "
+    "and Diophantine-approximation arguments are dead as a class "
+    "(measured no-go; promotion candidate with r615/r619).  "
+    "F4 LEAD_LAW_INVARIANT: growth exponent alpha = 8.18 "
+    "(target 2p+1 = 7); argmin of the fitted margin + overlap laws "
+    "predicts 0/18 leads within 20 pct -> Delta ~ 0.015 is not a "
+    "corollary of those laws; open descriptive invariant.  Probe "
+    "experiments/tfpt-discovery/frontier_followups_probe.py.  "
+    "SPEC_SHA "
+    "ee7c7ba7e616add967455f2efdefaf00a326a8b78be7253cf10504016907ebf1; "
+    "RESULT_SHA prefix 814abdf5; probe SHA "
+    "9f5287e7f9fbf174bff5b54b935de7212b3c94f4c92c020f5749569d99011839.  "
+    "CHECKS 16/16.  No RH claim"
+)
+
 _R490_STATUS = (
     "classical Weil operator residual at L=0.3 "
     "(round 490, PRIME.RDAGGER.OPERATOR_RESIDUAL.01; "
@@ -3067,8 +4802,12 @@ _R489_STATUS = (
     "density, r475 u-space arch continuity, and the r376 native-grid "
     "pole integral dictionary.  Smoke 12/12, "
     "SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census "
-    "9 -> 8 (external 4 -> 3).  NO L* claim, NO R-dagger claim, "
-    "NO RH claim, NO anti-RH claim"
+    "9 -> 8 (external 4 -> 3).  r547 census-gate update: "
+    "project-sorry-census expected 7 -> 9 (tracked set "
+    "Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; "
+    "GaborSeparation carries 2 named inputs).  Probe SHA "
+    "re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger "
+    "claim, NO RH claim, NO anti-RH claim"
 )
 
 _R488_STATUS = (
@@ -3110,8 +4849,12 @@ _R487_STATUS = (
     "but no ZetaZero enumeration, multiplicity API, or Guinand--Weil "
     "formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  "
     "Lean sorry census 8 -> 9 because the old density sorry was "
-    "honestly split into two.  NO L* claim, NO R-dagger claim, "
-    "NO RH claim, NO anti-RH claim"
+    "honestly split into two.  r547 census-gate update: "
+    "project-sorry-census expected 7 -> 9 (tracked set "
+    "Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; "
+    "GaborSeparation carries 2 named inputs).  Probe SHA "
+    "re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger "
+    "claim, NO RH claim, NO anti-RH claim"
 )
 
 _R486_STATUS = (
@@ -7405,23 +9148,85 @@ ENTRIES = [
      "Remaining external sorrys: "
      "standard_explicit_formula_identification, "
      "fullWeil_separates_offCritical_zeros.  "
-     "Sorry census stays 7 (external 2, internal 5).  "
-     "Living document (parallel editor on this file).  "
+     "Sorry census was 7 through r538 (external 2, internal 5).  "
+     "r542-r553 Gabor campaign is a separate module "
+     "(RH/GaborSeparation.lean / GaborThetaBound.lean); this "
+     "file is unchanged as the compact/honest-Weil carrier.  "
+     "Living document.  "
      "NO RH CLAIM",
      False),
     ("rh/lean/RH/Open.lean", "lean_module",
-     "r517-r532",
+     "r517-r634L",
      [],
-     "r517-r532 census blocks (outer bridges 24-39) in "
-     "RH/Open.lean; each round sorry-free unless the standing "
-     "census.  Census stays 7 (external 2).  NO RH CLAIM",
+     "r517-r532 census blocks plus r542-r612 Gabor-input "
+     "notes in RH/Open.lean.  Tracked sorry census 9 -> 8 at "
+     "r581 (GaborSeparation 1; GaborExplicitFormula 0; "
+     "ExternalBridges still 2); stays 8 through r605; "
+     "8 -> 7 at r612 (GaborSeparation 0).  "
+     "EF for the Gabor class is a Lean theorem (r581).  "
+     "Canonical constant + log + BoundLog2 dominance are "
+     "theorems (r571/r575/r583); r573 audit "
+     "STATEMENT_WEAKENED (finite proxy).  r584-r588: "
+     "tsum<=Closed, unrestricted On/Off-split, and weighted "
+     "Bridge-6 identification are theorems; zeta != 0 on "
+     "(0,1) real.  r589: window->BoundLog2 bridge theorem; "
+     "L2 verdict BRIDGE_A_IS_RH_CORE (singleton route is "
+     "not a translation lemma).  r590: existential "
+     "arithmetic endpoint + parallel Mathlib chain.  "
+     "r591: fixed-packet cofinal only with extremality.  "
+     "r592: window-adaptive tail CONDITIONAL (IEEE omega-floor "
+     "at extreme near-tie).  r593/r594: outer-tail theorem "
+     "(tsum<=exp and tail<eps*E).  r595: three-term glue + "
+     "per-T checkpoint; named gap GaborWindowAdaptiveUniformDelta.  "
+     "r596-r598: L2 ANKER_TEILWEISE; log-glue theorem; "
+     "zeroSide<0 at own packet; Cover is the remaining "
+     "geometric rest.  r599/r600 vacuity audit (r602 docs): "
+     "old hpos on gaborSpectralFormula is FALSE; live object "
+     "gaborZeroSide (hpos*); GaborSpectralToArithmetic_holds "
+     "is the pole-sign lemma hat(1)>=0, NOT RH-core; "
+     "historical Mathlib wrappers VACUOUS (r600).  "
+     "GaborAnchoredWitnessExists NOT asserted.  "
+     "Open: GaborAnchoredCoverAt (ordinate clusters), "
+     "GaborAnchoredWitnessExists, "
+     "GaborWindowAdaptiveUniformDelta (T-uniform delta; "
+     "lex host-retune), GaborTruncationUniformNeg, "
+     "GaborWeightedTruncationGammaDistinct, "
+     "GaborFixedPacketCofinalNegAt (extremality gap), "
+     "r612: asserting gabor_separationForAllZeros deleted; "
+     "Prop GaborSeparationForAllZeros retained unasserted "
+     "(OVERSPECIFIED/believed-false); GaborCountableCriterion "
+     "module (r612C: rational-packet iff RH unconditional; "
+     "GaborZeroSideContinuous proved).  r610: GaborLowHeightZeroFree "
+     "T0 unasserted; gaborSpectralFormula_refuted_of_lowHeight.  "
+     "r605-r607/r608/r609/r611/r613 documented in Open.lean "
+     "docstrings.  Named open tsum Z(F0)<pi e^{1/8} and "
+     "on-line positivity beyond pure family (drop hline).  "
+     "r631L: sorry classification R/T/A (census stays 7; no "
+     "closure).  r634L docstring: live endpoint is the "
+     "unconditional pure EF gabor_explicitFormula_pure plus "
+     "prime-side criterion gabor_primeSide_rational_criterion_iff_rh "
+     "(RH <=> forall rational (a, omega): POLE - PRIME + ARCH >= 0; "
+     "axioms propext/Classical.choice/Quot.sound); remaining EF "
+     "brick GaborHatQuarticExplicitRemainder (non-pure quartics).  "
+     "Conditional Gabor reduction only; separation stays [O].  "
+     "NO RH CLAIM",
      True),
     ("rh/lean/RH/Audit.lean", "lean_module",
-     "r517-r532",
+     "r517-r634L",
      [],
      "r517-r532 axiom/audit trail of the outer-bridge campaign "
-     "(contour identity through RIGHT_PRIME).  Census stays 7.  "
-     "NO RH CLAIM",
+     "(contour identity through RIGHT_PRIME).  r612: #print "
+     "lines updated for GaborCountableCriterion; tracked "
+     "Gabor/window sorry census 8 -> 7.  r617L: #print lines "
+     "updated for CoxeterCompletion and PrimeLogIndependence; "
+     "tracked sorry census stays 7; module count 54 -> 56.  "
+     "r612C: #print axioms for gaborZeroSideContinuous_holds "
+     "and gabor_zeroSide_rational_criterion_iff_rh_unconditional; "
+     "named-open list shrinks by one; census stays 7.  "
+     "r634L: #print axioms for gabor_explicitFormula_pure and "
+     "gabor_primeSide_rational_criterion_iff_rh "
+     "(propext/Classical.choice/Quot.sound; no sorryAx); "
+     "census stays 7.  NO RH CLAIM",
      True),
 
     # -- frozen libraries the modules embed byte-exact --
@@ -8059,6 +9864,396 @@ ENTRIES = [
      "r496",
      [],
      _R496_STATUS,
+     True),
+    (f"{EXP}/weil_separation_redteam_probe.py", "sealed_probe",
+     "r535",
+     [],
+     _R535_STATUS,
+     True),
+    (f"{EXP}/kernel_loewner_window_probe.py", "sealed_probe",
+     "r536",
+     [],
+     _R536_STATUS,
+     True),
+    (f"{EXP}/honest_contour_audit_probe.py", "sealed_probe",
+     "r537",
+     [],
+     _R537_STATUS,
+     True),
+    (f"{EXP}/weil_gaussian_separation_probe.py", "sealed_probe",
+     "r539",
+     [],
+     _R539_STATUS,
+     True),
+    (f"{EXP}/weil_online_null_separation_probe.py", "sealed_probe",
+     "r540",
+     [],
+     _R540_STATUS,
+     True),
+    (f"{EXP}/weil_gabor_separation_probe.py", "sealed_probe",
+     "r541",
+     [],
+     _R541_STATUS,
+     True),
+    ("rh/lean/RH.lean", "lean_module",
+     "r542-r617L",
+     [],
+     _RH_ROOT_STATUS,
+     True),
+    ("rh/lean/RH/GaborSeparation.lean", "lean_module",
+     "r542-r634L",
+     [],
+     _R542_STATUS,
+     True),
+    ("rh/lean/RH/GaborIntegral.lean", "lean_module",
+     "r543",
+     [],
+     _R543_STATUS,
+     True),
+    ("rh/lean/RH/GaborInequality.lean", "lean_module",
+     "r544/r552/r579",
+     [],
+     _R552_INEQ_STATUS,
+     True),
+    (f"{EXP}/gabor_uniform_inequality_probe.py", "sealed_probe",
+     "r544",
+     [],
+     _R544_STATUS,
+     True),
+    ("rh/lean/RH/ZeroIncrement.lean", "lean_module",
+     "r546",
+     [],
+     _R546_STATUS,
+     True),
+    (f"{EXP}/weil_gabor_explicit_formula_probe.py", "sealed_probe",
+     "r548",
+     [],
+     _R548_STATUS,
+     True),
+    (f"{EXP}/gabor_density_transfer_probe.py", "sealed_probe",
+     "r549",
+     [],
+     _R549_STATUS,
+     True),
+    (f"{EXP}/gabor_extremal_selection_probe.py", "sealed_probe",
+     "r551",
+     [],
+     _R551_STATUS,
+     True),
+    ("rh/lean/RH/GaborThetaBound.lean", "lean_module",
+     "r552/r579",
+     [],
+     _R552_STATUS,
+     True),
+    (f"{EXP}/gabor_config_first_probe.py", "sealed_probe",
+     "r553",
+     [],
+     _R553_STATUS,
+     True),
+    (f"{EXP}/gabor_mixture_witness_probe.py", "sealed_probe",
+     "r554",
+     [],
+     _R554_STATUS,
+     True),
+    ("rh/lean/RH/GaborHatAnalytic.lean", "lean_module",
+     "r555/r587",
+     [],
+     _R555_STATUS,
+     True),
+    ("rh/lean/RH/GaborZeroSummable.lean", "lean_module",
+     "r557/r587",
+     [],
+     _R557_SUM_STATUS,
+     True),
+    ("rh/lean/RH/GaborHorizontalEdges.lean", "lean_module",
+     "r557",
+     [],
+     _R557_HORIZ_STATUS,
+     True),
+    ("rh/lean/RH/GaborContourResidue.lean", "lean_module",
+     "r557/r631L",
+     [],
+     _R557_CONT_STATUS,
+     True),
+    ("rh/lean/RH/GaborExplicitFormula.lean", "lean_module",
+     "r558/r564/r581/r634L",
+     [],
+     _R558_EF_STATUS,
+     True),
+    (f"{EXP}/gabor_honest_weil_game_probe.py", "sealed_probe",
+     "r560",
+     [],
+     _R560_STATUS,
+     True),
+    (f"{EXP}/gabor_uniform_dominance_probe.py", "sealed_probe",
+     "r561",
+     [],
+     _R561_STATUS,
+     True),
+    ("rh/lean/RH/GaborDominance.lean", "lean_module",
+     "r562/r568/r571/r589",
+     [],
+     _R562_DOM_STATUS,
+     True),
+    (f"{EXP}/gabor_dominance_redteam_probe.py", "sealed_probe",
+     "r563",
+     [],
+     _R563_STATUS,
+     True),
+    ("rh/lean/RH/GaborVertical.lean", "lean_module",
+     "r564/r581",
+     [],
+     _R564_VERT_STATUS,
+     True),
+    (f"{EXP}/gabor_scramble_gate_probe.py", "sealed_probe",
+     "r565",
+     [],
+     _R565_STATUS,
+     True),
+    (f"{EXP}/gabor_canonical_dominance_probe.py", "sealed_probe",
+     "r567",
+     [],
+     _R567_STATUS,
+     True),
+    ("rh/lean/RH/GaborLeftVertical.lean", "lean_module",
+     "r570",
+     [],
+     _R570_LEFT_STATUS,
+     True),
+    ("rh/lean/RH/GaborAutocorrelation.lean", "lean_module",
+     "r572",
+     [],
+     _R572_ACF_STATUS,
+     True),
+    ("rh/lean/RH/GaborVerticalLimit.lean", "lean_module",
+     "r576",
+     [],
+     _R576_VLIM_STATUS,
+     True),
+    ("rh/lean/RH/GaborArchDigamma.lean", "lean_module",
+     "r577",
+     [],
+     _R577_DIG_STATUS,
+     True),
+    ("rh/lean/RH/GaborArchContour.lean", "lean_module",
+     "r578/r581",
+     [],
+     _R578_ARCH_STATUS,
+     True),
+    ("rh/lean/RH/GaborDominanceProof.lean", "lean_module",
+     "r569/r597",
+     [],
+     _R569_PROOF_STATUS,
+     True),
+    ("rh/lean/RH/GaborDominanceAssembly.lean", "lean_module",
+     "r571/r597",
+     [],
+     _R571_ASM_STATUS,
+     True),
+    ("rh/lean/RH/GaborDominanceLog.lean", "lean_module",
+     "r574/r575/r597/r598",
+     [],
+     _R574_LOG_STATUS,
+     True),
+    ("rh/lean/RH/GaborSpectralBridge.lean", "lean_module",
+     "r579-r589",
+     [],
+     _R579_SPEC_STATUS,
+     True),
+    ("rh/lean/RH/GaborFEMultiplicity.lean", "lean_module",
+     "r582/r585",
+     [],
+     _R582_FE_STATUS,
+     True),
+    ("rh/lean/RH/GaborDominanceLog2.lean", "lean_module",
+     "r582/r583/r589/r597",
+     [],
+     _R583_LOG2_STATUS,
+     True),
+    ("rh/lean/RH/GaborArithmeticSeparator.lean", "lean_module",
+     "r590/r600/r605A",
+     [],
+     _R590_ARITH_STATUS,
+     True),
+    (f"{EXP}/gabor_fixed_packet_cofinal_probe.py", "sealed_probe",
+     "r591",
+     [],
+     _R591_STATUS,
+     True),
+    (f"{EXP}/gabor_window_adaptive_tail_probe.py", "sealed_probe",
+     "r592",
+     [],
+     _R592_STATUS,
+     True),
+    ("rh/lean/RH/GaborOuterTail.lean", "lean_module",
+     "r593/r594/r600",
+     [],
+     _R593_STATUS,
+     True),
+    ("rh/lean/RH/GaborWindowGlue.lean", "lean_module",
+     "r595",
+     [],
+     _R595_STATUS,
+     True),
+    ("rh/lean/RH/GaborAnchoredWitness.lean", "lean_module",
+     "r596-r600",
+     [],
+     _R596_STATUS,
+     True),
+    (f"{EXP}/gabor_weil_positivity_subfamily_probe.py", "sealed_probe",
+     "r601",
+     [],
+     _R601_STATUS,
+     True),
+    (f"{EXP}/prime_inequality_evosearch_probe.py", "sealed_probe",
+     "r603",
+     [],
+     _R603_STATUS,
+     True),
+    (f"{EXP}/tfpt_spectrum_zero_crosscorr_probe.py", "sealed_probe",
+     "r604",
+     [],
+     _R604_STATUS,
+     True),
+    (f"{EXP}/gabor_exposed_orbit_probe.py", "sealed_probe",
+     "r605N",
+     [],
+     _R605N_STATUS,
+     True),
+    ("rh/lean/RH/GaborExposedOrbit.lean", "lean_module",
+     "r605B/r605C",
+     [],
+     _R605BC_STATUS,
+     True),
+    (f"{EXP}/connes_prolate_residual_gap_probe.py", "sealed_probe",
+     "r606",
+     [],
+     _R606_STATUS,
+     True),
+    (f"{EXP}/event_lindblad_twokey_probe.py", "sealed_probe",
+     "r607",
+     [],
+     _R607_STATUS,
+     True),
+    (f"{EXP}/gabor_tropical_heat_probe.py", "sealed_probe",
+     "r608",
+     [],
+     _R608_STATUS,
+     True),
+    (f"{EXP}/e8_directed_readout_probe.py", "sealed_probe",
+     "r609",
+     [],
+     _R609_STATUS,
+     True),
+    (f"{EXP}/connes_observable_aubin_nitsche_probe.py", "sealed_probe",
+     "r611",
+     [],
+     _R611_STATUS,
+     True),
+    ("rh/lean/RH/GaborCountableCriterion.lean", "lean_module",
+     "r612C/r634L",
+     [],
+     _R612C_STATUS,
+     True),
+    (f"{EXP}/prime_e8_ordered_herglotz_probe.py", "sealed_probe",
+     "r613",
+     [],
+     _R613_STATUS,
+     True),
+    (f"{EXP}/semilocal_firststep_probe.py", "sealed_probe",
+     "r615",
+     [],
+     _R615_STATUS,
+     True),
+    (f"{EXP}/inertia_highermoment_probe.py", "sealed_probe",
+     "r616",
+     [],
+     _R616_STATUS,
+     True),
+    (f"{EXP}/e8_coxeter_euler_completion_probe.py", "sealed_probe",
+     "r617",
+     [],
+     _R617_STATUS,
+     True),
+    (f"{EXP}/jensen_compiler_rigidity_probe.py", "sealed_probe",
+     "r618",
+     [],
+     _R618_STATUS,
+     True),
+    ("rh/lean/RH/CoxeterCompletion.lean", "lean_module",
+     "r617L",
+     [],
+     _R617L_COX_STATUS,
+     True),
+    ("rh/lean/RH/PrimeLogIndependence.lean", "lean_module",
+     "r617L",
+     [],
+     _R617L_LOG_STATUS,
+     True),
+    (f"{EXP}/support_relay_census_probe.py", "sealed_probe",
+     "r619",
+     [],
+     _R619_STATUS,
+     True),
+    (f"{EXP}/p2_reflection_factor_probe.py", "sealed_probe",
+     "r620",
+     [],
+     _R620_STATUS,
+     True),
+    (f"{EXP}/p2_digamma_duplication_probe.py", "sealed_probe",
+     "r621",
+     [],
+     _R621_STATUS,
+     True),
+    (f"{EXP}/support_darboux_probe.py", "sealed_probe",
+     "r622",
+     [],
+     _R622_STATUS,
+     True),
+    (f"{EXP}/semilocal_p2_dilation_probe.py", "sealed_probe",
+     "r623",
+     [],
+     _R623_STATUS,
+     True),
+    (f"{EXP}/iiks_vanishing_metric_probe.py", "sealed_probe",
+     "r625",
+     [],
+     _R625_STATUS,
+     True),
+    (f"{EXP}/xi_finitefree_collision_probe.py", "sealed_probe",
+     "r626",
+     [],
+     _R626_STATUS,
+     True),
+    (f"{EXP}/af_twomoment_optimizer_probe.py", "sealed_probe",
+     "r627",
+     [],
+     _R627_STATUS,
+     True),
+    (f"{EXP}/window_box_verifier_probe.py", "sealed_probe",
+     "r628",
+     [],
+     _R628_STATUS,
+     True),
+    (f"{EXP}/certificate_class_atlas_probe.py", "sealed_probe",
+     "r629",
+     [],
+     _R629_STATUS,
+     True),
+    (f"{EXP}/margin_law_symreg_probe.py", "sealed_probe",
+     "r630",
+     [],
+     _R630_STATUS,
+     True),
+    (f"{EXP}/jet_deflated_ldet_probe.py", "sealed_probe",
+     "r632",
+     [],
+     _R632_STATUS,
+     True),
+    (f"{EXP}/frontier_followups_probe.py", "sealed_probe",
+     "r633",
+     [],
+     _R633_STATUS,
      True),
 ]
 

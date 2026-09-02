@@ -32,8 +32,8 @@
   "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "2345e9f5457e",
-  "date": "2026-08-31"
+  "hash": "785d7023ebd3",
+  "date": "2026-09-02"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "d7ace62c85ab",
@@ -624,8 +624,8 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "912ec80bb370",
-  "date": "2026-08-31"
+  "hash": "4f09b4cefcf7",
+  "date": "2026-09-02"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "e3aaf64f6d07",
@@ -724,8 +724,8 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract 2 --- $(G_{\\mathrm{metric}})$::1": {
-  "hash": "13d30538ba6f",
-  "date": "2026-08-30"
+  "hash": "24947640e48e",
+  "date": "2026-09-01"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CELEST.SEAM.01} (the celestial and twistor continuum route)::1": {
   "hash": "62902eaaa0d2",
@@ -948,8 +948,8 @@
   "date": "2026-06-28"
  },
  "note_e8_gaussian_code::front::(front matter)::1": {
-  "hash": "b966e478523b",
-  "date": "2026-08-05"
+  "hash": "b38c79220117",
+  "date": "2026-09-02"
  },
  "note_e8_gaussian_code::section::The three objects::1": {
   "hash": "dd6bd9bffb06",
@@ -974,6 +974,10 @@
  "note_e8_gaussian_code::section::The information layer::1": {
   "hash": "a00627104ddb",
   "date": "2026-08-05"
+ },
+ "note_e8_gaussian_code::section::Explicit character basis of the eight Coxeter channels and the \\texorpdfstring{$C_2\\times C_4$}{C2 x C4} audit::1": {
+  "hash": "b4368b10b305",
+  "date": "2026-08-07"
  },
  "note_e8_gaussian_code::section::The quartic companion: \\texorpdfstring{$G_{31}$}{G31} as the holomorphic \\texorpdfstring{$\\mu_4$}{mu4} shadow::1": {
   "hash": "25e5ac2d0a85",

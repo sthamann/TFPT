@@ -305,6 +305,46 @@ export type PrimeFrontUpdate = {
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
   {
+    date: "2026-09-02",
+    part: 0,
+    title:
+      "Directed E8 readout and the Coxeter–Euler completion graduate as v1018_e8_directed_readout.py (47/47) and v1019_coxeter_euler_completion.py (46/46; suite 1010 → 1012, ledger 1174 → 1176). Both modules RE-DERIVE the sealed discovery probes (r609 SPEC 3edfb824…; r617 SPEC 5aa3935b… / FILE 6ac6bab2…) with no probe imports. v1018 is seven exact cells [E] Identity: Seifert S+S^T=A_E8, charpoly(-S^{-1}S^T)=Phi_30, rank(S-S^T)=8; Hamming 1+14y^4+y^8, 240=16+14·16, S(3,4,8); srg(120,56,28,24) eig 56/8/−4 mult 1/35/84; N(n)=240 sigma_3(n) for n<=10; A_P(n)/A_P(1)=tau(n) for n<=8, E4^3-E6^2=1728 Delta; (Z/30)^x cong C2 x C4, D_chi=L(s,chi)L(s-3,chi) for n<=200; E6 oplus A2 index 3, Smith (1^6,3,3), glue 78/81/81. C7 Gauss-code transform stays OPEN (rem:c7-audit). v1019 is the Coxeter–Euler completion [E] Identity plus Numerical Euler products: det(I-xC)=Phi_30, Tr C=-1; classical Moebius Phi_30; U=1 oplus C, Tr U=0, det(I-xU)=1-x^2-x^3+x^6+x^7-x^9; Z_C and D_E8 as zeta quotients, abs. conv. Re s>1/2. Numerical (X=10^5): D_E8 residual 4.76e-4 at s=0.75, 4.16e-12 at s=1.5. CLASS: the vanishing linear term is generic from Tr C=-1 (A1 → 1/zeta(2s); A2 → 1/zeta(3s); E6 → zeta(4s)zeta(6s)/[zeta(2s)zeta(3s)zeta(12s)]; B2 still contains 1/zeta(s)); E8 only selects the divisor set of 30. Beurling-generic (any Q subset (1,inf)). FENCE (verbatim): The trace-free completion is zero-free and pole-free in Re s > 1/2. The splitting into the scalar zeta channel and the Coxeter channel is open and RH-equivalent. No RH claim. NO-GO E8.COXETER.REGULARIZED_SPLIT.NO_GO.01: det_2 cannot isolate 1/zeta(s). Like the Eisenstein bridge, RH-neutral. Not evidence for or against the Riemann Hypothesis.",
+    headline:
+      "Seven exact E8 readout cells (v1018, C7 open) and the Coxeter–Euler completion (v1019) are now load-bearing. The vanishing linear term is generic from Tr C=-1; E8 selects only the divisor set of 30. Fence: the trace-free completion is zero-free and pole-free in Re s>1/2; the splitting is open and RH-equivalent. No RH claim.",
+    keyFacts: [
+      "v1018_e8_directed_readout.py (47/47): seven exact cells [E] Identity; N(n)=240 sigma_3(n) for n<=10; Hamming 1+14y^4+y^8; srg(120,56,28,24); C7 Gauss-code transform stays OPEN",
+      "v1019_coxeter_euler_completion.py (46/46, 4.5 s): det(I-xC)=Phi_30, Tr C=-1, U=1 oplus C, Tr U=0; D_E8 residuals at X=10^5: 4.76e-4 at s=0.75, 4.16e-12 at s=1.5",
+      "Class: vanishing linear term generic from Tr C=-1; E8 selects only the divisor set of 30; Beurling-generic (any Q subset (1,inf))",
+      "Fence (verbatim): The trace-free completion is zero-free and pole-free in Re s > 1/2. The splitting into the scalar zeta channel and the Coxeter channel is open and RH-equivalent. No RH claim.",
+      "NO-GO E8.COXETER.REGULARIZED_SPLIT.NO_GO.01: det_2 cannot isolate 1/zeta(s); RH content in the analytic continuation of P(s)=Sum mu(k)/k log zeta(k s)",
+    ],
+    verdict: "PROMOTED",
+    summary:
+      "Rounds r609/r617 freeze as v1018/v1019: seven exact E8 readout cells (C7 open) and a Coxeter–Euler completion whose vanishing linear term is generic and whose RH-adjacent splitting is fenced. Not evidence for or against the Riemann Hypothesis.",
+    badge: "machine-verified",
+    script: "v1019_coxeter_euler_completion.py",
+  },
+  {
+    date: "2026-09-01",
+    part: 0,
+    title:
+      "Kernel-Loewner positivity at L=0.3 (rounds 494/495) graduates as v1017_kernel_loewner_positivity.py (suite 1009 → 1010, ledger 1173 → 1174, new row PRIME.RDAGGER.KERNEL_LOEWNER.01 [Numerical/certified], not [E]). The module RE-DERIVES the certificate from scratch (no probe imports). SCOPE is a single finite support: supp(h) ⊂ [−0.3, 0.3], so 2L = 0.6 < log 2 and the classical prime term is empty. FLOAT64 FLOOR (not interval, not [E]): Q_W(h) ≥ 2.1×10⁻³ ‖h‖₂², equivalently λ_*(0.3) ≥ 2.122×10⁻³ (claimed c = 2.1×10⁻³). G1: the x-space Weil form agrees with the defining digamma at the calibration gate (σ_A(0) = −5.3721834192256654, Dirichlet Rayleigh 1.180×10⁻², odd Legendre sector 0.2226, c_L in hull). G2: after zero-extension to L²(ℝ), I − Re R_x is PSD by the Loewner identity ⟨h, (I−Re R_x)h⟩ = ½‖h − τ_x h‖²; a quintic C² cutoff books the omitted diagonal as κ_w. G3: a 401-dimensional Legendre section of a degree-48 Chebyshev surrogate is enclosed by Bernstein Hilbert–Schmidt bounds; the exact tail is charged three times. Independently (r495): the translation identity holds 6/6 exactly over ℚ on two step functions (boundary-strip mass strictly positive), and doubling c_L produces a negative certificate budget (−2.188). HONEST BOUNDARY: r496 is a method NO_GO for the same compact-tail completion at L=0.8 — this row does NOT claim λ_*(L) ≥ 0 for general L, is not cofinal, and is not evidence for or against the Riemann Hypothesis.",
+    headline:
+      "Kernel-Loewner positivity at L=0.3 is now a load-bearing Numerical/certified float64 certificate (v1017, not [E]): λ_*(0.3) ≥ 2.1×10⁻³ on the prime-free window, with the r496 compact-tail NO_GO at L=0.8 named as the method boundary. No RH claim.",
+    keyFacts: [
+      "v1017_kernel_loewner_positivity.py (26/26): Q_W(h) ≥ 2.1e-3 ‖h‖₂² on supp ⊂ [−0.3, 0.3] (2L < log 2); enclosed floor 2.122e-3 after a 3× HS tail charge; claimed c = 2.1e-3",
+      "G1 identity vs defining digamma (σ_A(0) = −5.3721834192256654); G2 Loewner after zero-extension; G3 401-dim Legendre + Bernstein HS enclosure",
+      "Independent r495: translation identity 6/6 exact over ℚ with positive boundary-strip mass; doubled-c_L false-world budget −2.188",
+      "BOUNDARY: r496 NO_GO(kernel-Loewner-compact-tail@L=0.8) — the compact-tail method does not scale past the prime-free zone; no cofinal claim",
+      "New ledger row PRIME.RDAGGER.KERNEL_LOEWNER.01 [Numerical/certified], not [E]; float64 floor with rounding headroom; probes stay experiments-side; no RH statement",
+    ],
+    verdict: "PROMOTED",
+    summary:
+      "Rounds r494/r495 freeze as v1017: a float64 operator lower bound at a single finite support L=0.3 (not interval, not [E]). The r496 compact-tail NO-GO at L=0.8 is the named method boundary, not hidden. Not evidence for or against the Riemann Hypothesis.",
+    badge: "machine-verified",
+    script: "v1017_kernel_loewner_positivity.py",
+  },
+  {
     date: "2026-08-27",
     part: 0,
     title:

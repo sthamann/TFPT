@@ -714,7 +714,7 @@ the picture itself carries no status marker.
 \end{gapboxnb}
 
 \subsection{(i) The zeta function is literally in the geometry}
-Count the $E_8$ lattice points shell by shell. The even shells satisfy $N(2n)=240\,\sigma_3(n)$ ---
+Count the $E_8$ lattice points shell by shell. The even shells satisfy $N(2n)=240\,\sigma_3(n)$ --- \veri{v1018\_\allowbreak e8\_\allowbreak directed\_\allowbreak readout.py} ---
 direct lattice counting gives $240$, $2160$, $6720$, $17\,520$, $30\,240$, $60\,480$ for $n=1\ldots6$
 (T6, one of the parts that predate the indexed range of Appendix~\ref{app:index}) --- and $\sigma_3$ is
 multiplicative, so the counting function of the lattice is a Dirichlet series
@@ -847,6 +847,131 @@ $ss^{\mathsf T}-tt^{\mathsf T}$ at $10^{-18}$ (T106). \emph{Schematic:} the geom
 the reading of the axis as ``order'' with the lattice's arithmetic content beside it. The bottom line is
 an interpretation and carries no status.}\label{fig:bigpicture}
 \end{figure}
+
+\subsection{(vi) Two boundaries: what the geometry cannot do for the zeros}\label{sec:bigpicture-boundaries}
+Subsections~(i)--(iii) show that $\zeta$ and its Hecke structure sit
+literally in the $E_8$ geometry; this subsection records two elementary
+propositions fixing what that containment can and cannot deliver for the
+\emph{zeros}.  Both are claim-boundary statements, proved here in full;
+neither is a verification module, neither carries a status marker.
+
+\noindent\textbf{Proposition 1 (The Eisenstein bridge is RH-neutral).}
+Let
+$\theta_{E_8}(\tau)=\sum_{v\in E_8}q^{(v,v)/2}=E_4(\tau)=1+240\sum_{n\ge1}\sigma_3(n)\,q^n$
+(the representation numbers $N(n)=240\sigma_3(n)$ are the even-shell
+counts of subsection~(i), written there as $N(2n)=240\sigma_3(n)$;
+\veri{v1018\_\allowbreak e8\_\allowbreak directed\_\allowbreak readout.py}).
+Then for $\mathrm{Re}\,s>4$,
+\begin{keyeq}$\displaystyle
+\sum_{n\ge1}N(n)\,n^{-s}\;=\;240\,\zeta(s)\,\zeta(s-3).$\end{keyeq}
+Consequently the nontrivial zeros of the $L$-function of the lattice
+theta series are exactly $\{\rho\}\cup\{\rho+3\}$, $\rho$ ranging over
+the nontrivial zeros of $\zeta$, each with the same multiplicity.  The
+Weil explicit formula for $L(E_4,s)$ is the sum of the $\zeta$ explicit
+formula and its translate by $3$; its positivity is equivalent to RH;
+no statement about the location of zeros is produced by the lattice
+that is not already a statement about $\zeta$.  The same holds for the
+character twists: the identity
+$D_\chi(s)=L(s,\chi)\,L(s-3,\chi)$ for the eight characters of
+$(\Z/30\Z)^\times\cong C_2\times C_4$ maps GRH for these Dirichlet
+$L$-functions onto itself; and the cusp form
+$\Delta=(E_4^3-E_6^2)/1728$ that appears in the same geometry has an
+$L$-function whose Riemann hypothesis is a different ($\mathrm{GL}(2)$)
+problem, not $\zeta$'s.
+
+\noindent\emph{Proof.}
+$\sum_{n\ge1}\sigma_3(n)\,n^{-s}=\sum_{d,m}d^3(dm)^{-s}=\zeta(s-3)\zeta(s)$
+(absolutely convergent for $\mathrm{Re}\,s>4$); the zero-set statement
+follows from the functional equations of both factors and the fact that
+$\zeta(s-3)$ has its nontrivial zeros at $\rho+3$; the explicit-formula
+statement is linearity of the explicit formula in the $L$-function's
+logarithmic derivative.\hfill$\square$
+
+\noindent The geometry contains $\zeta$; at the level of zeros it
+renames, it does not inform.
+
+\noindent\textbf{A second exact bridge: the Coxeter--Euler completion.}
+The Seifert matrix $S$ of Bourbaki $E_8$ yields the Coxeter element
+$C=-S^{-1}S^{\mathsf T}$ with $\det(I-xC)=\Phi_{30}(x)$ and $\mathrm{Tr}\,C=-1$.
+The cyclotomic identity
+$\Phi_{30}(x)=(1-x^2)(1-x^3)(1-x^5)(1-x^{30})/[(1-x)(1-x^6)(1-x^{10})(1-x^{15})]$
+is classical M\"obius inversion of Euler products.  Completing by a scalar,
+$U=1\oplus C$, gives $\det(I-xU)=(1-x)\Phi_{30}(x)=1-x^2-x^3+x^6+x^7-x^9$
+and $\mathrm{Tr}\,U=0$.  Globally this is
+$Z_C(s)=\zeta(2s)\zeta(3s)\zeta(5s)\zeta(30s)/[\zeta(s)\zeta(6s)\zeta(10s)\zeta(15s)]$
+and
+$D_{E_8}(s)=\zeta(6s)\zeta(10s)\zeta(15s)/[\zeta(2s)\zeta(3s)\zeta(5s)\zeta(30s)]$,
+absolutely convergent for $\mathrm{Re}\,s>1/2$.
+The vanishing linear term is the generic consequence of $\mathrm{Tr}\,C=-1$
+(controls: $A_1\to 1/\zeta(2s)$; $A_2\to 1/\zeta(3s)$; $E_6$ $(\Phi_3\Phi_{12})$
+$\to\zeta(4s)\zeta(6s)/[\zeta(2s)\zeta(3s)\zeta(12s)]$; negative control $B_2$
+($\Phi_4$, $\mathrm{Tr}=0$) $\to\zeta(2s)/[\zeta(s)\zeta(4s)]$, still contains $1/\zeta(s)$);
+$E_8$ only selects the divisor set of $30$.
+The identity is Beurling-generic: it holds for any set of ``primes''
+$Q\subset(1,\infty)$ --- no prime-specific input.
+\emph{Fence (verbatim):} The trace-free completion is zero-free and pole-free in $\mathrm{Re}\,s>1/2$.
+The splitting into the scalar zeta channel and the Coxeter channel is open and RH-equivalent.
+No RH claim.
+Typed no-go \texttt{E8.COXETER.REGULARIZED\_SPLIT.NO\_GO.01}: any construction
+controlling only the $\det_2$/Hilbert--Schmidt part cannot isolate $1/\zeta(s)$;
+the RH content sits in the analytic continuation of
+$P(s)=\sum_k\mu(k)/k\cdot\log\zeta(ks)$.
+Like the Eisenstein bridge, the completion is RH-neutral as a finite identity.
+\veri{v1019\_\allowbreak coxeter\_\allowbreak euler\_\allowbreak completion.py}
+
+\noindent\textbf{Proposition 2 (Commensurability: finite clocks cannot
+carry the prime orbit spectrum).}
+\textbf{(a)} For any set $\mathcal{P}$ of primes, the real numbers
+$\{\log p:p\in\mathcal{P}\}$ are linearly independent over $\Q$.
+
+\noindent\emph{Proof.}
+Suppose $\sum_{p\in\mathcal{P}_0}a_p\log p=0$ with $\mathcal{P}_0$
+finite, $a_p\in\Q$ not all zero; clear denominators to integers $n_p$;
+exponentiate:
+$\prod_{n_p>0}p^{n_p}=\prod_{n_p<0}p^{-n_p}$.
+The two sides are positive integers with disjoint sets of prime
+factors; by uniqueness of prime factorization both equal $1$, so all
+$n_p=0$, a contradiction.\hfill$\square$
+
+\noindent\textbf{(b)} Corollary.
+Let a dynamical system have all its closed-orbit periods in
+$T\cdot\Z_{>0}$ for a single $T>0$.  This covers every action of a
+finite cyclic group --- in particular the Coxeter element of $E_8$
+(order $h=30$, characteristic polynomial $\Phi_{30}$, the Seifert
+readout of the compiler) --- and more generally any finite-order
+symmetry, whose closed orbits have pairwise commensurable periods.  If
+two closed orbits had periods $c\cdot\log p$ and $c\cdot\log q$ for
+distinct primes $p\neq q$ and a common scale $c>0$, then
+$\log p/\log q\in\Q$, contradicting~(a).  Hence such a system carries
+at most one prime length: \textbf{no finite-order clock realizes the
+prime orbit spectrum $\{\log p\}$} (nor $\{\log p^k\}$).  A dynamical
+realization in the Selberg--Deninger sense (closed orbits
+$\leftrightarrow$ prime powers, lengths $\leftrightarrow\log p^k$)
+requires a flow with infinitely many $\Q$-linearly independent
+primitive periods --- a non-periodic (Anosov-type) dynamics, which the
+finite $E_8$ data do not provide.
+
+\begin{gapboxnb}[Numerical shadows --- experiments only, no RH claim]
+\sbx\ Rounds r607 (\texttt{event\_lindblad\_\allowbreak twokey\_probe.py},
+verdict \textsc{killed(recoordinatization)}: the ordered event Lindbladian
+reproduces finite Weil positivity to $10^{-15}$ in true, scrambled and
+permuted worlds alike, labels decorative) and r613
+(\texttt{prime\_e8\_\allowbreak ordered\_herglotz\_probe.py}, verdict
+\textsc{no\_identification}: at zero free evolution all ordered $E_8$
+jumps commute, so the monodromy depends only on their sum and the order
+is decorative to $10^{-14}$; with free evolution the order becomes
+visible but carries no prime-specific information, residuals at Euler
+points indistinguishable from scrambled controls) are the numerical
+shadows of Proposition~2: the finite structure alone cannot see the
+primes, and the free evolution that breaks commensurability is not
+arithmetic.  Both rounds live in \texttt{experiments/tfpt-discovery/}
+and are not part of the verified layer.
+\end{gapboxnb}
+
+\noindent The prime front therefore rests on the verified identities of
+Section~\ref{sec:verified}, not on any zero-location claim; RH-relevant
+work is carried in the RH program (\texttt{rh/}) with its own claim
+boundary.
 
 % =====================================================================
 \part{The verified layer}\label{part:verified}
@@ -22778,6 +22903,43 @@ SLIDING\_BOUND.01} [O] carry wave-14 notes with markers
 halved.  Mincut base 4 / refined 5 unchanged.  \textbf{No statement
 about the Riemann Hypothesis or the Generalized Riemann Hypothesis
 is made.}
+
+\subsection{Kernel-Loewner positivity at $L=0.3$
+(rounds 494--495, promoted 2026-09-01)}\label{sec:kernel-loewner-03}
+
+Rounds r494 $+$ r495 freeze as one module
+\veri{v1017\_\allowbreak kernel\_\allowbreak loewner\_\allowbreak positivity.py}
+(\texttt{PRIME.\allowbreak RDAGGER.\allowbreak KERNEL\_LOEWNER.01},
+Numerical/certified float64 --- not interval arithmetic, not~\mE;
+suite $1009\to1010$, ledger $1173\to1174$).  Unlike the embedding waves,
+the module re-derives the bound from scratch (no probe imports).
+\emph{Scope is a single finite support:} $\mathrm{supp}(h)\subset[-0.3,0.3]$,
+so $2L=0.6<\log 2$ and the classical prime term is empty.  The $x$-space
+Weil form
+\[
+  Q_W(h)=\int_0^{2L} k(x)\bigl(g(0)-g(x)\bigr)\,dx - c_L\,g(0)+\Pi(h),
+\]
+with $k(x)=e^{x/2}/\sinh x$ and
+$\Pi(h)=2\bigl(\langle h,\cosh(x/2)\rangle^2-\langle h,\sinh(x/2)\rangle^2\bigr)$,
+agrees with the defining digamma multiplier at the calibration gate
+($\sigma_A(0)=-5.3721834192256654$, Dirichlet Rayleigh $1.180{\times}10^{-2}$,
+odd Legendre sector $0.2226$, $c_L$ in hull).  After zero-extension to
+$L^2(\mathbb R)$, $I-\mathrm{Re}\,R_x$ is PSD by the Loewner identity
+$\langle h,(I-\mathrm{Re}\,R_x)h\rangle=\tfrac12\|h-\tau_x h\|_{L^2(\mathbb R)}^2$;
+a quintic $C^2$ cutoff books the omitted diagonal as $\kappa_w$.  A
+$401$-dimensional Legendre section of a degree-$48$ Chebyshev surrogate
+is enclosed by Bernstein Hilbert--Schmidt bounds; the exact tail is charged
+three times.  The enclosed floor is $2.122{\times}10^{-3}$, so
+\[
+  Q_W(h)\;\ge\; 2.1{\times}10^{-3}\,\|h\|_2^2.
+\]
+Independently (r495): the translation identity holds $6/6$ exactly over
+$\mathbb Q$ on two step functions (boundary-strip mass strictly positive),
+and doubling $c_L$ produces a negative certificate budget.  \emph{Honest
+boundary:} r496 is a method no-go for the same compact-tail completion at
+$L=0.8$ --- this row does \emph{not} claim $\lambda_*(L)\ge 0$ for general
+$L$, is not cofinal, and is not evidence for or against the Riemann
+Hypothesis.
 
 \subsection{The T-B census at 69/70}\label{sec:tb-6970}
 

@@ -1213,6 +1213,109 @@ not an RH claim.
 python3 experiments/tfpt-discovery/kernel_redteam_probe.py --smoke
 ```
 
+### R553 Gabor config-first (quantifier repair)
+
+`tfpt-discovery/gabor_config_first_probe.py` is an experiments-only
+scout of the r551 wall with reversed quantifiers: increment-compliant
+off-line configurations `Z` are frozen first, then the witness chooses
+`h` seeing `Z`.  Score is the r541 leftover plus extra off-line mass.
+Firewall: no RH claim, no Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_config_first_probe.py --smoke
+```
+
+### R554 Gabor mixture witness
+
+`tfpt-discovery/gabor_mixture_witness_probe.py` asks whether a finite
+Gabor mixture (positive, signed, or H-nulling) beats the r553 cluster
+configs under the same leftover scale.  Experiments-only: no RH claim,
+no Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_mixture_witness_probe.py --smoke
+```
+
+### R560 Gabor honest Weil game (config first, full form)
+
+`tfpt-discovery/gabor_honest_weil_game_probe.py` is the r559-referee
+decider: the same 52-row increment-compliant catalog as r554, scored
+with the homogeneous form `W_honest = Q_off + R_on` (no `R_ref`
+hinge, no −3.56 credit).  Budget losses (none on this catalog) would
+additionally get `W_sharp` from the frozen first-100 ordinates plus
+a Trudgian tail.  Verdict: `HONEST_WITNESS_WINS(all=52,
+worst_margin=-6.03e123)`.  Experiments-only: no RH claim, no
+Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_honest_weil_game_probe.py --smoke
+```
+
+### R561 Gabor uniform dominance (constructive (a,ω) rule)
+
+`tfpt-discovery/gabor_uniform_dominance_probe.py` is the symbolic
+successor of r560: a closed dominance inequality for
+`W_honest = Q_off + R_on` with an explicit (a,ω)-rule.  The r541
+lock `a=(σ²/64)/8`, `ω=γ−πa/σ` is not Z-uniform (frozen centre-tie
+leftover/E ≈ +0.0096, phase factor ≡ 1, envelope ratio → 1 as a→0;
+lock loses all 8 `antiphase_k43` cells).  Isolation-shrink from that
+lock empties the vanishing window `I_exc=[ω−ε(a),ω+ε(a)]`,
+`ε(a)=√(2a log max(1/a, 4 K_bin))`, and the named bound is
+conservative and negative on the r560 catalog (52) plus the three
+danger families (24).  Verdict: `DOMINANCE_UNIFORM`.  Experiments-only:
+no RH claim, no Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_uniform_dominance_probe.py --smoke
+```
+
+### R563 Gabor dominance red-team (isolation-shrink)
+
+`tfpt-discovery/gabor_dominance_redteam_probe.py` is an adversarial
+search for an increment-compliant `Z` that breaks the sealed r561
+isolation-shrink rule or its named reduced bound.  Families: `d_min→0`
+(including the `δ=0` same-`γ` edge), mass-pack just outside `I_exc`,
+`σ/γ` extremes, secondary plus-lobe at `t=−ω`, seeded DE (2 rounds).
+Verdict: `REDTEAM_BREAKS` — equal-`σ` twin at `−ω` gives `W/E≈+0.0096`;
+`θ_left` does not cover the plus-lobe for `ω>0`.  On `γ>0`-only cells
+the rule still holds (0/46 breaks).  Experiments-only: no RH claim,
+no Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_dominance_redteam_probe.py --smoke
+```
+
+### R565 Gabor scramble-gate (late r469 declaration)
+
+`tfpt-discovery/gabor_scramble_gate_probe.py` is the late r469
+anti-list-§3 declaration for the Gabor/dominance route: the full
+r541/r548 Weil form `W = Pole − Comb + Arch − Z_on − Q_off` is
+scored on σ ∈ {0.01, 0.25, 0.49} × γ ∈ {14, 1000, 10000} at the
+r541 lock and the r561 isolation-shrink, under true Λ, eight
+label-permutations, PNT smears, and Comb=0.  Verdict:
+`GATE_PASS(mode=needs_no_cancellation)` — 18/18 cells
+`INSENSITIVE` (worst |ΔW|/|W| = 7.2e-15); the bound does not
+use prime cancellation, so scramble-invariance is admissible
+(unlike the 31 dead routes).  Experiments-only: no RH claim,
+no Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_scramble_gate_probe.py --smoke
+```
+
+### R567 Gabor canonical dominance
+
+`tfpt-discovery/gabor_canonical_dominance_probe.py` is the r566
+repair of the signed-refuted r561 rule: weighted canonical
+`(σ,γ,m)` with `γ>0`, `ω>0`, no numeric `a`-floor.  Verdict:
+`CANONICAL_DOMINANCE_HOLDS(cells=119, worst_margin=0.990408,
+bound_conservative=all)`.  Experiments-only: no RH claim, no
+Lean/ledger/paper/`next.txt` edit.
+
+```bash
+python3 experiments/tfpt-discovery/gabor_canonical_dominance_probe.py --smoke
+```
+
 ---
 
 ## 11. Konventionen

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1787160818.08675 "tfpt_prime_front.tex" "tfpt_prime_front.pdf" "tfpt_prime_front" 1787160824.35014 0
+["pdflatex"] 1788344576.23655 "tfpt_prime_front.tex" "tfpt_prime_front.pdf" "tfpt_prime_front" 1788344582.13563 0
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1254269338 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -83,6 +83,11 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm" 1254269338 11852 5a9022f105fd1ee2797df861e79ae9a0 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm" 1254269338 11864 309fd7f43e4a0ba39f6f7644d76e8edf ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmr9.tfm" 1254269338 11884 c93929a6974dce79eabb778f219d7e18 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm" 1254269338 16968 1b588d0f410bd67a83eaecf8c64b2a43 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm" 1254269338 16968 09a34e0af90920bbcece784f13606525 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm" 1254269338 16984 f7462c768466838a2a9e916b6dee71c6 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm" 1254269338 16976 7228e7c7bc486e2318fc496e0de33875 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmri9.tfm" 1254269338 16968 4675b6ed6aaa9b6b1446f80f565cd449 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmss10.tfm" 1254269338 10976 59d4d2acacc56ba9abc92645023932ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmss12.tfm" 1254269338 11024 7a83ae8920360cd8bd5d0289069119dc ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/lm/rm-lmss8.tfm" 1254269338 10976 d5243dcaf5ba5ee7825c8438c6b7a7ea ""
@@ -344,13 +349,13 @@
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "tex-artefacts/tfpt_docset.tex" 1785914916.81673 3989 4dd0e26c0012d3b6b68c355ef8494b19 ""
   "tex-artefacts/tfpt_figures.tex" 1781874853.67351 9695 dba0ade0664c6a63cf19c49a8818858c ""
-  "tex-artefacts/tfpt_style.tex" 1784729391.36679 9479 5047b8304281f47edbda36020354129a ""
-  "tex-artefacts/version-auto.tex" 1787160634.541 70 3e75bf8023916c3d05e4d24129a0bf2a ""
+  "tex-artefacts/tfpt_style.tex" 1788013561.43854 9498 0851a4f6821cddd20b4da7a3795dd96a ""
+  "tex-artefacts/version-auto.tex" 1788261134.89096 71 8808e68cbdaf10f345cda0ae0327c585 ""
   "tex-artefacts/version.tex" 1782982005.53852 1417 a4406031dcf2e39fd4554ec01a05c6ff ""
-  "tfpt_prime_front.aux" 1787160824.02792 76078 3b403a699c61373a91deca30edee313f "pdflatex"
-  "tfpt_prime_front.out" 1787160824.03376 6082 b201b9c682250e77cb7de9961388099a "pdflatex"
-  "tfpt_prime_front.tex" 1787160523.33772 1532964 a387a2f71f801bc114ef6b0e50a04637 ""
-  "tfpt_prime_front.toc" 1787160824.03404 36419 1e34077d2d25ca0aa042b3be2b04cb67 "pdflatex"
+  "tfpt_prime_front.aux" 1788344581.79916 88699 b57f51963bcf7467f0e9b29803e435f0 "pdflatex"
+  "tfpt_prime_front.out" 1788344581.80549 6082 b201b9c682250e77cb7de9961388099a "pdflatex"
+  "tfpt_prime_front.tex" 1788344565.8547 1707574 49478f128f91970155a22cb447a19410 ""
+  "tfpt_prime_front.toc" 1788344581.80587 42344 f9331667bfacee25fa1e62122ac9a961 "pdflatex"
   (generated)
   "tfpt_prime_front.aux"
   "tfpt_prime_front.log"

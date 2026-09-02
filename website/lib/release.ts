@@ -27,16 +27,16 @@ export interface ReleaseAsset {
 
 const COMMON = {
   version: "TFPT 5.4",
-  releaseDate: "2026-08-31",
+  releaseDate: "2026-09-02",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 5422878,
+    bytes: 5437598,
     sha256:
-      "b0eb86a9897081f523ee2ea98392ea0174af11acd0235e907dd9c085cca36de0",
+      "e6e0d94ae50aa6fe4592db240334eebfd1986b986c39f81856ea82980124aa92",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -70,9 +70,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 846960,
+    bytes: 849364,
     sha256:
-      "3297b0d3cf16340691be2509f600182cb13d4ff3113077241879ddcc4dd19373",
+      "c06e8f258829d945c2384c3cb4ed2b9510f055657925c9de25bebcc1cf04e6bb",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
@@ -124,9 +124,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/note_e8_gaussian_code.pdf": {
     href: "/papers/note_e8_gaussian_code.pdf",
     ...COMMON,
-    bytes: 347652,
+    bytes: 370071,
     sha256:
-      "67ee510d008ac00a85a8671b54239a304475f613309e9d6792b12df83bed1bea",
+      "8d3e795408b125b509f518d93d997a79a6e8a1e4a90f776176e777b3e657338e",
     changelog:
       "Working note N1 — the Gaussian code bridge: E₈ over ℤ[i] via Construction A over the extended Hamming code, the canonical four-bit quotient L/(1+i)L ≅ F₂⁴, and the G₃₁ quartic companion (v689/v690 + 65 Lean theorems).",
   },
@@ -142,9 +142,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 3284841,
+    bytes: 3292771,
     sha256:
-      "d9a3293de03179a0b065ae7f8fd08cfadbd404c9d2208a5e49a41e9b26851559",
+      "742e43835008414ae5ec182fb12e1294fcfb383e6c4723aa96dd233a2f9f62a4",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
