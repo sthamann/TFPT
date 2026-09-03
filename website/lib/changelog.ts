@@ -554,7 +554,156 @@ export const CHANGELOG: ChangelogEntry[] = [
         "c": [
           {
             "k": "t",
-            "v": "(4) Still red, not fixable from the repo:"
+            "v": "(4) Lean Proofs workflow."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Every run since the evening of 2026-08-03 ended in the runner's shutdown signal (exit 143): the default target fans out over the 4 cores of the 16 GB runner, and since 2026-08-10 it also pulls in the 17 generated "
+      },
+      {
+        "k": "c",
+        "v": "WallLadder/RungKz*"
+      },
+      {
+        "k": "t",
+        "v": " kernel-"
+      },
+      {
+        "k": "c",
+        "v": "decide"
+      },
+      {
+        "k": "t",
+        "v": " certificates (21–360 GB each; by the project's own README buildable only serially via "
+      },
+      {
+        "k": "c",
+        "v": "scripts/build_wall_ladder.sh"
+      },
+      {
+        "k": "t",
+        "v": "). The wall-dependent audit lines (six "
+      },
+      {
+        "k": "c",
+        "v": "#print axioms"
+      },
+      {
+        "k": "t",
+        "v": ", fifteen "
+      },
+      {
+        "k": "c",
+        "v": "#check"
+      },
+      {
+        "k": "t",
+        "v": ", three signature-lock "
+      },
+      {
+        "k": "c",
+        "v": "example"
+      },
+      {
+        "k": "t",
+        "v": "s) moved VERBATIM from "
+      },
+      {
+        "k": "c",
+        "v": "AxiomCheck"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "AuditCheck"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "AuditContract"
+      },
+      {
+        "k": "t",
+        "v": " into the new "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/WallLadderAudit.lean"
+      },
+      {
+        "k": "t",
+        "v": "; the new root "
+      },
+      {
+        "k": "c",
+        "v": "TfptCarrier/CIRoot.lean"
+      },
+      {
+        "k": "t",
+        "v": " imports everything except {"
+      },
+      {
+        "k": "c",
+        "v": "WallCertifiedHead"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "WallLadderAudit"
+      },
+      {
+        "k": "t",
+        "v": "} (drift-guarded by "
+      },
+      {
+        "k": "c",
+        "v": "audit.sh"
+      },
+      {
+        "k": "t",
+        "v": " check 8); CI now pre-builds the heavy modules serially (QuarticHalf needs "
+      },
+      {
+        "k": "c",
+        "v": "-M 15360"
+      },
+      {
+        "k": "t",
+        "v": ") and runs "
+      },
+      {
+        "k": "c",
+        "v": "scripts/audit.sh --core"
+      },
+      {
+        "k": "t",
+        "v": " – all eight audit checks pass (run 33727029128, 27 min). No proof content changed; the wall rungs stay certified off-CI ("
+      },
+      {
+        "k": "c",
+        "v": "AUDIT_TRANSCRIPT.txt"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(5) Still red, not fixable from the repo:"
           }
         ]
       },
