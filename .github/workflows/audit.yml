@@ -1,7 +1,18 @@
 name: Sync Audit
 
 # The single sync audit: papers <-> suite <-> ledger <-> changelog <-> website
-# must agree in both directions (verification/audit_sync.py, ends "AUDIT OK").
+# must agree in both directions (verification/audit_sync.py, ends "AUDIT OK"),
+# followed by the rh/ gate (rh/verification/run_rh.py --fast, ends
+# "RH SUITE: ALL CHECKS PASSED") -- exactly the local exit gate `bash build.sh audit`.
+#
+# Runner platform: macos-latest (Apple Silicon), deliberately. audit_sync.py is
+# stdlib-only and platform-neutral, but the rh/ gate re-executes SHA-pinned,
+# sealed campaign probes in --smoke mode whose control bars and "bit-near"
+# record anchors were frozen on the macOS/Apple-Silicon numerical stack
+# (Accelerate + macOS libm). On Linux (glibc + OpenBLAS, arm64 AND x86-64
+# alike) 19 of the 257 sealed probes miss those bars by round-off (measured
+# 2026-09-03: e.g. r257 G21 controls 9.9e-03 vs bar 1e-03). The sealed sources
+# must not be edited to fit a platform, so the gate runs where it was sealed.
 
 on:
   push:
@@ -14,8 +25,9 @@ permissions:
 
 jobs:
   audit:
-    name: papers <-> suite <-> ledger <-> changelog <-> website
-    runs-on: ubuntu-latest
+    name: papers <-> suite <-> ledger <-> changelog <-> website (+ rh/ gate)
+    runs-on: macos-latest
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
