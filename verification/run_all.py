@@ -17,6 +17,19 @@ exit gate stays the plain `python run_all.py`.
 import argparse
 import importlib
 
+import mpmath
+
+import tfpt_constants  # noqa: F401  (sets the suite's canonical mpmath precision)
+
+# The precision every module sees when run standalone: tfpt_constants sets it
+# at import.  Some modules lower mp.dps inside run() and leave it there, and a
+# few compute module-level mpmath constants at import time -- so a module's
+# result would otherwise depend on which modules ran before it (an interleaved
+# --shard exposed this: v93/v99 imported after v65 saw dps = 20 and missed a
+# 1e-30 check that passes standalone).  Restoring the canonical precision
+# before each module makes the suite order-independent.
+SUITE_MP_DPS = mpmath.mp.dps
+
 MODULES = [
     ("v1_e8_glue", "mu4 glue theorem"),
     ("v2_carrier_pascal", "carrier / Pascal closure"),
@@ -1412,6 +1425,7 @@ def main(argv=None):
         print()
     total_fail = 0
     for name, _desc in modules:
+        mpmath.mp.dps = SUITE_MP_DPS
         mod = importlib.import_module(name)
         total_fail += mod.run()
         print()

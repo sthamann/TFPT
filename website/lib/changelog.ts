@@ -441,7 +441,135 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " is the Lean Proofs workflow's job). "
+        "v": " is the Lean Proofs workflow's job). Fifth, exposed by the interleaving itself: "
+      },
+      {
+        "k": "c",
+        "v": "v93"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "v99"
+      },
+      {
+        "k": "t",
+        "v": " compute module-level mpmath constants (e.g. "
+      },
+      {
+        "k": "m",
+        "v": "(2/3)^6"
+      },
+      {
+        "k": "t",
+        "v": ") at IMPORT time with whatever global precision the previous module left behind ("
+      },
+      {
+        "k": "c",
+        "v": "tfpt_constants"
+      },
+      {
+        "k": "t",
+        "v": " sets "
+      },
+      {
+        "k": "m",
+        "v": "40"
+      },
+      {
+        "k": "t",
+        "v": " digits at import; "
+      },
+      {
+        "k": "c",
+        "v": "v65"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "v35"
+      },
+      {
+        "k": "t",
+        "v": " and others lower "
+      },
+      {
+        "k": "c",
+        "v": "mp.dps"
+      },
+      {
+        "k": "t",
+        "v": " to "
+      },
+      {
+        "k": "m",
+        "v": "20"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "30"
+      },
+      {
+        "k": "t",
+        "v": " inside "
+      },
+      {
+        "k": "c",
+        "v": "run()"
+      },
+      {
+        "k": "t",
+        "v": " and leave it there), so their "
+      },
+      {
+        "k": "m",
+        "v": "10^{-30}"
+      },
+      {
+        "k": "t",
+        "v": " checks passed in the historical full order by accident and failed in shard 1/3 (reproduced: "
+      },
+      {
+        "k": "c",
+        "v": "v65"
+      },
+      {
+        "k": "t",
+        "v": " then "
+      },
+      {
+        "k": "c",
+        "v": "v93"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " 1 FAIL). "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " now restores the canonical precision before every module, which makes the suite order-independent – every module sees exactly the state it sees standalone (where all 1012 are green). "
       },
       {
         "k": "b",

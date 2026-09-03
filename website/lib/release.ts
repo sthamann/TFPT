@@ -34,9 +34,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 5445580,
+    bytes: 5448075,
     sha256:
-      "f39b647604fb85d10a6fdcdcd41a1909c41dadcdead55b92b8c3f82738f03503",
+      "26822b59fa45e947ba35b57c3a7d38f363805a1cfc895bd5fa1d17abb6cb38aa",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -142,9 +142,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 3301749,
+    bytes: 3301661,
     sha256:
-      "3246c644e24a43dd71c88293869d9f8af2730c3fe228d54feed9d37593ab3529",
+      "c5db16d0a9c496324ff6b13f107be5a03c031d4e1e790cb4f24aaab912a79229",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },
