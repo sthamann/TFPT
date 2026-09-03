@@ -1,5 +1,20 @@
 name: Core Verification
 
+# The Python suite (verification/run_all.py, 1012 modules) on a hosted runner.
+#
+# Sharding: a hosted runner is ~2.3x slower than the reference machine and the
+# whole suite takes ~3 h there, so one job would hit GitHub's 6-hour limit.
+# `run_all.py --shard K/N` runs the K-th of N interleaved slices (index mod N);
+# the four slices partition the module list exactly, and the interleaving keeps
+# the heavy modules (v640..v680, v770..v790) spread evenly -- measured ~1.5 h
+# per shard on ubuntu-latest. The headline check `./verify` runs once per
+# Python version. The local exit gate stays the plain `python run_all.py`.
+#
+# Memory: ubuntu-latest has 16 GB. Two modules used to exceed that in a single
+# process (v553 by a platform-dependent singular solve, v570 by dense n x n pair
+# kernels); both are fixed at the source. New modules should stay well below
+# ~8 GB peak so a shard never dies with the runner's shutdown signal (exit 143).
+
 on:
   push:
     branches: [main]
@@ -10,9 +25,10 @@ permissions:
   contents: read
 
 jobs:
-  python-suite:
-    name: Python suite (${{ matrix.python-version }})
+  headline:
+    name: Headline ./verify (${{ matrix.python-version }})
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
@@ -31,7 +47,27 @@ jobs:
       - name: Headline check — ./verify (re-derive the core claims)
         run: ./verify
 
-      - name: Full suite — verification/run_all.py (ALL CHECKS PASSED)
+  python-suite:
+    name: Python suite (${{ matrix.python-version }}, shard ${{ matrix.shard }}/4)
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+        shard: [1, 2, 3, 4]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Full suite — verification/run_all.py --shard ${{ matrix.shard }}/4 (ALL CHECKS PASSED)
         run: |
           cd verification
-          python run_all.py
+          python -u run_all.py --shard ${{ matrix.shard }}/4

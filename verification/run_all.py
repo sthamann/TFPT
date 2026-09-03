@@ -1,10 +1,20 @@
 """Run the whole TFPT verification suite and report PASS/FAIL.
 
     $ cd verification && python run_all.py
+    $ cd verification && python run_all.py --shard 2/4   # CI: the 2nd of 4 slices
 
-Exit code 0 iff every claim in v1..v8 passes.  Each module is also runnable on
-its own (e.g. `python v1_e8_glue.py`).
+Exit code 0 iff every module passes.  Each module is also runnable on its own
+(e.g. `python v1_e8_glue.py`).
+
+`--shard K/N` runs only the modules whose list index is congruent to K-1
+modulo N (1-based K).  The interleaving spreads the heavy modules (they
+cluster in v640..v680 and v770..v790) evenly over the N slices without any
+hand-tuned boundaries, and the union of the N slices is exactly the full
+list.  GitHub's 6-hour job limit forces this for CI (the full suite takes
+~3 h on the reference machine and ~2.3x that on a hosted runner); the local
+exit gate stays the plain `python run_all.py`.
 """
+import argparse
 import importlib
 
 MODULES = [
@@ -1368,17 +1378,48 @@ MODULES = [
 ]
 
 
-def main():
+def parse_shard(spec):
+    """'K/N' -> (K, N) with 1 <= K <= N; raises argparse.ArgumentTypeError."""
+    try:
+        k_str, n_str = spec.split("/")
+        k, n = int(k_str), int(n_str)
+    except ValueError:
+        raise argparse.ArgumentTypeError(f"--shard expects K/N, got {spec!r}")
+    if n < 1 or not 1 <= k <= n:
+        raise argparse.ArgumentTypeError(f"--shard needs 1 <= K <= N, got {spec!r}")
+    return k, n
+
+
+def shard_modules(modules, k, n):
+    """The K-th of N interleaved slices (1-based): indices i with i % n == k-1."""
+    return [m for i, m in enumerate(modules) if i % n == k - 1]
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    ap.add_argument("--shard", type=parse_shard, metavar="K/N",
+                    help="run only the K-th of N interleaved slices of the "
+                         "module list (CI; the full run is the default)")
+    args = ap.parse_args(argv)
+    modules = MODULES
+    label = ""
+    if args.shard:
+        k, n = args.shard
+        modules = shard_modules(MODULES, k, n)
+        label = (f" (shard {k}/{n}: {len(modules)} of {len(MODULES)} modules, "
+                 f"{modules[0][0]} .. {modules[-1][0]})")
+        print(f"run_all shard {k}/{n}: {len(modules)} of {len(MODULES)} modules")
+        print()
     total_fail = 0
-    for name, _desc in MODULES:
+    for name, _desc in modules:
         mod = importlib.import_module(name)
         total_fail += mod.run()
         print()
     print("=" * 56)
     if total_fail == 0:
-        print("ALL CHECKS PASSED")
+        print("ALL CHECKS PASSED" + label)
     else:
-        print(f"{total_fail} CHECK(S) FAILED")
+        print(f"{total_fail} CHECK(S) FAILED" + label)
     return total_fail
 
 

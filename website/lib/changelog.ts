@@ -289,7 +289,111 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": "). "
+        "v": "). Third obstacle, structural: a hosted runner is "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "2.3"
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " slower than the reference machine (v570 reached after 28 min vs. 12 min), so the full suite ("
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "3 h here) cannot finish inside GitHub's 6-hour job limit; "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " gained "
+      },
+      {
+        "k": "c",
+        "v": "--shard K/N"
+      },
+      {
+        "k": "t",
+        "v": " (the "
+      },
+      {
+        "k": "m",
+        "v": "K"
+      },
+      {
+        "k": "t",
+        "v": "-th of "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " interleaved slices, index mod "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " – the slices partition the list exactly and the interleaving spreads the heavy modules v640–v680 / v770–v790 evenly; measured "
+      },
+      {
+        "k": "m",
+        "v": "\\le 38"
+      },
+      {
+        "k": "t",
+        "v": " min per slice of four on the reference machine) and "
+      },
+      {
+        "k": "c",
+        "v": "verify.yml"
+      },
+      {
+        "k": "t",
+        "v": " runs a "
+      },
+      {
+        "k": "m",
+        "v": "2\\times4"
+      },
+      {
+        "k": "t",
+        "v": " matrix (Python 3.11/3.12 "
+      },
+      {
+        "k": "m",
+        "v": "\\times"
+      },
+      {
+        "k": "t",
+        "v": " shard 1–4) with unbuffered stdout, so a crash is reported at the module that caused it (the buffered CI log had pointed at v568 while v570 was the culprit). The local exit gate stays the plain "
+      },
+      {
+        "k": "c",
+        "v": "python run_all.py"
+      },
+      {
+        "k": "t",
+        "v": ". "
       },
       {
         "k": "b",

@@ -74,7 +74,7 @@ production website build) in one command.
 | Item | What it is |
 |---|---|
 | `v1_*.py … v472_*.py` | 472 numbered claim checks (one file per claim cluster). |
-| `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. |
+| `run_all.py` | Runs the whole suite; ends `ALL CHECKS PASSED`. `--shard K/N` runs the K-th of N interleaved slices (what CI does to stay inside GitHub's 6-hour job limit; the slices partition the module list exactly). |
 | `verify_quick.py` | The fast headline check behind `./verify` (re-derives the core claims). |
 | `tfpt_constants.py` | Shared constants + the `check()` harness. |
 | `predictions_frozen.json` | **Blind-prediction registry** (frozen 2026-06-09), locked to formulas by `v84` on every run. |
