@@ -18,7 +18,7 @@ parameter-free compiler for the dimensionless skeleton of fundamental physics.
   <img alt="Version 5.4" src="https://img.shields.io/badge/version-5.4-6e56cf">
   <img alt="Predictions" src="https://img.shields.io/badge/predictions-27_falsifiable-db2777">
   <img alt="Engines" src="https://img.shields.io/badge/verification-Python_·_Wolfram_·_Lean-16a34a">
-  <a href="https://doi.org/10.5281/zenodo.20846087"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.20846087-3b82f6"></a>
+  <a href="https://doi.org/10.5281/zenodo.21128999"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21128999-3b82f6"></a>
   <a href="https://www.fixpoint-theory.com"><img alt="Website" src="https://img.shields.io/badge/website-fixpoint--theory.com-2563eb"></a>
 </p>
 
@@ -28,8 +28,8 @@ parameter-free compiler for the dimensionless skeleton of fundamental physics.
 
 </div>
 
-This repository contains the complete theory, **27 falsifiable predictions** (the core registry
-frozen before the data), three independent
+This repository contains the complete theory, **27 status-graded, falsifiable test surfaces**
+(the 16-entry core registry frozen before the data), three independent
 verification engines (Python + Wolfram + Lean), and a versioned status ledger that types every
 claim — including its **explicit open problems and falsification criteria**.
 
@@ -66,7 +66,7 @@ git clone https://github.com/sthamann/tfpt && cd tfpt
 pip install -r requirements.txt
 
 ./verify            # ~1s    : the core claim, re-derived from the axioms
-./verify --full     # ~4min  : the entire Python suite (ALL CHECKS PASSED)
+./verify --full     # ~4-5h  : the entire Python suite, 1012 modules (ALL CHECKS PASSED)
 ./verify --release  #         : documents + suite + website + sync audit
 ```
 
@@ -85,7 +85,7 @@ Not everything below has the same epistemic status, and saying so is the point:
 | `E8` closure | `(D5 ⊕ A3) + μ4 ≅ E8`, 240 roots, glue index 4 | **Exact** — machine-proven lattice identity `[E]` |
 | Number of generations | `N_fam = 3` | **Exact within the compiler** `[E]` |
 | Fine-structure constant | `α⁻¹ = 137.0359992` | **Exact numerical identity** — unique Ward root, interval-verified `[E]` (1.9σ from CODATA-2022) |
-| Physical origin of the seam | `SEAM.EQUIV.01` | **Open** — closed *modulo a cited theorem*, not proven end-to-end `[O]` |
+| Physical origin of the seam | `SEAM.EQUIV.01` | **Open** — the MMST route is closed *modulo a cited theorem* (`SEAM.EQUIV.MMST.01` `[C]`); the parent claim is not proven end-to-end `[O]` |
 | Cosmic birefringence | `β = φ₀/(4π) ≈ 0.2424°` | **Falsifiable prediction** — decided by CMB polarimetry `[X]` |
 
 Markers: `[E]` exact/machine-proven · `[C]` conditional · `[O]` open/axiom · `[X]` kill test. The
@@ -97,7 +97,7 @@ authoritative per-claim status is [`verification/status_ledger.csv`](verificatio
 ## What is genuinely open
 
 The discrete/algebraic compiler is closed (`[E]`). The honest residual is **three named interface
-problems**, not a diffuse list:
+problems** (the seam interface carries two routes), not a diffuse list:
 
 | Interface | Question | Status |
 |---|---|---|
@@ -168,7 +168,8 @@ just an archive.
 ├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,
 │                          # run_rh.py suite — gated by build.sh audit; no RH claim)
 ├── website/               # the public mirror (fixpoint-theory.com), kept byte-identical by the audit
-├── *.tex                  # the 9 active theory documents (see docs/THEORY.md)
+├── *.tex                  # the 12 published theory documents + the repo-only prime-front
+│                          # research documentation (see docs/THEORY.md)
 └── build.sh               # the build + sync pipeline (notes · gen · website · audit · release)
 ```
 
@@ -186,14 +187,15 @@ just an archive.
   author = {Hamann, Stefan and Rizzo, Alessandro},
   year   = {2026},
   note   = {Version 5.4},
-  doi    = {10.5281/zenodo.20846087},
-  url    = {https://doi.org/10.5281/zenodo.20846087}
+  doi    = {10.5281/zenodo.21128999},
+  url    = {https://doi.org/10.5281/zenodo.21128999}
 }
 ```
 
 - **Website (interactive):** <https://www.fixpoint-theory.com> — reading guide, compiler walkthrough,
   in-browser reproducer for every script.
-- **Archived deposit (DOI):** <https://doi.org/10.5281/zenodo.20846087> (Zenodo, v5.4).
+- **Archived deposit (DOI):** <https://doi.org/10.5281/zenodo.21128999> (Zenodo, v5.4);
+  concept DOI for all versions: <https://doi.org/10.5281/zenodo.18328333>.
 - **AI/agent context:** <https://www.fixpoint-theory.com/llms.txt>
 
 *Claim discipline: nothing in this repository is marked closed that is not machine-verified, and no

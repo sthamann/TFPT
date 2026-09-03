@@ -120,7 +120,7 @@ def main() -> int:
     print()
     dt = time.perf_counter() - t0
     if ok:
-        print(f"  {GREEN}{BOLD}\u2713 CORE CLAIMS VERIFIED{RESET} {DIM}in {dt:.2f}s \u00b7 23 falsifiable predictions \u00b7 full suite: ./verify --full{RESET}")
+        print(f"  {GREEN}{BOLD}\u2713 CORE CLAIMS VERIFIED{RESET} {DIM}in {dt:.2f}s \u00b7 27 falsifiable test surfaces \u00b7 full suite: ./verify --full{RESET}")
     else:
         print(f"  {CROSS} {BOLD}{total_fail} CHECK(S) FAILED{RESET} {DIM}\u2014 run ./verify --full for detail{RESET}")
     print(f"  {bar}")

@@ -10,7 +10,7 @@ needed), so every number is exact:
 
 | File | What it is |
 |---|---|
-| `00_hero.png` | The single share image: `ONE SEED → E8 hull → SM · α⁻¹ · gravity/cosmology → 23 predictions · 3 engines`. |
+| `00_hero.png` | The single share image: `ONE SEED → E8 hull → SM · α⁻¹ · gravity/cosmology → 27 falsifiable test surfaces · 3 engines`. |
 | `verify-demo.gif` | An animated terminal running `./verify`; the text mirrors [`verification/verify_quick.py`](../../verification/verify_quick.py), which is the source of truth and what CI runs. |
 
 Regenerate:

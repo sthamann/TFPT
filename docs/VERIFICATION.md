@@ -6,7 +6,7 @@
 
 ```bash
 ./verify            # ~1s   : re-derive the headline claims from the two axioms
-./verify --full     # ~4min : the entire Python suite (verification/run_all.py)
+./verify --full     # ~4-5h : the entire Python suite, 1012 modules (verification/run_all.py)
 ./verify --release  #        : full pipeline — docs + suite + website + sync audit
 ```
 

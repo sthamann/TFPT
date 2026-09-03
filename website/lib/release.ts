@@ -27,16 +27,16 @@ export interface ReleaseAsset {
 
 const COMMON = {
   version: "TFPT 5.4",
-  releaseDate: "2026-09-02",
+  releaseDate: "2026-09-03",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 5437598,
+    bytes: 5442039,
     sha256:
-      "e6e0d94ae50aa6fe4592db240334eebfd1986b986c39f81856ea82980124aa92",
+      "4b5f940a201012a85b81d5696ff3fb6627b2b42a67b817e239af7484f7637d85",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -142,9 +142,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 3292771,
+    bytes: 3296736,
     sha256:
-      "742e43835008414ae5ec182fb12e1294fcfb383e6c4723aa96dd233a2f9f62a4",
+      "75909770eef63d44c107f111a93c66ea0e18238c26a87e3132e07ccf8681d243",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

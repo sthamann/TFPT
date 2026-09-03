@@ -488,9 +488,17 @@ def build_window(A, m, c=None, M_win=None, c_ar=None, seed=0):
                       / float(mu[0]))
 
     def span_value(V):
+        # sup of the Dirichlet functional over span(V).  The frame may be
+        # rank-deficient BY CONSTRUCTION: the corrupted-column control below
+        # pairs t_1 with L_P t_1 = mu^P_1 t_1 (the KMS eigenpair), so its
+        # Gram is rank one (sigma_2/sigma_1 ~ 1e-25).  The minimal-norm
+        # pseudo-inverse evaluates the functional on the span itself; an LU
+        # `solve` there is platform-dependent (exact-zero pivot ->
+        # LinAlgError on x86-64 OpenBLAS, finite round-off on Accelerate).
         Mv = sym(V.T @ (A @ V))
         b = math.sqrt(mu[0]) * (V.T @ t1)
-        return float(b @ np.linalg.solve(Mv, b))
+        x = np.linalg.lstsq(Mv, b, rcond=None)[0]
+        return float(b @ x)
 
     g_col = cho_solve(fac, LP @ t1, check_finite=False)
     out["g_span"] = span_value(np.stack([t1, g_col], axis=1))

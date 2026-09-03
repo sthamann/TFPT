@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Generate the two top-of-README assets, on-brand and text-accurate:
 
-    00_hero.png        the single share image (ONE SEED -> E8 -> SM + 23 preds)
+    00_hero.png        the single share image (ONE SEED -> E8 -> SM + 27 test surfaces)
     verify-demo.gif    an animated terminal running `./verify`
 
 Both are drawn with Pillow (no external SVG renderer needed) so every number is
@@ -138,7 +138,7 @@ def build_hero():
 
     # footer strip
     d.line([(60, 556), (W - 60, 556)], fill=(40, 52, 74), width=1)
-    foot = "23 FALSIFIABLE PREDICTIONS     \u00b7     3 INDEPENDENT ENGINES: Python \u00b7 Wolfram \u00b7 Lean"
+    foot = "27 FALSIFIABLE TEST SURFACES     \u00b7     3 INDEPENDENT ENGINES: Python \u00b7 Wolfram \u00b7 Lean"
     d.text((cx, 588), foot, font=sans_bold(20), fill=TEXT, anchor="mm")
 
     img.convert("RGB").save(OUT / "00_hero.png")
@@ -177,7 +177,7 @@ LINES = [
     [("  Wolfram Engine ", "text"), ("............... ", "dim"), ("116/116", "white"), ("   \u2192 --wolfram", "dim")],
     [("  Lean 4 (no sorry/admit) ", "text"), (".... ", "dim"), ("proven", "white"), ("    \u2192 --lean", "dim")],
     [("", "dim")],
-    [("  ", "dim"), (CHK, "green"), (" CORE CLAIMS VERIFIED", "green"), ("  in 0.10s \u00b7 23 predictions \u00b7 --full", "dim")],
+    [("  ", "dim"), (CHK, "green"), (" CORE CLAIMS VERIFIED", "green"), ("  in 0.10s \u00b7 27 falsifiable test surfaces \u00b7 --full", "dim")],
 ]
 
 

@@ -42,6 +42,418 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-09-03",
+    "dateLabel": "2026-09-03 · CLII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(CI repair "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " README currency; NO theory change, NO marker moves, suite stays "
+      },
+      {
+        "k": "m",
+        "v": "1012"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(1) Core Verification workflow."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "v553_ exact_ form_ identities.py"
+      },
+      {
+        "k": "t",
+        "v": " was the sole blocker of the GitHub "
+      },
+      {
+        "k": "i",
+        "c": [
+          {
+            "k": "t",
+            "v": "Core Verification"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " workflow since 2026-07-29 (250 consecutive failures, identical traceback): the corrupted-Green-column control (S2.CTRL) pairs "
+      },
+      {
+        "k": "m",
+        "v": "t_1"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "L_Pt_1=\\mu^P_1t_1"
+      },
+      {
+        "k": "t",
+        "v": ", so its "
+      },
+      {
+        "k": "m",
+        "v": "2\\times2"
+      },
+      {
+        "k": "t",
+        "v": " Gram is rank one BY CONSTRUCTION ("
+      },
+      {
+        "k": "m",
+        "v": "\\sigma_2/\\sigma_1\\sim10^{-25}"
+      },
+      {
+        "k": "t",
+        "v": "); an LU "
+      },
+      {
+        "k": "c",
+        "v": "solve"
+      },
+      {
+        "k": "t",
+        "v": " on it is platform-dependent — finite round-off on macOS/Accelerate, exact-zero pivot "
+      },
+      {
+        "k": "m",
+        "v": "\\Rightarrow"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "LinAlgError"
+      },
+      {
+        "k": "t",
+        "v": " on x86-64 OpenBLAS. "
+      },
+      {
+        "k": "c",
+        "v": "span_value"
+      },
+      {
+        "k": "t",
+        "v": " now evaluates the Dirichlet functional on the span itself via the minimal-norm pseudo-inverse ("
+      },
+      {
+        "k": "c",
+        "v": "lstsq"
+      },
+      {
+        "k": "t",
+        "v": "); every printed number is unchanged (25/25; S2.SPAN "
+      },
+      {
+        "k": "m",
+        "v": "9.0{\\times}10^{-13}"
+      },
+      {
+        "k": "t",
+        "v": ", S2.SINES "
+      },
+      {
+        "k": "m",
+        "v": "1.42"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "4.8"
+      },
+      {
+        "k": "t",
+        "v": ", S2.CTRL "
+      },
+      {
+        "k": "m",
+        "v": "255"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "7.7{\\times}10^{3}"
+      },
+      {
+        "k": "t",
+        "v": "), verified under numpy 2.4.6 and 2.5.2. Consequence typed honestly: modules v554–v1019 had never run on GitHub CI before this fix. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(2) Sync Audit workflow."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "c",
+        "v": "build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " runs the rh/ gate ("
+      },
+      {
+        "k": "c",
+        "v": "run_rh.py --fast"
+      },
+      {
+        "k": "t",
+        "v": ") after "
+      },
+      {
+        "k": "c",
+        "v": "audit_sync.py"
+      },
+      {
+        "k": "t",
+        "v": "; the workflow installed no dependencies, so 257 sealed probes failed on "
+      },
+      {
+        "k": "c",
+        "v": "numpy"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "audit.yml"
+      },
+      {
+        "k": "t",
+        "v": " now installs "
+      },
+      {
+        "k": "c",
+        "v": "requirements.txt"
+      },
+      {
+        "k": "t",
+        "v": " plus "
+      },
+      {
+        "k": "c",
+        "v": "numba"
+      },
+      {
+        "k": "t",
+        "v": " (the SHA-pinned probe r445 gates on it, G00b). CI-equivalent local run: 257/257. "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(3) README currency."
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " Prediction count aligned with the website (27 status-graded falsifiable test surfaces, 16-entry frozen core registry) in the README prose, the hero image, the terminal GIF and the "
+      },
+      {
+        "k": "c",
+        "v": "./verify"
+      },
+      {
+        "k": "t",
+        "v": " footer (all said 23); the document count corrected to the 12 published documents "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " the repo-only "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "c",
+        "v": "docs/THEORY.md"
+      },
+      {
+        "k": "t",
+        "v": " list completed with S, N1, N2, P); the "
+      },
+      {
+        "k": "c",
+        "v": "--full"
+      },
+      {
+        "k": "t",
+        "v": " runtime corrected from “"
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "4 min” to "
+      },
+      {
+        "k": "m",
+        "v": "\\sim"
+      },
+      {
+        "k": "t",
+        "v": "4–5 h (README, "
+      },
+      {
+        "k": "c",
+        "v": "verify"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "docs/VERIFICATION.md"
+      },
+      {
+        "k": "t",
+        "v": "); the Zenodo DOI corrected to the v5.4 record "
+      },
+      {
+        "k": "c",
+        "v": "10.5281/zenodo.21128999"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " concept DOI "
+      },
+      {
+        "k": "c",
+        "v": "18328333"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "20846087"
+      },
+      {
+        "k": "t",
+        "v": " is the v5.3 record); the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.01"
+      },
+      {
+        "k": "t",
+        "v": " status-table row reworded per the 2026-07-22 route split (the “modulo a cited theorem” clause belongs to "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.EQUIV.MMST.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "b",
+        "c": [
+          {
+            "k": "t",
+            "v": "(4) Still red, not fixable from the repo:"
+          }
+        ]
+      },
+      {
+        "k": "t",
+        "v": " the "
+      },
+      {
+        "k": "c",
+        "v": "tfpt5-shadow"
+      },
+      {
+        "k": "t",
+        "v": " mirror sync fails with HTTP 403 — the "
+      },
+      {
+        "k": "c",
+        "v": "SHADOW_REPO_TOKEN"
+      },
+      {
+        "k": "t",
+        "v": " PAT (set 2026-06-12) expired after its last successful push on 2026-07-12 and must be re-issued."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-09-02",
     "dateLabel": "2026-09-02 · CLI",
     "heading": [

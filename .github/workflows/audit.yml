@@ -22,6 +22,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+          cache: pip
+
+      # audit_sync.py itself is stdlib-only, but `build.sh audit` also runs the
+      # rh/ gate (rh/verification/run_rh.py --fast), whose sealed probes import
+      # numpy/mpmath/scipy/sympy from the same requirements file as the suite.
+      # numba is the one extra: the sealed probe r445 (deep_builder_probe.py,
+      # SHA-pinned in rh/INVENTORY.json) gates on its presence (G00b-numba).
+      - name: Install dependencies
+        run: pip install -r requirements.txt numba
 
       - name: Run the sync audit
         run: bash build.sh audit
