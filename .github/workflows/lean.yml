@@ -52,18 +52,26 @@ jobs:
         run: lake exe cache get
 
       # Serialise the heavy kernel-`decide` modules so two of them cannot
-      # share the 16 GB runner. Times from GHA logs: QuarticHalf 335 s
-      # (run 30814106167), GaussianCodeBridge 140–321 s (30814106167 /
-      # 30841220972), ProjectiveHamming 195–207 s (31476161075 /
-      # 32169712753), HammingCode 92–102 s (same). One `lake build`
-      # target per invocation; Lake 5 has no `-j`.
+      # share the 16 GB runner. Times from GHA logs: HammingCode 28–102 s,
+      # GaussianCodeBridge 148–321 s, ProjectiveHamming 195–207 s all fit
+      # in the lakefile default -M 12288. QuarticHalf does not: run
+      # 33725762055 died after 431 s with lean::memory_exception at
+      # 'interpreter' under -M 12288; the last green 16 GB run
+      # (30814106167, 335 s) predates that ceiling, so QuarticHalf needs
+      # a cap between 12 GB and 16 GB. Raise it only with `--reconfigure`
+      # (Lake caches the elaborated lakefile; -K is ignored otherwise),
+      # then restore the default before the parallel CIRoot build.
       - name: Pre-build the heavy modules serially
         run: |
-          for mod in HammingCode GaussianCodeBridge QuarticHalf ProjectiveHamming; do
+          for mod in HammingCode GaussianCodeBridge ProjectiveHamming; do
             echo "::group::lake build TfptCarrier.${mod}"
             lake build "TfptCarrier.${mod}"
             echo "::endgroup::"
           done
+          echo "::group::lake build TfptCarrier.QuarticHalf (-M 15360)"
+          lake build --reconfigure -K leanMemoryMb=15360 TfptCarrier.QuarticHalf
+          echo "::endgroup::"
+          lake build --reconfigure TfptCarrier.HammingCode
 
       - name: Audit gate (core target)
         run: bash scripts/audit.sh --core
