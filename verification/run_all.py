@@ -16,6 +16,7 @@ exit gate stays the plain `python run_all.py`.
 """
 import argparse
 import importlib
+import sys
 
 import mpmath
 
@@ -1414,6 +1415,11 @@ def main(argv=None):
                     help="run only the K-th of N interleaved slices of the "
                          "module list (CI; the full run is the default)")
     args = ap.parse_args(argv)
+    # Several modules execute their frozen probe sources in-process, and those
+    # probes parse sys.argv themselves (argparse, `--smoke`); they must see the
+    # same clean argv as under the plain `python run_all.py`, so the runner's
+    # own options are removed once they have been read.
+    sys.argv = sys.argv[:1]
     modules = MODULES
     label = ""
     if args.shard:

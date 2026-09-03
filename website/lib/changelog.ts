@@ -569,7 +569,159 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " now restores the canonical precision before every module, which makes the suite order-independent – every module sees exactly the state it sees standalone (where all 1012 are green). "
+        "v": " now restores the canonical precision before every module, which makes the suite order-independent – every module sees exactly the state it sees standalone (where all 1012 are green). Sixth, two environment defects from the first sharded pass: the runner's own "
+      },
+      {
+        "k": "c",
+        "v": "--shard"
+      },
+      {
+        "k": "t",
+        "v": " argument leaked into the "
+      },
+      {
+        "k": "c",
+        "v": "sys.argv"
+      },
+      {
+        "k": "t",
+        "v": " that the in-process embedded probes parse (v955–v959 and the other round-31-convention modules: “unrecognized arguments”, exit 2, pattern gates red) – "
+      },
+      {
+        "k": "c",
+        "v": "run_all.py"
+      },
+      {
+        "k": "t",
+        "v": " now scrubs its options from "
+      },
+      {
+        "k": "c",
+        "v": "sys.argv"
+      },
+      {
+        "k": "t",
+        "v": " after parsing; and "
+      },
+      {
+        "k": "c",
+        "v": "v777"
+      },
+      {
+        "k": "t",
+        "v": " imports "
+      },
+      {
+        "k": "c",
+        "v": "yaml"
+      },
+      {
+        "k": "t",
+        "v": " for its preregistration file, which "
+      },
+      {
+        "k": "c",
+        "v": "requirements.txt"
+      },
+      {
+        "k": "t",
+        "v": " did not list ("
+      },
+      {
+        "k": "c",
+        "v": "pyyaml"
+      },
+      {
+        "k": "t",
+        "v": " added). What REMAINS red on Linux after all of this is typed, not patched: four modules whose frozen bars or pins sit at platform round-off level – "
+      },
+      {
+        "k": "c",
+        "v": "v916"
+      },
+      {
+        "k": "t",
+        "v": " C1 pins the SHA of the float certificate vector (k, norm and "
+      },
+      {
+        "k": "m",
+        "v": "\\lambda_{\\min}"
+      },
+      {
+        "k": "t",
+        "v": " reproduce to every printed digit, the byte hash does not), "
+      },
+      {
+        "k": "c",
+        "v": "v966"
+      },
+      {
+        "k": "t",
+        "v": "/"
+      },
+      {
+        "k": "c",
+        "v": "v967"
+      },
+      {
+        "k": "t",
+        "v": " embed sealed probes whose CONTROL-world deviation is "
+      },
+      {
+        "k": "m",
+        "v": "1.3{\\times}10^{-5}"
+      },
+      {
+        "k": "t",
+        "v": " against a "
+      },
+      {
+        "k": "m",
+        "v": "10^{-6}"
+      },
+      {
+        "k": "t",
+        "v": " bar (the main identities sit at "
+      },
+      {
+        "k": "m",
+        "v": "10^{-16}"
+      },
+      {
+        "k": "t",
+        "v": "), and "
+      },
+      {
+        "k": "c",
+        "v": "v990"
+      },
+      {
+        "k": "t",
+        "v": " W(c-frozen) has its control at "
+      },
+      {
+        "k": "m",
+        "v": "1.1"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "2.2{\\times}10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": " against a "
+      },
+      {
+        "k": "m",
+        "v": "10^{-8}"
+      },
+      {
+        "k": "t",
+        "v": " tolerance. Widening a sealed bar is a re-seal and is left to the owner; the reference platform for those pins is the Apple-Silicon/Accelerate stack. "
       },
       {
         "k": "b",
