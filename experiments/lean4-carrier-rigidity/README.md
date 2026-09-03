@@ -267,13 +267,15 @@ Boundary Polarization*).
 lean4-carrier-rigidity/
 ├── lean-toolchain                 # pinned: leanprover/lean4:v4.29.1
 ├── lakefile.lean                  # build config, Mathlib v4.29.1
-├── TfptCarrier.lean               # top-level entry, re-exports
+├── TfptCarrier.lean               # full root (includes wall rungs)
 └── TfptCarrier/
     ├── Polarization.lean          # Layer 1: sixY² − sixY − 6 = 0
     ├── Rigidity.lean              # Layer 3: (q₋, q₊) = (-2, 3)
     ├── Hypercharge.lean           # Layer 2: 5×5 model + tr Y = 0
     ├── Sanity.lean                # #eval smoke tests
-    └── AxiomCheck.lean            # #print axioms for the four headlines
+    ├── AxiomCheck.lean            # #print axioms (non-wall headlines)
+    ├── CIRoot.lean                # CI / 16 GB root (no wall rungs)
+    └── WallLadderAudit.lean       # wall #print axioms / #check / examples (off-CI)
 ```
 
 ## How to build
@@ -292,28 +294,31 @@ From this directory:
 ```bash
 lake update                # fetch Mathlib v4.29.1 and run cache hooks
 lake exe cache get         # download pre-built Mathlib oleans (~3 min)
-lake build                 # compiles everything (~30 s after cache get)
+lake build TfptCarrier.CIRoot   # CI / 16 GB: every non-wall module
+# lake build                 # full target — needs wall-rung oleans, see §4
 ```
 
 The first `lake update` clones Mathlib (~500 MB). The cache step
-downloads ~8 200 pre-built `.olean` files (~1 GB) so the actual
-build of *this* project takes a few seconds.
+downloads ~8 200 pre-built `.olean` files (~1 GB). GitHub Actions
+runs `scripts/audit.sh --core`, which builds `TfptCarrier.CIRoot`
+rather than the default `lake build` (the latter fans out over the
+generated wall rungs and is SIGTERM/OOM on a 16 GB runner).
 
 ### 3. Re-check just the proofs
 
 ```bash
-lake build TfptCarrier
+lake build TfptCarrier.CIRoot   # CI core (no wall rungs)
+./scripts/audit.sh --core       # same target + the audit gate
+lake build TfptCarrier          # full root, after §4
 ```
 
-A successful build prints:
-
-```
-Build completed successfully (1231 jobs).
-```
-
-plus the `#eval` outputs from `Sanity.lean` and the axiom listings
-from `AxiomCheck.lean`. Any `sorry`, `admit`, kernel error, or
-non-standard axiom dependency will be flagged.
+A successful core build elaborates every non-wall module plus
+`AxiomCheck` / `AuditCheck` / `AuditContract`. The `#eval` outputs
+from `Sanity.lean` and the axiom listings from `AxiomCheck.lean`
+appear in the lake log. Any `sorry`, `admit`, kernel error, or
+non-standard axiom dependency will be flagged. Wall-rung `#print axioms`
+live in `WallLadderAudit.lean` and are checked only by a full
+`./scripts/audit.sh`.
 
 ### 4. Rebuild the generated wall-ladder rungs (high memory)
 
@@ -326,7 +331,10 @@ default per-process ceiling (`leanMemoryMb = 12288`, handed to Lean as
 `lake build` would otherwise start every rung at once and exhaust
 physical RAM. The default is a safety valve, not a build recipe — the
 rungs **fail at 12 GB by design**, which is why a fresh clone cannot
-pass `scripts/audit.sh` until the rung `.olean` files exist.
+pass a *full* `scripts/audit.sh` until the rung `.olean` files exist.
+GitHub Actions never builds them: it uses `TfptCarrier.CIRoot` /
+`scripts/audit.sh --core`. `WallCertifiedHead` and `WallLadderAudit`
+stay off-CI with the rungs.
 
 Build them with a raised ceiling and bounded concurrency:
 
@@ -369,7 +377,9 @@ uncapped fan-out on this project has already exhausted 512 GB of RAM and
 tripped the WindowServer watchdog, which is why the low default ceiling
 exists. On a machine that cannot host the largest rungs, build what fits
 and report the rungs you could not build; a partial rung set means
-`scripts/audit.sh` check (1) is *not* satisfied.
+full `scripts/audit.sh` check (1) is *not* satisfied. The CI core
+target (`./scripts/audit.sh --core`) does not require any rung
+`.olean`.
 
 `-M` is passed via `weakLeanArgs`, i.e. it is not part of Lake's build
 trace: an `.olean` produced with a raised ceiling is accepted unchanged
@@ -438,9 +448,9 @@ domain-specific axioms. The full chain
 
 ## Next steps
 
-1. Add a GitHub Actions workflow that runs `lake build` and reports
-   the number of `sorry`s and `axiom`s introduced (should be zero
-   outside Lean's core).
+1. GitHub Actions (`lean.yml`) already runs `scripts/audit.sh --core`
+   on `TfptCarrier.CIRoot`. The full wall-rung audit stays off-CI
+   (`scripts/build_wall_ladder.sh`, `AUDIT_TRANSCRIPT.txt`).
 2. Add a `Tests/Sanity.lean` file with `#eval` checks that print
    the diagonal of `Y` and the value of `trace Y` so that humans can
    read the certificate without running Lean themselves.

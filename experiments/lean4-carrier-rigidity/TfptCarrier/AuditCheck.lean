@@ -41,7 +41,6 @@ import TfptCarrier.CarrierData
 import TfptCarrier.Hypercharge
 import TfptCarrier.GlueUniqueness
 import TfptCarrier.CoxeterPrime2
-import TfptCarrier.WallCertifiedHead
 import TfptCarrier.CofinalPredefinition
 
 -- Layer 1: Polarization (algebraic core)
@@ -197,23 +196,6 @@ import TfptCarrier.CofinalPredefinition
 #check @TFPT.Carrier.CoxeterPrime2.no_prime2_only_attractor
 #check @TFPT.Carrier.CoxeterPrime2.parity_eigenvalue_remembers_start
 #check @TFPT.Carrier.CoxeterPrime2.seam_rate_has_attractor
-
--- Certified wall finite head (PRIME.PORT.BALLLADDER.01 Lean seam; v897)
-#check @TfptCarrier.WallLadder.rungOk
-#check @TfptCarrier.WallLadder.posSemidef_of_diagDominant
-#check @TfptCarrier.WallLadder.posDef_of_rungOk
-#check @TfptCarrier.WallLadder.EnclosureBridge
-#check @TfptCarrier.WallLadder.HeadEnclosure
-#check @TfptCarrier.WallLadder.TailPositivity
-#check @TfptCarrier.WallLadder.posSemidef_of_bridge
-#check @TfptCarrier.WallLadder.head_psd_of_enclosure
-#check @TfptCarrier.WallLadder.cofinalHypothesis_of_head_tail
-#check @TfptCarrier.WallLadder.wall_cofinal_weil
-#check @TfptCarrier.WallLadder.census
-#check @TfptCarrier.WallLadder.checkedData
-#check @TfptCarrier.WallLadder.checked_is_census_prefix
-#check @TfptCarrier.WallLadder.certified_head
-#check @TfptCarrier.WallLadder.wall_certified_head_cofinal_weil
 
 -- Cofinal PREDEFINED/noninterference hardening
 #check @TfptCarrier.CofinalPredefinition.NoninterferenceContract

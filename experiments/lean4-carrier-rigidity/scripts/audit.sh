@@ -5,18 +5,26 @@
 #
 # Refuses to pass unless every load-bearing invariant is satisfied:
 #
-#   (1) `lake build` succeeds.
+#   (1) `lake build` succeeds (full mode) / `lake build TfptCarrier.CIRoot`
+#       (`--core`). The core target is every non-wall module plus the
+#       audit modules; it does not elaborate WallCertifiedHead,
+#       WallLadderAudit, or WallLadder/RungKz*.
 #   (2) No `sorry` or `admit` appears in TfptCarrier/.
 #   (3) No domain-specific axiom or `constant` declaration is used.
 #   (4) No `unsafe`, `opaque`, or `partial` declaration is used.
 #   (5) `#print axioms` on every headline theorem returns *only*
 #       the three standard Lean axioms (propext, Classical.choice,
-#       Quot.sound).
+#       Quot.sound). Source: `AxiomCheck.lean` in every non-quick
+#       mode; full mode also inspects `WallLadderAudit.lean`.
 #   (6) Every headline theorem name in `AuditCheck.lean` typechecks
 #       via `#check` (i.e. survives Lean elaboration, not just grep).
+#   (7) `AuditContract.lean` signature-locks headline theorem types.
+#   (8) CI root consistency: imports of `CIRoot.lean` equal imports of
+#       `TfptCarrier.lean` minus {WallCertifiedHead, WallLadderAudit}.
 #
 # Usage:
-#   ./scripts/audit.sh            # full audit
+#   ./scripts/audit.sh            # full audit (includes wall rungs)
+#   ./scripts/audit.sh --core     # CI core: TfptCarrier.CIRoot + audit gate
 #   ./scripts/audit.sh --quick    # static checks only (no lake build)
 #
 # Exit codes:
@@ -29,9 +37,18 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
 QUICK=0
-if [[ "${1:-}" == "--quick" ]]; then
-    QUICK=1
-fi
+CORE=0
+for arg in "$@"; do
+    case "$arg" in
+        --quick) QUICK=1 ;;
+        --core)  CORE=1 ;;
+        *)
+            echo "unknown option: $arg" >&2
+            echo "usage: $0 [--core] [--quick]" >&2
+            exit 1
+            ;;
+    esac
+done
 
 FAIL=0
 log_pass() { echo "  [PASS] $1"; }
@@ -45,10 +62,18 @@ export PATH="$HOME/.elan/bin:$PATH"
 # ----------------------------------------------------------------
 section "Build"
 if [[ "$QUICK" == "0" ]]; then
-    if lake build > /tmp/tfpt-lake-build.log 2>&1; then
-        log_pass "lake build succeeded"
+    if [[ "$CORE" == "1" ]]; then
+        if lake build TfptCarrier.CIRoot > /tmp/tfpt-lake-build.log 2>&1; then
+            log_pass "lake build TfptCarrier.CIRoot succeeded"
+        else
+            log_fail "lake build TfptCarrier.CIRoot failed; see /tmp/tfpt-lake-build.log"
+        fi
     else
-        log_fail "lake build failed; see /tmp/tfpt-lake-build.log"
+        if lake build > /tmp/tfpt-lake-build.log 2>&1; then
+            log_pass "lake build succeeded"
+        else
+            log_fail "lake build failed; see /tmp/tfpt-lake-build.log"
+        fi
     fi
 else
     echo "  [SKIP] lake build (--quick mode)"
@@ -183,19 +208,34 @@ if [[ "$QUICK" == "0" ]]; then
     if [[ -z "$AXIOM_LOG" ]]; then
         log_fail "no #print axioms output captured; AxiomCheck.lean may have regressed"
     else
-        BAD_AXIOM=$(echo "$AXIOM_LOG" \
-            | grep -oE '\[[^]]*\]' \
-            | tr ',' '\n' \
-            | tr -d '[] ' \
-            | sort -u \
-            | grep -vE '^(propext|Classical\.choice|Quot\.sound)$' \
-            | grep -vE '^$' \
-            || true)
-        if [[ -z "$BAD_AXIOM" ]]; then
-            log_pass "all theorems use only [propext, Classical.choice, Quot.sound]"
-        else
-            log_fail "unexpected axiom dependencies:"
-            echo "$BAD_AXIOM" >&2
+        if [[ "$CORE" == "0" ]]; then
+            WALL_AXIOM_LOG=$(grep -E "^info: TfptCarrier/WallLadderAudit" /tmp/tfpt-lake-build.log 2>/dev/null || echo "")
+            if [[ -z "$WALL_AXIOM_LOG" ]]; then
+                log_fail "no #print axioms output captured; WallLadderAudit.lean may have regressed"
+            else
+                AXIOM_LOG="${AXIOM_LOG}
+${WALL_AXIOM_LOG}"
+            fi
+        fi
+        if [[ "$CORE" == "1" || -n "${WALL_AXIOM_LOG:-}" ]]; then
+            BAD_AXIOM=$(echo "$AXIOM_LOG" \
+                | grep -oE '\[[^]]*\]' \
+                | tr ',' '\n' \
+                | tr -d '[] ' \
+                | sort -u \
+                | grep -vE '^(propext|Classical\.choice|Quot\.sound)$' \
+                | grep -vE '^$' \
+                || true)
+            if [[ -z "$BAD_AXIOM" ]]; then
+                if [[ "$CORE" == "0" ]]; then
+                    log_pass "all theorems (AxiomCheck + WallLadderAudit) use only [propext, Classical.choice, Quot.sound]"
+                else
+                    log_pass "all theorems use only [propext, Classical.choice, Quot.sound]"
+                fi
+            else
+                log_fail "unexpected axiom dependencies:"
+                echo "$BAD_AXIOM" >&2
+            fi
         fi
     fi
 else
@@ -238,6 +278,48 @@ if [[ "$QUICK" == "0" ]]; then
     fi
 else
     echo "  [SKIP] AuditContract.lean elaboration (--quick mode)"
+fi
+
+# ----------------------------------------------------------------
+# (8) CI root import set cannot drift from the full root
+# ----------------------------------------------------------------
+# TfptCarrier.CIRoot is the 16 GB / GitHub Actions target. Its imports
+# must stay exactly the full TfptCarrier.lean import set minus the two
+# wall-rung modules. Runs in every mode, including --quick.
+section "CI root consistency"
+CIROOT_CHECK=$(python3 - <<'PY'
+import re, sys
+from pathlib import Path
+
+def imports(path):
+    text = Path(path).read_text(encoding="utf-8")
+    return set(re.findall(r"(?m)^import (TfptCarrier\S+)", text))
+
+root = Path("TfptCarrier.lean")
+ci = Path("TfptCarrier/CIRoot.lean")
+if not root.is_file() or not ci.is_file():
+    print("missing TfptCarrier.lean or TfptCarrier/CIRoot.lean")
+    sys.exit(1)
+excluded = {"TfptCarrier.WallCertifiedHead", "TfptCarrier.WallLadderAudit"}
+want = imports(root) - excluded
+got = imports(ci)
+if got != want:
+    missing = sorted(want - got)
+    extra = sorted(got - want)
+    if missing:
+        print("CIRoot missing imports: " + ", ".join(missing))
+    if extra:
+        print("CIRoot extra imports: " + ", ".join(extra))
+    sys.exit(1)
+print("ok")
+PY
+)
+CIROOT_RC=$?
+if [[ "$CIROOT_RC" -eq 0 ]]; then
+    log_pass "CIRoot.lean imports = TfptCarrier.lean minus {WallCertifiedHead, WallLadderAudit}"
+else
+    log_fail "CIRoot.lean import set drifted from TfptCarrier.lean:"
+    printf '%s\n' "$CIROOT_CHECK" >&2
 fi
 
 # ----------------------------------------------------------------
