@@ -79,6 +79,7 @@ BAR_NEGMASS = 1.0        # witness-kill: negative pair mass / det S
 KERNEL_STRIDE = 6        # pair-kernel subset (every 6th window + reference)
 REF_H = 540
 SCRAMBLE_SEED = 1
+PAIR_KERNEL_BLOCK = 1024  # rows of the n x n pair kernel held at once (see below)
 
 
 def check(name, ok):
@@ -88,6 +89,38 @@ def check(name, ok):
     else:
         N_FAIL += 1
     print("[%s] %s" % ("PASS" if ok else "FAIL", name))
+
+
+def pair_kernel_stats(lamw, a, b, c, block=PAIR_KERNEL_BLOCK):
+    """The three pair-level readouts of section 4 for the polarisation kernel
+    K = (a b^T + b a^T)/2 - c c^T and its mass-weighted form W = (lam lam^T) o K:
+    the Cauchy-Binet quadratic form lam^T K lam, the negative pair mass
+    -sum(W[W < 0]) and the best single pair max_{i<j} W_ij.
+
+    Evaluated in row blocks: K and W are never materialised as n x n arrays.
+    The kernel subset reaches n = 26091 atoms, where one dense n x n double
+    array is 5.4 GB and the original outer-product formulation peaked above
+    30 GB -- more than the 16 GB CI runner holds (OOM, exit 143).  Entrywise
+    the blocks are the same double-precision numbers as the dense arrays (K
+    is exactly symmetric, so (K + K^T)/2 == K bitwise); only the summation
+    order of the two accumulated sums differs, at the 1e-16 level.
+    """
+    n = len(lamw)
+    quad = 0.0
+    neg_mass = 0.0
+    best_pair = -np.inf
+    cols = np.arange(n)[None, :]
+    for i0 in range(0, n, block):
+        i1 = min(n, i0 + block)
+        K_blk = (0.5 * (np.outer(a[i0:i1], b) + np.outer(b[i0:i1], a))
+                 - np.outer(c[i0:i1], c))
+        quad += float(lamw[i0:i1] @ (K_blk @ lamw))
+        W_blk = np.outer(lamw[i0:i1], lamw) * K_blk
+        neg_mass += float(-W_blk[W_blk < 0].sum())
+        upper = W_blk[cols > np.arange(i0, i1)[:, None]]
+        if upper.size:
+            best_pair = max(best_pair, float(upper.max()))
+    return quad, neg_mass, best_pair
 
 
 def run():
@@ -191,14 +224,11 @@ def run():
         r = d["r"]
         lamw, Xn = r["lam"], r["Xn"]
         a, b, c = Xn[:, 0], Xn[:, 1], Xn[:, 2]
-        K = 0.5 * (np.outer(a, b) + np.outer(b, a)) - np.outer(c, c)
-        detS_cb = float(lamw @ K @ lamw)
+        detS_cb, neg_mass, best_pair = pair_kernel_stats(lamw, a, b, c)
         worst_cb = max(worst_cb,
                        abs(detS_cb / (d["P"] * d["detB"]) - 1.0))
-        W = np.outer(lamw, lamw) * 0.5 * (K + K.T)
-        neg_fracs.append(float(-W[W < 0].sum() / abs(detS_cb)))
-        iu = np.triu_indices(len(lamw), 1)
-        best_pairs.append(float((2 * W[iu]).max()) / d["detB"])
+        neg_fracs.append(neg_mass / abs(detS_cb))
+        best_pairs.append(2 * best_pair / d["detB"])
     neg_fracs = np.array(neg_fracs)
     best_pairs = np.array(best_pairs)
     check("4a. CAUCHY-BINET [E per window]: det S = lam^T K lam with K "

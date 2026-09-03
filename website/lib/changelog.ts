@@ -209,7 +209,87 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": "), verified under numpy 2.4.6 and 2.5.2. Consequence typed honestly: modules v554–v1019 had never run on GitHub CI before this fix. "
+        "v": "), verified under numpy 2.4.6 and 2.5.2. Consequence typed honestly: modules v554–v1019 had never run on GitHub CI before this fix – and the first pass beyond v553 exposed the second blocker: "
+      },
+      {
+        "k": "c",
+        "v": "v570_ separation_ floor.py"
+      },
+      {
+        "k": "t",
+        "v": " section 4 materialised the "
+      },
+      {
+        "k": "m",
+        "v": "n\\times n"
+      },
+      {
+        "k": "t",
+        "v": " pair kernel by outer products ("
+      },
+      {
+        "k": "m",
+        "v": "n"
+      },
+      {
+        "k": "t",
+        "v": " up to "
+      },
+      {
+        "k": "m",
+        "v": "26091"
+      },
+      {
+        "k": "t",
+        "v": " atoms on the kernel subset: "
+      },
+      {
+        "k": "m",
+        "v": "5.4"
+      },
+      {
+        "k": "t",
+        "v": " GB per dense temporary, "
+      },
+      {
+        "k": "m",
+        "v": ">30"
+      },
+      {
+        "k": "t",
+        "v": " GB peak), which OOM-killed the 16 GB runner (exit 143; reproduced in a 14 GB Linux container). The three pair-level readouts (Cauchy–Binet form, negative pair mass, best single pair) are now evaluated in row blocks ("
+      },
+      {
+        "k": "c",
+        "v": "pair_kernel_stats"
+      },
+      {
+        "k": "t",
+        "v": "); peak "
+      },
+      {
+        "k": "m",
+        "v": "32.7\\to3.5"
+      },
+      {
+        "k": "t",
+        "v": " GB, 8/8 unchanged, only the Cauchy–Binet noise figure moves "
+      },
+      {
+        "k": "m",
+        "v": "4.5{\\times}10^{-14}\\to4.1{\\times}10^{-14}"
+      },
+      {
+        "k": "t",
+        "v": " (bar "
+      },
+      {
+        "k": "m",
+        "v": "10^{-9}"
+      },
+      {
+        "k": "t",
+        "v": "). "
       },
       {
         "k": "b",
@@ -254,23 +334,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": ". "
-      },
-      {
-        "k": "c",
-        "v": "audit.yml"
-      },
-      {
-        "k": "t",
-        "v": " now installs "
-      },
-      {
-        "k": "c",
-        "v": "requirements.txt"
-      },
-      {
-        "k": "t",
-        "v": " plus "
+        "v": ". With the dependencies installed (incl. "
       },
       {
         "k": "c",
@@ -278,7 +342,71 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": " (the SHA-pinned probe r445 gates on it, G00b). CI-equivalent local run: 257/257. "
+        "v": ", on which the SHA-pinned probe r445 gates) the gate still failed on GitHub, and those failures are not repairable from the repository: the sealed probes are bound to the reference machine – r464/r475/r487 read the git-ignored "
+      },
+      {
+        "k": "c",
+        "v": "rh/lean/.lake"
+      },
+      {
+        "k": "t",
+        "v": " mathlib cache, and on Linux (glibc "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " OpenBLAS, arm64 and x86-64 alike) 19/257 sealed smoke gates miss their frozen control bars by round-off (e.g. r257 G21: controls "
+      },
+      {
+        "k": "m",
+        "v": "9.9{\\times}10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": " vs bar "
+      },
+      {
+        "k": "m",
+        "v": "10^{-3}"
+      },
+      {
+        "k": "t",
+        "v": "), on "
+      },
+      {
+        "k": "c",
+        "v": "macos-latest"
+      },
+      {
+        "k": "t",
+        "v": " still 6/257. Sealed sources are not edited to fit a platform; "
+      },
+      {
+        "k": "c",
+        "v": "audit.yml"
+      },
+      {
+        "k": "t",
+        "v": " therefore runs exactly what the badge names – "
+      },
+      {
+        "k": "c",
+        "v": "audit_sync.py"
+      },
+      {
+        "k": "t",
+        "v": ", platform-neutral, green – and documents that the rh/ gate stays in the local "
+      },
+      {
+        "k": "c",
+        "v": "bash build.sh audit"
+      },
+      {
+        "k": "t",
+        "v": " on the reference machine (a reproducibility debt now typed, not hidden). "
       },
       {
         "k": "b",
