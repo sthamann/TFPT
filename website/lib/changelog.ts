@@ -393,7 +393,55 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "t",
-        "v": ". "
+        "v": ". Fourth, in the first sharded pass: "
+      },
+      {
+        "k": "c",
+        "v": "v649_ discipline_ audit.py"
+      },
+      {
+        "k": "t",
+        "v": " D6.1 required the git-ignored local "
+      },
+      {
+        "k": "c",
+        "v": ".lake/build"
+      },
+      {
+        "k": "t",
+        "v": " directory among its “build artefacts” – a reference-machine fact, absent from every fresh checkout; the check now requires the COMMITTED build descriptors ("
+      },
+      {
+        "k": "c",
+        "v": "lakefile.lean"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "lake-manifest.json"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "lean-toolchain"
+      },
+      {
+        "k": "t",
+        "v": ") and reports the local build directory informationally (18/18; the fresh "
+      },
+      {
+        "k": "c",
+        "v": "lake build"
+      },
+      {
+        "k": "t",
+        "v": " is the Lean Proofs workflow's job). "
       },
       {
         "k": "b",

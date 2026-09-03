@@ -463,11 +463,16 @@ def lean_census():
                   "include uncommitted files)")
         d = os.path.join(LEAN_DIR, "TfptCarrier")
         names = sorted(f for f in os.listdir(d) if f.endswith(".lean"))
+    # The committed build descriptors are part of the claim; the local
+    # `.lake/build` directory is NOT (git-ignored, absent from every fresh
+    # checkout and from CI) -- it is reported, never required.  The fresh
+    # `lake build` itself is the Lean Proofs workflow's job.
     artefacts = {a: os.path.exists(os.path.join(LEAN_DIR, a))
                  for a in ("lakefile.lean", "lake-manifest.json",
-                           "lean-toolchain",
-                           os.path.join(".lake", "build"))}
-    return dict(n=len(names), method=method, artefacts=artefacts)
+                           "lean-toolchain")}
+    local_build = os.path.isdir(os.path.join(LEAN_DIR, ".lake", "build"))
+    return dict(n=len(names), method=method, artefacts=artefacts,
+                local_build=local_build)
 
 
 def open_gate_ids(rows=None):
@@ -623,15 +628,17 @@ def run():
     lz = lean_census()
     print("      committed TfptCarrier/*.lean modules = %d (method: %s)"
           % (lz["n"], lz["method"]))
-    print("      build artefacts: %s" % lz["artefacts"])
+    print("      committed build descriptors: %s" % lz["artefacts"])
+    print("      local .lake/build present (informational, git-ignored): %s"
+          % lz.get("local_build"))
     print("      HONEST: `lake build` is NOT re-run inside the suite "
           "(runtime); the last green build (3380 jobs, no sorry) is "
           "quoted from changelog 2026-08-02 (XLIII); this check "
-          "certifies the committed count + artefacts, not a fresh "
-          "build.")
+          "certifies the committed count + build descriptors, not a "
+          "fresh build (that is the Lean Proofs CI workflow).")
     check("D6.1 [E] formal proof layer: %d committed Lean modules "
-          "(bar >= %d), build artefacts present" % (lz["n"],
-                                                    LEAN_MODS_MIN),
+          "(bar >= %d), committed build descriptors present" % (lz["n"],
+                                                                LEAN_MODS_MIN),
           lz["n"] >= LEAN_MODS_MIN
           and bool(lz["artefacts"])
           and all(lz["artefacts"].values()))
