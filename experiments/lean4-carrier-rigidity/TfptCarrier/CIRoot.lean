@@ -1,31 +1,27 @@
 /-
-  TFPT Carrier Rigidity — Lean 4 Formalization
-  =============================================
+  CIRoot — GitHub Actions / 16 GB build target for TfptCarrier.
+  =============================================================
 
-  Top-level entry. Re-exports the dependency graph of carrier
-  rigidity from the boundary involution up to the concrete
-  hypercharge spectrum.
+  Import set = the imports of `TfptCarrier.lean` minus exactly
+  `TfptCarrier.WallCertifiedHead` and `TfptCarrier.WallLadderAudit`.
 
-  Module map:
+  Those two modules pull in the generated `WallLadder/RungKz*`
+  kernel-`decide` certificates. Each rung is documented to need
+  21–360 GB and to fail at the lakefile's 12 GB ceiling by design;
+  they are built off-CI by `scripts/build_wall_ladder.sh`, and the
+  reference-machine full audit lives in `AUDIT_TRANSCRIPT.txt`.
 
-    Polarization           — orthogonal idempotents and carrier polynomial
-    InvolutionProjectors   — ε² = id  ⇒  spectral projectors P_±
-    MathlibBridge          — Polarization ↔ Mathlib's CompleteOrthogonalIdempotents
-    LatticeRigidityGeneral — general (m,n) integer rigidity, then (3,2) corollary
-    Rigidity               — SM specialisation (q₋,q₊) = (-2, 3)
-    TraceProjection        — structural trace formula  tr(aP₋ + bP₊) = a·rank + b·rank
-    DeterminantCharacter   — det T(λ) = λ^(m·qm + n·qp);  trace-zero from det-preserving
-    HiggsIndexShadow       — algebraic shadow H^0(P^1, O(1)) ≅ K^2  ⇒  dim E_+ = 2
-    YukawaType             — Stage-A interface for primitive indecomposable Yukawa type
-    CarrierData            — main bundled theorem: tr Y = 0 from all premises
-    Hypercharge            — concrete 5×5 model:  tr Y = 0 and 6 Y² − Y − 1 = 0
-    GlueUniqueness         — v89/v92 cores: glue uniqueness up to the spinor
-                             swap + carrier index 4 = |μ₄| (kernel decide)
-    Sanity                 — #eval smoke tests
-    AxiomCheck             — #print axioms for the main theorems
+  Kept here, and safe on a 16 GB runner:
 
-  See README.md and `note_carrier_rigidity_lean4.tex` for the
-  proof walkthrough and the dependency-graph documentation.
+    * every non-wall module in the library;
+    * `WallLadderChecker` and `WallCofinalComposition` (no rung
+      imports; the checker is integer/`decide`-free at this layer);
+    * `AxiomCheck`, `AuditCheck`, `AuditContract` (wall `#print axioms`
+      / `#check` / `example` lines live in `WallLadderAudit`).
+
+  `scripts/audit.sh --core` builds this module. Check (8) of that
+  script asserts the import-set identity so the two roots cannot
+  drift. NO RH claim; no proof content lives in this file.
 -/
 
 import TfptCarrier.Polarization
@@ -105,7 +101,6 @@ import TfptCarrier.CofinalEnvelope
 import TfptCarrier.CofinalCurrent
 import TfptCarrier.WallLadderChecker
 import TfptCarrier.WallCofinalComposition
-import TfptCarrier.WallCertifiedHead
 import TfptCarrier.GradeNoGo
 import TfptCarrier.KreinDefect
 import TfptCarrier.EulerPick
@@ -126,4 +121,3 @@ import TfptCarrier.Sanity
 import TfptCarrier.AxiomCheck
 import TfptCarrier.AuditCheck
 import TfptCarrier.AuditContract
-import TfptCarrier.WallLadderAudit

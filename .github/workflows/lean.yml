@@ -2,7 +2,19 @@ name: Lean Proofs
 
 # The Lean 4 carrier-rigidity proofs: no sorry/admit, no domain axioms, and
 # `#print axioms` on every headline theorem returns only the three standard
-# Lean kernel axioms (scripts/audit.sh).
+# Lean kernel axioms (scripts/audit.sh --core).
+#
+# CI proves: every non-wall TfptCarrier module (via TfptCarrier.CIRoot) plus
+# the full audit gate — sorry/admit, axiom/constant allowlist,
+# unsafe/opaque/partial, #print axioms on AxiomCheck, AuditCheck #check,
+# AuditContract signature locks, and CIRoot import-set consistency.
+#
+# Certified off-CI: WallLadder rungs (TfptCarrier/WallLadder/RungKz*.lean),
+# WallCertifiedHead, and WallLadderAudit. Those rungs are kernel `decide`
+# certificates that need 21–360 GB each and fail at the lakefile's 12 GB
+# ceiling by design. Build them with scripts/build_wall_ladder.sh, then
+# scripts/audit.sh (full). Transcript: experiments/lean4-carrier-rigidity/
+# AUDIT_TRANSCRIPT.txt.
 
 on:
   push:
@@ -23,6 +35,7 @@ jobs:
   lean:
     name: carrier-rigidity (no sorry / only kernel axioms)
     runs-on: ubuntu-latest
+    timeout-minutes: 150
     defaults:
       run:
         working-directory: experiments/lean4-carrier-rigidity
@@ -38,8 +51,19 @@ jobs:
       - name: Fetch the mathlib build cache
         run: lake exe cache get
 
-      - name: Build
-        run: lake build
+      # Serialise the heavy kernel-`decide` modules so two of them cannot
+      # share the 16 GB runner. Times from GHA logs: QuarticHalf 335 s
+      # (run 30814106167), GaussianCodeBridge 140–321 s (30814106167 /
+      # 30841220972), ProjectiveHamming 195–207 s (31476161075 /
+      # 32169712753), HammingCode 92–102 s (same). One `lake build`
+      # target per invocation; Lake 5 has no `-j`.
+      - name: Pre-build the heavy modules serially
+        run: |
+          for mod in HammingCode GaussianCodeBridge QuarticHalf ProjectiveHamming; do
+            echo "::group::lake build TfptCarrier.${mod}"
+            lake build "TfptCarrier.${mod}"
+            echo "::endgroup::"
+          done
 
-      - name: Audit gate (scripts/audit.sh)
-        run: bash scripts/audit.sh
+      - name: Audit gate (core target)
+        run: bash scripts/audit.sh --core
