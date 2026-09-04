@@ -44,7 +44,7 @@
       "aliases": ["quantum graph", "metric graph Laplacian"],
       "definition": "A metric graph with self-adjoint vertex conditions whose spectral trace is an exact sum over closed graph walks and their repetitions.",
       "status": "CLASSICAL",
-      "sources": ["Berkolaiko-Kuchment, Introduction to Quantum Graphs, 2013", "arXiv:1307.6055"],
+      "sources": ["Berkolaiko-Kuchment, DOI:10.1090/surv/186", "Kuipers-Hummel-Richter, arXiv:1307.6055, DOI:10.1103/PhysRevLett.112.070406"],
       "tags": ["spectral", "periodic-orbit", "bridge-2"],
       "attempt_count": 0,
       "alive": true
@@ -56,7 +56,7 @@
       "aliases": ["mixed prime-orbit barrier", "log-pq orbit barrier"],
       "definition": "The Riemann explicit formula has primitive prime labels and prime-power repetitions but no independent mixed log(pq) primitive orbit; a connected graph flow normally creates such mixed closed walks, so an exact realization needs product-over-places components or proved cancellations.",
       "status": "CLASSICAL",
-      "sources": ["arXiv:1307.6055, Section 2", "Berry-Keating, SIAM Review 41 (1999)", "rh/catalog/analysis/geometry_audit.md:B2"],
+      "sources": ["Kuipers-Hummel-Richter, arXiv:1307.6055, Section 2", "Berry-Keating, DOI:10.1137/S0036144598347497", "rh/catalog/analysis/geometry_audit.md:B2"],
       "tags": ["barrier", "prime-orbits", "adelic"],
       "attempt_count": 0,
       "alive": true
@@ -68,7 +68,7 @@
       "aliases": ["prime-sector decoupling"],
       "definition": "For Q-independent log-prime lengths, exact prime-power trace support and no cancellation imply that every recurrent closed walk lies in one prime sector, so the recurrent scattering matrix is block diagonal.",
       "status": "CLASSICAL",
-      "sources": ["rh/catalog/analysis/geometry_audit.md:B2", "arXiv:1307.6055"],
+      "sources": ["rh/catalog/analysis/geometry_audit.md:B2", "Kuipers-Hummel-Richter, arXiv:1307.6055"],
       "tags": ["conditional", "quantum-graph", "barrier"],
       "attempt_count": 0,
       "alive": true
@@ -80,7 +80,7 @@
       "aliases": ["level-8 rigid CY3", "eta(2tau)^4 eta(4tau)^4 Calabi-Yau"],
       "definition": "Rigid Calabi-Yau threefolds whose middle-cohomology L-function is the weight-4 level-8 newform f8=eta(2tau)^4 eta(4tau)^4.",
       "status": "CLASSICAL",
-      "sources": ["LMFDB:8.4.a.a", "arXiv:math/0504070"],
+      "sources": ["LMFDB:8.4.a.a", "Meyer-Cynk, arXiv:math/0504070", "Verrill, DOI:10.1006/jnth.1999.2449"],
       "tags": ["calabi-yau", "f8", "mu4", "neutral"],
       "attempt_count": 0,
       "alive": true
@@ -256,7 +256,7 @@
       "dst": "no-composite-orbits",
       "rel": "BLOCKED_BY",
       "strength": "CONDITIONAL",
-      "source": "arXiv:1307.6055; rh/catalog/analysis/geometry_audit.md:B2",
+      "source": "Kuipers-Hummel-Richter, arXiv:1307.6055; rh/catalog/analysis/geometry_audit.md:B2",
       "note": "Unconditional only under exact support and no-cancellation hypotheses."
     },
     {

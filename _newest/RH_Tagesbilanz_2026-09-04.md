@@ -6,7 +6,7 @@ Claim boundary: Forschungsprotokoll; kein Anspruch für oder gegen RH.
 
 - **Semantischer Katalog** `rh/catalog/`: 728 → **2035 Datensätze** (1060 kuratiert), 18 Fragmente, Schema/Taxonomie, CLI `rhcat`, LLM-Konsistenzprüfung, Hook/Rule/Skill, in `build.sh audit` verdrahtet. Konflikte 84 → 0, Ehrlichkeits-Flags 0.
 - **Viewer** `rh/catalog/viewer/` (Vite + sigma.js **WebGL**, Layout zur Build-Zeit): Netzwerk, Zeitleiste, Matrizen, Kill-Roots, **Konzeptkarte** mit GAPS-Panel und Pfadfinder; Export SVG/PNG/CSV/JSON/GraphML/GEXF/ZIP. Erster Frame ≈ 80 ms, ≥ 80 FPS. Start: `cd rh/catalog/viewer && npm run build && npx vite preview --port 4177` → http://127.0.0.1:4177/
-- **Konzeptkarte** `rh/catalog/map/`: **253 Knoten / 797 Kanten**, typisiert (äquivalent / impliziert / blockiert durch / würde schließen), CLI `rhmap path|gaps|equivalents`. Kopie in `_newest/graph/`.
+- **Konzeptkarte** `rh/catalog/map/`: **271 Knoten / 838 Kanten**, typisiert (äquivalent / impliziert / blockiert durch / würde schließen), CLI `rhmap path|gaps|equivalents`. Kopie in `_newest/graph/`.
 
 ## Der blinde Fleck
 
@@ -57,3 +57,20 @@ Brücke 1 steht (Zeit mit Primzahlen als Erzeuger, orakelfrei, klassisch); Brüc
 - Analysen: `rh/catalog/analysis/*.md|json`
 - Probes: `experiments/tfpt-discovery/*_probe.py` + `*_result.json`
 - Canvas: `canvases/RH-research-audit.canvas.tsx`
+
+## Geometrie-Audit (Nachtrag 19:00)
+
+G1: 66 gestaltrelevante Nullversuch-Konzepte klassifiziert; keines echt neu und formrelevant. Karte 253→271 Knoten / 838 Kanten. Kein RH-Claim.
+
+Verdikte gegen die fixierte Brücke-2-Gestalt (I1–I5):
+
+- Quasikristalle (Dyson, renormalisiert) und Fraktalsaiten (Lapidus–Maier) = RH-Umformulierungen; erzeugen keine fehlende Positivität.
+- Quantum-Graphen = bedingtes No-Go: verbundene Graphen erzeugen gemischte log(pq)-Bahnen (no-composite-orbits); Auslöschungskonstruktionen existieren, liefern aber keinen kanonischen globalen Graphen.
+- f8 = LMFDB 8.4.a.a = H³-L-Funktion starrer Calabi–Yau-Dreifaltigkeiten (Hulek–Verrill, arXiv:math/0504070) — echte Geometrie, für ζ RH-neutral.
+- Möbius-Skalengruppe reduziert auf Tate / Berry–Keating / Connes; Möbiusband gestaltirrelevant.
+- K3-Hodge-Index und Rosati-Positivität gelten lokal und sind global blind.
+- Hyperbolische Ruelle-Zeta: bekanntes Längenspektrum ≠ {log p}; kein Starrheitssatz gegen jedes Mannigfaltigkeitsmodell.
+- Einziger überlebender Vertrag: adelische stochastische Skalen-Halbgruppe / Deninger–Arakelov-Realisierung (bereits die Brücke-2-Lücke).
+- Zentrale Anforderung: Produkt über alle Stellen — nur so sind Primorbit p, Wiederholungen p^k, archimedischer Faktor und Skalenreflexion dasselbe Objekt.
+
+Nachbarn von `no-composite-orbits`: quantum-metric-graph / hyperbolic-ruelle-dynamics BLOCKED_BY; decoupling-lemma REDUCES_TO; adele-class-space und stochastische Skalen-Halbgruppe REQUIRES. G1=199, G2=8, G4 enthält die neue Barriere (killed_by=0).

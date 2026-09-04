@@ -57,6 +57,12 @@ surface for the Suzuki screw-function / W2–W4 window chain and the Conrey–Li
 de Branges note. Both are proposed documentation only and are not a claim
 for or against RH.
 
+`proposed_additions_geometry.json` audits quasicrystal, quantum-graph,
+Calabi–Yau, arithmetic-topology, Möbius, fractal-string and quantum-geometric
+frameworks against the fixed Bridge-2 I1–I5 shape. It records the
+no-composite-orbits barrier and preserves the distinction between published
+theorems, conditional support lemmas, and heuristic structural links.
+
 ## Query
 
 ```bash

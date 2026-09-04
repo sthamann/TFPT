@@ -43,6 +43,7 @@ curated `part_*.json` always override.
 | `positivity_origin_search.{json,md}` | positivity origin |
 | `bridge2_direct_search.md` | bridge-2 shape (direct) |
 | `bridge2_object_search.{json,md}` | bridge-2 object / literature |
+| `geometry_audit.{json,md}` | geometry frameworks vs fixed bridge-2 shape |
 | `hecke_index_theorem.{json,md}` | `TFPT.HECKE.INDEX.01` (experiment-only) |
 | `evolve_props_report.md` | evolve harness (3→2) |
 | `llm_consistency.json` | LLM vs curated enum disagreements |
@@ -52,7 +53,7 @@ curated `part_*.json` always override.
 See `map/README.md`. Seeds + extract + `build_map.py` → `rh_concept_map.json`.
 Proposal files are review surfaces only, not map contents:
 `proposed_additions.json` and `proposed_additions_<topic>.json`
-(`bridge2`, `compiler`, `cone`, `eventlog`, `index`, `pi`, `positivity`, `qsm`).
+(`bridge2`, `compiler`, `cone`, `eventlog`, `geometry`, `index`, `pi`, `positivity`, `qsm`).
 
 ## viewer/
 

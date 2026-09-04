@@ -1848,6 +1848,150 @@
     "note": "Ontology classification."
   },
   {
+    "src": "fourier-quasicrystal-geometry",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "doi:10.1007/s00222-014-0542-z",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "dyson-fourier-quasicrystal-criterion",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Dyson, Notices AMS 56 (2009), 212-223",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "infinite-rank-prime-fourier-module",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Fundamental theorem of arithmetic",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quantum-metric-graph",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berkolaiko-Kuchment, Introduction to Quantum Graphs, 2013",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "no-composite-orbits",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:1307.6055, Section 2",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quantum-graph-decoupling-lemma",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/geometry_audit.md:B2",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rigid-calabi-yau-f8",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "LMFDB:8.4.a.a",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "arithmetic-topology-prime-knots",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Morishita, Knots and Primes, 2012",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hyperbolic-ruelle-dynamics",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Fried, Invent. Math. 84 (1986)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "k3-hodge-lattice",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:1501.04049",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rosati-positive-geometry",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:1509.00797",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "mobius-scale-group",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Tate, Thesis, 1950",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "mobius-strip-topology",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Classical topology",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-spectral-triple-zero-approximants",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:2511.22755",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quantum-torus-geometry",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Noncommutative Geometry, 1994",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "lapidus-maier-fractal-string-criterion",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "doi:10.1112/jlms/52.1.15",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "berkovich-bruhat-tits-geometry",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berkovich, Spectral Theory and Analytic Geometry over Non-Archimedean Fields, 1990",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "causal-spin-network-geometry",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Bombelli et al., Phys. Rev. Lett. 59 (1987)",
+    "note": "Ontology classification."
+  },
+  {
     "src": "riemann-zeta",
     "dst": "riemann-xi",
     "rel": "REQUIRES",
@@ -4518,5 +4662,189 @@
     "strength": "CONDITIONAL",
     "source": "rh/lean/RH/InnerBridges.lean:366",
     "note": "Contains the channel-positivity bridge; r473 NO_BRIDGE."
+  },
+  {
+    "src": "dyson-fourier-quasicrystal-criterion",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "arXiv:2402.10604; Weil criterion",
+    "note": "Only after the required renormalization; not the naive positive zero measure."
+  },
+  {
+    "src": "dyson-fourier-quasicrystal-criterion",
+    "dst": "fourier-quasicrystal-geometry",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Dyson 2009; arXiv:2402.10604",
+    "note": "Distributional formulation rather than a standard uncorrected Fourier quasicrystal."
+  },
+  {
+    "src": "fourier-quasicrystal-geometry",
+    "dst": "infinite-rank-prime-fourier-module",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "Fundamental theorem of arithmetic; arXiv:2303.03201",
+    "note": "A single finite-variable Lee-Yang restriction has finite frequency rank."
+  },
+  {
+    "src": "infinite-rank-prime-fourier-module",
+    "dst": "prime-torus",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "Hedenmalm-Lindqvist-Seip, Duke Math. J. 86 (1997)",
+    "note": "The Bohr prime torus carries all independent prime phases, but not the zero generator."
+  },
+  {
+    "src": "quantum-metric-graph",
+    "dst": "no-composite-orbits",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "arXiv:1307.6055; rh/catalog/analysis/geometry_audit.md:B2",
+    "note": "Unconditional only under exact support and no-cancellation hypotheses."
+  },
+  {
+    "src": "quantum-graph-decoupling-lemma",
+    "dst": "no-composite-orbits",
+    "rel": "REDUCES_TO",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/geometry_audit.md:B2",
+    "note": "The theorem is explicitly conditional on no cancellation."
+  },
+  {
+    "src": "no-composite-orbits",
+    "dst": "adele-class-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Connes 1999; rh/catalog/analysis/geometry_audit.md:C",
+    "note": "Product-over-places components are the known structural way to isolate primitive primes."
+  },
+  {
+    "src": "rigid-calabi-yau-f8",
+    "dst": "weight4-gl1-transport",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "LMFDB:8.4.a.a; arXiv:math/0504070",
+    "note": "The f8 cusp channel is a weight-4 motivic L-function, not Riemann zeta."
+  },
+  {
+    "src": "rigid-calabi-yau-f8",
+    "dst": "experiments/tfpt-discovery/cuspidal_bridge_probe.py",
+    "rel": "USED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/geometry_audit.md:B3; experiments/tfpt-discovery/cuspidal_bridge_probe.py:111",
+    "note": "TFPT corpus contact; no RH implication."
+  },
+  {
+    "src": "arithmetic-topology-prime-knots",
+    "dst": "deninger-foliated-dynamics",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "Morishita 2012; arXiv:2301.11643",
+    "note": "USED_BY remapped: dest must be an attempt path; topological analogy motivates, but does not construct, the analytic flow."
+  },
+  {
+    "src": "hyperbolic-ruelle-dynamics",
+    "dst": "no-composite-orbits",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "Fried 1986; Patterson-Perry 2001; rh/catalog/analysis/geometry_audit.md:B4",
+    "note": "Known primitive length spectra and archimedean factors do not match Riemann zeta; no universal impossibility theorem is asserted."
+  },
+  {
+    "src": "deninger-foliated-dynamics",
+    "dst": "stochastic-scale-semigroup-on-connes-cokernel",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "Deninger ICM 1998; rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Both require the same unconstructed arithmetic all-place flow and positive generator."
+  },
+  {
+    "src": "k3-hodge-lattice",
+    "dst": "hodge-riemann-positivity-candidate",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "arXiv:1501.04049",
+    "note": "Geometric polarization without the global prime scale action."
+  },
+  {
+    "src": "rosati-positive-geometry",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "arXiv:1509.00797; experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "The local theorem is valid; the barrier concerns assembling independent local positivity into global zeta positivity."
+  },
+  {
+    "src": "mobius-scale-group",
+    "dst": "connes-adele-scaling-flow",
+    "rel": "REDUCES_TO",
+    "strength": "THEOREM",
+    "source": "Tate thesis; Berry-Keating 1999; Connes 1999",
+    "note": "The arithmetic Möbius-scale ingredients are already present in the adelic scaling framework."
+  },
+  {
+    "src": "mobius-strip-topology",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/geometry_audit.md:B5",
+    "note": "Nonorientability alone creates no arithmetic joint space."
+  },
+  {
+    "src": "finite-spectral-triple-zero-approximants",
+    "dst": "hilbert-polya-operator",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "arXiv:2511.22755; arXiv:2511.23257",
+    "note": "Requires proved global spectral or determinant convergence."
+  },
+  {
+    "src": "finite-spectral-triple-zero-approximants",
+    "dst": "w2-form-density",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_object_search.md",
+    "note": "Operator-domain and limit control are the analogous open step."
+  },
+  {
+    "src": "quantum-torus-geometry",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/geometry_audit.md:B6",
+    "note": "No canonical zeta all-place action is known."
+  },
+  {
+    "src": "lapidus-maier-fractal-string-criterion",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "doi:10.1112/jlms/52.1.15; Weil criterion",
+    "note": "Both are RH-equivalent criteria; this edge does not assert a direct proof between their native formulations."
+  },
+  {
+    "src": "berkovich-bruhat-tits-geometry",
+    "dst": "scaling-site",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:1507.05818",
+    "note": "Local nonarchimedean geometry must be assembled in the global tropical/adelic site."
+  },
+  {
+    "src": "causal-spin-network-geometry",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/geometry_audit.md:B6",
+    "note": "No accepted arithmetic all-place bridge was found."
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "no-composite-orbits",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/geometry_audit.md:C",
+    "note": "Its orbit trace must derive, rather than assume, the prime-only primitive decomposition."
   }
 ]

@@ -24,6 +24,8 @@ archimedean-place,analytic-object,INSTANCE_OF,HEURISTIC
 archimedean-place,experiments/tfpt-discovery/moonshot_arch_glue_probe.py,USED_BY,HEURISTIC
 arithmetic-hodge-index,analytic-object,INSTANCE_OF,HEURISTIC
 arithmetic-hodge-index,weil-conjectures,REQUIRES,CONDITIONAL
+arithmetic-topology-prime-knots,arithmetic-geometry,INSTANCE_OF,HEURISTIC
+arithmetic-topology-prime-knots,deninger-foliated-dynamics,REQUIRES,HEURISTIC
 baez-duarte-criterion,riemann-hypothesis,EQUIVALENT_TO,THEOREM
 baez-duarte-criterion,positivity-criterion,INSTANCE_OF,HEURISTIC
 baez-duarte-criterion,nyman-beurling-criterion,SPECIAL_CASE_OF,THEOREM
@@ -62,6 +64,8 @@ barrier-world-blind,experiments/tfpt-discovery/gabor_first_contact_selberg_probe
 barrier-world-blind,experiments/tfpt-discovery/gabor_first_contact_selberg_result.json,USED_BY,HEURISTIC
 barrier-world-blind,verification/v964_lstar_coherence_census.py,USED_BY,HEURISTIC
 barrier-zero-denominator,obstruction-class,INSTANCE_OF,HEURISTIC
+berkovich-bruhat-tits-geometry,arithmetic-geometry,INSTANCE_OF,HEURISTIC
+berkovich-bruhat-tits-geometry,scaling-site,SPECIAL_CASE_OF,HEURISTIC
 bernstein-function,completely-monotone,REQUIRES,THEOREM
 berry-keating-dilation,spectral-framework,INSTANCE_OF,HEURISTIC
 berry-keating-dilation,berry-keating-xp,SPECIAL_CASE_OF,HEURISTIC
@@ -86,6 +90,8 @@ canonical-system-hamiltonian,spectral-framework,INSTANCE_OF,HEURISTIC
 canonical-system-hamiltonian,screw-function-criterion,REQUIRES,CONDITIONAL
 carlson-theorem,analytic-object,INSTANCE_OF,HEURISTIC
 carlson-theorem,vitali-montel,REQUIRES,CONDITIONAL
+causal-spin-network-geometry,no-archimedean-prime-joint-space,BLOCKED_BY,HEURISTIC
+causal-spin-network-geometry,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 census-qsm,euler-side-blindness,BLOCKED_BY,CONDITIONAL
 census-qsm,no-canonical-integer-label,BLOCKED_BY,CONDITIONAL
 census-qsm,analytic-object,INSTANCE_OF,HEURISTIC
@@ -148,6 +154,7 @@ deninger-cohomology,weil-conjectures,GENERALIZES,CONDITIONAL
 deninger-cohomology,spectral-framework,INSTANCE_OF,HEURISTIC
 deninger-cohomology,hilbert-polya-operator,WOULD_CLOSE,CONDITIONAL
 deninger-foliated-dynamics,spectral-framework,INSTANCE_OF,HEURISTIC
+deninger-foliated-dynamics,stochastic-scale-semigroup-on-connes-cokernel,REDUCES_TO,CONDITIONAL
 deninger-foliated-dynamics,deninger-cohomology,SPECIAL_CASE_OF,CONDITIONAL
 deninger-foliated-dynamics,event-log-function,WOULD_CLOSE,CONDITIONAL
 dirichlet-series-polytorus,analytic-object,INSTANCE_OF,HEURISTIC
@@ -156,6 +163,9 @@ discrete-spectrum-neutrality,obstruction-class,INSTANCE_OF,HEURISTIC
 dual-pair-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 dual-pair-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 dual-pair-language,spectral-framework,INSTANCE_OF,HEURISTIC
+dyson-fourier-quasicrystal-criterion,weil-positivity,EQUIVALENT_TO,THEOREM
+dyson-fourier-quasicrystal-criterion,analytic-object,INSTANCE_OF,HEURISTIC
+dyson-fourier-quasicrystal-criterion,fourier-quasicrystal-geometry,REQUIRES,CONDITIONAL
 e8-cascade,finite-clock-commensurability,BLOCKED_BY,THEOREM
 e8-cascade,tfpt-compiler,INSTANCE_OF,HEURISTIC
 e8-cascade,tfpt-e8-lattice,REQUIRES,CONDITIONAL
@@ -222,6 +232,9 @@ finite-family-target-mismatch,obstruction-class,INSTANCE_OF,HEURISTIC
 finite-infinite-place-balance,analytic-object,INSTANCE_OF,HEURISTIC
 finite-infinite-place-balance,archimedean-place,REQUIRES,THEOREM
 finite-infinite-place-balance,weil-positivity,REQUIRES,THEOREM
+finite-spectral-triple-zero-approximants,spectral-framework,INSTANCE_OF,HEURISTIC
+finite-spectral-triple-zero-approximants,w2-form-density,REQUIRES,CONDITIONAL
+finite-spectral-triple-zero-approximants,hilbert-polya-operator,WOULD_CLOSE,CONDITIONAL
 finite-weil-gns-metric,finite-family-target-mismatch,BLOCKED_BY,CONDITIONAL
 finite-weil-gns-metric,analytic-object,INSTANCE_OF,HEURISTIC
 finite-weil-window,barrier-finite-window-ceiling,BLOCKED_BY,CONDITIONAL
@@ -237,6 +250,8 @@ finite-weil-window,experiments/tfpt-discovery/w1_matrix_identity_probe.py,USED_B
 finite-weil-window,experiments/tfpt-discovery/w2_form_density_probe.py,USED_BY,HEURISTIC
 finite-weil-window,notes/arxiv_w1_note/note_w1_suzuki_identification.tex,USED_BY,HEURISTIC
 finite-weil-window,verification/v861_krein_normalform_lean.py,USED_BY,HEURISTIC
+fourier-quasicrystal-geometry,infinite-rank-prime-fourier-module,BLOCKED_BY,THEOREM
+fourier-quasicrystal-geometry,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 fourier-transform,spectral-framework,INSTANCE_OF,HEURISTIC
 frequently-selected-aug-dual-resolvent,research-question,INSTANCE_OF,HEURISTIC
 frequently-selected-aug-dual-resolvent,lstar-statement,REQUIRES,CONDITIONAL
@@ -349,6 +364,8 @@ hodge-riemann-positivity-candidate,no-archimedean-prime-joint-space,BLOCKED_BY,C
 hodge-riemann-positivity-candidate,analytic-object,INSTANCE_OF,HEURISTIC
 horizon-replica-positivity,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 horizon-replica-positivity,analytic-object,INSTANCE_OF,HEURISTIC
+hyperbolic-ruelle-dynamics,no-composite-orbits,BLOCKED_BY,HEURISTIC
+hyperbolic-ruelle-dynamics,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 hypercontractivity,analytic-object,INSTANCE_OF,HEURISTIC
 hypercontractivity,prime-torus,REQUIRES,THEOREM
 i5-transport-ledger-criterion,weil-positivity,EQUIVALENT_TO,THEOREM
@@ -358,6 +375,8 @@ i5-transport-ledger-criterion,verification/v541_matching_lemma_ledger.py,USED_BY
 index-flow-time,spectral-framework,INSTANCE_OF,HEURISTIC
 index-modular-state,research-question,INSTANCE_OF,HEURISTIC
 index-modular-state,event-log-function,WOULD_CLOSE,CONDITIONAL
+infinite-rank-prime-fourier-module,analytic-object,INSTANCE_OF,HEURISTIC
+infinite-rank-prime-fourier-module,prime-torus,REALIZES,THEOREM
 inner-bridges,tfpt-compiler,INSTANCE_OF,HEURISTIC
 inner-bridges,outer-bridges,REQUIRES,CONDITIONAL
 inner-bridges,rh/lean/RH/InnerBridges.lean,USED_BY,HEURISTIC
@@ -372,6 +391,8 @@ jensen-polynomials,analytic-object,INSTANCE_OF,HEURISTIC
 jensen-polynomials,riemann-xi,REQUIRES,THEOREM
 jensen-polynomials,toeplitz-positivity,REQUIRES,CONDITIONAL
 jensen-polynomials,experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py,USED_BY,HEURISTIC
+k3-hodge-lattice,analytic-object,INSTANCE_OF,HEURISTIC
+k3-hodge-lattice,hodge-riemann-positivity-candidate,INSTANCE_OF,THEOREM
 kasteleyn-orientation-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 kasteleyn-orientation-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 kasteleyn-orientation-language,spectral-framework,INSTANCE_OF,HEURISTIC
@@ -398,6 +419,8 @@ lambert-w,analytic-object,INSTANCE_OF,HEURISTIC
 lambert-w,mellin-transform,REQUIRES,CONDITIONAL
 lambert-w,saddle-point-method,REQUIRES,HEURISTIC
 landau-widom-asymptotics,analytic-object,INSTANCE_OF,HEURISTIC
+lapidus-maier-fractal-string-criterion,weil-positivity,EQUIVALENT_TO,THEOREM
+lapidus-maier-fractal-string-criterion,analytic-object,INSTANCE_OF,HEURISTIC
 laplace-transform,spectral-framework,INSTANCE_OF,HEURISTIC
 laplace-transform,mellin-transform,TRANSFORM_OF,CONDITIONAL
 lee-yang-property,positivity-criterion,INSTANCE_OF,HEURISTIC
@@ -422,6 +445,10 @@ matching-ledger-positivity,analytic-object,INSTANCE_OF,HEURISTIC
 mellin-transform,spectral-framework,INSTANCE_OF,HEURISTIC
 mellin-transform,fourier-transform,TRANSFORM_OF,CONDITIONAL
 metric-by-operator-positivity,spectral-framework,INSTANCE_OF,HEURISTIC
+mobius-scale-group,spectral-framework,INSTANCE_OF,HEURISTIC
+mobius-scale-group,connes-adele-scaling-flow,REDUCES_TO,THEOREM
+mobius-strip-topology,no-archimedean-prime-joint-space,BLOCKED_BY,HEURISTIC
+mobius-strip-topology,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 modular-clock,no-canonical-integer-label,BLOCKED_BY,HEURISTIC
 modular-clock,spectral-framework,INSTANCE_OF,HEURISTIC
 modular-clock,census-qsm,WOULD_CLOSE,CONDITIONAL
@@ -444,6 +471,8 @@ newman-criterion,positivity-criterion,INSTANCE_OF,HEURISTIC
 newman-criterion,debruijn-newman-constant,REQUIRES,THEOREM
 no-archimedean-prime-joint-space,obstruction-class,INSTANCE_OF,HEURISTIC
 no-canonical-integer-label,obstruction-class,INSTANCE_OF,HEURISTIC
+no-composite-orbits,obstruction-class,INSTANCE_OF,HEURISTIC
+no-composite-orbits,adele-class-space,REQUIRES,CONDITIONAL
 nyman-beurling-criterion,hardy-space-h2,DUAL_TO,THEOREM
 nyman-beurling-criterion,riemann-hypothesis,EQUIVALENT_TO,THEOREM
 nyman-beurling-criterion,positivity-criterion,INSTANCE_OF,HEURISTIC
@@ -534,6 +563,12 @@ quadrep,tfpt-compiler,INSTANCE_OF,HEURISTIC
 quadrep,inner-bridges,REQUIRES,CONDITIONAL
 quadrep,rh/problem/quadrep.pdf,USED_BY,HEURISTIC
 quadrep,rh/problem/quadrep.tex,USED_BY,HEURISTIC
+quantum-graph-decoupling-lemma,analytic-object,INSTANCE_OF,HEURISTIC
+quantum-graph-decoupling-lemma,no-composite-orbits,REDUCES_TO,THEOREM
+quantum-metric-graph,no-composite-orbits,BLOCKED_BY,CONDITIONAL
+quantum-metric-graph,arithmetic-geometry,INSTANCE_OF,HEURISTIC
+quantum-torus-geometry,no-archimedean-prime-joint-space,BLOCKED_BY,HEURISTIC
+quantum-torus-geometry,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 quarter-shift-to-centre,obstruction-class,INSTANCE_OF,HEURISTIC
 quasilocal-hamiltonian-dynamics,no-archimedean-prime-joint-space,BLOCKED_BY,CONDITIONAL
 quasilocal-hamiltonian-dynamics,spectral-framework,INSTANCE_OF,HEURISTIC
@@ -593,8 +628,13 @@ riemann-xi,functional-equation,REQUIRES,THEOREM
 riemann-xi,riemann-zeta,TRANSFORM_OF,CONDITIONAL
 riemann-zeta,analytic-object,INSTANCE_OF,HEURISTIC
 riemann-zeta,riemann-xi,REQUIRES,THEOREM
+rigid-calabi-yau-f8,analytic-object,INSTANCE_OF,HEURISTIC
+rigid-calabi-yau-f8,weight4-gl1-transport,INSTANCE_OF,THEOREM
+rigid-calabi-yau-f8,experiments/tfpt-discovery/cuspidal_bridge_probe.py,USED_BY,HEURISTIC
 rodgers-tao-theorem,debruijn-newman-constant,IMPLIES,THEOREM
 rodgers-tao-theorem,analytic-object,INSTANCE_OF,HEURISTIC
+rosati-positive-geometry,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
+rosati-positive-geometry,analytic-object,INSTANCE_OF,HEURISTIC
 saddle-point-method,spectral-framework,INSTANCE_OF,HEURISTIC
 saddle-point-method,mellin-transform,REQUIRES,CONDITIONAL
 scaling-site,adele-class-space,GENERALIZES,CONDITIONAL
@@ -666,6 +706,7 @@ stochastic-scale-semigroup-on-connes-cokernel,no-archimedean-prime-joint-space,B
 stochastic-scale-semigroup-on-connes-cokernel,no-canonical-integer-label,BLOCKED_BY,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,research-question,INSTANCE_OF,HEURISTIC
 stochastic-scale-semigroup-on-connes-cokernel,adele-class-space,REQUIRES,CONDITIONAL
+stochastic-scale-semigroup-on-connes-cokernel,no-composite-orbits,REQUIRES,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,self-dual-measure,REQUIRES,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,unitarity-of-emergent-time,REQUIRES,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,hilbert-polya-operator,WOULD_CLOSE,CONDITIONAL

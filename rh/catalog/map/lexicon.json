@@ -60,8 +60,8 @@
     "Re(s)=1/2"
   ],
   "critical-strip": [
-    "critical strip",
     "Critical strip",
+    "critical strip",
     "critical_strip"
   ],
   "riemann-kernel": [
@@ -91,8 +91,8 @@
     "mellin_transform"
   ],
   "laplace-transform": [
-    "Laplace transform",
     "laplace transform",
+    "Laplace transform",
     "laplace_transform"
   ],
   "functional-equation": [
@@ -108,8 +108,8 @@
   ],
   "von-mangoldt": [
     "von Mangoldt function Λ(n)",
-    "von Mangoldt",
     "von mangoldt",
+    "von Mangoldt",
     "von_mangoldt",
     "Lambda(n)",
     "Λ(n)"
@@ -146,8 +146,8 @@
   ],
   "montgomery-conjecture": [
     "Montgomery pair-correlation conjecture",
-    "montgomery conjecture",
     "Montgomery conjecture",
+    "montgomery conjecture",
     "montgomery_conjecture"
   ],
   "weil-quadratic-form": [
@@ -172,21 +172,21 @@
     "prime term"
   ],
   "weil-pole-term": [
-    "weil pole term",
     "Weil pole term",
+    "weil pole term",
     "weil_pole_term",
     "pole term"
   ],
   "weil-positivity": [
     "Weil positivity criterion",
-    "weil positivity",
     "Weil positivity",
+    "weil positivity",
     "weil_positivity",
     "Weil criterion"
   ],
   "gabor-zero-side": [
-    "gabor zero side",
     "Gabor zero side",
+    "gabor zero side",
     "Gabor zero-side",
     "gabor_zero_side",
     "gaborZeroSide"
@@ -227,8 +227,8 @@
   ],
   "li-criterion": [
     "Li's criterion",
-    "li criterion",
     "Li criterion",
+    "li criterion",
     "li_criterion"
   ],
   "nyman-beurling-space": [
@@ -306,14 +306,14 @@
   "kps-theorem": [
     "KPS van Dantzig theorem",
     "van Dantzig pair",
-    "kps theorem",
     "KPS theorem",
+    "kps theorem",
     "kps_theorem"
   ],
   "van-dantzig-pair": [
     "van Dantzig pairs",
-    "van dantzig pair",
     "van Dantzig pair",
+    "van dantzig pair",
     "van_dantzig_pair"
   ],
   "polya-frequency-function": [
@@ -331,14 +331,14 @@
   ],
   "hankel-positivity": [
     "Hankel moment positivity",
-    "Hankel positivity",
     "hankel positivity",
+    "Hankel positivity",
     "hankel_positivity",
     "Hankel minors"
   ],
   "jensen-polynomials": [
-    "jensen polynomials",
     "Jensen polynomials",
+    "jensen polynomials",
     "jensen_polynomials",
     "Jensen polynomial"
   ],
@@ -385,24 +385,24 @@
     "scaling_site"
   ],
   "selberg-trace-formula": [
-    "selberg trace formula",
     "Selberg trace formula",
+    "selberg trace formula",
     "selberg_trace_formula"
   ],
   "modular-surface": [
-    "modular surface",
     "Modular surface",
+    "modular surface",
     "modular_surface",
     "PSL2Z quotient"
   ],
   "eisenstein-series": [
-    "eisenstein series",
     "Eisenstein series",
+    "eisenstein series",
     "eisenstein_series"
   ],
   "eisenstein-constant-term": [
-    "Eisenstein constant term",
     "eisenstein constant term",
+    "Eisenstein constant term",
     "eisenstein_constant_term",
     "scattering term",
     "constant term"
@@ -415,14 +415,14 @@
   ],
   "hecke-operator": [
     "Hecke operators",
-    "hecke operator",
     "Hecke operator",
+    "hecke operator",
     "hecke_operator"
   ],
   "hecke-correspondence": [
     "Hecke correspondences",
-    "Hecke correspondence",
     "hecke correspondence",
+    "Hecke correspondence",
     "hecke_correspondence"
   ],
   "bruhat-tits-tree": [
@@ -454,8 +454,8 @@
   ],
   "deninger-cohomology": [
     "Deninger cohomological program",
-    "Deninger cohomology",
     "deninger cohomology",
+    "Deninger cohomology",
     "deninger_cohomology"
   ],
   "weil-conjectures": [
@@ -541,8 +541,8 @@
   ],
   "bohr-lift": [
     "Bohr transform",
-    "bohr lift",
     "Bohr lift",
+    "bohr lift",
     "bohr_lift"
   ],
   "dirichlet-series-polytorus": [
@@ -575,8 +575,8 @@
   ],
   "ucp-map": [
     "Unital completely positive map",
-    "ucp map",
     "UCP map",
+    "ucp map",
     "ucp_map"
   ],
   "groupoid": [
@@ -584,8 +584,8 @@
     "groupoid"
   ],
   "groupoid-modular-function": [
-    "groupoid modular function",
     "Groupoid modular function",
+    "groupoid modular function",
     "groupoid_modular_function",
     "modular function"
   ],
@@ -597,8 +597,8 @@
     "halfdensity"
   ],
   "additive-adeles": [
-    "additive adeles",
     "Additive adeles",
+    "additive adeles",
     "additive_adeles",
     "A_Q"
   ],
@@ -609,8 +609,8 @@
     "self_dual_measure"
   ],
   "relative-determinant": [
-    "Relative determinant",
     "relative determinant",
+    "Relative determinant",
     "relative_determinant"
   ],
   "spectral-shift": [
@@ -648,8 +648,8 @@
     "efrat_determinant"
   ],
   "regulator-jump": [
-    "Regulator jump",
     "regulator jump",
+    "Regulator jump",
     "regulator_jump"
   ],
   "murru-salvatori": [
@@ -711,8 +711,8 @@
     "Theta_E8"
   ],
   "e8-cascade": [
-    "e8 cascade",
     "E8 cascade",
+    "e8 cascade",
     "e8_cascade"
   ],
   "cm-seam": [
@@ -724,8 +724,8 @@
     "tau=i"
   ],
   "gaussian-e8-module": [
-    "gaussian e8 module",
     "Gaussian E8 module",
+    "gaussian e8 module",
     "gaussian_e8_module",
     "Gaussian E8",
     "v714"
@@ -746,8 +746,8 @@
     "scrarith_world"
   ],
   "seam-geodesic": [
-    "Seam geodesic",
     "seam geodesic",
+    "Seam geodesic",
     "seam_geodesic"
   ],
   "gate-zero": [
@@ -785,8 +785,8 @@
     "lambda*"
   ],
   "quadrep": [
-    "quadrep",
-    "Quadrep"
+    "Quadrep",
+    "quadrep"
   ],
   "inner-bridges": [
     "Inner bridges",
@@ -794,19 +794,19 @@
     "inner_bridges"
   ],
   "outer-bridges": [
-    "outer bridges",
     "Outer bridges",
+    "outer bridges",
     "outer_bridges"
   ],
   "relay-lead-law": [
-    "relay lead law",
     "Relay lead law",
+    "relay lead law",
     "relay_lead_law"
   ],
   "narrowband-weil": [
     "Narrowband Weil probe",
-    "narrowband Weil",
     "narrowband weil",
+    "narrowband Weil",
     "narrowband_weil"
   ],
   "arch-rate": [
@@ -911,14 +911,14 @@
   "barrier-structural-mismatch": [
     "barrier structural mismatch",
     "barrier_structural_mismatch",
-    "Structural mismatch",
-    "structural mismatch"
+    "structural mismatch",
+    "Structural mismatch"
   ],
   "barrier-no-bridge": [
     "barrier no bridge",
     "barrier_no_bridge",
-    "No bridge",
     "no bridge",
+    "No bridge",
     "NO_BRIDGE"
   ],
   "open-gabor-window-positivity": [
@@ -974,8 +974,8 @@
   ],
   "finite-clock-commensurability": [
     "finite clock commensurability",
-    "finite-clock commensurability",
     "Finite-clock commensurability",
+    "finite-clock commensurability",
     "finite-clock eventlog barrier",
     "finite_clock_commensurability",
     "prime-period no-go"
@@ -997,8 +997,8 @@
     "Waldspurger square positivity",
     "waldspurger-square-positivity",
     "half-integral period squares",
-    "waldspurger squares",
     "Waldspurger squares",
+    "waldspurger squares",
     "waldspurger_squares"
   ],
   "siegel-weil-carrier": [
@@ -1046,16 +1046,16 @@
     "SOS Pontryagin"
   ],
   "kasteleyn-orientation-language": [
-    "Kasteleyn orientation language",
     "kasteleyn orientation language",
+    "Kasteleyn orientation language",
     "kasteleyn_orientation_language",
     "value-preserving orientation",
     "Kasteleyn orientation"
   ],
   "hamiltonian-psd-language": [
     "canonical Hamiltonian positivity",
-    "Hamiltonian PSD language",
     "hamiltonian psd language",
+    "Hamiltonian PSD language",
     "hamiltonian_psd_language"
   ],
   "dual-pair-language": [
@@ -1125,8 +1125,8 @@
   "edge-l-values": [
     "Euler-region L-values",
     "edge l values",
-    "Edge L-values",
     "edge L-values",
+    "Edge L-values",
     "edge_l_values"
   ],
   "edge-nonvanishing-method": [
@@ -1336,23 +1336,23 @@
     "P1 Gauss-Bonnet"
   ],
   "e8-positive-lattice-norm": [
-    "E8 positive lattice norm",
     "e8 positive lattice norm",
+    "E8 positive lattice norm",
     "e8_positive_lattice_norm",
     "positive E8 norm",
     "E8 Gram form"
   ],
   "seam-os-positive-transfer": [
-    "seam os positive transfer",
     "Seam OS positive transfer",
+    "seam os positive transfer",
     "seam_os_positive_transfer",
     "seam OS transfer",
     "Lambda=e^{-h}"
   ],
   "seam-modular-generator": [
     "seam modular Hamiltonian",
-    "Seam modular generator",
     "seam modular generator",
+    "Seam modular generator",
     "seam_modular_generator",
     "K=log((1-C)C^{-1})"
   ],
@@ -1364,15 +1364,15 @@
     "Markov QCA dilation"
   ],
   "quasilocal-hamiltonian-dynamics": [
-    "quasilocal hamiltonian dynamics",
     "Quasilocal Hamiltonian dynamics",
+    "quasilocal hamiltonian dynamics",
     "quasilocal_hamiltonian_dynamics",
     "Lieb-Robinson dynamics",
     "quasilocal Hamiltonian"
   ],
   "e8-theta-heat-operator": [
-    "E8 theta heat operator",
     "e8 theta heat operator",
+    "E8 theta heat operator",
     "e8_theta_heat_operator",
     "theta heat operator",
     "E8 heat semigroup"
@@ -1419,8 +1419,8 @@
     "straddle selector"
   ],
   "admissible-os-positive-measure": [
-    "admissible os positive measure",
     "Admissible OS positive measure",
+    "admissible os positive measure",
     "admissible_os_positive_measure",
     "admissible OS measure",
     "H_OS=-log T"
@@ -1463,8 +1463,8 @@
   "kneser-groupoid": [
     "Marked Kneser neighbour groupoid",
     "marked Kneser groupoid",
-    "Kneser groupoid",
     "kneser groupoid",
+    "Kneser groupoid",
     "kneser_groupoid"
   ],
   "hnf-groupoid": [
@@ -1489,16 +1489,16 @@
     "stochastic scale semigroup"
   ],
   "rh-as-reflection-positivity": [
-    "rh as reflection positivity",
     "RH as reflection positivity",
+    "rh as reflection positivity",
     "rh_as_reflection_positivity",
     "Bochner-OS-Hilbert-Polya",
     "RH reflection positivity"
   ],
   "e8-sublattice-rg-semigroup": [
     "superlattice conditional expectation",
-    "e8 sublattice rg semigroup",
     "E8 sublattice RG semigroup",
+    "e8 sublattice rg semigroup",
     "e8_sublattice_rg_semigroup",
     "E8 RG semigroup"
   ],
@@ -1531,8 +1531,8 @@
     "cutoff dichotomy"
   ],
   "index-modular-state": [
-    "Physical index-modular state",
     "physical index-modular state",
+    "Physical index-modular state",
     "index modular Hamiltonian",
     "index modular state",
     "index_modular_state"
@@ -1595,8 +1595,8 @@
     "w2_form_density"
   ],
   "w3-uniform-window-positivity": [
-    "w3 uniform window positivity",
     "W3 uniform window positivity",
+    "w3 uniform window positivity",
     "w3_uniform_window_positivity",
     "W3 uniform positivity",
     "no-ladder wall"
@@ -1628,9 +1628,132 @@
     "FREQ cone"
   ],
   "selected-polynomial-approximates-grid": [
-    "selected polynomial approximates grid",
     "Selected polynomial approximates grid",
+    "selected polynomial approximates grid",
     "selected_polynomial_approximates_grid",
     "SelectedPolynomialApproximatesGrid"
+  ],
+  "fourier-quasicrystal-geometry": [
+    "fourier quasicrystal geometry",
+    "Fourier-quasicrystal geometry",
+    "fourier_quasicrystal_geometry",
+    "Fourier quasicrystal",
+    "crystalline measure"
+  ],
+  "dyson-fourier-quasicrystal-criterion": [
+    "Renormalized Dyson Fourier-quasicrystal criterion",
+    "dyson fourier quasicrystal criterion",
+    "dyson_fourier_quasicrystal_criterion",
+    "zeta zero crystalline criterion",
+    "Dyson quasicrystal criterion"
+  ],
+  "infinite-rank-prime-fourier-module": [
+    "infinite rank prime fourier module",
+    "Infinite-rank prime Fourier module",
+    "infinite_rank_prime_fourier_module",
+    "prime frequency module",
+    "Z-span of log primes"
+  ],
+  "quantum-metric-graph": [
+    "metric graph Laplacian",
+    "quantum metric graph",
+    "Quantum metric graph",
+    "quantum_metric_graph",
+    "quantum graph"
+  ],
+  "no-composite-orbits": [
+    "No-composite-orbits barrier",
+    "mixed prime-orbit barrier",
+    "log-pq orbit barrier",
+    "no composite orbits",
+    "no_composite_orbits"
+  ],
+  "quantum-graph-decoupling-lemma": [
+    "Conditional quantum-graph decoupling lemma",
+    "quantum graph decoupling lemma",
+    "quantum_graph_decoupling_lemma",
+    "prime-sector decoupling"
+  ],
+  "rigid-calabi-yau-f8": [
+    "eta(2tau)^4 eta(4tau)^4 Calabi-Yau",
+    "Rigid Calabi-Yau realization of f8",
+    "rigid calabi yau f8",
+    "rigid_calabi_yau_f8",
+    "level-8 rigid CY3"
+  ],
+  "arithmetic-topology-prime-knots": [
+    "Arithmetic topology of primes and knots",
+    "arithmetic topology prime knots",
+    "arithmetic_topology_prime_knots",
+    "Morishita arithmetic topology",
+    "primes as knots"
+  ],
+  "hyperbolic-ruelle-dynamics": [
+    "Hyperbolic Ruelle-Selberg dynamics",
+    "hyperbolic ruelle dynamics",
+    "hyperbolic_ruelle_dynamics",
+    "hyperbolic geodesic flow",
+    "Ruelle zeta geometry"
+  ],
+  "k3-hodge-lattice": [
+    "k3 hodge lattice",
+    "K3 Hodge lattice",
+    "k3_hodge_lattice",
+    "3U plus 2E8(-1)",
+    "K3 lattice"
+  ],
+  "rosati-positive-geometry": [
+    "Weil finite-field positivity",
+    "Rosati positivity mechanism",
+    "positive Rosati involution",
+    "rosati positive geometry",
+    "rosati_positive_geometry"
+  ],
+  "mobius-scale-group": [
+    "Möbius/metaplectic scale-line geometry",
+    "metaplectic scale action",
+    "PSL2 scale geometry",
+    "mobius scale group",
+    "mobius_scale_group"
+  ],
+  "mobius-strip-topology": [
+    "mobius strip topology",
+    "mobius_strip_topology",
+    "Möbius-strip topology",
+    "nonorientable strip"
+  ],
+  "finite-spectral-triple-zero-approximants": [
+    "finite spectral triple zero approximants",
+    "Finite spectral-triple zero approximants",
+    "finite_spectral_triple_zero_approximants",
+    "finite self-adjoint zeta perturbations"
+  ],
+  "quantum-torus-geometry": [
+    "Quantum-torus and quantum-group geometry",
+    "quantum group geometry",
+    "quantum torus geometry",
+    "quantum_torus_geometry",
+    "quantum torus"
+  ],
+  "lapidus-maier-fractal-string-criterion": [
+    "inverse spectral problem for fractal strings",
+    "lapidus maier fractal string criterion",
+    "Lapidus-Maier fractal-string criterion",
+    "lapidus_maier_fractal_string_criterion"
+  ],
+  "berkovich-bruhat-tits-geometry": [
+    "Berkovich and Bruhat-Tits local geometry",
+    "berkovich bruhat tits geometry",
+    "berkovich_bruhat_tits_geometry",
+    "p-adic analytic geometry",
+    "Bruhat-Tits geometry"
+  ],
+  "causal-spin-network-geometry": [
+    "Causal-set and spin-network geometry",
+    "causal spin network geometry",
+    "causal_spin_network_geometry",
+    "loop quantum geometry",
+    "spin networks",
+    "causal sets"
   ]
 }

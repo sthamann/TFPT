@@ -37,10 +37,22 @@ JSON. The main collapses are:
 
 ### G1(b): genuinely unexamined and shape-relevant
 
-- **None as a new framework.** The only shape-complete candidate exposed by G1/G6 is the
-  already-recorded open node `stochastic-scale-semigroup-on-connes-cokernel`; Deninger's
-  arithmetic foliation is a second formulation of the same missing all-place dynamical
-  object, not an overlooked constructed geometry.
+- `adele-class-space` — global state-space candidate for I1/I2/I5; the Markov generator
+  required for I4 is unconstructed.
+- `additive-adeles` — canonical self-dual Fourier space and all-place carrier, but its
+  present map route reduces to the explicit formula rather than a zero generator.
+- `arakelov-intersection` — joins finite and archimedean places and could supply I2/I5;
+  no noncompact OS generator is known.
+- `connes-adele-scaling-flow` — supplies the canonical global dilation action; its
+  established action is unitary, not the required stochastic semigroup.
+- `deninger-cohomology` / `deninger-foliated-dynamics` — conjectural I1–I5 template;
+  the arithmetic host and polarization are not constructed.
+
+These are genuinely unprobed **map components**, but not overlooked finished frameworks.
+They collapse to the already-recorded open node
+`stochastic-scale-semigroup-on-connes-cokernel` or the equivalent
+all-place Deninger/Arakelov realization. `ising-lee-yang-compiler` remains in (a), because
+its map edge already reduces it to the Lee–Yang criterion rather than supplying I4.
 
 G2 adds no unused escape: screw/Lee–Yang/Li/Jensen/Newman are criteria; de Branges
 positivity is too strong; Hankel and archimedean dominance do not create I2/I4.
@@ -84,10 +96,12 @@ The frequencies \(\{\log p\}\) are \(\mathbb Q\)-linearly independent by unique
 factorization, hence have infinite rank. This excludes any one fixed finite-variable
 Lee–Yang/Kurasov–Sarnak realization. The Bohr lift on \(\mathbb T^\infty\) accommodates
 the rank but is compact, gives Euler-side Hardy/hypercontractive structure, and supplies
-neither I4 nor the archimedean correction. Corpus contact: broad regex count 138
-(mostly the `MELLIN_PICK_LEE_YANG` family); direct contacts are
-`ising-lee-yang-compiler`, `prime-torus`, `bohr-lift`, and
-`fractal_selfsimilarity_hunt.py`. **Supplies:** I2 partially, I3. **Cannot supply:** I1,
+neither I4 nor the archimedean correction. Focused corpus contact
+(`quasicrystal|Lee-Yang|Meyer set`): **10 files / 22 lines**; best hits are
+`recursive_crystal.py:6`, `fractal_selfsimilarity_hunt.py:4`, and
+`tfpt_decagonal.py:3`; `Meyer set` has no hit. Map contacts are
+`ising-lee-yang-compiler`, `prime-torus`, and `bohr-lift`.
+**Supplies:** I2 partially, I3. **Cannot supply:** I1,
 I4, I5 without importing the explicit formula. **Verdict: NEUTRAL
 (restatement/definition mismatch).**
 
@@ -97,8 +111,8 @@ A metric graph Laplacian with self-adjoint vertex conditions has a unitary bond-
 matrix and secular equation \(\det(I-S(k)e^{ikL})=0\); its exact trace formula sums
 closed walks and repetitions [Kottos–Smilansky; Berkolaiko–Kuchment]. If edges/cycles
 of lengths \(\log p\) and \(\log q\) communicate, concatenated closed walks have length
-\(\log(pq)\). This is the “composite orbit” difficulty stated explicitly by Harrison,
-Weyand and Kirsten [arXiv:1307.6055].
+\(\log(pq)\). This is the “composite orbit” difficulty stated explicitly by Kuipers,
+Hummel and Richter [arXiv:1307.6055; DOI `10.1103/PhysRevLett.112.070406`].
 
 **Conditional support lemma.** Assume edge lengths \(\{\log p\}\) are
 \(\mathbb Q\)-independent; require the periodic-orbit distribution to have support only
@@ -115,6 +129,8 @@ density mimics prime terms and repairs repetition signs by interference. It does
 produce one canonical finite-length graph, match the Riemann–von Mangoldt mean density,
 or prove that its generator spectrum equals the zeta zeros. A 2026 “prime bouquet”
 deposit (DOI `10.5281/zenodo.19589662`) is an unrefereed formal resonance construction.
+Exner's DOI `10.1088/1751-8113/43/9/095204` is a narrower no-go for
+Berry–Keating operators on compact graphs, not the general decoupling claim.
 Corpus direct count: **0**. **Supplies:** I3 and formal I4 for a genuine graph spectrum;
 I2 only by hand. **Cannot supply:** exact I1/I5 and the all-place prime-power trace
 without decoupling or unproved infinite cancellation. **Verdict: NO-GO for connected
@@ -128,7 +144,9 @@ f_8(\tau)=\eta(2\tau)^4\eta(4\tau)^4.
 \]
 It occurs as the \(H^3\) L-function of several rigid Calabi–Yau threefolds, including
 resolutions of self-fibre products of level-8 elliptic modular surfaces
-[Hulek–Verrill, arXiv:math/0504070; LMFDB 8.4.a.a]. Thus the TFPT \(\mu_4\) cusp channel
+[Meyer–Cynk, arXiv:math/0504070; LMFDB 8.4.a.a]. An explicit anchor is the
+Verrill/Fermi \(T_{70}\) threefold, birational to the \(W_0(8)\) self-fibre product;
+see Verrill, DOI `10.1006/jnth.1999.2449`. Thus the TFPT \(\mu_4\) cusp channel
 has a genuine rigid-CY3 arithmetic realization. This does **not** transfer RH for
 \(\zeta\): GRH for \(L(f_8,s)\) is a separate conjecture.
 
@@ -255,11 +273,14 @@ keine neu entdeckte Lösung.
 
 ## Primary references
 
-Dyson, *Notices AMS* 56 (2009), 212–223; Kurasov–Sarnak,
+Dyson, *Notices AMS* 56 (2009), 212–223; Arias de Reyna,
+arXiv:2402.10604; Kurasov–Sarnak,
 DOI `10.1063/5.0012286`; Lev–Olevskii, DOI `10.1007/s00222-014-0542-z`;
-Alon–Cohen–Vinzant, arXiv:2303.03201; Harrison–Weyand–Kirsten,
-arXiv:1307.6055; Berry–Keating, *SIAM Review* 41 (1999), 236–266;
-Hulek–Verrill, arXiv:math/0504070; Candelas–de la Ossa–Rodriguez-Villegas,
+Alon–Cohen–Vinzant, arXiv:2303.03201; Kuipers–Hummel–Richter,
+arXiv:1307.6055, DOI `10.1103/PhysRevLett.112.070406`; Berry–Keating,
+DOI `10.1137/S0036144598347497`;
+Meyer–Cynk, arXiv:math/0504070; Verrill, DOI `10.1006/jnth.1999.2449`;
+Candelas–de la Ossa–Rodriguez-Villegas,
 arXiv:hep-th/0012233; Deninger, arXiv:2301.11643; Álvarez López et al.,
 arXiv:2410.20758; Connes, DOI `10.1007/s000290050042`; Connes–Consani,
 arXiv:1507.05818; Lapidus–Maier, DOI `10.1112/jlms/52.1.15`;

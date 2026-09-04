@@ -10,6 +10,7 @@ digraph concepts {
   "archimedean-place" [label="Archimedean place of Q"];
   "arithmetic-geometry" [label="Arithmetic geometry"];
   "arithmetic-hodge-index" [label="Arithmetic Hodge index theorem"];
+  "arithmetic-topology-prime-knots" [label="Arithmetic topology of primes and knots"];
   "baez-duarte-criterion" [label="Báez-Duarte criterion"];
   "barrier-arch-compensation" [label="Archimedean compensation"];
   "barrier-circularity" [label="Renamed RH-equivalent / circularity"];
@@ -25,6 +26,7 @@ digraph concepts {
   "barrier-unimodularity" [label="Unimodularity / no half-density"];
   "barrier-world-blind" [label="World blindness"];
   "barrier-zero-denominator" [label="Zero-bearing denominator"];
+  "berkovich-bruhat-tits-geometry" [label="Berkovich and Bruhat-Tits local geometry"];
   "bernstein-function" [label="Bernstein function"];
   "berry-keating-dilation" [label="Berry–Keating dilation Hamiltonian"];
   "berry-keating-xp" [label="Berry–Keating xp Hamiltonian"];
@@ -35,6 +37,7 @@ digraph concepts {
   "bruhat-tits-tree" [label="Bruhat–Tits tree of PGL₂(Qₚ)"];
   "canonical-system-hamiltonian" [label="Zeta canonical-system Hamiltonian"];
   "carlson-theorem" [label="Carlson uniqueness theorem"];
+  "causal-spin-network-geometry" [label="Causal-set and spin-network geometry"];
   "census-qsm" [label="E8 census quantum statistical system"];
   "census-qsm-normflow" [label="Census QSM norm flow"];
   "chebyshev-psi" [label="Chebyshev ψ(x)"];
@@ -65,6 +68,7 @@ digraph concepts {
   "dirichlet-series-polytorus" [label="Dirichlet series on the polytorus"];
   "discrete-spectrum-neutrality" [label="Discrete-spectrum neutrality"];
   "dual-pair-language" [label="Dual-pair product language"];
+  "dyson-fourier-quasicrystal-criterion" [label="Renormalized Dyson Fourier-quasicrystal criterion"];
   "e8-cascade" [label="E8 cascade"];
   "e8-positive-lattice-norm" [label="E8 positive lattice norm"];
   "e8-sublattice-rg-semigroup" [label="E8 sublattice RG semigroup"];
@@ -87,8 +91,10 @@ digraph concepts {
   "finite-clock-commensurability" [label="Finite-clock commensurability"];
   "finite-family-target-mismatch" [label="Finite-family target mismatch"];
   "finite-infinite-place-balance" [label="Finite-infinite place balance"];
+  "finite-spectral-triple-zero-approximants" [label="Finite spectral-triple zero approximants"];
   "finite-weil-gns-metric" [label="Finite Weil GNS family metric"];
   "finite-weil-window" [label="Finite Weil window"];
+  "fourier-quasicrystal-geometry" [label="Fourier-quasicrystal geometry"];
   "fourier-transform" [label="Fourier transform"];
   "frequently-selected-aug-dual-resolvent" [label="FREQ cone theorem"];
   "functional-equation" [label="Zeta functional equation"];
@@ -116,14 +122,17 @@ digraph concepts {
   "hnf-groupoid" [label="HNF submodule correspondence groupoid"];
   "hodge-riemann-positivity-candidate" [label="Hodge and Riemann-bilinear positivity candidate"];
   "horizon-replica-positivity" [label="Horizon replica and area-law positivity"];
+  "hyperbolic-ruelle-dynamics" [label="Hyperbolic Ruelle-Selberg dynamics"];
   "hypercontractivity" [label="Hypercontractivity on the prime torus"];
   "i5-transport-ledger-criterion" [label="I5 transport-ledger criterion"];
   "index-flow-time" [label="Index-flow time evolution"];
   "index-modular-state" [label="Physical index-modular state"];
+  "infinite-rank-prime-fourier-module" [label="Infinite-rank prime Fourier module"];
   "inner-bridges" [label="Inner bridges"];
   "ising-lee-yang-compiler" [label="Ising/Lee–Yang compiler"];
   "jensen-hyperbolicity" [label="Jensen polynomial hyperbolicity"];
   "jensen-polynomials" [label="Jensen polynomials"];
+  "k3-hodge-lattice" [label="K3 Hodge lattice"];
   "kasteleyn-orientation-language" [label="Kasteleyn orientation language"];
   "knauf-arithmetic-statistical-system" [label="Knauf arithmetic quantum statistical system"];
   "kneser-groupoid" [label="Marked Kneser neighbour groupoid"];
@@ -133,6 +142,7 @@ digraph concepts {
   "lambda-star-ladder" [label="λ*(L) ladder"];
   "lambert-w" [label="Lambert W function"];
   "landau-widom-asymptotics" [label="Landau–Widom concentration asymptotics"];
+  "lapidus-maier-fractal-string-criterion" [label="Lapidus-Maier fractal-string criterion"];
   "laplace-transform" [label="Laplace transform"];
   "lee-yang-property" [label="Lee–Yang property"];
   "li-coefficients" [label="Li coefficients λₙ"];
@@ -143,6 +153,8 @@ digraph concepts {
   "matching-ledger-positivity" [label="Matching-ledger per-term positivity"];
   "mellin-transform" [label="Mellin transform"];
   "metric-by-operator-positivity" [label="Metric-by-operator positivity"];
+  "mobius-scale-group" [label="Möbius/metaplectic scale-line geometry"];
+  "mobius-strip-topology" [label="Möbius-strip topology"];
   "modular-clock" [label="Seam modular clock"];
   "modular-surface" [label="Modular surface"];
   "montgomery-conjecture" [label="Montgomery pair-correlation conjecture"];
@@ -153,6 +165,7 @@ digraph concepts {
   "newman-criterion" [label="Newman heat-flow criterion"];
   "no-archimedean-prime-joint-space" [label="No archimedean-prime joint space"];
   "no-canonical-integer-label" [label="No canonical integer state label"];
+  "no-composite-orbits" [label="No-composite-orbits barrier"];
   "nyman-beurling-criterion" [label="Nyman–Beurling criterion"];
   "nyman-beurling-space" [label="Nyman–Beurling closure space"];
   "obstruction-class" [label="Obstruction class"];
@@ -184,6 +197,9 @@ digraph concepts {
   "pure-gabor-family" [label="Pure Gabor test family"];
   "qca-dilation" [label="QCA unitary dilation"];
   "quadrep" [label="Quadrep"];
+  "quantum-graph-decoupling-lemma" [label="Conditional quantum-graph decoupling lemma"];
+  "quantum-metric-graph" [label="Quantum metric graph"];
+  "quantum-torus-geometry" [label="Quantum-torus and quantum-group geometry"];
   "quarter-shift-to-centre" [label="Quarter-shift to centre"];
   "quasilocal-hamiltonian-dynamics" [label="Quasilocal Hamiltonian dynamics"];
   "quillen-bfk-seam-determinants" [label="Quillen/BFK seam determinants"];
@@ -200,7 +216,9 @@ digraph concepts {
   "riemann-kernel" [label="Riemann kernel Φ(u)"];
   "riemann-xi" [label="Riemann xi function ξ(s)"];
   "riemann-zeta" [label="Riemann zeta function ζ(s)"];
+  "rigid-calabi-yau-f8" [label="Rigid Calabi-Yau realization of f8"];
   "rodgers-tao-theorem" [label="Rodgers–Tao theorem Λ≥0"];
+  "rosati-positive-geometry" [label="Rosati positivity mechanism"];
   "saddle-point-method" [label="Saddle-point method"];
   "scaling-site" [label="Connes–Consani scaling site"];
   "schoenberg-helical-embedding" [label="Schoenberg-Krein helical embedding"];
@@ -277,6 +295,8 @@ digraph concepts {
   "archimedean-place" -> "experiments/tfpt-discovery/moonshot_arch_glue_probe.py" [label="USED_BY"];
   "arithmetic-hodge-index" -> "analytic-object" [label="INSTANCE_OF"];
   "arithmetic-hodge-index" -> "weil-conjectures" [label="REQUIRES"];
+  "arithmetic-topology-prime-knots" -> "arithmetic-geometry" [label="INSTANCE_OF"];
+  "arithmetic-topology-prime-knots" -> "deninger-foliated-dynamics" [label="REQUIRES"];
   "baez-duarte-criterion" -> "riemann-hypothesis" [label="EQUIVALENT_TO"];
   "baez-duarte-criterion" -> "positivity-criterion" [label="INSTANCE_OF"];
   "baez-duarte-criterion" -> "nyman-beurling-criterion" [label="SPECIAL_CASE_OF"];
@@ -315,6 +335,8 @@ digraph concepts {
   "barrier-world-blind" -> "experiments/tfpt-discovery/gabor_first_contact_selberg_result.json" [label="USED_BY"];
   "barrier-world-blind" -> "verification/v964_lstar_coherence_census.py" [label="USED_BY"];
   "barrier-zero-denominator" -> "obstruction-class" [label="INSTANCE_OF"];
+  "berkovich-bruhat-tits-geometry" -> "arithmetic-geometry" [label="INSTANCE_OF"];
+  "berkovich-bruhat-tits-geometry" -> "scaling-site" [label="SPECIAL_CASE_OF"];
   "bernstein-function" -> "completely-monotone" [label="REQUIRES"];
   "berry-keating-dilation" -> "spectral-framework" [label="INSTANCE_OF"];
   "berry-keating-dilation" -> "berry-keating-xp" [label="SPECIAL_CASE_OF"];
@@ -339,6 +361,8 @@ digraph concepts {
   "canonical-system-hamiltonian" -> "screw-function-criterion" [label="REQUIRES"];
   "carlson-theorem" -> "analytic-object" [label="INSTANCE_OF"];
   "carlson-theorem" -> "vitali-montel" [label="REQUIRES"];
+  "causal-spin-network-geometry" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
+  "causal-spin-network-geometry" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "census-qsm" -> "euler-side-blindness" [label="BLOCKED_BY"];
   "census-qsm" -> "no-canonical-integer-label" [label="BLOCKED_BY"];
   "census-qsm" -> "analytic-object" [label="INSTANCE_OF"];
@@ -401,6 +425,7 @@ digraph concepts {
   "deninger-cohomology" -> "spectral-framework" [label="INSTANCE_OF"];
   "deninger-cohomology" -> "hilbert-polya-operator" [label="WOULD_CLOSE"];
   "deninger-foliated-dynamics" -> "spectral-framework" [label="INSTANCE_OF"];
+  "deninger-foliated-dynamics" -> "stochastic-scale-semigroup-on-connes-cokernel" [label="REDUCES_TO"];
   "deninger-foliated-dynamics" -> "deninger-cohomology" [label="SPECIAL_CASE_OF"];
   "deninger-foliated-dynamics" -> "event-log-function" [label="WOULD_CLOSE"];
   "dirichlet-series-polytorus" -> "analytic-object" [label="INSTANCE_OF"];
@@ -409,6 +434,9 @@ digraph concepts {
   "dual-pair-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "dual-pair-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "dual-pair-language" -> "spectral-framework" [label="INSTANCE_OF"];
+  "dyson-fourier-quasicrystal-criterion" -> "weil-positivity" [label="EQUIVALENT_TO"];
+  "dyson-fourier-quasicrystal-criterion" -> "analytic-object" [label="INSTANCE_OF"];
+  "dyson-fourier-quasicrystal-criterion" -> "fourier-quasicrystal-geometry" [label="REQUIRES"];
   "e8-cascade" -> "finite-clock-commensurability" [label="BLOCKED_BY"];
   "e8-cascade" -> "tfpt-compiler" [label="INSTANCE_OF"];
   "e8-cascade" -> "tfpt-e8-lattice" [label="REQUIRES"];
@@ -475,6 +503,9 @@ digraph concepts {
   "finite-infinite-place-balance" -> "analytic-object" [label="INSTANCE_OF"];
   "finite-infinite-place-balance" -> "archimedean-place" [label="REQUIRES"];
   "finite-infinite-place-balance" -> "weil-positivity" [label="REQUIRES"];
+  "finite-spectral-triple-zero-approximants" -> "spectral-framework" [label="INSTANCE_OF"];
+  "finite-spectral-triple-zero-approximants" -> "w2-form-density" [label="REQUIRES"];
+  "finite-spectral-triple-zero-approximants" -> "hilbert-polya-operator" [label="WOULD_CLOSE"];
   "finite-weil-gns-metric" -> "finite-family-target-mismatch" [label="BLOCKED_BY"];
   "finite-weil-gns-metric" -> "analytic-object" [label="INSTANCE_OF"];
   "finite-weil-window" -> "barrier-finite-window-ceiling" [label="BLOCKED_BY"];
@@ -490,6 +521,8 @@ digraph concepts {
   "finite-weil-window" -> "experiments/tfpt-discovery/w2_form_density_probe.py" [label="USED_BY"];
   "finite-weil-window" -> "notes/arxiv_w1_note/note_w1_suzuki_identification.tex" [label="USED_BY"];
   "finite-weil-window" -> "verification/v861_krein_normalform_lean.py" [label="USED_BY"];
+  "fourier-quasicrystal-geometry" -> "infinite-rank-prime-fourier-module" [label="BLOCKED_BY"];
+  "fourier-quasicrystal-geometry" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "fourier-transform" -> "spectral-framework" [label="INSTANCE_OF"];
   "frequently-selected-aug-dual-resolvent" -> "research-question" [label="INSTANCE_OF"];
   "frequently-selected-aug-dual-resolvent" -> "lstar-statement" [label="REQUIRES"];
@@ -602,6 +635,8 @@ digraph concepts {
   "hodge-riemann-positivity-candidate" -> "analytic-object" [label="INSTANCE_OF"];
   "horizon-replica-positivity" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "horizon-replica-positivity" -> "analytic-object" [label="INSTANCE_OF"];
+  "hyperbolic-ruelle-dynamics" -> "no-composite-orbits" [label="BLOCKED_BY"];
+  "hyperbolic-ruelle-dynamics" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "hypercontractivity" -> "analytic-object" [label="INSTANCE_OF"];
   "hypercontractivity" -> "prime-torus" [label="REQUIRES"];
   "i5-transport-ledger-criterion" -> "weil-positivity" [label="EQUIVALENT_TO"];
@@ -611,6 +646,8 @@ digraph concepts {
   "index-flow-time" -> "spectral-framework" [label="INSTANCE_OF"];
   "index-modular-state" -> "research-question" [label="INSTANCE_OF"];
   "index-modular-state" -> "event-log-function" [label="WOULD_CLOSE"];
+  "infinite-rank-prime-fourier-module" -> "analytic-object" [label="INSTANCE_OF"];
+  "infinite-rank-prime-fourier-module" -> "prime-torus" [label="REALIZES"];
   "inner-bridges" -> "tfpt-compiler" [label="INSTANCE_OF"];
   "inner-bridges" -> "outer-bridges" [label="REQUIRES"];
   "inner-bridges" -> "rh/lean/RH/InnerBridges.lean" [label="USED_BY"];
@@ -625,6 +662,8 @@ digraph concepts {
   "jensen-polynomials" -> "riemann-xi" [label="REQUIRES"];
   "jensen-polynomials" -> "toeplitz-positivity" [label="REQUIRES"];
   "jensen-polynomials" -> "experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py" [label="USED_BY"];
+  "k3-hodge-lattice" -> "analytic-object" [label="INSTANCE_OF"];
+  "k3-hodge-lattice" -> "hodge-riemann-positivity-candidate" [label="INSTANCE_OF"];
   "kasteleyn-orientation-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "kasteleyn-orientation-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "kasteleyn-orientation-language" -> "spectral-framework" [label="INSTANCE_OF"];
@@ -651,6 +690,8 @@ digraph concepts {
   "lambert-w" -> "mellin-transform" [label="REQUIRES"];
   "lambert-w" -> "saddle-point-method" [label="REQUIRES"];
   "landau-widom-asymptotics" -> "analytic-object" [label="INSTANCE_OF"];
+  "lapidus-maier-fractal-string-criterion" -> "weil-positivity" [label="EQUIVALENT_TO"];
+  "lapidus-maier-fractal-string-criterion" -> "analytic-object" [label="INSTANCE_OF"];
   "laplace-transform" -> "spectral-framework" [label="INSTANCE_OF"];
   "laplace-transform" -> "mellin-transform" [label="TRANSFORM_OF"];
   "lee-yang-property" -> "positivity-criterion" [label="INSTANCE_OF"];
@@ -675,6 +716,10 @@ digraph concepts {
   "mellin-transform" -> "spectral-framework" [label="INSTANCE_OF"];
   "mellin-transform" -> "fourier-transform" [label="TRANSFORM_OF"];
   "metric-by-operator-positivity" -> "spectral-framework" [label="INSTANCE_OF"];
+  "mobius-scale-group" -> "spectral-framework" [label="INSTANCE_OF"];
+  "mobius-scale-group" -> "connes-adele-scaling-flow" [label="REDUCES_TO"];
+  "mobius-strip-topology" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
+  "mobius-strip-topology" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "modular-clock" -> "no-canonical-integer-label" [label="BLOCKED_BY"];
   "modular-clock" -> "spectral-framework" [label="INSTANCE_OF"];
   "modular-clock" -> "census-qsm" [label="WOULD_CLOSE"];
@@ -697,6 +742,8 @@ digraph concepts {
   "newman-criterion" -> "debruijn-newman-constant" [label="REQUIRES"];
   "no-archimedean-prime-joint-space" -> "obstruction-class" [label="INSTANCE_OF"];
   "no-canonical-integer-label" -> "obstruction-class" [label="INSTANCE_OF"];
+  "no-composite-orbits" -> "obstruction-class" [label="INSTANCE_OF"];
+  "no-composite-orbits" -> "adele-class-space" [label="REQUIRES"];
   "nyman-beurling-criterion" -> "hardy-space-h2" [label="DUAL_TO"];
   "nyman-beurling-criterion" -> "riemann-hypothesis" [label="EQUIVALENT_TO"];
   "nyman-beurling-criterion" -> "positivity-criterion" [label="INSTANCE_OF"];
@@ -787,6 +834,12 @@ digraph concepts {
   "quadrep" -> "inner-bridges" [label="REQUIRES"];
   "quadrep" -> "rh/problem/quadrep.pdf" [label="USED_BY"];
   "quadrep" -> "rh/problem/quadrep.tex" [label="USED_BY"];
+  "quantum-graph-decoupling-lemma" -> "analytic-object" [label="INSTANCE_OF"];
+  "quantum-graph-decoupling-lemma" -> "no-composite-orbits" [label="REDUCES_TO"];
+  "quantum-metric-graph" -> "no-composite-orbits" [label="BLOCKED_BY"];
+  "quantum-metric-graph" -> "arithmetic-geometry" [label="INSTANCE_OF"];
+  "quantum-torus-geometry" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
+  "quantum-torus-geometry" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "quarter-shift-to-centre" -> "obstruction-class" [label="INSTANCE_OF"];
   "quasilocal-hamiltonian-dynamics" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
   "quasilocal-hamiltonian-dynamics" -> "spectral-framework" [label="INSTANCE_OF"];
@@ -846,8 +899,13 @@ digraph concepts {
   "riemann-xi" -> "riemann-zeta" [label="TRANSFORM_OF"];
   "riemann-zeta" -> "analytic-object" [label="INSTANCE_OF"];
   "riemann-zeta" -> "riemann-xi" [label="REQUIRES"];
+  "rigid-calabi-yau-f8" -> "analytic-object" [label="INSTANCE_OF"];
+  "rigid-calabi-yau-f8" -> "weight4-gl1-transport" [label="INSTANCE_OF"];
+  "rigid-calabi-yau-f8" -> "experiments/tfpt-discovery/cuspidal_bridge_probe.py" [label="USED_BY"];
   "rodgers-tao-theorem" -> "debruijn-newman-constant" [label="IMPLIES"];
   "rodgers-tao-theorem" -> "analytic-object" [label="INSTANCE_OF"];
+  "rosati-positive-geometry" -> "positive-cone-blindness" [label="BLOCKED_BY"];
+  "rosati-positive-geometry" -> "analytic-object" [label="INSTANCE_OF"];
   "saddle-point-method" -> "spectral-framework" [label="INSTANCE_OF"];
   "saddle-point-method" -> "mellin-transform" [label="REQUIRES"];
   "scaling-site" -> "adele-class-space" [label="GENERALIZES"];
@@ -919,6 +977,7 @@ digraph concepts {
   "stochastic-scale-semigroup-on-connes-cokernel" -> "no-canonical-integer-label" [label="BLOCKED_BY"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "research-question" [label="INSTANCE_OF"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "adele-class-space" [label="REQUIRES"];
+  "stochastic-scale-semigroup-on-connes-cokernel" -> "no-composite-orbits" [label="REQUIRES"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "self-dual-measure" [label="REQUIRES"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "unitarity-of-emergent-time" [label="REQUIRES"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "hilbert-polya-operator" [label="WOULD_CLOSE"];

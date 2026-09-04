@@ -10,6 +10,7 @@ archimedean-dominance,Archimedean dominance criterion,CRITERION,CLASSICAL,false,
 archimedean-place,Archimedean place of Q,OBJECT,CLASSICAL,true,1
 arithmetic-geometry,Arithmetic geometry,CLASS,CLASSICAL,false,0
 arithmetic-hodge-index,Arithmetic Hodge index theorem,THEOREM,CLASSICAL,true,0
+arithmetic-topology-prime-knots,Arithmetic topology of primes and knots,GEOMETRY,CLASSICAL,false,0
 baez-duarte-criterion,Báez-Duarte criterion,CRITERION,CLASSICAL,true,2
 barrier-arch-compensation,Archimedean compensation,BARRIER,KILLED_HERE,false,0
 barrier-circularity,Renamed RH-equivalent / circularity,BARRIER,KILLED_HERE,true,10
@@ -25,6 +26,7 @@ barrier-structural-mismatch,Structural mismatch,BARRIER,KILLED_HERE,false,0
 barrier-unimodularity,Unimodularity / no half-density,BARRIER,KILLED_HERE,true,1
 barrier-world-blind,World blindness,BARRIER,KILLED_HERE,true,3
 barrier-zero-denominator,Zero-bearing denominator,BARRIER,KILLED_HERE,false,0
+berkovich-bruhat-tits-geometry,Berkovich and Bruhat-Tits local geometry,GEOMETRY,CLASSICAL,false,0
 bernstein-function,Bernstein function,CLASS,CLASSICAL,false,0
 berry-keating-dilation,Berry–Keating dilation Hamiltonian,METHOD,CONJECTURAL,false,0
 berry-keating-xp,Berry–Keating xp Hamiltonian,OPERATOR,CONJECTURAL,false,0
@@ -35,6 +37,7 @@ bost-connes-system,Bost–Connes system,OBJECT,CLASSICAL,false,1
 bruhat-tits-tree,Bruhat–Tits tree of PGL₂(Qₚ),GEOMETRY,CLASSICAL,false,0
 canonical-system-hamiltonian,Zeta canonical-system Hamiltonian,OPERATOR,OPEN,false,0
 carlson-theorem,Carlson uniqueness theorem,THEOREM,CLASSICAL,true,0
+causal-spin-network-geometry,Causal-set and spin-network geometry,GEOMETRY,CLASSICAL,false,0
 census-qsm,E8 census quantum statistical system,OBJECT,OPEN,false,0
 census-qsm-normflow,Census QSM norm flow,OBJECT,PROVED_HERE,false,0
 chebyshev-psi,Chebyshev ψ(x),OBJECT,CLASSICAL,false,0
@@ -65,6 +68,7 @@ deninger-foliated-dynamics,Deninger foliated dynamics,METHOD,CONJECTURAL,false,0
 dirichlet-series-polytorus,Dirichlet series on the polytorus,OBJECT,CLASSICAL,false,0
 discrete-spectrum-neutrality,Discrete-spectrum neutrality,BARRIER,PROVED_HERE,false,0
 dual-pair-language,Dual-pair product language,METHOD,PROVED_HERE,false,0
+dyson-fourier-quasicrystal-criterion,Renormalized Dyson Fourier-quasicrystal criterion,THEOREM,CLASSICAL,true,0
 e8-cascade,E8 cascade,TFPT_STRUCTURE,PROVED_HERE,false,0
 e8-positive-lattice-norm,E8 positive lattice norm,OBJECT,PROVED_HERE,false,0
 e8-sublattice-rg-semigroup,E8 sublattice RG semigroup,OBJECT,CLASSICAL,false,0
@@ -87,8 +91,10 @@ farkas-witness-n-mod-8,Farkas witness n≡6 mod 8,BARRIER,PROVED_HERE,false,0
 finite-clock-commensurability,Finite-clock commensurability,BARRIER,PROVED_HERE,false,0
 finite-family-target-mismatch,Finite-family target mismatch,BARRIER,OPEN,false,0
 finite-infinite-place-balance,Finite-infinite place balance,THEOREM,CLASSICAL,true,0
+finite-spectral-triple-zero-approximants,Finite spectral-triple zero approximants,OPERATOR,OPEN,false,0
 finite-weil-gns-metric,Finite Weil GNS family metric,OBJECT,OPEN,false,0
 finite-weil-window,Finite Weil window,OBJECT,PROVED_HERE,true,9
+fourier-quasicrystal-geometry,Fourier-quasicrystal geometry,GEOMETRY,CLASSICAL,false,0
 fourier-transform,Fourier transform,METHOD,CLASSICAL,false,0
 frequently-selected-aug-dual-resolvent,FREQ cone theorem,OPEN_QUESTION,OPEN,false,0
 functional-equation,Zeta functional equation,THEOREM,CLASSICAL,true,1
@@ -116,14 +122,17 @@ hilbert-polya-operator,Hilbert–Pólya operator,OPERATOR,CONJECTURAL,true,6
 hnf-groupoid,HNF submodule correspondence groupoid,OBJECT,KILLED_HERE,true,1
 hodge-riemann-positivity-candidate,Hodge and Riemann-bilinear positivity candidate,OBJECT,OPEN,false,0
 horizon-replica-positivity,Horizon replica and area-law positivity,THEOREM,PROVED_HERE,false,0
+hyperbolic-ruelle-dynamics,Hyperbolic Ruelle-Selberg dynamics,GEOMETRY,CLASSICAL,false,0
 hypercontractivity,Hypercontractivity on the prime torus,THEOREM,CLASSICAL,true,0
 i5-transport-ledger-criterion,I5 transport-ledger criterion,CRITERION,PROVED_HERE,true,2
 index-flow-time,Index-flow time evolution,OPERATOR,PROVED_HERE,false,0
 index-modular-state,Physical index-modular state,OPEN_QUESTION,OPEN,false,0
+infinite-rank-prime-fourier-module,Infinite-rank prime Fourier module,INVARIANT,CLASSICAL,false,0
 inner-bridges,Inner bridges,TFPT_STRUCTURE,PROVED_HERE,true,3
 ising-lee-yang-compiler,Ising/Lee–Yang compiler,METHOD,OPEN,false,0
 jensen-hyperbolicity,Jensen polynomial hyperbolicity,CRITERION,CLASSICAL,false,0
 jensen-polynomials,Jensen polynomials,OBJECT,CLASSICAL,true,1
+k3-hodge-lattice,K3 Hodge lattice,OBJECT,CLASSICAL,false,0
 kasteleyn-orientation-language,Kasteleyn orientation language,METHOD,PROVED_HERE,false,0
 knauf-arithmetic-statistical-system,Knauf arithmetic quantum statistical system,OBJECT,CLASSICAL,false,0
 kneser-groupoid,Marked Kneser neighbour groupoid,OBJECT,KILLED_HERE,true,1
@@ -133,6 +142,7 @@ laguerre-polya-class,Laguerre–Pólya class,CLASS,CLASSICAL,true,1
 lambda-star-ladder,λ*(L) ladder,INVARIANT,OPEN,true,4
 lambert-w,Lambert W function,OBJECT,CLASSICAL,false,0
 landau-widom-asymptotics,Landau–Widom concentration asymptotics,THEOREM,CLASSICAL,true,0
+lapidus-maier-fractal-string-criterion,Lapidus-Maier fractal-string criterion,THEOREM,CLASSICAL,true,0
 laplace-transform,Laplace transform,METHOD,CLASSICAL,false,0
 lee-yang-property,Lee–Yang property,CRITERION,CLASSICAL,false,0
 li-coefficients,Li coefficients λₙ,INVARIANT,CLASSICAL,false,0
@@ -143,6 +153,8 @@ markov-qca-unitary-dilation,Markov QCA unitary dilation,OPERATOR,PROVED_HERE,fal
 matching-ledger-positivity,Matching-ledger per-term positivity,THEOREM,PROVED_HERE,false,0
 mellin-transform,Mellin transform,METHOD,CLASSICAL,false,0
 metric-by-operator-positivity,Metric-by-operator positivity,METHOD,CLASSICAL,false,0
+mobius-scale-group,Möbius/metaplectic scale-line geometry,METHOD,CLASSICAL,false,0
+mobius-strip-topology,Möbius-strip topology,GEOMETRY,CLASSICAL,false,0
 modular-clock,Seam modular clock,OPERATOR,PROVED_HERE,false,0
 modular-surface,Modular surface,GEOMETRY,CLASSICAL,false,0
 montgomery-conjecture,Montgomery pair-correlation conjecture,OPEN_QUESTION,OPEN,false,0
@@ -153,6 +165,7 @@ narrowband-weil,Narrowband Weil probe,METHOD,OPEN,true,3
 newman-criterion,Newman heat-flow criterion,CRITERION,CLASSICAL,false,0
 no-archimedean-prime-joint-space,No archimedean-prime joint space,BARRIER,OPEN,false,0
 no-canonical-integer-label,No canonical integer state label,BARRIER,PROVED_HERE,false,0
+no-composite-orbits,No-composite-orbits barrier,BARRIER,CLASSICAL,false,0
 nyman-beurling-criterion,Nyman–Beurling criterion,CRITERION,CLASSICAL,true,3
 nyman-beurling-space,Nyman–Beurling closure space,OBJECT,CLASSICAL,false,0
 obstruction-class,Obstruction class,CLASS,CLASSICAL,false,0
@@ -184,6 +197,9 @@ prolate-operator,Prolate spheroidal concentration operator,OPERATOR,CLASSICAL,tr
 pure-gabor-family,Pure Gabor test family,CLASS,FORMALIZED_LEAN,true,1
 qca-dilation,QCA unitary dilation,OBJECT,PROVED_HERE,false,0
 quadrep,Quadrep,TFPT_STRUCTURE,PROVED_HERE,true,2
+quantum-graph-decoupling-lemma,Conditional quantum-graph decoupling lemma,THEOREM,CLASSICAL,true,0
+quantum-metric-graph,Quantum metric graph,GEOMETRY,CLASSICAL,false,0
+quantum-torus-geometry,Quantum-torus and quantum-group geometry,GEOMETRY,CLASSICAL,false,0
 quarter-shift-to-centre,Quarter-shift to centre,BARRIER,PROVED_HERE,false,0
 quasilocal-hamiltonian-dynamics,Quasilocal Hamiltonian dynamics,OPERATOR,PROVED_HERE,false,0
 quillen-bfk-seam-determinants,Quillen/BFK seam determinants,OBJECT,CLASSICAL,true,2
@@ -200,7 +216,9 @@ riemann-hypothesis,Riemann Hypothesis,OPEN_QUESTION,OPEN,false,0
 riemann-kernel,Riemann kernel Φ(u),OBJECT,CLASSICAL,true,1
 riemann-xi,Riemann xi function ξ(s),OBJECT,CLASSICAL,false,0
 riemann-zeta,Riemann zeta function ζ(s),OBJECT,CLASSICAL,false,0
+rigid-calabi-yau-f8,Rigid Calabi-Yau realization of f8,OBJECT,CLASSICAL,true,1
 rodgers-tao-theorem,Rodgers–Tao theorem Λ≥0,THEOREM,CLASSICAL,true,0
+rosati-positive-geometry,Rosati positivity mechanism,THEOREM,CLASSICAL,true,0
 saddle-point-method,Saddle-point method,METHOD,CLASSICAL,false,0
 scaling-site,Connes–Consani scaling site,GEOMETRY,CLASSICAL,false,0
 schoenberg-helical-embedding,Schoenberg-Krein helical embedding,THEOREM,CLASSICAL,true,0

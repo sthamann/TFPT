@@ -58,14 +58,8 @@
         "xi-fourier-function"
       ],
       "covered_global_scaling_program": [
-        "additive-adeles",
-        "adele-class-space",
-        "arakelov-intersection",
         "berry-keating-dilation",
-        "connes-adele-scaling-flow",
         "connes-trace-formula",
-        "deninger-cohomology",
-        "deninger-foliated-dynamics",
         "scaling-site"
       ],
       "known_corpus_kill_or_no_bridge": [
@@ -82,8 +76,15 @@
         "static-prime-event-log"
       ]
     },
-    "b_genuinely_unexamined_shape_relevant": [],
-    "b_explanation": "The only shape-complete open candidate is already mapped as stochastic-scale-semigroup-on-connes-cokernel; Deninger and Arakelov are covered formulations of its missing arithmetic/all-place realization.",
+    "b_genuinely_unexamined_shape_relevant": [
+      "adele-class-space",
+      "additive-adeles",
+      "arakelov-intersection",
+      "connes-adele-scaling-flow",
+      "deninger-cohomology",
+      "deninger-foliated-dynamics"
+    ],
+    "b_explanation": "These are zero-attempt map components, not newly discovered finished frameworks. Together they reduce to the already-recorded stochastic-scale-semigroup-on-connes-cokernel or an equivalent all-place Deninger/Arakelov realization. The Ising/Lee-Yang compiler stays in (a) because it reduces to a criterion and does not supply I4.",
     "c_unexamined_but_shape_irrelevant": [
       "bruhat-tits-tree",
       "chebyshev-psi",
@@ -109,37 +110,65 @@
       "rh/paper/rh_program.tex",
       "experiments/tfpt-discovery/*.py"
     ],
-    "warning": "Counts are case-insensitive broad-regex line counts and include family labels and arithmetic uses of Mobius.",
+    "warning": "Focused counts are case-insensitive file/line counts over the requested corpus surfaces; broad family labels and generic arithmetic uses are excluded where possible.",
     "quasicrystals": {
-      "count": 138,
+      "files": 10,
+      "lines": 22,
       "best_hits": [
-        "experiments/tfpt-discovery/fractal_selfsimilarity_hunt.py:12",
-        "experiments/tfpt-discovery/fractal_selfsimilarity_hunt.py:287",
+        "experiments/tfpt-discovery/recursive_crystal.py:6",
+        "experiments/tfpt-discovery/fractal_selfsimilarity_hunt.py:4",
+        "experiments/tfpt-discovery/tfpt_decagonal.py:3",
         "rh/catalog/map node ising-lee-yang-compiler",
         "rh/catalog/map node prime-torus"
-      ]
+      ],
+      "meyer_set_hits": 0
     },
     "quantum_graphs": {
-      "count": 0,
+      "files": 0,
+      "lines": 0,
       "best_hits": []
     },
     "calabi_yau": {
-      "literal_count": 3,
+      "files": 53,
+      "lines": 132,
       "best_hits": [
-        "experiments/tfpt-discovery/celestial_seam_wp5e_beta_equivariant_inflow_probe.py:799",
+        "experiments/tfpt-discovery/qf_spectral_bundle_probe.py:14",
+        "experiments/tfpt-discovery/uvarov_two_point_probe.py:10",
+        "tfpt_prime_front.tex:8",
         "experiments/tfpt-discovery/cuspidal_bridge_probe.py:111 (f8 identity)"
       ]
     },
-    "mobius": {
-      "count": 393,
+    "arithmetic_topology": {
+      "files": 352,
+      "lines": 1808,
       "best_hits": [
+        "experiments/tfpt-discovery/pinch_attack_probe.py:35",
+        "tfpt_prime_front.tex:29",
+        "rh/catalog/rh_semantic_catalog.json:48"
+      ]
+    },
+    "mobius": {
+      "files": 50,
+      "lines": 171,
+      "best_hits": [
+        "experiments/tfpt-discovery/seam_clifford_modular_s_probe.py:23",
+        "experiments/tfpt-discovery/rtf_stabilization_probe.py:12",
         "experiments/tfpt-discovery/mobius_crossratio_firewall_probe.py",
         "experiments/tfpt-discovery/seam_cover_forcing_probe.py:11",
         "rh/catalog/map node koide-mobius-flow"
       ]
     },
+    "fractal_strings": {
+      "files": 5,
+      "lines": 18,
+      "best_hits": [
+        "experiments/tfpt-discovery/fractal_selfsimilarity_hunt.py:11",
+        "experiments/tfpt-discovery/fractal_hunt_visuals.py:3"
+      ]
+    },
     "quantum_geometries": {
-      "count": 78,
+      "files": 46,
+      "lines": 90,
       "best_hits": [
         "experiments/tfpt-discovery/gabor_tropical_heat_probe.py",
         "experiments/tfpt-discovery/fractal_selfsimilarity_hunt.py",
@@ -274,8 +303,8 @@
       "supplies": ["geometric-Hilbert-structures"],
       "cannot_supply": ["I2", "I4", "I5"],
       "obstruction": "No accepted direct zeta/RH arithmetic mechanism was found.",
-      "verdict": "UNEXAMINED-WORTH-A-CONTRACT",
-      "qualification": "Rejected as shape-irrelevant, so no contract."
+      "verdict": "NEUTRAL",
+      "qualification": "Unexamined but shape-irrelevant, so no contract."
     }
   ],
   "frozen_contract": [
