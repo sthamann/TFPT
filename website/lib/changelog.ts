@@ -42,6 +42,1135 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-09-04",
+    "dateLabel": "2026-09-04 · CLV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(r475-repair Lean audit of the selected-path arch tent rate; NO ledger row, NO marker move: "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01"
+      },
+      {
+        "k": "t",
+        "v": " is experiments-side). The named Prop "
+      },
+      {
+        "k": "c",
+        "v": "SelectedArchErrorQuadraticRate"
+      },
+      {
+        "k": "t",
+        "v": " with fixed constant "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{archRateConst}=4(1+1/64)^2=4.1259765625"
+      },
+      {
+        "k": "t",
+        "v": " is FALSIFIED in the small-support regime ("
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{steps}=1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{meshExp}=6"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "x_0=1"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{err}_{\\mathrm{arch}}/\\Delta^2=8.0283458222>4.1259765625"
+      },
+      {
+        "k": "t",
+        "v": "; also "
+      },
+      {
+        "k": "m",
+        "v": "4.4488"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "7.13"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "7.24"
+      },
+      {
+        "k": "t",
+        "v": "); the endpoint-kink defect "
+      },
+      {
+        "k": "m",
+        "v": "-\\theta(1-\\theta)/2"
+      },
+      {
+        "k": "t",
+        "v": " is proved exactly. The "
+      },
+      {
+        "k": "m",
+        "v": "O(\\Delta^2)"
+      },
+      {
+        "k": "t",
+        "v": " rate itself is not refuted — large-support ratios "
+      },
+      {
+        "k": "m",
+        "v": "3.9893"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "k=5"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "m",
+        "v": "3.8466"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "k=9"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "12"
+      },
+      {
+        "k": "t",
+        "v": ") from "
+      },
+      {
+        "k": "c",
+        "v": "arch_rate_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ") and "
+      },
+      {
+        "k": "c",
+        "v": "verify_arch_rate.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "6/6"
+      },
+      {
+        "k": "t",
+        "v": "). Additive Lean repair "
+      },
+      {
+        "k": "c",
+        "v": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"
+      },
+      {
+        "k": "t",
+        "v": ": "
+      },
+      {
+        "k": "c",
+        "v": "SelectedArchErrorQuadraticRateExists"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\exists C(f)"
+      },
+      {
+        "k": "t",
+        "v": ") is the correct interface; "
+      },
+      {
+        "k": "c",
+        "v": "selectedArchError_tendsto_zero_of_rateExists"
+      },
+      {
+        "k": "t",
+        "v": " proved; "
+      },
+      {
+        "k": "c",
+        "v": "SelectedArchWeightedInterpolationEstimate"
+      },
+      {
+        "k": "t",
+        "v": " OPEN. Lean build "
+      },
+      {
+        "k": "m",
+        "v": "3578"
+      },
+      {
+        "k": "t",
+        "v": " jobs green; five protected sorries unchanged. Catalog "
+      },
+      {
+        "k": "c",
+        "v": "part_18"
+      },
+      {
+        "k": "t",
+        "v": " KILLED/"
+      },
+      {
+        "k": "c",
+        "v": "LOSSY_CONSTANT"
+      },
+      {
+        "k": "t",
+        "v": ". NO RH CLAIM. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "rh/README.md"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "rh/INVENTORY.json"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "rh/lean/README.md"
+      },
+      {
+        "k": "t",
+        "v": ", website "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-04",
+    "dateLabel": "2026-09-04 · CLIV",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(TEL-B reduction absorbed into the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.MMST.TYPEIII.CHARGED.01"
+      },
+      {
+        "k": "t",
+        "v": " contract text and ledger row; NO marker move, status stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "). The standalone note "
+      },
+      {
+        "k": "c",
+        "v": "articles/2026-09-04/telb_bound_b_sketch.tex"
+      },
+      {
+        "k": "t",
+        "v": " is superseded and removed: the contract is now the single home. Cover identity "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " sawtooth split "
+      },
+      {
+        "k": "m",
+        "v": "R_N=R^{\\mathrm{sm}}_N+M_N"
+      },
+      {
+        "k": "t",
+        "v": "; bound (A) certified numerically for all "
+      },
+      {
+        "k": "m",
+        "v": "N"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "\\lVert R^{\\mathrm{sm}}_N\\rVert\\le1.7833"
+      },
+      {
+        "k": "t",
+        "v": ", all-mode BV, one float64 TV constant); bound (B) reduced to "
+      },
+      {
+        "k": "m",
+        "v": "\\sum\\lvert\\mathrm{Res}_N\\rvert^2\\le0.2769"
+      },
+      {
+        "k": "t",
+        "v": " (measured "
+      },
+      {
+        "k": "m",
+        "v": "0.1550"
+      },
+      {
+        "k": "t",
+        "v": "), open items C1/C2a/C2b. Residual restated as TEL-B-EXTERNAL (2026-09-04 reduction); the "
+      },
+      {
+        "k": "m",
+        "v": "A_R<43"
+      },
+      {
+        "k": "t",
+        "v": " dyadic-increment route is superseded (measured "
+      },
+      {
+        "k": "m",
+        "v": "A_R=0.1238"
+      },
+      {
+        "k": "t",
+        "v": " at r645, no longer the route). Numerically "
+      },
+      {
+        "k": "m",
+        "v": "2.57<3"
+      },
+      {
+        "k": "t",
+        "v": ", conditional analytic "
+      },
+      {
+        "k": "m",
+        "v": "2.9495<3"
+      },
+      {
+        "k": "t",
+        "v": "; analytically open. Evidence (experiments, not "
+      },
+      {
+        "k": "c",
+        "v": "veri"
+      },
+      {
+        "k": "t",
+        "v": "-citable): "
+      },
+      {
+        "k": "c",
+        "v": "mmst_telb_trace_decomposition_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "mmst_telb_cover_split_probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "mmst_telb_bound_a_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": "), "
+      },
+      {
+        "k": "c",
+        "v": "mmst_telb_bound_b_probe.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "17/20"
+      },
+      {
+        "k": "t",
+        "v": ", G18–G20 open by design). Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (new TEL-B reduction subsection); ledger row claim text only; website "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-04",
+    "dateLabel": "2026-09-04 · CLIII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(spectator-sector obstruction graduates as "
+      },
+      {
+        "k": "c",
+        "v": "v1020"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1012 \\to 1013"
+      },
+      {
+        "k": "t",
+        "v": ", ledger "
+      },
+      {
+        "k": "m",
+        "v": "1177 \\to 1178"
+      },
+      {
+        "k": "t",
+        "v": ", one new row "
+      },
+      {
+        "k": "c",
+        "v": "BULK.PRIME_COMPLETION.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "and one existing row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.BULK4D.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "annotated (NO marker move, NO status change); Python-only / Wolfram mirror deferred as for v974–v1019, engine still "
+      },
+      {
+        "k": "c",
+        "v": "DEFERRED_NO_ENGINE"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "c",
+        "v": "v1020_ spectator_ sector_ obstruction.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\sim 25"
+      },
+      {
+        "k": "t",
+        "v": " s): finite free-fermion witness for the spectator-sector obstruction, re-derived (no probe imports) from the r644 audit harvest ("
+      },
+      {
+        "k": "c",
+        "v": "spectator_ sector_ obstruction_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "9/9"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "27.7"
+      },
+      {
+        "k": "t",
+        "v": " s, verdict "
+      },
+      {
+        "k": "c",
+        "v": "OBSTRUCTION_WITNESSED_AND_REPAIR_SEPARATES"
+      },
+      {
+        "k": "t",
+        "v": ", SPEC "
+      },
+      {
+        "k": "c",
+        "v": "07169b54"
+      },
+      {
+        "k": "t",
+        "v": "…, FILE "
+      },
+      {
+        "k": "c",
+        "v": "7f58f498"
+      },
+      {
+        "k": "t",
+        "v": "…). Stacking a decoupled trivial gapped sector "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "M{=}3"
+      },
+      {
+        "k": "t",
+        "v": ", Chern "
+      },
+      {
+        "k": "m",
+        "v": "0"
+      },
+      {
+        "k": "t",
+        "v": ", gap "
+      },
+      {
+        "k": "m",
+        "v": "{\\ge}1.095"
+      },
+      {
+        "k": "t",
+        "v": ") onto the seam model "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "M{=}1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "N_Y{=}8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": " modes) leaves every seam datum unchanged ("
+      },
+      {
+        "k": "m",
+        "v": "A1"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "m",
+        "v": "A5"
+      },
+      {
+        "k": "t",
+        "v": ": Chern "
+      },
+      {
+        "k": "m",
+        "v": "C_B{=}C_{B\\oplus C}{=}{-}1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "C_C{=}0"
+      },
+      {
+        "k": "t",
+        "v": "; zero modes "
+      },
+      {
+        "k": "m",
+        "v": "2/0/2"
+      },
+      {
+        "k": "t",
+        "v": " with "
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": "-support "
+      },
+      {
+        "k": "m",
+        "v": "1.0"
+      },
+      {
+        "k": "t",
+        "v": "; edge dispersion coincident to "
+      },
+      {
+        "k": "m",
+        "v": "1.4{\\times}10^{-15}"
+      },
+      {
+        "k": "t",
+        "v": "; seam-restricted covariance identical to "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": " both grids; edge-profile overlap "
+      },
+      {
+        "k": "m",
+        "v": "1.0"
+      },
+      {
+        "k": "t",
+        "v": ") and changes the bulk ("
+      },
+      {
+        "k": "m",
+        "v": "A6"
+      },
+      {
+        "k": "t",
+        "v": ": dim "
+      },
+      {
+        "k": "m",
+        "v": "16"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "32"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "E_0(C){=}{-}25.31"
+      },
+      {
+        "k": "t",
+        "v": ", mid-strip rank "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "8"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "\\|\\Gamma_0{-}\\Gamma_\\alpha\\|_{\\mathrm{HS}}"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "m",
+        "v": "0.752536"
+      },
+      {
+        "k": "t",
+        "v": " vs "
+      },
+      {
+        "k": "m",
+        "v": "0.760202"
+      },
+      {
+        "k": "t",
+        "v": "). Repaired criterion ("
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": "): Krylov generatedness "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{spectator\\_dim}(B{\\oplus}C)-\\mathrm{spectator\\_dim}(B){=}16"
+      },
+      {
+        "k": "t",
+        "v": " at all "
+      },
+      {
+        "k": "m",
+        "v": "128"
+      },
+      {
+        "k": "t",
+        "v": " momenta; commutant dim "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": ") vs "
+      },
+      {
+        "k": "m",
+        "v": "17"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "B{\\oplus}C"
+      },
+      {
+        "k": "t",
+        "v": ") generically, "
+      },
+      {
+        "k": "m",
+        "v": "\\Pi_C{=}0{\\oplus}1"
+      },
+      {
+        "k": "t",
+        "v": " in commutant (residual "
+      },
+      {
+        "k": "m",
+        "v": "0.0"
+      },
+      {
+        "k": "t",
+        "v": "); selection unique ("
+      },
+      {
+        "k": "m",
+        "v": "B"
+      },
+      {
+        "k": "t",
+        "v": " selected, "
+      },
+      {
+        "k": "m",
+        "v": "B{\\oplus}C"
+      },
+      {
+        "k": "t",
+        "v": " rejected). Honest: "
+      },
+      {
+        "k": "m",
+        "v": "\\mathrm{spectator\\_dim}(B){=}10"
+      },
+      {
+        "k": "t",
+        "v": " at "
+      },
+      {
+        "k": "m",
+        "v": "p{=}0"
+      },
+      {
+        "k": "t",
+        "v": " only (no onsite term at "
+      },
+      {
+        "k": "m",
+        "v": "M{=}1"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "T_Y"
+      },
+      {
+        "k": "t",
+        "v": " rank "
+      },
+      {
+        "k": "m",
+        "v": "1"
+      },
+      {
+        "k": "t",
+        "v": ") — the criterion is “generated almost everywhere in "
+      },
+      {
+        "k": "m",
+        "v": "p"
+      },
+      {
+        "k": "t",
+        "v": "”, not pointwise. "
+      },
+      {
+        "k": "c",
+        "v": "DIMENSION.UPLIFT.FIREWALL.01"
+      },
+      {
+        "k": "t",
+        "v": " F2 dimension typing: "
+      },
+      {
+        "k": "m",
+        "v": "2{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D free-fermion hypothesis, re-scoped "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D conclusion. Ledger: new contract "
+      },
+      {
+        "k": "c",
+        "v": "BULK.PRIME_COMPLETION.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "(uniqueness in the category of seam-generated prime completions with trivial relative commutant; kill: a seam-generated completion with nontrivial relative commutant, or two inequivalent prime completions); the existing row "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.BULK4D.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": " is annotated with the obstruction note (B7 as worded is unsatisfiable: "
+      },
+      {
+        "k": "m",
+        "v": "\\partial(B\\otimes C)=\\partial(B)"
+      },
+      {
+        "k": "t",
+        "v": " for any decoupled anomaly-free "
+      },
+      {
+        "k": "m",
+        "v": "C"
+      },
+      {
+        "k": "t",
+        "v": " with trivial boundary; uniqueness re-scoped to "
+      },
+      {
+        "k": "c",
+        "v": "BULK.PRIME_COMPLETION.01"
+      },
+      {
+        "k": "t",
+        "v": ") and stays "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": ". The "
+      },
+      {
+        "k": "m",
+        "v": "2"
+      },
+      {
+        "k": "t",
+        "v": "D modular-invariant uniqueness of the holomorphic "
+      },
+      {
+        "k": "m",
+        "v": "(E_8)_1"
+      },
+      {
+        "k": "t",
+        "v": " net is untouched and is NOT a "
+      },
+      {
+        "k": "m",
+        "v": "4"
+      },
+      {
+        "k": "t",
+        "v": "D no-spectator theorem. NO RH CLAIM. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": " (obstruction note in the "
+      },
+      {
+        "k": "c",
+        "v": "SEAM.BULK4D.RECON.01"
+      },
+      {
+        "k": "t",
+        "v": " paragraph "
+      },
+      {
+        "k": "m",
+        "v": "+"
+      },
+      {
+        "k": "t",
+        "v": " a new "
+      },
+      {
+        "k": "c",
+        "v": "BULK.PRIME_COMPLETION.01"
+      },
+      {
+        "k": "t",
+        "v": " paragraph, both citing "
+      },
+      {
+        "k": "c",
+        "v": "v1020"
+      },
+      {
+        "k": "t",
+        "v": "); website "
+      },
+      {
+        "k": "c",
+        "v": "ScriptIndex"
+      },
+      {
+        "k": "t",
+        "v": " regenerated, "
+      },
+      {
+        "k": "c",
+        "v": "changelog.ts"
+      },
+      {
+        "k": "t",
+        "v": " regenerated."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-09-03",
     "dateLabel": "2026-09-03 · CLII",
     "heading": [

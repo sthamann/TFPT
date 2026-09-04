@@ -744,8 +744,12 @@
   "date": "2026-08-21"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.BULK4D.RECON.01} (from seam data to a 4D local quantum theory)::1": {
-  "hash": "18594dd238f7",
-  "date": "2026-08-21"
+  "hash": "e7588a13b849",
+  "date": "2026-09-04"
+ },
+ "tfpt_research_contracts::section::Research Contract --- \\texttt{BULK.PRIME\\_COMPLETION.01} (prime/seam-generated completions, no spectator)::1": {
+  "hash": "c5e15b7c1d23",
+  "date": "2026-09-02"
  },
  "tfpt_research_contracts::section::Research Contracts --- \\texttt{DYN.MARKOV.EMBED.01} / \\texttt{DYN.UNITARY.DILATION.01} (the three meanings of ``dynamics'')::1": {
   "hash": "b78b8c8604e4",
@@ -812,8 +816,12 @@
   "date": "2026-08-31"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MMST.TYPEIII.CHARGED.01} (one scaling-limit theorem)::1": {
-  "hash": "cf6c369841e4",
-  "date": "2026-08-31"
+  "hash": "6153fe299111",
+  "date": "2026-09-04"
+ },
+ "tfpt_research_contracts::subsection::TEL-B reduction (2026-09-04)::1": {
+  "hash": "0a3c77bc9cab",
+  "date": "2026-09-04"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
   "hash": "c6965960063e",

@@ -105,6 +105,17 @@
 > `arch_gauss_mellin_digamma_identity`, matching Mathlib's explicit
 > Gauss-integral TODO.  Census **8 → 8**. NO RH CLAIM.
 >
+> **Classical-rate audit:** `RH/SelectedArchErrorQuadraticRateClassical.lean`
+> fixed-constant Prop FALSIFIED (`8.0283458222 > 4.1259765625`,
+> small-support regime, kink defect `-θ(1-θ)/2` proved); the ∃C
+> interface `SelectedArchErrorQuadraticRateExists` is proved
+> CONDITIONALLY on the still-open
+> `SelectedArchWeightedInterpolationEstimate` (theorem
+> `selectedArchErrorQuadraticRateExists_of_weightedInterpolationEstimate`);
+> the downstream convergence
+> `selectedArchError_tendsto_zero_of_rateExists` is proved
+> unconditionally from the ∃C form. Six theorems proved. NO RH CLAIM.
+>
 > **r487 outer bridges:** `RH/ExternalBridges.lean` types
 > `FullWeilTest` as a continuous even fixed-support real
 > autocorrelation.  The dense extension is split into the two exact
@@ -140,6 +151,15 @@
 > `FullWeilDyadicSampleConvergence`.  The pole seam is narrowed to
 > `GridPoleHatIntegralIdentity`, whose implication to the sequence
 > dictionary is proved.  Census **8 → 8**. NO RH CLAIM.
+>
+> **r638L claim-boundary repair (current census):** the overstrong
+> `arch_gauss_mellin_digamma_identity` exact-quadrature theorem and the
+> gauge-mismatched `standard_explicit_formula_identification` theorem
+> are retired. Their Props remain unasserted; historical arch
+> extraction theorems now take `ArchGaussMellinDigammaIdentity`
+> explicitly. `standard_explicit_formula_identification_honest`
+> remains proved. Full `lake build RH`: 3578 jobs, **five** intentional
+> `sorry`s, no errors. NO RH CLAIM.
 >
 > **r320 (the R319 red-team repair).** The R319 audit found the r310b
 > statement TYPES of the source interface jointly INCONSISTENT (U1: the
@@ -228,7 +248,8 @@
 > now **sorry-free**. (4) **the axiom audit** — `RH/Audit.lean` runs
 > `#print axioms` on the whole chain at every build; results below.
 >
-> **Sorry typing table (C1 census 7, r362 DualResolvent → 8, r373 → 7, r376 → 5, r380/r384 unchanged at 5):**
+> **Current asserting-`sorry` table (r638L census 5; historical path:
+> C1 7, r362 8, r373 7, r376 5, outer/Gabor work 7, r638L 5):**
 >
 > | `sorry` | File | Type |
 > |---|---|---|
@@ -236,7 +257,15 @@
 > | `terminal_q_canonical` | `RH/Canonical.lean` | arithmetically open (the border/fiber hole); **C1 RETYPE + SHARPENING**; **r397 DEGRADED** to conjecture / alternative route; **r434 OFF the FREQ mincut path** (direct Selected-R† semidefiniteness bypasses `∀ CanonicalWindow, q_N < 1`) |
 > | `pair_terminal_dictionary` | `RH/Canonical.lean` | **C1, replaces the `pair_margin_main` sorry** — the r263 dictionary `Z² = (5/7)·q_N` as ONE named lemma; type MEASURED DICTIONARY (42/42 exact) / transcription-blocked (the border orthopoly transform); consumed only by the pair closure corollary, never by the master chain; **r434 OFF the FREQ mincut path** |
 > | `mainWindow_iff_builtFromPrimeSource` | `RH/Source.lean` | definitional/technical (opacity-forced, r320 form); **Alt-Last since C1** (outside the load-bearing chain: `CanonicalWindow` replaced `MainWindow`); not deleted — the r273 opaque marker and the U1–U3 guards still refer to it; **r434 OFF the FREQ mincut path** |
-> | `arch_gauss_mellin_digamma_identity` | `RH/Elementwise.lean` | classical (S2), r464 reduction of `arch_elementwise_stabilization`; production near/far lag integrals are now concrete. Remaining hole is exactly the Gauss/Mellin identification with `weilArchKernel`. Mathlib v4.29.1 explicitly lists Gauss's digamma integral as TODO. Titchmarsh Ch. X, Weil 1952. **ON the FREQ mincut path** (consumed by the now-proved wrapper `arch_elementwise_stabilization`) |
+> | `fullWeil_separates_offCritical_zeros` | `RH/ExternalBridges.lean` | classical compact Paley–Wiener separation brick; the logical conversion to Mathlib `RiemannHypothesis` is proved, but the compact separating family is not yet formalized |
+>
+> Retired as asserting sorries by r638L:
+> `arch_gauss_mellin_digamma_identity` → unasserted
+> `ArchGaussMellinDigammaIdentity` (the original quantifier is
+> overstrong; selected-path `O(Δ²)` is the honest replacement);
+> `standard_explicit_formula_identification` → unasserted
+> `StandardExplicitFormulaIdentification` (gauge mismatch exposed by
+> `surplusComb + archGaugeDelta`; the honest-contour theorem is proved).
 >
 > Retired as sorries by r376: `pole_elementwise_stabilization` → **PROVED** (native-mesh second-difference of `polePotential`, comb-parallel; `#print axioms` has no `sorryAx`; remaining named identity `PoleDyadicIndependence`, not a hole); `specFamily_sourceExact_completion` → named Prop `SourceExactOfFamilyCompletion` (C1 `PairMarginLaw` convention: the opaque `SourceExact` filling is unprovable by design; transcribable half is the already-proved `sourceExact_buildPrimeWindow`; residual opacity is C1's `canonicalCompletion`).
 >
@@ -244,7 +273,7 @@
 >
 > r384 named Props (not sorrys, census unchanged): `FlankEntryPrefix`, `ChristoffelPivotBound` (`RH/FlankEntry.lean`; discrete OP / CD remainder of the r382 inductive core, same class as `ComplementaryDualHankelInertia`).
 >
-> r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (r397 strict tail, r430 **degraded** to the stronger alternative: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; the latter consumes the existing arch sorry.  `lstar_canonical` / `terminal_q_canonical` kept as typed `sorry`s, degraded to the alternative route.
+> r397 named Props (not sorrys, census unchanged at 5): `selected_augDualResolvent_gt_half` (r397 strict tail, r430 **degraded** to the stronger alternative: `∀ᶠ k, (R†(W^ℝ_k) − ½·1).PosDef`), `SelectedMasterImpliesPlainReads` (L†/master of the real windows ⇒ plain `fullRead` along the sequence), `ExactArchAgreesWithArchRead` (folded Exact arch vs opaque `archRead`).  Sequence identities (`selectedDelta_eq`, `a_k → ∞`, `Δ_k → 0`, `m_k → ∞`) and `weil_nonneg_of_selected_windows` are theorems; since r638L the latter takes the unasserted arch contract explicitly and consumes no arch `sorry`.  `lstar_canonical` / `terminal_q_canonical` remain typed `sorry`s on the alternative route.
 >
 > r406 proved theorems (not sorrys, census unchanged at 5): `indNeg_sub_rankOne_le_one`, `posDef_sub_rankOne_iff`, `woodbury_inv`, `oneDefect_update_posDef_iff`, `posDef_of_contractive_lift`, `cMin_normSq`, `posDef_gram_sub_rankOne_iff` (`RH/OneDefect.lean`; finite matrix algebra, independent of R404/R405).
 >
@@ -1090,18 +1119,18 @@ Ausgang `VACUOUS_CONFIRMED`.  NO RH CLAIM.
 
 **r463 mincut-path graph** (what
 `internal_weil_nonneg_of_frequently_selected` actually consumes).
-`#print axioms`
-on the extraction shows `sorryAx` only through
-`arch_elementwise_stabilization`; the two C1 holes do not appear.
+`#print axioms` on the extraction showed the historical arch
+`sorryAx`; r638L removes that assertion and makes the arch contract an
+explicit hypothesis. The two C1 holes do not appear.
 
 | Satz | konsumiert | Status |
 |---|---|---|
-| `internal_weil_nonneg_of_frequently_selected` | compound mincut + arch sorry | **proved** as a function of those; internal Weil form only |
+| `internal_weil_nonneg_of_frequently_selected` | compound mincut + explicit arch contract | **proved** as a function of those; internal Weil form only |
 | `frequently_selected_augDualResolvent_ge_half` | — | **named mincut** (`∃ᶠ`, `PosSemidef`) |
 | `SelectedACapPsdImpliesPlainReads` | — | **named remainder** (Hankel/`fullRead`) |
 | `SelectedSemidefImpliesPlainReads` | Loewner + `SelectedACapPsdImpliesPlainReads` | **proved** from the remainder (`selectedSemidefImpliesPlainReads_of_A_cap`) |
 | `masterCap_posSemidef_iff_Rdagger_ge_half` | `RepresentsLEnsembleReal` | **proved** (real-window L† ⟺ R† PSD) |
-| `arch_elementwise_stabilization` | — | **sorry**, ON PATH (classical) |
+| `ArchGaussMellinDigammaIdentity` | — | **named, unasserted historical contract**; original exact-equality quantifier is overstrong |
 | `lstar_canonical` | — | sorry, **OFF PATH** (alt route `L† ⟺ L* ∧ Terminal` on all `CanonicalWindow`s) |
 | `terminal_q_canonical` | — | sorry, **OFF PATH** (alt route; global `q_N < 1` bypassed) |
 | `pair_terminal_dictionary` | — | sorry, **OFF PATH** (pair-closure only) |
@@ -1109,12 +1138,13 @@ on the extraction shows `sorryAx` only through
 | `SelectedMasterImpliesPlainReads` | — | named, **OFF PATH** (eventual-strict master route) |
 | `GraphResolventIsLEnsembleInv` | — | named, **OFF PATH** (graph-resolvent face, not consumed by FREQ) |
 
-The three arrows beyond this internal endpoint are explicit in
-`RH/ExternalBridges.lean`.  r489 reduces density and all channel
-continuity to the sole typed completion
-`FullWeilFixedSupportCompletion`; explicit formula normalization remains
-`standard_explicit_formula_identification`; the Mathlib endpoint is
-a proved wrapper around `fullWeil_separates_offCritical_zeros`.
+The arrows beyond this internal endpoint are explicit in
+`RH/ExternalBridges.lean`. Density and channel continuity are proved.
+The corpus normalization contract
+`StandardExplicitFormulaIdentification` is unasserted since r638L;
+the honest-contour identification is proved. The Mathlib endpoint is
+a proved wrapper around the remaining
+`fullWeil_separates_offCritical_zeros` classical brick.
 
 BYPASS VERDICT: yes — Selected-R† semidefiniteness bypasses
 `terminal_q_canonical` / `lstar_canonical`.  The remaining named
@@ -1129,8 +1159,8 @@ standard axioms, NO `sorryAx`), the two canonical holes (now the
 alternative route), the master chain, the Level-C extraction, the
 r380 pivot-coordinate faces (section (i)), the r384 flank-entry
 faces (section (j)), the r397 selected-domain identities
-(section (k): sequence theorems NO `sorryAx`;
-`weil_nonneg_of_selected_windows` the existing arch `sorryAx`),
+(section (k): sequence and conditional extraction theorems NO
+`sorryAx`),
 and the r406 one-defect finite algebra (section (l): all
 eight theorems NO `sorryAx`);
 and the r412 graph-resolvent finite algebra (section (m): all
@@ -1138,11 +1168,10 @@ audited theorems NO `sorryAx`);
 and the r426 edge-balance finite algebra (section (n): all
 audited theorems NO `sorryAx`);
 and the r430 semidefinite / frequently-selected layer
-(section (o): Loewner faces, density, mean-value NO `sorryAx`;
-FREQ extraction the existing arch `sorryAx`);
+(section (o): Loewner faces, density, mean-value and conditional FREQ
+extraction NO `sorryAx`);
 and the r434 quantifier-mincut audit (section (p): real-window
-Loewner NO `sorryAx`; collapsed FREQ interface the existing
-arch `sorryAx`);
+Loewner and collapsed conditional FREQ interface NO `sorryAx`);
 the C1 record is quoted verbatim in the claim-boundary
 block above and in the file itself.
 

@@ -1,0 +1,1636 @@
+{
+  "analytic-object": [
+    "analytic object",
+    "Analytic object",
+    "analytic_object"
+  ],
+  "positivity-criterion": [
+    "Positivity criterion",
+    "positivity criterion",
+    "positivity_criterion"
+  ],
+  "spectral-framework": [
+    "Spectral framework",
+    "spectral framework",
+    "spectral_framework"
+  ],
+  "arithmetic-geometry": [
+    "Arithmetic geometry",
+    "arithmetic geometry",
+    "arithmetic_geometry"
+  ],
+  "tfpt-compiler": [
+    "TFPT compiler structure",
+    "tfpt compiler",
+    "tfpt_compiler"
+  ],
+  "obstruction-class": [
+    "Obstruction class",
+    "obstruction class",
+    "obstruction_class"
+  ],
+  "research-question": [
+    "research question",
+    "Research question",
+    "research_question"
+  ],
+  "riemann-zeta": [
+    "Riemann zeta function ζ(s)",
+    "riemann zeta",
+    "riemann_zeta",
+    "ζ(s)"
+  ],
+  "riemann-xi": [
+    "Riemann xi function ξ(s)",
+    "Riemann xi",
+    "riemann xi",
+    "riemann_xi",
+    "ξ(s)"
+  ],
+  "riemann-hypothesis": [
+    "riemann hypothesis",
+    "Riemann Hypothesis",
+    "riemann_hypothesis",
+    "RiemannHypothesis"
+  ],
+  "critical-line": [
+    "Critical line",
+    "critical line",
+    "critical_line",
+    "Re(s)=1/2"
+  ],
+  "critical-strip": [
+    "critical strip",
+    "Critical strip",
+    "critical_strip"
+  ],
+  "riemann-kernel": [
+    "Riemann kernel Φ(u)",
+    "riemann kernel",
+    "Riemann kernel",
+    "riemann_kernel",
+    "Phi(u)",
+    "Φ(u)"
+  ],
+  "xi-fourier-function": [
+    "xi fourier function",
+    "xi_fourier_function",
+    "Xi(t)",
+    "Ξ(t)"
+  ],
+  "fourier-transform": [
+    "fourier transform",
+    "Fourier transform",
+    "fourier_transform",
+    "Fourier pair"
+  ],
+  "mellin-transform": [
+    "Mellin transform M",
+    "Mellin transform",
+    "mellin transform",
+    "mellin_transform"
+  ],
+  "laplace-transform": [
+    "Laplace transform",
+    "laplace transform",
+    "laplace_transform"
+  ],
+  "functional-equation": [
+    "Zeta functional equation",
+    "functional equation",
+    "functional_equation"
+  ],
+  "explicit-formula": [
+    "Riemann–Weil explicit formula",
+    "Weil explicit formula",
+    "explicit formula",
+    "explicit_formula"
+  ],
+  "von-mangoldt": [
+    "von Mangoldt function Λ(n)",
+    "von Mangoldt",
+    "von mangoldt",
+    "von_mangoldt",
+    "Lambda(n)",
+    "Λ(n)"
+  ],
+  "chebyshev-psi": [
+    "Chebyshev ψ(x)",
+    "chebyshev psi",
+    "Chebyshev psi",
+    "chebyshev_psi",
+    "ψ(x)"
+  ],
+  "prime-counting": [
+    "Prime-counting function π(x)",
+    "prime counting",
+    "prime_counting",
+    "π(x)"
+  ],
+  "zero-counting": [
+    "Zero-counting function N(T)",
+    "zero counting",
+    "zero_counting",
+    "N(T)"
+  ],
+  "pair-correlation": [
+    "Pair correlation of zeta zeros",
+    "pair correlation",
+    "pair_correlation"
+  ],
+  "gue-statistics": [
+    "Gaussian unitary ensemble",
+    "GUE statistics",
+    "gue statistics",
+    "gue_statistics"
+  ],
+  "montgomery-conjecture": [
+    "Montgomery pair-correlation conjecture",
+    "montgomery conjecture",
+    "Montgomery conjecture",
+    "montgomery_conjecture"
+  ],
+  "weil-quadratic-form": [
+    "Weil quadratic form Q(f)",
+    "weil quadratic form",
+    "Weil quadratic form",
+    "weil_quadratic_form",
+    "Weil form",
+    "Q(f)"
+  ],
+  "weil-arch-term": [
+    "Weil archimedean term",
+    "archimedean term",
+    "weil arch term",
+    "weil_arch_term",
+    "arch term"
+  ],
+  "weil-prime-term": [
+    "Weil prime term",
+    "weil prime term",
+    "weil_prime_term",
+    "prime term"
+  ],
+  "weil-pole-term": [
+    "weil pole term",
+    "Weil pole term",
+    "weil_pole_term",
+    "pole term"
+  ],
+  "weil-positivity": [
+    "Weil positivity criterion",
+    "weil positivity",
+    "Weil positivity",
+    "weil_positivity",
+    "Weil criterion"
+  ],
+  "gabor-zero-side": [
+    "gabor zero side",
+    "Gabor zero side",
+    "Gabor zero-side",
+    "gabor_zero_side",
+    "gaborZeroSide"
+  ],
+  "pure-gabor-family": [
+    "Pure Gabor test family",
+    "pure gabor family",
+    "pure_gabor_family",
+    "pureGaborTest",
+    "pure Gabor"
+  ],
+  "gabor-pure-criterion": [
+    "gabor_zeroSide_pure_criterion_iff_rh_unconditional",
+    "Pure-Gabor zero-side criterion",
+    "gabor pure criterion",
+    "gabor_pure_criterion"
+  ],
+  "gabor-rational-criterion": [
+    "gabor_zeroSide_rational_criterion_iff_rh_unconditional",
+    "Rational pure-Gabor criterion",
+    "gabor rational criterion",
+    "gabor_rational_criterion"
+  ],
+  "gabor-prime-side-criterion": [
+    "gabor_primeSide_rational_criterion_iff_rh",
+    "Gabor prime-side rational criterion",
+    "gabor prime side criterion",
+    "gabor prime-side criterion",
+    "gabor_prime_side_criterion"
+  ],
+  "li-coefficients": [
+    "Li coefficients λₙ",
+    "li coefficients",
+    "Li coefficients",
+    "li_coefficients",
+    "Li lambda",
+    "λ_n"
+  ],
+  "li-criterion": [
+    "Li's criterion",
+    "li criterion",
+    "Li criterion",
+    "li_criterion"
+  ],
+  "nyman-beurling-space": [
+    "Nyman–Beurling closure space",
+    "nyman beurling space",
+    "Nyman-Beurling space",
+    "nyman_beurling_space"
+  ],
+  "nyman-beurling-criterion": [
+    "nyman beurling criterion",
+    "nyman_beurling_criterion",
+    "Nyman–Beurling criterion",
+    "Nyman-Beurling",
+    "Nyman–Beurling"
+  ],
+  "baez-duarte-criterion": [
+    "baez duarte criterion",
+    "baez_duarte_criterion",
+    "Báez-Duarte criterion",
+    "Baez-Duarte",
+    "Báez-Duarte"
+  ],
+  "hardy-space-h2": [
+    "hardy space h2",
+    "Hardy space H²",
+    "hardy_space_h2",
+    "Hardy H2"
+  ],
+  "debruijn-newman-constant": [
+    "de Bruijn–Newman constant Λ",
+    "debruijn newman constant",
+    "debruijn_newman_constant",
+    "de Bruijn-Newman Lambda",
+    "Newman constant"
+  ],
+  "rodgers-tao-theorem": [
+    "Rodgers–Tao theorem Λ≥0",
+    "rodgers tao theorem",
+    "rodgers_tao_theorem",
+    "Lambda >= 0",
+    "Rodgers-Tao"
+  ],
+  "newman-criterion": [
+    "Newman heat-flow criterion",
+    "Newman's criterion",
+    "newman criterion",
+    "newman_criterion"
+  ],
+  "laguerre-polya-class": [
+    "laguerre polya class",
+    "laguerre_polya_class",
+    "Laguerre–Pólya class",
+    "Laguerre-Polya",
+    "LP class"
+  ],
+  "hermite-biehler-class": [
+    "hermite biehler class",
+    "hermite_biehler_class",
+    "Hermite–Biehler class",
+    "Hermite-Biehler",
+    "HB class"
+  ],
+  "debranges-space": [
+    "de Branges space",
+    "debranges space",
+    "debranges_space"
+  ],
+  "lee-yang-property": [
+    "lee yang property",
+    "lee_yang_property",
+    "Lee–Yang property",
+    "Lee-Yang",
+    "Lee–Yang"
+  ],
+  "kps-theorem": [
+    "KPS van Dantzig theorem",
+    "van Dantzig pair",
+    "kps theorem",
+    "KPS theorem",
+    "kps_theorem"
+  ],
+  "van-dantzig-pair": [
+    "van Dantzig pairs",
+    "van dantzig pair",
+    "van Dantzig pair",
+    "van_dantzig_pair"
+  ],
+  "polya-frequency-function": [
+    "polya frequency function",
+    "polya_frequency_function",
+    "Pólya frequency function",
+    "Polya frequency",
+    "PF function"
+  ],
+  "toeplitz-positivity": [
+    "toeplitz positivity",
+    "Toeplitz positivity",
+    "toeplitz_positivity",
+    "Toeplitz minors"
+  ],
+  "hankel-positivity": [
+    "Hankel moment positivity",
+    "Hankel positivity",
+    "hankel positivity",
+    "hankel_positivity",
+    "Hankel minors"
+  ],
+  "jensen-polynomials": [
+    "jensen polynomials",
+    "Jensen polynomials",
+    "jensen_polynomials",
+    "Jensen polynomial"
+  ],
+  "jensen-hyperbolicity": [
+    "Jensen polynomial hyperbolicity",
+    "Jensen hyperbolicity",
+    "jensen hyperbolicity",
+    "jensen_hyperbolicity"
+  ],
+  "gorz-theorem": [
+    "GORZ Jensen-polynomial theorem",
+    "Griffin-Ono-Rolen-Zagier",
+    "gorz theorem",
+    "gorz_theorem",
+    "GORZ"
+  ],
+  "hilbert-polya-operator": [
+    "hilbert polya operator",
+    "hilbert_polya_operator",
+    "Hilbert–Pólya operator",
+    "Hilbert-Polya",
+    "Hilbert–Pólya"
+  ],
+  "berry-keating-xp": [
+    "Berry–Keating xp Hamiltonian",
+    "berry keating xp",
+    "berry_keating_xp",
+    "xp Hamiltonian",
+    "Berry-Keating"
+  ],
+  "connes-trace-formula": [
+    "Connes trace formula",
+    "connes trace formula",
+    "connes_trace_formula"
+  ],
+  "adele-class-space": [
+    "adele class space",
+    "Adele class space",
+    "adele_class_space"
+  ],
+  "scaling-site": [
+    "Connes–Consani scaling site",
+    "scaling site",
+    "scaling_site"
+  ],
+  "selberg-trace-formula": [
+    "selberg trace formula",
+    "Selberg trace formula",
+    "selberg_trace_formula"
+  ],
+  "modular-surface": [
+    "modular surface",
+    "Modular surface",
+    "modular_surface",
+    "PSL2Z quotient"
+  ],
+  "eisenstein-series": [
+    "eisenstein series",
+    "Eisenstein series",
+    "eisenstein_series"
+  ],
+  "eisenstein-constant-term": [
+    "Eisenstein constant term",
+    "eisenstein constant term",
+    "eisenstein_constant_term",
+    "scattering term",
+    "constant term"
+  ],
+  "epstein-zeta": [
+    "Epstein zeta function",
+    "Epstein zeta",
+    "epstein zeta",
+    "epstein_zeta"
+  ],
+  "hecke-operator": [
+    "Hecke operators",
+    "hecke operator",
+    "Hecke operator",
+    "hecke_operator"
+  ],
+  "hecke-correspondence": [
+    "Hecke correspondences",
+    "Hecke correspondence",
+    "hecke correspondence",
+    "hecke_correspondence"
+  ],
+  "bruhat-tits-tree": [
+    "Bruhat–Tits tree of PGL₂(Qₚ)",
+    "bruhat tits tree",
+    "Bruhat-Tits tree",
+    "bruhat_tits_tree",
+    "PGL2(Qp) tree"
+  ],
+  "bost-connes-system": [
+    "bost connes system",
+    "bost_connes_system",
+    "Bost–Connes system",
+    "Bost-Connes",
+    "BC system"
+  ],
+  "arakelov-intersection": [
+    "Arakelov intersection theory",
+    "arakelov intersection",
+    "arakelov_intersection",
+    "Arakelov"
+  ],
+  "arithmetic-hodge-index": [
+    "Arithmetic Hodge index theorem",
+    "arithmetic hodge index",
+    "arithmetic Hodge index",
+    "arithmetic_hodge_index",
+    "Yuan-Zhang"
+  ],
+  "deninger-cohomology": [
+    "Deninger cohomological program",
+    "Deninger cohomology",
+    "deninger cohomology",
+    "deninger_cohomology"
+  ],
+  "weil-conjectures": [
+    "Weil conjectures over finite fields",
+    "weil conjectures",
+    "Weil conjectures",
+    "weil_conjectures"
+  ],
+  "deligne-rh": [
+    "Deligne's function-field RH theorem",
+    "Deligne theorem",
+    "deligne rh",
+    "deligne_rh"
+  ],
+  "pick-function": [
+    "Nevanlinna function",
+    "Pick function",
+    "pick function",
+    "pick_function"
+  ],
+  "herglotz-function": [
+    "Herglotz-Nevanlinna",
+    "herglotz function",
+    "Herglotz function",
+    "herglotz_function",
+    "Herglotz"
+  ],
+  "bernstein-function": [
+    "Bernstein function",
+    "bernstein function",
+    "bernstein_function"
+  ],
+  "completely-monotone": [
+    "Completely monotone function",
+    "complete monotonicity",
+    "completely monotone",
+    "completely_monotone"
+  ],
+  "stieltjes-function": [
+    "Stieltjes function",
+    "stieltjes function",
+    "stieltjes_function"
+  ],
+  "carlson-theorem": [
+    "Carlson uniqueness theorem",
+    "Carlson's theorem",
+    "carlson theorem",
+    "carlson_theorem"
+  ],
+  "saddle-point-method": [
+    "saddle point method",
+    "Saddle-point method",
+    "saddle_point_method",
+    "steepest descent",
+    "saddle point"
+  ],
+  "lambert-w": [
+    "Lambert W function",
+    "lambert w",
+    "Lambert W",
+    "Lambert-W",
+    "lambert_w"
+  ],
+  "prolate-operator": [
+    "Prolate spheroidal concentration operator",
+    "prolate operator",
+    "prolate_operator",
+    "prolate",
+    "PSWF"
+  ],
+  "landau-widom-asymptotics": [
+    "Landau–Widom concentration asymptotics",
+    "landau widom asymptotics",
+    "landau_widom_asymptotics",
+    "Landau-Widom"
+  ],
+  "prime-torus": [
+    "prime polytorus",
+    "Prime torus",
+    "prime torus",
+    "prime_torus",
+    "Bohr torus"
+  ],
+  "bohr-lift": [
+    "Bohr transform",
+    "bohr lift",
+    "Bohr lift",
+    "bohr_lift"
+  ],
+  "dirichlet-series-polytorus": [
+    "Dirichlet series on the polytorus",
+    "dirichlet series polytorus",
+    "dirichlet_series_polytorus",
+    "Dirichlet polytorus"
+  ],
+  "hypercontractivity": [
+    "Hypercontractivity on the prime torus",
+    "hypercontractivity"
+  ],
+  "beurling-deny-criterion": [
+    "beurling deny criterion",
+    "beurling_deny_criterion",
+    "Beurling–Deny criterion",
+    "Beurling-Deny"
+  ],
+  "positivity-semigroup": [
+    "Positivity-preserving semigroup",
+    "positivity semigroup",
+    "positivity_semigroup",
+    "Markov semigroup"
+  ],
+  "cuntz-system": [
+    "Cuntz algebra",
+    "cuntz system",
+    "Cuntz system",
+    "cuntz_system"
+  ],
+  "ucp-map": [
+    "Unital completely positive map",
+    "ucp map",
+    "UCP map",
+    "ucp_map"
+  ],
+  "groupoid": [
+    "Measured groupoid",
+    "groupoid"
+  ],
+  "groupoid-modular-function": [
+    "groupoid modular function",
+    "Groupoid modular function",
+    "groupoid_modular_function",
+    "modular function"
+  ],
+  "half-density": [
+    "Groupoid half-density",
+    "half density",
+    "half-density",
+    "half_density",
+    "halfdensity"
+  ],
+  "additive-adeles": [
+    "additive adeles",
+    "Additive adeles",
+    "additive_adeles",
+    "A_Q"
+  ],
+  "self-dual-measure": [
+    "Self-dual Haar measure",
+    "self dual measure",
+    "self-dual measure",
+    "self_dual_measure"
+  ],
+  "relative-determinant": [
+    "Relative determinant",
+    "relative determinant",
+    "relative_determinant"
+  ],
+  "spectral-shift": [
+    "Krein spectral shift function",
+    "spectral shift",
+    "spectral_shift"
+  ],
+  "vitali-montel": [
+    "Vitali–Montel normal-family principle",
+    "normal family",
+    "vitali montel",
+    "vitali_montel"
+  ],
+  "euler-gross-entropy-gap": [
+    "euler gross entropy gap",
+    "euler_gross_entropy_gap",
+    "Euler–Gross entropy gap",
+    "Euler-Gross entropy"
+  ],
+  "ising-lee-yang-compiler": [
+    "ising lee yang compiler",
+    "Ising/Lee–Yang compiler",
+    "ising_lee_yang_compiler",
+    "Ising compiler"
+  ],
+  "cusp-surgery": [
+    "Cusp surgery",
+    "cusp surgery",
+    "cusp_surgery"
+  ],
+  "efrat-determinant": [
+    "Efrat determinant formula",
+    "Efrat determinant",
+    "efrat determinant",
+    "efrat_determinant"
+  ],
+  "regulator-jump": [
+    "Regulator jump",
+    "regulator jump",
+    "regulator_jump"
+  ],
+  "murru-salvatori": [
+    "Murru–Salvatori regulator method",
+    "murru salvatori",
+    "Murru-Salvatori",
+    "murru_salvatori"
+  ],
+  "openai-long-prime-gaps": [
+    "OpenAI 2026 long-prime-gap work",
+    "openai long prime gaps",
+    "openai_long_prime_gaps",
+    "OpenAI prime gaps",
+    "long prime gaps"
+  ],
+  "chuk-window-certificate": [
+    "Chuk compact-window certificate at L=0.8",
+    "chuk window certificate",
+    "chuk_window_certificate",
+    "L=0.8 certificate",
+    "Chuk"
+  ],
+  "cubic-wedges": [
+    "Cubic wedges of arXiv:2607.16795",
+    "cubic wedges",
+    "cubic_wedges",
+    "2607.16795"
+  ],
+  "tfpt-c3": [
+    "TFPT axiom c3=1/(8π)",
+    "tfpt c3",
+    "tfpt_c3",
+    "1/(8π)"
+  ],
+  "tfpt-gcar": [
+    "TFPT axiom g_car=5",
+    "tfpt gcar",
+    "tfpt_gcar",
+    "g_car",
+    "gcar"
+  ],
+  "tfpt-e8-compiler": [
+    "D5⊕A3+μ4⇒E8 compiler",
+    "tfpt e8 compiler",
+    "tfpt_e8_compiler",
+    "mu4 E8",
+    "D5+A3"
+  ],
+  "tfpt-e8-lattice": [
+    "tfpt e8 lattice",
+    "tfpt_e8_lattice",
+    "E8 lattice"
+  ],
+  "e8-theta-series": [
+    "E8 theta series",
+    "e8 theta series",
+    "e8_theta_series",
+    "E8 theta",
+    "Theta_E8"
+  ],
+  "e8-cascade": [
+    "e8 cascade",
+    "E8 cascade",
+    "e8_cascade"
+  ],
+  "cm-seam": [
+    "Gaussian seam",
+    "CM seam τ=i",
+    "cm seam",
+    "CM seam",
+    "cm_seam",
+    "tau=i"
+  ],
+  "gaussian-e8-module": [
+    "gaussian e8 module",
+    "Gaussian E8 module",
+    "gaussian_e8_module",
+    "Gaussian E8",
+    "v714"
+  ],
+  "main-world": [
+    "MAIN world control",
+    "main world",
+    "main_world"
+  ],
+  "smooth-world": [
+    "SMOOTH world control",
+    "smooth world",
+    "smooth_world"
+  ],
+  "scrarith-world": [
+    "SCRARITH world control",
+    "scrarith world",
+    "scrarith_world"
+  ],
+  "seam-geodesic": [
+    "Seam geodesic",
+    "seam geodesic",
+    "seam_geodesic"
+  ],
+  "gate-zero": [
+    "gate zero",
+    "gate_zero",
+    "Gate 0"
+  ],
+  "plastic-number-threshold": [
+    "plastic number threshold",
+    "Plastic-number threshold",
+    "plastic_number_threshold",
+    "plastic threshold",
+    "plastic number"
+  ],
+  "terminal-statement": [
+    "Terminal cross-ratio statement",
+    "terminal inequality",
+    "terminal statement",
+    "terminal_statement",
+    "terminal q",
+    "q_N<1"
+  ],
+  "lstar-statement": [
+    "L* subordination statement",
+    "lstar statement",
+    "lstar_statement",
+    "lemma L*",
+    "Lstar"
+  ],
+  "lambda-star-ladder": [
+    "lambda star ladder",
+    "lambda_star_ladder",
+    "λ*(L) ladder",
+    "lambda-star",
+    "lambda*"
+  ],
+  "quadrep": [
+    "quadrep",
+    "Quadrep"
+  ],
+  "inner-bridges": [
+    "Inner bridges",
+    "inner bridges",
+    "inner_bridges"
+  ],
+  "outer-bridges": [
+    "outer bridges",
+    "Outer bridges",
+    "outer_bridges"
+  ],
+  "relay-lead-law": [
+    "relay lead law",
+    "Relay lead law",
+    "relay_lead_law"
+  ],
+  "narrowband-weil": [
+    "Narrowband Weil probe",
+    "narrowband Weil",
+    "narrowband weil",
+    "narrowband_weil"
+  ],
+  "arch-rate": [
+    "Archimedean rate identity",
+    "arch rate",
+    "arch_rate"
+  ],
+  "extraction-joint": [
+    "extraction joint",
+    "Extraction joint",
+    "extraction_joint"
+  ],
+  "finite-weil-window": [
+    "compact Weil window",
+    "Finite Weil window",
+    "finite weil window",
+    "finite_weil_window",
+    "window form"
+  ],
+  "selected-window-family": [
+    "selected window family",
+    "Selected-window family",
+    "selected_window_family",
+    "selected windows"
+  ],
+  "barrier-circularity": [
+    "Renamed RH-equivalent / circularity",
+    "barrier circularity",
+    "barrier_circularity",
+    "renamed RH",
+    "circular"
+  ],
+  "barrier-prime-phase-coherence": [
+    "barrier prime phase coherence",
+    "barrier_prime_phase_coherence",
+    "prime phase coherence",
+    "Prime-phase coherence"
+  ],
+  "barrier-p2-defect": [
+    "barrier p2 defect",
+    "barrier_p2_defect",
+    "2-adic defect",
+    "p=2 defect"
+  ],
+  "barrier-pole-mode": [
+    "Pole mode uncontrolled",
+    "barrier pole mode",
+    "barrier_pole_mode",
+    "pole mode"
+  ],
+  "barrier-arch-compensation": [
+    "barrier arch compensation",
+    "barrier_arch_compensation",
+    "Archimedean compensation",
+    "arch compensation"
+  ],
+  "barrier-unimodularity": [
+    "Unimodularity / no half-density",
+    "barrier unimodularity",
+    "barrier_unimodularity",
+    "no half-density",
+    "unimodularity"
+  ],
+  "barrier-zero-denominator": [
+    "barrier zero denominator",
+    "barrier_zero_denominator",
+    "Zero-bearing denominator",
+    "zero-bearing denominator"
+  ],
+  "barrier-finite-window-ceiling": [
+    "Finite-window ceiling / Landau–Widom decay",
+    "barrier finite window ceiling",
+    "barrier_finite_window_ceiling",
+    "finite-window ceiling",
+    "Landau-Widom decay"
+  ],
+  "barrier-pick-sign": [
+    "Pick sign violation",
+    "Pick-sign violation",
+    "barrier pick sign",
+    "barrier_pick_sign"
+  ],
+  "barrier-nonreal-cofactor-zeros": [
+    "barrier nonreal cofactor zeros",
+    "barrier_nonreal_cofactor_zeros",
+    "Non-real cofactor zeros",
+    "non-real cofactor zeros"
+  ],
+  "barrier-world-blind": [
+    "barrier world blind",
+    "barrier_world_blind",
+    "World blindness",
+    "world blind",
+    "WORLD_BLIND"
+  ],
+  "barrier-lossy-constant": [
+    "barrier lossy constant",
+    "barrier_lossy_constant",
+    "lossy constant",
+    "Lossy constant"
+  ],
+  "barrier-structural-mismatch": [
+    "barrier structural mismatch",
+    "barrier_structural_mismatch",
+    "Structural mismatch",
+    "structural mismatch"
+  ],
+  "barrier-no-bridge": [
+    "barrier no bridge",
+    "barrier_no_bridge",
+    "No bridge",
+    "no bridge",
+    "NO_BRIDGE"
+  ],
+  "open-gabor-window-positivity": [
+    "Gabor positivity for the specific window class",
+    "open gabor window positivity",
+    "open_gabor_window_positivity",
+    "Gabor positivity open"
+  ],
+  "open-global-all-place-intersection": [
+    "Global all-place intersection identity",
+    "open global all place intersection",
+    "open_global_all_place_intersection",
+    "all-place intersection"
+  ],
+  "open-relative-determinant-identity": [
+    "Exact relative determinant identity",
+    "open relative determinant identity",
+    "open_relative_determinant_identity",
+    "relative determinant identity"
+  ],
+  "open-independent-positivity-source": [
+    "open independent positivity source",
+    "open_independent_positivity_source",
+    "Independent positivity source",
+    "positivity source"
+  ],
+  "open-lambda-star-scale-law": [
+    "open lambda star scale law",
+    "open_lambda_star_scale_law",
+    "Scale law of λ*(L)",
+    "lambda scale law"
+  ],
+  "open-prime-phase-control": [
+    "Prime-phase coherence control",
+    "open prime phase control",
+    "open_prime_phase_control",
+    "prime phase control"
+  ],
+  "open-half-density-geometry": [
+    "half-density from geometry",
+    "Half-density from geometry",
+    "half-density-from-geometry",
+    "open half density geometry",
+    "open_half_density_geometry",
+    "geometric half-density"
+  ],
+  "static-prime-event-log": [
+    "Static prime event log",
+    "static prime event log",
+    "static_prime_event_log",
+    "arithmetic census",
+    "prime checksum"
+  ],
+  "finite-clock-commensurability": [
+    "finite clock commensurability",
+    "finite-clock commensurability",
+    "Finite-clock commensurability",
+    "finite-clock eventlog barrier",
+    "finite_clock_commensurability",
+    "prime-period no-go"
+  ],
+  "open-autonomous-prime-generator": [
+    "open autonomous prime generator",
+    "open_autonomous_prime_generator",
+    "dynamic event-log mechanism",
+    "Autonomous prime generator"
+  ],
+  "weight4-gl1-transport": [
+    "Weight-4 to GL(1) transport",
+    "weight-4 GL(1) transport",
+    "weight4 gl1 transport",
+    "weight4_gl1_transport",
+    "ZETA.CENSUS.TO.GL1"
+  ],
+  "waldspurger-squares": [
+    "Waldspurger square positivity",
+    "waldspurger-square-positivity",
+    "half-integral period squares",
+    "waldspurger squares",
+    "Waldspurger squares",
+    "waldspurger_squares"
+  ],
+  "siegel-weil-carrier": [
+    "Siegel–Weil positive linear carrier",
+    "siegel-weil-linear-carrier",
+    "siegel-weil-theta-pairing",
+    "Theta linear carrier",
+    "siegel weil carrier",
+    "Siegel-Weil carrier",
+    "siegel_weil_carrier"
+  ],
+  "eisenstein-rh-neutrality": [
+    "Eisenstein bridge no-new-information theorem",
+    "E8 Eisenstein RH-neutrality",
+    "eisenstein rh neutrality",
+    "eisenstein_rh_neutrality"
+  ],
+  "positive-cone-blindness": [
+    "positive-measure source barrier",
+    "positive cone blindness",
+    "Positive-cone blindness",
+    "positive_cone_blindness",
+    "nu-scaling blindness"
+  ],
+  "rankin-selberg-norm-square": [
+    "rankin selberg norm square",
+    "Rankin-Selberg norm square",
+    "rankin_selberg_norm_square",
+    "Rankin–Selberg norm-square",
+    "GNS norm-square"
+  ],
+  "cohen-seeds": [
+    "Cohen positive seeds L(E4⊗χ_d,2)",
+    "Cohen-Eisenstein seeds",
+    "cohen-positive-seeds",
+    "cohen seeds",
+    "cohen_seeds",
+    "L(E4⊗χ_d,2)"
+  ],
+  "sos-pontryagin-language": [
+    "SOS / Pontryagin language",
+    "sum-of-squares Pontryagin",
+    "sos pontryagin language",
+    "sos_pontryagin_language",
+    "SOS Pontryagin"
+  ],
+  "kasteleyn-orientation-language": [
+    "Kasteleyn orientation language",
+    "kasteleyn orientation language",
+    "kasteleyn_orientation_language",
+    "value-preserving orientation",
+    "Kasteleyn orientation"
+  ],
+  "hamiltonian-psd-language": [
+    "canonical Hamiltonian positivity",
+    "Hamiltonian PSD language",
+    "hamiltonian psd language",
+    "hamiltonian_psd_language"
+  ],
+  "dual-pair-language": [
+    "Dual-pair product language",
+    "dual pair language",
+    "dual_pair_language",
+    "exact product law"
+  ],
+  "connes-adele-scaling-flow": [
+    "Connes–Meyer adele-class scaling flow",
+    "connes adele scaling flow",
+    "connes_adele_scaling_flow",
+    "Connes-Meyer scaling",
+    "adele-class flow",
+    "Connes-Meyer"
+  ],
+  "bost-connes-kms-system": [
+    "bost connes kms system",
+    "bost_connes_kms_system",
+    "Bost–Connes KMS system",
+    "Bost-Connes KMS",
+    "BC KMS system"
+  ],
+  "primon-riemann-gas": [
+    "Primon or Riemann gas",
+    "primon riemann gas",
+    "primon_riemann_gas",
+    "Julia Spector gas",
+    "Riemann gas",
+    "primon gas"
+  ],
+  "berry-keating-dilation": [
+    "Berry–Keating dilation Hamiltonian",
+    "berry keating dilation",
+    "Berry-Keating dilation",
+    "berry_keating_dilation",
+    "xp dilation"
+  ],
+  "deninger-foliated-dynamics": [
+    "Deninger foliated dynamics",
+    "deninger foliated dynamics",
+    "deninger_foliated_dynamics",
+    "Deninger flow"
+  ],
+  "knauf-arithmetic-statistical-system": [
+    "Knauf arithmetic quantum statistical system",
+    "knauf arithmetic statistical system",
+    "knauf_arithmetic_statistical_system",
+    "Connes-Marcolli statistical",
+    "Knauf system",
+    "BC-Marcolli"
+  ],
+  "event-log-function": [
+    "dynamical function of the prime event log",
+    "event-log dynamical function",
+    "event log function",
+    "Event-log function",
+    "event_log_function"
+  ],
+  "unitarity-of-emergent-time": [
+    "Unitarity of emergent TFPT time",
+    "unitarity of emergent time",
+    "unitarity_of_emergent_time",
+    "emergent time unitarity",
+    "emergent-time-unitarity"
+  ],
+  "edge-l-values": [
+    "Euler-region L-values",
+    "edge l values",
+    "Edge L-values",
+    "edge L-values",
+    "edge_l_values"
+  ],
+  "edge-nonvanishing-method": [
+    "Edge nonvanishing method",
+    "edge nonvanishing method",
+    "edge_nonvanishing_method",
+    "zeta(1+it) nonzero",
+    "edge nonvanishing",
+    "ζ(1+it)≠0"
+  ],
+  "quarter-shift-to-centre": [
+    "Weil criterion quarter-shift",
+    "quarter shift to centre",
+    "quarter-shift to centre",
+    "Quarter-shift to centre",
+    "quarter_shift_to_centre"
+  ],
+  "farkas-witness-n-mod-8": [
+    "Farkas witness n=6 mod 8",
+    "Farkas witness n≡6 mod 8",
+    "farkas-witness n≡6 mod 8",
+    "farkas witness n mod 8",
+    "farkas_witness_n_mod_8",
+    "C_L3 n==6 mod 8"
+  ],
+  "metric-by-operator-positivity": [
+    "metric by operator positivity",
+    "metric-by-operator positivity",
+    "Metric-by-operator positivity",
+    "metric_by_operator_positivity",
+    "operator positivity template"
+  ],
+  "rhp-iiks-toda-tau": [
+    "RHP/IIKS/Toda tau framework",
+    "IIKS Fredholm tau",
+    "rhp iiks toda tau",
+    "rhp_iiks_toda_tau",
+    "RHP IIKS Toda",
+    "tau iiks toda",
+    "IIKS/Toda",
+    "Toda tau"
+  ],
+  "suzuki-screw-canonical-systems": [
+    "Suzuki screw functions / canonical systems",
+    "suzuki screw canonical systems",
+    "suzuki_screw_canonical_systems",
+    "Suzuki screw functions",
+    "canonical systems",
+    "screw function",
+    "Suzuki screw",
+    "W1 Suzuki"
+  ],
+  "quillen-bfk-seam-determinants": [
+    "Burghelea-Friedlander-Kappeler",
+    "quillen bfk seam determinants",
+    "Quillen/BFK seam determinants",
+    "quillen_bfk_seam_determinants",
+    "BFK determinant",
+    "Quillen metric",
+    "Quillen/BFK"
+  ],
+  "i5-transport-ledger-criterion": [
+    "i5 transport ledger criterion",
+    "I5 transport-ledger criterion",
+    "i5_transport_ledger_criterion",
+    "transport ledger",
+    "I5 inequality",
+    "I5 criterion"
+  ],
+  "r-dagger-kernel-loewner-stack": [
+    "R† kernel–Loewner positivity stack",
+    "r dagger kernel loewner stack",
+    "r_dagger_kernel_loewner_stack",
+    "kernel Loewner positivity",
+    "R dagger kernel",
+    "kernel-Loewner",
+    "RDAGGER"
+  ],
+  "multiplicative-composition-law": [
+    "Multiplicative composition necessity",
+    "multiplicative composition law",
+    "multiplicative_composition_law",
+    "multiplicative composition",
+    "log-n information law"
+  ],
+  "census-qsm": [
+    "E8 census quantum statistical system",
+    "census quantum statistical system",
+    "E8 census QSM",
+    "census qsm",
+    "census_qsm"
+  ],
+  "modular-clock": [
+    "free modular Hamiltonian",
+    "Seam modular clock",
+    "seam modular clock",
+    "modular clock",
+    "modular_clock"
+  ],
+  "resummed-clock-tower": [
+    "clock combination spectrum",
+    "resummed clock tower",
+    "Resummed clock tower",
+    "resummed_clock_tower"
+  ],
+  "koide-mobius-flow": [
+    "Koide Riccati flow",
+    "Koide Mobius flow",
+    "koide mobius flow",
+    "Koide Möbius flow",
+    "koide_mobius_flow"
+  ],
+  "4d-lattice-contract": [
+    "Four-dimensional lattice dynamics contract",
+    "four-dimensional lattice contract",
+    "4d lattice contract",
+    "4d lattice dynamics",
+    "4d_lattice_contract"
+  ],
+  "qca-dilation": [
+    "collision-band dilation",
+    "QCA unitary dilation",
+    "QCA dilation",
+    "qca dilation",
+    "qca_dilation"
+  ],
+  "no-canonical-integer-label": [
+    "No canonical integer state label",
+    "missing log-integer spectrum",
+    "no canonical integer label",
+    "no_canonical_integer_label"
+  ],
+  "archimedean-place": [
+    "Gamma factor and log pi",
+    "Archimedean place of Q",
+    "archimedean place",
+    "archimedean_place",
+    "infinite place",
+    "real place"
+  ],
+  "class-number-formula-q-i": [
+    "Class-number formula for Q(i)",
+    "Gaussian class-number formula",
+    "class number formula q i",
+    "class_number_formula_q_i",
+    "L(1,chi_-4)=pi/4"
+  ],
+  "finite-infinite-place-balance": [
+    "explicit-formula place balance",
+    "finite infinite place balance",
+    "Finite-infinite place balance",
+    "finite_infinite_place_balance",
+    "prime-real-place identity"
+  ],
+  "archimedean-dominance": [
+    "archimedean-prime metric dominance",
+    "Archimedean dominance criterion",
+    "archimedean dominance",
+    "archimedean_dominance",
+    "reality conformity"
+  ],
+  "pi-numerology-c3": [
+    "c3 and L(1,chi_-4) numerology",
+    "c3=1/(32 L(1,chi_-4))",
+    "pi numerology c3",
+    "pi_numerology_c3"
+  ],
+  "mu4-mark": [
+    "four-mark boundary datum",
+    "TFPT mu4 mark",
+    "mu4 mark",
+    "mu4_mark"
+  ],
+  "chi-minus-4-census": [
+    "Gaussian split-inert census",
+    "chi-minus-4 signed census",
+    "chi minus 4 census",
+    "chi_minus_4_census",
+    "chi_-4 census"
+  ],
+  "census-qsm-normflow": [
+    "Gaussian submodule QSM",
+    "Census QSM norm flow",
+    "census QSM normflow",
+    "census qsm normflow",
+    "census_qsm_normflow"
+  ],
+  "connes-marcolli-gln-system": [
+    "Connes–Marcolli GLn arithmetic QSM",
+    "connes marcolli gln system",
+    "connes_marcolli_gln_system",
+    "higher-rank arithmetic QSM",
+    "Connes-Marcolli GLn"
+  ],
+  "index-flow-time": [
+    "Index-flow time evolution",
+    "norm-index Hamiltonian",
+    "index flow time",
+    "index-flow time",
+    "index_flow_time"
+  ],
+  "p1-gauss-bonnet-positive-normalization": [
+    "p1 gauss bonnet positive normalization",
+    "P1 Gauss–Bonnet positive normalization",
+    "p1_gauss_bonnet_positive_normalization",
+    "c3 curvature integral",
+    "P1 Gauss-Bonnet"
+  ],
+  "e8-positive-lattice-norm": [
+    "E8 positive lattice norm",
+    "e8 positive lattice norm",
+    "e8_positive_lattice_norm",
+    "positive E8 norm",
+    "E8 Gram form"
+  ],
+  "seam-os-positive-transfer": [
+    "seam os positive transfer",
+    "Seam OS positive transfer",
+    "seam_os_positive_transfer",
+    "seam OS transfer",
+    "Lambda=e^{-h}"
+  ],
+  "seam-modular-generator": [
+    "seam modular Hamiltonian",
+    "Seam modular generator",
+    "seam modular generator",
+    "seam_modular_generator",
+    "K=log((1-C)C^{-1})"
+  ],
+  "markov-qca-unitary-dilation": [
+    "Stinespring collision dilation",
+    "markov qca unitary dilation",
+    "Markov QCA unitary dilation",
+    "markov_qca_unitary_dilation",
+    "Markov QCA dilation"
+  ],
+  "quasilocal-hamiltonian-dynamics": [
+    "quasilocal hamiltonian dynamics",
+    "Quasilocal Hamiltonian dynamics",
+    "quasilocal_hamiltonian_dynamics",
+    "Lieb-Robinson dynamics",
+    "quasilocal Hamiltonian"
+  ],
+  "e8-theta-heat-operator": [
+    "E8 theta heat operator",
+    "e8 theta heat operator",
+    "e8_theta_heat_operator",
+    "theta heat operator",
+    "E8 heat semigroup"
+  ],
+  "hodge-riemann-positivity-candidate": [
+    "Hodge and Riemann-bilinear positivity candidate",
+    "hodge riemann positivity candidate",
+    "hodge_riemann_positivity_candidate",
+    "Hodge Riemann bilinear",
+    "mu3-cover positivity"
+  ],
+  "perron-fixed-point-transport": [
+    "primitive stochastic transport",
+    "perron fixed point transport",
+    "Perron fixed-point transport",
+    "perron_fixed_point_transport",
+    "Perron transport"
+  ],
+  "seam-kms-gibbs-positivity": [
+    "Seam KMS and Gibbs positivity",
+    "seam kms gibbs positivity",
+    "seam_kms_gibbs_positivity",
+    "Gibbs positivity",
+    "seam KMS"
+  ],
+  "heat-zeta-regularization": [
+    "Heat and spectral-zeta regularization",
+    "heat zeta regularization",
+    "heat_zeta_regularization",
+    "Seeley-DeWitt"
+  ],
+  "horizon-replica-positivity": [
+    "Horizon replica and area-law positivity",
+    "horizon replica positivity",
+    "horizon_replica_positivity",
+    "area-law positivity",
+    "horizon replica"
+  ],
+  "seam-rp-blind-selector": [
+    "Seam RP blindness and straddle selector",
+    "seam rp blind selector",
+    "seam_rp_blind_selector",
+    "seam RP blindness",
+    "straddle selector"
+  ],
+  "admissible-os-positive-measure": [
+    "admissible os positive measure",
+    "Admissible OS positive measure",
+    "admissible_os_positive_measure",
+    "admissible OS measure",
+    "H_OS=-log T"
+  ],
+  "finite-weil-gns-metric": [
+    "Finite Weil GNS family metric",
+    "finite weil gns metric",
+    "finite_weil_gns_metric",
+    "character-family GNS",
+    "finite Weil GNS"
+  ],
+  "matching-ledger-positivity": [
+    "Matching-ledger per-term positivity",
+    "matching ledger positivity",
+    "matching-ledger positivity",
+    "matching_ledger_positivity",
+    "per-term Weil ledger"
+  ],
+  "discrete-spectrum-neutrality": [
+    "discrete spectrum neutrality",
+    "Discrete-spectrum neutrality",
+    "discrete_spectrum_neutrality",
+    "spectral-zeta continuation",
+    "discrete-spectrum zeros"
+  ],
+  "no-archimedean-prime-joint-space": [
+    "no archimedean prime joint space",
+    "No archimedean-prime joint space",
+    "no joint archimedean-prime space",
+    "no_archimedean_prime_joint_space",
+    "no arithmetic scaling action"
+  ],
+  "finite-family-target-mismatch": [
+    "finite family target mismatch",
+    "Finite-family target mismatch",
+    "finite_family_target_mismatch",
+    "sampled-character mismatch",
+    "finite-family mismatch"
+  ],
+  "kneser-groupoid": [
+    "Marked Kneser neighbour groupoid",
+    "marked Kneser groupoid",
+    "Kneser groupoid",
+    "kneser groupoid",
+    "kneser_groupoid"
+  ],
+  "hnf-groupoid": [
+    "HNF submodule correspondence groupoid",
+    "Gaussian HNF groupoid",
+    "HNF groupoid",
+    "hnf groupoid",
+    "hnf_groupoid"
+  ],
+  "euler-side-blindness": [
+    "Euler-side positivity blindness",
+    "compact-torus blindness",
+    "euler side blindness",
+    "Euler-side blindness",
+    "euler_side_blindness"
+  ],
+  "stochastic-scale-semigroup-on-connes-cokernel": [
+    "Stochastic scale semigroup on Connes cokernel",
+    "stochastic scale semigroup on connes cokernel",
+    "stochastic_scale_semigroup_on_connes_cokernel",
+    "Connes-cokernel Markov semigroup",
+    "stochastic scale semigroup"
+  ],
+  "rh-as-reflection-positivity": [
+    "rh as reflection positivity",
+    "RH as reflection positivity",
+    "rh_as_reflection_positivity",
+    "Bochner-OS-Hilbert-Polya",
+    "RH reflection positivity"
+  ],
+  "e8-sublattice-rg-semigroup": [
+    "superlattice conditional expectation",
+    "e8 sublattice rg semigroup",
+    "E8 sublattice RG semigroup",
+    "e8_sublattice_rg_semigroup",
+    "E8 RG semigroup"
+  ],
+  "hecke-index-theorem": [
+    "Hecke covering-index theorem",
+    "covering index theorem",
+    "Hecke covering-index",
+    "hecke index theorem",
+    "hecke_index_theorem"
+  ],
+  "pimsner-popa-entropy": [
+    "Pimsner-Popa index entropy",
+    "pimsner popa entropy",
+    "Pimsner-Popa entropy",
+    "pimsner_popa_entropy",
+    "index entropy"
+  ],
+  "cuntz-laca-semigroup-algebra": [
+    "cuntz laca semigroup algebra",
+    "Cuntz-Laca semigroup algebra",
+    "cuntz_laca_semigroup_algebra",
+    "semigroup crossed product",
+    "Cuntz-Laca algebra"
+  ],
+  "connes-trace-formula-dichotomy": [
+    "connes trace formula dichotomy",
+    "Connes trace-formula dichotomy",
+    "connes_trace_formula_dichotomy",
+    "Connes cutoff dichotomy",
+    "cutoff dichotomy"
+  ],
+  "index-modular-state": [
+    "Physical index-modular state",
+    "physical index-modular state",
+    "index modular Hamiltonian",
+    "index modular state",
+    "index_modular_state"
+  ],
+  "equality-hunt": [
+    "Torus-cutoff equality hunt",
+    "cutoff equality hunt",
+    "equality hunt",
+    "equality_hunt"
+  ],
+  "screw-function-criterion": [
+    "Suzuki screw-function criterion",
+    "screw function criterion",
+    "screw_function_criterion",
+    "Krein-Langer criterion",
+    "zeta screw kernel"
+  ],
+  "canonical-system-hamiltonian": [
+    "Zeta canonical-system Hamiltonian",
+    "canonical system hamiltonian",
+    "canonical_system_hamiltonian",
+    "positive Hamiltonian H(t)",
+    "Krein canonical system"
+  ],
+  "schoenberg-helical-embedding": [
+    "Schoenberg-Krein helical embedding",
+    "stationary-increment embedding",
+    "schoenberg helical embedding",
+    "schoenberg_helical_embedding",
+    "screw line"
+  ],
+  "de-branges-positivity": [
+    "de Branges operator positivity",
+    "de Branges shift positivity",
+    "de branges positivity",
+    "de_branges_positivity"
+  ],
+  "conductor-operator-burnol": [
+    "log-position plus log-momentum operator",
+    "Burnol conductor operator",
+    "conductor operator burnol",
+    "conductor_operator_burnol"
+  ],
+  "verified-zeros-height": [
+    "Rigorous verified-zero height",
+    "Platt-Trudgian height",
+    "verified zeros height",
+    "verified_zeros_height"
+  ],
+  "compact-window-certificate-mechanism": [
+    "compact window certificate mechanism",
+    "Compact-window finite-height barrier",
+    "compact_window_certificate_mechanism",
+    "Paley-Wiener tail barrier"
+  ],
+  "w2-form-density": [
+    "W2 form-density and limit bridge",
+    "W2 form density",
+    "w2 form density",
+    "w2_form_density"
+  ],
+  "w3-uniform-window-positivity": [
+    "w3 uniform window positivity",
+    "W3 uniform window positivity",
+    "w3_uniform_window_positivity",
+    "W3 uniform positivity",
+    "no-ladder wall"
+  ],
+  "w4-global-positivity-transfer": [
+    "W4 global Weil-positivity transfer",
+    "w4 global positivity transfer",
+    "w4_global_positivity_transfer",
+    "W4 global transfer"
+  ],
+  "selected-arch-error-quadratic-rate": [
+    "Selected archimedean quadratic-rate statement",
+    "selected arch error quadratic rate",
+    "selected_arch_error_quadratic_rate",
+    "SelectedArchErrorQuadraticRate",
+    "archRateConst bound"
+  ],
+  "selected-arch-weighted-interpolation-estimate": [
+    "Selected arch weighted interpolation estimate",
+    "selected arch weighted interpolation estimate",
+    "selected_arch_weighted_interpolation_estimate",
+    "SelectedArchWeightedInterpolationEstimate"
+  ],
+  "frequently-selected-aug-dual-resolvent": [
+    "frequently_selected_augDualResolvent_ge_half",
+    "frequently selected aug dual resolvent",
+    "frequently_selected_aug_dual_resolvent",
+    "FREQ cone theorem",
+    "FREQ cone"
+  ],
+  "selected-polynomial-approximates-grid": [
+    "selected polynomial approximates grid",
+    "Selected polynomial approximates grid",
+    "selected_polynomial_approximates_grid",
+    "SelectedPolynomialApproximatesGrid"
+  ]
+}

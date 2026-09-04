@@ -93,6 +93,14 @@ run_gen() {  # regenerate every single-source surface (cheap, stdlib python only
   python3 "$ROOT/verification/make_changelog_web.py" || exit 1
   python3 "$ROOT/verification/make_script_atlas.py" || exit 1
   python3 "$ROOT/verification/make_discipline_stats.py" || exit 1
+  python3 "$ROOT/rh/catalog/autodraft.py" || exit 1
+  if [ "${TFPT_LLM_CATALOG:-}" = "1" ] && python3 "$ROOT/rh/catalog/openai_service.py" --key-ok >/dev/null; then
+    python3 "$ROOT/rh/catalog/autodraft.py" --llm --only-new || exit 1
+    python3 "$ROOT/rh/catalog/embed_catalog.py" || exit 1
+  else
+    echo "skip: catalog LLM (set TFPT_LLM_CATALOG=1 and provide a resolvable API key)"
+  fi
+  python3 "$ROOT/rh/catalog/build_catalog.py" || exit 1
 }
 
 run_website() {  # mirror PDFs + scripts into website/, stamp version + hashes
@@ -127,6 +135,8 @@ run_audit() {
   # detector + sealed probe smoke list + lake build if present) must end
   # "RH SUITE: ALL CHECKS PASSED"; full v9xx module runs stay in run_all.py.
   python3 "$ROOT/rh/verification/run_rh.py" --fast || exit 1
+  echo "== RH semantic catalog =="
+  python3 "$ROOT/rh/catalog/build_catalog.py" --check || exit 1
 }
 
 run_zenodo() {  # $1 = optional "publish"

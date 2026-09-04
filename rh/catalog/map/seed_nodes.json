@@ -1,0 +1,4971 @@
+[
+  {
+    "id": "analytic-object",
+    "type": "CLASS",
+    "name": "Analytic object",
+    "aliases": [],
+    "definition": "Functions, transforms, measures, and formulas used in analytic number theory.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "positivity-criterion",
+    "type": "CLASS",
+    "name": "Positivity criterion",
+    "aliases": [],
+    "definition": "A criterion phrased as positivity or nonnegativity of a form, sequence, kernel, or matrix.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "spectral-framework",
+    "type": "CLASS",
+    "name": "Spectral framework",
+    "aliases": [],
+    "definition": "An operator, trace formula, or spectral model used to organize RH-adjacent questions.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "arithmetic-geometry",
+    "type": "CLASS",
+    "name": "Arithmetic geometry",
+    "aliases": [],
+    "definition": "Geometric and cohomological structures carrying arithmetic information.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "tfpt-compiler",
+    "type": "CLASS",
+    "name": "TFPT compiler structure",
+    "aliases": [],
+    "definition": "A project-internal finite structure or bridge, with no implication to RH unless an explicit sourced edge says so.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "obstruction-class",
+    "type": "CLASS",
+    "name": "Obstruction class",
+    "aliases": [],
+    "definition": "A typed reason that a proposed route is blocked, killed, circular, or incomplete.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "research-question",
+    "type": "CLASS",
+    "name": "Research question",
+    "aliases": [],
+    "definition": "A currently open, explicitly sourced reduction or missing bridge.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/map/README.md:1"
+    ],
+    "tags": [
+      "class"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "riemann-zeta",
+    "type": "OBJECT",
+    "name": "Riemann zeta function ζ(s)",
+    "aliases": [
+      "zeta",
+      "ζ(s)"
+    ],
+    "definition": "The meromorphic continuation of the Dirichlet series Σn⁻ˢ, with Euler product in Re(s)>1.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "riemann-xi",
+    "type": "OBJECT",
+    "name": "Riemann xi function ξ(s)",
+    "aliases": [
+      "xi",
+      "ξ(s)",
+      "Riemann xi"
+    ],
+    "definition": "The completed entire zeta function, normalized to satisfy ξ(s)=ξ(1−s).",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "riemann-hypothesis",
+    "type": "OPEN_QUESTION",
+    "name": "Riemann Hypothesis",
+    "aliases": [
+      "RH",
+      "RiemannHypothesis"
+    ],
+    "definition": "The assertion that every nontrivial zero of ζ has real part one half.",
+    "status": "OPEN",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "critical-line",
+    "type": "GEOMETRY",
+    "name": "Critical line",
+    "aliases": [
+      "Re(s)=1/2",
+      "critical line"
+    ],
+    "definition": "The vertical line Re(s)=1/2 in the critical strip.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "critical-strip",
+    "type": "GEOMETRY",
+    "name": "Critical strip",
+    "aliases": [
+      "critical strip"
+    ],
+    "definition": "The strip 0<Re(s)<1 containing the nontrivial zeta zeros.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "riemann-kernel",
+    "type": "OBJECT",
+    "name": "Riemann kernel Φ(u)",
+    "aliases": [
+      "Phi(u)",
+      "Φ(u)",
+      "Riemann kernel"
+    ],
+    "definition": "The classical even rapidly decaying kernel whose Fourier transform gives Ξ on the critical line.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Titchmarsh, The Theory of the Riemann Zeta-function, §2.16"
+    ],
+    "tags": [
+      "fourier"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "xi-fourier-function",
+    "type": "OBJECT",
+    "name": "Ξ(t)",
+    "aliases": [
+      "Xi(t)",
+      "Ξ(t)"
+    ],
+    "definition": "The real even function ξ(1/2+it), represented as a Fourier transform of the Riemann kernel.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Titchmarsh, The Theory of the Riemann Zeta-function, §2.16"
+    ],
+    "tags": [
+      "fourier"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "fourier-transform",
+    "type": "METHOD",
+    "name": "Fourier transform",
+    "aliases": [
+      "Fourier",
+      "Fourier pair"
+    ],
+    "definition": "The integral transform exchanging a function with its frequency representation.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §1.14"
+    ],
+    "tags": [
+      "transform"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "mellin-transform",
+    "type": "METHOD",
+    "name": "Mellin transform",
+    "aliases": [
+      "Mellin",
+      "Mellin transform M"
+    ],
+    "definition": "The multiplicative transform M[f](s)=∫₀∞f(x)xˢ⁻¹dx.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §2.5"
+    ],
+    "tags": [
+      "transform"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "laplace-transform",
+    "type": "METHOD",
+    "name": "Laplace transform",
+    "aliases": [
+      "Laplace transform"
+    ],
+    "definition": "The integral transform f↦∫₀∞e⁻ˢᵗf(t)dt.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §1.14"
+    ],
+    "tags": [
+      "transform"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "functional-equation",
+    "type": "THEOREM",
+    "name": "Zeta functional equation",
+    "aliases": [
+      "functional equation",
+      "FE"
+    ],
+    "definition": "The symmetry relating completed zeta values at s and 1−s.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.10"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "explicit-formula",
+    "type": "THEOREM",
+    "name": "Riemann–Weil explicit formula",
+    "aliases": [
+      "explicit formula",
+      "Weil explicit formula"
+    ],
+    "definition": "A distributional identity relating sums over zeta zeros to prime-power and archimedean terms.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "von-mangoldt",
+    "type": "OBJECT",
+    "name": "von Mangoldt function Λ(n)",
+    "aliases": [
+      "von Mangoldt",
+      "Λ(n)",
+      "Lambda(n)"
+    ],
+    "definition": "The arithmetic weight log p on prime powers pᵏ and zero otherwise.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §27.10"
+    ],
+    "tags": [
+      "prime"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "chebyshev-psi",
+    "type": "OBJECT",
+    "name": "Chebyshev ψ(x)",
+    "aliases": [
+      "Chebyshev psi",
+      "ψ(x)"
+    ],
+    "definition": "The summatory function Σn≤x Λ(n).",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §27.2"
+    ],
+    "tags": [
+      "prime"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "prime-counting",
+    "type": "OBJECT",
+    "name": "Prime-counting function π(x)",
+    "aliases": [
+      "prime counting",
+      "π(x)"
+    ],
+    "definition": "The number of primes not exceeding x.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §27.2"
+    ],
+    "tags": [
+      "prime"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "zero-counting",
+    "type": "INVARIANT",
+    "name": "Zero-counting function N(T)",
+    "aliases": [
+      "zero counting",
+      "N(T)"
+    ],
+    "definition": "The number of nontrivial zeta zeros with ordinate between zero and T, counted with multiplicity.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Titchmarsh, The Theory of the Riemann Zeta-function, Thm. 9.3"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "pair-correlation",
+    "type": "INVARIANT",
+    "name": "Pair correlation of zeta zeros",
+    "aliases": [
+      "pair correlation"
+    ],
+    "definition": "The limiting local two-point statistic conjectured for normalized zeta ordinates.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Montgomery, Proc. Symp. Pure Math. 24 (1973)"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gue-statistics",
+    "type": "CLASS",
+    "name": "GUE statistics",
+    "aliases": [
+      "GUE",
+      "Gaussian unitary ensemble"
+    ],
+    "definition": "The local eigenvalue statistics of large random Hermitian matrices in the unitary symmetry class.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Mehta, Random Matrices, 3rd ed."
+    ],
+    "tags": [
+      "random-matrix"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "montgomery-conjecture",
+    "type": "OPEN_QUESTION",
+    "name": "Montgomery pair-correlation conjecture",
+    "aliases": [
+      "Montgomery conjecture"
+    ],
+    "definition": "The conjecture that normalized zeta-zero pair correlation agrees with the GUE sine-kernel law.",
+    "status": "OPEN",
+    "sources": [
+      "Montgomery, Proc. Symp. Pure Math. 24 (1973)"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "weil-quadratic-form",
+    "type": "OBJECT",
+    "name": "Weil quadratic form Q(f)",
+    "aliases": [
+      "Weil form",
+      "Q(f)",
+      "Weil quadratic form"
+    ],
+    "definition": "The explicit-formula quadratic functional whose positivity on the admissible test class is equivalent to RH.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "weil-arch-term",
+    "type": "OBJECT",
+    "name": "Weil archimedean term",
+    "aliases": [
+      "arch term",
+      "archimedean term",
+      "ARCH"
+    ],
+    "definition": "The gamma-factor contribution to the Weil explicit-formula quadratic form.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "weil-prime-term",
+    "type": "OBJECT",
+    "name": "Weil prime term",
+    "aliases": [
+      "prime term",
+      "PRIME"
+    ],
+    "definition": "The prime-power contribution, weighted by the von Mangoldt function, in the Weil form.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "weil-pole-term",
+    "type": "OBJECT",
+    "name": "Weil pole term",
+    "aliases": [
+      "pole term",
+      "POLE"
+    ],
+    "definition": "The contribution of the pole and trivial normalization terms in the Weil form.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "weil-positivity",
+    "type": "CRITERION",
+    "name": "Weil positivity criterion",
+    "aliases": [
+      "Weil positivity",
+      "Weil criterion"
+    ],
+    "definition": "Nonnegativity of the Weil quadratic form on the full admissible test class.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "rh-equivalent",
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "gabor-zero-side",
+    "type": "OBJECT",
+    "name": "Gabor zero side",
+    "aliases": [
+      "gaborZeroSide",
+      "Gabor zero-side"
+    ],
+    "definition": "The zero-side functional evaluated on the corpus pure-Gabor two-parameter test family.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/GaborSeparation.lean:1998"
+    ],
+    "tags": [
+      "gabor"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "pure-gabor-family",
+    "type": "CLASS",
+    "name": "Pure Gabor test family",
+    "aliases": [
+      "pureGaborTest",
+      "pure Gabor"
+    ],
+    "definition": "The two-parameter Gaussian wavepacket family indexed by a>0 and frequency ω.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/GaborCountableCriterion.lean:526"
+    ],
+    "tags": [
+      "gabor"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gabor-pure-criterion",
+    "type": "CRITERION",
+    "name": "Pure-Gabor zero-side criterion",
+    "aliases": [
+      "gabor pure criterion",
+      "gabor_zeroSide_pure_criterion_iff_rh_unconditional"
+    ],
+    "definition": "Nonnegativity of the Gabor zero side for every pure-Gabor packet.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/GaborExposedOrbit.lean:1718"
+    ],
+    "tags": [
+      "rh-equivalent",
+      "gabor"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gabor-rational-criterion",
+    "type": "CRITERION",
+    "name": "Rational pure-Gabor criterion",
+    "aliases": [
+      "gabor rational criterion",
+      "gabor_zeroSide_rational_criterion_iff_rh_unconditional"
+    ],
+    "definition": "Nonnegativity of the pure-Gabor zero side on positive rational scales and rational frequencies.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/GaborCountableCriterion.lean:540"
+    ],
+    "tags": [
+      "rh-equivalent",
+      "gabor"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gabor-prime-side-criterion",
+    "type": "CRITERION",
+    "name": "Gabor prime-side rational criterion",
+    "aliases": [
+      "gabor prime-side criterion",
+      "gabor_primeSide_rational_criterion_iff_rh"
+    ],
+    "definition": "The rational pure-Gabor criterion rewritten using the pole, prime-comb, and archimedean sides.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/GaborCountableCriterion.lean:550"
+    ],
+    "tags": [
+      "rh-equivalent",
+      "gabor"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "li-coefficients",
+    "type": "INVARIANT",
+    "name": "Li coefficients λₙ",
+    "aliases": [
+      "Li coefficients",
+      "Li lambda",
+      "λ_n"
+    ],
+    "definition": "Coefficients obtained from derivatives of log ξ at s=1 in Li's criterion.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Li, J. Number Theory 65 (1997), DOI:10.1006/jnth.1997.2138"
+    ],
+    "tags": [
+      "rh-core"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "li-criterion",
+    "type": "CRITERION",
+    "name": "Li criterion",
+    "aliases": [
+      "Li's criterion",
+      "Li criterion"
+    ],
+    "definition": "Nonnegativity of all Li coefficients.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Li, J. Number Theory 65 (1997), DOI:10.1006/jnth.1997.2138"
+    ],
+    "tags": [
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "nyman-beurling-space",
+    "type": "OBJECT",
+    "name": "Nyman–Beurling closure space",
+    "aliases": [
+      "Nyman-Beurling space"
+    ],
+    "definition": "The closed span in L²(0,1) of fractional-part combinations satisfying the Nyman–Beurling constraint.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Nyman, Ark. Mat. 1 (1950); Beurling, Proc. Nat. Acad. Sci. 41 (1955)"
+    ],
+    "tags": [
+      "hilbert-space"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "nyman-beurling-criterion",
+    "type": "CRITERION",
+    "name": "Nyman–Beurling criterion",
+    "aliases": [
+      "Nyman-Beurling",
+      "Nyman–Beurling"
+    ],
+    "definition": "The closure criterion for approximating the constant function in L²(0,1).",
+    "status": "CLASSICAL",
+    "sources": [
+      "Beurling, Proc. Nat. Acad. Sci. 41 (1955)"
+    ],
+    "tags": [
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "baez-duarte-criterion",
+    "type": "CRITERION",
+    "name": "Báez-Duarte criterion",
+    "aliases": [
+      "Baez-Duarte",
+      "Báez-Duarte"
+    ],
+    "definition": "A discrete Nyman–Beurling approximation criterion equivalent to RH.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Báez-Duarte, Adv. Math. 178 (2003), DOI:10.1016/S0001-8708(02)00041-5"
+    ],
+    "tags": [
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hardy-space-h2",
+    "type": "OBJECT",
+    "name": "Hardy space H²",
+    "aliases": [
+      "Hardy H2",
+      "H²"
+    ],
+    "definition": "The Hilbert space of analytic functions with square-integrable boundary values in the relevant half-plane or disk model.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Duren, Theory of Hᵖ Spaces"
+    ],
+    "tags": [
+      "hilbert-space"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "debruijn-newman-constant",
+    "type": "INVARIANT",
+    "name": "de Bruijn–Newman constant Λ",
+    "aliases": [
+      "de Bruijn-Newman Lambda",
+      "Newman constant"
+    ],
+    "definition": "The threshold heat-flow parameter above which the deformed Riemann Fourier transform has only real zeros.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "rodgers-tao-theorem",
+    "type": "THEOREM",
+    "name": "Rodgers–Tao theorem Λ≥0",
+    "aliases": [
+      "Lambda >= 0",
+      "Rodgers-Tao"
+    ],
+    "definition": "The theorem that the de Bruijn–Newman constant is nonnegative.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "newman-criterion",
+    "type": "CRITERION",
+    "name": "Newman heat-flow criterion",
+    "aliases": [
+      "Newman's criterion"
+    ],
+    "definition": "The criterion identifying RH with the equality Λ=0, given the classical upper implication and Λ≥0.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914"
+    ],
+    "tags": [
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "laguerre-polya-class",
+    "type": "CLASS",
+    "name": "Laguerre–Pólya class",
+    "aliases": [
+      "Laguerre-Polya",
+      "LP class"
+    ],
+    "definition": "The class of real entire functions locally approximable by real-rooted polynomials.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Levin, Distribution of Zeros of Entire Functions, Ch. VIII"
+    ],
+    "tags": [
+      "entire"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hermite-biehler-class",
+    "type": "CLASS",
+    "name": "Hermite–Biehler class",
+    "aliases": [
+      "Hermite-Biehler",
+      "HB class"
+    ],
+    "definition": "Entire functions E satisfying |E(z)|>|E*(z)| in the upper half-plane.",
+    "status": "CLASSICAL",
+    "sources": [
+      "de Branges, Hilbert Spaces of Entire Functions"
+    ],
+    "tags": [
+      "entire"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "debranges-space",
+    "type": "OBJECT",
+    "name": "de Branges space",
+    "aliases": [
+      "de Branges space"
+    ],
+    "definition": "A Hilbert space of entire functions generated by a Hermite–Biehler function.",
+    "status": "CLASSICAL",
+    "sources": [
+      "de Branges, Hilbert Spaces of Entire Functions"
+    ],
+    "tags": [
+      "operator"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "lee-yang-property",
+    "type": "CRITERION",
+    "name": "Lee–Yang property",
+    "aliases": [
+      "Lee-Yang",
+      "Lee–Yang"
+    ],
+    "definition": "A zero-location property placing partition-function zeros on a prescribed circle or line after normalization.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Lee–Yang, Phys. Rev. 87 (1952), DOI:10.1103/PhysRev.87.410"
+    ],
+    "tags": [
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "kps-theorem",
+    "type": "THEOREM",
+    "name": "KPS van Dantzig theorem",
+    "aliases": [
+      "KPS theorem",
+      "van Dantzig pair"
+    ],
+    "definition": "A sourced theorem connecting specified characteristic-function pairs and Lee–Yang-type zero geometry; the map records only the corpus-used formulation.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/paper/rh_program.tex:4130"
+    ],
+    "tags": [
+      "lee-yang"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "van-dantzig-pair",
+    "type": "OBJECT",
+    "name": "van Dantzig pair",
+    "aliases": [
+      "van Dantzig pairs"
+    ],
+    "definition": "A pair of characteristic functions related by reciprocal analytic continuation in the van Dantzig problem.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/paper/rh_program.tex:4130"
+    ],
+    "tags": [
+      "probability"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "polya-frequency-function",
+    "type": "CLASS",
+    "name": "Pólya frequency function",
+    "aliases": [
+      "PF function",
+      "Polya frequency"
+    ],
+    "definition": "A function whose translation kernel is totally positive of all orders.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Karlin, Total Positivity, Vol. I"
+    ],
+    "tags": [
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "toeplitz-positivity",
+    "type": "CRITERION",
+    "name": "Toeplitz positivity",
+    "aliases": [
+      "Toeplitz minors",
+      "Toeplitz positivity"
+    ],
+    "definition": "Positive semidefiniteness or total positivity conditions on Toeplitz matrices formed from a coefficient sequence.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Karlin, Total Positivity, Vol. I"
+    ],
+    "tags": [
+      "matrix"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hankel-positivity",
+    "type": "CRITERION",
+    "name": "Hankel moment positivity",
+    "aliases": [
+      "Hankel positivity",
+      "Hankel minors"
+    ],
+    "definition": "Positive semidefiniteness of Hankel matrices built from a moment or coefficient sequence.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Akhiezer, The Classical Moment Problem"
+    ],
+    "tags": [
+      "matrix"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "jensen-polynomials",
+    "type": "OBJECT",
+    "name": "Jensen polynomials",
+    "aliases": [
+      "Jensen polynomial"
+    ],
+    "definition": "Polynomials built from consecutive Taylor coefficients of an entire function.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Griffin–Ono–Rolen–Zagier, PNAS 116 (2019), DOI:10.1073/pnas.1902572116"
+    ],
+    "tags": [
+      "polynomial"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "jensen-hyperbolicity",
+    "type": "CRITERION",
+    "name": "Jensen polynomial hyperbolicity",
+    "aliases": [
+      "Jensen hyperbolicity"
+    ],
+    "definition": "Real-rootedness of every Jensen polynomial in the degree and shift range specified by the criterion.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Pólya–Schur, J. Reine Angew. Math. 144 (1914)"
+    ],
+    "tags": [
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "gorz-theorem",
+    "type": "THEOREM",
+    "name": "GORZ Jensen-polynomial theorem",
+    "aliases": [
+      "Griffin-Ono-Rolen-Zagier",
+      "GORZ"
+    ],
+    "definition": "The theorem that fixed-degree Jensen polynomials associated with ξ are eventually hyperbolic with Hermite asymptotics.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Griffin–Ono–Rolen–Zagier, PNAS 116 (2019), DOI:10.1073/pnas.1902572116"
+    ],
+    "tags": [
+      "polynomial"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hilbert-polya-operator",
+    "type": "OPERATOR",
+    "name": "Hilbert–Pólya operator",
+    "aliases": [
+      "Hilbert-Polya",
+      "Hilbert–Pólya"
+    ],
+    "definition": "A conjectural self-adjoint operator whose spectrum would encode nontrivial zeta ordinates.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Pólya correspondence, 1912–1914; Hilbert reported by Conrey (2003)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "berry-keating-xp",
+    "type": "OPERATOR",
+    "name": "Berry–Keating xp Hamiltonian",
+    "aliases": [
+      "Berry-Keating",
+      "xp Hamiltonian"
+    ],
+    "definition": "A semiclassical dilation Hamiltonian proposed as a model for the average zeta-zero counting law.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Berry–Keating, SIAM Review 41 (1999), DOI:10.1137/S0036144598347497"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "connes-trace-formula",
+    "type": "METHOD",
+    "name": "Connes trace formula",
+    "aliases": [
+      "Connes trace formula"
+    ],
+    "definition": "A noncommutative-geometric trace-formula approach representing zeta zeros through an absorption spectrum.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Connes, Selecta Math. 5 (1999), DOI:10.1007/s000290050054"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "adele-class-space",
+    "type": "GEOMETRY",
+    "name": "Adele class space",
+    "aliases": [
+      "adele class space"
+    ],
+    "definition": "The quotient of the adele ring by the multiplicative action of the global field.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes, Selecta Math. 5 (1999), DOI:10.1007/s000290050054"
+    ],
+    "tags": [
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "scaling-site",
+    "type": "GEOMETRY",
+    "name": "Connes–Consani scaling site",
+    "aliases": [
+      "scaling site"
+    ],
+    "definition": "A characteristic-one geometric framework carrying scaling and arithmetic-site structures.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes–Consani, arXiv:1507.05818"
+    ],
+    "tags": [
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "selberg-trace-formula",
+    "type": "THEOREM",
+    "name": "Selberg trace formula",
+    "aliases": [
+      "Selberg trace formula"
+    ],
+    "definition": "An identity relating spectral data of a hyperbolic quotient to lengths of closed geodesics.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Selberg, J. Indian Math. Soc. 20 (1956)"
+    ],
+    "tags": [
+      "trace"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "modular-surface",
+    "type": "GEOMETRY",
+    "name": "Modular surface",
+    "aliases": [
+      "PSL2Z quotient",
+      "modular surface"
+    ],
+    "definition": "The finite-area hyperbolic orbifold PSL₂(Z)\\H.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Iwaniec, Spectral Methods of Automorphic Forms"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "eisenstein-series",
+    "type": "OBJECT",
+    "name": "Eisenstein series",
+    "aliases": [
+      "Eisenstein series"
+    ],
+    "definition": "A noncuspidal automorphic eigenfunction formed by summing a height function over a parabolic quotient.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Iwaniec, Spectral Methods of Automorphic Forms"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "eisenstein-constant-term",
+    "type": "OBJECT",
+    "name": "Eisenstein constant term",
+    "aliases": [
+      "constant term",
+      "scattering term"
+    ],
+    "definition": "The two-term Fourier coefficient encoding the scattering coefficient of an Eisenstein series.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Iwaniec, Spectral Methods of Automorphic Forms, Ch. 3"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "epstein-zeta",
+    "type": "OBJECT",
+    "name": "Epstein zeta function",
+    "aliases": [
+      "Epstein zeta"
+    ],
+    "definition": "The zeta function obtained by summing powers of a positive quadratic form over nonzero lattice vectors.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §25.11"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hecke-operator",
+    "type": "OPERATOR",
+    "name": "Hecke operator",
+    "aliases": [
+      "Hecke operators"
+    ],
+    "definition": "A commuting arithmetic correspondence acting on automorphic forms.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Miyake, Modular Forms, Ch. 4"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hecke-correspondence",
+    "type": "GEOMETRY",
+    "name": "Hecke correspondence",
+    "aliases": [
+      "Hecke correspondences"
+    ],
+    "definition": "An algebraic or adelic correspondence whose induced action gives a Hecke operator.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Miyake, Modular Forms, Ch. 4"
+    ],
+    "tags": [
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "bruhat-tits-tree",
+    "type": "GEOMETRY",
+    "name": "Bruhat–Tits tree of PGL₂(Qₚ)",
+    "aliases": [
+      "Bruhat-Tits tree",
+      "PGL2(Qp) tree"
+    ],
+    "definition": "The regular tree of homothety classes of rank-two Zₚ-lattices.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Serre, Trees, Ch. II"
+    ],
+    "tags": [
+      "padic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "bost-connes-system",
+    "type": "OBJECT",
+    "name": "Bost–Connes system",
+    "aliases": [
+      "Bost-Connes",
+      "BC system"
+    ],
+    "definition": "A quantum statistical mechanical system whose partition function is ζ and whose symmetries encode class-field data.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Bost–Connes, Selecta Math. 1 (1995), DOI:10.1007/BF01589495"
+    ],
+    "tags": [
+      "operator-algebra"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "arakelov-intersection",
+    "type": "GEOMETRY",
+    "name": "Arakelov intersection theory",
+    "aliases": [
+      "Arakelov"
+    ],
+    "definition": "Intersection theory on arithmetic varieties combining finite-place and archimedean contributions.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Gillet–Soulé, Publ. Math. IHÉS 72 (1990)"
+    ],
+    "tags": [
+      "arithmetic-geometry"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "arithmetic-hodge-index",
+    "type": "THEOREM",
+    "name": "Arithmetic Hodge index theorem",
+    "aliases": [
+      "arithmetic Hodge index",
+      "Yuan-Zhang"
+    ],
+    "definition": "A negativity theorem for arithmetic intersections orthogonal to a polarization, in the hypotheses of Yuan–Zhang.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Yuan–Zhang, Math. Ann. 367 (2017), DOI:10.1007/s00208-016-1391-8"
+    ],
+    "tags": [
+      "arithmetic-geometry"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "deninger-cohomology",
+    "type": "METHOD",
+    "name": "Deninger cohomological program",
+    "aliases": [
+      "Deninger cohomology"
+    ],
+    "definition": "A conjectural cohomological and dynamical framework intended to model arithmetic zeta functions by regularized determinants.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Deninger, Proc. ICM Berlin 1998, Doc. Math. Extra Vol. I"
+    ],
+    "tags": [
+      "cohomology"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "weil-conjectures",
+    "type": "THEOREM",
+    "name": "Weil conjectures over finite fields",
+    "aliases": [
+      "Weil conjectures"
+    ],
+    "definition": "The rationality, functional equation, Betti-number interpretation, and Riemann-hypothesis bounds for zeta functions of smooth projective varieties over finite fields.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Deligne, Publ. Math. IHÉS 43 (1974)"
+    ],
+    "tags": [
+      "function-field"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "deligne-rh",
+    "type": "THEOREM",
+    "name": "Deligne's function-field RH theorem",
+    "aliases": [
+      "Deligne theorem"
+    ],
+    "definition": "The weight theorem proving the Riemann-hypothesis part of the Weil conjectures.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Deligne, Publ. Math. IHÉS 43 (1974)"
+    ],
+    "tags": [
+      "function-field"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "pick-function",
+    "type": "CLASS",
+    "name": "Pick function",
+    "aliases": [
+      "Pick",
+      "Nevanlinna function"
+    ],
+    "definition": "A holomorphic function mapping the upper half-plane into itself.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Donoghue, Monotone Matrix Functions and Analytic Continuation"
+    ],
+    "tags": [
+      "complex-analysis"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "herglotz-function",
+    "type": "CLASS",
+    "name": "Herglotz function",
+    "aliases": [
+      "Herglotz",
+      "Herglotz-Nevanlinna"
+    ],
+    "definition": "A Pick function represented by a positive measure through the Herglotz formula.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Donoghue, Monotone Matrix Functions and Analytic Continuation"
+    ],
+    "tags": [
+      "complex-analysis"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "bernstein-function",
+    "type": "CLASS",
+    "name": "Bernstein function",
+    "aliases": [
+      "Bernstein function"
+    ],
+    "definition": "A nonnegative smooth function whose derivative is completely monotone.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Schilling–Song–Vondraček, Bernstein Functions, 2nd ed."
+    ],
+    "tags": [
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "completely-monotone",
+    "type": "CLASS",
+    "name": "Completely monotone function",
+    "aliases": [
+      "complete monotonicity"
+    ],
+    "definition": "A smooth function f on (0,∞) satisfying (−1)ⁿf⁽ⁿ⁾≥0 for every n.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Widder, The Laplace Transform"
+    ],
+    "tags": [
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "stieltjes-function",
+    "type": "CLASS",
+    "name": "Stieltjes function",
+    "aliases": [
+      "Stieltjes function"
+    ],
+    "definition": "A function representable as a nonnegative constant plus an integral of 1/(x+t) against a positive measure.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Schilling–Song–Vondraček, Bernstein Functions, Ch. 7"
+    ],
+    "tags": [
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "carlson-theorem",
+    "type": "THEOREM",
+    "name": "Carlson uniqueness theorem",
+    "aliases": [
+      "Carlson's theorem"
+    ],
+    "definition": "A uniqueness theorem for entire functions of restricted exponential type from values on the nonnegative integers.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Titchmarsh, Theory of Functions, §5.81"
+    ],
+    "tags": [
+      "complex-analysis"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "saddle-point-method",
+    "type": "METHOD",
+    "name": "Saddle-point method",
+    "aliases": [
+      "saddle point",
+      "steepest descent"
+    ],
+    "definition": "An asymptotic method based on deforming an integral through critical points of its phase.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §2.4"
+    ],
+    "tags": [
+      "asymptotic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "lambert-w",
+    "type": "OBJECT",
+    "name": "Lambert W function",
+    "aliases": [
+      "Lambert-W",
+      "Lambert W"
+    ],
+    "definition": "The multivalued inverse of w↦weʷ.",
+    "status": "CLASSICAL",
+    "sources": [
+      "DLMF §4.13"
+    ],
+    "tags": [
+      "asymptotic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "prolate-operator",
+    "type": "OPERATOR",
+    "name": "Prolate spheroidal concentration operator",
+    "aliases": [
+      "prolate",
+      "PSWF"
+    ],
+    "definition": "The time–band limiting integral operator whose eigenvalues quantify simultaneous concentration.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Slepian–Pollak, Bell Syst. Tech. J. 40 (1961)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "landau-widom-asymptotics",
+    "type": "THEOREM",
+    "name": "Landau–Widom concentration asymptotics",
+    "aliases": [
+      "Landau-Widom"
+    ],
+    "definition": "Asymptotics for the transition region of eigenvalues of time–frequency concentration operators.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Landau–Widom, J. Math. Anal. Appl. 77 (1980), DOI:10.1016/0022-247X(80)90269-9"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "prime-torus",
+    "type": "GEOMETRY",
+    "name": "Prime torus",
+    "aliases": [
+      "prime polytorus",
+      "Bohr torus"
+    ],
+    "definition": "The infinite product torus whose coordinates encode prime phases in the Bohr lift of Dirichlet series.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)"
+    ],
+    "tags": [
+      "dirichlet"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "bohr-lift",
+    "type": "METHOD",
+    "name": "Bohr lift",
+    "aliases": [
+      "Bohr transform"
+    ],
+    "definition": "The correspondence sending a Dirichlet series to a power series on a polytorus by prime factorization.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)"
+    ],
+    "tags": [
+      "dirichlet"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "dirichlet-series-polytorus",
+    "type": "OBJECT",
+    "name": "Dirichlet series on the polytorus",
+    "aliases": [
+      "Dirichlet polytorus"
+    ],
+    "definition": "The analytic function on an infinite polydisk obtained from a Dirichlet series through the Bohr lift.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)"
+    ],
+    "tags": [
+      "dirichlet"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hypercontractivity",
+    "type": "THEOREM",
+    "name": "Hypercontractivity on the prime torus",
+    "aliases": [
+      "hypercontractivity"
+    ],
+    "definition": "Norm-improving estimates for the prime-torus semigroup acting on Bohr lifts.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weissler, J. Funct. Anal. 32 (1979)"
+    ],
+    "tags": [
+      "dirichlet"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "beurling-deny-criterion",
+    "type": "CRITERION",
+    "name": "Beurling–Deny criterion",
+    "aliases": [
+      "Beurling-Deny"
+    ],
+    "definition": "A criterion characterizing Dirichlet forms by Markovian contraction properties.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Fukushima–Oshima–Takeda, Dirichlet Forms, Thm. 1.4.1"
+    ],
+    "tags": [
+      "semigroup"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "positivity-semigroup",
+    "type": "OPERATOR",
+    "name": "Positivity-preserving semigroup",
+    "aliases": [
+      "Markov semigroup"
+    ],
+    "definition": "A semigroup of operators preserving the positive cone.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Fukushima–Oshima–Takeda, Dirichlet Forms"
+    ],
+    "tags": [
+      "semigroup"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "cuntz-system",
+    "type": "OPERATOR",
+    "name": "Cuntz system",
+    "aliases": [
+      "Cuntz algebra",
+      "Cuntz system"
+    ],
+    "definition": "Isometries with orthogonal ranges summing to the identity, generating a Cuntz algebra.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Cuntz, Comm. Math. Phys. 57 (1977)"
+    ],
+    "tags": [
+      "operator-algebra"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "ucp-map",
+    "type": "OPERATOR",
+    "name": "Unital completely positive map",
+    "aliases": [
+      "UCP",
+      "UCP map"
+    ],
+    "definition": "A unital linear map whose matrix amplifications preserve positivity.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Paulsen, Completely Bounded Maps and Operator Algebras"
+    ],
+    "tags": [
+      "operator-algebra"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "groupoid",
+    "type": "GEOMETRY",
+    "name": "Measured groupoid",
+    "aliases": [
+      "groupoid"
+    ],
+    "definition": "A groupoid equipped with measure-class data suitable for convolution and operator-algebra constructions.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Renault, A Groupoid Approach to C*-algebras"
+    ],
+    "tags": [
+      "groupoid"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "groupoid-modular-function",
+    "type": "INVARIANT",
+    "name": "Groupoid modular function",
+    "aliases": [
+      "modular function"
+    ],
+    "definition": "The Radon–Nikodym cocycle comparing left and right measures on a measured groupoid.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Renault, A Groupoid Approach to C*-algebras"
+    ],
+    "tags": [
+      "groupoid"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "half-density",
+    "type": "OBJECT",
+    "name": "Groupoid half-density",
+    "aliases": [
+      "half-density",
+      "halfdensity"
+    ],
+    "definition": "A square-root density used to define intrinsic convolution without choosing a unimodular measure.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes, Noncommutative Geometry, Ch. II"
+    ],
+    "tags": [
+      "groupoid"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "additive-adeles",
+    "type": "GEOMETRY",
+    "name": "Additive adeles",
+    "aliases": [
+      "additive adeles",
+      "A_Q"
+    ],
+    "definition": "The restricted product of all completions of Q under addition.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Tate, Thesis, 1950"
+    ],
+    "tags": [
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "self-dual-measure",
+    "type": "OBJECT",
+    "name": "Self-dual Haar measure",
+    "aliases": [
+      "self-dual measure"
+    ],
+    "definition": "The Haar measure normalized so Fourier inversion is self-dual for a chosen additive character.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Tate, Thesis, 1950"
+    ],
+    "tags": [
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "relative-determinant",
+    "type": "INVARIANT",
+    "name": "Relative determinant",
+    "aliases": [
+      "relative determinant"
+    ],
+    "definition": "A regularized determinant comparing two operators when their resolvent difference has suitable trace class.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Müller, Comm. Math. Phys. 192 (1998)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "spectral-shift",
+    "type": "INVARIANT",
+    "name": "Krein spectral shift function",
+    "aliases": [
+      "spectral shift",
+      "Krein"
+    ],
+    "definition": "A function encoding trace differences f(A)−f(B) for suitable self-adjoint operator pairs.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Krein, Mat. Sb. 33 (1953)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "vitali-montel",
+    "type": "THEOREM",
+    "name": "Vitali–Montel normal-family principle",
+    "aliases": [
+      "Vitali",
+      "Montel",
+      "normal family"
+    ],
+    "definition": "Local boundedness plus convergence on a uniqueness set yields compactness and analytic convergence in standard normal-family formulations.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Conway, Functions of One Complex Variable I, Ch. VII"
+    ],
+    "tags": [
+      "complex-analysis"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "euler-gross-entropy-gap",
+    "type": "INVARIANT",
+    "name": "Euler–Gross entropy gap",
+    "aliases": [
+      "Euler-Gross entropy"
+    ],
+    "definition": "A corpus diagnostic comparing arithmetic Euler structure with Gaussian or control-world entropy.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:4040"
+    ],
+    "tags": [
+      "corpus"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "ising-lee-yang-compiler",
+    "type": "METHOD",
+    "name": "Ising/Lee–Yang compiler",
+    "aliases": [
+      "Ising compiler"
+    ],
+    "definition": "A corpus route translating finite interaction data into a Lee–Yang polynomial test.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:4130"
+    ],
+    "tags": [
+      "corpus"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "cusp-surgery",
+    "type": "METHOD",
+    "name": "Cusp surgery",
+    "aliases": [
+      "cusp surgery"
+    ],
+    "definition": "A geometric degeneration method relating determinant data before and after cutting or truncating a cusp.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Efrat, Comm. Math. Phys. 119 (1988)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "efrat-determinant",
+    "type": "THEOREM",
+    "name": "Efrat determinant formula",
+    "aliases": [
+      "Efrat determinant"
+    ],
+    "definition": "A determinant identity for hyperbolic surfaces with cusps in the cited formulation.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Efrat, Comm. Math. Phys. 119 (1988)"
+    ],
+    "tags": [
+      "spectral"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "regulator-jump",
+    "type": "INVARIANT",
+    "name": "Regulator jump",
+    "aliases": [
+      "regulator jump"
+    ],
+    "definition": "A measured discontinuity or large change in a regulator-like quantity used by the corpus factoring geometry.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/regulator_jump_probe.py:1"
+    ],
+    "tags": [
+      "unrelated-rh"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "murru-salvatori",
+    "type": "METHOD",
+    "name": "Murru–Salvatori regulator method",
+    "aliases": [
+      "Murru-Salvatori"
+    ],
+    "definition": "The external regulator/factorization proposal audited by the corpus; it is not an RH mechanism.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/regulator_relation_result.json"
+    ],
+    "tags": [
+      "external",
+      "unrelated-rh"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "openai-long-prime-gaps",
+    "type": "METHOD",
+    "name": "OpenAI 2026 long-prime-gap work",
+    "aliases": [
+      "long prime gaps",
+      "OpenAI prime gaps"
+    ],
+    "definition": "An external long-prime-gap result tracked by the corpus and explicitly classified as unrelated to RH.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/fragments/part_8.json"
+    ],
+    "tags": [
+      "external",
+      "unrelated-rh"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "chuk-window-certificate",
+    "type": "CRITERION",
+    "name": "Chuk compact-window certificate at L=0.8",
+    "aliases": [
+      "Chuk",
+      "L=0.8 certificate"
+    ],
+    "definition": "The compact-window positivity certificate reproduced by the corpus at L=0.8; it is finite-window evidence, not an RH claim.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/weil_window_certificate_result.json"
+    ],
+    "tags": [
+      "external",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "cubic-wedges",
+    "type": "METHOD",
+    "name": "Cubic wedges of arXiv:2607.16795",
+    "aliases": [
+      "2607.16795",
+      "cubic wedges"
+    ],
+    "definition": "The external cubic-wedge construction audited by the corpus without promotion to an RH implication.",
+    "status": "OPEN",
+    "sources": [
+      "arXiv:2607.16795"
+    ],
+    "tags": [
+      "external"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "tfpt-c3",
+    "type": "TFPT_STRUCTURE",
+    "name": "TFPT axiom c3=1/(8π)",
+    "aliases": [
+      "c3",
+      "1/(8π)"
+    ],
+    "definition": "The project compiler's declared c3 normalization.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "tfpt-gcar",
+    "type": "TFPT_STRUCTURE",
+    "name": "TFPT axiom g_car=5",
+    "aliases": [
+      "g_car",
+      "gcar"
+    ],
+    "definition": "The project compiler's declared carrier count.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "tfpt-e8-compiler",
+    "type": "TFPT_STRUCTURE",
+    "name": "D5⊕A3+μ4⇒E8 compiler",
+    "aliases": [
+      "D5+A3",
+      "mu4 E8"
+    ],
+    "definition": "The project-internal finite compiler from D5, A3, and μ4 data to E8.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "tfpt-e8-lattice",
+    "type": "TFPT_STRUCTURE",
+    "name": "E8 lattice",
+    "aliases": [
+      "E8 lattice",
+      "E8"
+    ],
+    "definition": "The even unimodular rank-eight lattice as used by the TFPT compiler.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Conway–Sloane, Sphere Packings, Lattices and Groups"
+    ],
+    "tags": [
+      "tfpt",
+      "lattice"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "e8-theta-series",
+    "type": "OBJECT",
+    "name": "E8 theta series",
+    "aliases": [
+      "E8 theta",
+      "Theta_E8"
+    ],
+    "definition": "The theta series of the E8 lattice, equal to the weight-four Eisenstein series E4.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Serre, A Course in Arithmetic, Ch. VII"
+    ],
+    "tags": [
+      "lattice"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "e8-cascade",
+    "type": "TFPT_STRUCTURE",
+    "name": "E8 cascade",
+    "aliases": [
+      "E8 cascade"
+    ],
+    "definition": "The project-internal cascade of finite E8 readouts.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:4094"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "cm-seam",
+    "type": "TFPT_STRUCTURE",
+    "name": "CM seam τ=i",
+    "aliases": [
+      "tau=i",
+      "CM seam",
+      "Gaussian seam"
+    ],
+    "definition": "The Gaussian complex-multiplication seam used by TFPT arithmetic constructions.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "note_e8_gaussian_code.tex:1"
+    ],
+    "tags": [
+      "tfpt",
+      "cm"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gaussian-e8-module",
+    "type": "TFPT_STRUCTURE",
+    "name": "Gaussian E8 module",
+    "aliases": [
+      "Gaussian E8",
+      "v714"
+    ],
+    "definition": "The Gaussian E8 module and Hecke-groupoid data audited in verification v714.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v714_e8_gaussian_hecke_groupoid.py:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "main-world",
+    "type": "CLASS",
+    "name": "MAIN world control",
+    "aliases": [
+      "MAIN"
+    ],
+    "definition": "The corpus arithmetic data world against which smooth and scrambled controls are compared.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:940"
+    ],
+    "tags": [
+      "control"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "smooth-world",
+    "type": "CLASS",
+    "name": "SMOOTH world control",
+    "aliases": [
+      "SMOOTH"
+    ],
+    "definition": "A smoothed control world used to test arithmetic specificity.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:940"
+    ],
+    "tags": [
+      "control"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "scrarith-world",
+    "type": "CLASS",
+    "name": "SCRARITH world control",
+    "aliases": [
+      "SCRARITH"
+    ],
+    "definition": "A scrambled-arithmetic control preserving selected marginals while destroying arithmetic organization.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:940"
+    ],
+    "tags": [
+      "control"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "seam-geodesic",
+    "type": "TFPT_STRUCTURE",
+    "name": "Seam geodesic",
+    "aliases": [
+      "seam geodesic"
+    ],
+    "definition": "A project geometric factoring route along the Gaussian seam; classified as unrelated to RH.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/seam_geodesic_infrastructure_result.json"
+    ],
+    "tags": [
+      "tfpt",
+      "unrelated-rh"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gate-zero",
+    "type": "TFPT_STRUCTURE",
+    "name": "Gate 0",
+    "aliases": [
+      "Gate 0"
+    ],
+    "definition": "The corpus name for the initial adelic/groupoid compatibility gate.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:3644"
+    ],
+    "tags": [
+      "tfpt",
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "plastic-number-threshold",
+    "type": "INVARIANT",
+    "name": "Plastic-number threshold",
+    "aliases": [
+      "plastic number",
+      "plastic threshold"
+    ],
+    "definition": "A corpus finite threshold involving the real root of x³=x+1.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:1210"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "terminal-statement",
+    "type": "OPEN_QUESTION",
+    "name": "Terminal cross-ratio statement",
+    "aliases": [
+      "terminal q",
+      "q_N<1",
+      "terminal inequality"
+    ],
+    "definition": "The open cofinal terminal inequality q_N<1 in the corpus reduction.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:3535"
+    ],
+    "tags": [
+      "tfpt",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "lstar-statement",
+    "type": "OPEN_QUESTION",
+    "name": "L* subordination statement",
+    "aliases": [
+      "L*",
+      "Lstar",
+      "lemma L*"
+    ],
+    "definition": "The canonical open subordination inequality for the corpus free-window reduction.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:774"
+    ],
+    "tags": [
+      "tfpt",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "lambda-star-ladder",
+    "type": "INVARIANT",
+    "name": "λ*(L) ladder",
+    "aliases": [
+      "lambda*",
+      "λ*",
+      "lambda-star"
+    ],
+    "definition": "The scale-indexed minimum-margin ladder measured in compact Weil-window experiments.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:3293"
+    ],
+    "tags": [
+      "tfpt",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "quadrep",
+    "type": "TFPT_STRUCTURE",
+    "name": "Quadrep",
+    "aliases": [
+      "quadrep"
+    ],
+    "definition": "The project finite quadratic representation bridge tracked by the RH corpus.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/problem/verify_quadrep.py:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "inner-bridges",
+    "type": "TFPT_STRUCTURE",
+    "name": "Inner bridges",
+    "aliases": [
+      "inner bridges"
+    ],
+    "definition": "The corpus family of finite bridges internal to the compiler representation.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/problem/verify_inner_bridges.py:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "outer-bridges",
+    "type": "TFPT_STRUCTURE",
+    "name": "Outer bridges",
+    "aliases": [
+      "outer bridges"
+    ],
+    "definition": "The corpus family of finite bridges from compiler data toward external analytic objects.",
+    "status": "OPEN",
+    "sources": [
+      "rh/problem/verify_outer_bridges.py:1"
+    ],
+    "tags": [
+      "tfpt"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "relay-lead-law",
+    "type": "TFPT_STRUCTURE",
+    "name": "Relay lead law",
+    "aliases": [
+      "relay lead law",
+      "relay"
+    ],
+    "definition": "A measured prime-event-log relation in the corpus; no RH implication is asserted.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/relay_lead_law_result.json"
+    ],
+    "tags": [
+      "tfpt",
+      "prime"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "narrowband-weil",
+    "type": "METHOD",
+    "name": "Narrowband Weil probe",
+    "aliases": [
+      "narrowband Weil"
+    ],
+    "definition": "A finite-window Weil-form experiment restricted to narrow frequency bands.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/narrowband_weil_probe.py:1"
+    ],
+    "tags": [
+      "tfpt",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "arch-rate",
+    "type": "THEOREM",
+    "name": "Archimedean rate identity",
+    "aliases": [
+      "arch rate"
+    ],
+    "definition": "The corpus-isolated archimedean identity and selected-tent O(δ²) rate.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/problem/arch_rate.tex:1"
+    ],
+    "tags": [
+      "tfpt",
+      "identity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "extraction-joint",
+    "type": "OPEN_QUESTION",
+    "name": "Extraction joint",
+    "aliases": [
+      "extraction joint"
+    ],
+    "definition": "The missing joint transferring finite selected-window positivity to the full Weil test class.",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:1997"
+    ],
+    "tags": [
+      "tfpt",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "finite-weil-window",
+    "type": "OBJECT",
+    "name": "Finite Weil window",
+    "aliases": [
+      "compact Weil window",
+      "window form"
+    ],
+    "definition": "A finite-dimensional compression of the localized Weil form to a specified window and basis.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:97"
+    ],
+    "tags": [
+      "tfpt",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "selected-window-family",
+    "type": "CLASS",
+    "name": "Selected-window family",
+    "aliases": [
+      "selected windows"
+    ],
+    "definition": "The project family of finite test windows used in the formalized extraction chain.",
+    "status": "FORMALIZED_LEAN",
+    "sources": [
+      "rh/lean/RH/Selected.lean:444"
+    ],
+    "tags": [
+      "tfpt",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-circularity",
+    "type": "BARRIER",
+    "name": "Renamed RH-equivalent / circularity",
+    "aliases": [
+      "circular",
+      "renamed RH"
+    ],
+    "definition": "A route assumes RH or a known equivalent under another name.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/catalog/taxonomy.json:46"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-prime-phase-coherence",
+    "type": "BARRIER",
+    "name": "Prime-phase coherence",
+    "aliases": [
+      "prime phase coherence"
+    ],
+    "definition": "The missing control of correlated prime phases needed by several finite-to-global routes.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:955"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-p2-defect",
+    "type": "BARRIER",
+    "name": "p=2 defect",
+    "aliases": [
+      "2-adic defect",
+      "p=2 defect"
+    ],
+    "definition": "A structural obstruction in the first 2-adic Weil channel.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:3644"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-pole-mode",
+    "type": "BARRIER",
+    "name": "Pole mode uncontrolled",
+    "aliases": [
+      "pole mode"
+    ],
+    "definition": "Failure to control the pole contribution uniformly in the proposed positivity transfer.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:1925"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-arch-compensation",
+    "type": "BARRIER",
+    "name": "Archimedean compensation",
+    "aliases": [
+      "arch compensation"
+    ],
+    "definition": "A mismatch where the archimedean channel compensates or reverses a prime-side sign.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:1925"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-unimodularity",
+    "type": "BARRIER",
+    "name": "Unimodularity / no half-density",
+    "aliases": [
+      "unimodularity",
+      "no half-density"
+    ],
+    "definition": "The groupoid construction lacks the half-density or modular correction needed for intrinsic convolution.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/groupoid_halfdensity_result.json"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-zero-denominator",
+    "type": "BARRIER",
+    "name": "Zero-bearing denominator",
+    "aliases": [
+      "zero-bearing denominator"
+    ],
+    "definition": "A proposed quotient places zeta zeros in its denominator, creating poles or circular sign information.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_result.json"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-finite-window-ceiling",
+    "type": "BARRIER",
+    "name": "Finite-window ceiling / Landau–Widom decay",
+    "aliases": [
+      "finite-window ceiling",
+      "Landau-Widom decay"
+    ],
+    "definition": "Concentration eigenvalue decay prevents a fixed compact window from controlling the full test class.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/paper/rh_program.tex:2865"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-pick-sign",
+    "type": "BARRIER",
+    "name": "Pick-sign violation",
+    "aliases": [
+      "Pick sign violation"
+    ],
+    "definition": "The candidate continuation violates the upper-half-plane sign required of a Pick function.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/mellin_pick_zero_residue_result.json"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-nonreal-cofactor-zeros",
+    "type": "BARRIER",
+    "name": "Non-real cofactor zeros",
+    "aliases": [
+      "non-real cofactor zeros"
+    ],
+    "definition": "A Mellin cofactor has non-real zeros incompatible with the proposed Lee–Yang or Pick class.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_result.json"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-world-blind",
+    "type": "BARRIER",
+    "name": "World blindness",
+    "aliases": [
+      "world blind",
+      "WORLD_BLIND"
+    ],
+    "definition": "The route does not distinguish arithmetic MAIN data from control worlds.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/catalog/taxonomy.json:47"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-lossy-constant",
+    "type": "BARRIER",
+    "name": "Lossy constant",
+    "aliases": [
+      "lossy constant"
+    ],
+    "definition": "An inequality loses the quantitative margin required by the next reduction.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/catalog/taxonomy.json:48"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-structural-mismatch",
+    "type": "BARRIER",
+    "name": "Structural mismatch",
+    "aliases": [
+      "structural mismatch"
+    ],
+    "definition": "The route identifies objects that are not mathematically the same object.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/catalog/taxonomy.json:49"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "barrier-no-bridge",
+    "type": "BARRIER",
+    "name": "No bridge",
+    "aliases": [
+      "NO_BRIDGE",
+      "no bridge"
+    ],
+    "definition": "The construction has no sourced dictionary to an RH-adjacent criterion.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/catalog/taxonomy.json:53"
+    ],
+    "tags": [
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-gabor-window-positivity",
+    "type": "OPEN_QUESTION",
+    "name": "Gabor positivity for the specific window class",
+    "aliases": [
+      "Gabor positivity open"
+    ],
+    "definition": "Does the corpus pure-Gabor zero-side remain nonnegative on the stated two-parameter window family?",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:4603"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-global-all-place-intersection",
+    "type": "OPEN_QUESTION",
+    "name": "Global all-place intersection identity",
+    "aliases": [
+      "all-place intersection"
+    ],
+    "definition": "Can finite-place and archimedean geometric contributions be assembled into the exact global identity required by the route?",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/paths_report.json"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-relative-determinant-identity",
+    "type": "OPEN_QUESTION",
+    "name": "Exact relative determinant identity",
+    "aliases": [
+      "relative determinant identity"
+    ],
+    "definition": "Can the proposed relative determinant be identified exactly with the target explicit-formula object?",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/paths_report.json"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-independent-positivity-source",
+    "type": "OPEN_QUESTION",
+    "name": "Independent positivity source",
+    "aliases": [
+      "positivity source"
+    ],
+    "definition": "Is there a positivity mechanism independent of merely rewriting the explicit formula or an RH-equivalent criterion?",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:3657"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-lambda-star-scale-law",
+    "type": "OPEN_QUESTION",
+    "name": "Scale law of λ*(L)",
+    "aliases": [
+      "lambda scale law"
+    ],
+    "definition": "What is the rigorous scale dependence of the compact-window margin λ*(L)?",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/lambdastar03_probe.py"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-prime-phase-control",
+    "type": "OPEN_QUESTION",
+    "name": "Prime-phase coherence control",
+    "aliases": [
+      "prime phase control"
+    ],
+    "definition": "Can the correlated prime phases be controlled with a non-world-blind estimate?",
+    "status": "OPEN",
+    "sources": [
+      "rh/paper/rh_program.tex:955"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-half-density-geometry",
+    "type": "OPEN_QUESTION",
+    "name": "Half-density from geometry",
+    "aliases": [
+      "geometric half-density",
+      "half-density from geometry",
+      "half-density-from-geometry"
+    ],
+    "definition": "Does the proposed groupoid geometry canonically supply the required half-density and modular correction?",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/groupoid_halfdensity_probe.py"
+    ],
+    "tags": [
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "static-prime-event-log",
+    "type": "OBJECT",
+    "name": "Static prime event log",
+    "aliases": [
+      "prime checksum",
+      "arithmetic census",
+      "static prime event log"
+    ],
+    "definition": "The family of static coefficient sequences in the corpus: E8 shell counts, Gaussian signed census, Hecke coefficients, and the von Mangoldt comb. It is not an autonomous dynamics.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_prime_front.tex:716-751",
+      "tfpt_prime_front.tex:795-807"
+    ],
+    "tags": [
+      "prime",
+      "event-log",
+      "census"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "finite-clock-commensurability",
+    "type": "BARRIER",
+    "name": "Finite-clock commensurability",
+    "aliases": [
+      "prime-period no-go",
+      "finite-clock eventlog barrier",
+      "finite-clock commensurability"
+    ],
+    "definition": "Finite-order clocks have commensurable periods and therefore cannot realize more than one primitive period proportional to log p.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_prime_front.tex:921-951"
+    ],
+    "tags": [
+      "dynamics",
+      "clock",
+      "prime",
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "open-autonomous-prime-generator",
+    "type": "OPEN_QUESTION",
+    "name": "Autonomous prime generator",
+    "aliases": [
+      "dynamic event-log mechanism"
+    ],
+    "definition": "Whether a source-only non-periodic TFPT evolution derived from the compiler emits support log(p^k) and von Mangoldt amplitudes without sieve, prime table, or fitted event locations.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_prime_front.tex:937-968"
+    ],
+    "tags": [
+      "dynamics",
+      "firewall",
+      "prime"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "weight4-gl1-transport",
+    "type": "OPEN_QUESTION",
+    "name": "Weight-4 to GL(1) transport",
+    "aliases": [
+      "ZETA.CENSUS.TO.GL1",
+      "weight-4 GL(1) transport"
+    ],
+    "definition": "The open canonical transport from the E4/f8 lattice-Hecke world to the GL(1) xi/Weil world, including the archimedean place.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_prime_front.tex:684-693",
+      "verification/v535_hecke_from_geometry.py:41-48"
+    ],
+    "tags": [
+      "hecke",
+      "gl1",
+      "bridge"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "waldspurger-squares",
+    "type": "METHOD",
+    "name": "Waldspurger square positivity",
+    "aliases": [
+      "waldspurger-square-positivity",
+      "half-integral period squares",
+      "Waldspurger squares"
+    ],
+    "definition": "Positivity of central f8 twist values represented by squares of half-integral Fourier coefficients, independent of the zeta explicit formula.",
+    "status": "CLASSICAL",
+    "sources": [
+      "verification/v537_halfintegral_bridge.py:33-54"
+    ],
+    "tags": [
+      "positivity",
+      "waldspurger",
+      "f8"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "siegel-weil-carrier",
+    "type": "OBJECT",
+    "name": "Siegel–Weil positive linear carrier",
+    "aliases": [
+      "siegel-weil-linear-carrier",
+      "siegel-weil-theta-pairing",
+      "Theta linear carrier",
+      "Siegel-Weil carrier"
+    ],
+    "definition": "The positive measure Theta(d)|d|^{-a} whose prime side is a plus combination of shifted zeta forms; certified only in the Euler region.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v540_amplitude_linear_carrier.py:14-45",
+      "verification/v540_amplitude_linear_carrier.py:70-87"
+    ],
+    "tags": [
+      "positivity",
+      "siegel-weil",
+      "theta"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "eisenstein-rh-neutrality",
+    "type": "THEOREM",
+    "name": "E8 Eisenstein RH-neutrality",
+    "aliases": [
+      "Eisenstein bridge no-new-information theorem"
+    ],
+    "definition": "The E8 theta L-function is zeta(s)zeta(s-3), so its nontrivial zeros are exactly the zeta zeros and their translate; the bridge renames rather than locates them.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_prime_front.tex:851-890"
+    ],
+    "tags": [
+      "e8",
+      "eisenstein",
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "positive-cone-blindness",
+    "type": "BARRIER",
+    "name": "Positive-cone blindness",
+    "aliases": [
+      "nu-scaling blindness",
+      "positive-measure source barrier",
+      "positive cone blindness"
+    ],
+    "definition": "A certificate whose premises retain only the positive measure, negative support, window degree, and nonnegative source terms is invariant under scaling the negative mass, so it cannot certify a signed moment inequality; a metric comparison is necessary.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+      "experiments/tfpt-discovery/positive_cone_blindness_result.json",
+      "verification/v963_lstar_reduction_dictionary.py:1908-1941"
+    ],
+    "tags": [
+      "barrier",
+      "moment-cone",
+      "signed-measure",
+      "lstar"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "rankin-selberg-norm-square",
+    "type": "METHOD",
+    "name": "Rankin–Selberg norm-square",
+    "aliases": [
+      "Rankin-Selberg norm square",
+      "GNS norm-square"
+    ],
+    "definition": "The Rankin–Selberg diagonal GNS/norm-square positivity on automorphic forms; it does not by itself control the signed Weil defect.",
+    "status": "CLASSICAL",
+    "sources": [
+      "verification/v539_weil_structure_family.py:6-10"
+    ],
+    "tags": [
+      "positivity",
+      "automorphic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "cohen-seeds",
+    "type": "OBJECT",
+    "name": "Cohen positive seeds L(E4⊗χ_d,2)",
+    "aliases": [
+      "cohen-positive-seeds",
+      "Cohen-Eisenstein seeds",
+      "L(E4⊗χ_d,2)"
+    ],
+    "definition": "Cohen–Eisenstein edge values L(E4⊗χ_d,2) and L(−1,χ_d) used as positive seeds; a centre version is GRH(χ_d).",
+    "status": "CLASSICAL",
+    "sources": [
+      "verification/v540_amplitude_linear_carrier.py:20-23"
+    ],
+    "tags": [
+      "positivity",
+      "l-values"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "sos-pontryagin-language",
+    "type": "METHOD",
+    "name": "SOS / Pontryagin language",
+    "aliases": [
+      "SOS Pontryagin",
+      "sum-of-squares Pontryagin"
+    ],
+    "definition": "The sum-of-squares / Pontryagin-split language for the signed moment form; it exists exactly when the negative register is empty.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v963_lstar_reduction_dictionary.py:515-523"
+    ],
+    "tags": [
+      "positivity",
+      "language"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "kasteleyn-orientation-language",
+    "type": "METHOD",
+    "name": "Kasteleyn orientation language",
+    "aliases": [
+      "Kasteleyn orientation",
+      "value-preserving orientation"
+    ],
+    "definition": "Value-preserving Kasteleyn/orientation language on the Cauchy–Binet configuration space, available exactly in the positive-measure class.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v963_lstar_reduction_dictionary.py:524-579"
+    ],
+    "tags": [
+      "positivity",
+      "language"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "hamiltonian-psd-language",
+    "type": "METHOD",
+    "name": "Hamiltonian PSD language",
+    "aliases": [
+      "canonical Hamiltonian positivity"
+    ],
+    "definition": "Canonical Hamiltonian positivity as a signed-moment pivot condition, not an independent positivity source.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v963_lstar_reduction_dictionary.py:581-597"
+    ],
+    "tags": [
+      "positivity",
+      "language"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "dual-pair-language",
+    "type": "METHOD",
+    "name": "Dual-pair product language",
+    "aliases": [
+      "dual pair language",
+      "exact product law"
+    ],
+    "definition": "The exact dual-pair product law that synchronizes signs and contributes no second positivity condition.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v963_lstar_reduction_dictionary.py:599-614"
+    ],
+    "tags": [
+      "positivity",
+      "language"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "connes-adele-scaling-flow",
+    "type": "METHOD",
+    "name": "Connes–Meyer adele-class scaling flow",
+    "aliases": [
+      "Connes-Meyer",
+      "adele-class flow",
+      "Connes-Meyer scaling"
+    ],
+    "definition": "The idele-class scaling representation in which prime powers contribute periodic-orbit terms of length log p to an explicit-formula trace.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes, Selecta Math. 5 (1999)",
+      "Meyer, 2005"
+    ],
+    "tags": [
+      "adelic",
+      "event-log"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "bost-connes-kms-system",
+    "type": "OBJECT",
+    "name": "Bost–Connes KMS system",
+    "aliases": [
+      "Bost-Connes KMS",
+      "BC KMS system"
+    ],
+    "definition": "An arithmetic C*-dynamical system whose partition function is zeta(beta), with a phase transition at beta=1 and Hecke-semigroup prime generators.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Bost–Connes, Selecta Math. 1 (1995)"
+    ],
+    "tags": [
+      "operator-algebra",
+      "event-log"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "primon-riemann-gas",
+    "type": "OBJECT",
+    "name": "Primon or Riemann gas",
+    "aliases": [
+      "primon gas",
+      "Riemann gas",
+      "Julia Spector gas"
+    ],
+    "definition": "A quantum gas with one-particle energies log p, so the bosonic partition function is zeta(beta); the prime spectrum is input rather than derived.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Julia, 1990",
+      "Spector"
+    ],
+    "tags": [
+      "event-log",
+      "statistical"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "berry-keating-dilation",
+    "type": "METHOD",
+    "name": "Berry–Keating dilation Hamiltonian",
+    "aliases": [
+      "Berry-Keating dilation",
+      "xp dilation"
+    ],
+    "definition": "The xp dilation generator with semiclassical zero-count asymptotics; a canonical self-adjoint boundary condition encoding prime oscillations remains missing.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Berry–Keating, SIAM Review 41 (1999)"
+    ],
+    "tags": [
+      "spectral",
+      "event-log"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "deninger-foliated-dynamics",
+    "type": "METHOD",
+    "name": "Deninger foliated dynamics",
+    "aliases": [
+      "Deninger flow",
+      "Deninger foliated dynamics"
+    ],
+    "definition": "A conjectural arithmetic flow whose closed prime orbits and Lefschetz trace model the explicit formula, with a Hodge-type positivity requirement.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Deninger, Proc. ICM Berlin 1998",
+      "experiments/tfpt-discovery/cohomspec_probe.py:122-132"
+    ],
+    "tags": [
+      "cohomology",
+      "event-log"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "knauf-arithmetic-statistical-system",
+    "type": "OBJECT",
+    "name": "Knauf arithmetic quantum statistical system",
+    "aliases": [
+      "Knauf system",
+      "BC-Marcolli",
+      "Connes-Marcolli statistical"
+    ],
+    "definition": "A family of spin-chain and arithmetic statistical systems encoding factorisation through Hamiltonians, partition functions, KMS phases, and entropy.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Knauf, 1990",
+      "Connes–Marcolli"
+    ],
+    "tags": [
+      "event-log",
+      "statistical"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "event-log-function",
+    "type": "OPEN_QUESTION",
+    "name": "Event-log function",
+    "aliases": [
+      "event-log dynamical function",
+      "dynamical function of the prime event log",
+      "event log function"
+    ],
+    "definition": "Whether a canonical TFPT evolution derives the prime event log as an energy spectrum, primitive-orbit length spectrum, or scale-flow trace without importing arithmetic.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/event_log_function.md:139-161"
+    ],
+    "tags": [
+      "event-log",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "unitarity-of-emergent-time",
+    "type": "OPEN_QUESTION",
+    "name": "Unitarity of emergent TFPT time",
+    "aliases": [
+      "unitarity of emergent time",
+      "emergent time unitarity",
+      "emergent-time-unitarity"
+    ],
+    "definition": "Whether emergent TFPT time has a canonical positive Hilbert metric and self-adjoint generator that can be transported to an arithmetic scale flow; no such general axiom was found.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_4_frontier.tex:457-471",
+      "tfpt_4_frontier.tex:809-824",
+      "rh/catalog/analysis/event_log_function.md:53-59"
+    ],
+    "tags": [
+      "event-log",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "edge-l-values",
+    "type": "METHOD",
+    "name": "Edge L-values",
+    "aliases": [
+      "edge L-values",
+      "Euler-region L-values"
+    ],
+    "definition": "L-values on the edge of the Euler/absolute-convergence region, as opposed to central critical values.",
+    "status": "CLASSICAL",
+    "sources": [
+      "verification/v540_amplitude_linear_carrier.py:70-82"
+    ],
+    "tags": [
+      "l-values"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "edge-nonvanishing-method",
+    "type": "METHOD",
+    "name": "Edge nonvanishing method",
+    "aliases": [
+      "edge nonvanishing",
+      "zeta(1+it) nonzero",
+      "ζ(1+it)≠0"
+    ],
+    "definition": "Classical nonvanishing methods such as ζ(1+it)≠0 used as comparison templates, without an RH implication.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/analysis/prime_story.md"
+    ],
+    "tags": [
+      "nonvanishing"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "quarter-shift-to-centre",
+    "type": "BARRIER",
+    "name": "Quarter-shift to centre",
+    "aliases": [
+      "quarter-shift to centre",
+      "quarter shift to centre",
+      "Weil criterion quarter-shift"
+    ],
+    "definition": "The plus-balance of the Siegel–Weil carrier sits off the critical line by a quarter-shift, so Euler-region positivity is not the Weil criterion at the centre.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v540_amplitude_linear_carrier.py:55-68"
+    ],
+    "tags": [
+      "barrier",
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "farkas-witness-n-mod-8",
+    "type": "BARRIER",
+    "name": "Farkas witness n≡6 mod 8",
+    "aliases": [
+      "farkas-witness n≡6 mod 8",
+      "Farkas witness n=6 mod 8",
+      "C_L3 n==6 mod 8"
+    ],
+    "definition": "A Farkas/LP witness on atoms n≡6 mod 8 showing the residual λ* gap of the theta-library hull is not removed by a finite deterministic-sign family.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v540_amplitude_linear_carrier.py:83-90"
+    ],
+    "tags": [
+      "barrier",
+      "farkas"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "metric-by-operator-positivity",
+    "type": "METHOD",
+    "name": "Metric-by-operator positivity",
+    "aliases": [
+      "metric-by-operator positivity",
+      "operator positivity template"
+    ],
+    "definition": "A template in which positivity is an output of a self-adjoint or trace-class operator rather than a signed-measure comparison.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/analysis/prime_story.md"
+    ],
+    "tags": [
+      "positivity",
+      "operator"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "rhp-iiks-toda-tau",
+    "type": "METHOD",
+    "name": "RHP/IIKS/Toda tau framework",
+    "aliases": [
+      "RHP/IIKS/Toda tau framework",
+      "IIKS/Toda",
+      "Toda tau",
+      "RHP IIKS Toda",
+      "tau iiks toda",
+      "IIKS Fredholm tau"
+    ],
+    "definition": "The Riemann–Hilbert / IIKS / Toda-tau dictionary for the finite wall determinant, certified in v955–v963 as finite identities with cofinal no-pole still open.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v955_tau_iiks_toda_dictionary.py:1",
+      "verification/v963_lstar_reduction_dictionary.py:1"
+    ],
+    "tags": [
+      "rhp",
+      "iiks",
+      "toda"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "suzuki-screw-canonical-systems",
+    "type": "CLASS",
+    "name": "Suzuki screw functions / canonical systems",
+    "aliases": [
+      "Suzuki screw functions",
+      "canonical systems",
+      "Suzuki screw",
+      "screw function",
+      "W1 Suzuki"
+    ],
+    "definition": "Suzuki screw functions and the associated canonical/de Branges systems used as a W1 identification of the TFPT atom measure.",
+    "status": "CLASSICAL",
+    "sources": [
+      "notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
+      "verification/v630_suzuki_contact.py:1"
+    ],
+    "tags": [
+      "suzuki",
+      "screw"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "quillen-bfk-seam-determinants",
+    "type": "OBJECT",
+    "name": "Quillen/BFK seam determinants",
+    "aliases": [
+      "Quillen/BFK seam determinants",
+      "Quillen metric",
+      "BFK determinant",
+      "Burghelea-Friedlander-Kappeler",
+      "Quillen/BFK"
+    ],
+    "definition": "Quillen metrics and Burghelea–Friedlander–Kappeler gluing determinants for elliptic operators on seamed or cut manifolds.",
+    "status": "CLASSICAL",
+    "sources": [
+      "experiments/tfpt-discovery/seam_bfk_conical_det_probe.py"
+    ],
+    "tags": [
+      "quillen",
+      "bfk"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "i5-transport-ledger-criterion",
+    "type": "CRITERION",
+    "name": "I5 transport-ledger criterion",
+    "aliases": [
+      "I5 transport-ledger criterion",
+      "I5 criterion",
+      "transport ledger",
+      "I5 inequality"
+    ],
+    "definition": "The coupled prime–archimedean inequality I5 left after the transport ledger closes; typed as equivalent to Weil positivity, not as a reduction.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v541_matching_lemma_ledger.py:1",
+      "tfpt_prime_front.tex:136-138"
+    ],
+    "tags": [
+      "i5",
+      "ledger",
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "r-dagger-kernel-loewner-stack",
+    "type": "METHOD",
+    "name": "R† kernel–Loewner positivity stack",
+    "aliases": [
+      "R† kernel–Loewner positivity stack",
+      "kernel-Loewner",
+      "kernel Loewner positivity",
+      "RDAGGER",
+      "R dagger kernel"
+    ],
+    "definition": "The R† kernel–Loewner positivity stack at compact windows, certified numerically in v1017 with a float64 floor, not an interval [E] certificate.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v1017_kernel_loewner_positivity.py:1"
+    ],
+    "tags": [
+      "loewner",
+      "kernel"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "multiplicative-composition-law",
+    "type": "THEOREM",
+    "name": "Multiplicative composition necessity",
+    "aliases": [
+      "multiplicative composition",
+      "log-n information law"
+    ],
+    "definition": "A monotone additive information function on multiplicatively composed positive-integer labels is c log n; primes are the free monoid's irreducible generators.",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/analysis/compiler_necessity.md:A1"
+    ],
+    "tags": [
+      "prime",
+      "information"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "census-qsm",
+    "type": "OBJECT",
+    "name": "E8 census quantum statistical system",
+    "aliases": [
+      "E8 census QSM",
+      "census quantum statistical system"
+    ],
+    "definition": "The arithmetic state census with partition function sum sigma_3(n)n^-beta=zeta(beta)zeta(beta-3) and Hecke norm-labelled generators.",
+    "status": "OPEN",
+    "sources": [
+      "verification/v1018_e8_directed_readout.py:21-34",
+      "verification/v535_hecke_from_geometry.py:6-29"
+    ],
+    "tags": [
+      "qsm",
+      "census"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "modular-clock",
+    "type": "OPERATOR",
+    "name": "Seam modular clock",
+    "aliases": [
+      "seam modular clock",
+      "free modular Hamiltonian"
+    ],
+    "definition": "The free modular Hamiltonian K=log((1-C)C^-1) reconstructed from a reflection-positive seam covariance.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v446_seam_clock_invariance.py:31-38",
+      "verification/v446_seam_clock_invariance.py:123-139"
+    ],
+    "tags": [
+      "clock",
+      "modular"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "resummed-clock-tower",
+    "type": "OBJECT",
+    "name": "Resummed clock tower",
+    "aliases": [
+      "resummed clock tower",
+      "clock combination spectrum"
+    ],
+    "definition": "The family of spectra 6 log(N/(N-n)); its all-N union is 6 log of the positive rational numbers with noncanonical label multiplicity.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "verification/v124_resummed_clock.py:10-37",
+      "experiments/tfpt-discovery/clock_combination_spectrum_result.json"
+    ],
+    "tags": [
+      "clock",
+      "killed"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "koide-mobius-flow",
+    "type": "OBJECT",
+    "name": "Koide Möbius flow",
+    "aliases": [
+      "Koide Mobius flow",
+      "Koide Riccati flow"
+    ],
+    "definition": "The autonomous Riccati flow with fixed points 2 and 5 and time-one multipliers 64/729 and 729/64.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v723_phys_modular_clock.py:111-139",
+      "tfpt_4_frontier.tex:463-472"
+    ],
+    "tags": [
+      "clock",
+      "koide"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "4d-lattice-contract",
+    "type": "OBJECT",
+    "name": "Four-dimensional lattice dynamics contract",
+    "aliases": [
+      "four-dimensional lattice contract",
+      "4d lattice dynamics"
+    ],
+    "definition": "A local Hermitian Hamiltonian family with transfer exp(-aH), quasilocal thermodynamic dynamics, and a Lieb-Robinson bound.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_4_frontier.tex:809-824",
+      "verification/v1013_thermodynamic_dynamics.py:11-36"
+    ],
+    "tags": [
+      "lattice",
+      "dynamics"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "qca-dilation",
+    "type": "OBJECT",
+    "name": "QCA unitary dilation",
+    "aliases": [
+      "QCA dilation",
+      "collision-band dilation"
+    ],
+    "definition": "The strictly local collision-band unitary dilation whose reduced diagonal dynamics is the seam Markov transfer B^n.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:793-796",
+      "verification/v984_markov_qca_dilation.py:37-43"
+    ],
+    "tags": [
+      "qca",
+      "dilation"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "no-canonical-integer-label",
+    "type": "BARRIER",
+    "name": "No canonical integer state label",
+    "aliases": [
+      "no canonical integer label",
+      "missing log-integer spectrum"
+    ],
+    "definition": "The physical clock and lattice constructions do not derive a multiplicative positive-integer label whose norm supplies a log-integer spectrum.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/clock_combination_spectrum_result.json",
+      "rh/catalog/analysis/compiler_necessity.md:B"
+    ],
+    "tags": [
+      "barrier",
+      "clock"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "archimedean-place",
+    "type": "OBJECT",
+    "name": "Archimedean place of Q",
+    "aliases": [
+      "real place",
+      "infinite place",
+      "Gamma factor and log pi"
+    ],
+    "definition": "The real completion whose local zeta integral supplies the Gamma factor and log pi; for exp(2 pi i x), exp(-pi x^2) and Lebesgue measure are Fourier self-dual.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Tate, Thesis, 1950",
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "adelic",
+      "explicit-formula",
+      "archimedean"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "class-number-formula-q-i",
+    "type": "THEOREM",
+    "name": "Class-number formula for Q(i)",
+    "aliases": [
+      "L(1,chi_-4)=pi/4",
+      "Gaussian class-number formula"
+    ],
+    "definition": "For Q(i), the Dirichlet class-number formula gives L(1,chi_-4)=2 pi h/(w sqrt(|d|))=pi/4 because h=1, d=-4 and w=|mu4|=4.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Dirichlet class-number formula",
+      "Neukirch, Algebraic Number Theory, Chapter VII"
+    ],
+    "tags": [
+      "dirichlet-l",
+      "gaussian-integers",
+      "mu4"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "finite-infinite-place-balance",
+    "type": "THEOREM",
+    "name": "Finite-infinite place balance",
+    "aliases": [
+      "explicit-formula place balance",
+      "prime-real-place identity"
+    ],
+    "definition": "The Guinand-Weil explicit formula is an identity balancing von Mangoldt prime-power data at finite places against the real-place Gamma, log pi and pole terms.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Guinand, Proc. London Math. Soc. 50 (1948)",
+      "Weil, Acta Math. 76 (1952), pp. 1–9"
+    ],
+    "tags": [
+      "explicit-formula",
+      "finite-places",
+      "archimedean"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "archimedean-dominance",
+    "type": "CRITERION",
+    "name": "Archimedean dominance criterion",
+    "aliases": [
+      "reality conformity",
+      "archimedean-prime metric dominance"
+    ],
+    "definition": "Nonnegativity of the full Weil form: the archimedean-plus-pole contribution dominates the prime contribution for every admissible test function; equivalent to RH on the full class.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "rh/paper/rh_program.tex:733-791"
+    ],
+    "tags": [
+      "weil",
+      "criterion",
+      "metric"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "pi-numerology-c3",
+    "type": "BARRIER",
+    "name": "c3 and L(1,chi_-4) numerology",
+    "aliases": [
+      "c3=1/(32 L(1,chi_-4))",
+      "pi numerology c3"
+    ],
+    "definition": "The algebraic rewrite c3=1/(8 pi)=1/(32 L(1,chi_-4)) has no corpus derivation connecting P1 to the Gaussian class-number formula and is firewall-flagged as coincidence.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/pi_prime_correlations.md:A3",
+      "tfpt_5_redteam.tex:662-689"
+    ],
+    "tags": [
+      "numerology",
+      "p1",
+      "firewall"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "mu4-mark",
+    "type": "TFPT_STRUCTURE",
+    "name": "TFPT mu4 mark",
+    "aliases": [
+      "four-mark boundary datum",
+      "mu4 mark"
+    ],
+    "definition": "The four-element mark/unit structure carried by the TFPT boundary and E8 glue.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:150-171",
+      "verification/v53_compiler_core.py:1-29"
+    ],
+    "tags": [
+      "tfpt",
+      "mu4",
+      "mark"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "chi-minus-4-census",
+    "type": "INVARIANT",
+    "name": "chi-minus-4 signed census",
+    "aliases": [
+      "chi_-4 census",
+      "Gaussian split-inert census"
+    ],
+    "definition": "The corpus exact finite split of prime residue classes by the real character chi_-4; it does not itself evaluate the Euler product at s=1.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v786_prime_packet480.py:394-404",
+      "verification/v786_prime_packet480.py:555"
+    ],
+    "tags": [
+      "chi-minus-4",
+      "prime-census",
+      "gaussian"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "census-qsm-normflow",
+    "type": "OBJECT",
+    "name": "Census QSM norm flow",
+    "aliases": [
+      "census QSM normflow",
+      "Gaussian submodule QSM"
+    ],
+    "definition": "The single-module rank-four Gaussian submodule QSM with endomorphism-semigroup isometries, index Hamiltonian, and classical Solomon-zeta partition function; it constructs bridge 1 only.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+      "experiments/tfpt-discovery/census_qsm_normflow_result.json"
+    ],
+    "tags": [
+      "qsm",
+      "normflow"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "connes-marcolli-gln-system",
+    "type": "OBJECT",
+    "name": "Connes–Marcolli GLn arithmetic QSM",
+    "aliases": [
+      "Connes-Marcolli GLn",
+      "higher-rank arithmetic QSM"
+    ],
+    "definition": "The classical higher-rank arithmetic quantum statistical system built from commensurability classes, determinant-norm time evolution, and KMS states.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes-Marcolli, Noncommutative Geometry, Quantum Fields and Motives"
+    ],
+    "tags": [
+      "qsm",
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "index-flow-time",
+    "type": "OPERATOR",
+    "name": "Index-flow time evolution",
+    "aliases": [
+      "index-flow time",
+      "norm-index Hamiltonian"
+    ],
+    "definition": "The dynamics sigma_t(mu_A)=Norm(det A)^(it)mu_A generated by the logarithm of submodule index on the canonical submodule Hilbert space.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/census_qsm_normflow_probe.py"
+    ],
+    "tags": [
+      "qsm",
+      "dynamics"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "p1-gauss-bonnet-positive-normalization",
+    "type": "THEOREM",
+    "name": "P1 Gauss–Bonnet positive normalization",
+    "aliases": [
+      "P1 Gauss-Bonnet",
+      "c3 curvature integral"
+    ],
+    "definition": "The exact positive scalar c3=1/(8pi) obtained from the one-sided S2 curvature integral; this is a coefficient, not a positive arithmetic quadratic form.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:1188-1196"
+    ],
+    "tags": [
+      "p1",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "e8-positive-lattice-norm",
+    "type": "OBJECT",
+    "name": "E8 positive lattice norm",
+    "aliases": [
+      "E8 Gram form",
+      "positive E8 norm"
+    ],
+    "definition": "The positive-definite even unimodular E8 Gram form whose shell counts are 240 sigma_3(n).",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:440-450",
+      "verification/v1018_e8_directed_readout.py:27-46"
+    ],
+    "tags": [
+      "lattice",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "seam-os-positive-transfer",
+    "type": "OPERATOR",
+    "name": "Seam OS positive transfer",
+    "aliases": [
+      "seam OS transfer",
+      "Lambda=e^{-h}"
+    ],
+    "definition": "The reflection-positive Gaussian reconstruction Lambda=e^{-h}, a positive contraction on the seam GNS space.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v446_seam_clock_invariance.py:20-39"
+    ],
+    "tags": [
+      "seam",
+      "os"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "seam-modular-generator",
+    "type": "OPERATOR",
+    "name": "Seam modular generator",
+    "aliases": [
+      "seam modular Hamiltonian",
+      "K=log((1-C)C^{-1})"
+    ],
+    "definition": "The self-adjoint free modular Hamiltonian K=log((1-C)C^{-1}) commuting with the mu4 seam clock for invariant covariance.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v446_seam_clock_invariance.py:31-43"
+    ],
+    "tags": [
+      "seam",
+      "modular"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "markov-qca-unitary-dilation",
+    "type": "OPERATOR",
+    "name": "Markov QCA unitary dilation",
+    "aliases": [
+      "Markov QCA dilation",
+      "Stinespring collision dilation"
+    ],
+    "definition": "The exact Stinespring collision dilation on a qutrit system and record-qutrit stream whose reduced populations follow the TFPT Markov transfer.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v984_markov_qca_dilation.py:1-43"
+    ],
+    "tags": [
+      "qca",
+      "markov"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "quasilocal-hamiltonian-dynamics",
+    "type": "OPERATOR",
+    "name": "Quasilocal Hamiltonian dynamics",
+    "aliases": [
+      "quasilocal Hamiltonian",
+      "Lieb-Robinson dynamics"
+    ],
+    "definition": "Hamiltonian-class thermodynamic dynamics with Hermitian local H, positive Euclidean transfer, unitary tau_t, and a Lieb-Robinson bound.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v1013_thermodynamic_dynamics.py:11-37"
+    ],
+    "tags": [
+      "dynamics",
+      "hamiltonian"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "e8-theta-heat-operator",
+    "type": "OPERATOR",
+    "name": "E8 theta heat operator",
+    "aliases": [
+      "E8 heat semigroup",
+      "theta heat operator"
+    ],
+    "definition": "The positive heat semigroup on L2(R8/E8), whose trace is E4 and whose spectral zeta is 240(8pi^2)^(-s)zeta(s)zeta(s-3).",
+    "status": "CLASSICAL",
+    "sources": [
+      "verification/v1018_e8_directed_readout.py:27-46",
+      "rh/catalog/analysis/positivity_origin_search.md:P2-P3"
+    ],
+    "tags": [
+      "lattice",
+      "heat"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hodge-riemann-positivity-candidate",
+    "type": "OBJECT",
+    "name": "Hodge and Riemann-bilinear positivity candidate",
+    "aliases": [
+      "Hodge Riemann bilinear",
+      "mu3-cover positivity"
+    ],
+    "definition": "Finite Hodge data and a conditional Riemann-bilinear route on the mu3-cover; no Kahler positivity theorem is established specifically at the tau=i E8 seam.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:278-290",
+      "tfpt_1_architecture_e8.tex:5488-5493"
+    ],
+    "tags": [
+      "hodge",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "perron-fixed-point-transport",
+    "type": "OPERATOR",
+    "name": "Perron fixed-point transport",
+    "aliases": [
+      "Perron transport",
+      "primitive stochastic transport"
+    ],
+    "definition": "The finite primitive stochastic transport with unique positive attractor and spectrum {1,(2/3)^6,(1/3)^6}.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:669-767"
+    ],
+    "tags": [
+      "perron",
+      "transport"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "seam-kms-gibbs-positivity",
+    "type": "OBJECT",
+    "name": "Seam KMS and Gibbs positivity",
+    "aliases": [
+      "seam KMS",
+      "Gibbs positivity"
+    ],
+    "definition": "Positive thermal states and Boltzmann weights on seam and Hamiltonian-class algebras.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:800-817",
+      "verification/v1013_thermodynamic_dynamics.py:20-27"
+    ],
+    "tags": [
+      "kms",
+      "gibbs"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "heat-zeta-regularization",
+    "type": "OPERATOR",
+    "name": "Heat and spectral-zeta regularization",
+    "aliases": [
+      "heat zeta regularization",
+      "Seeley-DeWitt"
+    ],
+    "definition": "Positive heat semigroups on compact models together with meromorphically continued spectral zeta determinants and Seeley-DeWitt coefficients.",
+    "status": "CLASSICAL",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:3870-3913"
+    ],
+    "tags": [
+      "heat",
+      "zeta"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "horizon-replica-positivity",
+    "type": "THEOREM",
+    "name": "Horizon replica and area-law positivity",
+    "aliases": [
+      "horizon replica",
+      "area-law positivity"
+    ],
+    "definition": "Finite Gaussian, determinant, entropy, and gapped area-law structures used to pin local horizon coefficients.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:1250-1267",
+      "tfpt_horizon_readouts.tex:560-620"
+    ],
+    "tags": [
+      "horizon",
+      "replica"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "seam-rp-blind-selector",
+    "type": "THEOREM",
+    "name": "Seam RP blindness and straddle selector",
+    "aliases": [
+      "seam RP blindness",
+      "straddle selector"
+    ],
+    "definition": "Free RP and kinematic forms are side-blind, while a fenced interacting toy selects one seam-bit member with positive coupling and OS/GNS form.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "introduction.tex:226-244",
+      "tfpt_1_architecture_e8.tex:246-251"
+    ],
+    "tags": [
+      "seam",
+      "rp"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "admissible-os-positive-measure",
+    "type": "OPERATOR",
+    "name": "Admissible OS positive measure",
+    "aliases": [
+      "admissible OS measure",
+      "H_OS=-log T"
+    ],
+    "definition": "The admissible-sector PSD transfer, tight measure family, and many-body Hamiltonian H_OS=-log T with inherited finite-model gap.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "origin_theory.tex:1813-1818",
+      "origin_theory.tex:1901-1907"
+    ],
+    "tags": [
+      "os",
+      "measure"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "finite-weil-gns-metric",
+    "type": "OBJECT",
+    "name": "Finite Weil GNS family metric",
+    "aliases": [
+      "finite Weil GNS",
+      "character-family GNS"
+    ],
+    "definition": "Finite character-family GNS forms combining prime and archimedean channels but not identified with the global central-line Weil form.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:2116-2149",
+      "verification/v539_weil_structure_family.py:6-10"
+    ],
+    "tags": [
+      "weil",
+      "gns"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "matching-ledger-positivity",
+    "type": "THEOREM",
+    "name": "Matching-ledger per-term positivity",
+    "aliases": [
+      "matching-ledger positivity",
+      "per-term Weil ledger"
+    ],
+    "definition": "Finite-window decomposition of the Weil ledger into certified, archimedean, and correction terms; global positivity remains open.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:2207-2246",
+      "verification/v541_matching_lemma_ledger.py"
+    ],
+    "tags": [
+      "ledger",
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "discrete-spectrum-neutrality",
+    "type": "BARRIER",
+    "name": "Discrete-spectrum neutrality",
+    "aliases": [
+      "discrete-spectrum zeros",
+      "spectral-zeta continuation"
+    ],
+    "definition": "For compact finite-type operators, arithmetic L-functions arise as spectral zeta functions; their analytically continued zeros are not eigenvalues of the positive operator.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/catalog/analysis/positivity_origin_search.md:P3"
+    ],
+    "tags": [
+      "barrier",
+      "spectrum"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "no-archimedean-prime-joint-space",
+    "type": "BARRIER",
+    "name": "No archimedean-prime joint space",
+    "aliases": [
+      "no joint archimedean-prime space",
+      "no arithmetic scaling action"
+    ],
+    "definition": "TFPT has archimedean positive operator spaces and static prime/Hecke spaces, but no canonical Hilbert space carrying both a multiplicative arithmetic action and the physical self-adjoint flow.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/event_log_function.md:71-77",
+      "rh/catalog/analysis/compiler_necessity.md:69-82"
+    ],
+    "tags": [
+      "barrier",
+      "adelic"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "finite-family-target-mismatch",
+    "type": "BARRIER",
+    "name": "Finite-family target mismatch",
+    "aliases": [
+      "finite-family mismatch",
+      "sampled-character mismatch"
+    ],
+    "definition": "A positive metric on sampled character families does not transfer to the global zeta Weil form without an independently proved representation and limit theorem.",
+    "status": "OPEN",
+    "sources": [
+      "tfpt_1_architecture_e8.tex:2116-2149",
+      "rh/catalog/analysis/positivity_origin_search.md:P1"
+    ],
+    "tags": [
+      "barrier",
+      "finite"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "kneser-groupoid",
+    "type": "OBJECT",
+    "name": "Marked Kneser neighbour groupoid",
+    "aliases": [
+      "Kneser groupoid",
+      "marked Kneser groupoid"
+    ],
+    "definition": "The marked Kneser-neighbour groupoid of mu4 glue states; fibre ratios were identically one, so no half-density amplitude.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+      "experiments/tfpt-discovery/kneser_groupoid_halfdensity_result.json"
+    ],
+    "tags": [
+      "groupoid",
+      "killed"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "hnf-groupoid",
+    "type": "OBJECT",
+    "name": "HNF submodule correspondence groupoid",
+    "aliases": [
+      "HNF groupoid",
+      "Gaussian HNF groupoid"
+    ],
+    "definition": "The degree-graded HNF submodule correspondence groupoid of the rank-4 Gaussian module; source and target HNF fibres agree, so Delta is identically one.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "experiments/tfpt-discovery/groupoid_halfdensity_result.json"
+    ],
+    "tags": [
+      "groupoid",
+      "killed"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "euler-side-blindness",
+    "type": "BARRIER",
+    "name": "Euler-side blindness",
+    "aliases": [
+      "Euler-side positivity blindness",
+      "compact-torus blindness"
+    ],
+    "definition": "Every positivity built on a compact torus, finite-type module, or discrete spectrum is the Euler side of a would-be reflection-positive scale model; per-term positive implies blind, and the critical side is the criterion.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/catalog/analysis/bridge2_direct_search.md",
+      "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+      "experiments/tfpt-discovery/census_qsm_normflow_probe.py"
+    ],
+    "tags": [
+      "barrier",
+      "euler",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "stochastic-scale-semigroup-on-connes-cokernel",
+    "type": "OPEN_QUESTION",
+    "name": "Stochastic scale semigroup on Connes cokernel",
+    "aliases": [
+      "stochastic scale semigroup",
+      "Connes-cokernel Markov semigroup"
+    ],
+    "definition": "The only admissible shape of bridge 2: a manifestly positive Markov semigroup in log-scale on the adele class space modulo the Fourier-invariant part whose generator carries the zeros.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/bridge2_direct_search.md"
+    ],
+    "tags": [
+      "bridge-2",
+      "adelic",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "rh-as-reflection-positivity",
+    "type": "THEOREM",
+    "name": "RH as reflection positivity",
+    "aliases": [
+      "RH reflection positivity",
+      "Bochner-OS-Hilbert-Polya"
+    ],
+    "definition": "RH is equivalent to Bochner positivity of the Weil kernel, to OS reflection positivity of the Wick-rotated kernel under the functional-equation reflection, and to Hilbert–Pólya.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "Widder, The Laplace Transform; Bernstein theorem",
+      "Osterwalder–Schrader, Comm. Math. Phys. 31 (1973)"
+    ],
+    "tags": [
+      "weil",
+      "os",
+      "rh-equivalent"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "e8-sublattice-rg-semigroup",
+    "type": "OBJECT",
+    "name": "E8 sublattice RG semigroup",
+    "aliases": [
+      "E8 RG semigroup",
+      "superlattice conditional expectation"
+    ],
+    "definition": "Conditional expectations onto superlattice-periodic functions on R^8/E8, with RG time the log index, reflection L to L-star, and Solomon scale two-point function zeta(s) through zeta(s-7).",
+    "status": "CLASSICAL",
+    "sources": [
+      "rh/catalog/analysis/bridge2_direct_search.md",
+      "Solomon, Adv. Math. 26 (1977)"
+    ],
+    "tags": [
+      "lattice",
+      "rg",
+      "semigroup"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "hecke-index-theorem",
+    "type": "THEOREM",
+    "name": "Hecke covering-index theorem",
+    "aliases": [
+      "Hecke covering-index",
+      "covering index theorem"
+    ],
+    "definition": "For an injective integral endomorphism A of the E8 torus, pullback on C(R^8/E8) has finite covering index |det A| and multiplicative composition. Proved here exactly, but mathematically classical and only an arithmetic-side stand-in.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "experiments/tfpt-discovery/hecke_index_theorem_result.json"
+    ],
+    "tags": [
+      "index",
+      "hecke",
+      "torus"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "pimsner-popa-entropy",
+    "type": "THEOREM",
+    "name": "Pimsner-Popa index entropy",
+    "aliases": [
+      "Pimsner-Popa entropy",
+      "index entropy"
+    ],
+    "definition": "For a finite covering conditional expectation, log Ind is the additive logarithmic index quantity; this does not by itself make log Ind a physical modular Hamiltonian.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Pimsner-Popa, Entropy and index for subfactors, Ann. Sci. ENS 19 (1986)",
+      "Watatani, Index for C*-subalgebras, Memoirs AMS 83 (1990)"
+    ],
+    "tags": [
+      "index",
+      "entropy"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "cuntz-laca-semigroup-algebra",
+    "type": "OBJECT",
+    "name": "Cuntz-Laca semigroup algebra",
+    "aliases": [
+      "Cuntz-Laca algebra",
+      "semigroup crossed product"
+    ],
+    "definition": "A classical semigroup crossed-product arithmetic QSM in which isometries carry a norm-defined time evolution. It realizes the desired algebra only after the index dynamics is specified, not derived from TFPT physics.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Laca-Raeburn, J. London Math. Soc. 59 (1999), DOI:10.1112/S0024610798006620",
+      "Arledge-Laca-Raeburn, Doc. Math. 2 (1997), 115-138"
+    ],
+    "tags": [
+      "qsm",
+      "operator-algebra"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "connes-trace-formula-dichotomy",
+    "type": "BARRIER",
+    "name": "Connes trace-formula dichotomy",
+    "aliases": [
+      "Connes cutoff dichotomy",
+      "cutoff dichotomy"
+    ],
+    "definition": "Cutoff positivity before quotienting is vacuous because of a divergent positive boundary term; the Fourier-invariant cokernel version is criterion-bearing. Compact-torus counting diverges as Lambda^8, not as the adelic log Lambda term.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Connes, Selecta Math. 5 (1999), 29-106",
+      "experiments/tfpt-discovery/hecke_index_theorem_result.json"
+    ],
+    "tags": [
+      "barrier",
+      "adelic",
+      "cutoff"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "index-modular-state",
+    "type": "OPEN_QUESTION",
+    "name": "Physical index-modular state",
+    "aliases": [
+      "physical index-modular state",
+      "index modular Hamiltonian"
+    ],
+    "definition": "Does the physical 4D OS sector algebra admit a state whose own modular flow acts on lattice-endomorphism sectors with modular Hamiltonian log index, rather than assuming the index dynamics?",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "rh/catalog/analysis/compiler_necessity.md:A2"
+    ],
+    "tags": [
+      "index",
+      "modular",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "equality-hunt",
+    "type": "OPEN_QUESTION",
+    "name": "Torus-cutoff equality hunt",
+    "aliases": [
+      "cutoff equality hunt"
+    ],
+    "definition": "The search for a compact-torus or heat-kernel identification of the Weil Arch-Prime-Pole remainder; compact-torus traces diverge as Lambda^8, not as the adelic log Lambda term.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/hecke_index_theorem.md:150-205"
+    ],
+    "tags": [
+      "index",
+      "cutoff",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "screw-function-criterion",
+    "type": "CRITERION",
+    "name": "Suzuki screw-function criterion",
+    "aliases": [
+      "zeta screw kernel",
+      "Krein-Langer criterion"
+    ],
+    "definition": "For Suzuki's explicit g, positivity of K_g(t,u)=g(t-u)-g(t)-g(-u)+g(0) on the real line is equivalent to Weil positivity and RH.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Suzuki, arXiv:2206.03682, Theorem 1.2",
+      "doi:10.1112/jlms.12785"
+    ],
+    "tags": [
+      "bridge-2",
+      "metric",
+      "criterion"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "canonical-system-hamiltonian",
+    "type": "OPERATOR",
+    "name": "Zeta canonical-system Hamiltonian",
+    "aliases": [
+      "positive Hamiltonian H(t)",
+      "Krein canonical system"
+    ],
+    "definition": "The positive Hamiltonian produced abstractly when the zeta screw kernel is positive; constructing it globally and independently from the prime/archimedean data is the forward problem.",
+    "status": "OPEN",
+    "sources": [
+      "Suzuki, arXiv:2206.03682",
+      "Suzuki, arXiv:2606.09096"
+    ],
+    "tags": [
+      "bridge-2",
+      "operator",
+      "canonical-system"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "schoenberg-helical-embedding",
+    "type": "THEOREM",
+    "name": "Schoenberg-Krein helical embedding",
+    "aliases": [
+      "screw line",
+      "stationary-increment embedding"
+    ],
+    "definition": "A positive screw kernel is the Gram kernel of stationary increments x(t)-x(0), with squared norm -2g(t); conversely such an embedding gives kernel positivity.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Suzuki, arXiv:2209.04658",
+      "Suzuki, arXiv:2206.03682"
+    ],
+    "tags": [
+      "metric",
+      "schoenberg",
+      "helical"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "de-branges-positivity",
+    "type": "CRITERION",
+    "name": "de Branges shift positivity",
+    "aliases": [
+      "de Branges operator positivity"
+    ],
+    "definition": "The shift-form condition Re<F,F(.+i)> > 0 is sufficient for critical-line zeros, but Conrey-Li prove that it fails for the natural xi-associated de Branges space; it is strictly stronger than RH.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "Conrey-Li, arXiv:math/9812166",
+      "doi:10.1155/S1073792800000489"
+    ],
+    "tags": [
+      "criterion",
+      "strictly-stronger",
+      "barrier"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "conductor-operator-burnol",
+    "type": "OPERATOR",
+    "name": "Burnol conductor operator",
+    "aliases": [
+      "log-position plus log-momentum operator"
+    ],
+    "definition": "The local Fourier-invariant operator log|x|+F^-1 log|y| F explaining local explicit-formula terms; its self-adjoint structure does not make the global zeta zeros its point spectrum.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Burnol, arXiv:math/9902080",
+      "Burnol, arXiv:math/0101068",
+      "doi:10.1515/FORUM.2004.16.6.789"
+    ],
+    "tags": [
+      "operator",
+      "explicit-formula",
+      "local"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "verified-zeros-height",
+    "type": "INVARIANT",
+    "name": "Rigorous verified-zero height",
+    "aliases": [
+      "Platt-Trudgian height"
+    ],
+    "definition": "Every nontrivial zeta zero with 0 < gamma <= 3000175332800 lies on the critical line.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Platt-Trudgian, arXiv:2004.09765",
+      "doi:10.1112/blms.12460"
+    ],
+    "tags": [
+      "zeros",
+      "finite-height",
+      "rigorous-computation"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "compact-window-certificate-mechanism",
+    "type": "BARRIER",
+    "name": "Compact-window finite-height barrier",
+    "aliases": [
+      "Paley-Wiener tail barrier"
+    ],
+    "definition": "Compact log-support makes the Fourier transform entire rather than height-supported, so zeros verified through any finite H do not by themselves imply positivity on the whole compact-support function class; a uniform tail/operator bound is additionally required.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Paley-Wiener theorem",
+      "rh/catalog/analysis/bridge2_object_search.md:S3(iv)",
+      "Platt-Trudgian, arXiv:2004.09765"
+    ],
+    "tags": [
+      "barrier",
+      "compact-window",
+      "verified-zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "w2-form-density",
+    "type": "OPEN_QUESTION",
+    "name": "W2 form-density and limit bridge",
+    "aliases": [
+      "W2 form density"
+    ],
+    "definition": "Establish the required form-density, Mosco/norm-resolvent and pointwise frame estimates connecting nested TFPT Galerkin spaces to Suzuki's localized form domain.",
+    "status": "OPEN",
+    "sources": [
+      "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:421-456",
+      "notes/arxiv_w3_note/note_w3_detector_structure.tex:574-583"
+    ],
+    "tags": [
+      "W2",
+      "form-density",
+      "operator-limit"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "w3-uniform-window-positivity",
+    "type": "OPEN_QUESTION",
+    "name": "W3 uniform window positivity",
+    "aliases": [
+      "W3 uniform positivity",
+      "no-ladder wall"
+    ],
+    "definition": "Prove positivity uniformly over all windows/scales; finite deployed windows are off-line-zero detectors, while the uniform statement is the conjectural wall.",
+    "status": "OPEN",
+    "sources": [
+      "notes/arxiv_w3_note/note_w3_detector_structure.tex:584-591",
+      "verification/v677_w3_structure_theorem.py"
+    ],
+    "tags": [
+      "W3",
+      "window",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "w4-global-positivity-transfer",
+    "type": "OPEN_QUESTION",
+    "name": "W4 global Weil-positivity transfer",
+    "aliases": [
+      "W4 global transfer"
+    ],
+    "definition": "Transfer finite Galerkin/window positivity to the full Weil test-function class using domain density, scale control and uniform estimates.",
+    "status": "OPEN",
+    "sources": [
+      "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:432-436"
+    ],
+    "tags": [
+      "W4",
+      "global-transfer",
+      "weil"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "selected-arch-error-quadratic-rate",
+    "type": "THEOREM",
+    "name": "Selected archimedean quadratic-rate statement",
+    "aliases": [
+      "SelectedArchErrorQuadraticRate",
+      "archRateConst bound"
+    ],
+    "definition": "Named Lean statement that selected-path archimedean error is O(Delta^2) with a fixed explicit constant. The fixed-constant form is falsified (8.0283 > 4.126 in the small-support regime); the Exists-C form remains open.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "rh/catalog/fragments/part_18.json"
+    ],
+    "tags": [
+      "arch",
+      "rate",
+      "killed"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "selected-arch-weighted-interpolation-estimate",
+    "type": "OPEN_QUESTION",
+    "name": "Selected arch weighted interpolation estimate",
+    "aliases": [
+      "SelectedArchWeightedInterpolationEstimate"
+    ],
+    "definition": "Classical weighted interpolation estimate for the productionArchLag near and far integrals; the remaining plumbing for the existential selected-path archimedean O(Delta^2) rate.",
+    "status": "OPEN",
+    "sources": [
+      "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "rh/catalog/fragments/part_18.json"
+    ],
+    "tags": [
+      "arch",
+      "interpolation",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "frequently-selected-aug-dual-resolvent",
+    "type": "OPEN_QUESTION",
+    "name": "FREQ cone theorem",
+    "aliases": [
+      "frequently_selected_augDualResolvent_ge_half",
+      "FREQ cone"
+    ],
+    "definition": "The FREQ cone theorem: for arbitrarily large K there exist k>=K and a faithful mu-orthonormal transcription of the selected real window with R-dagger(W_k^R)-I/2 positive semidefinite.",
+    "status": "OPEN",
+    "sources": [
+      "rh/lean/RH/FrequentlySelected.lean:294",
+      "rh/catalog/analysis/evolve_props_report.md"
+    ],
+    "tags": [
+      "freq",
+      "cone",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "selected-polynomial-approximates-grid",
+    "type": "OPEN_QUESTION",
+    "name": "Selected polynomial approximates grid",
+    "aliases": [
+      "SelectedPolynomialApproximatesGrid"
+    ],
+    "definition": "Named outer bridge: a coefficient vector z exists so the fullRead versus A_cap quadratic form differs by at most the archimedean error. Contains the channel-positivity bridge; r473 NO_BRIDGE.",
+    "status": "OPEN",
+    "sources": [
+      "rh/lean/RH/InnerBridges.lean:366",
+      "rh/catalog/fragments/part_4.json"
+    ],
+    "tags": [
+      "grid",
+      "polynomial",
+      "no-bridge"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  }
+]

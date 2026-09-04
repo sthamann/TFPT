@@ -34,9 +34,10 @@ def main() -> int:
     check("polar-integral-closed",
           "theorem fullWeilPoleIntegral_tendsto" in external
           and "norm_integral_le_of_norm_le" in external)
-    check("one-dense-completion-sorry",
-          external.count("\n  sorry") == 3
-          and "theorem fullWeil_fixedSupport_completion" in external)
+    check("r638L-one-external-brick",
+          external.count("\n  sorry") == 1
+          and "theorem fullWeil_fixedSupport_completion" in external
+          and "theorem standard_explicit_formula_identification :" not in external)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

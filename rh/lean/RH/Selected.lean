@@ -61,9 +61,9 @@ the rationals.
     to conjectures / alternative route (kept, not deleted).
 
 SORRY CENSUS OF THIS FILE: ZERO.  New openness is named Props only.
-The extraction theorem consumes the existing classical sorry
-`arch_elementwise_stabilization` (RH/Elementwise.lean) through
-`elementwise_finite_stabilization`; it introduces no new `sorry`.
+Since r638L the extraction theorem takes the unasserted
+`ArchGaussMellinDigammaIdentity` contract explicitly; no arch
+`sorry` is consumed.
 
 Claim boundary: research documentation.  NOT evidence for or against
 the Riemann Hypothesis in either direction.  NO RH CLAIM.
@@ -386,10 +386,10 @@ theorem selected_covers (a₀ M : ℕ) :
 HYPOTHESES THE EXISTING EXTRACTION ACTUALLY NEEDS
 (`weil_nonneg_of_windowlocal`, RH/Elementwise.lean):
 
-  1. STABILIZATION (consumed, not re-asserted):
-     `elementwise_finite_stabilization f` -- comb PROVED, pole
-     PROVED, arch the existing typed sorry
-     `arch_elementwise_stabilization`.  Yields a finite onset
+  1. STABILIZATION (conditional, not asserted):
+     `elementwise_finite_stabilization hArch f` -- comb PROVED,
+     pole PROVED, arch supplied explicitly through the historical
+     contract `ArchGaussMellinDigammaIdentity`.  Yields a finite onset
      `a₀(f)` past which `fullRead a m f = weilForm f` for every
      `m ≥ f.meshExp`.
   2. ONSET: one anchor `a ≥ a₀(f)` (the existing proof picks a
@@ -437,15 +437,16 @@ element, no mesh-ladder transport).  Selected-sequence plain-form
 positivity plus the existing elementwise stabilization imply
 Weil-form nonnegativity on every grid element.
 
-Honest hypotheses: `hpos` is (4) above; onset and mesh coverage
-are proved (`selected_covers`); stabilization is the existing
-`elementwise_finite_stabilization` (arch sorry consumed).  NO RH
+Honest hypotheses: `hArch` is the unasserted historical arch
+exact-equality contract, `hpos` is (4) above; onset and mesh coverage
+are proved (`selected_covers`).  NO RH
 CLAIM. -/
 theorem weil_nonneg_of_selected_windows
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hpos : SelectedWindowLocalPositive) :
     ∀ f : GridElement, 0 ≤ weilForm f := by
   intro f
-  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization f
+  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization hArch f
   have hcov := selected_covers a₀ f.meshExp
   have h : ∀ᶠ k in atTop,
       0 < k ∧ a₀ ≤ selectedAnchor k ∧ f.meshExp ≤ selectedMesh k ∧
@@ -461,10 +462,11 @@ theorem weil_nonneg_of_selected_windows
 /-- the L† / master route, composed through the named bridge
 (PROVED as a function of the named Prop, never asserting it). -/
 theorem weil_nonneg_of_selected_master
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hbridge : SelectedMasterImpliesPlainReads)
     (hmaster : SelectedMasterPositive) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_selected_windows (hbridge hmaster)
+  weil_nonneg_of_selected_windows hArch (hbridge hmaster)
 
 /-! ## The r397 strict tail (stronger alternative since r430)
 

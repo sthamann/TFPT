@@ -1,0 +1,1869 @@
+{
+  "claim_boundary": "Research map only. No claim for or against RH.",
+  "records_scanned": 2035,
+  "edges": [
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "big_picture_2026-08-02_de.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:big_picture_2026-08-02_de.tex",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/lean4-carrier-rigidity/TfptCarrier/WeilDictionary.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/lean4-carrier-rigidity/TfptCarrier/WeilDictionary.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/automaton_sigma_orbifold_confluence_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/automaton_sigma_orbifold_confluence_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "baez-duarte-criterion",
+      "dst": "experiments/tfpt-discovery/baez_duarte_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/baez_duarte_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "nyman-beurling-criterion",
+      "dst": "experiments/tfpt-discovery/baez_duarte_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/baez_duarte_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "beurling-deny-criterion",
+      "dst": "experiments/tfpt-discovery/bd_seam_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/bd_seam_probe.py",
+      "note": "Lexical mention in catalog record; outcome=INCONCLUSIVE."
+    },
+    {
+      "src": "tfpt-gcar",
+      "dst": "experiments/tfpt-discovery/boundary_nullselector_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/boundary_nullselector_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "experiments/tfpt-discovery/budget_anatomy_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/budget_anatomy_probe.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/cased_replicate_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/cased_replicate_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/chain_mass_law_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/chain_mass_law_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/christoffel_pnt_gamma_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/christoffel_pnt_gamma_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "tfpt-compiler",
+      "dst": "experiments/tfpt-discovery/clock_torsion_ecm_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/clock_torsion_ecm_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "tfpt-compiler",
+      "dst": "experiments/tfpt-discovery/compiler_arithmetic_bridge_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/compiler_arithmetic_bridge_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "experiments/tfpt-discovery/continuum_extension_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/continuum_extension_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "experiments/tfpt-discovery/continuum_extraction_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/continuum_extraction_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/coupledtau_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/coupledtau_probe.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "nyman-beurling-criterion",
+      "dst": "experiments/tfpt-discovery/criteria_atlas_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/criteria_atlas_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "experiments/tfpt-discovery/cross_chain_gamma_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/cross_chain_gamma_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/dirichlet_l4_floor_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/dirichlet_l4_floor_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "analytic-object",
+      "dst": "experiments/tfpt-discovery/door_b_lambda_transport_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/door_b_lambda_transport_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "experiments/tfpt-discovery/duality_forms_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/duality_forms_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "barrier-unimodularity",
+      "dst": "experiments/tfpt-discovery/e8_composite_gauss_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_composite_gauss_result.json",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-unimodularity",
+      "dst": "experiments/tfpt-discovery/e8_composite_gauss_result.json",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_composite_gauss_result.json",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "seam-kms-gibbs-positivity",
+      "dst": "experiments/tfpt-discovery/e8_glue_lseries_selfdual_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_glue_lseries_selfdual_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/e8_kms_schur_parent_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_kms_schur_parent_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "tfpt-e8-lattice",
+      "dst": "experiments/tfpt-discovery/e8_local_densities_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_local_densities_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "hecke-correspondence",
+      "dst": "experiments/tfpt-discovery/e8_pneighbor_hecke_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_pneighbor_hecke_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/e8_ramified_jetcode_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/e8_ramified_jetcode_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "ucp-map",
+      "dst": "experiments/tfpt-discovery/euler_operator_lift_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/euler_operator_lift_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/exclusion_zero_locator_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/exclusion_zero_locator_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "extraction-joint",
+      "dst": "experiments/tfpt-discovery/extraction_joint_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/extraction_joint_probe.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/frame_beyond_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/frame_beyond_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "lstar-statement",
+      "dst": "experiments/tfpt-discovery/fullsource_quasidefiniteness_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/fullsource_quasidefiniteness_probe.py",
+      "note": "Lexical mention in catalog record; outcome=INCONCLUSIVE."
+    },
+    {
+      "src": "gabor-zero-side",
+      "dst": "experiments/tfpt-discovery/gabor_exposed_orbit_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_exposed_orbit_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "barrier-world-blind",
+      "dst": "experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gate-zero",
+      "dst": "experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gate-zero",
+      "dst": "experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "barrier-world-blind",
+      "dst": "experiments/tfpt-discovery/gabor_first_contact_selberg_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_first_contact_selberg_result.json",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/gabor_honest_weil_game_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_honest_weil_game_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/gabor_scramble_gate_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_scramble_gate_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "pure-gabor-family",
+      "dst": "experiments/tfpt-discovery/gabor_weil_positivity_subfamily_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/gabor_weil_positivity_subfamily_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "open-independent-positivity-source",
+      "dst": "experiments/tfpt-discovery/geometric_sos_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/geometric_sos_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "half-density",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "weil-arch-term",
+      "dst": "experiments/tfpt-discovery/heat_arch_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/heat_arch_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "hecke-operator",
+      "dst": "experiments/tfpt-discovery/hecke_broadcast_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_broadcast_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/hecke_channel_columns_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_channel_columns_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "equality-hunt",
+      "dst": "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "hecke-correspondence",
+      "dst": "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/hecke_mod_ramified_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_mod_ramified_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "hecke-correspondence",
+      "dst": "experiments/tfpt-discovery/hecke_mod_ramified_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_mod_ramified_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "hecke-correspondence",
+      "dst": "experiments/tfpt-discovery/hecke_orbit_transfer_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_orbit_transfer_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/hecke_sos_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/hecke_sos_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "experiments/tfpt-discovery/i5_connes_dictionary_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/i5_connes_dictionary_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "i5-transport-ledger-criterion",
+      "dst": "experiments/tfpt-discovery/i5_tightness_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/i5_tightness_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "experiments/tfpt-discovery/interval_cert_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/interval_cert_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "jensen-polynomials",
+      "dst": "experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "experiments/tfpt-discovery/kernel_loewner08_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kernel_loewner08_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "experiments/tfpt-discovery/kernel_loewner08_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kernel_loewner08_probe.py",
+      "note": "Concept occurs in failed_because; class=LOSSY_CONSTANT."
+    },
+    {
+      "src": "weil-prime-term",
+      "dst": "experiments/tfpt-discovery/kernel_loewner_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kernel_loewner_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "lambda-star-ladder",
+      "dst": "experiments/tfpt-discovery/kernel_loewner_window_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kernel_loewner_window_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "experiments/tfpt-discovery/kernel_loewner_window_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kernel_loewner_window_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "groupoid-modular-function",
+      "dst": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "half-density",
+      "dst": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "pair-correlation",
+      "dst": "experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "e8-theta-series",
+      "dst": "experiments/tfpt-discovery/li_e4_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/li_e4_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/lk_split_theta_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/lk_split_theta_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/mangoldt_incidence_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/mangoldt_incidence_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "lambda-star-ladder",
+      "dst": "experiments/tfpt-discovery/margin_law_symreg_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/margin_law_symreg_probe.py",
+      "note": "Lexical mention in catalog record; outcome=INCONCLUSIVE."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/margin_link_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/margin_link_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "laguerre-polya-class",
+      "dst": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "riemann-kernel",
+      "dst": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "laguerre-polya-class",
+      "dst": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "archimedean-place",
+      "dst": "experiments/tfpt-discovery/moonshot_arch_glue_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_arch_glue_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/moonshot_arch_glue_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_arch_glue_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "hecke-correspondence",
+      "dst": "experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "tfpt-e8-lattice",
+      "dst": "experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "experiments/tfpt-discovery/moonshot_spectral_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_spectral_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "experiments/tfpt-discovery/moonshot_state_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_state_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "experiments/tfpt-discovery/moonshot_state_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/moonshot_state_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "narrowband-weil",
+      "dst": "experiments/tfpt-discovery/narrowband_weil_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/narrowband_weil_probe.py",
+      "note": "Lexical mention in catalog record; outcome=INCONCLUSIVE."
+    },
+    {
+      "src": "toeplitz-positivity",
+      "dst": "experiments/tfpt-discovery/oddtoeplitz_pole_branch_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/oddtoeplitz_pole_branch_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "pair-correlation",
+      "dst": "experiments/tfpt-discovery/paircorr_bridge_map_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/paircorr_bridge_map_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "pair-correlation",
+      "dst": "experiments/tfpt-discovery/paircorr_contract_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/paircorr_contract_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "half-density",
+      "dst": "experiments/tfpt-discovery/parabolic_detline2_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/parabolic_detline2_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "half-density",
+      "dst": "experiments/tfpt-discovery/parabolic_detline_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/parabolic_detline_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "half-density",
+      "dst": "experiments/tfpt-discovery/parabolic_detline_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/parabolic_detline_result.json",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-pole-term",
+      "dst": "experiments/tfpt-discovery/pnt_model_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/pnt_model_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-pole-term",
+      "dst": "experiments/tfpt-discovery/pole_rank_one_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/pole_rank_one_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "experiments/tfpt-discovery/port_loewner_identity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/port_loewner_identity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "experiments/tfpt-discovery/port_weyl_cocycle_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/port_weyl_cocycle_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "experiments/tfpt-discovery/prime_e8_ordered_herglotz_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/prime_e8_ordered_herglotz_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/prime_inequality_evosearch_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/prime_inequality_evosearch_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "e8-theta-series",
+      "dst": "experiments/tfpt-discovery/prime_shadow_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/prime_shadow_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/prime_sqrt_uniformization_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/prime_sqrt_uniformization_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "quillen-bfk-seam-determinants",
+      "dst": "experiments/tfpt-discovery/quillen_bfk_compensation_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/quillen_bfk_compensation_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/rank3_uniformity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/rank3_uniformity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/rank3_zeroside_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/rank3_zeroside_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "tfpt-e8-compiler",
+      "dst": "experiments/tfpt-discovery/recursion_traces_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/recursion_traces_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/relay_test_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/relay_test_probe.py",
+      "note": "Lexical mention in catalog record; outcome=INCONCLUSIVE."
+    },
+    {
+      "src": "bost-connes-system",
+      "dst": "experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "quillen-bfk-seam-determinants",
+      "dst": "experiments/tfpt-discovery/seam_bfk_conical_det_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/seam_bfk_conical_det_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/seam_clifford_modular_s_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/seam_clifford_modular_s_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "seam-geodesic",
+      "dst": "experiments/tfpt-discovery/seam_geodesic_factor.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/seam_geodesic_factor.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "seam-geodesic",
+      "dst": "experiments/tfpt-discovery/seam_geodesic_infrastructure_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/seam_geodesic_infrastructure_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/selberg_supply_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/selberg_supply_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/signed_border_mean_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/signed_border_mean_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/signed_border_mean_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/signed_border_mean_probe.py",
+      "note": "Concept occurs in failed_because; class=CIRCULAR."
+    },
+    {
+      "src": "tfpt-compiler",
+      "dst": "experiments/tfpt-discovery/simplicity_core_census_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/simplicity_core_census_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/source_weyl_energy_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/source_weyl_energy_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "experiments/tfpt-discovery/source_weyl_energy_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/source_weyl_energy_probe.py",
+      "note": "Concept occurs in failed_because; class=CIRCULAR."
+    },
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "experiments/tfpt-discovery/stage4_prolate_prototype_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/stage4_prolate_prototype_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/stc_sol_convergence_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/stc_sol_convergence_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "open-independent-positivity-source",
+      "dst": "experiments/tfpt-discovery/strat2_rp_universality_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/strat2_rp_universality_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "prolate-operator",
+      "dst": "experiments/tfpt-discovery/strat3_sonin_prolate_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/strat3_sonin_prolate_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/suzuki_contact_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/suzuki_contact_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/suzuki_contact_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/suzuki_contact_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/thin_band_analytic_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/thin_band_analytic_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "smooth-world",
+      "dst": "experiments/tfpt-discovery/transport_discriminator_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/transport_discriminator_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "experiments/tfpt-discovery/turing_cert_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/turing_cert_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/two_qubit_clifford_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/two_qubit_clifford_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "tfpt-compiler",
+      "dst": "experiments/tfpt-discovery/two_qubit_clifford_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/two_qubit_clifford_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "weil-pole-term",
+      "dst": "experiments/tfpt-discovery/w1_dictionary_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/w1_dictionary_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/w1_matrix_identity_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/w1_matrix_identity_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "suzuki-screw-canonical-systems",
+      "dst": "experiments/tfpt-discovery/w1_theorem_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/w1_theorem_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "experiments/tfpt-discovery/w2_form_density_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/w2_form_density_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/weil_gabor_explicit_formula_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_gabor_explicit_formula_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "experiments/tfpt-discovery/weil_recovery_compiler_sector_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_recovery_compiler_sector_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "chuk-window-certificate",
+      "dst": "experiments/tfpt-discovery/weil_window_certificate_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_certificate_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "chuk-window-certificate",
+      "dst": "experiments/tfpt-discovery/weil_window_certificate_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_certificate_result.json",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "lambda-star-ladder",
+      "dst": "experiments/tfpt-discovery/weil_window_profile_scout.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_profile_scout.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "experiments/tfpt-discovery/weil_window_profile_scout.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_profile_scout.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "chuk-window-certificate",
+      "dst": "experiments/tfpt-discovery/weil_window_profile_scout_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_profile_scout_result.json",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "lambda-star-ladder",
+      "dst": "experiments/tfpt-discovery/weil_window_profile_scout_result.json",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/weil_window_profile_scout_result.json",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "hilbert-polya-operator",
+      "dst": "experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/z1_edge_signature_probe.py",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "experiments/tfpt-discovery/z1_variable_edge_mfunction_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/z1_variable_edge_mfunction_probe.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/zero_comb_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/zero_comb_probe.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "experiments/tfpt-discovery/zeta_explicit_formula_trace_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/zeta_explicit_formula_trace_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "functional-equation",
+      "dst": "experiments/tfpt-discovery/zeta_funceq_duality_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/zeta_funceq_duality_probe.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "experiments/tfpt-discovery/zone_extension_proof_probe.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:experiments/tfpt-discovery/zone_extension_proof_probe.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "suzuki-screw-canonical-systems",
+      "dst": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/lean/RH/Augmented.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/Augmented.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/lean/RH/Canonical.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/Canonical.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/lean/RH/Closure.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/Closure.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "rh/lean/RH/Elementwise.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/Elementwise.lean",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/lean/RH/FaithfulFold.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/FaithfulFold.lean",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "selected-window-family",
+      "dst": "rh/lean/RH/FrequentlySelected.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/FrequentlySelected.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "explicit-formula",
+      "dst": "rh/lean/RH/GaborExplicitFormula.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/GaborExplicitFormula.lean",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "inner-bridges",
+      "dst": "rh/lean/RH/InnerBridges.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/InnerBridges.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/lean/RH/InnerBridges.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/InnerBridges.lean",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "selected-arch-error-quadratic-rate",
+      "dst": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "selected-arch-weighted-interpolation-estimate",
+      "dst": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "selected-arch-weighted-interpolation-estimate",
+      "dst": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "note": "Concept occurs in failed_because; class=LOSSY_CONSTANT."
+    },
+    {
+      "src": "arch-rate",
+      "dst": "rh/problem/arch_rate.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/arch_rate.pdf",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "arch-rate",
+      "dst": "rh/problem/arch_rate.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/arch_rate.tex",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/compose_lemma.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/compose_lemma.pdf",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/compose_lemma.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/compose_lemma.tex",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/cross_chain_gamma.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/cross_chain_gamma.pdf",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/cross_chain_gamma.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/cross_chain_gamma.tex",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "extraction-joint",
+      "dst": "rh/problem/extraction_joint.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/extraction_joint.pdf",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "selected-polynomial-approximates-grid",
+      "dst": "rh/problem/extraction_joint.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/extraction_joint.pdf",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "extraction-joint",
+      "dst": "rh/problem/extraction_joint.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/extraction_joint.tex",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "selected-polynomial-approximates-grid",
+      "dst": "rh/problem/extraction_joint.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/extraction_joint.tex",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "inner-bridges",
+      "dst": "rh/problem/inner_bridges.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/inner_bridges.tex",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/problem/kernel_loewner08.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/kernel_loewner08.pdf",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/problem/kernel_loewner08.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/kernel_loewner08.tex",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/problem/keystone_judgment.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/keystone_judgment.pdf",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/problem/keystone_judgment.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/keystone_judgment.tex",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "narrowband-weil",
+      "dst": "rh/problem/narrowband_weil.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/narrowband_weil.tex",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "outer-bridges",
+      "dst": "rh/problem/outer_bridges.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/outer_bridges.pdf",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "outer-bridges",
+      "dst": "rh/problem/outer_bridges.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/outer_bridges.tex",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/overlap_mechanism.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/overlap_mechanism.pdf",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/overlap_mechanism.pdf",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/overlap_mechanism.pdf",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/overlap_mechanism.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/overlap_mechanism.tex",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/overlap_mechanism.tex",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/overlap_mechanism.tex",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/p1_construction.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/p1_construction.pdf",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/p1_construction.pdf",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/p1_construction.pdf",
+      "note": "Concept occurs in failed_because; class=WORLD_BLIND."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/p1_construction.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/p1_construction.tex",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/p1_construction.tex",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/p1_construction.tex",
+      "note": "Concept occurs in failed_because; class=WORLD_BLIND."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/qn_reopened.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/qn_reopened.pdf",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/qn_reopened.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/qn_reopened.tex",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "quadrep",
+      "dst": "rh/problem/quadrep.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/quadrep.pdf",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "quadrep",
+      "dst": "rh/problem/quadrep.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/quadrep.tex",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/signed_border_mean.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/signed_border_mean.pdf",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/signed_border_mean.pdf",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/signed_border_mean.pdf",
+      "note": "Concept occurs in failed_because; class=CIRCULAR."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/signed_border_mean.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/signed_border_mean.tex",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/signed_border_mean.tex",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/signed_border_mean.tex",
+      "note": "Concept occurs in failed_because; class=CIRCULAR."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/source_weyl_energy.pdf",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/source_weyl_energy.pdf",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/source_weyl_energy.tex",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/source_weyl_energy.tex",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/verify_cross_chain.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_cross_chain.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "rh/problem/verify_debranges_index.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_debranges_index.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "selected-polynomial-approximates-grid",
+      "dst": "rh/problem/verify_extraction_joint.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_extraction_joint.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "inner-bridges",
+      "dst": "rh/problem/verify_inner_bridges.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_inner_bridges.py",
+      "note": "Lexical mention in catalog record; outcome=SEALED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "rh/problem/verify_kernel_loewner08.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_kernel_loewner08.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "lstar-statement",
+      "dst": "rh/problem/verify_lstar_instance.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_lstar_instance.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "narrowband-weil",
+      "dst": "rh/problem/verify_narrowband_weil.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_narrowband_weil.py",
+      "note": "Lexical mention in catalog record; outcome=OPEN."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/verify_overlap_mechanism.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_overlap_mechanism.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "von-mangoldt",
+      "dst": "rh/problem/verify_overlap_mechanism.py",
+      "rel": "KILLED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_overlap_mechanism.py",
+      "note": "Concept occurs in failed_because; class=STRUCTURAL_MISMATCH."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "rh/problem/verify_qn_reopened.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_qn_reopened.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "barrier-circularity",
+      "dst": "rh/problem/verify_signed_border.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/problem/verify_signed_border.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "tfpt_prime_front.tex#sec:i5",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:tfpt_prime_front.tex#sec:i5",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "r-dagger-kernel-loewner-stack",
+      "dst": "verification/v1017_kernel_loewner_positivity.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v1017_kernel_loewner_positivity.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "tfpt-e8-lattice",
+      "dst": "verification/v536_eichler_trace_layer.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v536_eichler_trace_layer.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "i5-transport-ledger-criterion",
+      "dst": "verification/v541_matching_lemma_ledger.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v541_matching_lemma_ledger.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "weil-pole-term",
+      "dst": "verification/v591_pole_rank_one.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v591_pole_rank_one.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "baez-duarte-criterion",
+      "dst": "verification/v667_baez_duarte.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v667_baez_duarte.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "nyman-beurling-criterion",
+      "dst": "verification/v667_baez_duarte.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v667_baez_duarte.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "groupoid",
+      "dst": "verification/v714_moonshot_hecke_groupoid.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v714_moonshot_hecke_groupoid.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "prolate-operator",
+      "dst": "verification/v732_strat3_sonin_prolate.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v732_strat3_sonin_prolate.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gate-zero",
+      "dst": "verification/v733_strat3_gate0_census.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v733_strat3_gate0_census.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "verification/v772_qf_feshbach_effective.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v772_qf_feshbach_effective.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "tfpt-gcar",
+      "dst": "verification/v785_hecke_check32.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v785_hecke_check32.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "weil-positivity",
+      "dst": "verification/v848_extraction_chain.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v848_extraction_chain.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "finite-weil-window",
+      "dst": "verification/v861_krein_normalform_lean.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v861_krein_normalform_lean.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "open-independent-positivity-source",
+      "dst": "verification/v902_wall_relocation_map.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v902_wall_relocation_map.py",
+      "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "herglotz-function",
+      "dst": "verification/v947_loewner_pick_dictionary.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v947_loewner_pick_dictionary.py",
+      "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "rhp-iiks-toda-tau",
+      "dst": "verification/v955_tau_iiks_toda_dictionary.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v955_tau_iiks_toda_dictionary.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "terminal-statement",
+      "dst": "verification/v960_terminal_surface_closure.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v960_terminal_surface_closure.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "barrier-world-blind",
+      "dst": "verification/v964_lstar_coherence_census.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v964_lstar_coherence_census.py",
+      "note": "Lexical mention in catalog record; outcome=CERTIFIED."
+    },
+    {
+      "src": "gaussian-e8-module",
+      "dst": "groupoid",
+      "rel": "CO_OCCURS",
+      "strength": "STATISTICAL",
+      "source": "catalog-cooccurrence",
+      "note": "Concept aliases occur in the same catalog records.",
+      "weight": 3
+    }
+  ],
+  "counts": {
+    "used_by": 214,
+    "killed_by": 17,
+    "llm_used_by": 0,
+    "co_occurs": 1
+  }
+}

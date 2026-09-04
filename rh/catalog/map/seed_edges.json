@@ -1,0 +1,4522 @@
+[
+  {
+    "src": "riemann-zeta",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "riemann-xi",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "critical-line",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "critical-strip",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "riemann-kernel",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Titchmarsh, The Theory of the Riemann Zeta-function, §2.16",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "xi-fourier-function",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Titchmarsh, The Theory of the Riemann Zeta-function, §2.16",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "fourier-transform",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §1.14",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "mellin-transform",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §2.5",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "laplace-transform",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §1.14",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "functional-equation",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "explicit-formula",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "von-mangoldt",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §27.10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "chebyshev-psi",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §27.2",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "prime-counting",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §27.2",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "zero-counting",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Titchmarsh, The Theory of the Riemann Zeta-function, Thm. 9.3",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "pair-correlation",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Montgomery, Proc. Symp. Pure Math. 24 (1973)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "montgomery-conjecture",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Montgomery, Proc. Symp. Pure Math. 24 (1973)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-quadratic-form",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-arch-term",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-prime-term",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-pole-term",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-positivity",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gabor-zero-side",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/GaborSeparation.lean:1998",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gabor-pure-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/GaborExposedOrbit.lean:1718",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gabor-rational-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:540",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gabor-prime-side-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:550",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "li-coefficients",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Li, J. Number Theory 65 (1997), DOI:10.1006/jnth.1997.2138",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "li-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Li, J. Number Theory 65 (1997), DOI:10.1006/jnth.1997.2138",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "nyman-beurling-space",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Nyman, Ark. Mat. 1 (1950); Beurling, Proc. Nat. Acad. Sci. 41 (1955)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "nyman-beurling-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Beurling, Proc. Nat. Acad. Sci. 41 (1955)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "baez-duarte-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Báez-Duarte, Adv. Math. 178 (2003), DOI:10.1016/S0001-8708(02)00041-5",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hardy-space-h2",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Duren, Theory of Hᵖ Spaces",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "debruijn-newman-constant",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rodgers-tao-theorem",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "newman-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Rodgers–Tao, Forum Math. Pi 8 (2020), arXiv:1801.05914",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "debranges-space",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "de Branges, Hilbert Spaces of Entire Functions",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "lee-yang-property",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Lee–Yang, Phys. Rev. 87 (1952), DOI:10.1103/PhysRev.87.410",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "kps-theorem",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "van-dantzig-pair",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "toeplitz-positivity",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Karlin, Total Positivity, Vol. I",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hankel-positivity",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Akhiezer, The Classical Moment Problem",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "jensen-polynomials",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Griffin–Ono–Rolen–Zagier, PNAS 116 (2019), DOI:10.1073/pnas.1902572116",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "jensen-hyperbolicity",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Pólya–Schur, J. Reine Angew. Math. 144 (1914)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gorz-theorem",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Griffin–Ono–Rolen–Zagier, PNAS 116 (2019), DOI:10.1073/pnas.1902572116",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Pólya correspondence, 1912–1914; Hilbert reported by Conrey (2003)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "berry-keating-xp",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berry–Keating, SIAM Review 41 (1999), DOI:10.1137/S0036144598347497",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "connes-trace-formula",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Selecta Math. 5 (1999), DOI:10.1007/s000290050054",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "adele-class-space",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Selecta Math. 5 (1999), DOI:10.1007/s000290050054",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "scaling-site",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes–Consani, arXiv:1507.05818",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "selberg-trace-formula",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Selberg, J. Indian Math. Soc. 20 (1956)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "modular-surface",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Iwaniec, Spectral Methods of Automorphic Forms",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "eisenstein-series",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Iwaniec, Spectral Methods of Automorphic Forms",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "eisenstein-constant-term",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Iwaniec, Spectral Methods of Automorphic Forms, Ch. 3",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "epstein-zeta",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §25.11",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hecke-operator",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Miyake, Modular Forms, Ch. 4",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hecke-correspondence",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Miyake, Modular Forms, Ch. 4",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "bruhat-tits-tree",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Serre, Trees, Ch. II",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "bost-connes-system",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Bost–Connes, Selecta Math. 1 (1995), DOI:10.1007/BF01589495",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "arakelov-intersection",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Gillet–Soulé, Publ. Math. IHÉS 72 (1990)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "arithmetic-hodge-index",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Yuan–Zhang, Math. Ann. 367 (2017), DOI:10.1007/s00208-016-1391-8",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "deninger-cohomology",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Deninger, Proc. ICM Berlin 1998, Doc. Math. Extra Vol. I",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weil-conjectures",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Deligne, Publ. Math. IHÉS 43 (1974)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "deligne-rh",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Deligne, Publ. Math. IHÉS 43 (1974)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "carlson-theorem",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Titchmarsh, Theory of Functions, §5.81",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "saddle-point-method",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §2.4",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "lambert-w",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "DLMF §4.13",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "prolate-operator",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Slepian–Pollak, Bell Syst. Tech. J. 40 (1961)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "landau-widom-asymptotics",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Landau–Widom, J. Math. Anal. Appl. 77 (1980), DOI:10.1016/0022-247X(80)90269-9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "prime-torus",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "bohr-lift",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "dirichlet-series-polytorus",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Hedenmalm–Lindqvist–Seip, Duke Math. J. 86 (1997)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hypercontractivity",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weissler, J. Funct. Anal. 32 (1979)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "beurling-deny-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Fukushima–Oshima–Takeda, Dirichlet Forms, Thm. 1.4.1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "positivity-semigroup",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Fukushima–Oshima–Takeda, Dirichlet Forms",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cuntz-system",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Cuntz, Comm. Math. Phys. 57 (1977)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "ucp-map",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Paulsen, Completely Bounded Maps and Operator Algebras",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "groupoid",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Renault, A Groupoid Approach to C*-algebras",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "groupoid-modular-function",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Renault, A Groupoid Approach to C*-algebras",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "half-density",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Noncommutative Geometry, Ch. II",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "additive-adeles",
+    "dst": "arithmetic-geometry",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Tate, Thesis, 1950",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "self-dual-measure",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Tate, Thesis, 1950",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "relative-determinant",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Müller, Comm. Math. Phys. 192 (1998)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "spectral-shift",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Krein, Mat. Sb. 33 (1953)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "vitali-montel",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Conway, Functions of One Complex Variable I, Ch. VII",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "euler-gross-entropy-gap",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4040",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "ising-lee-yang-compiler",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cusp-surgery",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Efrat, Comm. Math. Phys. 119 (1988)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "efrat-determinant",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Efrat, Comm. Math. Phys. 119 (1988)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "regulator-jump",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/regulator_jump_probe.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "murru-salvatori",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/regulator_relation_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "openai-long-prime-gaps",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/fragments/part_8.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "chuk-window-certificate",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/weil_window_certificate_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cubic-wedges",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "arXiv:2607.16795",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "tfpt-c3",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "tfpt-gcar",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "tfpt-e8-compiler",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "tfpt-e8-lattice",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Conway–Sloane, Sphere Packings, Lattices and Groups",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Serre, A Course in Arithmetic, Ch. VII",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "e8-cascade",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4094",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cm-seam",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "note_e8_gaussian_code.tex:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gaussian-e8-module",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v714_e8_gaussian_hecke_groupoid.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "seam-geodesic",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/seam_geodesic_infrastructure_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "gate-zero",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:3644",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "plastic-number-threshold",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:1210",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "terminal-statement",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:3535",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "lstar-statement",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:774",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "lambda-star-ladder",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:3293",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quadrep",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/problem/verify_quadrep.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "inner-bridges",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/problem/verify_inner_bridges.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "outer-bridges",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/problem/verify_outer_bridges.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "relay-lead-law",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/relay_lead_law_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "narrowband-weil",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/narrowband_weil_probe.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "arch-rate",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/problem/arch_rate.tex:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "extraction-joint",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:1997",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-weil-window",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:97",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-circularity",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/taxonomy.json:46",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-prime-phase-coherence",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-p2-defect",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:3644",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-pole-mode",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:1925",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-arch-compensation",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:1925",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-unimodularity",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-zero-denominator",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-finite-window-ceiling",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:2865",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-pick-sign",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/mellin_pick_zero_residue_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-nonreal-cofactor-zeros",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-world-blind",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/taxonomy.json:47",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-lossy-constant",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/taxonomy.json:48",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-structural-mismatch",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/taxonomy.json:49",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "barrier-no-bridge",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/taxonomy.json:53",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-gabor-window-positivity",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4603",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-global-all-place-intersection",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-relative-determinant-identity",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:3657",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-lambda-star-scale-law",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/lambdastar03_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-prime-phase-control",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "static-prime-event-log",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_prime_front.tex:716-751",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-clock-commensurability",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_prime_front.tex:921-951",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "open-autonomous-prime-generator",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_prime_front.tex:937-968",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "weight4-gl1-transport",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_prime_front.tex:684-693",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v537_halfintegral_bridge.py:33-54",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:14-45",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "eisenstein-rh-neutrality",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_prime_front.tex:851-890",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "positive-cone-blindness",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rankin-selberg-norm-square",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v539_weil_structure_family.py:6-10",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cohen-seeds",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:20-23",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "sos-pontryagin-language",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v963_lstar_reduction_dictionary.py:515-523",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "kasteleyn-orientation-language",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v963_lstar_reduction_dictionary.py:524-579",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hamiltonian-psd-language",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v963_lstar_reduction_dictionary.py:581-597",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "dual-pair-language",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v963_lstar_reduction_dictionary.py:599-614",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "connes-adele-scaling-flow",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Selecta Math. 5 (1999)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "bost-connes-kms-system",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Bost–Connes, Selecta Math. 1 (1995)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "primon-riemann-gas",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Julia, 1990",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "berry-keating-dilation",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berry–Keating, SIAM Review 41 (1999)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "deninger-foliated-dynamics",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Deninger, Proc. ICM Berlin 1998",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "knauf-arithmetic-statistical-system",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Knauf, 1990",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "event-log-function",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/event_log_function.md:139-161",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "unitarity-of-emergent-time",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_4_frontier.tex:457-471",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "edge-l-values",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:70-82",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "edge-nonvanishing-method",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quarter-shift-to-centre",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:55-68",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "farkas-witness-n-mod-8",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:83-90",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "metric-by-operator-positivity",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rhp-iiks-toda-tau",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v955_tau_iiks_toda_dictionary.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quillen-bfk-seam-determinants",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/seam_bfk_conical_det_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "i5-transport-ledger-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v541_matching_lemma_ledger.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "r-dagger-kernel-loewner-stack",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v1017_kernel_loewner_positivity.py:1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "multiplicative-composition-law",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/compiler_necessity.md:A1",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "census-qsm",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v1018_e8_directed_readout.py:21-34",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "modular-clock",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v446_seam_clock_invariance.py:31-38",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "resummed-clock-tower",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v124_resummed_clock.py:10-37",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "koide-mobius-flow",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v723_phys_modular_clock.py:111-139",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "4d-lattice-contract",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_4_frontier.tex:809-824",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "qca-dilation",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:793-796",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "no-canonical-integer-label",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/clock_combination_spectrum_result.json",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "archimedean-place",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Tate, Thesis, 1950",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "class-number-formula-q-i",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Dirichlet class-number formula",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-infinite-place-balance",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Guinand, Proc. London Math. Soc. 50 (1948)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "archimedean-dominance",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "pi-numerology-c3",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/pi_prime_correlations.md:A3",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "mu4-mark",
+    "dst": "tfpt-compiler",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:150-171",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "chi-minus-4-census",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v786_prime_packet480.py:394-404",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "connes-marcolli-gln-system",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes-Marcolli, Noncommutative Geometry, Quantum Fields and Motives",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "index-flow-time",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "p1-gauss-bonnet-positive-normalization",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:1188-1196",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "e8-positive-lattice-norm",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:440-450",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "seam-os-positive-transfer",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v446_seam_clock_invariance.py:20-39",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "seam-modular-generator",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v446_seam_clock_invariance.py:31-43",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "markov-qca-unitary-dilation",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v984_markov_qca_dilation.py:1-43",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "quasilocal-hamiltonian-dynamics",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v1013_thermodynamic_dynamics.py:11-37",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "e8-theta-heat-operator",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "verification/v1018_e8_directed_readout.py:27-46",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hodge-riemann-positivity-candidate",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:278-290",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "perron-fixed-point-transport",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:669-767",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "seam-kms-gibbs-positivity",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:800-817",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "heat-zeta-regularization",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:3870-3913",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "horizon-replica-positivity",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:1250-1267",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "seam-rp-blind-selector",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "introduction.tex:226-244",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "admissible-os-positive-measure",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "origin_theory.tex:1813-1818",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-weil-gns-metric",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:2116-2149",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "matching-ledger-positivity",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:2207-2246",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "discrete-spectrum-neutrality",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P3",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "no-archimedean-prime-joint-space",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/event_log_function.md:71-77",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "finite-family-target-mismatch",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "tfpt_1_architecture_e8.tex:2116-2149",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "kneser-groupoid",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hnf-groupoid",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "euler-side-blindness",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "rh-as-reflection-positivity",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "e8-sublattice-rg-semigroup",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "hecke-index-theorem",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "pimsner-popa-entropy",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Pimsner-Popa, Entropy and index for subfactors, Ann. Sci. ENS 19 (1986)",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "cuntz-laca-semigroup-algebra",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Laca-Raeburn, J. London Math. Soc. 59 (1999), DOI:10.1112/S0024610798006620",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "connes-trace-formula-dichotomy",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Connes, Selecta Math. 5 (1999), 29-106",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "index-modular-state",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/hecke_index_theorem_probe.py",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "equality-hunt",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/hecke_index_theorem.md:150-205",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "screw-function-criterion",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Suzuki, arXiv:2206.03682, Theorem 1.2",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "canonical-system-hamiltonian",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Suzuki, arXiv:2206.03682",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "schoenberg-helical-embedding",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Suzuki, arXiv:2209.04658",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "de-branges-positivity",
+    "dst": "positivity-criterion",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Conrey-Li, arXiv:math/9812166",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "conductor-operator-burnol",
+    "dst": "spectral-framework",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Burnol, arXiv:math/9902080",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "verified-zeros-height",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Platt-Trudgian, arXiv:2004.09765",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "compact-window-certificate-mechanism",
+    "dst": "obstruction-class",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "Paley-Wiener theorem",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "w2-form-density",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:421-456",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "w3-uniform-window-positivity",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "notes/arxiv_w3_note/note_w3_detector_structure.tex:584-591",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "w4-global-positivity-transfer",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:432-436",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "selected-arch-error-quadratic-rate",
+    "dst": "analytic-object",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "selected-arch-weighted-interpolation-estimate",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "frequently-selected-aug-dual-resolvent",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/FrequentlySelected.lean:294",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "selected-polynomial-approximates-grid",
+    "dst": "research-question",
+    "rel": "INSTANCE_OF",
+    "strength": "HEURISTIC",
+    "source": "rh/lean/RH/InnerBridges.lean:366",
+    "note": "Ontology classification."
+  },
+  {
+    "src": "riemann-zeta",
+    "dst": "riemann-xi",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "DLMF §25.10",
+    "note": "ξ is built from ζ and gamma factors."
+  },
+  {
+    "src": "riemann-xi",
+    "dst": "functional-equation",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "DLMF §25.10",
+    "note": ""
+  },
+  {
+    "src": "riemann-kernel",
+    "dst": "xi-fourier-function",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Titchmarsh, §2.16",
+    "note": ""
+  },
+  {
+    "src": "xi-fourier-function",
+    "dst": "riemann-kernel",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Titchmarsh, §2.16",
+    "note": ""
+  },
+  {
+    "src": "riemann-kernel",
+    "dst": "fourier-transform",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Titchmarsh, §2.16",
+    "note": ""
+  },
+  {
+    "src": "critical-line",
+    "dst": "critical-strip",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "DLMF §25.10",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "critical-line",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "DLMF §25.10",
+    "note": ""
+  },
+  {
+    "src": "explicit-formula",
+    "dst": "riemann-zeta",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "explicit-formula",
+    "dst": "von-mangoldt",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "chebyshev-psi",
+    "dst": "von-mangoldt",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "DLMF §27.2",
+    "note": ""
+  },
+  {
+    "src": "prime-counting",
+    "dst": "chebyshev-psi",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "DLMF §27.2",
+    "note": ""
+  },
+  {
+    "src": "zero-counting",
+    "dst": "riemann-zeta",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Titchmarsh, Thm. 9.3",
+    "note": ""
+  },
+  {
+    "src": "montgomery-conjecture",
+    "dst": "pair-correlation",
+    "rel": "EQUIVALENT_TO",
+    "strength": "CONDITIONAL",
+    "source": "Montgomery (1973)",
+    "note": "This node names the conjectured pair-correlation law."
+  },
+  {
+    "src": "pair-correlation",
+    "dst": "gue-statistics",
+    "rel": "EQUIVALENT_TO",
+    "strength": "CONDITIONAL",
+    "source": "Montgomery (1973)",
+    "note": "Conjectured local-statistics identification."
+  },
+  {
+    "src": "weil-quadratic-form",
+    "dst": "explicit-formula",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-quadratic-form",
+    "dst": "weil-arch-term",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-quadratic-form",
+    "dst": "weil-prime-term",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-quadratic-form",
+    "dst": "weil-pole-term",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-prime-term",
+    "dst": "von-mangoldt",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-positivity",
+    "dst": "weil-quadratic-form",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "weil-positivity",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "li-criterion",
+    "dst": "li-coefficients",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Li (1997)",
+    "note": ""
+  },
+  {
+    "src": "li-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Li (1997)",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "li-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Li (1997)",
+    "note": ""
+  },
+  {
+    "src": "nyman-beurling-criterion",
+    "dst": "nyman-beurling-space",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Beurling (1955)",
+    "note": ""
+  },
+  {
+    "src": "nyman-beurling-criterion",
+    "dst": "hardy-space-h2",
+    "rel": "DUAL_TO",
+    "strength": "THEOREM",
+    "source": "Beurling (1955)",
+    "note": "Equivalent Hilbert-space formulations use Hardy-space models."
+  },
+  {
+    "src": "nyman-beurling-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Beurling (1955)",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "nyman-beurling-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Beurling (1955)",
+    "note": ""
+  },
+  {
+    "src": "baez-duarte-criterion",
+    "dst": "nyman-beurling-criterion",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "Báez-Duarte (2003)",
+    "note": ""
+  },
+  {
+    "src": "baez-duarte-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Báez-Duarte (2003)",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "baez-duarte-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Báez-Duarte (2003)",
+    "note": ""
+  },
+  {
+    "src": "rodgers-tao-theorem",
+    "dst": "debruijn-newman-constant",
+    "rel": "IMPLIES",
+    "strength": "THEOREM",
+    "source": "arXiv:1801.05914",
+    "note": "Proves Λ≥0."
+  },
+  {
+    "src": "newman-criterion",
+    "dst": "debruijn-newman-constant",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "arXiv:1801.05914",
+    "note": ""
+  },
+  {
+    "src": "newman-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "arXiv:1801.05914",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "newman-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "arXiv:1801.05914",
+    "note": ""
+  },
+  {
+    "src": "xi-fourier-function",
+    "dst": "laguerre-polya-class",
+    "rel": "INSTANCE_OF",
+    "strength": "CONDITIONAL",
+    "source": "Pólya heat-flow framework",
+    "note": "Membership is equivalent to all zeros being real."
+  },
+  {
+    "src": "jensen-polynomials",
+    "dst": "riemann-xi",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "GORZ (2019)",
+    "note": ""
+  },
+  {
+    "src": "jensen-hyperbolicity",
+    "dst": "laguerre-polya-class",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Pólya–Schur (1914)",
+    "note": ""
+  },
+  {
+    "src": "jensen-hyperbolicity",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Pólya–Schur (1914)",
+    "note": "For the ξ coefficient sequence."
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "jensen-hyperbolicity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Pólya–Schur (1914)",
+    "note": "For the ξ coefficient sequence."
+  },
+  {
+    "src": "gorz-theorem",
+    "dst": "jensen-polynomials",
+    "rel": "IMPLIES",
+    "strength": "THEOREM",
+    "source": "GORZ (2019)",
+    "note": "Fixed degrees are eventually hyperbolic."
+  },
+  {
+    "src": "debranges-space",
+    "dst": "hermite-biehler-class",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "de Branges (1968)",
+    "note": ""
+  },
+  {
+    "src": "lee-yang-property",
+    "dst": "laguerre-polya-class",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Lee–Yang (1952)",
+    "note": "After the relevant normalization and limiting hypotheses."
+  },
+  {
+    "src": "kps-theorem",
+    "dst": "van-dantzig-pair",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": ""
+  },
+  {
+    "src": "kps-theorem",
+    "dst": "lee-yang-property",
+    "rel": "IMPLIES",
+    "strength": "THEOREM",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": "Only the cited KPS hypotheses."
+  },
+  {
+    "src": "polya-frequency-function",
+    "dst": "toeplitz-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Karlin, Total Positivity",
+    "note": ""
+  },
+  {
+    "src": "hankel-positivity",
+    "dst": "stieltjes-function",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Akhiezer, Moment Problem",
+    "note": ""
+  },
+  {
+    "src": "pick-function",
+    "dst": "herglotz-function",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Donoghue (1974)",
+    "note": ""
+  },
+  {
+    "src": "stieltjes-function",
+    "dst": "pick-function",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "Schilling–Song–Vondraček, Ch. 7",
+    "note": ""
+  },
+  {
+    "src": "stieltjes-function",
+    "dst": "completely-monotone",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "Schilling–Song–Vondraček, Ch. 7",
+    "note": ""
+  },
+  {
+    "src": "bernstein-function",
+    "dst": "completely-monotone",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Schilling–Song–Vondraček",
+    "note": "Its derivative is completely monotone."
+  },
+  {
+    "src": "completely-monotone",
+    "dst": "laplace-transform",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Bernstein–Widder theorem",
+    "note": ""
+  },
+  {
+    "src": "lambert-w",
+    "dst": "saddle-point-method",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "DLMF §4.13",
+    "note": "Lambert W often solves saddle equations in Mellin asymptotics."
+  },
+  {
+    "src": "prolate-operator",
+    "dst": "landau-widom-asymptotics",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Landau–Widom (1980)",
+    "note": ""
+  },
+  {
+    "src": "bohr-lift",
+    "dst": "prime-torus",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Hedenmalm–Lindqvist–Seip (1997)",
+    "note": ""
+  },
+  {
+    "src": "dirichlet-series-polytorus",
+    "dst": "bohr-lift",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Hedenmalm–Lindqvist–Seip (1997)",
+    "note": ""
+  },
+  {
+    "src": "hypercontractivity",
+    "dst": "prime-torus",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weissler (1979)",
+    "note": ""
+  },
+  {
+    "src": "beurling-deny-criterion",
+    "dst": "positivity-semigroup",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Fukushima–Oshima–Takeda",
+    "note": ""
+  },
+  {
+    "src": "ucp-map",
+    "dst": "cuntz-system",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Paulsen, Completely Bounded Maps",
+    "note": "Cuntz families furnish standard UCP constructions."
+  },
+  {
+    "src": "half-density",
+    "dst": "groupoid",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Connes, Noncommutative Geometry",
+    "note": ""
+  },
+  {
+    "src": "groupoid-modular-function",
+    "dst": "groupoid",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Renault (1980)",
+    "note": ""
+  },
+  {
+    "src": "self-dual-measure",
+    "dst": "additive-adeles",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Tate thesis",
+    "note": ""
+  },
+  {
+    "src": "additive-adeles",
+    "dst": "fourier-transform",
+    "rel": "DUAL_TO",
+    "strength": "THEOREM",
+    "source": "Tate thesis",
+    "note": ""
+  },
+  {
+    "src": "spectral-shift",
+    "dst": "relative-determinant",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Krein (1953); Müller (1998)",
+    "note": ""
+  },
+  {
+    "src": "selberg-trace-formula",
+    "dst": "modular-surface",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Selberg (1956)",
+    "note": ""
+  },
+  {
+    "src": "selberg-trace-formula",
+    "dst": "eisenstein-series",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Iwaniec, Spectral Methods",
+    "note": ""
+  },
+  {
+    "src": "eisenstein-series",
+    "dst": "eisenstein-constant-term",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Iwaniec, Spectral Methods",
+    "note": ""
+  },
+  {
+    "src": "hecke-operator",
+    "dst": "hecke-correspondence",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "Miyake, Modular Forms",
+    "note": ""
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "epstein-zeta",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Mellin transform of theta series",
+    "note": ""
+  },
+  {
+    "src": "arakelov-intersection",
+    "dst": "arithmetic-hodge-index",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Yuan–Zhang (2017)",
+    "note": ""
+  },
+  {
+    "src": "deligne-rh",
+    "dst": "weil-conjectures",
+    "rel": "IMPLIES",
+    "strength": "THEOREM",
+    "source": "Deligne (1974)",
+    "note": ""
+  },
+  {
+    "src": "weil-conjectures",
+    "dst": "riemann-hypothesis",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "HEURISTIC",
+    "source": "Deligne (1974)",
+    "note": "Function-field analogue, not an implication for ζ."
+  },
+  {
+    "src": "bost-connes-system",
+    "dst": "riemann-zeta",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "Bost–Connes (1995)",
+    "note": "Its partition function is ζ."
+  },
+  {
+    "src": "connes-trace-formula",
+    "dst": "adele-class-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Connes (1999)",
+    "note": ""
+  },
+  {
+    "src": "scaling-site",
+    "dst": "adele-class-space",
+    "rel": "GENERALIZES",
+    "strength": "CONDITIONAL",
+    "source": "Connes–Consani, arXiv:1507.05818",
+    "note": ""
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "riemann-hypothesis",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "Hilbert–Pólya program",
+    "note": ""
+  },
+  {
+    "src": "berry-keating-xp",
+    "dst": "hilbert-polya-operator",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berry–Keating (1999)",
+    "note": "Semiclassical model, not an established realization."
+  },
+  {
+    "src": "deninger-cohomology",
+    "dst": "hilbert-polya-operator",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "Deninger, ICM 1998",
+    "note": "A suitable positive cohomological realization would supply a spectral route."
+  },
+  {
+    "src": "gabor-pure-criterion",
+    "dst": "gabor-zero-side",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborExposedOrbit.lean:1718",
+    "note": ""
+  },
+  {
+    "src": "gabor-pure-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborExposedOrbit.lean:1718",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "gabor-pure-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborExposedOrbit.lean:1718",
+    "note": ""
+  },
+  {
+    "src": "gabor-rational-criterion",
+    "dst": "gabor-pure-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:540",
+    "note": ""
+  },
+  {
+    "src": "gabor-rational-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:540",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "gabor-rational-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:540",
+    "note": ""
+  },
+  {
+    "src": "gabor-prime-side-criterion",
+    "dst": "gabor-rational-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:550",
+    "note": ""
+  },
+  {
+    "src": "gabor-prime-side-criterion",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:550",
+    "note": ""
+  },
+  {
+    "src": "riemann-hypothesis",
+    "dst": "gabor-prime-side-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:550",
+    "note": ""
+  },
+  {
+    "src": "gabor-prime-side-criterion",
+    "dst": "explicit-formula",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "rh/paper/rh_program.tex:4612",
+    "note": ""
+  },
+  {
+    "src": "gabor-pure-criterion",
+    "dst": "rh/lean/RH/GaborExposedOrbit.lean",
+    "rel": "USED_BY",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborExposedOrbit.lean:1718",
+    "note": "Lean attempt record containing the theorem-strength equivalence."
+  },
+  {
+    "src": "gabor-rational-criterion",
+    "dst": "rh/lean/RH/GaborCountableCriterion.lean",
+    "rel": "USED_BY",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:540",
+    "note": "Lean attempt record containing the theorem-strength equivalence."
+  },
+  {
+    "src": "gabor-prime-side-criterion",
+    "dst": "rh/lean/RH/GaborCountableCriterion.lean",
+    "rel": "USED_BY",
+    "strength": "THEOREM",
+    "source": "rh/lean/RH/GaborCountableCriterion.lean:550",
+    "note": "Lean attempt record containing the theorem-strength equivalence."
+  },
+  {
+    "src": "open-gabor-window-positivity",
+    "dst": "gabor-pure-criterion",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:4603",
+    "note": ""
+  },
+  {
+    "src": "open-gabor-window-positivity",
+    "dst": "barrier-finite-window-ceiling",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:2865",
+    "note": ""
+  },
+  {
+    "src": "tfpt-c3",
+    "dst": "tfpt-e8-compiler",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": ""
+  },
+  {
+    "src": "tfpt-gcar",
+    "dst": "tfpt-e8-compiler",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": ""
+  },
+  {
+    "src": "tfpt-e8-compiler",
+    "dst": "tfpt-e8-lattice",
+    "rel": "REALIZES",
+    "strength": "CONDITIONAL",
+    "source": "tfpt_1_architecture_e8.tex:1",
+    "note": ""
+  },
+  {
+    "src": "tfpt-e8-lattice",
+    "dst": "e8-theta-series",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "Serre, A Course in Arithmetic",
+    "note": ""
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "riemann-zeta",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "Serre, A Course in Arithmetic, Ch. VII",
+    "note": "The Mellin L-series of E4 factors as ζ(s)ζ(s−3); this is RH-neutral."
+  },
+  {
+    "src": "e8-cascade",
+    "dst": "tfpt-e8-lattice",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:4094",
+    "note": ""
+  },
+  {
+    "src": "gaussian-e8-module",
+    "dst": "cm-seam",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "verification/v714_e8_gaussian_hecke_groupoid.py:1",
+    "note": ""
+  },
+  {
+    "src": "gaussian-e8-module",
+    "dst": "tfpt-e8-lattice",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "verification/v714_e8_gaussian_hecke_groupoid.py:1",
+    "note": ""
+  },
+  {
+    "src": "gaussian-e8-module",
+    "dst": "hecke-correspondence",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "verification/v714_e8_gaussian_hecke_groupoid.py:1",
+    "note": ""
+  },
+  {
+    "src": "main-world",
+    "dst": "smooth-world",
+    "rel": "DUAL_TO",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:940",
+    "note": "Control comparison."
+  },
+  {
+    "src": "main-world",
+    "dst": "scrarith-world",
+    "rel": "DUAL_TO",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:940",
+    "note": "Control comparison."
+  },
+  {
+    "src": "seam-geodesic",
+    "dst": "cm-seam",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/seam_geodesic_infrastructure_result.json",
+    "note": ""
+  },
+  {
+    "src": "gate-zero",
+    "dst": "groupoid",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3644",
+    "note": ""
+  },
+  {
+    "src": "gate-zero",
+    "dst": "half-density",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+    "note": ""
+  },
+  {
+    "src": "finite-weil-window",
+    "dst": "weil-quadratic-form",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:97",
+    "note": ""
+  },
+  {
+    "src": "narrowband-weil",
+    "dst": "finite-weil-window",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/narrowband_weil_probe.py:1",
+    "note": ""
+  },
+  {
+    "src": "chuk-window-certificate",
+    "dst": "finite-weil-window",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/weil_window_certificate_result.json",
+    "note": ""
+  },
+  {
+    "src": "chuk-window-certificate",
+    "dst": "weil-positivity",
+    "rel": "IMPLIED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/weil_window_certificate_result.json",
+    "note": "Finite-window certificate only."
+  },
+  {
+    "src": "lambda-star-ladder",
+    "dst": "finite-weil-window",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3293",
+    "note": ""
+  },
+  {
+    "src": "selected-window-family",
+    "dst": "finite-weil-window",
+    "rel": "INSTANCE_OF",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/Selected.lean:444",
+    "note": ""
+  },
+  {
+    "src": "quadrep",
+    "dst": "inner-bridges",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/problem/verify_inner_bridges.py:1",
+    "note": ""
+  },
+  {
+    "src": "inner-bridges",
+    "dst": "outer-bridges",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/problem/verify_outer_bridges.py:1",
+    "note": ""
+  },
+  {
+    "src": "outer-bridges",
+    "dst": "selected-window-family",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/Selected.lean:444",
+    "note": ""
+  },
+  {
+    "src": "terminal-statement",
+    "dst": "finite-weil-window",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3535",
+    "note": ""
+  },
+  {
+    "src": "lstar-statement",
+    "dst": "finite-weil-window",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:774",
+    "note": ""
+  },
+  {
+    "src": "terminal-statement",
+    "dst": "lstar-statement",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:1991",
+    "note": "Both are inputs to the finite master statement."
+  },
+  {
+    "src": "extraction-joint",
+    "dst": "weil-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:1997",
+    "note": ""
+  },
+  {
+    "src": "extraction-joint",
+    "dst": "selected-window-family",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:1997",
+    "note": ""
+  },
+  {
+    "src": "extraction-joint",
+    "dst": "barrier-finite-window-ceiling",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:1997",
+    "note": ""
+  },
+  {
+    "src": "relay-lead-law",
+    "dst": "von-mangoldt",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/relay_lead_law_result.json",
+    "note": ""
+  },
+  {
+    "src": "arch-rate",
+    "dst": "weil-arch-term",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "rh/problem/arch_rate.tex:1",
+    "note": ""
+  },
+  {
+    "src": "euler-gross-entropy-gap",
+    "dst": "main-world",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "rh/paper/rh_program.tex:4040",
+    "note": ""
+  },
+  {
+    "src": "ising-lee-yang-compiler",
+    "dst": "lee-yang-property",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": ""
+  },
+  {
+    "src": "cusp-surgery",
+    "dst": "efrat-determinant",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Efrat (1988)",
+    "note": ""
+  },
+  {
+    "src": "openai-long-prime-gaps",
+    "dst": "riemann-hypothesis",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/fragments/part_8.json",
+    "note": "Catalog classification: relevance none; no RH bridge."
+  },
+  {
+    "src": "murru-salvatori",
+    "dst": "regulator-jump",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/regulator_relation_result.json",
+    "note": ""
+  },
+  {
+    "src": "cubic-wedges",
+    "dst": "riemann-hypothesis",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "arXiv:2607.16795",
+    "note": "External route remains unpromoted."
+  },
+  {
+    "src": "open-global-all-place-intersection",
+    "dst": "arakelov-intersection",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-global-all-place-intersection",
+    "dst": "additive-adeles",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-global-all-place-intersection",
+    "dst": "weil-quadratic-form",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-relative-determinant-identity",
+    "dst": "relative-determinant",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-relative-determinant-identity",
+    "dst": "explicit-formula",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "weil-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3657",
+    "note": ""
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "positivity-semigroup",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3657",
+    "note": ""
+  },
+  {
+    "src": "open-lambda-star-scale-law",
+    "dst": "lambda-star-ladder",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/lambdastar03_probe.py",
+    "note": ""
+  },
+  {
+    "src": "open-prime-phase-control",
+    "dst": "weil-prime-term",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": ""
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "half-density",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "note": ""
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "gate-zero",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "note": ""
+  },
+  {
+    "src": "open-global-all-place-intersection",
+    "dst": "barrier-arch-compensation",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-relative-determinant-identity",
+    "dst": "barrier-structural-mismatch",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/paths_report.json",
+    "note": ""
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "barrier-circularity",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3657",
+    "note": ""
+  },
+  {
+    "src": "open-lambda-star-scale-law",
+    "dst": "barrier-finite-window-ceiling",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/lambdastar03_probe.py",
+    "note": ""
+  },
+  {
+    "src": "open-prime-phase-control",
+    "dst": "barrier-prime-phase-coherence",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": ""
+  },
+  {
+    "src": "open-prime-phase-control",
+    "dst": "barrier-world-blind",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": ""
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "barrier-unimodularity",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_result.json",
+    "note": ""
+  },
+  {
+    "src": "terminal-statement",
+    "dst": "barrier-lossy-constant",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3535",
+    "note": ""
+  },
+  {
+    "src": "lstar-statement",
+    "dst": "barrier-prime-phase-coherence",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:955",
+    "note": ""
+  },
+  {
+    "src": "gate-zero",
+    "dst": "barrier-p2-defect",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:3644",
+    "note": ""
+  },
+  {
+    "src": "finite-weil-window",
+    "dst": "barrier-finite-window-ceiling",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:2865",
+    "note": ""
+  },
+  {
+    "src": "pick-function",
+    "dst": "barrier-pick-sign",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/mellin_pick_zero_residue_result.json",
+    "note": ""
+  },
+  {
+    "src": "stieltjes-function",
+    "dst": "barrier-nonreal-cofactor-zeros",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_result.json",
+    "note": ""
+  },
+  {
+    "src": "mellin-transform",
+    "dst": "fourier-transform",
+    "rel": "TRANSFORM_OF",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §2.5",
+    "note": ""
+  },
+  {
+    "src": "laplace-transform",
+    "dst": "mellin-transform",
+    "rel": "TRANSFORM_OF",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §2.5",
+    "note": ""
+  },
+  {
+    "src": "riemann-xi",
+    "dst": "riemann-zeta",
+    "rel": "TRANSFORM_OF",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §25.10",
+    "note": ""
+  },
+  {
+    "src": "epstein-zeta",
+    "dst": "mellin-transform",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §25.11",
+    "note": ""
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "hecke-operator",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Serre, A Course in Arithmetic",
+    "note": ""
+  },
+  {
+    "src": "modular-surface",
+    "dst": "eisenstein-series",
+    "rel": "REALIZES",
+    "strength": "CONDITIONAL",
+    "source": "Iwaniec, Spectral Methods",
+    "note": ""
+  },
+  {
+    "src": "bruhat-tits-tree",
+    "dst": "hecke-correspondence",
+    "rel": "REALIZES",
+    "strength": "CONDITIONAL",
+    "source": "Serre, Trees",
+    "note": ""
+  },
+  {
+    "src": "bost-connes-system",
+    "dst": "adele-class-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Bost–Connes (1995)",
+    "note": ""
+  },
+  {
+    "src": "adele-class-space",
+    "dst": "additive-adeles",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Connes (1999)",
+    "note": ""
+  },
+  {
+    "src": "carlson-theorem",
+    "dst": "vitali-montel",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Titchmarsh, Theory of Functions",
+    "note": ""
+  },
+  {
+    "src": "relative-determinant",
+    "dst": "cusp-surgery",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Müller (1998)",
+    "note": ""
+  },
+  {
+    "src": "spectral-shift",
+    "dst": "hilbert-polya-operator",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Krein (1953)",
+    "note": ""
+  },
+  {
+    "src": "hermite-biehler-class",
+    "dst": "hilbert-polya-operator",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "de Branges (1968)",
+    "note": ""
+  },
+  {
+    "src": "debranges-space",
+    "dst": "hilbert-polya-operator",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "de Branges (1968)",
+    "note": ""
+  },
+  {
+    "src": "toeplitz-positivity",
+    "dst": "polya-frequency-function",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Karlin, Total Positivity",
+    "note": ""
+  },
+  {
+    "src": "jensen-polynomials",
+    "dst": "toeplitz-positivity",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Pólya–Schur (1914)",
+    "note": ""
+  },
+  {
+    "src": "pick-function",
+    "dst": "mellin-transform",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:4130",
+    "note": ""
+  },
+  {
+    "src": "saddle-point-method",
+    "dst": "mellin-transform",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §2.5",
+    "note": ""
+  },
+  {
+    "src": "lambert-w",
+    "dst": "mellin-transform",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "DLMF §4.13",
+    "note": ""
+  },
+  {
+    "src": "prolate-operator",
+    "dst": "fourier-transform",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Slepian–Pollak (1961)",
+    "note": ""
+  },
+  {
+    "src": "prime-torus",
+    "dst": "von-mangoldt",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Hedenmalm–Lindqvist–Seip (1997)",
+    "note": ""
+  },
+  {
+    "src": "positivity-semigroup",
+    "dst": "beurling-deny-criterion",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Fukushima–Oshima–Takeda",
+    "note": ""
+  },
+  {
+    "src": "groupoid",
+    "dst": "ucp-map",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Renault (1980)",
+    "note": ""
+  },
+  {
+    "src": "self-dual-measure",
+    "dst": "half-density",
+    "rel": "DUAL_TO",
+    "strength": "CONDITIONAL",
+    "source": "Connes, Noncommutative Geometry",
+    "note": ""
+  },
+  {
+    "src": "scaling-site",
+    "dst": "bost-connes-system",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Connes–Consani, arXiv:1507.05818",
+    "note": ""
+  },
+  {
+    "src": "deninger-cohomology",
+    "dst": "weil-conjectures",
+    "rel": "GENERALIZES",
+    "strength": "CONDITIONAL",
+    "source": "Deninger, ICM 1998",
+    "note": ""
+  },
+  {
+    "src": "arithmetic-hodge-index",
+    "dst": "weil-conjectures",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Yuan–Zhang (2017)",
+    "note": ""
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "static-prime-event-log",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:716-732",
+    "note": "E8 shell coefficients give the sigma_3 ledger."
+  },
+  {
+    "src": "static-prime-event-log",
+    "dst": "riemann-zeta",
+    "rel": "TRANSFORM_OF",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:716-732",
+    "note": "Its shell Dirichlet series is 240 zeta(s)zeta(s-3)."
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "eisenstein-rh-neutrality",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:851-890",
+    "note": "The exact factorization fixes the zero set."
+  },
+  {
+    "src": "eisenstein-rh-neutrality",
+    "dst": "weight4-gl1-transport",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "verification/v535_hecke_from_geometry.py:41-48",
+    "note": "Any non-neutral use needs information not supplied by the Eisenstein identity."
+  },
+  {
+    "src": "open-autonomous-prime-generator",
+    "dst": "finite-clock-commensurability",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:921-951",
+    "note": "A successful generator must be non-periodic with infinitely many Q-independent primitive periods."
+  },
+  {
+    "src": "e8-cascade",
+    "dst": "finite-clock-commensurability",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:937-951",
+    "note": "Finite Coxeter/E8 timing cannot realize the prime orbit spectrum."
+  },
+  {
+    "src": "relay-lead-law",
+    "dst": "static-prime-event-log",
+    "rel": "REQUIRES",
+    "strength": "STATISTICAL",
+    "source": "experiments/tfpt-discovery/support_relay_census_probe.py:3-7",
+    "note": "The relay analyzes supplied prime-power support events."
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "weight4-gl1-transport",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v537_halfintegral_bridge.py:33-54",
+    "note": "The square positivity remains on the f8 GL(2) twist family."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "open-lambda-star-scale-law",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v540_amplitude_linear_carrier.py:70-87",
+    "note": "Euler-region positivity does not remove the lambda-star Farkas gap."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "waldspurger-squares",
+    "rel": "CO_OCCURS",
+    "strength": "THEOREM",
+    "source": "verification/v540_amplitude_linear_carrier.py:1-23",
+    "note": "They are the Eisenstein and cusp positivity candidates in the same half-integral family."
+  },
+  {
+    "src": "self-dual-measure",
+    "dst": "siegel-weil-carrier",
+    "rel": "CO_OCCURS",
+    "strength": "HEURISTIC",
+    "source": "verification/v540_amplitude_linear_carrier.py:46-87",
+    "note": "Proposed all-place normalization test; no bridge is claimed."
+  },
+  {
+    "src": "open-autonomous-prime-generator",
+    "dst": "static-prime-event-log",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "tfpt_prime_front.tex:937-968",
+    "note": "A source-only dynamics would upgrade the static ledger metaphor to a generation mechanism."
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v537_halfintegral_bridge.py:557-617",
+    "note": "Coefficient-square positivity does not compare the prime-channel mass with the positive channel."
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v540_amplitude_linear_carrier.py:13-21",
+    "note": "Positive lattice counts and the pure Eisenstein pairing are invariant under negative-mass scaling."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "rankin-selberg-norm-square",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v539_weil_structure_family.py:6-10",
+    "note": "The positive diagonal GNS metric does not control the signed Weil defect."
+  },
+  {
+    "src": "rankin-selberg-norm-square",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "cohen-seeds",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v540_amplitude_linear_carrier.py:20-23",
+    "note": "Positive edge-value seeds retain no metric ratio between the two moment measures."
+  },
+  {
+    "src": "cohen-seeds",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "sos-pontryagin-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v963_lstar_reduction_dictionary.py:515-523",
+    "note": "The SOS language exists exactly for an empty negative register; the surviving comparison restates positivity."
+  },
+  {
+    "src": "sos-pontryagin-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "kasteleyn-orientation-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v963_lstar_reduction_dictionary.py:524-579",
+    "note": "Value-preserving orientation is available exactly in the positive-measure class."
+  },
+  {
+    "src": "kasteleyn-orientation-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "hamiltonian-psd-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v963_lstar_reduction_dictionary.py:581-597",
+    "note": "Canonical Hamiltonian positivity is the existing signed-moment pivot condition, not an independent source."
+  },
+  {
+    "src": "hamiltonian-psd-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "dual-pair-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "verification/v963_lstar_reduction_dictionary.py:599-614",
+    "note": "The exact product law synchronizes signs and contributes no second positivity condition."
+  },
+  {
+    "src": "dual-pair-language",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "LEMMA_PROVED: positive-cone source is cone-blind."
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "lstar-statement",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "One surviving target is a representation-theoretic proof of the metric moment-cone comparison nu <= mu."
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "hilbert-polya-operator",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "The alternative surviving template is operator positivity with a proved explicit-formula bridge."
+  },
+  {
+    "src": "open-independent-positivity-source",
+    "dst": "metric-by-operator-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py",
+    "note": "Would close to metric comparison/L* and operator positivity."
+  },
+  {
+    "src": "connes-adele-scaling-flow",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "Connes 1999",
+    "note": ""
+  },
+  {
+    "src": "bost-connes-kms-system",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "HEURISTIC",
+    "source": "Bost-Connes 1995",
+    "note": ""
+  },
+  {
+    "src": "primon-riemann-gas",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "HEURISTIC",
+    "source": "Julia 1990",
+    "note": ""
+  },
+  {
+    "src": "berry-keating-dilation",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "HEURISTIC",
+    "source": "Berry-Keating 1999",
+    "note": ""
+  },
+  {
+    "src": "deninger-foliated-dynamics",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "Deninger 1998",
+    "note": ""
+  },
+  {
+    "src": "knauf-arithmetic-statistical-system",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "HEURISTIC",
+    "source": "Knauf 1990",
+    "note": ""
+  },
+  {
+    "src": "event-log-function",
+    "dst": "finite-clock-commensurability",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:921-951",
+    "note": ""
+  },
+  {
+    "src": "event-log-function",
+    "dst": "unitarity-of-emergent-time",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/event_log_function.md:146-161",
+    "note": ""
+  },
+  {
+    "src": "unitarity-of-emergent-time",
+    "dst": "weil-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/event_log_function.md:150-161",
+    "note": ""
+  },
+  {
+    "src": "connes-adele-scaling-flow",
+    "dst": "adele-class-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Connes 1999",
+    "note": ""
+  },
+  {
+    "src": "connes-adele-scaling-flow",
+    "dst": "connes-trace-formula",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "CONDITIONAL",
+    "source": "Connes 1999",
+    "note": ""
+  },
+  {
+    "src": "bost-connes-kms-system",
+    "dst": "bost-connes-system",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "Bost-Connes 1995",
+    "note": ""
+  },
+  {
+    "src": "berry-keating-dilation",
+    "dst": "berry-keating-xp",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "HEURISTIC",
+    "source": "Berry-Keating 1999",
+    "note": ""
+  },
+  {
+    "src": "deninger-foliated-dynamics",
+    "dst": "deninger-cohomology",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "CONDITIONAL",
+    "source": "Deninger 1998",
+    "note": ""
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "positive-measure source; direct-sum census: cusp summand carries no inequality for the Eisenstein summand"
+  },
+  {
+    "src": "cohen-seeds",
+    "dst": "edge-l-values",
+    "rel": "SPECIAL_CASE_OF",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "reflected Euler-region datum; centre version = GRH(χ_d)"
+  },
+  {
+    "src": "rankin-selberg-norm-square",
+    "dst": "edge-nonvanishing-method",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "ζ(1+it)≠0; CLASSICAL_NEUTRAL"
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "quarter-shift-to-centre",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "verification/v540_amplitude_linear_carrier.py:55-68",
+    "note": ""
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "farkas-witness-n-mod-8",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "verification/v540_amplitude_linear_carrier.py:83-90",
+    "note": ""
+  },
+  {
+    "src": "additive-adeles",
+    "dst": "explicit-formula",
+    "rel": "REDUCES_TO",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "Tate/Connes–Meyer restatement of additive-adeles × Siegel–Weil."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "explicit-formula",
+    "rel": "REDUCES_TO",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "Tate/Connes–Meyer restatement of additive-adeles × Siegel–Weil."
+  },
+  {
+    "src": "selberg-trace-formula",
+    "dst": "metric-by-operator-positivity",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": "The only template where positivity is an operator output."
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "unitarity-of-emergent-time",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/prime_story.md",
+    "note": ""
+  },
+  {
+    "src": "i5-transport-ledger-criterion",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:136-138",
+    "note": "Corpus typing: I5 is equivalent to Weil positivity, not a reduction."
+  },
+  {
+    "src": "weil-positivity",
+    "dst": "i5-transport-ledger-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "tfpt_prime_front.tex:136-138",
+    "note": "Corpus typing: I5 is equivalent to Weil positivity, not a reduction."
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+    "rel": "KILLED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+    "note": "K1 Δ≡1"
+  },
+  {
+    "src": "open-half-density-geometry",
+    "dst": "experiments/tfpt-discovery/parabolic_detline2_probe.py",
+    "rel": "KILLED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/parabolic_detline2_probe.py",
+    "note": "K2 odd-power resummation ≠ Weil weights"
+  },
+  {
+    "src": "census-qsm",
+    "dst": "multiplicative-composition-law",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/compiler_necessity.md:A1",
+    "note": ""
+  },
+  {
+    "src": "census-qsm",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:C",
+    "note": ""
+  },
+  {
+    "src": "census-qsm",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:A2",
+    "note": ""
+  },
+  {
+    "src": "modular-clock",
+    "dst": "census-qsm",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:B3",
+    "note": ""
+  },
+  {
+    "src": "modular-clock",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "experiments/tfpt-discovery/clock_combination_spectrum_result.json",
+    "note": ""
+  },
+  {
+    "src": "resummed-clock-tower",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/clock_combination_spectrum_probe.py",
+    "note": ""
+  },
+  {
+    "src": "resummed-clock-tower",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/compiler_necessity.md:B",
+    "note": ""
+  },
+  {
+    "src": "koide-mobius-flow",
+    "dst": "finite-clock-commensurability",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "verification/v723_phys_modular_clock.py:111-139",
+    "note": ""
+  },
+  {
+    "src": "koide-mobius-flow",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/clock_combination_spectrum_result.json",
+    "note": ""
+  },
+  {
+    "src": "4d-lattice-contract",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:B4",
+    "note": ""
+  },
+  {
+    "src": "4d-lattice-contract",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:B4",
+    "note": ""
+  },
+  {
+    "src": "4d-lattice-contract",
+    "dst": "qca-dilation",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "verification/v984_markov_qca_dilation.py:37-43",
+    "note": ""
+  },
+  {
+    "src": "qca-dilation",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:B4",
+    "note": ""
+  },
+  {
+    "src": "event-log-function",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:D",
+    "note": ""
+  },
+  {
+    "src": "finite-infinite-place-balance",
+    "dst": "archimedean-place",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Tate thesis; Weil 1952",
+    "note": "USED_BY remapped: dest must be an attempt path; the real local factor supplies Gamma and log pi."
+  },
+  {
+    "src": "finite-infinite-place-balance",
+    "dst": "weil-positivity",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil 1952",
+    "note": "Positivity is imposed on the quadratic form defined by the explicit-formula identity."
+  },
+  {
+    "src": "archimedean-dominance",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Weil 1952",
+    "note": "This is a naming of full-class Weil positivity, not a new criterion."
+  },
+  {
+    "src": "archimedean-dominance",
+    "dst": "lstar-statement",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:733-791,1964-2004",
+    "note": "L* is the finite free-window metric reduction; global extraction remains open."
+  },
+  {
+    "src": "mu4-mark",
+    "dst": "class-number-formula-q-i",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "Dirichlet class-number formula; tfpt_1_architecture_e8.tex:150-171",
+    "note": "The shared abstract group is the four-element unit group; this does not derive P1."
+  },
+  {
+    "src": "chi-minus-4-census",
+    "dst": "class-number-formula-q-i",
+    "rel": "TRANSFORM_OF",
+    "strength": "CONDITIONAL",
+    "source": "verification/v786_prime_packet480.py:394-404,555; Euler product for L(s,chi_-4)",
+    "note": "The finite census supplies the character signs; passing to the convergent/continued value at s=1 is classical analysis not computed by that census."
+  },
+  {
+    "src": "event-log-function",
+    "dst": "archimedean-place",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/event_log_function.md:139-161; Tate thesis",
+    "note": "An all-place event-log interpretation must include the real local factor, not only prime events."
+  },
+  {
+    "src": "pi-numerology-c3",
+    "dst": "class-number-formula-q-i",
+    "rel": "BLOCKED_BY",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/pi_prime_correlations.md:A3",
+    "note": "Equality as numbers is exact; the claimed mechanism is blocked by absence of a derivation."
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "connes-marcolli-gln-system",
+    "rel": "INSTANCE_OF",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/census_qsm_normflow_result.json",
+    "note": ""
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "multiplicative-composition-law",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/census_qsm_normflow_probe.py",
+    "note": ""
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/census_qsm_normflow_result.json#bridge-1-only",
+    "note": ""
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_probe.py#bridge-2",
+    "note": ""
+  },
+  {
+    "src": "p1-gauss-bonnet-positive-normalization",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P1",
+    "note": ""
+  },
+  {
+    "src": "e8-positive-lattice-norm",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_result.json",
+    "note": ""
+  },
+  {
+    "src": "seam-os-positive-transfer",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P1",
+    "note": ""
+  },
+  {
+    "src": "seam-modular-generator",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/event_log_function.md:53-77",
+    "note": ""
+  },
+  {
+    "src": "markov-qca-unitary-dilation",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "verification/v984_markov_qca_dilation.py:35-43",
+    "note": ""
+  },
+  {
+    "src": "quasilocal-hamiltonian-dynamics",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/compiler_necessity.md:145-154",
+    "note": ""
+  },
+  {
+    "src": "e8-theta-heat-operator",
+    "dst": "discrete-spectrum-neutrality",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P3",
+    "note": ""
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P4",
+    "note": ""
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "seam-modular-generator",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P4",
+    "note": ""
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "e8-theta-heat-operator",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P2-P4",
+    "note": ""
+  },
+  {
+    "src": "hodge-riemann-positivity-candidate",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P1",
+    "note": ""
+  },
+  {
+    "src": "perron-fixed-point-transport",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "origin_theory.tex:669-767",
+    "note": ""
+  },
+  {
+    "src": "seam-kms-gibbs-positivity",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/compiler_necessity.md:100-107",
+    "note": ""
+  },
+  {
+    "src": "heat-zeta-regularization",
+    "dst": "discrete-spectrum-neutrality",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P3",
+    "note": ""
+  },
+  {
+    "src": "horizon-replica-positivity",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P1",
+    "note": ""
+  },
+  {
+    "src": "seam-rp-blind-selector",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "introduction.tex:226-244",
+    "note": ""
+  },
+  {
+    "src": "admissible-os-positive-measure",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "origin_theory.tex:1901-1907",
+    "note": ""
+  },
+  {
+    "src": "finite-weil-gns-metric",
+    "dst": "finite-family-target-mismatch",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "tfpt_1_architecture_e8.tex:2116-2149",
+    "note": ""
+  },
+  {
+    "src": "matching-ledger-positivity",
+    "dst": "positive-cone-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/positive_cone_blindness_result.json",
+    "note": ""
+  },
+  {
+    "src": "hilbert-polya-operator",
+    "dst": "finite-weil-gns-metric",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "rh/catalog/analysis/positivity_origin_search.md:P4",
+    "note": ""
+  },
+  {
+    "src": "e8-sublattice-rg-semigroup",
+    "dst": "euler-side-blindness",
+    "rel": "INSTANCE_OF",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Euler-side instance of the would-be reflection-positive scale model."
+  },
+  {
+    "src": "e8-sublattice-rg-semigroup",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Per-term Solomon coefficients are cone-blind; the critical side is the criterion."
+  },
+  {
+    "src": "e8-sublattice-rg-semigroup",
+    "dst": "census-qsm-normflow",
+    "rel": "REALIZES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "The corpus realises the classical RG semigroup via the census-qsm-normflow probe."
+  },
+  {
+    "src": "e8-sublattice-rg-semigroup",
+    "dst": "functional-equation",
+    "rel": "DUAL_TO",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Poisson self-duality L↔L* and θ_E8(1/t)=t^4 θ_E8(t) induce the functional-equation reflection."
+  },
+  {
+    "src": "rh-as-reflection-positivity",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "Bochner positivity of the Weil kernel is Weil positivity."
+  },
+  {
+    "src": "rh-as-reflection-positivity",
+    "dst": "riemann-hypothesis",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": ""
+  },
+  {
+    "src": "rh-as-reflection-positivity",
+    "dst": "hilbert-polya-operator",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Osterwalder–Schrader; Hilbert–Pólya program",
+    "note": "OS reconstruction yields a self-adjoint scale Hamiltonian."
+  },
+  {
+    "src": "rh-as-reflection-positivity",
+    "dst": "functional-equation",
+    "rel": "REQUIRES",
+    "strength": "THEOREM",
+    "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+    "note": "The OS reflection is the functional-equation involution."
+  },
+  {
+    "src": "waldspurger-squares",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "siegel-weil-carrier",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "cohen-seeds",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "census-qsm-normflow",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "kneser-groupoid",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "hnf-groupoid",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "e8-theta-series",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "e8-theta-heat-operator",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "census-qsm",
+    "dst": "euler-side-blindness",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "KILLED_HERE/BLIND Euler-side source: per-term positive, critical side is the criterion."
+  },
+  {
+    "src": "kneser-groupoid",
+    "dst": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+    "rel": "KILLED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py",
+    "note": "K1 Δ≡1"
+  },
+  {
+    "src": "hnf-groupoid",
+    "dst": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "rel": "KILLED_BY",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/groupoid_halfdensity_probe.py",
+    "note": "unimodular HNF fibres"
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "hilbert-polya-operator",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "rh-as-reflection-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "adele-class-space",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "self-dual-measure",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "unitarity-of-emergent-time",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Needs a positive Hilbert metric and self-adjoint generator transportable to an arithmetic scale flow."
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "no-archimedean-prime-joint-space",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": "Absence of a joint arithmetic scaling action."
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "no-canonical-integer-label",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "stochastic-scale-semigroup-on-connes-cokernel",
+    "dst": "finite-clock-commensurability",
+    "rel": "BLOCKED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/catalog/analysis/bridge2_direct_search.md",
+    "note": ""
+  },
+  {
+    "src": "hecke-index-theorem",
+    "dst": "multiplicative-composition-law",
+    "rel": "REALIZES",
+    "strength": "THEOREM",
+    "source": "experiments/tfpt-discovery/hecke_index_theorem_result.json",
+    "note": ""
+  },
+  {
+    "src": "index-modular-state",
+    "dst": "event-log-function",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "experiments/tfpt-discovery/hecke_index_theorem_result.json#T3_modular",
+    "note": ""
+  },
+  {
+    "src": "equality-hunt",
+    "dst": "connes-trace-formula-dichotomy",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "Connes, Selecta Math. 5 (1999), 29-106",
+    "note": ""
+  },
+  {
+    "src": "connes-trace-formula-dichotomy",
+    "dst": "lstar-statement",
+    "rel": "REDUCES_TO",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:733-791",
+    "note": ""
+  },
+  {
+    "src": "screw-function-criterion",
+    "dst": "weil-positivity",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Suzuki, arXiv:2206.03682, Theorem 1.2",
+    "note": "Criterion equivalence, not a positivity construction."
+  },
+  {
+    "src": "schoenberg-helical-embedding",
+    "dst": "screw-function-criterion",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "Suzuki, arXiv:2209.04658",
+    "note": "The embedding is available precisely when the full screw kernel is positive."
+  },
+  {
+    "src": "canonical-system-hamiltonian",
+    "dst": "screw-function-criterion",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "Suzuki, arXiv:2206.03682",
+    "note": "A global positive Hamiltonian from the zeta data is the forward problem."
+  },
+  {
+    "src": "de-branges-positivity",
+    "dst": "weil-positivity",
+    "rel": "IMPLIES",
+    "strength": "THEOREM",
+    "source": "Conrey-Li, arXiv:math/9812166",
+    "note": "The implication is sufficient but too strong; Conrey–Li show the premise fails for the natural xi space."
+  },
+  {
+    "src": "conductor-operator-burnol",
+    "dst": "hilbert-polya-operator",
+    "rel": "REQUIRES",
+    "strength": "HEURISTIC",
+    "source": "Burnol, doi:10.1515/FORUM.2004.16.6.789",
+    "note": "USED_BY remapped: dest must be an attempt path; local operator ingredients do not yield a global zeta point spectrum."
+  },
+  {
+    "src": "verified-zeros-height",
+    "dst": "compact-window-certificate-mechanism",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "Paley-Wiener theorem; rh/catalog/analysis/bridge2_object_search.md:S3(iv)",
+    "note": "Finite height is not a hard cutoff for compactly supported tests."
+  },
+  {
+    "src": "finite-weil-window",
+    "dst": "compact-window-certificate-mechanism",
+    "rel": "BLOCKED_BY",
+    "strength": "THEOREM",
+    "source": "rh/catalog/analysis/bridge2_object_search.md:S3(iv)",
+    "note": "A whole-window result needs an independent geometric-side certificate or a uniform zero-side tail theorem."
+  },
+  {
+    "src": "w4-global-positivity-transfer",
+    "dst": "w2-form-density",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:421-436",
+    "note": "Domain and operator convergence are prerequisites."
+  },
+  {
+    "src": "w4-global-positivity-transfer",
+    "dst": "w3-uniform-window-positivity",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:428-436",
+    "note": "Finite measurements do not replace uniform positivity."
+  },
+  {
+    "src": "w4-global-positivity-transfer",
+    "dst": "weil-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "notes/arxiv_w1_note/note_w1_suzuki_identification.tex:432-436",
+    "note": "This is the intended global transfer."
+  },
+  {
+    "src": "lstar-statement",
+    "dst": "finite-weil-window",
+    "rel": "EQUIVALENT_TO",
+    "strength": "THEOREM",
+    "source": "verification/v963_lstar_reduction_dictionary.py",
+    "note": "Finite half-filling metric reduction only."
+  },
+  {
+    "src": "lstar-statement",
+    "dst": "w3-uniform-window-positivity",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/paper/rh_program.tex:773-790",
+    "note": "A uniform family theorem would provide the finite metric leg; global transfer still requires W2/W4."
+  },
+  {
+    "src": "selected-arch-weighted-interpolation-estimate",
+    "dst": "selected-arch-error-quadratic-rate",
+    "rel": "WOULD_CLOSE",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "note": "Would close the Exists-C form; the fixed-constant form is already falsified."
+  },
+  {
+    "src": "selected-arch-error-quadratic-rate",
+    "dst": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "rel": "USED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "note": "falsified: 8.0283 > 4.126 small-support regime; ∃C form open"
+  },
+  {
+    "src": "selected-arch-weighted-interpolation-estimate",
+    "dst": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "rel": "USED_BY",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+    "note": "Classical plumbing for the Exists-C rate interface."
+  },
+  {
+    "src": "frequently-selected-aug-dual-resolvent",
+    "dst": "lstar-statement",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/FrequentlySelected.lean:294",
+    "note": "Metric FREQ cone, not Euler-side; requires the L* finite free-window comparison."
+  },
+  {
+    "src": "selected-polynomial-approximates-grid",
+    "dst": "weil-positivity",
+    "rel": "REQUIRES",
+    "strength": "CONDITIONAL",
+    "source": "rh/lean/RH/InnerBridges.lean:366",
+    "note": "Contains the channel-positivity bridge; r473 NO_BRIDGE."
+  }
+]

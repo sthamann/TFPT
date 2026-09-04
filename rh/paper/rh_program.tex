@@ -3077,9 +3077,10 @@ super-exponential $\lambda^*$ decay (r619 log-slopes
 $-77/-79$ at $L=0.9$--$1.4$ were measured at fixed $N=80$
 beyond the SVD floor and are $N$-artifacts, corrected by
 r630b to $-50.6$ on $0.3$--$0.6$ and $-116$ on $0.6$--$1.0$;
-the $\mathrm{RELAY\_UNIVERSAL}$ verdict, leads
-$\Delta\approx 0.015$, and $L_{\mathrm{det}}$ table are
-unaffected), and $L_{\mathrm{det}}$.
+the $\mathrm{RELAY\_UNIVERSAL}$ verdict and
+$L_{\mathrm{det}}$ table are unaffected; the constant-lead
+``greedy law'' $\Delta\approx 0.015$ is WITHDRAWN by r635),
+and $L_{\mathrm{det}}$.
 Windows with $L\gtrsim 0.5$ are hypersensitive off-line
 detectors, so relay steps beyond $L\approx 0.5$ are RH-in-a-box
 statements, not elementary finite problems.  Experiments only.
@@ -3301,20 +3302,141 @@ $\lambda_{\min}(\mathrm{POLE}+\mathrm{ARCH})=-0.0783/-0.430/-0.926$
 at $L=0.40/0.549/0.80$ (reproduces r623 to $10^{-3}$);
 MC $200$ Haar phase draws at $L=0.55$: mean
 $\lambda_{\min}=-0.496$, std $0.317$, $99.5\%$ negative, vs
-true $\lambda^*=5.70\cdot10^{-8}$; coherence $C(L)=1$ at
-$h_0$ (all $g_{h_0}(\log q)$ same sign); Baker: required
+true $\lambda^*=5.70\cdot10^{-8}$; Baker: required
 $\delta=O(1)$ vs toy linear-forms bound $4.6\cdot10^{-8}$ ---
-$7.3$ decades.  Typing: window positivity beyond
-$L_{\mathrm{cross}}$ is arithmetic phase coherence of the
-prime terms; magnitude-only and Diophantine-approximation
+$7.3$ decades.  The Haar $99.5\%$ negativity stands.
+The phrase ``coherence $C(L)=1$ / phase coherence'' is
+\emph{not} the mechanism --- $C=1$ is generic for
+minimizers and holds for the negative Haar draws too
+(r637).  Typing: magnitude-only and Diophantine-approximation
 arguments are dead as a class (measured no-go; promotion
 candidate with r615/r619).
-F4 \textsc{lead\_law\_invariant}: growth exponent
-$\alpha=8.18$ (target $2p+1=7$); argmin of the fitted
-margin $+$ overlap laws predicts $0/18$ leads within
-$20\%$ --- $\Delta\approx 0.015$ is not a corollary of
-those laws; open descriptive invariant.
+F4 \textsc{lead\_law\_invariant}: VOID (r635/r636) ---
+based on the withdrawn $N=80$ values $\Delta\approx 0.015$;
+$\Delta_q$ is a corollary of the margin collapse, not a
+separate invariant.
 Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r635 (probe \texttt{relay\_lead\_precision\_probe.py},
+SHA \texttt{36c06826}, SPEC \texttt{28db9bef}, RESULT
+\texttt{3457e907}, $11/11$, $1260\,\mathrm{s}$, dual-run
+identical) returns \textsc{lead\_partial}.  Contract
+\texttt{PRIME.RELAY.LEAD.PRECISION.01}.  r619's predecessor
+was the frozen D2 form (events $q'<q$ only); D1 (true minus
+$q$) implemented, identical here.  mp Cholesky PSD-boundary
+bisection, $N\in\{80,120,160\}$, damped Legendre: converged
+leads $\Delta_2=0.0253$, $\Delta_3=0.0083$,
+$\Delta_4=0.0064$ ($0.00606$ at $N=160$), $\Delta_5=0.0034$
+($0.00275$ at $N=160$); $\Delta/s_q=0.125/0.058/0.058/0.020$;
+$\lambda^*(L_q)=1.36\cdot10^{-3}/5.93\cdot10^{-8}/8.72\cdot10^{-13}/8.69\cdot10^{-17}$;
+initial negative rate
+$r_q=3.38\cdot10^{-2}/3.14\cdot10^{-6}/7.35\cdot10^{-11}/1.32\cdot10^{-15}$.
+Probe why: ``positive N-stable leads only at small $L_q$
+($4/18$ events; later events already indefinite at entry)''.
+For $q=7$--$32$ the probe reports $\Delta=0$ with
+$\lambda_{\min}<0$ already at $L_q$, $\mathrm{conv}=0$
+($q=7$: $L=0.973$, $\lambda_{\min}=-6.99\cdot10^{-11}$);
+the probe does not mark these as floor-limited.
+\textbf{Parent typing} (verbatim): (i)~the r619 ``greedy
+law'' $\Delta\approx 0.015$ nearly constant across $18$
+events was an $N=80$ double-precision artefact ---
+WITHDRAWN; the converged leads decrease steeply
+($0.025\to 0.003$) and track the collapsing entry margin;
+(ii)~for $q\ge 7$ the value $\lambda_{\min}<0$ ``at entry''
+is NOT a negativity of the true form (RH-consistency and
+the r628 certification forbid it: the true form for
+$L<L_7$ equals the D2 predecessor); it means
+$\lambda^*(L_7\approx 0.97)\approx 10^{-25}$ lies below the
+accuracy floor of the $40$-digit prime-side builder
+($\sim 10^{-17}$--$10^{-20}$) $\Rightarrow$ $\Delta_q$ for
+$q\ge 7$ is UNMEASURABLE at this precision, not zero.
+Not spacing-limited ($s_{31}=0.0159$ but $\Delta$
+undetermined there).  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r636 (probe \texttt{relay\_lead\_law\_probe.py},
+SHA \texttt{ee2deb46}, SPEC \texttt{6bf7a7ee}, RESULT
+\texttt{2a6bd720}, $6/6$, $0.5\,\mathrm{s}$, dual-run
+identical) returns \textsc{lead\_law\_partial}.  Contract
+\texttt{PRIME.RELAY.LEAD.LAW.01}.  Only four converged leads
+$=$ training set, holdout empty; peak relative errors:
+M1 margin/rate linear $18.4$ ($q=5$), M1 quadratic $4.39$
+($q=2$--$4$ within $12$--$18\%$, $q=5$ fails), M2
+edge-sliver competition $1.96$, M3 grammar
+$c_0+w^3+\lambda c^2$ $0.0026$ ($3$ parameters on $4$
+points --- interpolant, no evidence), M4 spacing $48.8$ /
+$\alpha s$ $2.70$ ($\alpha=0.074$).  No model $<20\%$ on
+all four; spacing does not win; with four points there is
+nothing to derive.  Parent typing: the ``lead law'' as a
+message is dissolved --- $\Delta_q$ is a corollary of the
+margin collapse, not a separate invariant; r633-F4's
+\textsc{lead\_law\_invariant} referred to the withdrawn
+$N=80$ values and is void.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r637 (probe \texttt{relay\_vote\_map\_probe.py},
+SHA \texttt{fc5c1426}, SPEC \texttt{44bf67f8}, RESULT
+\texttt{540557ad}, $14/14$, $27.7\,\mathrm{min}$ dual, mp
+$40$ digits $N=80$ ($N=120$ check agrees at
+$L=0.55/0.80$)) returns \textsc{vote\_mode\_specific}
+($k_{\mathrm{thr}}=3$) $+$ \textsc{flip\_counterexample}.
+Contract \texttt{PRIME.RELAY.VOTE.MAP.01}.  $C_0=1$ at all
+nine $L\in[0.40,1.00]$; modes $k=0,1,2$ unanimous at all
+$L$, $k\ge 3$ split ($70/90$ $(L,k)$); $h_0$ is
+$R_q$-EVEN-dominant on every overlap
+($\lVert f_-\rVert^2/\lVert f_+\rVert^2=0.33\ldots 0.99<1$):
+at the critical mode every present prime term ADDS
+positivity ($g=+(\lVert f_+\rVert^2-\lVert f_-\rVert^2)$),
+consistent with the odd/edge failing mode of the
+predecessor (r619/r620) where the missing prime would have
+added.  Flip test: $0/19$ $R_q$-odd flips lower $Q$
+(first: $L=0.40$, $q=2$, $\Delta Q=+4.30\cdot10^{-3}$)
+$\Rightarrow$ \textsc{flip\_counterexample}, the
+variational lemma in the odd sector is refuted.  Controls:
+SCRAMBLE minimizer $C=1$ at ALL $L$ (incl.\ $5$ events at
+$L=1.0$), $\mathrm{POLE}+\mathrm{ARCH}$ ancestor $C=1$ at
+all $L$; WPERM splits from $L=0.90$ ($0.715$, $0.444$),
+EPSTEIN from $0.70$ ($0.941$).  Euler coherence testable
+only for $2$ vs $4$ below $L=1$: agreement $27/36=0.75$,
+$h_0$ agrees at $L=0.90/1.00$.  Haar MC: $L=0.45$
+$\mathrm{frac\_neg}\,0.955$ with
+$\mathrm{frac\_unanimous}\,1.000$; $L=0.55$ $1.000/1.000$;
+$L=0.70$ $1.000/0.865$, $\mathrm{corr}(C,\lambda_{\min})=-0.17$.
+Parent typing: unanimity is GENERIC --- a geometric
+property of edge-localized low minimizers of
+translation-type forms (SCRAMBLE reproduces it at every
+$L$), not an arithmetic message; the coherence index $C$
+is not a positivity predictor (Haar draws unanimous yet
+negative).  Experiments only.  \textbf{No RH claim.}
+
+\noindent The decoding programme (r635--r637) as a whole:
+the three candidate ``messages'' of the prime event log
+beyond the explicit formula (constant lead, unanimity,
+odd-edge defect type) reduce to margin collapse and edge
+geometry; no side channel measured.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r638 (probe \texttt{gabor\_first\_contact\_selberg\_probe.py},
+SHA \texttt{2ab532bc}, SPEC \texttt{22a92842}, RESULT
+\texttt{58a36aff}, $14/14$) returns
+\textsc{killed}(structural: selberg-convolution-is-hankel).
+The first-contact $+$ Selberg square-completion attack on the
+pure-Gabor zero side $G=\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}$
+fails its pre-registered Toeplitz gate: the Selberg term
+$\sum_N(\Lambda*\Lambda)(N)\,\psi(\log N)$ is a Hankel form in
+$(\log m,\log n)$ and admits no PSD completion over the
+operator-generated $\psi$ ($15/15$ cells, best
+$\lambda_{\min}=-0.0097$ against tolerance $-10^{-9}$); the only
+squares compatible with the prime-side frequency support
+$\{\log n\}$ are Euler-local and cost $\ge 3.28\times$ the
+POLE$+$ARCH budget at $a\le 0.3$, $\omega\ge 30$.  At a
+first-contact point $\partial_aZ=\tfrac12\partial_\omega^2Z$ (to
+$10^{-16}$), so the contact carries one differential condition,
+not two, and negativity is a down-set in $a$.  On the true
+$\zeta$ the sign of the Selberg part at near-contact minima is
+indefinite and world-blind (MAIN $0.25$--$0.33$, SCRAMBLE
+$0.22$--$0.31$, WPERM $0.20$--$0.29$).  Experiments only.
+\textbf{No RH claim.}
 
 %======================================================================
 \section{External position: the rank-trace ceiling (r267)}\label{sec:external}
@@ -3368,6 +3490,38 @@ $X^k\le T^{2-\varepsilon}$ fails for $k\ge 3$), hence
 $p_3^{\mathrm{uncond}}=p_2=0.6818$.  GUE ideal input $n_+$:
 $0.75\to 5/6\to 31/36$; simple-on-line $0.6818\to 0.6818\to 0.7222$.
 Finite moments never force negative index $0$.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r639 (probe \texttt{lamzouri\_hilbert\_adjudication\_probe.py},
+SHA \texttt{61fbb4b9}, SPEC \texttt{4bc44422}, $23/23$) adjudicates
+\textbf{arXiv:2609.02882} (Lamzouri, Sept.~2026), a new proof of the same
+theorem that replaces the finite Weil-form matrix and the rank--trace
+inequality by a single Hilbert-space (Bessel) inequality on
+$L^2(-\tfrac12,\tfrac12)$ and applies Montgomery's pair correlation in the
+unconditional Baluyot--Goldston--Suriajaya--Turnage-Butterbaugh form
+(test-function support in $[-1,1]$).  Verdict \textsc{same\_class} +
+\textsc{constants\_identical} + \textsc{wall\_location\_confirmed}: the key
+proposition is rebuilt exactly on $921$ synthetic conjugation-invariant
+multisets (bound $n\ge 2\lvert\mathcal Z\rvert-\sum K(z-s)^2$, saturating
+at $n$); its constant functional $C_\eta=Q(0)+2\int_0^1\alpha
+Q(\alpha)\,d\alpha$ coincides with the r267 functional $R(\eta^2)$ to
+$1.7\times10^{-15}$, and the bound $2N-\lVert\cdot\rVert_{\mathrm{HS}}^2$
+is the Alp\"oge--Furman chain at $\operatorname{tr}G=N$ --- the
+certificate consumes exactly two moments, atlas class A1 is unchanged and
+the ceiling $0.6818287$ applies; $C_0=2-C_{\mathrm{MT}}=0.672500703679$ is
+the r627 optimum $p^*$ to $2\times10^{-11}$, $C_1=0.83625$.  The sole
+arithmetic input is the proven pair-correlation range $\lvert\alpha\rvert\le1$
+($Q=\eta^2*\eta^2$ vanishes for $\lvert\alpha\rvert\ge1$; widening
+$\operatorname{supp}\eta$ to $(-0.6,0.6)$ puts $2.8\%$ of the $Q$-mass
+beyond $1$), i.e.\ the r267 $X\le T$ boundary and the measured
+\textsc{paircorr} wall; under the pair-correlation-conjecture form factor
+$\min(\lvert\alpha\rvert,1)$ the window optimum rises
+$p(\lambda)=0.6725\to0.866\to0.932\to0.976\to0.989\to0.996$ for
+$\lambda=\tfrac12,\tfrac34,1,\tfrac32,2,3$.  Nothing imports to the
+prime-comb side (no Bessel target; the r267 frame mismatch stands).
+Source note: the AxiomProver Lean certificates prove the proposition
+unconditionally and the theorem modulo BGSTB Lemma~5 and
+Riemann--von Mangoldt as hypotheses.  Experiments only.
 \textbf{No RH claim.}
 
 %======================================================================
@@ -3475,8 +3629,15 @@ finite problems.  The r619 log-slopes $-77/-79$ at
 $L=0.9$--$1.4$ (fixed $N=80$ beyond the SVD floor) are
 $N$-artifacts, corrected by r630b to $-50.6$ ($0.3$--$0.6$)
 and $-116$ ($0.6$--$1.0$); the $\mathrm{RELAY\_UNIVERSAL}$
-verdict, leads $\Delta\approx 0.015$, and $L_{\mathrm{det}}$
-table are unaffected.  \textbf{No RH claim.}
+verdict, the entry census, the odd/edge failing mode, and
+$L_{\mathrm{det}}$ table are unaffected.  The r619
+``greedy law'' $\Delta\approx 0.015$ nearly constant across
+$18$ events is WITHDRAWN (r635): an $N=80$ double-precision
+artefact; the four converged leads are
+$\Delta_2=0.0253$, $\Delta_3=0.0083$, $\Delta_4=0.0064$
+($0.00606$ at $N=160$), $\Delta_5=0.0034$ ($0.00275$ at
+$N=160$), and $\Delta_q$ for $q\ge 7$ is UNMEASURABLE at
+the $40$-digit prime-side floor.  \textbf{No RH claim.}
 
 \paragraph{Prime-place dilation and IIKS vanishing (r623, r625, r626).}
 The proposed principal-block / Schur-complement dilation of the
@@ -4040,7 +4201,16 @@ $\Delta_j$ & 0.0166 & 0.0126 & 0.0144 & 0.0141 & 0.0170 & 0.0181 & 0.0151 & 0.01
 \bottomrule
 \end{tabular}
 \end{center}
-$\Delta_j=0.011$--$0.028$ (nearly constant).  The failing mode
+$\Delta_j=0.011$--$0.028$ (nearly constant at $N=80$).
+The constant-lead ``greedy law'' $\Delta\approx 0.015$ is
+WITHDRAWN by r635 (an $N=80$ double-precision artefact);
+converged leads $\Delta_2=0.0253$, $\Delta_3=0.0083$,
+$\Delta_4=0.0064$ ($0.00606$ at $N=160$), $\Delta_5=0.0034$
+($0.00275$ at $N=160$); $\Delta_q$ for $q\ge 7$ is
+UNMEASURABLE at the $40$-digit prime-side floor (not zero).
+The $\mathrm{RELAY\_UNIVERSAL}$ verdict, the entry census,
+the odd/edge failing mode, and the $L_{\mathrm{det}}$ table
+are unaffected.  The failing mode
 is always odd, reflection-symmetric edge sector w.r.t.\ the
 newest event ($g<0$), edge mass $0.07$--$0.65$; the newest
 weight restores positivity (all $18$).  $\lambda^*$ decay
@@ -4049,8 +4219,9 @@ slopes per interval $-50/-77/-79$ at fixed $N=80$
 $-77/-79$ values at $L=0.9$--$1.4$ are $N$-artifacts
 (corrected by r630b: trustworthy slopes $-50.6$ on
 $0.3$--$0.6$ and $-116$ on $0.6$--$1.0$;
-$\mathrm{RELAY\_UNIVERSAL}$, leads $\Delta\approx 0.015$,
-and $L_{\mathrm{det}}$ unaffected) --- super-exponential
+$\mathrm{RELAY\_UNIVERSAL}$ and $L_{\mathrm{det}}$
+unaffected; greedy $\Delta\approx 0.015$ WITHDRAWN by r635)
+--- super-exponential
 (Landau--Widom plunge); $\lambda^*$ underflows the SVD range
 beyond $L\approx 1.4$.  Controls: SCRAMBLE first failure $0.376$,
 WPERM $0.402$, EPSTEIN ($2^k$ only) $0.564\approx L_3+0.015$
@@ -4070,10 +4241,10 @@ $(0.9,20)$ & $0.50$\\
 \textbf{Parent typing.}  The \textsc{relay\_universal} criteria
 ($\Delta_j\ge 0$, $g<0$, repair) are consequences of
 $Q_j\succeq 0$ (RH-consistency), not a mechanism.  The
-informative results are the constant leads (``greedy
-consumption'': each prime power becomes load-bearing within
-$\Delta L\approx 0.015$), the control breaks at entry+lead,
-the super-exponential decay, and $L_{\mathrm{det}}$ --- which
+informative results are the control breaks at entry+lead
+(the constant-lead ``greedy law'' $\Delta\approx 0.015$ is
+WITHDRAWN by r635), the super-exponential decay, and
+$L_{\mathrm{det}}$ --- which
 shows that windows with $L\gtrsim 0.5$ are hypersensitive
 off-line detectors (a nulled zero displaced by $\sigma$
 contributes $-\sigma^2\lvert\partial\hat f\rvert^2$, beating
@@ -4204,11 +4375,67 @@ SHA \texttt{9f5287e7}, SPEC \texttt{ee7c7ba7}, RESULT
 (recorded as a no-go in Section~\ref{sec:nogos}).
 \textsc{random\_euler\_refuted} is a measured class no-go
 (magnitude-only and Diophantine-approximation arguments
-dead); $a$-compactification is cosmetic (the RH-relevant
-end $a\to 0$ stays unbounded); forward Loewner is a
-detector, not a lever; $\Delta\approx 0.015$ is not a
-corollary of the fitted margin/overlap laws.  Experiments
-only.  \textbf{No RH claim.}
+dead; Haar $99.5\%$ negativity stands); $C(L)=1$ is
+\emph{not} the mechanism (generic for minimizers, including
+negative Haar draws; r637); $a$-compactification is cosmetic
+(the RH-relevant end $a\to 0$ stays unbounded); forward
+Loewner is a detector, not a lever;
+\textsc{lead\_law\_invariant} is VOID (withdrawn $N=80$
+values).  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r635 (probe \texttt{relay\_lead\_precision\_probe.py},
+SHA \texttt{36c06826}, SPEC \texttt{28db9bef}, RESULT
+\texttt{3457e907}, $11/11$) returns \textsc{lead\_partial}
+(recorded as a no-go in Section~\ref{sec:nogos}).  The r619
+greedy law $\Delta\approx 0.015$ is WITHDRAWN; four
+converged leads $0.0253/0.0083/0.0064/0.0034$; $q\ge 7$
+UNMEASURABLE at the $40$-digit floor.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent Round r636 (probe \texttt{relay\_lead\_law\_probe.py},
+SHA \texttt{ee2deb46}, SPEC \texttt{6bf7a7ee}, RESULT
+\texttt{2a6bd720}, $6/6$) returns \textsc{lead\_law\_partial}
+(recorded as a no-go in Section~\ref{sec:nogos}).  No model
+$<20\%$ on all four points; the lead law as a message is
+dissolved.  Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r637 (probe \texttt{relay\_vote\_map\_probe.py},
+SHA \texttt{fc5c1426}, SPEC \texttt{44bf67f8}, RESULT
+\texttt{540557ad}, $14/14$) returns
+\textsc{vote\_mode\_specific}$+$\textsc{flip\_counterexample}
+(recorded as a no-go in Section~\ref{sec:nogos}).
+Unanimity is GENERIC (edge geometry, not arithmetic); $C$
+is not a positivity predictor.  Experiments only.
+\textbf{No RH claim.}
+
+\noindent The decoding programme (r635--r637) as a whole:
+the three candidate ``messages'' of the prime event log
+beyond the explicit formula (constant lead, unanimity,
+odd-edge defect type) reduce to margin collapse and edge
+geometry; no side channel measured.
+Experiments only.  \textbf{No RH claim.}
+
+\noindent Round r638 (probe \texttt{gabor\_first\_contact\_selberg\_probe.py},
+SHA \texttt{2ab532bc}, SPEC \texttt{22a92842}, RESULT
+\texttt{58a36aff}, $14/14$) returns
+\textsc{killed}(structural: selberg-convolution-is-hankel).
+The first-contact $+$ Selberg square-completion attack on the
+pure-Gabor zero side $G=\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}$
+fails its pre-registered Toeplitz gate: the Selberg term
+$\sum_N(\Lambda*\Lambda)(N)\,\psi(\log N)$ is a Hankel form in
+$(\log m,\log n)$ and admits no PSD completion over the
+operator-generated $\psi$ ($15/15$ cells, best
+$\lambda_{\min}=-0.0097$ against tolerance $-10^{-9}$); the only
+squares compatible with the prime-side frequency support
+$\{\log n\}$ are Euler-local and cost $\ge 3.28\times$ the
+POLE$+$ARCH budget at $a\le 0.3$, $\omega\ge 30$.  At a
+first-contact point $\partial_aZ=\tfrac12\partial_\omega^2Z$ (to
+$10^{-16}$), so the contact carries one differential condition,
+not two, and negativity is a down-set in $a$.  On the true
+$\zeta$ the sign of the Selberg part at near-contact minima is
+indefinite and world-blind (MAIN $0.25$--$0.33$, SCRAMBLE
+$0.22$--$0.31$, WPERM $0.20$--$0.29$).  Experiments only.
+\textbf{No RH claim.}
 
 \noindent Round r631L (Lean-only, no probe).  Classification of
 the seven tracked \texttt{sorry}s: R-class Canonical.lean:264
@@ -4233,6 +4460,21 @@ prime-side rational $\Pi_1$ form of RH (axioms
 Remaining EF brick: \texttt{GaborHatQuarticExplicitRemainder}
 (non-pure quartics only).  Census stays $7$.
 \textbf{No RH claim.}
+
+\noindent Round r638L (Lean-only claim-boundary repair, no new
+probe).  Two A-class assertions from r631L are retired rather than
+``proved'': the exact eventual
+\texttt{arch\_gauss\_mellin\_digamma\_identity} quantifier is
+overstrong (fixed mesh becomes coarser as the anchor grows), and
+\texttt{standard\_explicit\_formula\_identification} mixes the
+$2\Lambda/\sqrt n$ corpus gauge with the
+$\Lambda(n)(1+n^{-1})$ contour gauge.  Their Props remain unasserted;
+historical arch extraction theorems now take the former explicitly,
+while \texttt{standard\_explicit\_formula\_identification\_honest}
+remains proved.  \texttt{lake build RH} completes $3578/3578$ jobs;
+the tactic-sorry census falls $7\to5$.  Seven affected probes passed
+twice byte-identically.  This is a claim-boundary repair, not progress
+on RH.  \textbf{No RH claim.}
 
 \paragraph{Two-key filter (externalization package).}
 A proposed route counts as RH-relevant only if it (key~1) fails under
@@ -4393,9 +4635,9 @@ Following the r267 recommendation (layer by provability), the workspace
 pinned; builds green on the reference machine).  Status at the time of
 writing: fifty-six modules under \texttt{rh/lean/RH/} (r617L:
 $54\to 56$).  Tactic-sorry
-census $7$ (Canonical~$3$, Source~$1$, Elementwise~$1$,
-ExternalBridges~$2$; GaborSeparation~$0$); all other modules $0$.
-Round r631L classifies the seven as
+census $5$ after r638L (Canonical~$3$, Source~$1$,
+ExternalBridges~$1$; Elementwise and GaborSeparation~$0$); all other
+modules $0$.  Round r631L classified the previous seven as
 \textbf{R-class} (RH-core, Canonical.lean:264 \texttt{lstar\_canonical},
 :273 \texttt{terminal\_q\_canonical} --- $L^*$-positivity / terminal
 gate $q_N<1$; opaque \texttt{canonicalCompletion});
@@ -4406,10 +4648,11 @@ sides opaque);
 \textbf{A-class} (Elementwise.lean:1589
 \texttt{arch\_gauss\_mellin\_digamma\_identity};
 ExternalBridges.lean:15641
-\texttt{standard\_explicit\_formula\_identification}, comb
-$2\Lambda/\sqrt{n}$ vs $\Lambda(1+n^{-1})$; :15708
-\texttt{fullWeil\_separates\_offCritical\_zeros}, classical Weil
-separator).  No closure at r631L.  The inventory below is the live census.  Historical status notes that
+\texttt{standard\_explicit\_formula\_identification}; :15708
+\texttt{fullWeil\_separates\_offCritical\_zeros}).  r638L retires the
+first two as wrong-type asserting theorems; the sole remaining
+A-class \texttt{sorry} is the classical compact Weil separator.
+No closure is claimed.  The inventory below is the live census.  Historical status notes that
 follow it retain their original wording and are not a second count.
 
 \paragraph{Gabor explicit-formula brick chain (r555--r598).}
@@ -4479,7 +4722,7 @@ axioms $\{\texttt{propext},\texttt{Classical.choice},\texttt{Quot.sound}\}$.
 \textbf{Module} & \textbf{Role} & \textbf{Round(s)} & \texttt{sorry}\\
 \midrule
 \endhead
-\texttt{Audit} & axiom audit of the main theorem chain & C1 & 0\\
+\texttt{Audit} & axiom audit of the main theorem chain & C1 / r638L & 0\\
 \texttt{Augmented} & $L^{\dagger}$ unification of $L^*$ and the terminal statement & r332 & 0\\
 \texttt{Basic} & abstract coupled-tau chain data & r256--r259 & 0\\
 \texttt{Canonical} & canonical final domain (three typed holes) & C1 / r326 & 3\\
@@ -4488,11 +4731,11 @@ axioms $\{\texttt{propext},\texttt{Classical.choice},\texttt{Quot.sound}\}$.
 \texttt{CoxeterCompletion} & $\Phi_{30}$ identities and $\mathrm{Tr}\,C=-1$ & r617L & 0\\
 \texttt{DualResolvent} & $L^{\dagger}\Leftrightarrow R^{\dagger}\succ\tfrac12 I$ as finite matrix identity & r362 / r430 & 0\\
 \texttt{EdgeBalance} & edge-balance chain as finite real algebra & r417--r426 & 0\\
-\texttt{Elementwise} & elementwise extraction without a mesh ladder & r326 & 1\\
-\texttt{ExternalBridges} & typed bridges from native class to Mathlib RH & r463 & 2\\
+\texttt{Elementwise} & conditional elementwise extraction without a mesh ladder & r326 / r638L & 0\\
+\texttt{ExternalBridges} & honest-contour bridge plus compact separation target & r463 / r638L & 1\\
 \texttt{FaithfulFold} & production-window transcription (source to grid fold) & r459 / r463 & 0\\
 \texttt{FlankEntry} & flank-entry lemma against the pivot layer & r384 & 0\\
-\texttt{FrequentlySelected} & semidefinite $+$ infinitely-often extraction & r430 & 0\\
+\texttt{FrequentlySelected} & semidefinite $+$ infinitely-often conditional extraction & r430 / r638L & 0\\
 \texttt{GaborAnchoredWitness} & anchored singleton fragment and tail modulus & r598 & 0\\
 \texttt{GaborArchContour} & $\chi'/\chi$ contour shift onto the critical line & r578 / r581 & 0\\
 \texttt{GaborArchDigamma} & left-edge Digamma identification of $\chi'/\chi$ & r577 / r581 & 0\\
@@ -4531,7 +4774,7 @@ axioms $\{\texttt{propext},\texttt{Classical.choice},\texttt{Quot.sound}\}$.
 \texttt{PivotCoordinate} & finite-algebra lemmas in source pivot coordinates & r380 & 0\\
 \texttt{PrimeLogIndependence} & $\mathbb Q$-linear independence of $\{\log p\}$ & r617L & 0\\
 \texttt{Recursion} & proved coupled-tau core identities & r256--r263 & 0\\
-\texttt{Selected} & exact real selected-window domain & r397 & 0\\
+\texttt{Selected} & exact real selected-window domain and conditional extraction & r397 / r638L & 0\\
 \texttt{Source} & explicit prime-window source interface & r310 / r320 & 1\\
 \texttt{Window} & \texttt{VonMangoldtWindow} structure and master theorem & r273 / r305 & 0\\
 \texttt{ZeroIncrement} & local zero-count increment bound & r546 / r547 & 0\\
@@ -4677,7 +4920,7 @@ Level-C statements: \texttt{arch\_elementwise\_stabilization} $+$
 transcription) and \texttt{specFamily\_sourceExact\_completion}
 (classical $+$ definitional, opacity-forced; \emph{not} consumed by
 the extraction route)\\
-\texttt{RH/Selected.lean} & \textbf{exact selected domain} (r397);
+\texttt{RH/Selected.lean} & \textbf{exact selected domain} (r397/r638L);
 0 \texttt{sorry} &
 \texttt{RealCanonicalWindow} (real fields; total
 $W^{\mathbb R}(a,m)$); sequence $a_k=2^k$,
@@ -4685,8 +4928,9 @@ $m_k=k\cdot 2^{\lfloor\sqrt k\rfloor}-1$ with
 $\Delta_k=2^{-r_k}\log 2$, $a_k\to\infty$, $\Delta_k\to 0$
 \textbf{proved}; reduction
 \texttt{weil\_nonneg\_of\_selected\_windows} (plain
-\texttt{fullRead} along the sequence; consumes the existing
-arch \texttt{sorry}); named mincut
+\texttt{fullRead} along the sequence; since r638L it takes the
+unasserted arch contract explicitly and consumes no arch
+\texttt{sorry}); named mincut
 \texttt{selected\_augDualResolvent\_gt\_half}.  NO RH CLAIM\\
 \texttt{RH/GaborIntegral.lean} & \textbf{proved, no \texttt{sorry}} &
 r543 Gaussian integral representation of the pure Gabor test

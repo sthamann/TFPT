@@ -454,6 +454,10 @@ theorem archRateConst_nonneg (f : GridElement) : 0 ≤ archRateConst f := by
   unfold archRateConst
   positivity
 
+/- FALSIFIED as stated: `steps=1`, `meshExp=6`, `x₀=1` gives
+normalized error `8.0283 > archRateConst = 4.1259765625`.
+Use `SelectedArchErrorQuadraticRateExists` from
+`RH.SelectedArchErrorQuadraticRateClassical`. -/
 /-- **Named `O(Δ²)` rate (r475).**  For each fixed `f` there is a
 finite onset `k₀` past which the selected arch tent error is
 bounded by `archRateConst f · Δ_k²`.  Sealed numerically on

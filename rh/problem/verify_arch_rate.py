@@ -52,9 +52,10 @@ def main() -> int:
           and "def SelectedArchErrorQuadraticRate" in inner
           and "theorem selectedArchError_tendsto_zero_of_rate" in inner
           and "\n  sorry" not in inner)
-    check("exact-identity-sorry-kept",
-          "theorem arch_gauss_mellin_digamma_identity" in elementwise
-          and "ArchGaussMellinDigammaIdentity := by\n  sorry" in elementwise)
+    check("exact-identity-unasserted-r638L",
+          "def ArchGaussMellinDigammaIdentity" in elementwise
+          and "theorem arch_gauss_mellin_digamma_identity" not in elementwise
+          and "(hArch : ArchGaussMellinDigammaIdentity)" in elementwise)
     check("note-states-rate",
           "IDENTITY_ISOLATED" in note
           and "3.9893" in note
@@ -62,7 +63,7 @@ def main() -> int:
 
     census = sorry_census()
     print("SORRY CENSUS:", ", ".join(f"{name}:{line}" for name, line in census))
-    check("sorry-census-8", len(census) == 8)
+    check("r638L-sorry-census-5", len(census) == 5)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

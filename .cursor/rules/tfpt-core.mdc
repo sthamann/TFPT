@@ -38,6 +38,7 @@ Every **load-bearing** claim: machine-checked in `verification/vN_*.py`, cited i
 | New `vN_*.py` → papers/ledger | `promote-to-verification` |
 | vN integration / status move | `tfpt-deep-sync` |
 | RH round finished / `rh/` sync | `rh-sync` |
+| RH-Mechanismus-Vorschlag, RH-Runde starten/abschließen, externes RH-Paper prüfen | `rh-corpus-search` |
 | Spawning subagents, long session, model/spend review | `agent-routing` |
 
 Always-on companion rule: `agent-economics` (model tiers, escalation gates, context budget).

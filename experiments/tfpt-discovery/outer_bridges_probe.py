@@ -104,9 +104,9 @@ def main() -> int:
 
     census = sorry_census()
     external_sorries = [row for row in census if row[0] == "ExternalBridges.lean"]
-    check("r489-external-sorry-census-2", len(external_sorries) == 2,
+    check("r638L-external-sorry-census-1", len(external_sorries) == 1,
           ", ".join(f"{name}:{line}" for name, line in external_sorries))
-    check("r489-project-sorry-census-7", len(census) == 7,
+    check("r638L-project-sorry-census-5", len(census) == 5,
           ", ".join(f"{name}:{line}" for name, line in census))
 
     failed = [name for name, ok in CHECKS if not ok]

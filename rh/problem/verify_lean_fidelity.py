@@ -63,14 +63,16 @@ def main() -> int:
                         frequent, re.MULTILINE) is None)
     check("external-bridges-imported",
           "import RH.ExternalBridges" in root
-          and external.count("\n  sorry") == 3)
+          and external.count("\n  sorry") == 1
+          and "def StandardExplicitFormulaIdentification" in external
+          and "theorem standard_explicit_formula_identification :" not in external)
     check("mathlib-zeta-interface",
           "Mathlib.NumberTheory.LSeries.RiemannZeta" in external
           and "RiemannHypothesis" in external)
 
     census = sorry_census()
     print("SORRY CENSUS:", ", ".join(f"{name}:{line}" for name, line in census))
-    check("sorry-census-8", len(census) == 8)
+    check("r638L-sorry-census-5", len(census) == 5)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

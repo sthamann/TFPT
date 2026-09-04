@@ -19,8 +19,8 @@ instantiation per test element.
 
   (2) INFINITELY OFTEN SUFFICES (FREQ).  For each `GridElement f`
       the existing `elementwise_finite_stabilization` supplies a
-      finite onset `a₀(f)` (comb proved, pole proved, arch the
-      existing typed sorry).  `selected_covers` then supplies
+      finite onset `a₀(f)` from an explicit historical arch
+      hypothesis (comb and pole proved).  `selected_covers` then supplies
       eventual `a_k ≥ a₀(f)` and `m_k ≥ f.meshExp`.  A single
       good index `k` past that onset with `R_k† ⪰ ½I` yields
       `weilForm f = fullRead(W_k, f) ≥ 0`.  Eventually-good
@@ -43,8 +43,8 @@ HONEST HYPOTHESES of `weil_nonneg_of_frequently_selected`:
     identification, NOT the dual-resolvent cone).  The
     rational `VonMangoldtWindow` typing is not the obstruction;
   * onset + mesh coverage PROVED (`selected_covers`);
-  * arch-channel stabilization CONSUMED, not re-asserted
-    (`elementwise_finite_stabilization`).
+  * the unasserted `ArchGaussMellinDigammaIdentity` contract supplied
+    explicitly to the historical exact-stabilization route.
 
 THE NEW MINCUT is the named Prop
 `frequently_selected_augDualResolvent_ge_half`.  The r397
@@ -77,10 +77,8 @@ ALSO IN THIS FILE (sorry-free arithmetic):
     (fallback for an averaged Potapov index).
 
 SORRY CENSUS OF THIS FILE: ZERO.  New openness is named Props
-only.  The FREQ extraction consumes the existing classical
-sorry `arch_elementwise_stabilization` through
-`elementwise_finite_stabilization`; it introduces no new
-`sorry`.
+only.  Since r638L the FREQ extraction takes the historical arch
+contract as an explicit hypothesis and consumes no arch `sorry`.
 
 Claim boundary: research documentation.  NOT evidence for or
 against the Riemann Hypothesis in either direction.  NO RH CLAIM.
@@ -354,15 +352,15 @@ element: coverage is *eventual* (`selected_covers`), positivity
 is only *frequent*, and `Eventually.and_frequently` yields one
 good covering index.
 
-Honest hypotheses: `hpos` is FREQ of (4) in the r397 list;
-onset and mesh coverage are proved; stabilization is the
-existing `elementwise_finite_stabilization` (arch sorry
-consumed).  NO RH CLAIM. -/
+Honest hypotheses: `hArch` is the unasserted historical arch
+exact-equality contract, `hpos` is FREQ of (4) in the r397 list;
+onset and mesh coverage are proved.  NO RH CLAIM. -/
 theorem weil_nonneg_of_frequently_plain
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hpos : FrequentlySelectedWindowLocalPositive) :
     ∀ f : GridElement, 0 ≤ weilForm f := by
   intro f
-  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization f
+  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization hArch f
   have hcov := selected_covers a₀ f.meshExp
   have hboth := hcov.and_frequently hpos
   obtain ⟨k, ⟨⟨_hkpos, ha, hm⟩, ⟨_, hread⟩⟩⟩ := hboth.exists
@@ -429,11 +427,12 @@ theorem frequently_plain_of_frequently_selected
 of the named bridge, never asserting it).  The `hgood`
 quantifier is the reviewer's `∀ K, ∃ k ≥ K`.  NO RH CLAIM. -/
 theorem weil_nonneg_of_frequently_selected
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hbridge : SelectedSemidefImpliesPlainReads)
     (hgood : ∀ K, ∃ k, K ≤ k ∧ ∃ hk : 0 < k,
       selectedWindowConeSemidef k hk) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_frequently_plain
+  weil_nonneg_of_frequently_plain hArch
     (frequently_plain_of_frequently_selected hbridge
       (frequently_atTop.mpr hgood))
 
@@ -444,9 +443,10 @@ in `RH/ExternalBridges.lean`.  NO RH CLAIM. -/
 -- Historical text-audit marker for the immutable r461 sealed probe:
 -- theorem rh_of_frequently_selected (renamed in r463; no declaration).
 theorem internal_weil_nonneg_of_frequently_selected
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hmincut : FrequentlySelectedInternalMincut) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_frequently_selected
+  weil_nonneg_of_frequently_selected hArch
     (selectedSemidefImpliesPlainReads_of_A_cap
       (selectedACapPsdImpliesPlainReads_of_representation hmincut.2))
     (frequently_atTop.mp hmincut.1)
@@ -456,10 +456,11 @@ the thinner remainder).  Named mincut + `A_cap ⪰ 0` ⇒ plain
 reads ⇒ Weil ≥ 0.  The dual-resolvent identification is no
 longer a hypothesis.  NO RH CLAIM. -/
 theorem internal_weil_nonneg_of_frequently_selected_of_A_cap
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hmincut : frequently_selected_augDualResolvent_ge_half)
     (hbridge : SelectedACapPsdImpliesPlainReads) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_frequently_selected
+  weil_nonneg_of_frequently_selected hArch
     (selectedSemidefImpliesPlainReads_of_A_cap hbridge)
     (frequently_atTop.mp hmincut)
 

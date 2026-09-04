@@ -2433,9 +2433,11 @@ _R461_STATUS = (
     "VERDICT FORK_SHARPENED.  GridElement is an even dyadic "
     "piecewise-linear autocorrelation; the formal endpoint is "
     "forall GridElement, weilForm>=0, not RH.  The spectral/zero "
-    "side and density/continuity completion are absent; the path "
-    "consumes arch_elementwise_stabilization sorryAx and the named "
-    "SelectedACapPsdImpliesPlainReads bridge.  In the r459 builder "
+    "side and density/continuity completion are absent; the "
+    "historical endpoint takes unasserted "
+    "`ArchGaussMellinDigammaIdentity` explicitly plus the named "
+    "`SelectedACapPsdImpliesPlainReads` bridge; no arch sorryAx.  "
+    "In the r459 builder "
     "U_k=N_k Delta_k=k log(2)/2 and L_k=U_k/2; k=5..12 gives "
     "U=1.732868..4.158883, beyond both the classical U<log(2) "
     "prime-blind range and the recent arXiv:2608.24827 U<=1.6 "
@@ -2446,7 +2448,11 @@ _R461_STATUS = (
     "missing dictionary.  First measured in /tmp then sealed.  "
     "Companion rh/problem/narrowband_weil.tex + "
     "verify_narrowband_weil.py NARROWBAND WEIL VERIFIED.  "
-    "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
+    "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  "
+    "r638L G14 text gate updated after root-cause reproduction; "
+    "smoke 21/21 twice byte-identical; SPEC_SHA "
+    "ff617711041fee52fe2ebdc9a54ddaf4f0b0ccc30933506c34e809e1bae7d59a; "
+    "no RH claim"
 )
 
 _R462_STATUS = (
@@ -2498,6 +2504,16 @@ _R464_STATUS = (
     "rh/problem/inner_bridges.tex + verify_inner_bridges.py "
     "INNER BRIDGES VERIFIED (9/9).  NO L* claim, NO R-dagger claim, "
     "NO RH claim, NO anti-RH claim"
+)
+
+_R638L_RESEAL_NOTE = (
+    ".  r638L claim-boundary repair retires the overstrong "
+    "`arch_gauss_mellin_digamma_identity` and gauge-mismatched "
+    "`standard_explicit_formula_identification` asserting theorems "
+    "to unasserted Props; historical arch extraction APIs now take "
+    "`ArchGaussMellinDigammaIdentity` explicitly; full Lean build "
+    "3578 jobs with exactly five sorries; affected text/census "
+    "probes were rerun twice byte-identically; no RH claim"
 )
 
 _R467_STATUS = (
@@ -2664,22 +2680,50 @@ _R475_STATUS = (
     "arch identity isolation and tent rate "
     "(round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; "
     "experiments-side, NO ledger row): "
-    "VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2.  F1(ii) not closed "
+    "VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2 (numeric large-support) "
+    "+ FIXED_CONSTANT_FALSIFIED (r475-repair).  F1(ii) not closed "
     "as exact equality: productionArchDelta_tendsto_atTop proved "
     "(Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 "
     "still lists Gauss integral as TODO, isolated as named Prop "
     "GaussDigammaIntegralRepresentation (not a sorry).  "
     "weilArchSide is now the concrete u-space pairing.  "
-    "Selected-path rate O(Delta_k^2) named "
-    "SelectedArchErrorQuadraticRate; "
-    "selectedArchError_tendsto_zero_of_rate proved (fixed-f "
-    "convergence, not infinitely-many-k positivity).  "
+    "O(Delta_k^2) rate numerically supported (ratios 3.85-3.99 on "
+    "k=5-12); fixed archRateConst = 4(1+1/64)^2 = 4.1259765625 "
+    "FALSIFIED in the small-support regime (steps=1, meshExp=6, "
+    "x0=1: err/Delta^2 = 8.0283458222 > 4.1259765625; Lean-certified "
+    "endpoint-kink defect -theta(1-theta)/2).  Named Prop "
+    "SelectedArchErrorQuadraticRate kept with falsification comment; "
+    "correct interface is SelectedArchErrorQuadraticRateExists "
+    "(exists C(f)); selectedArchError_tendsto_zero_of_rateExists "
+    "proved; SelectedArchWeightedInterpolationEstimate OPEN.  "
     "Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 "
     "(k=5..8, err/D2=3.9893) and err=0.028876619985 at "
     "Delta=0.0866433976 (k=9..12, err/D2=3.8466).  "
     "Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census "
-    "remains 8.  Companion rh/problem/arch_rate.tex + "
+    "remains 5 (five protected).  Companion rh/problem/arch_rate.tex + "
     "verify_arch_rate.py ARCH RATE VERIFIED (6/6).  "
+    "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
+)
+
+_R475_REPAIR_STATUS = (
+    "Lean repair of the r475 fixed-constant rate "
+    "(round r475-repair, Lean-only, NO sealed probe, NO ledger row): "
+    "RH/SelectedArchErrorQuadraticRateClassical.lean (238 lines).  "
+    "SelectedArchErrorQuadraticRate (fixed archRateConst = "
+    "4(1+1/64)^2 = 4.1259765625) FALSIFIED in the small-support "
+    "regime (steps=1, meshExp=6, x0=1: err_arch/Delta^2 = "
+    "8.0283458222 > 4.1259765625; also 4.4488, 7.13-7.24).  "
+    "endpointKink_cell_integral_defect proved exactly "
+    "(-theta(1-theta)/2); meshSix_endpointCoefficient_exceeds_archRateConst "
+    "proved; intervalIntegral_affineInterpolation_error_le_one_twelfth "
+    "proved; selectedArchGridEndpoint corrected to (floor(b/Delta)+1)*Delta "
+    "(numerical identity with selectedArchError to 2.3e-25).  "
+    "SelectedArchErrorQuadraticRateExists (exists C(f)) is the "
+    "correct interface; selectedArchError_tendsto_zero_of_rateExists "
+    "proved; SelectedArchWeightedInterpolationEstimate OPEN.  "
+    "O(Delta^2) rate itself not refuted (large-support ratios "
+    "3.9893 / 3.8466).  lake build 3578 jobs green; five protected "
+    "sorries unchanged.  Catalog part_18 KILLED/LOSSY_CONSTANT.  "
     "NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim"
 )
 
@@ -4392,7 +4436,7 @@ _R619_STATUS = (
     "7299737ded85418e4e88fea1356f378ec4c2c077c7d35a09211cc7980a88553d; "
     "RESULT_SHA prefix e0379485; probe SHA "
     "fcfa7771f2522e4458a7f2cb4dc20a68974bb2ca4f0239ea7c877da76193da4a.  "
-    "CHECKS 12/12.  No RH claim"
+    "CHECKS 12/12.  No RH claim.  CORRECTED BY r635: the constant-lead / greedy-law reading Delta ~ 0.015 nearly constant across 18 events is WITHDRAWN (N=80 double-precision artefact).  Converged leads Delta_2=0.0253, Delta_3=0.0083, Delta_4=0.0064 (0.00606 at N=160), Delta_5=0.0034 (0.00275 at N=160); q>=7 UNMEASURABLE at 40-digit prime-side floor (probe: 'later events already indefinite at entry'; Delta=0, conv=0, q=7 lam_min=-7.0e-11).  RELAY_UNIVERSAL verdict, entry census, odd/edge failing mode, and L_det table UNAFFECTED."
 )
 
 _R620_STATUS = (
@@ -4758,7 +4802,222 @@ _R633_STATUS = (
     "ee7c7ba7e616add967455f2efdefaf00a326a8b78be7253cf10504016907ebf1; "
     "RESULT_SHA prefix 814abdf5; probe SHA "
     "9f5287e7f9fbf174bff5b54b935de7212b3c94f4c92c020f5749569d99011839.  "
-    "CHECKS 16/16.  No RH claim"
+    "CHECKS 16/16.  No RH claim.  CORRECTED BY r637: F3 RANDOM_EULER_REFUTED (99.5 pct negative under Haar) STANDS; the phrase 'coherence C(L)=1 / phase coherence' is NOT the mechanism -- C=1 is generic for minimizers and holds for the negative Haar draws too.  CORRECTED BY r635/r636: F4 LEAD_LAW_INVARIANT is VOID (based on withdrawn N=80 Delta~0.015 values)."
+)
+
+_R635_STATUS = (
+    "Relay-lead precision scout "
+    "(round 635, PRIME.RELAY.LEAD.PRECISION.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT LEAD_PARTIAL.  11/11, 1260 s, dual-run identical.  "
+    "r619 predecessor was the frozen D2 form (events q' < q only); "
+    "D1 (true minus q) implemented, identical here.  mp Cholesky "
+    "PSD-boundary bisection, N in {80,120,160}, damped Legendre: "
+    "converged leads Delta_2=0.0253, Delta_3=0.0083, "
+    "Delta_4=0.0064 (0.00606 at N=160), Delta_5=0.0034 "
+    "(0.00275 at N=160); Delta/s_q = 0.125/0.058/0.058/0.020; "
+    "lambda*(L_q) = 1.36e-3 / 5.93e-8 / 8.72e-13 / 8.69e-17; "
+    "initial negative rate r_q = 3.38e-2 / 3.14e-6 / 7.35e-11 / "
+    "1.32e-15.  Probe why: 'positive N-stable leads only at "
+    "small L_q (4/18 events; later events already indefinite at "
+    "entry)'.  For q=7..32 the probe reports Delta=0 with "
+    "lambda_min<0 already at L_q, conv=0 (q=7: L=0.973, "
+    "lambda_min=-6.99e-11).  Probe does not mark floor-limited.  "
+    "PARENT TYPING: (i) the r619 'greedy law' Delta ~ 0.015 "
+    "nearly constant across 18 events was an N = 80 "
+    "double-precision artefact -- WITHDRAWN; the converged leads "
+    "decrease steeply (0.025 -> 0.003) and track the collapsing "
+    "entry margin; (ii) for q >= 7 the value lambda_min < 0 "
+    "'at entry' is NOT a negativity of the true form "
+    "(RH-consistency and the r628 certification forbid it: the "
+    "true form for L < L_7 equals the D2 predecessor); it means "
+    "lambda*(L_7 ~ 0.97) ~ 1e-25 lies below the accuracy floor "
+    "of the 40-digit prime-side builder (~1e-17..1e-20) -> "
+    "Delta_q for q >= 7 is UNMEASURABLE at this precision, not "
+    "zero.  Not spacing-limited (s_31 = 0.0159 but Delta "
+    "undetermined there).  Probe "
+    "experiments/tfpt-discovery/relay_lead_precision_probe.py.  "
+    "SPEC_SHA "
+    "28db9bef54dd4cd67608d01df842f02364a688dbfcafb4274fdebcac4ea1c820; "
+    "RESULT_SHA "
+    "3457e907c2c5c9ef8bf3c160ae0636c186ad5f51b390d51018e208c58fafc265; "
+    "probe SHA "
+    "36c06826fcd3461c76098f72d94b2faab4ddf4a20ce162acee5cbd9857dfe749.  "
+    "CHECKS 11/11.  No RH claim"
+)
+
+_R636_STATUS = (
+    "Relay-lead law scout "
+    "(round 636, PRIME.RELAY.LEAD.LAW.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "VERDICT LEAD_LAW_PARTIAL.  6/6, 0.5 s, dual-run identical.  "
+    "Only four converged leads = training set, holdout empty; "
+    "peak relative errors: M1 margin/rate linear 18.4 (q=5), "
+    "M1 quadratic 4.39 (q=2-4 within 12-18 pct, q=5 fails), "
+    "M2 edge-sliver competition 1.96, M3 grammar "
+    "c0 + w^3 + lambda c^2 0.0026 (3 parameters on 4 points -- "
+    "interpolant, no evidence), M4 spacing 48.8 / alpha s 2.70 "
+    "(alpha=0.074).  No model < 20 pct on all four; spacing "
+    "does not win; with four points there is nothing to derive.  "
+    "PARENT TYPING: the 'lead law' as a message is dissolved -- "
+    "Delta_q is a corollary of the margin collapse, not a "
+    "separate invariant; r633-F4 LEAD_LAW_INVARIANT referred to "
+    "the withdrawn N=80 values and is void.  Probe "
+    "experiments/tfpt-discovery/relay_lead_law_probe.py.  "
+    "SPEC_SHA "
+    "6bf7a7ee31e3f41736bb04dc97ca1370aaf6c8ad1ff80379408b9012b694054b; "
+    "RESULT_SHA "
+    "2a6bd720b7494840e7235475b446e2b1cd8a71263a92efaac789cff04ae25aa9; "
+    "probe SHA "
+    "ee2deb462adf5487965b97a8b1349c7ea4bf8660c5077d2b543e2ffc1de1d2ad.  "
+    "CHECKS 6/6.  No RH claim"
+)
+
+_R637_STATUS = (
+    "Relay vote-map scout "
+    "(round 637, PRIME.RELAY.VOTE.MAP.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "14/14, 27.7 min dual, mp 40 digits N=80 (N=120 check agrees "
+    "at L=0.55/0.80).  Worker verdict VOTE_MODE_SPECIFIC "
+    "(k_thr=3) + FLIP_COUNTEREXAMPLE.  C0=1 at all nine "
+    "L in [0.40,1.00]; modes k=0,1,2 unanimous at all L, "
+    "k>=3 split (70/90 (L,k)); h0 is R_q-EVEN-dominant on every "
+    "overlap (||f-||^2/||f+||^2 = 0.33..0.99 < 1): at the "
+    "critical mode every present prime term ADDS positivity "
+    "(g = +(||f+||^2 - ||f-||^2)), consistent with the odd/edge "
+    "failing mode of the predecessor (r619/r620) where the "
+    "missing prime would have added.  Flip test: 0/19 R_q-odd "
+    "flips lower Q (first: L=0.40, q=2, Delta Q = +4.30e-3) -> "
+    "FLIP_COUNTEREXAMPLE, the variational lemma in the odd "
+    "sector is refuted.  Controls: SCRAMBLE minimizer C=1 at "
+    "ALL L (incl. 5 events at L=1.0), POLE+ARCH ancestor C=1 at "
+    "all L; WPERM splits from L=0.90 (0.715, 0.444), EPSTEIN "
+    "from 0.70 (0.941).  Euler coherence testable only for "
+    "2 vs 4 below L=1: agreement 27/36=0.75, h0 agrees at "
+    "L=0.90/1.00.  Haar MC: L=0.45 frac_neg 0.955 with "
+    "frac_unanimous 1.000; L=0.55 1.000/1.000; L=0.70 "
+    "1.000/0.865, corr(C, lambda_min)=-0.17.  PARENT TYPING: "
+    "unanimity is GENERIC -- a geometric property of "
+    "edge-localized low minimizers of translation-type forms "
+    "(SCRAMBLE reproduces it at every L), not an arithmetic "
+    "message; the coherence index C is not a positivity "
+    "predictor (Haar draws unanimous yet negative).  Probe "
+    "experiments/tfpt-discovery/relay_vote_map_probe.py.  "
+    "SPEC_SHA "
+    "44bf67f8ba7d07d3e03450e310412e4cc93478dae5b345a2158df52191a64cfc; "
+    "RESULT_SHA prefix 540557ad; probe SHA "
+    "fc5c1426c996df526faeb3f8f50f84367b5d7563e173ff63c682fce892e2ce3d.  "
+    "CHECKS 14/14.  No RH claim"
+)
+
+_R638_STATUS = (
+    "First-contact + Selberg square-completion scout "
+    "(round 638, GABOR.CONTACT.SELBERG.01; experiments-side "
+    "sealed probe, NO ledger row): 14/14, ~338 s dual, "
+    "byte-identical.  Object: pure-Gabor zero side G(a,w) = "
+    "POLE - PRIME + ARCH (r608 identity A); attack: at a first "
+    "touching point (a*,w*) the contact conditions plus Selberg "
+    "symmetry Lambda log + Lambda*Lambda = Lambda_2 should yield "
+    "an operator L with LG = ||A||^2 + R >= 0.  Pre-registered "
+    "Toeplitz gate: the Selberg convolution term sum_N "
+    "(Lambda*Lambda)(N) psi(log N) is a HANKEL form in "
+    "(log m, log n); a square needs the kernel [psi(u_i+u_j)] "
+    "PSD.  T2: on 466 prime-power nodes (n <= 3000), 15 "
+    "operator-generated psi = t^k e^{-t/2} e^{-a t^2/2} "
+    "{cos, sin, 1}(omega t) with k <= 4, 15 cells (a,omega) in "
+    "{1,0.5,0.3,0.1,0.05} x {14.13,30,100}: best PSD-combination "
+    "lambda_min = -0.0097 ... -0.0568 (Frobenius-normalised, "
+    "tolerance -1e-9), GATE_PASS 0/15; DC 2x2-minor violation "
+    "fraction 1.0 everywhere (Gaussian factor "
+    "e^{-a(u_i-u_j)^2}) -> TOEPLITZ_GATE_FAIL.  G3: the only "
+    "squares compatible with the prime-side frequency support "
+    "{log n} are Euler-local sum_p |A_p|^2; their Fejer-Riesz "
+    "DC cost DC_lower/(POLE+ARCH) = 3.28 (a=0.3, omega=50), "
+    "4.35 (0.3, 30), 8.39 (0.3, 14.13) -> "
+    "EULER_LOCAL_SQUARE_COSTS_TRIVIAL_MAJORANT.  T3 (synthetic "
+    "off-line catalogs on 2000 on-line ordinates): first contact "
+    "a* = 0.1418/0.0877/0.0370/0.1126 for (sigma,gamma0) = "
+    "(0.4,100)/(0.25,100)/(0.1,100)/(0.4,250), omega*-gamma0 = "
+    "0.66/0.62/0.61/0.55 vs pi a*/(2 sigma) = 0.56/0.55/0.58/"
+    "0.44, off-line/on-line block ratio 1.0000 at contact; "
+    "d_a Z = (1/2) d^2_omega Z at contact with r_heat <= "
+    "1.6e-16 (cos) / 1.5e-16 (lobe): the two contact conditions "
+    "are ONE (CONTACT_CONDITIONS_COLLAPSE); m(a*/2, a*/4, a*/8) "
+    "all negative (NEGATIVITY_DOWNSET; the heat semigroup runs "
+    "small a -> large a).  T4 (true zeta, prime side to n <= "
+    "4.6e6, EF sanity 2.2e-14): G >= 0 on omega in [10,50] for "
+    "a = 1/0.5/0.3 (min 3.0e-4 / 1.2e-7 / 2.2e-12); at the 8-9 "
+    "local minima per a the Selberg part of d^2_omega PRIME has "
+    "the helpful sign in 0.25/0.22/0.33 (MAIN) vs 0.22/0.31/"
+    "0.22 (SCRAMBLE) vs 0.29/0.20/0.20 (WPERM): "
+    "SELBERG_SIGN_INDEFINITE + WORLD_BLIND; median "
+    "|Selberg_1|/|Lambda_2,1| = 1.33/0.88/0.74 -- the Selberg "
+    "split relocates the cancellation between two equal-size "
+    "parts (same finding as CCCXXXI SELBERG-INSUFFICIENT on the "
+    "window object).  PARENT TYPING: the square-completion "
+    "engine of the first-contact attack is structurally "
+    "unavailable -- Selberg's convolution is Hankel (frequencies "
+    "log m + log n), squares of prime Dirichlet polynomials are "
+    "Toeplitz (log m - log n); the compatible Euler-local "
+    "squares cost the trivial majorant; single-sum (Lambda_2, "
+    "Lambda) terms cannot repair a non-PSD Hankel part "
+    "(bordered-matrix argument).  The first-contact frame itself "
+    "carries one differential condition, not two.  Lane "
+    "GABOR.CONTACT.SELBERG.01 = KILLED(STRUCTURAL), STOP.  Probe "
+    "experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py.  "
+    "SPEC_SHA "
+    "22a9284272e345a690dc7550c401f1bd7090647381b0061bce50b2a64d0c3aa8; "
+    "RESULT_SHA prefix 58a36aff; probe SHA "
+    "2ab532bceeb0dfd9bb863ab40fda2b87ea9c187b658fe7ef9223f75360e751f9.  "
+    "CHECKS 14/14.  No RH claim"
+)
+
+_R639_STATUS = (
+    "Lamzouri Hilbert-variant adjudication "
+    "(round 639, PRIME.PORT.EXTERNAL.HILBERT_VARIANT.ADJUDICATION.01; "
+    "experiments-side sealed probe, NO ledger row): "
+    "23/23, 22 s, dual-run identical.  EXTERNAL arXiv:2609.02882v1 "
+    "(Lamzouri, 2026-09-02): new proof of the Alpoge--Furman/Anthropic "
+    "theorem (>= 0.6725 simple on the line, >= 0.83625 distinct) "
+    "replacing the finite Weil-form matrix + rank-trace inequality "
+    "by a Hilbert-space (Bessel) inequality on L^2(-1/2,1/2) and "
+    "applying Montgomery pair correlation in the unconditional "
+    "BGSTB24 Lemma 5 form (supp f in [-1,1]).  VERDICT "
+    "PROPOSITION_REBUILT + SAME_CLASS(TWO_MOMENT) + CONSTANTS_IDENTICAL "
+    "+ WALL_LOCATION_CONFIRMED(SUPPORT_ONE) + MT_OPTIMAL_SUPPORTED "
+    "+ NO_IMPORT(UNCHANGED) + SOURCE_NOTE(AXIOMPROVER).  Proposition "
+    "rebuilt exactly on 921 synthetic conjugation-invariant "
+    "multisets (3 windows x 307 instances; Bessel, three range "
+    "inequalities, Sum alpha_j = |Z|; min slack -1.8e-15, bound "
+    "saturates at n).  Class: C_eta = Q(0) + 2 int_0^1 alpha "
+    "Q(alpha) == r267 functional R(eta^2) to 1.7e-15 (R(psi_0) = "
+    "4/3, R(psi_MT) = C_MT = 1.3274992963206); bound 2N - HS^2 "
+    "== A--F chain 4 tr G - 2N - HS^2 at tr G = N (sympy) -> atlas "
+    "class A1 unchanged, ceiling 0.6818287 applies.  Constants: "
+    "C_0 = 2 - C_MT = 0.672500703679 == r627 p* (2e-11), "
+    "C_1 = 0.836250351840, gap to p_0 9.328e-3.  Wall: Q = eta^2 "
+    "* eta^2 vanishes for |alpha| >= 1 exactly; widening supp eta "
+    "to (-0.6, 0.6) puts 2.8 pct of the Q mass beyond 1 (BGSTB "
+    "inapplicable) -- the sole arithmetic input is the proven "
+    "pair-correlation range |alpha| <= 1 = r267 X <= T boundary "
+    "= PAIRCORR wall; under the PCC form factor min(|alpha|,1): "
+    "p(lambda) = 0.6725/0.866/0.932/0.976/0.989/0.996 at lambda "
+    "= 0.5/0.75/1/1.5/2/3 (monotone; GLSS25 limit 1); p(0.5) sits "
+    "1.0e-5 above C_0 (product quadrature of the |u-v| kink, "
+    "inside the frozen 2e-4 tolerance; the kink-split value is "
+    "C_MT).  MT optimality: 200 random admissible psi all R >= "
+    "C_MT (min excess 0.41), local second difference >= 1.9e-6.  "
+    "Lean: AxiomProver certificates -- Proposition unconditional, "
+    "Theorem modulo BGSTB Lemma 5 + Riemann--von Mangoldt as "
+    "hypotheses (contrast A--F v1.0 kernel-checked modulo EnclOK).  "
+    "Renumbered 638 -> 639 before sealing (638 taken by r638L and "
+    "a parallel probe).  Probe "
+    "experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py.  "
+    "SPEC_SHA "
+    "4bc444228a9ae6a488c4b70eac77fcdbad8e15370df42bd359faaf060c046b38; "
+    "probe SHA "
+    "61fbb4b93e8c640f5fe0c39c43355779cff86cc9efc80b2a01cc7bc4cda9d654.  "
+    "CHECKS 23/23.  Follow-up to r267/r616/r627; no RH claim"
 )
 
 _R490_STATUS = (
@@ -6862,7 +7121,7 @@ ENTRIES = [
      "Zero sorry; census stays 5.  NO RH claim",
      True),
     ("rh/lean/RH/Selected.lean", "lean_module",
-     "r397",
+     "r397/r638L",
      [],
      "r397 exact selected domain: RealCanonicalWindow (R-fields, "
      "extends PrimeWindow) plus total construction W^R(a,m) = "
@@ -6874,7 +7133,8 @@ ENTRIES = [
      "sequence; consumes existing arch sorry); named mincut "
      "selected_augDualResolvent_gt_half.  lstar_canonical / "
      "terminal_q_canonical degraded to alternative route.  "
-     "Zero sorry in this file; census stays 5.  NO RH claim",
+     "Zero sorry in this file; census stays 5.  r638L: arch "
+     "contract is explicit; file remains sorry-free.  NO RH claim",
      True),
     ("rh/lean/RH/OneDefect.lean", "lean_module",
      "r406",
@@ -8622,12 +8882,13 @@ ENTRIES = [
      _R470_STATUS,
      True),
     ("rh/problem/verify_quadrep.py", "problem_check",
-     "r470 companion",
+     "r470 companion/r638L",
      [],
      "machine check of r470 obstruction: original channel "
      "unweakened, quantifier witness proved, named signed "
-     "obstruction, sorry census 8, numeric probe.  "
-     "6/6 gates, final line QUADREP VERIFIED",
+     "obstruction, historical sorry census 8, numeric probe.  "
+     "6/6 gates, final line QUADREP VERIFIED.  r638L reseal: "
+     "project census 5, external 1; no RH claim",
      True),
     ("rh/problem/quadrep.pdf", "problem_statement",
      "r470",
@@ -8662,13 +8923,14 @@ ENTRIES = [
      _R473_STATUS,
      True),
     ("rh/problem/verify_extraction_joint.py", "problem_check",
-     "r473 companion",
+     "r473 companion/r638L",
      [],
      "machine check of r473 extraction joint: polynomial "
      "bridge proved, named approx and redesigned joint, "
-     "historical endpoint retained, artefact pins, sorry "
-     "census 8, numeric probe.  6/6 gates, final line "
-     "EXTRACTION JOINT VERIFIED",
+     "historical endpoint retained, artefact pins, historical "
+     "sorry census 8, numeric probe.  6/6 gates, final line "
+     "EXTRACTION JOINT VERIFIED.  r638L reseal: project census "
+     "5, external 1; no RH claim",
      True),
     ("rh/problem/extraction_joint.pdf", "problem_statement",
      "r473",
@@ -8701,13 +8963,17 @@ ENTRIES = [
      _R475_STATUS,
      True),
     ("rh/problem/verify_arch_rate.py", "problem_check",
-     "r475 companion",
+     "r475 companion/r638L/r475-repair",
      [],
      "machine check of r475 arch rate: weilArchSide concrete, "
-     "Gauss named not sorry, O(Delta^2) rate named, tendsto "
-     "proved, exact-identity sorry retained, artefact pins, "
-     "sorry census 8, numeric probe.  6/6 gates, final line "
-     "ARCH RATE VERIFIED",
+     "Gauss named not sorry, O(Delta^2) rate named (numeric "
+     "large-support ratios 3.85-3.99), tendsto proved, "
+     "exact-identity historically sorry retained, artefact pins, "
+     "historical sorry census 8, numeric probe.  6/6 gates, "
+     "final line ARCH RATE VERIFIED.  r638L reseal: arch contract "
+     "unasserted, project census 5, external 1.  r475-repair: "
+     "fixed archRateConst FALSIFIED (8.0283 > 4.1259765625); "
+     "Exists C(f) OPEN; no RH claim",
      True),
     ("rh/problem/arch_rate.pdf", "problem_statement",
      "r475",
@@ -8952,12 +9218,13 @@ ENTRIES = [
      _R487_STATUS,
      True),
     ("rh/problem/verify_outer_bridges.py", "problem_check",
-     "r487 companion",
+     "r487 companion/r638L",
      [],
      "machine check of r487 outer bridges: density decomposition, "
      "sorry-free positivity transfer and zeta interface wrapper, "
-     "four external bricks, structural smoke.  6/6 gates, final line "
-     "OUTER BRIDGES VERIFIED",
+     "historically four external bricks, structural smoke.  "
+     "6/6 gates, final line OUTER BRIDGES VERIFIED.  r638L "
+     "reseal: external census 1, project census 5; no RH claim",
      True),
     ("rh/problem/outer_bridges.pdf", "problem_statement",
      "r487",
@@ -8993,12 +9260,13 @@ ENTRIES = [
      _R489_STATUS,
      True),
     ("rh/problem/verify_outer_bridges2.py", "problem_check",
-     "r489 companion",
+     "r489 companion/r638L",
      [],
      "machine check of r489 outer bridges: uniform fixed-support "
      "topology, compact L2 witness, comb and polar-integral continuity, "
-     "one dense completion sorry, structural smoke.  6/6 gates, final "
-     "line OUTER BRIDGES 2 VERIFIED",
+     "historical one dense completion sorry, structural smoke.  "
+     "6/6 gates, final line OUTER BRIDGES 2 VERIFIED.  r638L "
+     "reseal: external census 1, project census 5; no RH claim",
      True),
     ("rh/problem/outer_bridges2.pdf", "problem_statement",
      "r489",
@@ -9035,12 +9303,14 @@ ENTRIES = [
      _R491_STATUS,
      True),
     ("rh/problem/verify_outer_bridges3.py", "problem_check",
-     "r491 companion",
+     "r491 companion/r638L",
      [],
      "machine check of r491 outer bridges: polar sign, concrete full "
      "arch, explicit dyadic construction and support bound, exact pole "
-     "hat seam, honest unchanged census, structural smoke.  7/7 gates, "
-     "final line OUTER BRIDGES 3 VERIFIED -- REDUCED",
+     "hat seam, historically honest unchanged census, structural "
+     "smoke.  7/7 gates, final line OUTER BRIDGES 3 VERIFIED -- "
+     "REDUCED.  r638L reseal: external census 1, project census 5; "
+     "no RH claim",
      True),
     ("rh/problem/outer_bridges3.pdf", "problem_statement",
      "r491",
@@ -9122,7 +9392,7 @@ ENTRIES = [
      "(recompiled artefact, registered unpinned)", False),
 
     ("rh/lean/RH/ExternalBridges.lean", "lean_module",
-     "r517-r532",
+     "r517-r532/r638L",
      [],
      "Lean-only outer-bridge campaign r517-r532 "
      "(commits 4bf75f4f..7fb2dbb0; no sealed probe).  "
@@ -9152,11 +9422,12 @@ ENTRIES = [
      "r542-r553 Gabor campaign is a separate module "
      "(RH/GaborSeparation.lean / GaborThetaBound.lean); this "
      "file is unchanged as the compact/honest-Weil carrier.  "
-     "Living document.  "
+     "Living document.  r638L: corpus assertion retired; honest "
+     "theorem retained; external census 2->1.  "
      "NO RH CLAIM",
      False),
     ("rh/lean/RH/Open.lean", "lean_module",
-     "r517-r634L",
+     "r517-r638L",
      [],
      "r517-r532 census blocks plus r542-r612 Gabor-input "
      "notes in RH/Open.lean.  Tracked sorry census 9 -> 8 at "
@@ -9209,10 +9480,13 @@ ENTRIES = [
      "axioms propext/Classical.choice/Quot.sound); remaining EF "
      "brick GaborHatQuarticExplicitRemainder (non-pure quartics).  "
      "Conditional Gabor reduction only; separation stays [O].  "
+     "r638L retires the overstrong arch exact-equality and "
+     "gauge-mismatched corpus EF asserting theorems to "
+     "unasserted Props; project census 7->5; no RH claim.  "
      "NO RH CLAIM",
      True),
     ("rh/lean/RH/Audit.lean", "lean_module",
-     "r517-r634L",
+     "r517-r634L/r638L",
      [],
      "r517-r532 axiom/audit trail of the outer-bridge campaign "
      "(contour identity through RIGHT_PRIME).  r612: #print "
@@ -9226,7 +9500,8 @@ ENTRIES = [
      "r634L: #print axioms for gabor_explicitFormula_pure and "
      "gabor_primeSide_rational_criterion_iff_rh "
      "(propext/Classical.choice/Quot.sound; no sorryAx); "
-     "census stays 7.  NO RH CLAIM",
+     "census stays 7.  r638L: retired assertions are no longer "
+     "#printed; project census 7->5.  NO RH CLAIM",
      True),
 
     # -- frozen libraries the modules embed byte-exact --
@@ -9716,7 +9991,7 @@ ENTRIES = [
      _R460_STATUS,
      True),
     (f"{EXP}/narrowband_weil_probe.py", "sealed_probe",
-     "r461",
+     "r461/r638L",
      [],
      _R461_STATUS,
      True),
@@ -9726,14 +10001,14 @@ ENTRIES = [
      _R462_STATUS,
      True),
     (f"{EXP}/lean_fidelity_probe.py", "sealed_probe",
-     "r463",
+     "r463/r638L",
      [],
-     _R463_STATUS,
+     _R463_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/inner_bridges_probe.py", "sealed_probe",
-     "r464",
+     "r464/r638L",
      [],
-     _R464_STATUS,
+     _R464_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/overlap_mechanism_probe.py", "sealed_probe",
      "r467",
@@ -9766,9 +10041,9 @@ ENTRIES = [
      _R474_STATUS,
      True),
     (f"{EXP}/arch_rate_probe.py", "sealed_probe",
-     "r475",
+     "r475/r638L",
      [],
-     _R475_STATUS,
+     _R475_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/crossterm_probe.py", "sealed_probe",
      "r476",
@@ -9826,9 +10101,9 @@ ENTRIES = [
      _R486_STATUS,
      True),
     (f"{EXP}/outer_bridges_probe.py", "sealed_probe",
-     "r487",
+     "r487/r638L",
      [],
-     _R487_STATUS,
+     _R487_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/resolvent_solve_probe.py", "sealed_probe",
      "r488",
@@ -9836,9 +10111,9 @@ ENTRIES = [
      _R488_STATUS,
      True),
     (f"{EXP}/outer_bridges2_probe.py", "sealed_probe",
-     "r489",
+     "r489/r638L",
      [],
-     _R489_STATUS,
+     _R489_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/operator_residual_probe.py", "sealed_probe",
      "r490",
@@ -9846,9 +10121,9 @@ ENTRIES = [
      _R490_STATUS,
      True),
     (f"{EXP}/outer_bridges3_probe.py", "sealed_probe",
-     "r491",
+     "r491/r638L",
      [],
-     _R491_STATUS,
+     _R491_STATUS + _R638L_RESEAL_NOTE,
      True),
     (f"{EXP}/kernel_loewner_probe.py", "sealed_probe",
      "r494",
@@ -10255,6 +10530,36 @@ ENTRIES = [
      [],
      _R633_STATUS,
      True),
+    (f"{EXP}/relay_lead_precision_probe.py", "sealed_probe",
+     "r635",
+     [],
+     _R635_STATUS,
+     True),
+    (f"{EXP}/relay_lead_law_probe.py", "sealed_probe",
+     "r636",
+     [],
+     _R636_STATUS,
+     True),
+    (f"{EXP}/relay_vote_map_probe.py", "sealed_probe",
+     "r637",
+     [],
+     _R637_STATUS,
+     True),
+    (f"{EXP}/gabor_first_contact_selberg_probe.py", "sealed_probe",
+     "r638",
+     [],
+     _R638_STATUS,
+     True),
+    (f"{EXP}/lamzouri_hilbert_adjudication_probe.py", "sealed_probe",
+     "r639",
+     [],
+     _R639_STATUS,
+     True),
+    ("rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean", "lean_module",
+     "r475-repair",
+     [],
+     _R475_REPAIR_STATUS,
+     True),
 ]
 
 
@@ -10383,6 +10688,10 @@ def main():
         f.write("\n")
     print("wrote %s  (%d entries, %d pinned)" % (
         OUT, len(entries), sum(1 for e in entries if e["pin"])))
+    try:
+        os.system("%s %s && %s %s --quiet" % (sys.executable, os.path.join(REPO, "rh", "catalog", "autodraft.py"), sys.executable, os.path.join(REPO, "rh", "catalog", "build_catalog.py")))
+    except Exception:
+        pass
     if missing:
         print("MISSING (not registered):")
         for m in missing:

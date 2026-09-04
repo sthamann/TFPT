@@ -12667,6 +12667,55 @@ route-agnostic and states only the target.  A Hopf-fiber uplift, a 4D cone, or a
 metric on the bridge (\vref{v957}) does \emph{not} close it.  Status:
 \texttt{SEAM.BULK4D.RECON.01} \mO.
 
+\par\smallskip\noindent\textbf{Spectator obstruction (2026-09-04, \veri{v1020\_\allowbreak spectator\_\allowbreak sector\_\allowbreak obstruction.py}).}
+Demand (B7) as worded---a \emph{unique} seam$\leftrightarrow$bulk operator dictionary from seam data
+alone---is unsatisfiable: for any decoupled anomaly-free sector $C$ with trivial boundary,
+$\partial(B\otimes C)=\partial(B)\otimes\mathbf 1=\partial(B)$, so $B$ and $B\oplus C$ share every
+seam datum.  A finite free-fermion witness (\veri{v1020\_\allowbreak spectator\_\allowbreak sector\_\allowbreak obstruction.py})
+exhibits this concretely (Chern, edge modes and seam-restricted covariance identical for $B$ and
+$B\oplus C$; the bulk differs).  Uniqueness is re-scoped to
+\texttt{BULK.PRIME\_COMPLETION.01} below (prime/seam-generated completions, trivial
+relative commutant); the status of \texttt{SEAM.BULK4D.RECON.01} is unchanged~\mO.
+
+% =====================================================================
+\section*{Research Contract --- \texttt{BULK.PRIME\_COMPLETION.01} (prime/seam-generated completions, no spectator)}
+\addcontentsline{toc}{section}{Research Contract: BULK.PRIME_COMPLETION.01}
+% =====================================================================
+\noindent\emph{Typing.} A research contract \mO\ (ledger row
+\texttt{BULK.PRIME\_COMPLETION.01}: Open, research contract), \emph{not} a claim.
+Registered 2026-09-04 from the r644 audit harvest; it replaces the ``unique from seam
+data alone'' reading of \texttt{SEAM.BULK4D.RECON.01}/B7 by uniqueness \emph{in the
+category of seam-generated (prime) completions}.  \textbf{Dimension typing}
+(\texttt{DIMENSION.UPLIFT.FIREWALL.01} F2): the hypothesis is $2{+}1$D free-fermion,
+the conclusion is a re-scoped $4$D demand.
+
+\par\smallskip\noindent\textbf{Demand.} (1) an explicit family of seam-derived subalgebras
+$\mathcal A_i$ (the seam CAR algebra, its time evolution, inclusions/intersections);
+(2) generatedness $\mathcal A_{\mathrm{bulk}}=\mathrm{vN}(\bigvee_i\mathcal A_i)$;
+(3) \emph{no-spectator}: trivial relative commutant
+$(\bigvee_i\mathcal A_i)'\cap\mathcal A_{\mathrm{bulk}}=\mathbb C\cdot\mathbf 1$,
+equivalently no decoupled tensor factor with trivial boundary map; (4) uniqueness
+\emph{only} within this category; (5) stability of (2)/(3) in the $3{+}1$D limit.
+
+\par\smallskip\noindent\textbf{Kill tests (pre-registered).} A seam-generated completion
+with nontrivial relative commutant, or two inequivalent prime completions.
+
+\par\smallskip\noindent\textbf{Finite witness (\veri{v1020\_\allowbreak spectator\_\allowbreak sector\_\allowbreak obstruction.py}).}
+In the $2{+}1$D free-fermion strip, stacking a trivial gapped sector $C$ (Chern $0$,
+gap $>1$) onto the seam model $B$ leaves every seam datum unchanged (Chern
+$C_B=C_{B\oplus C}=-1$, $C_C=0$; zero modes $2/0/2$ with $B$-support $1$; edge
+dispersion coincident to $1.4{\times}10^{-15}$; seam-restricted covariance identical to
+$0$; edge-profile overlap $1$) and changes the bulk (dimension $16$ vs $32$,
+$E_0(C)=-25.31$, mid-strip covariance rank $4$ vs $8$,
+$\|\Gamma_0-\Gamma_\alpha\|_{\mathrm{HS}}$ $0.752536$ vs $0.760202$).  Krylov
+generatedness and the commutant test separate $B$ from $B\oplus C$ by exactly $\dim C$
+at every momentum; $\Pi_C=0\oplus\mathbf 1$ lies in the commutant (residual $0$); selection
+is unique ($B$ selected, $B\oplus C$ rejected).  \emph{Honest:}
+$\mathrm{spectator\_dim}(B)=10$ at $p=0$ only (no onsite term at $M=1$), so the
+criterion is ``generated almost everywhere in $p$'', not pointwise.  The $2$D
+modular-invariant uniqueness of the holomorphic $(E_8)_1$ net is untouched and is
+\emph{not} a $4$D no-spectator theorem.  Status: \texttt{BULK.PRIME\_COMPLETION.01} \mO.
+
 % =====================================================================
 \section*{Research Contracts --- \texttt{DYN.MARKOV.EMBED.01} / \texttt{DYN.UNITARY.DILATION.01} (the three meanings of ``dynamics'')}
 \addcontentsline{toc}{section}{Research Contracts: DYN.MARKOV.EMBED.01 / DYN.UNITARY.DILATION.01}
@@ -13817,6 +13866,96 @@ $C_R<3$ (measured $N$-increments $0.120$--$0.123$, factor $\sim350$ headroom).  
 CAR nuclearity PROVED ($\nu_N\le e^{16 C_\beta}$; $C_\beta=(67.97,29.73,12.15)$ for
 $\beta=(0.5,1,2)$) as ALG specialist compactness input; ALG-EXH projector-identification
 UNCHANGED.  Display marker stays \mO.
+
+\subsection*{TEL-B reduction (2026-09-04)}
+\noindent The residual \texttt{TEL-B-EXTERNAL} is restated below.  The earlier scalar
+dyadic increment $\lvert\lVert R_{2N}\rVert-\lVert R_N\rVert\rvert\le A_R/N$ with
+$A_R<43$ sufficient for $C_R<3$ is superseded --- $A_R$ was measured $0.1238$ (r645)
+but is no longer the route.  Numerically closed
+($1.7833+0.7863=2.57<3$; conditional analytic $2.9495<3$ with $c_E=0.30$);
+analytically open at C1/C2a/C2b.  Not a marker move; display stays \mO.
+Evidence (experiments, not \texttt{veri}-citable):
+\texttt{experiments/tfpt-discovery/mmst\_\allowbreak telb\_\allowbreak trace\_\allowbreak decomposition\_\allowbreak probe.py},
+\texttt{mmst\_\allowbreak telb\_\allowbreak cover\_\allowbreak split\_\allowbreak probe.py},
+\texttt{mmst\_\allowbreak telb\_\allowbreak bound\_\allowbreak a\_\allowbreak probe.py} ($9/9$),
+\texttt{mmst\_\allowbreak telb\_\allowbreak bound\_\allowbreak b\_\allowbreak probe.py} ($17/20$, G18--G20 open by design).
+Load-bearing citations already in this section (v1016, v1006, v998 bound $2.11$)
+are unchanged.
+
+\par\smallskip\noindent\textbf{Cover identity and sawtooth split.}
+Corpus convention $e^{-ipx}$, $\alpha=\tfrac14$, $M=4N$, $d=x-y$.  The four-fold
+cover identity is
+\begin{equation*}
+  (\Gamma_0-\Gamma_\alpha)(x,y)
+  =(1-i)\,C_M(d+N)+2\,C_M(d+2N)+(1+i)\,C_M(d+3N).
+\end{equation*}
+The remainder splits as $R_N=R_N^{\mathrm{sm}}+M_N$ with
+$M_N=-(S_N+H_N)\otimes Q$.  The scalar sawtooth response has the closed form
+\begin{equation*}
+  s_N(x,y)=\frac{-(1+t^2)+3it-it^3}{4N(1-t^2)},\qquad
+  t=\tan\frac{\pi(x-y)}{4N}.
+\end{equation*}
+Triangle target: $\lVert R_N\rVert\le\lVert R_N^{\mathrm{sm}}\rVert+\lVert M_N\rVert<3$.
+
+\par\smallskip\noindent\textbf{Bound (A) --- certified numerically (all $N$).}
+The continuous family $F=P-\mathrm{saw}\cdot dP$ has vanishing derivative jump
+($\mathrm{rank}\,dF'=0$, $\lVert dF'\rVert=3.4{\times}10^{-10}$); the first
+discontinuity sits in $F''$ (rank~$4$, norm $2.000000029$).  The $2{\times}2$
+crossing lemma: edge--bulk coupling $4{\times}10^{-16}$.  All-mode BV bound
+$\lvert\hat F(m)\rvert\le\mathrm{TV}(F'')/(2\pi\lvert m\rvert)^3$ with
+$\mathrm{TV}_p\le15.928674$ (grids $15.607948/15.689440/15.730202$,
+Richardson ${+}1\,\%$).  Then $K_3^{\mathrm{TV}}=2.535127\ge K_3^{\mathrm{emp}}=0.319150$
+and $U_\infty=3.180007442<3.4225$, hence
+$\lVert R_N^{\mathrm{sm}}\rVert\le1.7833$ for all $N$.  One float64 constant (TV).
+
+\par\smallskip\noindent\textbf{Bound (B) --- reduced, one inequality open.}
+Relaxed target $\lVert S_N+H_N\rVert^2\le1.2167^2/2=0.740179$ (measured limit
+$0.5913$).  Write $S_N+H_N=A_\infty+\mathrm{Res}_N$ with
+$\lVert A_\infty\rVert^2=\tfrac54-8/\pi^2$ exact.  Lemma~6 cross term
+${}\le0.3813$ (all even $N\le512$, and $1024/2048/4096$).  Needed
+$\sum\lvert\mathrm{Res}_N\rvert^2\le0.276873914$; measured max $0.154983791$.
+Master identity (divided differences via the cotangent partial fraction; weight
+$\{(m+\alpha)/N\}$ is $N$-periodic; residual $2.3{\times}10^{-15}$).
+One-variable reduction
+\begin{equation*}
+  N\cdot\mathrm{Res}_N(k,l)
+  =r(u,v)
+  +A\frac{(1-\lambda)\,\Delta\eta-\lambda\,\Delta\varphi_N}{v-u}
+\end{equation*}
+(residual $1.16{\times}10^{-14}$), with $u=k/N$, $v=l/N$, $A=\sin^2(\pi\alpha)/\pi^2$,
+and
+\begin{align*}
+  \eta(k)
+  &=-\psi(k+1-\alpha)+\log\lvert k\rvert+\pi\cot(\pi\alpha)\,1_{k<0},\\
+  \varphi_N(k)
+  &=\Phi_N(k)-\log N-\gamma-\Phi_\star(k/N),\\
+  \Phi_\star(u)
+  &=\log\Bigl\lvert\frac{u}{\tan\pi u}\Bigr\rvert
+    -\pi\!\!\int_{u-1/2}^{u+1/2}\!\!\sigma\cot(\pi\sigma)\,d\sigma
+    -\pi u\cot(\pi\alpha).
+\end{align*}
+Closed bounds $\pi^2/3\le\Phi_\star''\le\pi^2-4$.  The kernel $r$ is singular
+only on $u=0$, $v=0$.  Two offset midpoint quadratures give
+$C_\star=\iint\lvert r\rvert^2=0.152044949/0.152045069$.
+Cell averages $(\mathcal K_N)_{kl}:=N\iint_{Q_{kl}}r$ obey
+$\lVert\mathcal K_N\rVert^2\le C_\star$ exactly (Cauchy--Schwarz on each cell).
+Measured $\sqrt N\,\lVert E_N\rVert=0.1943\ldots0.2013$ ($N=16\ldots512$).
+Required $c_E\le0.542702$, margin $2.70$.  Assembled
+$(\sqrt{0.1525}+0.2013/4)^2=0.1943<0.2769$.
+
+\par\smallskip\noindent\textbf{What remains (new residual \texttt{TEL-B-EXTERNAL}).}
+\textbf{(C1)}~rigorous enclosure $C_\star\le0.1525$.
+\textbf{(C2a)}~$\lvert\varphi_N(k)\rvert\le c_1/N$, $c_1\le0.51$, all even
+$N\ge16$ (one-dimensional Euler--Maclaurin/Poisson on the recentred cotangent
+sum; seam $k=-N/2$).
+\textbf{(C2b)}~cell-oscillation constants for $r$ off the two log lines
+(variable log coefficient, zero row/column control);
+plus interval enclosure of $\mathrm{TV}(F'')$.
+Dead routes (do not retry): absolute-value majorants ($3\sqrt N$); global BV
+majorant; per-cell log counterterms at $\pm\tfrac12$ (nothing to counterterm);
+shifted-cell majorisation (ratio $0.73$); Szeg\H{o}/Widom split
+(Fisher--Hartwig $\pi^{-2}\log N$ per summand); trace decomposition (each term
+diverges $\propto\log N$, cancellation $2/\pi^2+2/\pi^2-4/\pi^2$).
 
 % =====================================================================
 \section*{Research Contract --- \texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)}

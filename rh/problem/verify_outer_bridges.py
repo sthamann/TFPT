@@ -34,8 +34,10 @@ def main() -> int:
     check("zeta-interface-proved",
           "standard_weil_criterion_to_mathlib_rh_of_separation" in external
           and "by_contra hcritical" in external)
-    check("four-external-bricks",
-          external.count("\n  sorry") == 4)
+    check("r638L-one-external-brick",
+          external.count("\n  sorry") == 1
+          and "def StandardExplicitFormulaIdentification" in external
+          and "theorem standard_explicit_formula_identification :" not in external)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

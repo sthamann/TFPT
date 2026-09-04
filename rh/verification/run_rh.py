@@ -13,7 +13,7 @@ Runs, in order:
                     r608 + r609 + r611 + r613 + r615 +
                     r616 + r617 + r618 + r619 + r620 +
                     r621 + r622 + r623 + r625 + r626 +
-                    r627 + r628 + r629 + r630 + r632 + r633 from
+                    r627 + r628 + r629 + r630 + r632 + r633 + r635 + r636 + r637 + r638 from
                     experiments/tfpt-discovery/ in --smoke mode,
   (3) MODULES    -- the twenty RH verification modules v955/v956/v958/
                     v959/v960/v961/v962/v963/v964/v965/v966/v967/v968/
@@ -59,7 +59,7 @@ VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
 # + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 +
 # r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 +
 # r619 + r620 + r621 + r622 + r623 + r625 + r626 +
-# r627 + r628 + r629 + r630 + r632 + r633
+# r627 + r628 + r629 + r630 + r632 + r633 + r635 + r636 + r637 + r638
 # (order = round order); every entry supports --smoke.  This list
 # is frozen with the wave; extend it in the same change that
 # extends INVENTORY.json.
@@ -149,13 +149,17 @@ VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
 # r634L (gabor_explicitFormula_pure unconditional; prime-side
 # rational criterion gabor_primeSide_rational_criterion_iff_rh;
 # census stays 7; no new probe),
+# r638L (claim-boundary repair: two wrong-type asserting sorries
+# retired to unasserted Props; arch consumers take an explicit
+# hypothesis; census 7 -> 5; six existing text/census probes
+# resealed byte-deterministically; no new probe),
 # r605A (quantifier audit; FORALL_ZERO_OVERSPECIFIED; no new probe).
 # r605B+C (GaborExposedOrbit.lean; no new probe).
 # r605C-AUDIT (independent STATEMENT_SOUND; no new probe).
 # r544 is the sealed Gabor-uniformity scout (not Lean-only).
 # r548/r549/r551/r553/r560/r561/r563/r565/r567/r591/r592/r601/
 # r603/r604/r605N/r606/r607/r608/r609/r611/r613/r615/r616/r617/r618/
-# r619/r620/r621/r622/r623/r625/r626/r627/r628/r629/r630/r632/r633
+# r619/r620/r621/r622/r623/r625/r626/r627/r628/r629/r630/r632/r633/r635/r636/r637/r638
 # are sealed Gabor/prime/event/E8/Connes/Jensen/support
 # scouts (not Lean-only).
 # r601 is the sealed zero-side dominance subfamily scout.
@@ -192,10 +196,17 @@ VENV_PY = os.path.join(REPO, "experiments", "tfpt-discovery", ".venv",
 # r630 is the sealed margin-law symbolic-regression scout
 # (r630b N-limited-artifact addendum on the same file).
 # r633 is the sealed frontier-followups scout.
+# r635 is the sealed relay-lead precision scout.
+# r636 is the sealed relay-lead law scout.
+# r637 is the sealed relay vote-map scout.
+# r638 is the sealed first-contact/Selberg scout (Toeplitz gate).
 # r606/r606b is the sealed Connes prolate residual-gap scout
 # (r606b closure on the same file).
 # r634L Lean-only (pure EF unconditional + prime-side
 # rational criterion; census stays 7).
+# r638L Lean-only claim-boundary repair (census 7 -> 5);
+# existing r463/r464/r475/r487/r489/r491 probes carry the
+# updated text/census gates, so there is no separate probe row.
 # r554 mixture scout is sealed in INVENTORY but not smoked
 # here (leftover proxy later superseded by r560).
 # r561 pin is checked even though r563/r566 signed-refute
@@ -466,6 +477,11 @@ PROBES = [
     ("r630", "margin_law_symreg_probe.py"),
     ("r632", "jet_deflated_ldet_probe.py"),
     ("r633", "frontier_followups_probe.py"),
+    ("r635", "relay_lead_precision_probe.py"),
+    ("r636", "relay_lead_law_probe.py"),
+    ("r637", "relay_vote_map_probe.py"),
+    ("r638", "gabor_first_contact_selberg_probe.py"),
+    ("r639", "lamzouri_hilbert_adjudication_probe.py"),
 ]
 
 MODULES = [
@@ -581,7 +597,7 @@ def check_integrity(suite):
 
 
 def check_probes(suite):
-    section("(2) PROBES -- sealed campaign r250-r496 + r535-r537 + r539-r541 + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565 + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 + r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 + r619 + r620 + r621 + r622 + r623 + r625 + r626 + r627 + r628 + r629 + r630 + r632 + r633, --smoke mode")
+    section("(2) PROBES -- sealed campaign r250-r496 + r535-r537 + r539-r541 + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565 + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 + r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 + r619 + r620 + r621 + r622 + r623 + r625 + r626 + r627 + r628 + r629 + r630 + r632 + r633 + r635 + r636 + r637 + r638 + r639, --smoke mode")
     py = python_bin()
     cwd = os.path.join(REPO, "experiments", "tfpt-discovery")
     for rnd, probe in PROBES:

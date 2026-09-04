@@ -88,13 +88,12 @@ additionally consumes the ONE named dictionary import
 #print axioms pair_closes_main
 
 /-! ## (d) The Level-C extraction (classical kernel imports)
-Expected AND MEASURED (r376): `[propext, sorryAx, Classical.choice,
-Quot.sound]` -- honest: the ladder-free extraction consumes the ONE
-remaining typed CLASSICAL kernel-channel sorry
-(`arch_elementwise_stabilization`; the comb channel is unconditional
-and the pole channel is PROVED as the native-mesh second-difference
-pairing of `polePotential`), never the two arithmetic holes and never
-`SourceExact`/`MainWindow`. -/
+r638L: expected `[propext, Classical.choice, Quot.sound]` -- NO
+`sorryAx`.  The ladder-free extraction is now a function of the
+unasserted `ArchGaussMellinDigammaIdentity` contract; it no longer
+asserts the overstrong exact quadrature identity.  The comb channel is
+unconditional and the pole channel is PROVED as the native-mesh
+second-difference pairing of `polePotential`. -/
 
 #print axioms weil_nonneg_of_windowlocal
 #print axioms pole_elementwise_stabilization
@@ -193,10 +192,8 @@ NO RH CLAIM. -/
 Expected AND MEASURED: the sequence identities and cofinality
 theorems are sorry-free
 (`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`).
-`weil_nonneg_of_selected_windows` consumes the existing classical
-arch-channel sorry through `elementwise_finite_stabilization`, so
-`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
-`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+r638L makes `weil_nonneg_of_selected_windows` an explicit function of
+`ArchGaussMellinDigammaIdentity`; no arch `sorryAx` is consumed.
 Named Props (`selected_augDualResolvent_gt_half`,
 `SelectedMasterImpliesPlainReads`, `ExactArchAgreesWithArchRead`)
 are hypotheses, not holes.  Census of `sorry` declarations
@@ -284,13 +281,11 @@ at 5.  NO RH CLAIM. -/
 /-! ## (o) The r430 semidefinite / frequently-selected layer
 Expected AND MEASURED: the Loewner identities and the FREQ
 extraction (plain) plus density / mean-value arithmetic are
-sorry-free except that `weil_nonneg_of_frequently_plain` /
-`weil_nonneg_of_frequently_selected` /
-`internal_weil_nonneg_of_frequently_selected`
-consume the existing classical arch-channel sorry through
-`elementwise_finite_stabilization`, so those three carry
-`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
-`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+sorry-free.  Since r638L `weil_nonneg_of_frequently_plain`,
+`weil_nonneg_of_frequently_selected`, and
+`internal_weil_nonneg_of_frequently_selected` take
+`ArchGaussMellinDigammaIdentity` explicitly, so their expected axiom
+set is `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
 The spectral Loewner faces and the arithmetic lemmas are
 `[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`.
 Named Props (`frequently_selected_augDualResolvent_ge_half`,
@@ -327,17 +322,16 @@ Expected AND MEASURED: the real-window Loewner identification
 (`[propext, Classical.choice, Quot.sound]` -- NO `sorryAx`).
 `selectedSemidefImpliesPlainReads_of_A_cap` is the same
 (a function of the named remainder, no hole).
-`internal_weil_nonneg_of_frequently_selected_of_A_cap` consumes the existing
-arch-channel sorry through the FREQ extraction, so
-`[propext, sorryAx, Classical.choice, Quot.sound]` -- the same
-`sorryAx` as `weil_nonneg_of_windowlocal`, no new hole.
+`internal_weil_nonneg_of_frequently_selected_of_A_cap` is also an
+explicit function of the unasserted arch contract, so its expected
+axiom set is `[propext, Classical.choice, Quot.sound]`.
 
 MINCUT-PATH CENSUS (what `internal_weil_nonneg_of_frequently_selected` actually
 consumes):
-  ON PATH, sorry: `arch_gauss_mellin_digamma_identity` (classical;
-    `arch_elementwise_stabilization` is its proved wrapper).
+  ON PATH, named hypothesis: `ArchGaussMellinDigammaIdentity`
+    (historical exact-equality contract, known overstrong);
   Historical r461 sealed text-audit marker:
-  ON PATH, sorry: `arch_elementwise_stabilization`
+  ON PATH, formerly-sorry: `arch_elementwise_stabilization`
   ON PATH, named: `frequently_selected_augDualResolvent_ge_half`
     (the mincut) and `SelectedReadQuadraticRepresentation` (exact
     channel direction; r464 proves the finite PSD implication to
@@ -349,7 +343,12 @@ consumes):
     `GraphResolventIsLEnsembleInv`, `ExactArchAgreesWithArchRead`
     (the last would be consumed by any *proof* of the remaining
     read-identification, not by the FREQ theorems).
-Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
+Census of asserting `sorry` declarations is 5 after r638L.  NO RH
+CLAIM. -/
+
+/-! ARCH RATE REPAIR: `SelectedArchErrorQuadraticRate` is FALSIFIED.
+`SelectedArchErrorQuadraticRateExists` is OPEN pending
+`SelectedArchWeightedInterpolationEstimate`; its tendsto theorem is PROVED. -/
 
 #print axioms posSemidef_congruence_iff
 #print axioms PrimeWindow.hankel_eq_comb_sub_arch
@@ -361,7 +360,6 @@ Census of `sorry` declarations unchanged at 5.  NO RH CLAIM. -/
 #print axioms selectedACapPsdImpliesPlainReads_of_representation
 #print axioms selectedSemidefImpliesPlainReads_of_A_cap
 #print axioms internal_weil_nonneg_of_frequently_selected_of_A_cap
-#print axioms arch_gauss_mellin_digamma_identity
 #print axioms selectedACapPsdImpliesPolynomialReads
 #print axioms PrimeWindow.hankel_quadform
 #print axioms fullRead_weilForm_gap_eq_arch
@@ -378,8 +376,7 @@ native-grid pole dictionary into one typed completion `sorry`.
 External census returns from four to three; repository census 9 -> 8.
 `grid_dense_extension` remains a proved positivity-limit wrapper.
 The Mathlib endpoint wrapper is proved from the one named
-off-critical separation theorem.  Standard explicit-formula
-normalization remains one `sorry`.
+off-critical separation theorem.
 
 r491 corrects the polar integral sign (`+2 cosh`, because the r376
 pairing has an outer minus), makes `fullWeilArchSide` concrete, and
@@ -398,6 +395,13 @@ the common Lipschitz majorant and dominated convergence on
 statement.  External census 3 → 2; repository census 8 → 7.
 The remaining two outer-bridge `sorry`s are the Guinand–Weil
 dictionary and off-critical separation.
+
+r638L retires the gauge-mismatched corpus
+`standard_explicit_formula_identification` assertion: the historical
+Prop remains unasserted, while
+`standard_explicit_formula_identification_honest` is the proved
+dictionary.  External census 2 → 1 and repository census 7 → 5; the
+remaining external `sorry` is off-critical compact separation.
 
 r497 scopes the remaining lane: [2] before [3], because [3] is
 stated on the opaque `standardExplicitFormula`.  Brick [2a] is
@@ -868,7 +872,7 @@ The internal endpoint is deliberately not named RH. -/
 #print axioms fullWeil_fixedSupport_grid_density
 #print axioms fullWeil_channel_continuity
 #print axioms grid_dense_extension
-#print axioms standard_explicit_formula_identification
+#print axioms standard_explicit_formula_identification_honest
 #print axioms standard_weil_criterion_to_mathlib_rh_of_separation
 #print axioms fullWeil_separates_offCritical_zeros
 #print axioms standard_weil_criterion_to_mathlib_rh

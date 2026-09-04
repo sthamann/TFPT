@@ -42,13 +42,15 @@ ladder and NO transport.  This file implements that quantifier set:
         predefined from the element's support alone (the R310
         `finite_forms_converge_to_weil` shape, elementwise and in the
         corpus gauge), the pole channel PROVED as the native-mesh
-        second-difference of `polePotential` (r376), the arch kernel
-        channel as a TYPED sorry (classical analysis -- `arch_A` is
-        not a second difference of a named elementary antiderivative;
-        Gauss/Mellin missing from mathlib v4.29.1), and the full-form
-        statement `elementwise_finite_stabilization` PROVED from the
-        three channels;
-  (iii) `weil_nonneg_of_windowlocal` (PROVED -- a finite
+        second-difference of `polePotential` (r376), and the
+        historically asserted arch exact-equality seam now retained
+        only as the unasserted Prop
+        `ArchGaussMellinDigammaIdentity`.  The full-form and
+        extraction theorems are explicit functions of that
+        hypothesis; the selected-path `O(Delta^2)` replacement lives
+        in `RH/InnerBridges.lean`;
+  (iii) `weil_nonneg_of_windowlocal` (PROVED from the explicit arch
+        hypothesis -- a finite
         instantiation, NO ladder, NO (H_cof)): window-local
         positivity of the canonical family on the native class
         implies Weil-form nonnegativity on every grid element; plus
@@ -92,15 +94,16 @@ density/continuity step (R325 leg C: rate-controlled quadrature
 defect inside the closed-form interpolation envelope -- not a
 positivity ladder), which is deliberately NOT formalized here.
 
-SORRY CENSUS OF THIS FILE (r376): exactly ONE typed `sorry` —
-`arch_elementwise_stabilization` (CLASSICAL, S2).  The pole-channel
+SORRY CENSUS OF THIS FILE (r638L): ZERO.  The overstrong historical
+arch exact-equality statement is an unasserted Prop and every theorem
+that uses it takes it as an explicit hypothesis.  The pole-channel
 stabilization is PROVED (native-mesh second-difference transcription
 of `pole_lags_closed`, parallel to mesh-free `combRead`).  The
-source-exact completion is demoted to the named Prop
+source-exact completion remains the named Prop
 `SourceExactOfFamilyCompletion` (opacity-forced, not a hole; the
 transcribable half is `sourceExact_buildPrimeWindow`).  Named, not
 asserted: `PoleDyadicIndependence` (dyadic refinement of the pole
-pairing).  Extraction consumes only the arch sorry.
+pairing).  No false exact quadrature identity is asserted.
 
 Claim boundary: research documentation.  NOT evidence for or against
 the Riemann Hypothesis in either direction.  NO RH CLAIM.
@@ -1565,7 +1568,8 @@ def PoleDyadicIndependence : Prop :=
   ∀ f : GridElement, ∀ m, f.meshExp ≤ m →
     poleEvenRead m f = poleEvenRead f.meshExp f
 
-/-- **The one analytical remainder (r464; r475 diagnosis).**
+/-- **Historical analytical contract (r464; retired as an assertion in
+r638L after the r475 diagnosis).**
 Exact eventual equality `archRead = weilArchSide` for every
 `a ≥ a₀` and every `m ≥ meshExp`.  This quantifier is too strong:
 at fixed `m`, `productionArchDelta a m = log a / (m+1) → ∞` as
@@ -1573,27 +1577,23 @@ at fixed `m`, `productionArchDelta a m = log a / (m+1) → ∞` as
 exhibits a mesh-and-onset-compatible witness with a genuine
 positive arch tent error.  The correct remnant is the
 selected-path `O(Δ²)` rate in `RH/InnerBridges.lean`.  The
-theorem is retained (FREQ extraction still consumes it) and
-remains a `sorry`.  Mathlib's Gauss integral is isolated as
+contract is retained only as an unasserted Prop; any historical
+extraction that uses it must supply it explicitly.  Mathlib's Gauss
+integral is isolated as
 `GaussDigammaIntegralRepresentation`, not a second `sorry`. -/
 def ArchGaussMellinDigammaIdentity : Prop :=
   ∀ f : GridElement,
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       archRead a m f = weilArchSide f
 
-/-- Historical exact-equality seam.  Not closed in r475: the
-quantifier is incompatible with tent refinement, and Mathlib
-still lacks Gauss's integral.  Census keeps this one `sorry`. -/
-theorem arch_gauss_mellin_digamma_identity :
-    ArchGaussMellinDigammaIdentity := by
-  sorry
-
-/-- **the arch-channel elementwise stabilization** is now a direct
-application of the single named analytical identity. -/
-theorem arch_elementwise_stabilization (f : GridElement) :
+/-- **The historical arch-channel stabilization, conditionalized in
+r638L.**  This is only a projection from the unasserted contract; it
+does not claim that the overstrong exact equality holds. -/
+theorem arch_elementwise_stabilization
+    (hArch : ArchGaussMellinDigammaIdentity) (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       archRead a m f = weilArchSide f :=
-  arch_gauss_mellin_digamma_identity f
+  hArch f
 
 /-- **the pole-channel elementwise stabilization** (r376 -- PROVED).
 The pole tent-read is the native-mesh second-difference pairing of
@@ -1627,19 +1627,21 @@ noncomputable def weilForm (f : GridElement) : ℝ :=
   weilArchSide f - weilCombSide f + weilPoleSide f
 
 /-- **THE ELEMENTWISE FINITE STABILIZATION** (r326, R325 target form
-(ii); PROVED from the three channels -- the comb channel
-unconditionally, the arch channel through its typed sorry
-above, the pole channel unconditionally).  For every grid element there is a finite anchor onset `a₀`
+(ii); conditionalized honestly in r638L).  It is PROVED from the comb
+and pole channels unconditionally and from an explicit
+`ArchGaussMellinDigammaIdentity` hypothesis for the arch channel.
+For every grid element there is a finite anchor onset `a₀`
 such that for EVERY anchor `a ≥ a₀` and every mesh level at or below
 the element's native mesh (`m ≥ f.meshExp` -- the predefined `m_f`),
 the full finite window form EQUALS the Weil form.  The onset is
 elementwise (`a₀` depends on `f` -- for the comb channel explicitly:
 `elementAnchor f` from the support alone); NO mesh-cofinal ladder,
 NO transport, NO (H_cof) appears. -/
-theorem elementwise_finite_stabilization (f : GridElement) :
+theorem elementwise_finite_stabilization
+    (hArch : ArchGaussMellinDigammaIdentity) (f : GridElement) :
     ∃ a₀ : ℕ, ∀ a : ℕ, a₀ ≤ a → ∀ m : ℕ, f.meshExp ≤ m →
       fullRead a m f = weilForm f := by
-  obtain ⟨aA, hA⟩ := arch_elementwise_stabilization f
+  obtain ⟨aA, hA⟩ := arch_elementwise_stabilization hArch f
   obtain ⟨aP, hP⟩ := pole_elementwise_stabilization f
   refine ⟨max f.elementAnchor (max aA aP), fun a haa m hm => ?_⟩
   have h1 : f.elementAnchor ≤ a := le_trans (le_max_left _ _) haa
@@ -1686,13 +1688,15 @@ a prime anchor `a ≥ a₀` (Euclid, `Nat.exists_infinite_primes` -- a
 FINITE choice, not a cofinal tower), and the element's own native
 mesh `m = f.meshExp`; then `weilForm f = fullRead a m f ≥ 0`.  This
 REPLACES the (H_cof) route: no mesh-refinement PSD tower is consumed
-anywhere.  (Modulo the one typed arch-kernel sorry inside the
-stabilization; the comb-only instantiation is unconditional.)  NO RH
-CLAIM: the premise is exactly the open window-local content. -/
-theorem weil_nonneg_of_windowlocal (hpos : WindowLocalPositive) :
+anywhere.  The overstrong historical arch contract is now an explicit
+hypothesis rather than an asserted `sorry`.  NO RH CLAIM: the premise
+is exactly the open window-local content. -/
+theorem weil_nonneg_of_windowlocal
+    (hArch : ArchGaussMellinDigammaIdentity)
+    (hpos : WindowLocalPositive) :
     ∀ f : GridElement, 0 ≤ weilForm f := by
   intro f
-  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization f
+  obtain ⟨a₀, hstab⟩ := elementwise_finite_stabilization hArch f
   obtain ⟨p, hp₀, hp⟩ := Nat.exists_infinite_primes a₀
   have h := hpos p f.meshExp hp.prime.isPrimePow f (le_refl _)
   rwa [hstab p hp₀ f.meshExp (le_refl _)] at h
@@ -1719,11 +1723,12 @@ from (iii)): bordered window-local positivity plus the named bridge
 give the same Weil-form conclusion. -/
 theorem weil_nonneg_of_bordered
     (borderedRead : ℕ → ℕ → GridElement → ℝ)
+    (hArch : ArchGaussMellinDigammaIdentity)
     (hbridge : BorderedCompressionBridge borderedRead)
     (hpos : ∀ (a m : ℕ), IsPrimePow a → ∀ f : GridElement,
       f.meshExp ≤ m → 0 ≤ borderedRead a m f) :
     ∀ f : GridElement, 0 ≤ weilForm f :=
-  weil_nonneg_of_windowlocal fun a m ha f hm =>
+  weil_nonneg_of_windowlocal hArch fun a m ha f hm =>
     hbridge a m ha f hm (hpos a m ha f hm)
 
 end RH

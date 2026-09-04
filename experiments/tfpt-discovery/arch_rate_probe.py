@@ -92,9 +92,10 @@ def text_gates() -> None:
     check("gauss-isolated-not-sorry",
           "def GaussDigammaIntegralRepresentation" in elementwise
           and "Prove Gauss' integral representation" in digamma)
-    check("exact-identity-sorry-retained",
-          elementwise.count("theorem arch_gauss_mellin_digamma_identity") == 1
-          and "ArchGaussMellinDigammaIdentity := by\n  sorry" in elementwise)
+    check("exact-identity-unasserted-r638L",
+          "def ArchGaussMellinDigammaIdentity" in elementwise
+          and "theorem arch_gauss_mellin_digamma_identity" not in elementwise
+          and "(hArch : ArchGaussMellinDigammaIdentity)" in elementwise)
     check("delta-blows-at-fixed-mesh",
           "theorem productionArchDelta_tendsto_atTop" in inner
           and "\n  sorry" not in inner)

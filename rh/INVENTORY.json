@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-09-02",
+  "generated": "2026-09-04",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -1858,12 +1858,12 @@
     {
       "path": "rh/lean/RH/Selected.lean",
       "role": "lean_module",
-      "round": "r397",
+      "round": "r397/r638L",
       "ledger_ids": [],
-      "status": "r397 exact selected domain: RealCanonicalWindow (R-fields, extends PrimeWindow) plus total construction W^R(a,m) = ExactFold(ExactPrimeSource, ExactArch, ExactBorder, ExactBudget); selected sequence a_k=2^k, m_k=k*2^floor(sqrt(k))-1 with Delta_k=2^{-r_k}*log 2, a_k->inf, Delta_k->0 PROVED; reduction weil_nonneg_of_selected_windows (plain fullRead along the sequence; consumes existing arch sorry); named mincut selected_augDualResolvent_gt_half.  lstar_canonical / terminal_q_canonical degraded to alternative route.  Zero sorry in this file; census stays 5.  NO RH claim",
+      "status": "r397 exact selected domain: RealCanonicalWindow (R-fields, extends PrimeWindow) plus total construction W^R(a,m) = ExactFold(ExactPrimeSource, ExactArch, ExactBorder, ExactBudget); selected sequence a_k=2^k, m_k=k*2^floor(sqrt(k))-1 with Delta_k=2^{-r_k}*log 2, a_k->inf, Delta_k->0 PROVED; reduction weil_nonneg_of_selected_windows (plain fullRead along the sequence; consumes existing arch sorry); named mincut selected_augDualResolvent_gt_half.  lstar_canonical / terminal_q_canonical degraded to alternative route.  Zero sorry in this file; census stays 5.  r638L: arch contract is explicit; file remains sorry-free.  NO RH claim",
       "pin": true,
-      "sha256": "0beb49aab6aefbda72858556a72e2970868bc9546968843f0ce7ba2f5951f233",
-      "bytes": 21002
+      "sha256": "8f8407e9851c895bc25719efe7ce3c600f784a96fc1b0d0013952b0ac6542ea4",
+      "bytes": 21065
     },
     {
       "path": "rh/lean/RH/OneDefect.lean",
@@ -3988,12 +3988,12 @@
     {
       "path": "rh/problem/verify_quadrep.py",
       "role": "problem_check",
-      "round": "r470 companion",
+      "round": "r470 companion/r638L",
       "ledger_ids": [],
-      "status": "machine check of r470 obstruction: original channel unweakened, quantifier witness proved, named signed obstruction, sorry census 8, numeric probe.  6/6 gates, final line QUADREP VERIFIED",
+      "status": "machine check of r470 obstruction: original channel unweakened, quantifier witness proved, named signed obstruction, historical sorry census 8, numeric probe.  6/6 gates, final line QUADREP VERIFIED.  r638L reseal: project census 5, external 1; no RH claim",
       "pin": true,
-      "sha256": "6f8e520c1255d02c1caa0ed632e8e230aab602c982dba62760f4170402c3e06f",
-      "bytes": 2791
+      "sha256": "d06a75a00bd3527399fafe71094dc1609e63e57850ffc03e5977bb3a0753c22b",
+      "bytes": 2797
     },
     {
       "path": "rh/problem/quadrep.pdf",
@@ -4048,12 +4048,12 @@
     {
       "path": "rh/problem/verify_extraction_joint.py",
       "role": "problem_check",
-      "round": "r473 companion",
+      "round": "r473 companion/r638L",
       "ledger_ids": [],
-      "status": "machine check of r473 extraction joint: polynomial bridge proved, named approx and redesigned joint, historical endpoint retained, artefact pins, sorry census 8, numeric probe.  6/6 gates, final line EXTRACTION JOINT VERIFIED",
+      "status": "machine check of r473 extraction joint: polynomial bridge proved, named approx and redesigned joint, historical endpoint retained, artefact pins, historical sorry census 8, numeric probe.  6/6 gates, final line EXTRACTION JOINT VERIFIED.  r638L reseal: project census 5, external 1; no RH claim",
       "pin": true,
-      "sha256": "aae6f5828bbe8adb2859a0cb0f659c4850814c608f98492015febef6dd5d46a7",
-      "bytes": 2941
+      "sha256": "69bc25096cc9fd7bb236198c64ffcabf917683270e33f9841c86861696a01c74",
+      "bytes": 2947
     },
     {
       "path": "rh/problem/extraction_joint.pdf",
@@ -4100,7 +4100,7 @@
       "role": "problem_statement",
       "round": "r475",
       "ledger_ids": [],
-      "status": "arch identity isolation and tent rate (round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; experiments-side, NO ledger row): VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2.  F1(ii) not closed as exact equality: productionArchDelta_tendsto_atTop proved (Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 still lists Gauss integral as TODO, isolated as named Prop GaussDigammaIntegralRepresentation (not a sorry).  weilArchSide is now the concrete u-space pairing.  Selected-path rate O(Delta_k^2) named SelectedArchErrorQuadraticRate; selectedArchError_tendsto_zero_of_rate proved (fixed-f convergence, not infinitely-many-k positivity).  Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 (k=5..8, err/D2=3.9893) and err=0.028876619985 at Delta=0.0866433976 (k=9..12, err/D2=3.8466).  Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census remains 8.  Companion rh/problem/arch_rate.tex + verify_arch_rate.py ARCH RATE VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "arch identity isolation and tent rate (round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; experiments-side, NO ledger row): VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2 (numeric large-support) + FIXED_CONSTANT_FALSIFIED (r475-repair).  F1(ii) not closed as exact equality: productionArchDelta_tendsto_atTop proved (Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 still lists Gauss integral as TODO, isolated as named Prop GaussDigammaIntegralRepresentation (not a sorry).  weilArchSide is now the concrete u-space pairing.  O(Delta_k^2) rate numerically supported (ratios 3.85-3.99 on k=5-12); fixed archRateConst = 4(1+1/64)^2 = 4.1259765625 FALSIFIED in the small-support regime (steps=1, meshExp=6, x0=1: err/Delta^2 = 8.0283458222 > 4.1259765625; Lean-certified endpoint-kink defect -theta(1-theta)/2).  Named Prop SelectedArchErrorQuadraticRate kept with falsification comment; correct interface is SelectedArchErrorQuadraticRateExists (exists C(f)); selectedArchError_tendsto_zero_of_rateExists proved; SelectedArchWeightedInterpolationEstimate OPEN.  Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 (k=5..8, err/D2=3.9893) and err=0.028876619985 at Delta=0.0866433976 (k=9..12, err/D2=3.8466).  Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census remains 5 (five protected).  Companion rh/problem/arch_rate.tex + verify_arch_rate.py ARCH RATE VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
       "pin": true,
       "sha256": "7c8d3f0642734b0aeb49820745e5a3c9e7b6bd19cc8b321e4f2f1c6d42b02662",
       "bytes": 5753
@@ -4108,12 +4108,12 @@
     {
       "path": "rh/problem/verify_arch_rate.py",
       "role": "problem_check",
-      "round": "r475 companion",
+      "round": "r475 companion/r638L/r475-repair",
       "ledger_ids": [],
-      "status": "machine check of r475 arch rate: weilArchSide concrete, Gauss named not sorry, O(Delta^2) rate named, tendsto proved, exact-identity sorry retained, artefact pins, sorry census 8, numeric probe.  6/6 gates, final line ARCH RATE VERIFIED",
+      "status": "machine check of r475 arch rate: weilArchSide concrete, Gauss named not sorry, O(Delta^2) rate named (numeric large-support ratios 3.85-3.99), tendsto proved, exact-identity historically sorry retained, artefact pins, historical sorry census 8, numeric probe.  6/6 gates, final line ARCH RATE VERIFIED.  r638L reseal: arch contract unasserted, project census 5, external 1.  r475-repair: fixed archRateConst FALSIFIED (8.0283 > 4.1259765625); Exists C(f) OPEN; no RH claim",
       "pin": true,
-      "sha256": "ccbeb3ac808aad152fc553555b4ed6503f94d3060199331f0fac7c35ae5e3787",
-      "bytes": 2976
+      "sha256": "328077d24da2a94981f14f382f9f3cced8dcc9d910138f013c1f9856da690fca",
+      "bytes": 3053
     },
     {
       "path": "rh/problem/arch_rate.pdf",
@@ -4468,12 +4468,12 @@
     {
       "path": "rh/problem/verify_outer_bridges.py",
       "role": "problem_check",
-      "round": "r487 companion",
+      "round": "r487 companion/r638L",
       "ledger_ids": [],
-      "status": "machine check of r487 outer bridges: density decomposition, sorry-free positivity transfer and zeta interface wrapper, four external bricks, structural smoke.  6/6 gates, final line OUTER BRIDGES VERIFIED",
+      "status": "machine check of r487 outer bridges: density decomposition, sorry-free positivity transfer and zeta interface wrapper, historically four external bricks, structural smoke.  6/6 gates, final line OUTER BRIDGES VERIFIED.  r638L reseal: external census 1, project census 5; no RH claim",
       "pin": true,
-      "sha256": "7b60fa5485a6b8b8f7781d13a38eb1a34b9882d40b7b1ce16375dfc65bc858ca",
-      "bytes": 2012
+      "sha256": "645c1bb2cf29a5a850ceb5738afa76ef10e84f053323f5e287317510f937684b",
+      "bytes": 2169
     },
     {
       "path": "rh/problem/outer_bridges.pdf",
@@ -4528,12 +4528,12 @@
     {
       "path": "rh/problem/verify_outer_bridges2.py",
       "role": "problem_check",
-      "round": "r489 companion",
+      "round": "r489 companion/r638L",
       "ledger_ids": [],
-      "status": "machine check of r489 outer bridges: uniform fixed-support topology, compact L2 witness, comb and polar-integral continuity, one dense completion sorry, structural smoke.  6/6 gates, final line OUTER BRIDGES 2 VERIFIED",
+      "status": "machine check of r489 outer bridges: uniform fixed-support topology, compact L2 witness, comb and polar-integral continuity, historical one dense completion sorry, structural smoke.  6/6 gates, final line OUTER BRIDGES 2 VERIFIED.  r638L reseal: external census 1, project census 5; no RH claim",
       "pin": true,
-      "sha256": "4dbba1bb7ee41fc9f414f5a251291760590fd45782ed4c46cea4bc2ddce4ee9f",
-      "bytes": 2060
+      "sha256": "d2c1d9863beaa8247a8ce98e57a3cc4c3cffe23ba070975f0da7f6fdff1ce351",
+      "bytes": 2141
     },
     {
       "path": "rh/problem/outer_bridges2.pdf",
@@ -4588,12 +4588,12 @@
     {
       "path": "rh/problem/verify_outer_bridges3.py",
       "role": "problem_check",
-      "round": "r491 companion",
+      "round": "r491 companion/r638L",
       "ledger_ids": [],
-      "status": "machine check of r491 outer bridges: polar sign, concrete full arch, explicit dyadic construction and support bound, exact pole hat seam, honest unchanged census, structural smoke.  7/7 gates, final line OUTER BRIDGES 3 VERIFIED -- REDUCED",
+      "status": "machine check of r491 outer bridges: polar sign, concrete full arch, explicit dyadic construction and support bound, exact pole hat seam, historically honest unchanged census, structural smoke.  7/7 gates, final line OUTER BRIDGES 3 VERIFIED -- REDUCED.  r638L reseal: external census 1, project census 5; no RH claim",
       "pin": true,
-      "sha256": "81c2b809b92c9c661043c1490c64524cda6289338da8afb5e9a50e77e4db11c4",
-      "bytes": 2057
+      "sha256": "0cd86d5cd0d9761acbae938f4458212e583136abbe617a2b05d0aa79730b3ee5",
+      "bytes": 2141
     },
     {
       "path": "rh/problem/outer_bridges3.pdf",
@@ -4738,32 +4738,32 @@
     {
       "path": "rh/lean/RH/ExternalBridges.lean",
       "role": "lean_module",
-      "round": "r517-r532",
+      "round": "r517-r532/r638L",
       "ledger_ids": [],
-      "status": "Lean-only outer-bridge campaign r517-r532 (commits 4bf75f4f..7fb2dbb0; no sealed probe).  r517 CONTOUR_IDENTITY contour_identity_fixed_T; r518 GAP_WIRED exists_gap_height; r519 BC_WIRED norm_logDeriv_le_of_log_norm_le; r520 LANDAU_SUM_WIRED gap sum O(log^2 T); r521 LANDAU_WIRED horizontalEdgeLandauBound theorem; r522 CONTOUR_RESTATED contour_identity_fixed_T_of; r523 WINDOW+PSI exists_gap_sequence_landau; r524 LANDAU_A horizontalEdgeLandauBound_of_gap; r525 PSI_OPEN route A; r526 PSI_ANCHORED DigammaHorizontalLogBound theorem; r527 SLIVER_WIRED sliverEdgeBound_negIm; r528 HORIZONTALS_CLOSED horizontalEdgesTendstoZero; r529 LEFT_EDGE leftEdgeLogDerivBound; r530 LIMIT_IDENTITY contourIdentityLimitAlongGaps (spectral side of the explicit formula); r531 HAT_INVERSION hat_fourier_inversion (standardExplicitFormula now the spectral pairing); r532 RIGHT_PRIME rightVerticalIntegral_eq_prime_sum (2 Lambda/sqrt(n) gauge pinned, unclaimed).  Theorems (not OPEN): fullWeil_dyadic_sample_convergence, gridPoleHatIntegralIdentity, fullWeil_channel_continuity.  Remaining external sorrys: standard_explicit_formula_identification, fullWeil_separates_offCritical_zeros.  Sorry census was 7 through r538 (external 2, internal 5).  r542-r553 Gabor campaign is a separate module (RH/GaborSeparation.lean / GaborThetaBound.lean); this file is unchanged as the compact/honest-Weil carrier.  Living document.  NO RH CLAIM",
+      "status": "Lean-only outer-bridge campaign r517-r532 (commits 4bf75f4f..7fb2dbb0; no sealed probe).  r517 CONTOUR_IDENTITY contour_identity_fixed_T; r518 GAP_WIRED exists_gap_height; r519 BC_WIRED norm_logDeriv_le_of_log_norm_le; r520 LANDAU_SUM_WIRED gap sum O(log^2 T); r521 LANDAU_WIRED horizontalEdgeLandauBound theorem; r522 CONTOUR_RESTATED contour_identity_fixed_T_of; r523 WINDOW+PSI exists_gap_sequence_landau; r524 LANDAU_A horizontalEdgeLandauBound_of_gap; r525 PSI_OPEN route A; r526 PSI_ANCHORED DigammaHorizontalLogBound theorem; r527 SLIVER_WIRED sliverEdgeBound_negIm; r528 HORIZONTALS_CLOSED horizontalEdgesTendstoZero; r529 LEFT_EDGE leftEdgeLogDerivBound; r530 LIMIT_IDENTITY contourIdentityLimitAlongGaps (spectral side of the explicit formula); r531 HAT_INVERSION hat_fourier_inversion (standardExplicitFormula now the spectral pairing); r532 RIGHT_PRIME rightVerticalIntegral_eq_prime_sum (2 Lambda/sqrt(n) gauge pinned, unclaimed).  Theorems (not OPEN): fullWeil_dyadic_sample_convergence, gridPoleHatIntegralIdentity, fullWeil_channel_continuity.  Remaining external sorrys: standard_explicit_formula_identification, fullWeil_separates_offCritical_zeros.  Sorry census was 7 through r538 (external 2, internal 5).  r542-r553 Gabor campaign is a separate module (RH/GaborSeparation.lean / GaborThetaBound.lean); this file is unchanged as the compact/honest-Weil carrier.  Living document.  r638L: corpus assertion retired; honest theorem retained; external census 2->1.  NO RH CLAIM",
       "pin": false,
-      "sha256": "ccaa16dd6cf1f1d3dd316b7527eaeb3c63ca7fc3bb6627fc9d0ab2c62448dea7",
-      "bytes": 710247
+      "sha256": "73886479d9e7ca1e0d2bd69419e29cf00e1377167763be0c8d47ad7991e5fdb0",
+      "bytes": 710130
     },
     {
       "path": "rh/lean/RH/Open.lean",
       "role": "lean_module",
-      "round": "r517-r634L",
+      "round": "r517-r638L",
       "ledger_ids": [],
-      "status": "r517-r532 census blocks plus r542-r612 Gabor-input notes in RH/Open.lean.  Tracked sorry census 9 -> 8 at r581 (GaborSeparation 1; GaborExplicitFormula 0; ExternalBridges still 2); stays 8 through r605; 8 -> 7 at r612 (GaborSeparation 0).  EF for the Gabor class is a Lean theorem (r581).  Canonical constant + log + BoundLog2 dominance are theorems (r571/r575/r583); r573 audit STATEMENT_WEAKENED (finite proxy).  r584-r588: tsum<=Closed, unrestricted On/Off-split, and weighted Bridge-6 identification are theorems; zeta != 0 on (0,1) real.  r589: window->BoundLog2 bridge theorem; L2 verdict BRIDGE_A_IS_RH_CORE (singleton route is not a translation lemma).  r590: existential arithmetic endpoint + parallel Mathlib chain.  r591: fixed-packet cofinal only with extremality.  r592: window-adaptive tail CONDITIONAL (IEEE omega-floor at extreme near-tie).  r593/r594: outer-tail theorem (tsum<=exp and tail<eps*E).  r595: three-term glue + per-T checkpoint; named gap GaborWindowAdaptiveUniformDelta.  r596-r598: L2 ANKER_TEILWEISE; log-glue theorem; zeroSide<0 at own packet; Cover is the remaining geometric rest.  r599/r600 vacuity audit (r602 docs): old hpos on gaborSpectralFormula is FALSE; live object gaborZeroSide (hpos*); GaborSpectralToArithmetic_holds is the pole-sign lemma hat(1)>=0, NOT RH-core; historical Mathlib wrappers VACUOUS (r600).  GaborAnchoredWitnessExists NOT asserted.  Open: GaborAnchoredCoverAt (ordinate clusters), GaborAnchoredWitnessExists, GaborWindowAdaptiveUniformDelta (T-uniform delta; lex host-retune), GaborTruncationUniformNeg, GaborWeightedTruncationGammaDistinct, GaborFixedPacketCofinalNegAt (extremality gap), r612: asserting gabor_separationForAllZeros deleted; Prop GaborSeparationForAllZeros retained unasserted (OVERSPECIFIED/believed-false); GaborCountableCriterion module (r612C: rational-packet iff RH unconditional; GaborZeroSideContinuous proved).  r610: GaborLowHeightZeroFree T0 unasserted; gaborSpectralFormula_refuted_of_lowHeight.  r605-r607/r608/r609/r611/r613 documented in Open.lean docstrings.  Named open tsum Z(F0)<pi e^{1/8} and on-line positivity beyond pure family (drop hline).  r631L: sorry classification R/T/A (census stays 7; no closure).  r634L docstring: live endpoint is the unconditional pure EF gabor_explicitFormula_pure plus prime-side criterion gabor_primeSide_rational_criterion_iff_rh (RH <=> forall rational (a, omega): POLE - PRIME + ARCH >= 0; axioms propext/Classical.choice/Quot.sound); remaining EF brick GaborHatQuarticExplicitRemainder (non-pure quartics).  Conditional Gabor reduction only; separation stays [O].  NO RH CLAIM",
+      "status": "r517-r532 census blocks plus r542-r612 Gabor-input notes in RH/Open.lean.  Tracked sorry census 9 -> 8 at r581 (GaborSeparation 1; GaborExplicitFormula 0; ExternalBridges still 2); stays 8 through r605; 8 -> 7 at r612 (GaborSeparation 0).  EF for the Gabor class is a Lean theorem (r581).  Canonical constant + log + BoundLog2 dominance are theorems (r571/r575/r583); r573 audit STATEMENT_WEAKENED (finite proxy).  r584-r588: tsum<=Closed, unrestricted On/Off-split, and weighted Bridge-6 identification are theorems; zeta != 0 on (0,1) real.  r589: window->BoundLog2 bridge theorem; L2 verdict BRIDGE_A_IS_RH_CORE (singleton route is not a translation lemma).  r590: existential arithmetic endpoint + parallel Mathlib chain.  r591: fixed-packet cofinal only with extremality.  r592: window-adaptive tail CONDITIONAL (IEEE omega-floor at extreme near-tie).  r593/r594: outer-tail theorem (tsum<=exp and tail<eps*E).  r595: three-term glue + per-T checkpoint; named gap GaborWindowAdaptiveUniformDelta.  r596-r598: L2 ANKER_TEILWEISE; log-glue theorem; zeroSide<0 at own packet; Cover is the remaining geometric rest.  r599/r600 vacuity audit (r602 docs): old hpos on gaborSpectralFormula is FALSE; live object gaborZeroSide (hpos*); GaborSpectralToArithmetic_holds is the pole-sign lemma hat(1)>=0, NOT RH-core; historical Mathlib wrappers VACUOUS (r600).  GaborAnchoredWitnessExists NOT asserted.  Open: GaborAnchoredCoverAt (ordinate clusters), GaborAnchoredWitnessExists, GaborWindowAdaptiveUniformDelta (T-uniform delta; lex host-retune), GaborTruncationUniformNeg, GaborWeightedTruncationGammaDistinct, GaborFixedPacketCofinalNegAt (extremality gap), r612: asserting gabor_separationForAllZeros deleted; Prop GaborSeparationForAllZeros retained unasserted (OVERSPECIFIED/believed-false); GaborCountableCriterion module (r612C: rational-packet iff RH unconditional; GaborZeroSideContinuous proved).  r610: GaborLowHeightZeroFree T0 unasserted; gaborSpectralFormula_refuted_of_lowHeight.  r605-r607/r608/r609/r611/r613 documented in Open.lean docstrings.  Named open tsum Z(F0)<pi e^{1/8} and on-line positivity beyond pure family (drop hline).  r631L: sorry classification R/T/A (census stays 7; no closure).  r634L docstring: live endpoint is the unconditional pure EF gabor_explicitFormula_pure plus prime-side criterion gabor_primeSide_rational_criterion_iff_rh (RH <=> forall rational (a, omega): POLE - PRIME + ARCH >= 0; axioms propext/Classical.choice/Quot.sound); remaining EF brick GaborHatQuarticExplicitRemainder (non-pure quartics).  Conditional Gabor reduction only; separation stays [O].  r638L retires the overstrong arch exact-equality and gauge-mismatched corpus EF asserting theorems to unasserted Props; project census 7->5; no RH claim.  NO RH CLAIM",
       "pin": true,
-      "sha256": "2a6e607380bdf27a3069e8491f6deff1016cdd53e6d54a5b55554ce2040cf456",
-      "bytes": 87290
+      "sha256": "8a3c1836a005b994fd514d1f7adc498db59eab1c5396ce4e1f824e0045962665",
+      "bytes": 87648
     },
     {
       "path": "rh/lean/RH/Audit.lean",
       "role": "lean_module",
-      "round": "r517-r634L",
+      "round": "r517-r634L/r638L",
       "ledger_ids": [],
-      "status": "r517-r532 axiom/audit trail of the outer-bridge campaign (contour identity through RIGHT_PRIME).  r612: #print lines updated for GaborCountableCriterion; tracked Gabor/window sorry census 8 -> 7.  r617L: #print lines updated for CoxeterCompletion and PrimeLogIndependence; tracked sorry census stays 7; module count 54 -> 56.  r612C: #print axioms for gaborZeroSideContinuous_holds and gabor_zeroSide_rational_criterion_iff_rh_unconditional; named-open list shrinks by one; census stays 7.  r634L: #print axioms for gabor_explicitFormula_pure and gabor_primeSide_rational_criterion_iff_rh (propext/Classical.choice/Quot.sound; no sorryAx); census stays 7.  NO RH CLAIM",
+      "status": "r517-r532 axiom/audit trail of the outer-bridge campaign (contour identity through RIGHT_PRIME).  r612: #print lines updated for GaborCountableCriterion; tracked Gabor/window sorry census 8 -> 7.  r617L: #print lines updated for CoxeterCompletion and PrimeLogIndependence; tracked sorry census stays 7; module count 54 -> 56.  r612C: #print axioms for gaborZeroSideContinuous_holds and gabor_zeroSide_rational_criterion_iff_rh_unconditional; named-open list shrinks by one; census stays 7.  r634L: #print axioms for gabor_explicitFormula_pure and gabor_primeSide_rational_criterion_iff_rh (propext/Classical.choice/Quot.sound; no sorryAx); census stays 7.  r638L: retired assertions are no longer #printed; project census 7->5.  NO RH CLAIM",
       "pin": true,
-      "sha256": "4c1f5af1fc5b8d5d8bcc7a13167d0ee02d474a032b73c3b168caa1c12af98e71",
-      "bytes": 43082
+      "sha256": "01101094beb67b12d403d9328f3a34da293c686b19ce605fb8075527adb4050c",
+      "bytes": 43233
     },
     {
       "path": "experiments/tfpt-discovery/tau_symbolic_probe.py",
@@ -4920,8 +4920,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "b4a5ea3974c7bc148e42840ba6f00d1f62f3f5d31c8cafe39b7794d9657d9c9e",
-      "bytes": 3477618
+      "sha256": "f871d100645e61b0762c4abffd3aafe8e8f5c11d6dc7d05ffb68b66ec35e1ec3",
+      "bytes": 3480060
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -4940,8 +4940,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "27463cb25d188bf21159831d2bcbdc91e516f3cff859dfb51267513f638839be",
-      "bytes": 5750393
+      "sha256": "b6a2623915d37aa158768b46381fa525142d66bbe683e8b161b902df4a1715c5",
+      "bytes": 5803762
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",
@@ -5786,12 +5786,12 @@
     {
       "path": "experiments/tfpt-discovery/narrowband_weil_probe.py",
       "role": "sealed_probe",
-      "round": "r461",
+      "round": "r461/r638L",
       "ledger_ids": [],
-      "status": "narrow-band Weil consistency probe (round 461, PRIME.RDAGGER.NARROWBAND_WEIL.01; experiments-side, NO ledger row): VERDICT FORK_SHARPENED.  GridElement is an even dyadic piecewise-linear autocorrelation; the formal endpoint is forall GridElement, weilForm>=0, not RH.  The spectral/zero side and density/continuity completion are absent; the path consumes arch_elementwise_stabilization sorryAx and the named SelectedACapPsdImpliesPlainReads bridge.  In the r459 builder U_k=N_k Delta_k=k log(2)/2 and L_k=U_k/2; k=5..12 gives U=1.732868..4.158883, beyond both the classical U<log(2) prime-blind range and the recent arXiv:2608.24827 U<=1.6 certificate from k=5 onward.  Conditional depth counts are 1,3,5,7,18,22,26,30; race remains 0.606566..0.757783.  Completed mincut translation: cofinal compact-window Weil positivity, equivalent to the full Weil criterion after the missing dictionary.  First measured in /tmp then sealed.  Companion rh/problem/narrowband_weil.tex + verify_narrowband_weil.py NARROWBAND WEIL VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "narrow-band Weil consistency probe (round 461, PRIME.RDAGGER.NARROWBAND_WEIL.01; experiments-side, NO ledger row): VERDICT FORK_SHARPENED.  GridElement is an even dyadic piecewise-linear autocorrelation; the formal endpoint is forall GridElement, weilForm>=0, not RH.  The spectral/zero side and density/continuity completion are absent; the historical endpoint takes unasserted `ArchGaussMellinDigammaIdentity` explicitly plus the named `SelectedACapPsdImpliesPlainReads` bridge; no arch sorryAx.  In the r459 builder U_k=N_k Delta_k=k log(2)/2 and L_k=U_k/2; k=5..12 gives U=1.732868..4.158883, beyond both the classical U<log(2) prime-blind range and the recent arXiv:2608.24827 U<=1.6 certificate from k=5 onward.  Conditional depth counts are 1,3,5,7,18,22,26,30; race remains 0.606566..0.757783.  Completed mincut translation: cofinal compact-window Weil positivity, equivalent to the full Weil criterion after the missing dictionary.  First measured in /tmp then sealed.  Companion rh/problem/narrowband_weil.tex + verify_narrowband_weil.py NARROWBAND WEIL VERIFIED.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L G14 text gate updated after root-cause reproduction; smoke 21/21 twice byte-identical; SPEC_SHA ff617711041fee52fe2ebdc9a54ddaf4f0b0ccc30933506c34e809e1bae7d59a; no RH claim",
       "pin": true,
-      "sha256": "29a03834b3689b9e63a852e96ad8a66d5308bfcb47bce3303098423ef475201d",
-      "bytes": 10786
+      "sha256": "e4d3a2b18609305ae7658c3c6c5fafc47db58b9111963e6ec841966946d8543e",
+      "bytes": 10989
     },
     {
       "path": "experiments/tfpt-discovery/gapmap_probe.py",
@@ -5806,22 +5806,22 @@
     {
       "path": "experiments/tfpt-discovery/lean_fidelity_probe.py",
       "role": "sealed_probe",
-      "round": "r463",
+      "round": "r463/r638L",
       "ledger_ids": [],
-      "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "Lean fidelity repair probe (round 463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01; experiments-side, NO ledger row): VERDICT FAITHFUL_OBJECT_PINNED / BRIDGES_TYPED / CENSUS_8.  Independent numerical mirror of RH/FaithfulFold.lean at k=5,9,10 (11/11 smoke/full gates, SPEC_SHA 0ef28519b5969b8a).  FaithfulFold replaces the raw-atom cosine fold with the production pipeline; archRead is concrete lag pairing.  Endpoint renamed internal_weil_nonneg_of_frequently_selected; RH/ExternalBridges.lean types dense extension, explicit-formula identification, and Mathlib RiemannHypothesis as honest sorry candidates (Lean sorry census 5->8).  First measured in /tmp then sealed.  Companion rh/problem/lean_fidelity.tex + verify_lean_fidelity.py LEAN FIDELITY REPAIR VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "c138624e5d53ce77c69bc4d6ea4f2ae471006985c6a378731ed9f7690eb21675",
-      "bytes": 7045
+      "sha256": "2a93f084b6a3dc644b446e8de2e25d64151ffe5ce0d07ae600a1e83fc15494b3",
+      "bytes": 7197
     },
     {
       "path": "experiments/tfpt-discovery/inner_bridges_probe.py",
       "role": "sealed_probe",
-      "round": "r464",
+      "round": "r464/r638L",
       "ledger_ids": [],
-      "status": "inner Lean bridges probe (round 464, PRIME.RDAGGER.INNER_BRIDGES.01; experiments-side, NO ledger row): VERDICT FINITE_PSD_CLOSED / ARCH_LAGS_TRANSCRIBED / TWO_NAMED_REMAINDERS.  The finite implication from an exact selected-window quadratic representation and A_cap PSD to plain read nonnegativity is proved.  Production Archimedean near/far lag integrals are concrete; the remaining analytical seam is arch_gauss_mellin_digamma_identity.  Smoke 11/11, SPEC_SHA 2ffca3dfca4b23bf; Lean sorry census remains 8.  Companion rh/problem/inner_bridges.tex + verify_inner_bridges.py INNER BRIDGES VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "inner Lean bridges probe (round 464, PRIME.RDAGGER.INNER_BRIDGES.01; experiments-side, NO ledger row): VERDICT FINITE_PSD_CLOSED / ARCH_LAGS_TRANSCRIBED / TWO_NAMED_REMAINDERS.  The finite implication from an exact selected-window quadratic representation and A_cap PSD to plain read nonnegativity is proved.  Production Archimedean near/far lag integrals are concrete; the remaining analytical seam is arch_gauss_mellin_digamma_identity.  Smoke 11/11, SPEC_SHA 2ffca3dfca4b23bf; Lean sorry census remains 8.  Companion rh/problem/inner_bridges.tex + verify_inner_bridges.py INNER BRIDGES VERIFIED (9/9).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "857854cdf837da25739599fef497e92899a43916b8119ca5a1284e42117ba199",
-      "bytes": 4894
+      "sha256": "97b48c0d61a39b3490456917bcc737b93d6dabf60646936f8907d056c96a1358",
+      "bytes": 5023
     },
     {
       "path": "experiments/tfpt-discovery/overlap_mechanism_probe.py",
@@ -5886,12 +5886,12 @@
     {
       "path": "experiments/tfpt-discovery/arch_rate_probe.py",
       "role": "sealed_probe",
-      "round": "r475",
+      "round": "r475/r638L",
       "ledger_ids": [],
-      "status": "arch identity isolation and tent rate (round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; experiments-side, NO ledger row): VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2.  F1(ii) not closed as exact equality: productionArchDelta_tendsto_atTop proved (Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 still lists Gauss integral as TODO, isolated as named Prop GaussDigammaIntegralRepresentation (not a sorry).  weilArchSide is now the concrete u-space pairing.  Selected-path rate O(Delta_k^2) named SelectedArchErrorQuadraticRate; selectedArchError_tendsto_zero_of_rate proved (fixed-f convergence, not infinitely-many-k positivity).  Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 (k=5..8, err/D2=3.9893) and err=0.028876619985 at Delta=0.0866433976 (k=9..12, err/D2=3.8466).  Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census remains 8.  Companion rh/problem/arch_rate.tex + verify_arch_rate.py ARCH RATE VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "arch identity isolation and tent rate (round 475, PRIME.RDAGGER.ARCH_IDENTITY_AND_RATE.01; experiments-side, NO ledger row): VERDICT IDENTITY_ISOLATED + RATE_O_DELTA2 (numeric large-support) + FIXED_CONSTANT_FALSIFIED (r475-repair).  F1(ii) not closed as exact equality: productionArchDelta_tendsto_atTop proved (Delta = log a/(m+1) -> +infty at fixed m); Mathlib v4.29.1 still lists Gauss integral as TODO, isolated as named Prop GaussDigammaIntegralRepresentation (not a sorry).  weilArchSide is now the concrete u-space pairing.  O(Delta_k^2) rate numerically supported (ratios 3.85-3.99 on k=5-12); fixed archRateConst = 4(1+1/64)^2 = 4.1259765625 FALSIFIED in the small-support regime (steps=1, meshExp=6, x0=1: err/Delta^2 = 8.0283458222 > 4.1259765625; Lean-certified endpoint-kink defect -theta(1-theta)/2).  Named Prop SelectedArchErrorQuadraticRate kept with falsification comment; correct interface is SelectedArchErrorQuadraticRateExists (exists C(f)); selectedArchError_tendsto_zero_of_rateExists proved; SelectedArchWeightedInterpolationEstimate OPEN.  Witness table k=5..12: err=0.119793278323 at Delta=0.1732867951 (k=5..8, err/D2=3.9893) and err=0.028876619985 at Delta=0.0866433976 (k=9..12, err/D2=3.8466).  Smoke 9/9, SPEC_SHA e8a49c5895d3d382; Lean sorry census remains 5 (five protected).  Companion rh/problem/arch_rate.tex + verify_arch_rate.py ARCH RATE VERIFIED (6/6).  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "a79ea3370a5ad813e3a378ba11915320bfe556d1b636b331723ed7779d3a0c77",
-      "bytes": 5494
+      "sha256": "eaca7fbfc22eff4b11c381f0c75bb0bcfa642aa4145c33ba75598a9f1b150377",
+      "bytes": 5552
     },
     {
       "path": "experiments/tfpt-discovery/crossterm_probe.py",
@@ -6006,12 +6006,12 @@
     {
       "path": "experiments/tfpt-discovery/outer_bridges_probe.py",
       "role": "sealed_probe",
-      "round": "r487",
+      "round": "r487/r638L",
       "ledger_ids": [],
-      "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "outer bridges lane start (round 487, PRIME.RDAGGER.OUTER_BRIDGES.01; experiments-side structural seal, NO ledger row): VERDICT OUTER_LANE_TYPED / DENSE_LIMIT_REDUCED / ZETA_INTERFACE_PROVED.  FullWeilTest is a continuous even fixed-support real autocorrelation.  Dense extension is split into fullWeil_fixedSupport_grid_density and fullWeil_channel_continuity; channel-limit assembly, closed-cone positivity, and the public wrapper are proved.  The Mathlib RiemannHypothesis interface is proved from the named off-critical separation brick.  Mathlib has riemannZeta and Mellin transform/inversion/Mellin-to-Dirichlet infrastructure, but no ZetaZero enumeration, multiplicity API, or Guinand--Weil formula.  Smoke 12/12, SPEC_SHA 5ea36777bc6077e6; verifier 6/6.  Lean sorry census 8 -> 9 because the old density sorry was honestly split into two.  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "cc3d8a7ca42c46a856327d14c9f6204599e00b187d9b3a83e2ad36a1b9da3224",
-      "bytes": 4885
+      "sha256": "63362e6ad4496b483c7991d4389780db81c96d69047c351ad30e4b29a40de40e",
+      "bytes": 4887
     },
     {
       "path": "experiments/tfpt-discovery/resolvent_solve_probe.py",
@@ -6026,12 +6026,12 @@
     {
       "path": "experiments/tfpt-discovery/outer_bridges2_probe.py",
       "role": "sealed_probe",
-      "round": "r489",
+      "round": "r489/r638L",
       "ledger_ids": [],
-      "status": "outer bridges fixed-support channel reduction (round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; experiments-side structural seal, NO ledger row): VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence on a common fixed support plus L1; the autocorrelation witness is compactly supported in L2.  Common-anchor finite comb continuity and the bounded-cosh standard polar integral continuity are proved.  The remaining density package is the transparent conjunction of dyadic L2 step/autocorrelation density, r475 u-space arch continuity, and the r376 native-grid pole integral dictionary.  Smoke 12/12, SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census 9 -> 8 (external 4 -> 3).  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "outer bridges fixed-support channel reduction (round 489, PRIME.RDAGGER.OUTER_BRIDGES.02; experiments-side structural seal, NO ledger row): VERDICT COMB_CLOSED / POLAR_INTEGRAL_CLOSED / DENSE_COMPLETION_ONE_SORRY.  Topology is uniform convergence on a common fixed support plus L1; the autocorrelation witness is compactly supported in L2.  Common-anchor finite comb continuity and the bounded-cosh standard polar integral continuity are proved.  The remaining density package is the transparent conjunction of dyadic L2 step/autocorrelation density, r475 u-space arch continuity, and the r376 native-grid pole integral dictionary.  Smoke 12/12, SPEC_SHA 9952567c0a594287; verifier 6/6.  Lean sorry census 9 -> 8 (external 4 -> 3).  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "ec93446a6e60701f2e72faf4fc8c4cd039eb000f861515af6fe75b94034e6c9d",
-      "bytes": 4190
+      "sha256": "1f38e60d9d6e30d81bbb10c25e840f3545b9a205f4e73c4f1e0ea53dddfd4507",
+      "bytes": 4202
     },
     {
       "path": "experiments/tfpt-discovery/operator_residual_probe.py",
@@ -6046,12 +6046,12 @@
     {
       "path": "experiments/tfpt-discovery/outer_bridges3_probe.py",
       "role": "sealed_probe",
-      "round": "r491",
+      "round": "r491/r638L",
       "ledger_ids": [],
-      "status": "outer bridges final-density audit and reduction (round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; experiments-side structural seal, NO ledger row): VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  The r489 completion has three components, not two.  Polar normalization corrected to +2*cosh; one-cell pin 2.042015443302091.  fullWeilArchSide is concrete.  The L2 witness has Lipschitz and support-length contracts; explicit dyadicSampleGrid uses floor(R*2^m) cells and has a proved support bound.  Remaining exact targets: sampled autocorrelation convergence, singular arch continuity, finite-hat pole integral.  Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  Lean sorry census 8 -> 8 (external 3).  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "status": "outer bridges final-density audit and reduction (round 491, PRIME.RDAGGER.OUTER_BRIDGES.03; experiments-side structural seal, NO ledger row): VERDICT HIDDEN_GAP_FOUND / DENSITY_BRIDGE_REDUCED.  The r489 completion has three components, not two.  Polar normalization corrected to +2*cosh; one-cell pin 2.042015443302091.  fullWeilArchSide is concrete.  The L2 witness has Lipschitz and support-length contracts; explicit dyadicSampleGrid uses floor(R*2^m) cells and has a proved support bound.  Remaining exact targets: sampled autocorrelation convergence, singular arch continuity, finite-hat pole integral.  Smoke 12/12, SPEC_SHA baaafe714f54eb07; verifier 7/7.  Lean sorry census 8 -> 8 (external 3).  r547 census-gate update: project-sorry-census expected 7 -> 9 (tracked set Source/Elementwise/Canonical/ExternalBridges/GaborSeparation; GaborSeparation carries 2 named inputs).  Probe SHA re-pinned; SPEC_SHA unchanged.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim.  r638L claim-boundary repair retires the overstrong `arch_gauss_mellin_digamma_identity` and gauge-mismatched `standard_explicit_formula_identification` asserting theorems to unasserted Props; historical arch extraction APIs now take `ArchGaussMellinDigammaIdentity` explicitly; full Lean build 3578 jobs with exactly five sorries; affected text/census probes were rerun twice byte-identically; no RH claim",
       "pin": true,
-      "sha256": "94857614a3e30eda7d5f123777fc36c6020941747273c2881cfd29706ca49a33",
-      "bytes": 3810
+      "sha256": "f71f9860854d6d5875d6809637fd1a4c683e2f4a4051f606153bd6d303b4586d",
+      "bytes": 3822
     },
     {
       "path": "experiments/tfpt-discovery/kernel_loewner_probe.py",
@@ -6738,7 +6738,7 @@
       "role": "sealed_probe",
       "round": "r619",
       "ledger_ids": [],
-      "status": "Support-relay census scout (round 619, PRIME.SUPPORT.RELAY.CENSUS.01; experiments-side sealed probe, NO ledger row): VERDICT RELAY_UNIVERSAL.  Prime powers q <= 32 (18 events), entry L_j = (1/2) log q; every ancestor form Q_{j-1} (without the newest event) fails a finite lead after entry: Delta_j = 0.011-0.028, nearly constant (2: 0.0279, 3: 0.0123, 4: 0.0146, 5: 0.0111, 7: 0.0105, 8: 0.0140, 9: 0.0125, 11: 0.0116, 13: 0.0131, 16: 0.0166, 17: 0.0126, 19: 0.0144, 23: 0.0141, 25: 0.0170, 27: 0.0181, 29: 0.0151, 31: 0.0147, 32: 0.0221); failing mode always odd, reflection-symmetric edge sector w.r.t. the newest event (g < 0), edge mass 0.07-0.65; newest weight restores positivity (all 18).  lambda* decay slopes per interval -50 / -77 / -79 (global -68.6; Slepian -28.3; r615 -44.8) -> super-exponential (Landau-Widom plunge); lambda* underflows SVD range beyond L ~ 1.4.  Controls: SCRAMBLE first failure 0.376, WPERM 0.402, EPSTEIN (2^k only) 0.564 ~ L_3 + 0.015 -- each control breaks at entry + lead.  Detection threshold (synthetic off-line zero injected into the zero side): L_det(beta=0.6, gamma=20) = 0.55, (0.75, 20) = 0.55, (0.6, 50) = 0.80, (0.9, 20) = 0.50.  PARENT TYPING: the RELAY_UNIVERSAL criteria (Delta_j >= 0, g < 0, repair) are consequences of Q_j succeq 0 (RH-consistency), not a mechanism; the informative results are the constant leads (\"greedy consumption\": each prime power becomes load-bearing within Delta L ~ 0.015), the control breaks at entry+lead, the super-exponential decay, and L_det -- windows with L >~ 0.5 are hypersensitive off-line detectors (a nulled zero displaced by sigma contributes -sigma^2 |d hat f|^2, beating the tiny lambda*), hence relay steps beyond L ~ 0.5 are RH-in-a-box statements, not elementary finite problems.  Fence: window positivity for the scanned L is RH-consistent; no RH claim.  Probe experiments/tfpt-discovery/support_relay_census_probe.py.  SPEC_SHA 7299737ded85418e4e88fea1356f378ec4c2c077c7d35a09211cc7980a88553d; RESULT_SHA prefix e0379485; probe SHA fcfa7771f2522e4458a7f2cb4dc20a68974bb2ca4f0239ea7c877da76193da4a.  CHECKS 12/12.  No RH claim",
+      "status": "Support-relay census scout (round 619, PRIME.SUPPORT.RELAY.CENSUS.01; experiments-side sealed probe, NO ledger row): VERDICT RELAY_UNIVERSAL.  Prime powers q <= 32 (18 events), entry L_j = (1/2) log q; every ancestor form Q_{j-1} (without the newest event) fails a finite lead after entry: Delta_j = 0.011-0.028, nearly constant (2: 0.0279, 3: 0.0123, 4: 0.0146, 5: 0.0111, 7: 0.0105, 8: 0.0140, 9: 0.0125, 11: 0.0116, 13: 0.0131, 16: 0.0166, 17: 0.0126, 19: 0.0144, 23: 0.0141, 25: 0.0170, 27: 0.0181, 29: 0.0151, 31: 0.0147, 32: 0.0221); failing mode always odd, reflection-symmetric edge sector w.r.t. the newest event (g < 0), edge mass 0.07-0.65; newest weight restores positivity (all 18).  lambda* decay slopes per interval -50 / -77 / -79 (global -68.6; Slepian -28.3; r615 -44.8) -> super-exponential (Landau-Widom plunge); lambda* underflows SVD range beyond L ~ 1.4.  Controls: SCRAMBLE first failure 0.376, WPERM 0.402, EPSTEIN (2^k only) 0.564 ~ L_3 + 0.015 -- each control breaks at entry + lead.  Detection threshold (synthetic off-line zero injected into the zero side): L_det(beta=0.6, gamma=20) = 0.55, (0.75, 20) = 0.55, (0.6, 50) = 0.80, (0.9, 20) = 0.50.  PARENT TYPING: the RELAY_UNIVERSAL criteria (Delta_j >= 0, g < 0, repair) are consequences of Q_j succeq 0 (RH-consistency), not a mechanism; the informative results are the constant leads (\"greedy consumption\": each prime power becomes load-bearing within Delta L ~ 0.015), the control breaks at entry+lead, the super-exponential decay, and L_det -- windows with L >~ 0.5 are hypersensitive off-line detectors (a nulled zero displaced by sigma contributes -sigma^2 |d hat f|^2, beating the tiny lambda*), hence relay steps beyond L ~ 0.5 are RH-in-a-box statements, not elementary finite problems.  Fence: window positivity for the scanned L is RH-consistent; no RH claim.  Probe experiments/tfpt-discovery/support_relay_census_probe.py.  SPEC_SHA 7299737ded85418e4e88fea1356f378ec4c2c077c7d35a09211cc7980a88553d; RESULT_SHA prefix e0379485; probe SHA fcfa7771f2522e4458a7f2cb4dc20a68974bb2ca4f0239ea7c877da76193da4a.  CHECKS 12/12.  No RH claim.  CORRECTED BY r635: the constant-lead / greedy-law reading Delta ~ 0.015 nearly constant across 18 events is WITHDRAWN (N=80 double-precision artefact).  Converged leads Delta_2=0.0253, Delta_3=0.0083, Delta_4=0.0064 (0.00606 at N=160), Delta_5=0.0034 (0.00275 at N=160); q>=7 UNMEASURABLE at 40-digit prime-side floor (probe: 'later events already indefinite at entry'; Delta=0, conv=0, q=7 lam_min=-7.0e-11).  RELAY_UNIVERSAL verdict, entry census, odd/edge failing mode, and L_det table UNAFFECTED.",
       "pin": true,
       "sha256": "fcfa7771f2522e4458a7f2cb4dc20a68974bb2ca4f0239ea7c877da76193da4a",
       "bytes": 57170
@@ -6858,10 +6858,70 @@
       "role": "sealed_probe",
       "round": "r633",
       "ledger_ids": [],
-      "status": "Frontier follow-ups scout (round 633, PRIME.FRONTIER.FOLLOWUPS.01; follow-ups on sealed objects; experiments-side sealed probe, NO ledger row): 16/16, 18 s, dual-run identical.  F1 A_COMPACT_OTHER(p~1.02): a_max(sigma, gamma*) = c sigma^{1.024} (log gamma*)^{-1.65} (r^2 0.945, n = 24), linear in sigma, not sigma^2 (mechanism: phase threshold cos(sigma(gamma-omega)/2a) < 0 <=> a < sigma|gamma*-omega|/pi, not the amplitude gain); a0 = 0.720 at (sigma, gamma*) = (1/2, 20), extrapolated 0.714 at gamma_1; true zeros min_omega Z(a, omega) > 0 for a in {1,5,25,100,250}; adversarial sigma = 1/2 negative only at a = 1 (Z = -3.86e-4 at gamma_1).  Parent typing: compactification removes only the a -> inf end (RH-blind wide-frequency packets); the RH-relevant end a -> 0 stays unbounded; a Lean theorem would need an external explicit N(T)/gap bridge -> cosmetic, not pursued.  F2 FORWARD_INCREASES_MARGIN: Hellmann-Feynman = Loewner to 1e-15; c(L) = d_t log lambda* = +0.315/+0.582/+0.764 at L = 0.40/0.55/0.80 (lambda* 1.89e-4/5.70e-8/2.02e-17), t* = -3.18/-1.72/-1.31 (O(1), not vacuous); with injection (beta, gamma) = (0.6, 20) at L = 0.55: d_t lambda* < 0.  Typing: sign discriminates on/off-line but the monotonicity runs in the proof-useless direction -> detector, no lever.  F3 RANDOM_EULER_REFUTED: lambda_min(POLE+ARCH) = -0.0783/-0.430/-0.926 at L = 0.40/0.549/0.80 (reproduces r623 to 1e-3); MC 200 Haar phase draws at L = 0.55: mean lambda_min = -0.496, std 0.317, 99.5 pct negative, vs true lambda* = 5.70e-8; coherence C(L) = 1 at h0 (all g_{h0}(log q) same sign); Baker: required delta = O(1) vs toy linear-forms bound 4.6e-8 -> 7.3 decades.  Typing: window positivity beyond L_cross is arithmetic phase coherence of the prime terms; magnitude-only and Diophantine-approximation arguments are dead as a class (measured no-go; promotion candidate with r615/r619).  F4 LEAD_LAW_INVARIANT: growth exponent alpha = 8.18 (target 2p+1 = 7); argmin of the fitted margin + overlap laws predicts 0/18 leads within 20 pct -> Delta ~ 0.015 is not a corollary of those laws; open descriptive invariant.  Probe experiments/tfpt-discovery/frontier_followups_probe.py.  SPEC_SHA ee7c7ba7e616add967455f2efdefaf00a326a8b78be7253cf10504016907ebf1; RESULT_SHA prefix 814abdf5; probe SHA 9f5287e7f9fbf174bff5b54b935de7212b3c94f4c92c020f5749569d99011839.  CHECKS 16/16.  No RH claim",
+      "status": "Frontier follow-ups scout (round 633, PRIME.FRONTIER.FOLLOWUPS.01; follow-ups on sealed objects; experiments-side sealed probe, NO ledger row): 16/16, 18 s, dual-run identical.  F1 A_COMPACT_OTHER(p~1.02): a_max(sigma, gamma*) = c sigma^{1.024} (log gamma*)^{-1.65} (r^2 0.945, n = 24), linear in sigma, not sigma^2 (mechanism: phase threshold cos(sigma(gamma-omega)/2a) < 0 <=> a < sigma|gamma*-omega|/pi, not the amplitude gain); a0 = 0.720 at (sigma, gamma*) = (1/2, 20), extrapolated 0.714 at gamma_1; true zeros min_omega Z(a, omega) > 0 for a in {1,5,25,100,250}; adversarial sigma = 1/2 negative only at a = 1 (Z = -3.86e-4 at gamma_1).  Parent typing: compactification removes only the a -> inf end (RH-blind wide-frequency packets); the RH-relevant end a -> 0 stays unbounded; a Lean theorem would need an external explicit N(T)/gap bridge -> cosmetic, not pursued.  F2 FORWARD_INCREASES_MARGIN: Hellmann-Feynman = Loewner to 1e-15; c(L) = d_t log lambda* = +0.315/+0.582/+0.764 at L = 0.40/0.55/0.80 (lambda* 1.89e-4/5.70e-8/2.02e-17), t* = -3.18/-1.72/-1.31 (O(1), not vacuous); with injection (beta, gamma) = (0.6, 20) at L = 0.55: d_t lambda* < 0.  Typing: sign discriminates on/off-line but the monotonicity runs in the proof-useless direction -> detector, no lever.  F3 RANDOM_EULER_REFUTED: lambda_min(POLE+ARCH) = -0.0783/-0.430/-0.926 at L = 0.40/0.549/0.80 (reproduces r623 to 1e-3); MC 200 Haar phase draws at L = 0.55: mean lambda_min = -0.496, std 0.317, 99.5 pct negative, vs true lambda* = 5.70e-8; coherence C(L) = 1 at h0 (all g_{h0}(log q) same sign); Baker: required delta = O(1) vs toy linear-forms bound 4.6e-8 -> 7.3 decades.  Typing: window positivity beyond L_cross is arithmetic phase coherence of the prime terms; magnitude-only and Diophantine-approximation arguments are dead as a class (measured no-go; promotion candidate with r615/r619).  F4 LEAD_LAW_INVARIANT: growth exponent alpha = 8.18 (target 2p+1 = 7); argmin of the fitted margin + overlap laws predicts 0/18 leads within 20 pct -> Delta ~ 0.015 is not a corollary of those laws; open descriptive invariant.  Probe experiments/tfpt-discovery/frontier_followups_probe.py.  SPEC_SHA ee7c7ba7e616add967455f2efdefaf00a326a8b78be7253cf10504016907ebf1; RESULT_SHA prefix 814abdf5; probe SHA 9f5287e7f9fbf174bff5b54b935de7212b3c94f4c92c020f5749569d99011839.  CHECKS 16/16.  No RH claim.  CORRECTED BY r637: F3 RANDOM_EULER_REFUTED (99.5 pct negative under Haar) STANDS; the phrase 'coherence C(L)=1 / phase coherence' is NOT the mechanism -- C=1 is generic for minimizers and holds for the negative Haar draws too.  CORRECTED BY r635/r636: F4 LEAD_LAW_INVARIANT is VOID (based on withdrawn N=80 Delta~0.015 values).",
       "pin": true,
       "sha256": "9f5287e7f9fbf174bff5b54b935de7212b3c94f4c92c020f5749569d99011839",
       "bytes": 65965
+    },
+    {
+      "path": "experiments/tfpt-discovery/relay_lead_precision_probe.py",
+      "role": "sealed_probe",
+      "round": "r635",
+      "ledger_ids": [],
+      "status": "Relay-lead precision scout (round 635, PRIME.RELAY.LEAD.PRECISION.01; experiments-side sealed probe, NO ledger row): VERDICT LEAD_PARTIAL.  11/11, 1260 s, dual-run identical.  r619 predecessor was the frozen D2 form (events q' < q only); D1 (true minus q) implemented, identical here.  mp Cholesky PSD-boundary bisection, N in {80,120,160}, damped Legendre: converged leads Delta_2=0.0253, Delta_3=0.0083, Delta_4=0.0064 (0.00606 at N=160), Delta_5=0.0034 (0.00275 at N=160); Delta/s_q = 0.125/0.058/0.058/0.020; lambda*(L_q) = 1.36e-3 / 5.93e-8 / 8.72e-13 / 8.69e-17; initial negative rate r_q = 3.38e-2 / 3.14e-6 / 7.35e-11 / 1.32e-15.  Probe why: 'positive N-stable leads only at small L_q (4/18 events; later events already indefinite at entry)'.  For q=7..32 the probe reports Delta=0 with lambda_min<0 already at L_q, conv=0 (q=7: L=0.973, lambda_min=-6.99e-11).  Probe does not mark floor-limited.  PARENT TYPING: (i) the r619 'greedy law' Delta ~ 0.015 nearly constant across 18 events was an N = 80 double-precision artefact -- WITHDRAWN; the converged leads decrease steeply (0.025 -> 0.003) and track the collapsing entry margin; (ii) for q >= 7 the value lambda_min < 0 'at entry' is NOT a negativity of the true form (RH-consistency and the r628 certification forbid it: the true form for L < L_7 equals the D2 predecessor); it means lambda*(L_7 ~ 0.97) ~ 1e-25 lies below the accuracy floor of the 40-digit prime-side builder (~1e-17..1e-20) -> Delta_q for q >= 7 is UNMEASURABLE at this precision, not zero.  Not spacing-limited (s_31 = 0.0159 but Delta undetermined there).  Probe experiments/tfpt-discovery/relay_lead_precision_probe.py.  SPEC_SHA 28db9bef54dd4cd67608d01df842f02364a688dbfcafb4274fdebcac4ea1c820; RESULT_SHA 3457e907c2c5c9ef8bf3c160ae0636c186ad5f51b390d51018e208c58fafc265; probe SHA 36c06826fcd3461c76098f72d94b2faab4ddf4a20ce162acee5cbd9857dfe749.  CHECKS 11/11.  No RH claim",
+      "pin": true,
+      "sha256": "36c06826fcd3461c76098f72d94b2faab4ddf4a20ce162acee5cbd9857dfe749",
+      "bytes": 44037
+    },
+    {
+      "path": "experiments/tfpt-discovery/relay_lead_law_probe.py",
+      "role": "sealed_probe",
+      "round": "r636",
+      "ledger_ids": [],
+      "status": "Relay-lead law scout (round 636, PRIME.RELAY.LEAD.LAW.01; experiments-side sealed probe, NO ledger row): VERDICT LEAD_LAW_PARTIAL.  6/6, 0.5 s, dual-run identical.  Only four converged leads = training set, holdout empty; peak relative errors: M1 margin/rate linear 18.4 (q=5), M1 quadratic 4.39 (q=2-4 within 12-18 pct, q=5 fails), M2 edge-sliver competition 1.96, M3 grammar c0 + w^3 + lambda c^2 0.0026 (3 parameters on 4 points -- interpolant, no evidence), M4 spacing 48.8 / alpha s 2.70 (alpha=0.074).  No model < 20 pct on all four; spacing does not win; with four points there is nothing to derive.  PARENT TYPING: the 'lead law' as a message is dissolved -- Delta_q is a corollary of the margin collapse, not a separate invariant; r633-F4 LEAD_LAW_INVARIANT referred to the withdrawn N=80 values and is void.  Probe experiments/tfpt-discovery/relay_lead_law_probe.py.  SPEC_SHA 6bf7a7ee31e3f41736bb04dc97ca1370aaf6c8ad1ff80379408b9012b694054b; RESULT_SHA 2a6bd720b7494840e7235475b446e2b1cd8a71263a92efaac789cff04ae25aa9; probe SHA ee2deb462adf5487965b97a8b1349c7ea4bf8660c5077d2b543e2ffc1de1d2ad.  CHECKS 6/6.  No RH claim",
+      "pin": true,
+      "sha256": "ee2deb462adf5487965b97a8b1349c7ea4bf8660c5077d2b543e2ffc1de1d2ad",
+      "bytes": 25284
+    },
+    {
+      "path": "experiments/tfpt-discovery/relay_vote_map_probe.py",
+      "role": "sealed_probe",
+      "round": "r637",
+      "ledger_ids": [],
+      "status": "Relay vote-map scout (round 637, PRIME.RELAY.VOTE.MAP.01; experiments-side sealed probe, NO ledger row): 14/14, 27.7 min dual, mp 40 digits N=80 (N=120 check agrees at L=0.55/0.80).  Worker verdict VOTE_MODE_SPECIFIC (k_thr=3) + FLIP_COUNTEREXAMPLE.  C0=1 at all nine L in [0.40,1.00]; modes k=0,1,2 unanimous at all L, k>=3 split (70/90 (L,k)); h0 is R_q-EVEN-dominant on every overlap (||f-||^2/||f+||^2 = 0.33..0.99 < 1): at the critical mode every present prime term ADDS positivity (g = +(||f+||^2 - ||f-||^2)), consistent with the odd/edge failing mode of the predecessor (r619/r620) where the missing prime would have added.  Flip test: 0/19 R_q-odd flips lower Q (first: L=0.40, q=2, Delta Q = +4.30e-3) -> FLIP_COUNTEREXAMPLE, the variational lemma in the odd sector is refuted.  Controls: SCRAMBLE minimizer C=1 at ALL L (incl. 5 events at L=1.0), POLE+ARCH ancestor C=1 at all L; WPERM splits from L=0.90 (0.715, 0.444), EPSTEIN from 0.70 (0.941).  Euler coherence testable only for 2 vs 4 below L=1: agreement 27/36=0.75, h0 agrees at L=0.90/1.00.  Haar MC: L=0.45 frac_neg 0.955 with frac_unanimous 1.000; L=0.55 1.000/1.000; L=0.70 1.000/0.865, corr(C, lambda_min)=-0.17.  PARENT TYPING: unanimity is GENERIC -- a geometric property of edge-localized low minimizers of translation-type forms (SCRAMBLE reproduces it at every L), not an arithmetic message; the coherence index C is not a positivity predictor (Haar draws unanimous yet negative).  Probe experiments/tfpt-discovery/relay_vote_map_probe.py.  SPEC_SHA 44bf67f8ba7d07d3e03450e310412e4cc93478dae5b345a2158df52191a64cfc; RESULT_SHA prefix 540557ad; probe SHA fc5c1426c996df526faeb3f8f50f84367b5d7563e173ff63c682fce892e2ce3d.  CHECKS 14/14.  No RH claim",
+      "pin": true,
+      "sha256": "fc5c1426c996df526faeb3f8f50f84367b5d7563e173ff63c682fce892e2ce3d",
+      "bytes": 45992
+    },
+    {
+      "path": "experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py",
+      "role": "sealed_probe",
+      "round": "r638",
+      "ledger_ids": [],
+      "status": "First-contact + Selberg square-completion scout (round 638, GABOR.CONTACT.SELBERG.01; experiments-side sealed probe, NO ledger row): 14/14, ~338 s dual, byte-identical.  Object: pure-Gabor zero side G(a,w) = POLE - PRIME + ARCH (r608 identity A); attack: at a first touching point (a*,w*) the contact conditions plus Selberg symmetry Lambda log + Lambda*Lambda = Lambda_2 should yield an operator L with LG = ||A||^2 + R >= 0.  Pre-registered Toeplitz gate: the Selberg convolution term sum_N (Lambda*Lambda)(N) psi(log N) is a HANKEL form in (log m, log n); a square needs the kernel [psi(u_i+u_j)] PSD.  T2: on 466 prime-power nodes (n <= 3000), 15 operator-generated psi = t^k e^{-t/2} e^{-a t^2/2} {cos, sin, 1}(omega t) with k <= 4, 15 cells (a,omega) in {1,0.5,0.3,0.1,0.05} x {14.13,30,100}: best PSD-combination lambda_min = -0.0097 ... -0.0568 (Frobenius-normalised, tolerance -1e-9), GATE_PASS 0/15; DC 2x2-minor violation fraction 1.0 everywhere (Gaussian factor e^{-a(u_i-u_j)^2}) -> TOEPLITZ_GATE_FAIL.  G3: the only squares compatible with the prime-side frequency support {log n} are Euler-local sum_p |A_p|^2; their Fejer-Riesz DC cost DC_lower/(POLE+ARCH) = 3.28 (a=0.3, omega=50), 4.35 (0.3, 30), 8.39 (0.3, 14.13) -> EULER_LOCAL_SQUARE_COSTS_TRIVIAL_MAJORANT.  T3 (synthetic off-line catalogs on 2000 on-line ordinates): first contact a* = 0.1418/0.0877/0.0370/0.1126 for (sigma,gamma0) = (0.4,100)/(0.25,100)/(0.1,100)/(0.4,250), omega*-gamma0 = 0.66/0.62/0.61/0.55 vs pi a*/(2 sigma) = 0.56/0.55/0.58/0.44, off-line/on-line block ratio 1.0000 at contact; d_a Z = (1/2) d^2_omega Z at contact with r_heat <= 1.6e-16 (cos) / 1.5e-16 (lobe): the two contact conditions are ONE (CONTACT_CONDITIONS_COLLAPSE); m(a*/2, a*/4, a*/8) all negative (NEGATIVITY_DOWNSET; the heat semigroup runs small a -> large a).  T4 (true zeta, prime side to n <= 4.6e6, EF sanity 2.2e-14): G >= 0 on omega in [10,50] for a = 1/0.5/0.3 (min 3.0e-4 / 1.2e-7 / 2.2e-12); at the 8-9 local minima per a the Selberg part of d^2_omega PRIME has the helpful sign in 0.25/0.22/0.33 (MAIN) vs 0.22/0.31/0.22 (SCRAMBLE) vs 0.29/0.20/0.20 (WPERM): SELBERG_SIGN_INDEFINITE + WORLD_BLIND; median |Selberg_1|/|Lambda_2,1| = 1.33/0.88/0.74 -- the Selberg split relocates the cancellation between two equal-size parts (same finding as CCCXXXI SELBERG-INSUFFICIENT on the window object).  PARENT TYPING: the square-completion engine of the first-contact attack is structurally unavailable -- Selberg's convolution is Hankel (frequencies log m + log n), squares of prime Dirichlet polynomials are Toeplitz (log m - log n); the compatible Euler-local squares cost the trivial majorant; single-sum (Lambda_2, Lambda) terms cannot repair a non-PSD Hankel part (bordered-matrix argument).  The first-contact frame itself carries one differential condition, not two.  Lane GABOR.CONTACT.SELBERG.01 = KILLED(STRUCTURAL), STOP.  Probe experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py.  SPEC_SHA 22a9284272e345a690dc7550c401f1bd7090647381b0061bce50b2a64d0c3aa8; RESULT_SHA prefix 58a36aff; probe SHA 2ab532bceeb0dfd9bb863ab40fda2b87ea9c187b658fe7ef9223f75360e751f9.  CHECKS 14/14.  No RH claim",
+      "pin": true,
+      "sha256": "2ab532bceeb0dfd9bb863ab40fda2b87ea9c187b658fe7ef9223f75360e751f9",
+      "bytes": 70687
+    },
+    {
+      "path": "experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py",
+      "role": "sealed_probe",
+      "round": "r639",
+      "ledger_ids": [],
+      "status": "Lamzouri Hilbert-variant adjudication (round 639, PRIME.PORT.EXTERNAL.HILBERT_VARIANT.ADJUDICATION.01; experiments-side sealed probe, NO ledger row): 23/23, 22 s, dual-run identical.  EXTERNAL arXiv:2609.02882v1 (Lamzouri, 2026-09-02): new proof of the Alpoge--Furman/Anthropic theorem (>= 0.6725 simple on the line, >= 0.83625 distinct) replacing the finite Weil-form matrix + rank-trace inequality by a Hilbert-space (Bessel) inequality on L^2(-1/2,1/2) and applying Montgomery pair correlation in the unconditional BGSTB24 Lemma 5 form (supp f in [-1,1]).  VERDICT PROPOSITION_REBUILT + SAME_CLASS(TWO_MOMENT) + CONSTANTS_IDENTICAL + WALL_LOCATION_CONFIRMED(SUPPORT_ONE) + MT_OPTIMAL_SUPPORTED + NO_IMPORT(UNCHANGED) + SOURCE_NOTE(AXIOMPROVER).  Proposition rebuilt exactly on 921 synthetic conjugation-invariant multisets (3 windows x 307 instances; Bessel, three range inequalities, Sum alpha_j = |Z|; min slack -1.8e-15, bound saturates at n).  Class: C_eta = Q(0) + 2 int_0^1 alpha Q(alpha) == r267 functional R(eta^2) to 1.7e-15 (R(psi_0) = 4/3, R(psi_MT) = C_MT = 1.3274992963206); bound 2N - HS^2 == A--F chain 4 tr G - 2N - HS^2 at tr G = N (sympy) -> atlas class A1 unchanged, ceiling 0.6818287 applies.  Constants: C_0 = 2 - C_MT = 0.672500703679 == r627 p* (2e-11), C_1 = 0.836250351840, gap to p_0 9.328e-3.  Wall: Q = eta^2 * eta^2 vanishes for |alpha| >= 1 exactly; widening supp eta to (-0.6, 0.6) puts 2.8 pct of the Q mass beyond 1 (BGSTB inapplicable) -- the sole arithmetic input is the proven pair-correlation range |alpha| <= 1 = r267 X <= T boundary = PAIRCORR wall; under the PCC form factor min(|alpha|,1): p(lambda) = 0.6725/0.866/0.932/0.976/0.989/0.996 at lambda = 0.5/0.75/1/1.5/2/3 (monotone; GLSS25 limit 1); p(0.5) sits 1.0e-5 above C_0 (product quadrature of the |u-v| kink, inside the frozen 2e-4 tolerance; the kink-split value is C_MT).  MT optimality: 200 random admissible psi all R >= C_MT (min excess 0.41), local second difference >= 1.9e-6.  Lean: AxiomProver certificates -- Proposition unconditional, Theorem modulo BGSTB Lemma 5 + Riemann--von Mangoldt as hypotheses (contrast A--F v1.0 kernel-checked modulo EnclOK).  Renumbered 638 -> 639 before sealing (638 taken by r638L and a parallel probe).  Probe experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py.  SPEC_SHA 4bc444228a9ae6a488c4b70eac77fcdbad8e15370df42bd359faaf060c046b38; probe SHA 61fbb4b93e8c640f5fe0c39c43355779cff86cc9efc80b2a01cc7bc4cda9d654.  CHECKS 23/23.  Follow-up to r267/r616/r627; no RH claim",
+      "pin": true,
+      "sha256": "61fbb4b93e8c640f5fe0c39c43355779cff86cc9efc80b2a01cc7bc4cda9d654",
+      "bytes": 37886
+    },
+    {
+      "path": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean",
+      "role": "lean_module",
+      "round": "r475-repair",
+      "ledger_ids": [],
+      "status": "Lean repair of the r475 fixed-constant rate (round r475-repair, Lean-only, NO sealed probe, NO ledger row): RH/SelectedArchErrorQuadraticRateClassical.lean (238 lines).  SelectedArchErrorQuadraticRate (fixed archRateConst = 4(1+1/64)^2 = 4.1259765625) FALSIFIED in the small-support regime (steps=1, meshExp=6, x0=1: err_arch/Delta^2 = 8.0283458222 > 4.1259765625; also 4.4488, 7.13-7.24).  endpointKink_cell_integral_defect proved exactly (-theta(1-theta)/2); meshSix_endpointCoefficient_exceeds_archRateConst proved; intervalIntegral_affineInterpolation_error_le_one_twelfth proved; selectedArchGridEndpoint corrected to (floor(b/Delta)+1)*Delta (numerical identity with selectedArchError to 2.3e-25).  SelectedArchErrorQuadraticRateExists (exists C(f)) is the correct interface; selectedArchError_tendsto_zero_of_rateExists proved; SelectedArchWeightedInterpolationEstimate OPEN.  O(Delta^2) rate itself not refuted (large-support ratios 3.9893 / 3.8466).  lake build 3578 jobs green; five protected sorries unchanged.  Catalog part_18 KILLED/LOSSY_CONSTANT.  NO L* claim, NO R-dagger claim, NO RH claim, NO anti-RH claim",
+      "pin": true,
+      "sha256": "528d4ec93242b8ab92eeff542ec331889429168ef8b91722e3dfcabf859962d7",
+      "bytes": 10023
     }
   ]
 }

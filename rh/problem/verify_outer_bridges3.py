@@ -34,8 +34,9 @@ def main() -> int:
     check("pole-hat-seam-exact",
           "def GridPoleHatIntegralIdentity : Prop" in external
           and "gridPoleIntegralIdentification_of_hat" in external)
-    check("honest-census-unchanged",
-          external.count("\n  sorry") == 3)
+    check("r638L-one-external-brick",
+          external.count("\n  sorry") == 1
+          and "theorem standard_explicit_formula_identification :" not in external)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

@@ -82,6 +82,10 @@ experiments/tfpt-discovery/odlyzko_zeros6.gz
 # Local secrets (Zenodo token, etc.)
 .env
 
+# RH semantic catalog LLM cache + embeddings (generated; may be rebuilt)
+rh/catalog/cache/
+rh/catalog/embeddings/
+
 # Local exploratory 3D visualization sandbox (not shipped)
 /simulation/
 
@@ -118,5 +122,10 @@ experiments/frb-tfpt-signatures/new-data/
 /wolfram/
 # Agent routing telemetry (local cost forensics, per-machine)
 .cursor/agent-runs/*.jsonl
+
+# RH catalog viewer (standalone Node app)
+rh/catalog/viewer/node_modules/
+rh/catalog/viewer/screenshots/
+rh/catalog/viewer/export-out/
 
 experiments/ccc-crossover-disc/data/*.fits

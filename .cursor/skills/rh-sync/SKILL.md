@@ -38,7 +38,7 @@ The suite covers v9xx RH modules by path, the sealed probe list, the SHA drift d
 
 ### 4. Update README status table
 
-`rh/README.md`: round, verdict, open-edge status. Keep the claim boundary line intact.
+`rh/README.md`: round, verdict, open-edge status. Keep the claim boundary line intact. Then write `rh/catalog/fragments/part_new_<round>.json` and run `python3 rh/catalog/build_catalog.py` (skill **`rh-corpus-search`**).
 
 ### 5. On [E] promotion (with `promote-to-verification`)
 

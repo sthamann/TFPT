@@ -61,17 +61,17 @@ def main() -> int:
           and "opaque productionArchLag" not in elementwise
           and "def productionArchLagNear" in elementwise
           and "def productionArchLagFar" in elementwise)
-    check("single-arch-analytic-seam",
+    check("arch-contract-unasserted-r638L",
           "def ArchGaussMellinDigammaIdentity" in elementwise
-          and "theorem arch_gauss_mellin_digamma_identity" in elementwise
-          and "arch_gauss_mellin_digamma_identity f" in elementwise)
+          and "theorem arch_gauss_mellin_digamma_identity" not in elementwise
+          and "(hArch : ArchGaussMellinDigammaIdentity)" in elementwise)
 
     census = sorry_census()
     print("SORRY CENSUS:", ", ".join(f"{name}:{line}" for name, line in census))
-    check("sorry-census-8", len(census) == 8)
-    check("arch-sorry-renamed",
-          any(name == "Elementwise.lean" for name, _ in census)
-          and elementwise.count("\n  sorry") == 1)
+    check("r638L-sorry-census-5", len(census) == 5)
+    check("elementwise-sorry-free",
+          not any(name == "Elementwise.lean" for name, _ in census)
+          and elementwise.count("\n  sorry") == 0)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

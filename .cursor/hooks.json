@@ -19,6 +19,12 @@
         "command": ".cursor/hooks/log-subagent.py",
         "timeout": 10
       }
+    ],
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/rh_catalog_refresh.py",
+        "timeout": 40
+      }
     ]
   }
 }

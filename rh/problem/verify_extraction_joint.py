@@ -61,7 +61,7 @@ def main() -> int:
 
     census = sorry_census()
     print("SORRY CENSUS:", ", ".join(f"{name}:{line}" for name, line in census))
-    check("sorry-census-8", len(census) == 8)
+    check("r638L-sorry-census-5", len(census) == 5)
 
     run = subprocess.run(
         [sys.executable, PROBE, "--smoke"],

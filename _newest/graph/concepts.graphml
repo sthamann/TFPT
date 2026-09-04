@@ -1,0 +1,1057 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns">
+  <key id="type" for="node" attr.name="type" attr.type="string"/>
+  <key id="rel" for="edge" attr.name="rel" attr.type="string"/>
+  <graph id="concepts" edgedefault="directed">
+    <node id="4d-lattice-contract"><data key="type">OBJECT</data></node>
+    <node id="additive-adeles"><data key="type">GEOMETRY</data></node>
+    <node id="adele-class-space"><data key="type">GEOMETRY</data></node>
+    <node id="admissible-os-positive-measure"><data key="type">OPERATOR</data></node>
+    <node id="analytic-object"><data key="type">CLASS</data></node>
+    <node id="arakelov-intersection"><data key="type">GEOMETRY</data></node>
+    <node id="arch-rate"><data key="type">THEOREM</data></node>
+    <node id="archimedean-dominance"><data key="type">CRITERION</data></node>
+    <node id="archimedean-place"><data key="type">OBJECT</data></node>
+    <node id="arithmetic-geometry"><data key="type">CLASS</data></node>
+    <node id="arithmetic-hodge-index"><data key="type">THEOREM</data></node>
+    <node id="baez-duarte-criterion"><data key="type">CRITERION</data></node>
+    <node id="barrier-arch-compensation"><data key="type">BARRIER</data></node>
+    <node id="barrier-circularity"><data key="type">BARRIER</data></node>
+    <node id="barrier-finite-window-ceiling"><data key="type">BARRIER</data></node>
+    <node id="barrier-lossy-constant"><data key="type">BARRIER</data></node>
+    <node id="barrier-no-bridge"><data key="type">BARRIER</data></node>
+    <node id="barrier-nonreal-cofactor-zeros"><data key="type">BARRIER</data></node>
+    <node id="barrier-p2-defect"><data key="type">BARRIER</data></node>
+    <node id="barrier-pick-sign"><data key="type">BARRIER</data></node>
+    <node id="barrier-pole-mode"><data key="type">BARRIER</data></node>
+    <node id="barrier-prime-phase-coherence"><data key="type">BARRIER</data></node>
+    <node id="barrier-structural-mismatch"><data key="type">BARRIER</data></node>
+    <node id="barrier-unimodularity"><data key="type">BARRIER</data></node>
+    <node id="barrier-world-blind"><data key="type">BARRIER</data></node>
+    <node id="barrier-zero-denominator"><data key="type">BARRIER</data></node>
+    <node id="bernstein-function"><data key="type">CLASS</data></node>
+    <node id="berry-keating-dilation"><data key="type">METHOD</data></node>
+    <node id="berry-keating-xp"><data key="type">OPERATOR</data></node>
+    <node id="beurling-deny-criterion"><data key="type">CRITERION</data></node>
+    <node id="bohr-lift"><data key="type">METHOD</data></node>
+    <node id="bost-connes-kms-system"><data key="type">OBJECT</data></node>
+    <node id="bost-connes-system"><data key="type">OBJECT</data></node>
+    <node id="bruhat-tits-tree"><data key="type">GEOMETRY</data></node>
+    <node id="canonical-system-hamiltonian"><data key="type">OPERATOR</data></node>
+    <node id="carlson-theorem"><data key="type">THEOREM</data></node>
+    <node id="census-qsm"><data key="type">OBJECT</data></node>
+    <node id="census-qsm-normflow"><data key="type">OBJECT</data></node>
+    <node id="chebyshev-psi"><data key="type">OBJECT</data></node>
+    <node id="chi-minus-4-census"><data key="type">INVARIANT</data></node>
+    <node id="chuk-window-certificate"><data key="type">CRITERION</data></node>
+    <node id="class-number-formula-q-i"><data key="type">THEOREM</data></node>
+    <node id="cm-seam"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="cohen-seeds"><data key="type">OBJECT</data></node>
+    <node id="compact-window-certificate-mechanism"><data key="type">BARRIER</data></node>
+    <node id="completely-monotone"><data key="type">CLASS</data></node>
+    <node id="conductor-operator-burnol"><data key="type">OPERATOR</data></node>
+    <node id="connes-adele-scaling-flow"><data key="type">METHOD</data></node>
+    <node id="connes-marcolli-gln-system"><data key="type">OBJECT</data></node>
+    <node id="connes-trace-formula"><data key="type">METHOD</data></node>
+    <node id="connes-trace-formula-dichotomy"><data key="type">BARRIER</data></node>
+    <node id="critical-line"><data key="type">GEOMETRY</data></node>
+    <node id="critical-strip"><data key="type">GEOMETRY</data></node>
+    <node id="cubic-wedges"><data key="type">METHOD</data></node>
+    <node id="cuntz-laca-semigroup-algebra"><data key="type">OBJECT</data></node>
+    <node id="cuntz-system"><data key="type">OPERATOR</data></node>
+    <node id="cusp-surgery"><data key="type">METHOD</data></node>
+    <node id="de-branges-positivity"><data key="type">CRITERION</data></node>
+    <node id="debranges-space"><data key="type">OBJECT</data></node>
+    <node id="debruijn-newman-constant"><data key="type">INVARIANT</data></node>
+    <node id="deligne-rh"><data key="type">THEOREM</data></node>
+    <node id="deninger-cohomology"><data key="type">METHOD</data></node>
+    <node id="deninger-foliated-dynamics"><data key="type">METHOD</data></node>
+    <node id="dirichlet-series-polytorus"><data key="type">OBJECT</data></node>
+    <node id="discrete-spectrum-neutrality"><data key="type">BARRIER</data></node>
+    <node id="dual-pair-language"><data key="type">METHOD</data></node>
+    <node id="e8-cascade"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="e8-positive-lattice-norm"><data key="type">OBJECT</data></node>
+    <node id="e8-sublattice-rg-semigroup"><data key="type">OBJECT</data></node>
+    <node id="e8-theta-heat-operator"><data key="type">OPERATOR</data></node>
+    <node id="e8-theta-series"><data key="type">OBJECT</data></node>
+    <node id="edge-l-values"><data key="type">METHOD</data></node>
+    <node id="edge-nonvanishing-method"><data key="type">METHOD</data></node>
+    <node id="efrat-determinant"><data key="type">THEOREM</data></node>
+    <node id="eisenstein-constant-term"><data key="type">OBJECT</data></node>
+    <node id="eisenstein-rh-neutrality"><data key="type">THEOREM</data></node>
+    <node id="eisenstein-series"><data key="type">OBJECT</data></node>
+    <node id="epstein-zeta"><data key="type">OBJECT</data></node>
+    <node id="equality-hunt"><data key="type">OPEN_QUESTION</data></node>
+    <node id="euler-gross-entropy-gap"><data key="type">INVARIANT</data></node>
+    <node id="euler-side-blindness"><data key="type">BARRIER</data></node>
+    <node id="event-log-function"><data key="type">OPEN_QUESTION</data></node>
+    <node id="explicit-formula"><data key="type">THEOREM</data></node>
+    <node id="extraction-joint"><data key="type">OPEN_QUESTION</data></node>
+    <node id="farkas-witness-n-mod-8"><data key="type">BARRIER</data></node>
+    <node id="finite-clock-commensurability"><data key="type">BARRIER</data></node>
+    <node id="finite-family-target-mismatch"><data key="type">BARRIER</data></node>
+    <node id="finite-infinite-place-balance"><data key="type">THEOREM</data></node>
+    <node id="finite-weil-gns-metric"><data key="type">OBJECT</data></node>
+    <node id="finite-weil-window"><data key="type">OBJECT</data></node>
+    <node id="fourier-transform"><data key="type">METHOD</data></node>
+    <node id="frequently-selected-aug-dual-resolvent"><data key="type">OPEN_QUESTION</data></node>
+    <node id="functional-equation"><data key="type">THEOREM</data></node>
+    <node id="gabor-prime-side-criterion"><data key="type">CRITERION</data></node>
+    <node id="gabor-pure-criterion"><data key="type">CRITERION</data></node>
+    <node id="gabor-rational-criterion"><data key="type">CRITERION</data></node>
+    <node id="gabor-zero-side"><data key="type">OBJECT</data></node>
+    <node id="gate-zero"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="gaussian-e8-module"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="gorz-theorem"><data key="type">THEOREM</data></node>
+    <node id="groupoid"><data key="type">GEOMETRY</data></node>
+    <node id="groupoid-modular-function"><data key="type">INVARIANT</data></node>
+    <node id="gue-statistics"><data key="type">CLASS</data></node>
+    <node id="half-density"><data key="type">OBJECT</data></node>
+    <node id="hamiltonian-psd-language"><data key="type">METHOD</data></node>
+    <node id="hankel-positivity"><data key="type">CRITERION</data></node>
+    <node id="hardy-space-h2"><data key="type">OBJECT</data></node>
+    <node id="heat-zeta-regularization"><data key="type">OPERATOR</data></node>
+    <node id="hecke-correspondence"><data key="type">GEOMETRY</data></node>
+    <node id="hecke-index-theorem"><data key="type">THEOREM</data></node>
+    <node id="hecke-operator"><data key="type">OPERATOR</data></node>
+    <node id="herglotz-function"><data key="type">CLASS</data></node>
+    <node id="hermite-biehler-class"><data key="type">CLASS</data></node>
+    <node id="hilbert-polya-operator"><data key="type">OPERATOR</data></node>
+    <node id="hnf-groupoid"><data key="type">OBJECT</data></node>
+    <node id="hodge-riemann-positivity-candidate"><data key="type">OBJECT</data></node>
+    <node id="horizon-replica-positivity"><data key="type">THEOREM</data></node>
+    <node id="hypercontractivity"><data key="type">THEOREM</data></node>
+    <node id="i5-transport-ledger-criterion"><data key="type">CRITERION</data></node>
+    <node id="index-flow-time"><data key="type">OPERATOR</data></node>
+    <node id="index-modular-state"><data key="type">OPEN_QUESTION</data></node>
+    <node id="inner-bridges"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="ising-lee-yang-compiler"><data key="type">METHOD</data></node>
+    <node id="jensen-hyperbolicity"><data key="type">CRITERION</data></node>
+    <node id="jensen-polynomials"><data key="type">OBJECT</data></node>
+    <node id="kasteleyn-orientation-language"><data key="type">METHOD</data></node>
+    <node id="knauf-arithmetic-statistical-system"><data key="type">OBJECT</data></node>
+    <node id="kneser-groupoid"><data key="type">OBJECT</data></node>
+    <node id="koide-mobius-flow"><data key="type">OBJECT</data></node>
+    <node id="kps-theorem"><data key="type">THEOREM</data></node>
+    <node id="laguerre-polya-class"><data key="type">CLASS</data></node>
+    <node id="lambda-star-ladder"><data key="type">INVARIANT</data></node>
+    <node id="lambert-w"><data key="type">OBJECT</data></node>
+    <node id="landau-widom-asymptotics"><data key="type">THEOREM</data></node>
+    <node id="laplace-transform"><data key="type">METHOD</data></node>
+    <node id="lee-yang-property"><data key="type">CRITERION</data></node>
+    <node id="li-coefficients"><data key="type">INVARIANT</data></node>
+    <node id="li-criterion"><data key="type">CRITERION</data></node>
+    <node id="lstar-statement"><data key="type">OPEN_QUESTION</data></node>
+    <node id="main-world"><data key="type">CLASS</data></node>
+    <node id="markov-qca-unitary-dilation"><data key="type">OPERATOR</data></node>
+    <node id="matching-ledger-positivity"><data key="type">THEOREM</data></node>
+    <node id="mellin-transform"><data key="type">METHOD</data></node>
+    <node id="metric-by-operator-positivity"><data key="type">METHOD</data></node>
+    <node id="modular-clock"><data key="type">OPERATOR</data></node>
+    <node id="modular-surface"><data key="type">GEOMETRY</data></node>
+    <node id="montgomery-conjecture"><data key="type">OPEN_QUESTION</data></node>
+    <node id="mu4-mark"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="multiplicative-composition-law"><data key="type">THEOREM</data></node>
+    <node id="murru-salvatori"><data key="type">METHOD</data></node>
+    <node id="narrowband-weil"><data key="type">METHOD</data></node>
+    <node id="newman-criterion"><data key="type">CRITERION</data></node>
+    <node id="no-archimedean-prime-joint-space"><data key="type">BARRIER</data></node>
+    <node id="no-canonical-integer-label"><data key="type">BARRIER</data></node>
+    <node id="nyman-beurling-criterion"><data key="type">CRITERION</data></node>
+    <node id="nyman-beurling-space"><data key="type">OBJECT</data></node>
+    <node id="obstruction-class"><data key="type">CLASS</data></node>
+    <node id="open-autonomous-prime-generator"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-gabor-window-positivity"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-global-all-place-intersection"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-half-density-geometry"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-independent-positivity-source"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-lambda-star-scale-law"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-prime-phase-control"><data key="type">OPEN_QUESTION</data></node>
+    <node id="open-relative-determinant-identity"><data key="type">OPEN_QUESTION</data></node>
+    <node id="openai-long-prime-gaps"><data key="type">METHOD</data></node>
+    <node id="outer-bridges"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="p1-gauss-bonnet-positive-normalization"><data key="type">THEOREM</data></node>
+    <node id="pair-correlation"><data key="type">INVARIANT</data></node>
+    <node id="perron-fixed-point-transport"><data key="type">OPERATOR</data></node>
+    <node id="pi-numerology-c3"><data key="type">BARRIER</data></node>
+    <node id="pick-function"><data key="type">CLASS</data></node>
+    <node id="pimsner-popa-entropy"><data key="type">THEOREM</data></node>
+    <node id="plastic-number-threshold"><data key="type">INVARIANT</data></node>
+    <node id="polya-frequency-function"><data key="type">CLASS</data></node>
+    <node id="positive-cone-blindness"><data key="type">BARRIER</data></node>
+    <node id="positivity-criterion"><data key="type">CLASS</data></node>
+    <node id="positivity-semigroup"><data key="type">OPERATOR</data></node>
+    <node id="prime-counting"><data key="type">OBJECT</data></node>
+    <node id="prime-torus"><data key="type">GEOMETRY</data></node>
+    <node id="primon-riemann-gas"><data key="type">OBJECT</data></node>
+    <node id="prolate-operator"><data key="type">OPERATOR</data></node>
+    <node id="pure-gabor-family"><data key="type">CLASS</data></node>
+    <node id="qca-dilation"><data key="type">OBJECT</data></node>
+    <node id="quadrep"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="quarter-shift-to-centre"><data key="type">BARRIER</data></node>
+    <node id="quasilocal-hamiltonian-dynamics"><data key="type">OPERATOR</data></node>
+    <node id="quillen-bfk-seam-determinants"><data key="type">OBJECT</data></node>
+    <node id="r-dagger-kernel-loewner-stack"><data key="type">METHOD</data></node>
+    <node id="rankin-selberg-norm-square"><data key="type">METHOD</data></node>
+    <node id="regulator-jump"><data key="type">INVARIANT</data></node>
+    <node id="relative-determinant"><data key="type">INVARIANT</data></node>
+    <node id="relay-lead-law"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="research-question"><data key="type">CLASS</data></node>
+    <node id="resummed-clock-tower"><data key="type">OBJECT</data></node>
+    <node id="rh-as-reflection-positivity"><data key="type">THEOREM</data></node>
+    <node id="rhp-iiks-toda-tau"><data key="type">METHOD</data></node>
+    <node id="riemann-hypothesis"><data key="type">OPEN_QUESTION</data></node>
+    <node id="riemann-kernel"><data key="type">OBJECT</data></node>
+    <node id="riemann-xi"><data key="type">OBJECT</data></node>
+    <node id="riemann-zeta"><data key="type">OBJECT</data></node>
+    <node id="rodgers-tao-theorem"><data key="type">THEOREM</data></node>
+    <node id="saddle-point-method"><data key="type">METHOD</data></node>
+    <node id="scaling-site"><data key="type">GEOMETRY</data></node>
+    <node id="schoenberg-helical-embedding"><data key="type">THEOREM</data></node>
+    <node id="scrarith-world"><data key="type">CLASS</data></node>
+    <node id="screw-function-criterion"><data key="type">CRITERION</data></node>
+    <node id="seam-geodesic"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="seam-kms-gibbs-positivity"><data key="type">OBJECT</data></node>
+    <node id="seam-modular-generator"><data key="type">OPERATOR</data></node>
+    <node id="seam-os-positive-transfer"><data key="type">OPERATOR</data></node>
+    <node id="seam-rp-blind-selector"><data key="type">THEOREM</data></node>
+    <node id="selberg-trace-formula"><data key="type">THEOREM</data></node>
+    <node id="selected-arch-error-quadratic-rate"><data key="type">THEOREM</data></node>
+    <node id="selected-arch-weighted-interpolation-estimate"><data key="type">OPEN_QUESTION</data></node>
+    <node id="selected-polynomial-approximates-grid"><data key="type">OPEN_QUESTION</data></node>
+    <node id="selected-window-family"><data key="type">CLASS</data></node>
+    <node id="self-dual-measure"><data key="type">OBJECT</data></node>
+    <node id="siegel-weil-carrier"><data key="type">OBJECT</data></node>
+    <node id="smooth-world"><data key="type">CLASS</data></node>
+    <node id="sos-pontryagin-language"><data key="type">METHOD</data></node>
+    <node id="spectral-framework"><data key="type">CLASS</data></node>
+    <node id="spectral-shift"><data key="type">INVARIANT</data></node>
+    <node id="static-prime-event-log"><data key="type">OBJECT</data></node>
+    <node id="stieltjes-function"><data key="type">CLASS</data></node>
+    <node id="stochastic-scale-semigroup-on-connes-cokernel"><data key="type">OPEN_QUESTION</data></node>
+    <node id="suzuki-screw-canonical-systems"><data key="type">CLASS</data></node>
+    <node id="terminal-statement"><data key="type">OPEN_QUESTION</data></node>
+    <node id="tfpt-c3"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="tfpt-compiler"><data key="type">CLASS</data></node>
+    <node id="tfpt-e8-compiler"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="tfpt-e8-lattice"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="tfpt-gcar"><data key="type">TFPT_STRUCTURE</data></node>
+    <node id="toeplitz-positivity"><data key="type">CRITERION</data></node>
+    <node id="ucp-map"><data key="type">OPERATOR</data></node>
+    <node id="unitarity-of-emergent-time"><data key="type">OPEN_QUESTION</data></node>
+    <node id="van-dantzig-pair"><data key="type">OBJECT</data></node>
+    <node id="verified-zeros-height"><data key="type">INVARIANT</data></node>
+    <node id="vitali-montel"><data key="type">THEOREM</data></node>
+    <node id="von-mangoldt"><data key="type">OBJECT</data></node>
+    <node id="w2-form-density"><data key="type">OPEN_QUESTION</data></node>
+    <node id="w3-uniform-window-positivity"><data key="type">OPEN_QUESTION</data></node>
+    <node id="w4-global-positivity-transfer"><data key="type">OPEN_QUESTION</data></node>
+    <node id="waldspurger-squares"><data key="type">METHOD</data></node>
+    <node id="weight4-gl1-transport"><data key="type">OPEN_QUESTION</data></node>
+    <node id="weil-arch-term"><data key="type">OBJECT</data></node>
+    <node id="weil-conjectures"><data key="type">THEOREM</data></node>
+    <node id="weil-pole-term"><data key="type">OBJECT</data></node>
+    <node id="weil-positivity"><data key="type">CRITERION</data></node>
+    <node id="weil-prime-term"><data key="type">OBJECT</data></node>
+    <node id="weil-quadratic-form"><data key="type">OBJECT</data></node>
+    <node id="xi-fourier-function"><data key="type">OBJECT</data></node>
+    <node id="zero-counting"><data key="type">INVARIANT</data></node>
+    <edge id="e0" source="4d-lattice-contract" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e1" source="4d-lattice-contract" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e2" source="4d-lattice-contract" target="qca-dilation"><data key="rel">REQUIRES</data></edge>
+    <edge id="e3" source="4d-lattice-contract" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e4" source="additive-adeles" target="fourier-transform"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e5" source="additive-adeles" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e6" source="additive-adeles" target="explicit-formula"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e7" source="adele-class-space" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e8" source="adele-class-space" target="additive-adeles"><data key="rel">REQUIRES</data></edge>
+    <edge id="e9" source="admissible-os-positive-measure" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e10" source="admissible-os-positive-measure" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e11" source="analytic-object" target="experiments/tfpt-discovery/door_b_lambda_transport_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e12" source="arakelov-intersection" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e13" source="arakelov-intersection" target="arithmetic-hodge-index"><data key="rel">REQUIRES</data></edge>
+    <edge id="e14" source="arch-rate" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e15" source="arch-rate" target="weil-arch-term"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e16" source="arch-rate" target="rh/problem/arch_rate.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e17" source="arch-rate" target="rh/problem/arch_rate.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e18" source="archimedean-dominance" target="weil-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e19" source="archimedean-dominance" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e20" source="archimedean-dominance" target="lstar-statement"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e21" source="archimedean-place" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e22" source="archimedean-place" target="experiments/tfpt-discovery/moonshot_arch_glue_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e23" source="arithmetic-hodge-index" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e24" source="arithmetic-hodge-index" target="weil-conjectures"><data key="rel">REQUIRES</data></edge>
+    <edge id="e25" source="baez-duarte-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e26" source="baez-duarte-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e27" source="baez-duarte-criterion" target="nyman-beurling-criterion"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e28" source="baez-duarte-criterion" target="experiments/tfpt-discovery/baez_duarte_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e29" source="baez-duarte-criterion" target="verification/v667_baez_duarte.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e30" source="barrier-arch-compensation" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e31" source="barrier-circularity" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e32" source="barrier-circularity" target="experiments/tfpt-discovery/signed_border_mean_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e33" source="barrier-circularity" target="experiments/tfpt-discovery/source_weyl_energy_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e34" source="barrier-circularity" target="rh/problem/signed_border_mean.pdf"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e35" source="barrier-circularity" target="rh/problem/signed_border_mean.tex"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e36" source="barrier-circularity" target="experiments/tfpt-discovery/e8_kms_schur_parent_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e37" source="barrier-circularity" target="experiments/tfpt-discovery/exclusion_zero_locator_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e38" source="barrier-circularity" target="experiments/tfpt-discovery/lk_split_theta_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e39" source="barrier-circularity" target="experiments/tfpt-discovery/signed_border_mean_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e40" source="barrier-circularity" target="experiments/tfpt-discovery/source_weyl_energy_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e41" source="barrier-circularity" target="rh/problem/signed_border_mean.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e42" source="barrier-circularity" target="rh/problem/signed_border_mean.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e43" source="barrier-circularity" target="rh/problem/source_weyl_energy.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e44" source="barrier-circularity" target="rh/problem/source_weyl_energy.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e45" source="barrier-circularity" target="rh/problem/verify_signed_border.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e46" source="barrier-finite-window-ceiling" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e47" source="barrier-lossy-constant" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e48" source="barrier-no-bridge" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e49" source="barrier-nonreal-cofactor-zeros" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e50" source="barrier-p2-defect" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e51" source="barrier-pick-sign" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e52" source="barrier-pole-mode" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e53" source="barrier-prime-phase-coherence" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e54" source="barrier-structural-mismatch" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e55" source="barrier-unimodularity" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e56" source="barrier-unimodularity" target="experiments/tfpt-discovery/e8_composite_gauss_result.json"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e57" source="barrier-unimodularity" target="experiments/tfpt-discovery/e8_composite_gauss_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e58" source="barrier-world-blind" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e59" source="barrier-world-blind" target="experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e60" source="barrier-world-blind" target="experiments/tfpt-discovery/gabor_first_contact_selberg_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e61" source="barrier-world-blind" target="verification/v964_lstar_coherence_census.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e62" source="barrier-zero-denominator" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e63" source="bernstein-function" target="completely-monotone"><data key="rel">REQUIRES</data></edge>
+    <edge id="e64" source="berry-keating-dilation" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e65" source="berry-keating-dilation" target="berry-keating-xp"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e66" source="berry-keating-dilation" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e67" source="berry-keating-xp" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e68" source="berry-keating-xp" target="hilbert-polya-operator"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e69" source="beurling-deny-criterion" target="positivity-semigroup"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e70" source="beurling-deny-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e71" source="beurling-deny-criterion" target="experiments/tfpt-discovery/bd_seam_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e72" source="bohr-lift" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e73" source="bohr-lift" target="prime-torus"><data key="rel">REQUIRES</data></edge>
+    <edge id="e74" source="bost-connes-kms-system" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e75" source="bost-connes-kms-system" target="bost-connes-system"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e76" source="bost-connes-kms-system" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e77" source="bost-connes-system" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e78" source="bost-connes-system" target="riemann-zeta"><data key="rel">REALIZES</data></edge>
+    <edge id="e79" source="bost-connes-system" target="adele-class-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e80" source="bost-connes-system" target="experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e81" source="bruhat-tits-tree" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e82" source="bruhat-tits-tree" target="hecke-correspondence"><data key="rel">REALIZES</data></edge>
+    <edge id="e83" source="canonical-system-hamiltonian" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e84" source="canonical-system-hamiltonian" target="screw-function-criterion"><data key="rel">REQUIRES</data></edge>
+    <edge id="e85" source="carlson-theorem" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e86" source="carlson-theorem" target="vitali-montel"><data key="rel">REQUIRES</data></edge>
+    <edge id="e87" source="census-qsm" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e88" source="census-qsm" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e89" source="census-qsm" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e90" source="census-qsm" target="multiplicative-composition-law"><data key="rel">REQUIRES</data></edge>
+    <edge id="e91" source="census-qsm" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e92" source="census-qsm-normflow" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e93" source="census-qsm-normflow" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e94" source="census-qsm-normflow" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e95" source="census-qsm-normflow" target="connes-marcolli-gln-system"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e96" source="census-qsm-normflow" target="multiplicative-composition-law"><data key="rel">REALIZES</data></edge>
+    <edge id="e97" source="census-qsm-normflow" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e98" source="chebyshev-psi" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e99" source="chebyshev-psi" target="von-mangoldt"><data key="rel">REQUIRES</data></edge>
+    <edge id="e100" source="chi-minus-4-census" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e101" source="chi-minus-4-census" target="class-number-formula-q-i"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e102" source="chuk-window-certificate" target="weil-positivity"><data key="rel">IMPLIED_BY</data></edge>
+    <edge id="e103" source="chuk-window-certificate" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e104" source="chuk-window-certificate" target="finite-weil-window"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e105" source="chuk-window-certificate" target="experiments/tfpt-discovery/weil_window_certificate_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e106" source="chuk-window-certificate" target="experiments/tfpt-discovery/weil_window_certificate_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e107" source="chuk-window-certificate" target="experiments/tfpt-discovery/weil_window_profile_scout_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e108" source="class-number-formula-q-i" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e109" source="cm-seam" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e110" source="cohen-seeds" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e111" source="cohen-seeds" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e112" source="cohen-seeds" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e113" source="cohen-seeds" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e114" source="cohen-seeds" target="edge-l-values"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e115" source="compact-window-certificate-mechanism" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e116" source="completely-monotone" target="laplace-transform"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e117" source="conductor-operator-burnol" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e118" source="conductor-operator-burnol" target="hilbert-polya-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e119" source="connes-adele-scaling-flow" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e120" source="connes-adele-scaling-flow" target="adele-class-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e121" source="connes-adele-scaling-flow" target="connes-trace-formula"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e122" source="connes-adele-scaling-flow" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e123" source="connes-marcolli-gln-system" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e124" source="connes-trace-formula" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e125" source="connes-trace-formula" target="adele-class-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e126" source="connes-trace-formula-dichotomy" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e127" source="connes-trace-formula-dichotomy" target="lstar-statement"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e128" source="critical-line" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e129" source="critical-line" target="critical-strip"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e130" source="critical-strip" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e131" source="cubic-wedges" target="riemann-hypothesis"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e132" source="cubic-wedges" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e133" source="cuntz-laca-semigroup-algebra" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e134" source="cuntz-system" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e135" source="cusp-surgery" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e136" source="cusp-surgery" target="efrat-determinant"><data key="rel">REQUIRES</data></edge>
+    <edge id="e137" source="de-branges-positivity" target="weil-positivity"><data key="rel">IMPLIES</data></edge>
+    <edge id="e138" source="de-branges-positivity" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e139" source="debranges-space" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e140" source="debranges-space" target="hermite-biehler-class"><data key="rel">REQUIRES</data></edge>
+    <edge id="e141" source="debranges-space" target="hilbert-polya-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e142" source="debruijn-newman-constant" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e143" source="deligne-rh" target="weil-conjectures"><data key="rel">IMPLIES</data></edge>
+    <edge id="e144" source="deligne-rh" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e145" source="deninger-cohomology" target="weil-conjectures"><data key="rel">GENERALIZES</data></edge>
+    <edge id="e146" source="deninger-cohomology" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e147" source="deninger-cohomology" target="hilbert-polya-operator"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e148" source="deninger-foliated-dynamics" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e149" source="deninger-foliated-dynamics" target="deninger-cohomology"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e150" source="deninger-foliated-dynamics" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e151" source="dirichlet-series-polytorus" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e152" source="dirichlet-series-polytorus" target="bohr-lift"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e153" source="discrete-spectrum-neutrality" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e154" source="dual-pair-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e155" source="dual-pair-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e156" source="dual-pair-language" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e157" source="e8-cascade" target="finite-clock-commensurability"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e158" source="e8-cascade" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e159" source="e8-cascade" target="tfpt-e8-lattice"><data key="rel">REQUIRES</data></edge>
+    <edge id="e160" source="e8-positive-lattice-norm" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e161" source="e8-positive-lattice-norm" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e162" source="e8-sublattice-rg-semigroup" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e163" source="e8-sublattice-rg-semigroup" target="functional-equation"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e164" source="e8-sublattice-rg-semigroup" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e165" source="e8-sublattice-rg-semigroup" target="euler-side-blindness"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e166" source="e8-sublattice-rg-semigroup" target="census-qsm-normflow"><data key="rel">REALIZES</data></edge>
+    <edge id="e167" source="e8-theta-heat-operator" target="discrete-spectrum-neutrality"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e168" source="e8-theta-heat-operator" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e169" source="e8-theta-heat-operator" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e170" source="e8-theta-series" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e171" source="e8-theta-series" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e172" source="e8-theta-series" target="eisenstein-rh-neutrality"><data key="rel">REALIZES</data></edge>
+    <edge id="e173" source="e8-theta-series" target="static-prime-event-log"><data key="rel">REALIZES</data></edge>
+    <edge id="e174" source="e8-theta-series" target="hecke-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e175" source="e8-theta-series" target="epstein-zeta"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e176" source="e8-theta-series" target="riemann-zeta"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e177" source="e8-theta-series" target="experiments/tfpt-discovery/li_e4_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e178" source="e8-theta-series" target="experiments/tfpt-discovery/prime_shadow_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e179" source="edge-l-values" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e180" source="edge-nonvanishing-method" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e181" source="efrat-determinant" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e182" source="eisenstein-constant-term" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e183" source="eisenstein-rh-neutrality" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e184" source="eisenstein-rh-neutrality" target="weight4-gl1-transport"><data key="rel">REQUIRES</data></edge>
+    <edge id="e185" source="eisenstein-series" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e186" source="eisenstein-series" target="eisenstein-constant-term"><data key="rel">REQUIRES</data></edge>
+    <edge id="e187" source="epstein-zeta" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e188" source="epstein-zeta" target="mellin-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e189" source="equality-hunt" target="connes-trace-formula-dichotomy"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e190" source="equality-hunt" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e191" source="equality-hunt" target="experiments/tfpt-discovery/hecke_index_theorem_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e192" source="euler-gross-entropy-gap" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e193" source="euler-gross-entropy-gap" target="main-world"><data key="rel">REQUIRES</data></edge>
+    <edge id="e194" source="euler-side-blindness" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e195" source="event-log-function" target="finite-clock-commensurability"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e196" source="event-log-function" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e197" source="event-log-function" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e198" source="event-log-function" target="archimedean-place"><data key="rel">REQUIRES</data></edge>
+    <edge id="e199" source="event-log-function" target="unitarity-of-emergent-time"><data key="rel">REQUIRES</data></edge>
+    <edge id="e200" source="explicit-formula" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e201" source="explicit-formula" target="riemann-zeta"><data key="rel">REQUIRES</data></edge>
+    <edge id="e202" source="explicit-formula" target="von-mangoldt"><data key="rel">REQUIRES</data></edge>
+    <edge id="e203" source="explicit-formula" target="experiments/tfpt-discovery/cased_replicate_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e204" source="explicit-formula" target="experiments/tfpt-discovery/rank3_uniformity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e205" source="explicit-formula" target="experiments/tfpt-discovery/rank3_zeroside_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e206" source="explicit-formula" target="experiments/tfpt-discovery/weil_gabor_explicit_formula_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e207" source="explicit-formula" target="experiments/tfpt-discovery/zero_comb_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e208" source="explicit-formula" target="experiments/tfpt-discovery/zeta_explicit_formula_trace_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e209" source="explicit-formula" target="rh/lean/RH/GaborExplicitFormula.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e210" source="extraction-joint" target="barrier-finite-window-ceiling"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e211" source="extraction-joint" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e212" source="extraction-joint" target="selected-window-family"><data key="rel">REQUIRES</data></edge>
+    <edge id="e213" source="extraction-joint" target="experiments/tfpt-discovery/extraction_joint_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e214" source="extraction-joint" target="rh/problem/extraction_joint.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e215" source="extraction-joint" target="rh/problem/extraction_joint.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e216" source="extraction-joint" target="weil-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e217" source="farkas-witness-n-mod-8" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e218" source="finite-clock-commensurability" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e219" source="finite-family-target-mismatch" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e220" source="finite-infinite-place-balance" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e221" source="finite-infinite-place-balance" target="archimedean-place"><data key="rel">REQUIRES</data></edge>
+    <edge id="e222" source="finite-infinite-place-balance" target="weil-positivity"><data key="rel">REQUIRES</data></edge>
+    <edge id="e223" source="finite-weil-gns-metric" target="finite-family-target-mismatch"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e224" source="finite-weil-gns-metric" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e225" source="finite-weil-window" target="barrier-finite-window-ceiling"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e226" source="finite-weil-window" target="compact-window-certificate-mechanism"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e227" source="finite-weil-window" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e228" source="finite-weil-window" target="weil-quadratic-form"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e229" source="finite-weil-window" target="experiments/tfpt-discovery/dirichlet_l4_floor_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e230" source="finite-weil-window" target="experiments/tfpt-discovery/hecke_channel_columns_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e231" source="finite-weil-window" target="experiments/tfpt-discovery/hecke_sos_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e232" source="finite-weil-window" target="experiments/tfpt-discovery/margin_link_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e233" source="finite-weil-window" target="experiments/tfpt-discovery/suzuki_contact_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e234" source="finite-weil-window" target="experiments/tfpt-discovery/w1_matrix_identity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e235" source="finite-weil-window" target="experiments/tfpt-discovery/w2_form_density_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e236" source="finite-weil-window" target="notes/arxiv_w1_note/note_w1_suzuki_identification.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e237" source="finite-weil-window" target="verification/v861_krein_normalform_lean.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e238" source="fourier-transform" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e239" source="frequently-selected-aug-dual-resolvent" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e240" source="frequently-selected-aug-dual-resolvent" target="lstar-statement"><data key="rel">REQUIRES</data></edge>
+    <edge id="e241" source="functional-equation" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e242" source="functional-equation" target="experiments/tfpt-discovery/zeta_funceq_duality_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e243" source="gabor-prime-side-criterion" target="gabor-rational-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e244" source="gabor-prime-side-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e245" source="gabor-prime-side-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e246" source="gabor-prime-side-criterion" target="explicit-formula"><data key="rel">REQUIRES</data></edge>
+    <edge id="e247" source="gabor-prime-side-criterion" target="rh/lean/RH/GaborCountableCriterion.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e248" source="gabor-pure-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e249" source="gabor-pure-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e250" source="gabor-pure-criterion" target="gabor-zero-side"><data key="rel">REQUIRES</data></edge>
+    <edge id="e251" source="gabor-pure-criterion" target="rh/lean/RH/GaborExposedOrbit.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e252" source="gabor-rational-criterion" target="gabor-pure-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e253" source="gabor-rational-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e254" source="gabor-rational-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e255" source="gabor-rational-criterion" target="rh/lean/RH/GaborCountableCriterion.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e256" source="gabor-zero-side" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e257" source="gabor-zero-side" target="experiments/tfpt-discovery/gabor_exposed_orbit_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e258" source="gate-zero" target="barrier-p2-defect"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e259" source="gate-zero" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e260" source="gate-zero" target="experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e261" source="gate-zero" target="groupoid"><data key="rel">REQUIRES</data></edge>
+    <edge id="e262" source="gate-zero" target="half-density"><data key="rel">REQUIRES</data></edge>
+    <edge id="e263" source="gate-zero" target="experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e264" source="gate-zero" target="verification/v733_strat3_gate0_census.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e265" source="gaussian-e8-module" target="groupoid"><data key="rel">CO_OCCURS</data></edge>
+    <edge id="e266" source="gaussian-e8-module" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e267" source="gaussian-e8-module" target="experiments/tfpt-discovery/groupoid_halfdensity_result.json"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e268" source="gaussian-e8-module" target="experiments/tfpt-discovery/z1_edge_signature_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e269" source="gaussian-e8-module" target="cm-seam"><data key="rel">REQUIRES</data></edge>
+    <edge id="e270" source="gaussian-e8-module" target="hecke-correspondence"><data key="rel">REQUIRES</data></edge>
+    <edge id="e271" source="gaussian-e8-module" target="tfpt-e8-lattice"><data key="rel">REQUIRES</data></edge>
+    <edge id="e272" source="gaussian-e8-module" target="experiments/tfpt-discovery/census_qsm_normflow_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e273" source="gaussian-e8-module" target="experiments/tfpt-discovery/e8_ramified_jetcode_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e274" source="gaussian-e8-module" target="experiments/tfpt-discovery/groupoid_halfdensity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e275" source="gaussian-e8-module" target="experiments/tfpt-discovery/groupoid_halfdensity_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e276" source="gaussian-e8-module" target="experiments/tfpt-discovery/hecke_mod_ramified_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e277" source="gaussian-e8-module" target="experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e278" source="gaussian-e8-module" target="experiments/tfpt-discovery/seam_clifford_modular_s_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e279" source="gaussian-e8-module" target="experiments/tfpt-discovery/two_qubit_clifford_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e280" source="gaussian-e8-module" target="experiments/tfpt-discovery/z1_edge_signature_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e281" source="gorz-theorem" target="jensen-polynomials"><data key="rel">IMPLIES</data></edge>
+    <edge id="e282" source="gorz-theorem" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e283" source="groupoid" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e284" source="groupoid" target="experiments/tfpt-discovery/groupoid_halfdensity_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e285" source="groupoid" target="ucp-map"><data key="rel">REQUIRES</data></edge>
+    <edge id="e286" source="groupoid" target="experiments/tfpt-discovery/automaton_sigma_orbifold_confluence_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e287" source="groupoid" target="experiments/tfpt-discovery/groupoid_halfdensity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e288" source="groupoid" target="experiments/tfpt-discovery/groupoid_halfdensity_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e289" source="groupoid" target="experiments/tfpt-discovery/moonshot_arch_glue_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e290" source="groupoid" target="experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e291" source="groupoid" target="experiments/tfpt-discovery/moonshot_state_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e292" source="groupoid" target="verification/v714_moonshot_hecke_groupoid.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e293" source="groupoid-modular-function" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e294" source="groupoid-modular-function" target="groupoid"><data key="rel">REQUIRES</data></edge>
+    <edge id="e295" source="groupoid-modular-function" target="experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e296" source="half-density" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e297" source="half-density" target="groupoid"><data key="rel">REQUIRES</data></edge>
+    <edge id="e298" source="half-density" target="experiments/tfpt-discovery/groupoid_halfdensity_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e299" source="half-density" target="experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e300" source="half-density" target="experiments/tfpt-discovery/parabolic_detline2_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e301" source="half-density" target="experiments/tfpt-discovery/parabolic_detline_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e302" source="half-density" target="experiments/tfpt-discovery/parabolic_detline_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e303" source="hamiltonian-psd-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e304" source="hamiltonian-psd-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e305" source="hamiltonian-psd-language" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e306" source="hankel-positivity" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e307" source="hankel-positivity" target="stieltjes-function"><data key="rel">REQUIRES</data></edge>
+    <edge id="e308" source="hardy-space-h2" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e309" source="heat-zeta-regularization" target="discrete-spectrum-neutrality"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e310" source="heat-zeta-regularization" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e311" source="hecke-correspondence" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e312" source="hecke-correspondence" target="experiments/tfpt-discovery/e8_pneighbor_hecke_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e313" source="hecke-correspondence" target="experiments/tfpt-discovery/hecke_index_theorem_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e314" source="hecke-correspondence" target="experiments/tfpt-discovery/hecke_mod_ramified_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e315" source="hecke-correspondence" target="experiments/tfpt-discovery/hecke_orbit_transfer_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e316" source="hecke-correspondence" target="experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e317" source="hecke-index-theorem" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e318" source="hecke-index-theorem" target="multiplicative-composition-law"><data key="rel">REALIZES</data></edge>
+    <edge id="e319" source="hecke-operator" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e320" source="hecke-operator" target="hecke-correspondence"><data key="rel">REALIZES</data></edge>
+    <edge id="e321" source="hecke-operator" target="experiments/tfpt-discovery/hecke_broadcast_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e322" source="herglotz-function" target="experiments/tfpt-discovery/port_loewner_identity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e323" source="herglotz-function" target="experiments/tfpt-discovery/port_weyl_cocycle_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e324" source="herglotz-function" target="experiments/tfpt-discovery/prime_e8_ordered_herglotz_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e325" source="herglotz-function" target="experiments/tfpt-discovery/z1_variable_edge_mfunction_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e326" source="herglotz-function" target="rh/problem/verify_debranges_index.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e327" source="herglotz-function" target="verification/v772_qf_feshbach_effective.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e328" source="herglotz-function" target="verification/v947_loewner_pick_dictionary.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e329" source="hermite-biehler-class" target="hilbert-polya-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e330" source="hilbert-polya-operator" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e331" source="hilbert-polya-operator" target="e8-theta-heat-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e332" source="hilbert-polya-operator" target="finite-weil-gns-metric"><data key="rel">REQUIRES</data></edge>
+    <edge id="e333" source="hilbert-polya-operator" target="no-archimedean-prime-joint-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e334" source="hilbert-polya-operator" target="seam-modular-generator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e335" source="hilbert-polya-operator" target="unitarity-of-emergent-time"><data key="rel">REQUIRES</data></edge>
+    <edge id="e336" source="hilbert-polya-operator" target="big_picture_2026-08-02_de.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e337" source="hilbert-polya-operator" target="experiments/tfpt-discovery/moonshot_spectral_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e338" source="hilbert-polya-operator" target="experiments/tfpt-discovery/moonshot_state_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e339" source="hilbert-polya-operator" target="experiments/tfpt-discovery/stage4_prolate_prototype_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e340" source="hilbert-polya-operator" target="experiments/tfpt-discovery/weil_recovery_compiler_sector_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e341" source="hilbert-polya-operator" target="experiments/tfpt-discovery/z1_edge_signature_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e342" source="hilbert-polya-operator" target="riemann-hypothesis"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e343" source="hnf-groupoid" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e344" source="hnf-groupoid" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e345" source="hnf-groupoid" target="experiments/tfpt-discovery/groupoid_halfdensity_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e346" source="hodge-riemann-positivity-candidate" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e347" source="hodge-riemann-positivity-candidate" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e348" source="horizon-replica-positivity" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e349" source="horizon-replica-positivity" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e350" source="hypercontractivity" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e351" source="hypercontractivity" target="prime-torus"><data key="rel">REQUIRES</data></edge>
+    <edge id="e352" source="i5-transport-ledger-criterion" target="weil-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e353" source="i5-transport-ledger-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e354" source="i5-transport-ledger-criterion" target="experiments/tfpt-discovery/i5_tightness_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e355" source="i5-transport-ledger-criterion" target="verification/v541_matching_lemma_ledger.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e356" source="index-flow-time" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e357" source="index-modular-state" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e358" source="index-modular-state" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e359" source="inner-bridges" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e360" source="inner-bridges" target="outer-bridges"><data key="rel">REQUIRES</data></edge>
+    <edge id="e361" source="inner-bridges" target="rh/lean/RH/InnerBridges.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e362" source="inner-bridges" target="rh/problem/inner_bridges.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e363" source="inner-bridges" target="rh/problem/verify_inner_bridges.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e364" source="ising-lee-yang-compiler" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e365" source="ising-lee-yang-compiler" target="lee-yang-property"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e366" source="jensen-hyperbolicity" target="laguerre-polya-class"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e367" source="jensen-hyperbolicity" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e368" source="jensen-hyperbolicity" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e369" source="jensen-polynomials" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e370" source="jensen-polynomials" target="riemann-xi"><data key="rel">REQUIRES</data></edge>
+    <edge id="e371" source="jensen-polynomials" target="toeplitz-positivity"><data key="rel">REQUIRES</data></edge>
+    <edge id="e372" source="jensen-polynomials" target="experiments/tfpt-discovery/jensen_compiler_rigidity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e373" source="kasteleyn-orientation-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e374" source="kasteleyn-orientation-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e375" source="kasteleyn-orientation-language" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e376" source="knauf-arithmetic-statistical-system" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e377" source="knauf-arithmetic-statistical-system" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e378" source="kneser-groupoid" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e379" source="kneser-groupoid" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e380" source="kneser-groupoid" target="experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e381" source="koide-mobius-flow" target="finite-clock-commensurability"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e382" source="koide-mobius-flow" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e383" source="koide-mobius-flow" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e384" source="kps-theorem" target="lee-yang-property"><data key="rel">IMPLIES</data></edge>
+    <edge id="e385" source="kps-theorem" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e386" source="kps-theorem" target="van-dantzig-pair"><data key="rel">REQUIRES</data></edge>
+    <edge id="e387" source="laguerre-polya-class" target="experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e388" source="laguerre-polya-class" target="experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e389" source="lambda-star-ladder" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e390" source="lambda-star-ladder" target="finite-weil-window"><data key="rel">REQUIRES</data></edge>
+    <edge id="e391" source="lambda-star-ladder" target="experiments/tfpt-discovery/kernel_loewner_window_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e392" source="lambda-star-ladder" target="experiments/tfpt-discovery/margin_law_symreg_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e393" source="lambda-star-ladder" target="experiments/tfpt-discovery/weil_window_profile_scout.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e394" source="lambda-star-ladder" target="experiments/tfpt-discovery/weil_window_profile_scout_result.json"><data key="rel">USED_BY</data></edge>
+    <edge id="e395" source="lambert-w" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e396" source="lambert-w" target="mellin-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e397" source="lambert-w" target="saddle-point-method"><data key="rel">REQUIRES</data></edge>
+    <edge id="e398" source="landau-widom-asymptotics" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e399" source="laplace-transform" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e400" source="laplace-transform" target="mellin-transform"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e401" source="lee-yang-property" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e402" source="lee-yang-property" target="laguerre-polya-class"><data key="rel">REQUIRES</data></edge>
+    <edge id="e403" source="li-coefficients" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e404" source="li-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e405" source="li-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e406" source="li-criterion" target="li-coefficients"><data key="rel">REQUIRES</data></edge>
+    <edge id="e407" source="lstar-statement" target="barrier-prime-phase-coherence"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e408" source="lstar-statement" target="finite-weil-window"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e409" source="lstar-statement" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e410" source="lstar-statement" target="experiments/tfpt-discovery/fullsource_quasidefiniteness_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e411" source="lstar-statement" target="rh/problem/verify_lstar_instance.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e412" source="lstar-statement" target="finite-weil-window"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e413" source="lstar-statement" target="w3-uniform-window-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e414" source="main-world" target="scrarith-world"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e415" source="main-world" target="smooth-world"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e416" source="markov-qca-unitary-dilation" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e417" source="markov-qca-unitary-dilation" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e418" source="matching-ledger-positivity" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e419" source="matching-ledger-positivity" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e420" source="mellin-transform" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e421" source="mellin-transform" target="fourier-transform"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e422" source="metric-by-operator-positivity" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e423" source="modular-clock" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e424" source="modular-clock" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e425" source="modular-clock" target="census-qsm"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e426" source="modular-surface" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e427" source="modular-surface" target="eisenstein-series"><data key="rel">REALIZES</data></edge>
+    <edge id="e428" source="montgomery-conjecture" target="pair-correlation"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e429" source="montgomery-conjecture" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e430" source="mu4-mark" target="class-number-formula-q-i"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e431" source="mu4-mark" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e432" source="multiplicative-composition-law" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e433" source="murru-salvatori" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e434" source="murru-salvatori" target="regulator-jump"><data key="rel">REQUIRES</data></edge>
+    <edge id="e435" source="narrowband-weil" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e436" source="narrowband-weil" target="finite-weil-window"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e437" source="narrowband-weil" target="experiments/tfpt-discovery/narrowband_weil_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e438" source="narrowband-weil" target="rh/problem/narrowband_weil.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e439" source="narrowband-weil" target="rh/problem/verify_narrowband_weil.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e440" source="newman-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e441" source="newman-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e442" source="newman-criterion" target="debruijn-newman-constant"><data key="rel">REQUIRES</data></edge>
+    <edge id="e443" source="no-archimedean-prime-joint-space" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e444" source="no-canonical-integer-label" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e445" source="nyman-beurling-criterion" target="hardy-space-h2"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e446" source="nyman-beurling-criterion" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e447" source="nyman-beurling-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e448" source="nyman-beurling-criterion" target="nyman-beurling-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e449" source="nyman-beurling-criterion" target="experiments/tfpt-discovery/baez_duarte_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e450" source="nyman-beurling-criterion" target="experiments/tfpt-discovery/criteria_atlas_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e451" source="nyman-beurling-criterion" target="verification/v667_baez_duarte.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e452" source="nyman-beurling-space" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e453" source="open-autonomous-prime-generator" target="finite-clock-commensurability"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e454" source="open-autonomous-prime-generator" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e455" source="open-autonomous-prime-generator" target="static-prime-event-log"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e456" source="open-gabor-window-positivity" target="barrier-finite-window-ceiling"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e457" source="open-gabor-window-positivity" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e458" source="open-gabor-window-positivity" target="gabor-pure-criterion"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e459" source="open-global-all-place-intersection" target="barrier-arch-compensation"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e460" source="open-global-all-place-intersection" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e461" source="open-global-all-place-intersection" target="additive-adeles"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e462" source="open-global-all-place-intersection" target="arakelov-intersection"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e463" source="open-global-all-place-intersection" target="weil-quadratic-form"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e464" source="open-half-density-geometry" target="barrier-unimodularity"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e465" source="open-half-density-geometry" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e466" source="open-half-density-geometry" target="experiments/tfpt-discovery/kneser_groupoid_halfdensity_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e467" source="open-half-density-geometry" target="experiments/tfpt-discovery/parabolic_detline2_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e468" source="open-half-density-geometry" target="gate-zero"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e469" source="open-half-density-geometry" target="half-density"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e470" source="open-independent-positivity-source" target="barrier-circularity"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e471" source="open-independent-positivity-source" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e472" source="open-independent-positivity-source" target="experiments/tfpt-discovery/geometric_sos_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e473" source="open-independent-positivity-source" target="experiments/tfpt-discovery/strat2_rp_universality_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e474" source="open-independent-positivity-source" target="verification/v902_wall_relocation_map.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e475" source="open-independent-positivity-source" target="hilbert-polya-operator"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e476" source="open-independent-positivity-source" target="lstar-statement"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e477" source="open-independent-positivity-source" target="metric-by-operator-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e478" source="open-independent-positivity-source" target="positivity-semigroup"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e479" source="open-independent-positivity-source" target="weil-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e480" source="open-lambda-star-scale-law" target="barrier-finite-window-ceiling"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e481" source="open-lambda-star-scale-law" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e482" source="open-lambda-star-scale-law" target="lambda-star-ladder"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e483" source="open-prime-phase-control" target="barrier-prime-phase-coherence"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e484" source="open-prime-phase-control" target="barrier-world-blind"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e485" source="open-prime-phase-control" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e486" source="open-prime-phase-control" target="weil-prime-term"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e487" source="open-relative-determinant-identity" target="barrier-structural-mismatch"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e488" source="open-relative-determinant-identity" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e489" source="open-relative-determinant-identity" target="explicit-formula"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e490" source="open-relative-determinant-identity" target="relative-determinant"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e491" source="openai-long-prime-gaps" target="riemann-hypothesis"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e492" source="openai-long-prime-gaps" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e493" source="outer-bridges" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e494" source="outer-bridges" target="selected-window-family"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e495" source="outer-bridges" target="rh/problem/outer_bridges.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e496" source="outer-bridges" target="rh/problem/outer_bridges.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e497" source="p1-gauss-bonnet-positive-normalization" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e498" source="p1-gauss-bonnet-positive-normalization" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e499" source="pair-correlation" target="gue-statistics"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e500" source="pair-correlation" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e501" source="pair-correlation" target="experiments/tfpt-discovery/lamzouri_hilbert_adjudication_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e502" source="pair-correlation" target="experiments/tfpt-discovery/paircorr_bridge_map_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e503" source="pair-correlation" target="experiments/tfpt-discovery/paircorr_contract_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e504" source="perron-fixed-point-transport" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e505" source="perron-fixed-point-transport" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e506" source="pi-numerology-c3" target="class-number-formula-q-i"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e507" source="pi-numerology-c3" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e508" source="pick-function" target="barrier-pick-sign"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e509" source="pick-function" target="herglotz-function"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e510" source="pick-function" target="mellin-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e511" source="pimsner-popa-entropy" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e512" source="plastic-number-threshold" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e513" source="polya-frequency-function" target="toeplitz-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e514" source="positive-cone-blindness" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e515" source="positivity-semigroup" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e516" source="positivity-semigroup" target="beurling-deny-criterion"><data key="rel">REQUIRES</data></edge>
+    <edge id="e517" source="prime-counting" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e518" source="prime-counting" target="chebyshev-psi"><data key="rel">REQUIRES</data></edge>
+    <edge id="e519" source="prime-torus" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e520" source="prime-torus" target="von-mangoldt"><data key="rel">REQUIRES</data></edge>
+    <edge id="e521" source="primon-riemann-gas" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e522" source="primon-riemann-gas" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e523" source="prolate-operator" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e524" source="prolate-operator" target="fourier-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e525" source="prolate-operator" target="landau-widom-asymptotics"><data key="rel">REQUIRES</data></edge>
+    <edge id="e526" source="prolate-operator" target="experiments/tfpt-discovery/strat3_sonin_prolate_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e527" source="prolate-operator" target="verification/v732_strat3_sonin_prolate.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e528" source="pure-gabor-family" target="experiments/tfpt-discovery/gabor_weil_positivity_subfamily_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e529" source="qca-dilation" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e530" source="qca-dilation" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e531" source="quadrep" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e532" source="quadrep" target="inner-bridges"><data key="rel">REQUIRES</data></edge>
+    <edge id="e533" source="quadrep" target="rh/problem/quadrep.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e534" source="quadrep" target="rh/problem/quadrep.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e535" source="quarter-shift-to-centre" target="obstruction-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e536" source="quasilocal-hamiltonian-dynamics" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e537" source="quasilocal-hamiltonian-dynamics" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e538" source="quillen-bfk-seam-determinants" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e539" source="quillen-bfk-seam-determinants" target="experiments/tfpt-discovery/quillen_bfk_compensation_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e540" source="quillen-bfk-seam-determinants" target="experiments/tfpt-discovery/seam_bfk_conical_det_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e541" source="r-dagger-kernel-loewner-stack" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e542" source="r-dagger-kernel-loewner-stack" target="experiments/tfpt-discovery/kernel_loewner08_probe.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e543" source="r-dagger-kernel-loewner-stack" target="experiments/tfpt-discovery/interval_cert_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e544" source="r-dagger-kernel-loewner-stack" target="experiments/tfpt-discovery/kernel_loewner08_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e545" source="r-dagger-kernel-loewner-stack" target="experiments/tfpt-discovery/kernel_loewner_window_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e546" source="r-dagger-kernel-loewner-stack" target="rh/lean/RH/FaithfulFold.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e547" source="r-dagger-kernel-loewner-stack" target="rh/lean/RH/InnerBridges.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e548" source="r-dagger-kernel-loewner-stack" target="rh/problem/kernel_loewner08.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e549" source="r-dagger-kernel-loewner-stack" target="rh/problem/kernel_loewner08.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e550" source="r-dagger-kernel-loewner-stack" target="rh/problem/keystone_judgment.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e551" source="r-dagger-kernel-loewner-stack" target="rh/problem/keystone_judgment.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e552" source="r-dagger-kernel-loewner-stack" target="rh/problem/verify_kernel_loewner08.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e553" source="r-dagger-kernel-loewner-stack" target="verification/v1017_kernel_loewner_positivity.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e554" source="rankin-selberg-norm-square" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e555" source="rankin-selberg-norm-square" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e556" source="rankin-selberg-norm-square" target="edge-nonvanishing-method"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e557" source="rankin-selberg-norm-square" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e558" source="regulator-jump" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e559" source="relative-determinant" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e560" source="relative-determinant" target="cusp-surgery"><data key="rel">REQUIRES</data></edge>
+    <edge id="e561" source="relay-lead-law" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e562" source="relay-lead-law" target="static-prime-event-log"><data key="rel">REQUIRES</data></edge>
+    <edge id="e563" source="relay-lead-law" target="von-mangoldt"><data key="rel">REQUIRES</data></edge>
+    <edge id="e564" source="resummed-clock-tower" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e565" source="resummed-clock-tower" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e566" source="resummed-clock-tower" target="event-log-function"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e567" source="rh-as-reflection-positivity" target="hilbert-polya-operator"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e568" source="rh-as-reflection-positivity" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e569" source="rh-as-reflection-positivity" target="weil-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e570" source="rh-as-reflection-positivity" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e571" source="rh-as-reflection-positivity" target="functional-equation"><data key="rel">REQUIRES</data></edge>
+    <edge id="e572" source="rhp-iiks-toda-tau" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e573" source="rhp-iiks-toda-tau" target="verification/v955_tau_iiks_toda_dictionary.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e574" source="riemann-hypothesis" target="baez-duarte-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e575" source="riemann-hypothesis" target="gabor-prime-side-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e576" source="riemann-hypothesis" target="gabor-pure-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e577" source="riemann-hypothesis" target="gabor-rational-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e578" source="riemann-hypothesis" target="jensen-hyperbolicity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e579" source="riemann-hypothesis" target="li-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e580" source="riemann-hypothesis" target="newman-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e581" source="riemann-hypothesis" target="nyman-beurling-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e582" source="riemann-hypothesis" target="weil-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e583" source="riemann-hypothesis" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e584" source="riemann-hypothesis" target="critical-line"><data key="rel">REQUIRES</data></edge>
+    <edge id="e585" source="riemann-kernel" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e586" source="riemann-kernel" target="fourier-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e587" source="riemann-kernel" target="xi-fourier-function"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e588" source="riemann-kernel" target="experiments/tfpt-discovery/mellin_cofactor_nonreal_zero_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e589" source="riemann-xi" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e590" source="riemann-xi" target="functional-equation"><data key="rel">REQUIRES</data></edge>
+    <edge id="e591" source="riemann-xi" target="riemann-zeta"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e592" source="riemann-zeta" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e593" source="riemann-zeta" target="riemann-xi"><data key="rel">REQUIRES</data></edge>
+    <edge id="e594" source="rodgers-tao-theorem" target="debruijn-newman-constant"><data key="rel">IMPLIES</data></edge>
+    <edge id="e595" source="rodgers-tao-theorem" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e596" source="saddle-point-method" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e597" source="saddle-point-method" target="mellin-transform"><data key="rel">REQUIRES</data></edge>
+    <edge id="e598" source="scaling-site" target="adele-class-space"><data key="rel">GENERALIZES</data></edge>
+    <edge id="e599" source="scaling-site" target="arithmetic-geometry"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e600" source="scaling-site" target="bost-connes-system"><data key="rel">REQUIRES</data></edge>
+    <edge id="e601" source="schoenberg-helical-embedding" target="screw-function-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e602" source="schoenberg-helical-embedding" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e603" source="screw-function-criterion" target="weil-positivity"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e604" source="screw-function-criterion" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e605" source="seam-geodesic" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e606" source="seam-geodesic" target="cm-seam"><data key="rel">REQUIRES</data></edge>
+    <edge id="e607" source="seam-geodesic" target="experiments/tfpt-discovery/seam_geodesic_factor.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e608" source="seam-geodesic" target="experiments/tfpt-discovery/seam_geodesic_infrastructure_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e609" source="seam-kms-gibbs-positivity" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e610" source="seam-kms-gibbs-positivity" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e611" source="seam-kms-gibbs-positivity" target="experiments/tfpt-discovery/e8_glue_lseries_selfdual_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e612" source="seam-modular-generator" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e613" source="seam-modular-generator" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e614" source="seam-os-positive-transfer" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e615" source="seam-os-positive-transfer" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e616" source="seam-rp-blind-selector" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e617" source="seam-rp-blind-selector" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e618" source="selberg-trace-formula" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e619" source="selberg-trace-formula" target="metric-by-operator-positivity"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e620" source="selberg-trace-formula" target="eisenstein-series"><data key="rel">REQUIRES</data></edge>
+    <edge id="e621" source="selberg-trace-formula" target="modular-surface"><data key="rel">REQUIRES</data></edge>
+    <edge id="e622" source="selected-arch-error-quadratic-rate" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e623" source="selected-arch-error-quadratic-rate" target="rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e624" source="selected-arch-error-quadratic-rate" target="rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e625" source="selected-arch-weighted-interpolation-estimate" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e626" source="selected-arch-weighted-interpolation-estimate" target="rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e627" source="selected-arch-weighted-interpolation-estimate" target="rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e628" source="selected-arch-weighted-interpolation-estimate" target="rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e629" source="selected-arch-weighted-interpolation-estimate" target="selected-arch-error-quadratic-rate"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e630" source="selected-polynomial-approximates-grid" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e631" source="selected-polynomial-approximates-grid" target="weil-positivity"><data key="rel">REQUIRES</data></edge>
+    <edge id="e632" source="selected-polynomial-approximates-grid" target="rh/problem/extraction_joint.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e633" source="selected-polynomial-approximates-grid" target="rh/problem/extraction_joint.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e634" source="selected-polynomial-approximates-grid" target="rh/problem/verify_extraction_joint.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e635" source="selected-window-family" target="finite-weil-window"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e636" source="selected-window-family" target="rh/lean/RH/FrequentlySelected.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e637" source="self-dual-measure" target="siegel-weil-carrier"><data key="rel">CO_OCCURS</data></edge>
+    <edge id="e638" source="self-dual-measure" target="half-density"><data key="rel">DUAL_TO</data></edge>
+    <edge id="e639" source="self-dual-measure" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e640" source="self-dual-measure" target="additive-adeles"><data key="rel">REQUIRES</data></edge>
+    <edge id="e641" source="siegel-weil-carrier" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e642" source="siegel-weil-carrier" target="farkas-witness-n-mod-8"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e643" source="siegel-weil-carrier" target="open-lambda-star-scale-law"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e644" source="siegel-weil-carrier" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e645" source="siegel-weil-carrier" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e646" source="siegel-weil-carrier" target="quarter-shift-to-centre"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e647" source="siegel-weil-carrier" target="waldspurger-squares"><data key="rel">CO_OCCURS</data></edge>
+    <edge id="e648" source="siegel-weil-carrier" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e649" source="siegel-weil-carrier" target="explicit-formula"><data key="rel">REDUCES_TO</data></edge>
+    <edge id="e650" source="smooth-world" target="experiments/tfpt-discovery/transport_discriminator_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e651" source="sos-pontryagin-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e652" source="sos-pontryagin-language" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e653" source="sos-pontryagin-language" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e654" source="spectral-shift" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e655" source="spectral-shift" target="hilbert-polya-operator"><data key="rel">REQUIRES</data></edge>
+    <edge id="e656" source="spectral-shift" target="relative-determinant"><data key="rel">REQUIRES</data></edge>
+    <edge id="e657" source="static-prime-event-log" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e658" source="static-prime-event-log" target="riemann-zeta"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e659" source="stieltjes-function" target="barrier-nonreal-cofactor-zeros"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e660" source="stieltjes-function" target="completely-monotone"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e661" source="stieltjes-function" target="pick-function"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e662" source="stochastic-scale-semigroup-on-connes-cokernel" target="finite-clock-commensurability"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e663" source="stochastic-scale-semigroup-on-connes-cokernel" target="no-archimedean-prime-joint-space"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e664" source="stochastic-scale-semigroup-on-connes-cokernel" target="no-canonical-integer-label"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e665" source="stochastic-scale-semigroup-on-connes-cokernel" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e666" source="stochastic-scale-semigroup-on-connes-cokernel" target="adele-class-space"><data key="rel">REQUIRES</data></edge>
+    <edge id="e667" source="stochastic-scale-semigroup-on-connes-cokernel" target="self-dual-measure"><data key="rel">REQUIRES</data></edge>
+    <edge id="e668" source="stochastic-scale-semigroup-on-connes-cokernel" target="unitarity-of-emergent-time"><data key="rel">REQUIRES</data></edge>
+    <edge id="e669" source="stochastic-scale-semigroup-on-connes-cokernel" target="hilbert-polya-operator"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e670" source="stochastic-scale-semigroup-on-connes-cokernel" target="rh-as-reflection-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e671" source="suzuki-screw-canonical-systems" target="experiments/tfpt-discovery/w1_theorem_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e672" source="suzuki-screw-canonical-systems" target="notes/arxiv_w1_note/note_w1_suzuki_identification.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e673" source="terminal-statement" target="barrier-lossy-constant"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e674" source="terminal-statement" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e675" source="terminal-statement" target="lstar-statement"><data key="rel">REQUIRES</data></edge>
+    <edge id="e676" source="terminal-statement" target="experiments/tfpt-discovery/budget_anatomy_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e677" source="terminal-statement" target="experiments/tfpt-discovery/cross_chain_gamma_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e678" source="terminal-statement" target="rh/lean/RH/Augmented.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e679" source="terminal-statement" target="rh/lean/RH/Canonical.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e680" source="terminal-statement" target="rh/lean/RH/Closure.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e681" source="terminal-statement" target="rh/problem/compose_lemma.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e682" source="terminal-statement" target="rh/problem/compose_lemma.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e683" source="terminal-statement" target="rh/problem/cross_chain_gamma.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e684" source="terminal-statement" target="rh/problem/cross_chain_gamma.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e685" source="terminal-statement" target="rh/problem/qn_reopened.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e686" source="terminal-statement" target="rh/problem/qn_reopened.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e687" source="terminal-statement" target="rh/problem/verify_cross_chain.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e688" source="terminal-statement" target="rh/problem/verify_qn_reopened.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e689" source="terminal-statement" target="verification/v960_terminal_surface_closure.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e690" source="terminal-statement" target="finite-weil-window"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e691" source="tfpt-c3" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e692" source="tfpt-c3" target="tfpt-e8-compiler"><data key="rel">REQUIRES</data></edge>
+    <edge id="e693" source="tfpt-compiler" target="experiments/tfpt-discovery/clock_torsion_ecm_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e694" source="tfpt-compiler" target="experiments/tfpt-discovery/compiler_arithmetic_bridge_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e695" source="tfpt-compiler" target="experiments/tfpt-discovery/simplicity_core_census_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e696" source="tfpt-compiler" target="experiments/tfpt-discovery/two_qubit_clifford_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e697" source="tfpt-e8-compiler" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e698" source="tfpt-e8-compiler" target="tfpt-e8-lattice"><data key="rel">REALIZES</data></edge>
+    <edge id="e699" source="tfpt-e8-compiler" target="experiments/tfpt-discovery/recursion_traces_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e700" source="tfpt-e8-lattice" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e701" source="tfpt-e8-lattice" target="e8-theta-series"><data key="rel">REALIZES</data></edge>
+    <edge id="e702" source="tfpt-e8-lattice" target="experiments/tfpt-discovery/e8_local_densities_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e703" source="tfpt-e8-lattice" target="experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e704" source="tfpt-e8-lattice" target="verification/v536_eichler_trace_layer.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e705" source="tfpt-gcar" target="tfpt-compiler"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e706" source="tfpt-gcar" target="tfpt-e8-compiler"><data key="rel">REQUIRES</data></edge>
+    <edge id="e707" source="tfpt-gcar" target="experiments/tfpt-discovery/boundary_nullselector_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e708" source="tfpt-gcar" target="verification/v785_hecke_check32.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e709" source="toeplitz-positivity" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e710" source="toeplitz-positivity" target="polya-frequency-function"><data key="rel">REQUIRES</data></edge>
+    <edge id="e711" source="toeplitz-positivity" target="experiments/tfpt-discovery/oddtoeplitz_pole_branch_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e712" source="ucp-map" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e713" source="ucp-map" target="cuntz-system"><data key="rel">REQUIRES</data></edge>
+    <edge id="e714" source="ucp-map" target="experiments/tfpt-discovery/euler_operator_lift_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e715" source="unitarity-of-emergent-time" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e716" source="unitarity-of-emergent-time" target="weil-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e717" source="van-dantzig-pair" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e718" source="verified-zeros-height" target="compact-window-certificate-mechanism"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e719" source="verified-zeros-height" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e720" source="vitali-montel" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e721" source="von-mangoldt" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e722" source="von-mangoldt" target="rh/problem/overlap_mechanism.pdf"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e723" source="von-mangoldt" target="rh/problem/overlap_mechanism.tex"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e724" source="von-mangoldt" target="rh/problem/p1_construction.pdf"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e725" source="von-mangoldt" target="rh/problem/p1_construction.tex"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e726" source="von-mangoldt" target="rh/problem/verify_overlap_mechanism.py"><data key="rel">KILLED_BY</data></edge>
+    <edge id="e727" source="von-mangoldt" target="experiments/tfpt-discovery/chain_mass_law_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e728" source="von-mangoldt" target="experiments/tfpt-discovery/christoffel_pnt_gamma_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e729" source="von-mangoldt" target="experiments/tfpt-discovery/coupledtau_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e730" source="von-mangoldt" target="experiments/tfpt-discovery/frame_beyond_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e731" source="von-mangoldt" target="experiments/tfpt-discovery/groupoid_halfdensity_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e732" source="von-mangoldt" target="experiments/tfpt-discovery/mangoldt_incidence_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e733" source="von-mangoldt" target="experiments/tfpt-discovery/prime_inequality_evosearch_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e734" source="von-mangoldt" target="experiments/tfpt-discovery/prime_sqrt_uniformization_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e735" source="von-mangoldt" target="experiments/tfpt-discovery/selberg_supply_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e736" source="von-mangoldt" target="experiments/tfpt-discovery/suzuki_contact_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e737" source="von-mangoldt" target="experiments/tfpt-discovery/turing_cert_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e738" source="von-mangoldt" target="rh/problem/overlap_mechanism.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e739" source="von-mangoldt" target="rh/problem/overlap_mechanism.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e740" source="von-mangoldt" target="rh/problem/p1_construction.pdf"><data key="rel">USED_BY</data></edge>
+    <edge id="e741" source="von-mangoldt" target="rh/problem/p1_construction.tex"><data key="rel">USED_BY</data></edge>
+    <edge id="e742" source="von-mangoldt" target="rh/problem/verify_overlap_mechanism.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e743" source="w2-form-density" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e744" source="w3-uniform-window-positivity" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e745" source="w4-global-positivity-transfer" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e746" source="w4-global-positivity-transfer" target="w2-form-density"><data key="rel">REQUIRES</data></edge>
+    <edge id="e747" source="w4-global-positivity-transfer" target="w3-uniform-window-positivity"><data key="rel">REQUIRES</data></edge>
+    <edge id="e748" source="w4-global-positivity-transfer" target="weil-positivity"><data key="rel">WOULD_CLOSE</data></edge>
+    <edge id="e749" source="waldspurger-squares" target="euler-side-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e750" source="waldspurger-squares" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e751" source="waldspurger-squares" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e752" source="waldspurger-squares" target="positive-cone-blindness"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e753" source="waldspurger-squares" target="weight4-gl1-transport"><data key="rel">BLOCKED_BY</data></edge>
+    <edge id="e754" source="waldspurger-squares" target="spectral-framework"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e755" source="weight4-gl1-transport" target="research-question"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e756" source="weil-arch-term" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e757" source="weil-arch-term" target="experiments/tfpt-discovery/heat_arch_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e758" source="weil-conjectures" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e759" source="weil-conjectures" target="riemann-hypothesis"><data key="rel">SPECIAL_CASE_OF</data></edge>
+    <edge id="e760" source="weil-pole-term" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e761" source="weil-pole-term" target="experiments/tfpt-discovery/pnt_model_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e762" source="weil-pole-term" target="experiments/tfpt-discovery/pole_rank_one_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e763" source="weil-pole-term" target="experiments/tfpt-discovery/w1_dictionary_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e764" source="weil-pole-term" target="verification/v591_pole_rank_one.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e765" source="weil-positivity" target="i5-transport-ledger-criterion"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e766" source="weil-positivity" target="riemann-hypothesis"><data key="rel">EQUIVALENT_TO</data></edge>
+    <edge id="e767" source="weil-positivity" target="positivity-criterion"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e768" source="weil-positivity" target="weil-quadratic-form"><data key="rel">REQUIRES</data></edge>
+    <edge id="e769" source="weil-positivity" target="experiments/tfpt-discovery/continuum_extension_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e770" source="weil-positivity" target="experiments/tfpt-discovery/continuum_extraction_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e771" source="weil-positivity" target="experiments/tfpt-discovery/duality_forms_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e772" source="weil-positivity" target="experiments/tfpt-discovery/i5_connes_dictionary_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e773" source="weil-positivity" target="experiments/tfpt-discovery/zone_extension_proof_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e774" source="weil-positivity" target="tfpt_prime_front.tex#sec:i5"><data key="rel">USED_BY</data></edge>
+    <edge id="e775" source="weil-positivity" target="verification/v848_extraction_chain.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e776" source="weil-prime-term" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e777" source="weil-prime-term" target="von-mangoldt"><data key="rel">REQUIRES</data></edge>
+    <edge id="e778" source="weil-prime-term" target="experiments/tfpt-discovery/kernel_loewner_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e779" source="weil-quadratic-form" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e780" source="weil-quadratic-form" target="explicit-formula"><data key="rel">REQUIRES</data></edge>
+    <edge id="e781" source="weil-quadratic-form" target="weil-arch-term"><data key="rel">REQUIRES</data></edge>
+    <edge id="e782" source="weil-quadratic-form" target="weil-pole-term"><data key="rel">REQUIRES</data></edge>
+    <edge id="e783" source="weil-quadratic-form" target="weil-prime-term"><data key="rel">REQUIRES</data></edge>
+    <edge id="e784" source="weil-quadratic-form" target="experiments/lean4-carrier-rigidity/TfptCarrier/WeilDictionary.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e785" source="weil-quadratic-form" target="experiments/tfpt-discovery/gabor_honest_weil_game_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e786" source="weil-quadratic-form" target="experiments/tfpt-discovery/gabor_scramble_gate_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e787" source="weil-quadratic-form" target="experiments/tfpt-discovery/relay_test_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e788" source="weil-quadratic-form" target="experiments/tfpt-discovery/stc_sol_convergence_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e789" source="weil-quadratic-form" target="experiments/tfpt-discovery/thin_band_analytic_probe.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e790" source="weil-quadratic-form" target="experiments/tfpt-discovery/weil_window_profile_scout.py"><data key="rel">USED_BY</data></edge>
+    <edge id="e791" source="weil-quadratic-form" target="rh/lean/RH/Elementwise.lean"><data key="rel">USED_BY</data></edge>
+    <edge id="e792" source="xi-fourier-function" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e793" source="xi-fourier-function" target="laguerre-polya-class"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e794" source="xi-fourier-function" target="riemann-kernel"><data key="rel">TRANSFORM_OF</data></edge>
+    <edge id="e795" source="zero-counting" target="analytic-object"><data key="rel">INSTANCE_OF</data></edge>
+    <edge id="e796" source="zero-counting" target="riemann-zeta"><data key="rel">REQUIRES</data></edge>
+  </graph>
+</graphml>

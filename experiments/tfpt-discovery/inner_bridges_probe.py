@@ -66,10 +66,11 @@ def text_gates() -> None:
     check("far-cell-transcribed",
           "def productionArchLagFar" in elementwise
           and "productionArchFarIntegrand" in elementwise)
-    check("one-named-arch-identity",
+    check("arch-contract-unasserted-r638L",
           "def ArchGaussMellinDigammaIdentity" in elementwise
-          and elementwise.count(
-              "theorem arch_gauss_mellin_digamma_identity") == 1)
+          and "theorem arch_gauss_mellin_digamma_identity" not in elementwise
+          and "theorem arch_elementwise_stabilization" in elementwise
+          and "(hArch : ArchGaussMellinDigammaIdentity)" in elementwise)
     check("mathlib-gauss-integral-todo",
           "Prove Gauss' integral representation" in digamma)
     check("finite-psd-lemma-proved",

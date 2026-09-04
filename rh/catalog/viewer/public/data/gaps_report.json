@@ -1,0 +1,2554 @@
+{
+  "G1": [
+    {
+      "id": "4d-lattice-contract",
+      "type": "OBJECT"
+    },
+    {
+      "id": "additive-adeles",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "adele-class-space",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "admissible-os-positive-measure",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "arakelov-intersection",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "archimedean-dominance",
+      "type": "CRITERION"
+    },
+    {
+      "id": "arithmetic-geometry",
+      "type": "CLASS"
+    },
+    {
+      "id": "arithmetic-hodge-index",
+      "type": "THEOREM"
+    },
+    {
+      "id": "barrier-arch-compensation",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-finite-window-ceiling",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-lossy-constant",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-no-bridge",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-nonreal-cofactor-zeros",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-p2-defect",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-pick-sign",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-pole-mode",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-prime-phase-coherence",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-structural-mismatch",
+      "type": "BARRIER"
+    },
+    {
+      "id": "barrier-zero-denominator",
+      "type": "BARRIER"
+    },
+    {
+      "id": "bernstein-function",
+      "type": "CLASS"
+    },
+    {
+      "id": "berry-keating-dilation",
+      "type": "METHOD"
+    },
+    {
+      "id": "berry-keating-xp",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "bohr-lift",
+      "type": "METHOD"
+    },
+    {
+      "id": "bost-connes-kms-system",
+      "type": "OBJECT"
+    },
+    {
+      "id": "bruhat-tits-tree",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "canonical-system-hamiltonian",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "carlson-theorem",
+      "type": "THEOREM"
+    },
+    {
+      "id": "census-qsm",
+      "type": "OBJECT"
+    },
+    {
+      "id": "census-qsm-normflow",
+      "type": "OBJECT"
+    },
+    {
+      "id": "chebyshev-psi",
+      "type": "OBJECT"
+    },
+    {
+      "id": "chi-minus-4-census",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "class-number-formula-q-i",
+      "type": "THEOREM"
+    },
+    {
+      "id": "cm-seam",
+      "type": "TFPT_STRUCTURE"
+    },
+    {
+      "id": "cohen-seeds",
+      "type": "OBJECT"
+    },
+    {
+      "id": "compact-window-certificate-mechanism",
+      "type": "BARRIER"
+    },
+    {
+      "id": "completely-monotone",
+      "type": "CLASS"
+    },
+    {
+      "id": "conductor-operator-burnol",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "connes-adele-scaling-flow",
+      "type": "METHOD"
+    },
+    {
+      "id": "connes-marcolli-gln-system",
+      "type": "OBJECT"
+    },
+    {
+      "id": "connes-trace-formula",
+      "type": "METHOD"
+    },
+    {
+      "id": "connes-trace-formula-dichotomy",
+      "type": "BARRIER"
+    },
+    {
+      "id": "critical-line",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "critical-strip",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "cubic-wedges",
+      "type": "METHOD"
+    },
+    {
+      "id": "cuntz-laca-semigroup-algebra",
+      "type": "OBJECT"
+    },
+    {
+      "id": "cuntz-system",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "cusp-surgery",
+      "type": "METHOD"
+    },
+    {
+      "id": "de-branges-positivity",
+      "type": "CRITERION"
+    },
+    {
+      "id": "debranges-space",
+      "type": "OBJECT"
+    },
+    {
+      "id": "debruijn-newman-constant",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "deligne-rh",
+      "type": "THEOREM"
+    },
+    {
+      "id": "deninger-cohomology",
+      "type": "METHOD"
+    },
+    {
+      "id": "deninger-foliated-dynamics",
+      "type": "METHOD"
+    },
+    {
+      "id": "dirichlet-series-polytorus",
+      "type": "OBJECT"
+    },
+    {
+      "id": "discrete-spectrum-neutrality",
+      "type": "BARRIER"
+    },
+    {
+      "id": "dual-pair-language",
+      "type": "METHOD"
+    },
+    {
+      "id": "e8-cascade",
+      "type": "TFPT_STRUCTURE"
+    },
+    {
+      "id": "e8-positive-lattice-norm",
+      "type": "OBJECT"
+    },
+    {
+      "id": "e8-sublattice-rg-semigroup",
+      "type": "OBJECT"
+    },
+    {
+      "id": "e8-theta-heat-operator",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "edge-l-values",
+      "type": "METHOD"
+    },
+    {
+      "id": "edge-nonvanishing-method",
+      "type": "METHOD"
+    },
+    {
+      "id": "efrat-determinant",
+      "type": "THEOREM"
+    },
+    {
+      "id": "eisenstein-constant-term",
+      "type": "OBJECT"
+    },
+    {
+      "id": "eisenstein-rh-neutrality",
+      "type": "THEOREM"
+    },
+    {
+      "id": "eisenstein-series",
+      "type": "OBJECT"
+    },
+    {
+      "id": "epstein-zeta",
+      "type": "OBJECT"
+    },
+    {
+      "id": "euler-gross-entropy-gap",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "euler-side-blindness",
+      "type": "BARRIER"
+    },
+    {
+      "id": "event-log-function",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "farkas-witness-n-mod-8",
+      "type": "BARRIER"
+    },
+    {
+      "id": "finite-clock-commensurability",
+      "type": "BARRIER"
+    },
+    {
+      "id": "finite-family-target-mismatch",
+      "type": "BARRIER"
+    },
+    {
+      "id": "finite-infinite-place-balance",
+      "type": "THEOREM"
+    },
+    {
+      "id": "finite-weil-gns-metric",
+      "type": "OBJECT"
+    },
+    {
+      "id": "fourier-transform",
+      "type": "METHOD"
+    },
+    {
+      "id": "frequently-selected-aug-dual-resolvent",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "gorz-theorem",
+      "type": "THEOREM"
+    },
+    {
+      "id": "gue-statistics",
+      "type": "CLASS"
+    },
+    {
+      "id": "hamiltonian-psd-language",
+      "type": "METHOD"
+    },
+    {
+      "id": "hankel-positivity",
+      "type": "CRITERION"
+    },
+    {
+      "id": "hardy-space-h2",
+      "type": "OBJECT"
+    },
+    {
+      "id": "heat-zeta-regularization",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "hecke-index-theorem",
+      "type": "THEOREM"
+    },
+    {
+      "id": "hermite-biehler-class",
+      "type": "CLASS"
+    },
+    {
+      "id": "hodge-riemann-positivity-candidate",
+      "type": "OBJECT"
+    },
+    {
+      "id": "horizon-replica-positivity",
+      "type": "THEOREM"
+    },
+    {
+      "id": "hypercontractivity",
+      "type": "THEOREM"
+    },
+    {
+      "id": "index-flow-time",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "index-modular-state",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "ising-lee-yang-compiler",
+      "type": "METHOD"
+    },
+    {
+      "id": "jensen-hyperbolicity",
+      "type": "CRITERION"
+    },
+    {
+      "id": "kasteleyn-orientation-language",
+      "type": "METHOD"
+    },
+    {
+      "id": "knauf-arithmetic-statistical-system",
+      "type": "OBJECT"
+    },
+    {
+      "id": "koide-mobius-flow",
+      "type": "OBJECT"
+    },
+    {
+      "id": "kps-theorem",
+      "type": "THEOREM"
+    },
+    {
+      "id": "lambert-w",
+      "type": "OBJECT"
+    },
+    {
+      "id": "landau-widom-asymptotics",
+      "type": "THEOREM"
+    },
+    {
+      "id": "laplace-transform",
+      "type": "METHOD"
+    },
+    {
+      "id": "lee-yang-property",
+      "type": "CRITERION"
+    },
+    {
+      "id": "li-coefficients",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "li-criterion",
+      "type": "CRITERION"
+    },
+    {
+      "id": "main-world",
+      "type": "CLASS"
+    },
+    {
+      "id": "markov-qca-unitary-dilation",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "matching-ledger-positivity",
+      "type": "THEOREM"
+    },
+    {
+      "id": "mellin-transform",
+      "type": "METHOD"
+    },
+    {
+      "id": "metric-by-operator-positivity",
+      "type": "METHOD"
+    },
+    {
+      "id": "modular-clock",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "modular-surface",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "montgomery-conjecture",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "mu4-mark",
+      "type": "TFPT_STRUCTURE"
+    },
+    {
+      "id": "multiplicative-composition-law",
+      "type": "THEOREM"
+    },
+    {
+      "id": "murru-salvatori",
+      "type": "METHOD"
+    },
+    {
+      "id": "newman-criterion",
+      "type": "CRITERION"
+    },
+    {
+      "id": "no-archimedean-prime-joint-space",
+      "type": "BARRIER"
+    },
+    {
+      "id": "no-canonical-integer-label",
+      "type": "BARRIER"
+    },
+    {
+      "id": "nyman-beurling-space",
+      "type": "OBJECT"
+    },
+    {
+      "id": "obstruction-class",
+      "type": "CLASS"
+    },
+    {
+      "id": "open-autonomous-prime-generator",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "open-gabor-window-positivity",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "open-global-all-place-intersection",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "open-lambda-star-scale-law",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "open-prime-phase-control",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "open-relative-determinant-identity",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "openai-long-prime-gaps",
+      "type": "METHOD"
+    },
+    {
+      "id": "p1-gauss-bonnet-positive-normalization",
+      "type": "THEOREM"
+    },
+    {
+      "id": "perron-fixed-point-transport",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "pi-numerology-c3",
+      "type": "BARRIER"
+    },
+    {
+      "id": "pick-function",
+      "type": "CLASS"
+    },
+    {
+      "id": "pimsner-popa-entropy",
+      "type": "THEOREM"
+    },
+    {
+      "id": "plastic-number-threshold",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "polya-frequency-function",
+      "type": "CLASS"
+    },
+    {
+      "id": "positive-cone-blindness",
+      "type": "BARRIER"
+    },
+    {
+      "id": "positivity-criterion",
+      "type": "CLASS"
+    },
+    {
+      "id": "positivity-semigroup",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "prime-counting",
+      "type": "OBJECT"
+    },
+    {
+      "id": "prime-torus",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "primon-riemann-gas",
+      "type": "OBJECT"
+    },
+    {
+      "id": "qca-dilation",
+      "type": "OBJECT"
+    },
+    {
+      "id": "quarter-shift-to-centre",
+      "type": "BARRIER"
+    },
+    {
+      "id": "quasilocal-hamiltonian-dynamics",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "rankin-selberg-norm-square",
+      "type": "METHOD"
+    },
+    {
+      "id": "regulator-jump",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "relative-determinant",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "relay-lead-law",
+      "type": "TFPT_STRUCTURE"
+    },
+    {
+      "id": "research-question",
+      "type": "CLASS"
+    },
+    {
+      "id": "resummed-clock-tower",
+      "type": "OBJECT"
+    },
+    {
+      "id": "rh-as-reflection-positivity",
+      "type": "THEOREM"
+    },
+    {
+      "id": "riemann-hypothesis",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "riemann-xi",
+      "type": "OBJECT"
+    },
+    {
+      "id": "riemann-zeta",
+      "type": "OBJECT"
+    },
+    {
+      "id": "rodgers-tao-theorem",
+      "type": "THEOREM"
+    },
+    {
+      "id": "saddle-point-method",
+      "type": "METHOD"
+    },
+    {
+      "id": "scaling-site",
+      "type": "GEOMETRY"
+    },
+    {
+      "id": "schoenberg-helical-embedding",
+      "type": "THEOREM"
+    },
+    {
+      "id": "scrarith-world",
+      "type": "CLASS"
+    },
+    {
+      "id": "screw-function-criterion",
+      "type": "CRITERION"
+    },
+    {
+      "id": "seam-modular-generator",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "seam-os-positive-transfer",
+      "type": "OPERATOR"
+    },
+    {
+      "id": "seam-rp-blind-selector",
+      "type": "THEOREM"
+    },
+    {
+      "id": "selberg-trace-formula",
+      "type": "THEOREM"
+    },
+    {
+      "id": "self-dual-measure",
+      "type": "OBJECT"
+    },
+    {
+      "id": "siegel-weil-carrier",
+      "type": "OBJECT"
+    },
+    {
+      "id": "sos-pontryagin-language",
+      "type": "METHOD"
+    },
+    {
+      "id": "spectral-framework",
+      "type": "CLASS"
+    },
+    {
+      "id": "spectral-shift",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "static-prime-event-log",
+      "type": "OBJECT"
+    },
+    {
+      "id": "stieltjes-function",
+      "type": "CLASS"
+    },
+    {
+      "id": "stochastic-scale-semigroup-on-connes-cokernel",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "tfpt-c3",
+      "type": "TFPT_STRUCTURE"
+    },
+    {
+      "id": "unitarity-of-emergent-time",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "van-dantzig-pair",
+      "type": "OBJECT"
+    },
+    {
+      "id": "verified-zeros-height",
+      "type": "INVARIANT"
+    },
+    {
+      "id": "vitali-montel",
+      "type": "THEOREM"
+    },
+    {
+      "id": "w2-form-density",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "w3-uniform-window-positivity",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "w4-global-positivity-transfer",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "waldspurger-squares",
+      "type": "METHOD"
+    },
+    {
+      "id": "weight4-gl1-transport",
+      "type": "OPEN_QUESTION"
+    },
+    {
+      "id": "weil-conjectures",
+      "type": "THEOREM"
+    },
+    {
+      "id": "xi-fourier-function",
+      "type": "OBJECT"
+    },
+    {
+      "id": "zero-counting",
+      "type": "INVARIANT"
+    }
+  ],
+  "G2": [
+    {
+      "id": "archimedean-dominance",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "de-branges-positivity",
+      "status": "KILLED_HERE"
+    },
+    {
+      "id": "hankel-positivity",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "jensen-hyperbolicity",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "lee-yang-property",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "li-criterion",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "newman-criterion",
+      "status": "CLASSICAL"
+    },
+    {
+      "id": "screw-function-criterion",
+      "status": "CLASSICAL"
+    }
+  ],
+  "G3": [
+    {
+      "pair": [
+        "von-mangoldt",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 24
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "von-mangoldt"
+      ],
+      "attempt_score": 23
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "terminal-statement"
+      ],
+      "attempt_score": 23
+    },
+    {
+      "pair": [
+        "terminal-statement",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 22
+    },
+    {
+      "pair": [
+        "lambda-star-ladder",
+        "terminal-statement"
+      ],
+      "attempt_score": 18
+    },
+    {
+      "pair": [
+        "barrier-circularity",
+        "weil-positivity"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "terminal-statement"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "von-mangoldt"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "narrowband-weil",
+        "terminal-statement"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "open-independent-positivity-source",
+        "terminal-statement"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "von-mangoldt",
+        "weil-prime-term"
+      ],
+      "attempt_score": 17
+    },
+    {
+      "pair": [
+        "barrier-circularity",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "finite-weil-window"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-positivity"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
+        "hypercontractivity",
+        "von-mangoldt"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
+        "lstar-statement",
+        "terminal-statement"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 15
+    },
+    {
+      "pair": [
+        "weil-positivity",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 15
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "weil-positivity"
+      ],
+      "attempt_score": 14
+    },
+    {
+      "pair": [
+        "gaussian-e8-module",
+        "hecke-correspondence"
+      ],
+      "attempt_score": 14
+    },
+    {
+      "pair": [
+        "barrier-circularity",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "lambda-star-ladder"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-pole-term"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "weil-positivity"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
+        "barrier-circularity",
+        "lstar-statement"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "finite-weil-window"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "finite-weil-window"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "narrowband-weil"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "gaussian-e8-module",
+        "tfpt-e8-lattice"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "groupoid",
+        "half-density"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "lambda-star-ladder",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "weil-pole-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "gaussian-e8-module"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "weil-pole-term"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "lstar-statement"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "gaussian-e8-module",
+        "seam-geodesic"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "narrowband-weil",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "open-independent-positivity-source",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "selected-polynomial-approximates-grid",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "weil-pole-term",
+        "weil-positivity"
+      ],
+      "attempt_score": 11
+    },
+    {
+      "pair": [
+        "arch-rate",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-arch-term"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-prime-term"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "gaussian-e8-module",
+        "hecke-operator"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "lstar-statement",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "nyman-beurling-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "open-independent-positivity-source",
+        "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "selected-polynomial-approximates-grid",
+        "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "explicit-formula"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "gate-zero",
+        "groupoid"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "groupoid",
+        "open-half-density-geometry"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "lstar-statement",
+        "weil-positivity"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "weil-arch-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "weil-prime-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "archimedean-place",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "gabor-rational-criterion"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "weil-arch-term"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "weil-prime-term"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "functional-equation",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "groupoid",
+        "groupoid-modular-function"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "groupoid",
+        "ucp-map"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "hecke-correspondence",
+        "tfpt-e8-lattice"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "lstar-statement"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "rh-as-reflection-positivity",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "selected-window-family",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "weil-arch-term",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "weil-positivity",
+        "weil-prime-term"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "lambda-star-ladder"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "hecke-correspondence"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "weil-positivity"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "functional-equation",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "hilbert-polya-operator"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "gate-zero",
+        "half-density"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "half-density",
+        "open-half-density-geometry"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "lambda-star-ladder",
+        "narrowband-weil"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "rh-as-reflection-positivity",
+        "weil-positivity"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "schoenberg-helical-embedding",
+        "weil-positivity"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "weil-conjectures",
+        "weil-positivity"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "barrier-unimodularity",
+        "half-density"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "extraction-joint"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "narrowband-weil"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "groupoid-modular-function",
+        "half-density"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "half-density",
+        "ucp-map"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "hecke-correspondence",
+        "hecke-operator"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "hilbert-polya-operator",
+        "weil-conjectures"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "lambda-star-ladder",
+        "lstar-statement"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "open-independent-positivity-source",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 6
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "i5-transport-ledger-criterion"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "lstar-statement"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "tfpt-e8-lattice"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "i5-transport-ledger-criterion"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "outer-bridges"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "inner-bridges",
+        "outer-bridges"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "inner-bridges",
+        "quadrep"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "lstar-statement",
+        "narrowband-weil"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "lstar-statement",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "tfpt-e8-lattice",
+        "tfpt-gcar"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "weil-arch-term",
+        "weil-pole-term"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "weil-pole-term",
+        "weil-prime-term"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
+        "barrier-world-blind",
+        "weil-prime-term"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "beurling-deny-criterion",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "selected-window-family"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "gate-zero",
+        "open-half-density-geometry"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "hecke-operator",
+        "tfpt-e8-lattice"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "inner-bridges",
+        "selected-window-family"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "outer-bridges",
+        "quadrep"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "arch-rate",
+        "weil-arch-term"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "gabor-prime-side-criterion"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "gabor-pure-criterion"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "gabor-rational-criterion"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "barrier-unimodularity",
+        "gate-zero"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "barrier-unimodularity",
+        "open-half-density-geometry"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "finite-infinite-place-balance"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "hecke-operator"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "hnf-groupoid"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "e8-theta-series",
+        "kneser-groupoid"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "equality-hunt",
+        "lstar-statement"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "finite-infinite-place-balance"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "gate-zero",
+        "groupoid-modular-function"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "gate-zero",
+        "ucp-map"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "nyman-beurling-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "nyman-beurling-criterion",
+        "weil-conjectures"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "open-independent-positivity-source",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "outer-bridges",
+        "selected-window-family"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "prolate-operator",
+        "riemann-kernel"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "rh-as-reflection-positivity",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "weil-conjectures"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "i5-transport-ledger-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "functional-equation",
+        "jensen-polynomials"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "gabor-pure-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "gabor-rational-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "gabor-rational-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "gabor-zero-side"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "gabor-zero-side"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "groupoid-modular-function",
+        "ucp-map"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "hnf-groupoid",
+        "kneser-groupoid"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "jensen-polynomials",
+        "toeplitz-positivity"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "landau-widom-asymptotics",
+        "prolate-operator"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "selected-arch-error-quadratic-rate",
+        "selected-arch-weighted-interpolation-estimate"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "weil-arch-term",
+        "weil-prime-term"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "archimedean-place",
+        "finite-infinite-place-balance"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "functional-equation",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "weil-conjectures"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-pure-criterion",
+        "weil-conjectures"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gabor-rational-criterion",
+        "weil-conjectures"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gorz-theorem",
+        "jensen-polynomials"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "gorz-theorem",
+        "toeplitz-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "kps-theorem",
+        "laguerre-polya-class"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "arithmetic-hodge-index",
+        "deligne-rh"
+      ],
+      "attempt_score": 0
+    },
+    {
+      "pair": [
+        "arithmetic-hodge-index",
+        "weil-conjectures"
+      ],
+      "attempt_score": 0
+    },
+    {
+      "pair": [
+        "carlson-theorem",
+        "vitali-montel"
+      ],
+      "attempt_score": 0
+    },
+    {
+      "pair": [
+        "deligne-rh",
+        "weil-conjectures"
+      ],
+      "attempt_score": 0
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 0
+    },
+    {
+      "pair": [
+        "rh-as-reflection-positivity",
+        "weil-conjectures"
+      ],
+      "attempt_score": 0
+    }
+  ],
+  "G4": [
+    {
+      "id": "barrier-circularity",
+      "killed_by": 4
+    },
+    {
+      "id": "barrier-unimodularity",
+      "killed_by": 1
+    },
+    {
+      "id": "barrier-arch-compensation",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-finite-window-ceiling",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-lossy-constant",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-no-bridge",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-nonreal-cofactor-zeros",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-p2-defect",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-pick-sign",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-pole-mode",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-prime-phase-coherence",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-structural-mismatch",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-world-blind",
+      "killed_by": 0
+    },
+    {
+      "id": "barrier-zero-denominator",
+      "killed_by": 0
+    },
+    {
+      "id": "compact-window-certificate-mechanism",
+      "killed_by": 0
+    },
+    {
+      "id": "connes-trace-formula-dichotomy",
+      "killed_by": 0
+    },
+    {
+      "id": "discrete-spectrum-neutrality",
+      "killed_by": 0
+    },
+    {
+      "id": "euler-side-blindness",
+      "killed_by": 0
+    },
+    {
+      "id": "farkas-witness-n-mod-8",
+      "killed_by": 0
+    },
+    {
+      "id": "finite-clock-commensurability",
+      "killed_by": 0
+    },
+    {
+      "id": "finite-family-target-mismatch",
+      "killed_by": 0
+    },
+    {
+      "id": "no-archimedean-prime-joint-space",
+      "killed_by": 0
+    },
+    {
+      "id": "no-canonical-integer-label",
+      "killed_by": 0
+    },
+    {
+      "id": "pi-numerology-c3",
+      "killed_by": 0
+    },
+    {
+      "id": "positive-cone-blindness",
+      "killed_by": 0
+    },
+    {
+      "id": "quarter-shift-to-centre",
+      "killed_by": 0
+    }
+  ],
+  "G5": [
+    {
+      "id": "cm-seam",
+      "path": [],
+      "hops": null
+    },
+    {
+      "id": "e8-cascade",
+      "path": [
+        "e8-cascade",
+        "finite-clock-commensurability",
+        "event-log-function",
+        "unitarity-of-emergent-time",
+        "weil-positivity"
+      ],
+      "hops": 4
+    },
+    {
+      "id": "gate-zero",
+      "path": [
+        "gate-zero",
+        "half-density",
+        "self-dual-measure",
+        "additive-adeles",
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "hops": 5
+    },
+    {
+      "id": "gaussian-e8-module",
+      "path": [
+        "gaussian-e8-module",
+        "tfpt-e8-lattice",
+        "e8-theta-series",
+        "riemann-zeta",
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "hops": 5
+    },
+    {
+      "id": "inner-bridges",
+      "path": [
+        "inner-bridges",
+        "outer-bridges",
+        "selected-window-family",
+        "extraction-joint",
+        "weil-positivity"
+      ],
+      "hops": 4
+    },
+    {
+      "id": "mu4-mark",
+      "path": [],
+      "hops": null
+    },
+    {
+      "id": "outer-bridges",
+      "path": [
+        "outer-bridges",
+        "selected-window-family",
+        "extraction-joint",
+        "weil-positivity"
+      ],
+      "hops": 3
+    },
+    {
+      "id": "quadrep",
+      "path": [
+        "quadrep",
+        "inner-bridges",
+        "outer-bridges",
+        "selected-window-family",
+        "extraction-joint",
+        "weil-positivity"
+      ],
+      "hops": 5
+    },
+    {
+      "id": "relay-lead-law",
+      "path": [
+        "relay-lead-law",
+        "von-mangoldt",
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "hops": 3
+    },
+    {
+      "id": "seam-geodesic",
+      "path": [],
+      "hops": null
+    },
+    {
+      "id": "tfpt-c3",
+      "path": [],
+      "hops": null
+    },
+    {
+      "id": "tfpt-e8-compiler",
+      "path": [
+        "tfpt-e8-compiler",
+        "tfpt-e8-lattice",
+        "e8-theta-series",
+        "riemann-zeta",
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "hops": 5
+    },
+    {
+      "id": "tfpt-e8-lattice",
+      "path": [
+        "tfpt-e8-lattice",
+        "e8-theta-series",
+        "riemann-zeta",
+        "explicit-formula",
+        "gabor-prime-side-criterion"
+      ],
+      "hops": 4
+    },
+    {
+      "id": "tfpt-gcar",
+      "path": [],
+      "hops": null
+    }
+  ],
+  "G6": [
+    {
+      "id": "equality-hunt",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "event-log-function",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "extraction-joint",
+      "targets": [
+        "weil-positivity"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "frequently-selected-aug-dual-resolvent",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "index-modular-state",
+      "targets": [
+        "event-log-function"
+      ],
+      "alive_targets": 0,
+      "target_count": 1
+    },
+    {
+      "id": "lstar-statement",
+      "targets": [
+        "finite-weil-window",
+        "w3-uniform-window-positivity"
+      ],
+      "alive_targets": 1,
+      "target_count": 2
+    },
+    {
+      "id": "montgomery-conjecture",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "open-autonomous-prime-generator",
+      "targets": [
+        "static-prime-event-log"
+      ],
+      "alive_targets": 0,
+      "target_count": 1
+    },
+    {
+      "id": "open-gabor-window-positivity",
+      "targets": [
+        "gabor-pure-criterion"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "open-global-all-place-intersection",
+      "targets": [
+        "additive-adeles",
+        "arakelov-intersection",
+        "weil-quadratic-form"
+      ],
+      "alive_targets": 1,
+      "target_count": 3
+    },
+    {
+      "id": "open-half-density-geometry",
+      "targets": [
+        "gate-zero",
+        "half-density"
+      ],
+      "alive_targets": 2,
+      "target_count": 2
+    },
+    {
+      "id": "open-independent-positivity-source",
+      "targets": [
+        "hilbert-polya-operator",
+        "lstar-statement",
+        "metric-by-operator-positivity",
+        "positivity-semigroup",
+        "weil-positivity"
+      ],
+      "alive_targets": 3,
+      "target_count": 5
+    },
+    {
+      "id": "open-lambda-star-scale-law",
+      "targets": [
+        "lambda-star-ladder"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "open-prime-phase-control",
+      "targets": [
+        "weil-prime-term"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "open-relative-determinant-identity",
+      "targets": [
+        "explicit-formula",
+        "relative-determinant"
+      ],
+      "alive_targets": 1,
+      "target_count": 2
+    },
+    {
+      "id": "riemann-hypothesis",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "selected-arch-weighted-interpolation-estimate",
+      "targets": [
+        "selected-arch-error-quadratic-rate"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "selected-polynomial-approximates-grid",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "stochastic-scale-semigroup-on-connes-cokernel",
+      "targets": [
+        "hilbert-polya-operator",
+        "rh-as-reflection-positivity"
+      ],
+      "alive_targets": 2,
+      "target_count": 2
+    },
+    {
+      "id": "terminal-statement",
+      "targets": [
+        "finite-weil-window"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "unitarity-of-emergent-time",
+      "targets": [
+        "weil-positivity"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "w2-form-density",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "w3-uniform-window-positivity",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "w4-global-positivity-transfer",
+      "targets": [
+        "weil-positivity"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "weight4-gl1-transport",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    }
+  ]
+}

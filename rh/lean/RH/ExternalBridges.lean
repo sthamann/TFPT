@@ -2,8 +2,10 @@
 RH/ExternalBridges.lean -- THE THREE EXTERNAL BRIDGES MISSING AT r462
 (r463, PRIME.RDAGGER.LEAN_FIDELITY_REPAIR.01).
 
-These declarations deliberately increase the sorry census.  They
-replace three absent arrows by typed, auditable obligations:
+r638L: the honest-contour dictionary is proved; the
+gauge-mismatched corpus identification is retained only as an
+unasserted historical contract; the sole asserting sorry in this
+file is compact off-critical separation.
 
   internal GridElement positivity
     -> full Weil test-class positivity
@@ -11,8 +13,8 @@ replace three absent arrows by typed, auditable obligations:
     -> Mathlib.NumberTheory.LSeries.RiemannZeta.RiemannHypothesis.
 
 Nothing in this file is an RH claim.  The endpoint in
-`FrequentlySelected.lean` is named `_internal` until all three arrows
-are proved without `sorry`.
+`FrequentlySelected.lean` is named `_internal` until the remaining
+arrow is proved without `sorry`.
 -/
 import RH.Elementwise
 import Mathlib.NumberTheory.LSeries.RiemannZeta
@@ -15627,18 +15629,14 @@ The r538 honest route defines `fullWeilFormHonest` with the contour
 weights and proves
 `standard_explicit_formula_identification_honest`.  The original corpus
 form stays blocked; its exact discrepancy is exposed by `surplusComb`
-and `archGaugeDelta`, not hidden in a dictionary lemma. -/
+and `archGaugeDelta`, not hidden in a dictionary lemma.
+
+r638L retires the former asserting sorry
+`standard_explicit_formula_identification` and keeps this Prop only as
+an auditable rejected gauge contract. -/
 def StandardExplicitFormulaIdentification : Prop :=
   ∀ F : FullWeilTest, F.admissible →
     fullWeilForm F = standardExplicitFormula F
-
-/-- OPEN CLASSICAL BRIDGE 2 (r463; obstruction documented r534):
-the corpus arch/comb/pole form cannot be identified by the present
-contour without an additional theorem reconciling the unequal prime
-weights and the corresponding arch/pole conventions. -/
-theorem standard_explicit_formula_identification :
-    StandardExplicitFormulaIdentification := by
-  sorry
 
 /-- A nontrivial zero in exactly Mathlib's sense: zero of
 `riemannZeta`, not a negative even integer, and not the pole at `1`. -/

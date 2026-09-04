@@ -10,6 +10,7 @@ Project-local Cursor Agent Skills (`.cursor/skills/`). Loaded on demand when the
 | [promote-to-verification](promote-to-verification/SKILL.md) | Graduate a finding to `verification/vN_*.py` + papers + ledger |
 | [tfpt-deep-sync](tfpt-deep-sync/SKILL.md) | Parallel surface enumeration before/after vN integration |
 | [rh-sync](rh-sync/SKILL.md) | Sync `rh/` after each RH round — INVENTORY, suite, README, paper, Lean |
+| [rh-corpus-search](rh-corpus-search/SKILL.md) | Search/update the RH semantic catalog before a new mechanism or after a round |
 | [agent-routing](agent-routing/SKILL.md) | Model tier per task, STATE handoffs, escalation signals, spend review |
 
 ## Rules (Cursor)
@@ -23,6 +24,7 @@ Project-local Cursor Agent Skills (`.cursor/skills/`). Loaded on demand when the
 | `subagent-deep-sync.mdc` | Glob: verification, TeX, website |
 | `website-sync.mdc` | Glob: website, verification, TeX |
 | `rh-workspace.mdc` | Glob: rh/** — consolidated RH home rules |
+| `rh-catalog.mdc` | Glob: rh/**, discovery probes, rh/lean — consult rhcat; fragment after each round |
 
 ## Hooks
 

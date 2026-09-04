@@ -56,7 +56,7 @@ constraint — pair-correlation cancellation beyond diagonal control — is
 **exactly the location of our measured wall** (`CEILING_IS_OUR_WALL`), while
 being orthogonal in scope (`NO_IMPORT`, frame mismatch quantified: their
 zero-atom near-tight frame vs our prime-comb half-filling regime, R ≈ 4/3 vs
-73–126).
+73–126). Round r639 adjudicated the Lamzouri re-proof (arXiv:2609.02882, Hilbert-space inequality + unconditional BGSTB pair correlation): same two-moment class, same constants ($C_0 = p^*$ of r627), and the sole arithmetic input is the proven pair-correlation range $|\alpha| \le 1$ — the wall location is now explicit in the external proof itself (`SAME_CLASS`, `WALL_LOCATION_CONFIRMED`).
 
 **The exception scalar.** After r263 the fiber edge is a two-branch statement:
 the generic branch is a target-blind triangle certificate (no cancellation
@@ -6865,15 +6865,25 @@ Sealed probe
 (smoke 9/9, SPEC\_SHA `e8a49c5895d3d382`)
 plus `rh/problem/arch_rate.tex` (+ PDF +
 `verify_arch_rate.py`, 6/6, `ARCH RATE VERIFIED`).
-**Ausgang IDENTITY\_ISOLATED + RATE\_O\_DELTA2.**
+**Ausgang IDENTITY\_ISOLATED + RATE\_O\_DELTA2
+(numeric large-support) + FIXED\_CONSTANT\_FALSIFIED
+(r475-repair).**
 F1(ii) not closed as exact equality (`Delta -> +infty` at fixed
 mesh, proved; Mathlib Gauss TODO isolated as a named Prop).
-`weilArchSide` is the concrete $u$-space pairing.  Selected-path
-rate $O(\Delta_k^2)$ named; `err(k,f) -> 0` at fixed $f$ proved
-from the named rate.  Witness: $0.119793278323$ at $k=5$
-($\mathrm{err}/\Delta^2=3.9893$) and $0.028876619985$ at $k=9$
-($3.8466$).  Sorry census stays **8**.  No infinitely-many-$k$
-positivity.
+`weilArchSide` is the concrete $u$-space pairing.  $O(\Delta_k^2)$
+rate numerically supported (ratios $3.85$--$3.99$); fixed-constant
+Prop FALSIFIED ($8.0283458222>4.1259765625$, small-support regime,
+kink defect $-\theta(1-\theta)/2$ proved).  The $\exists C$ interface
+`SelectedArchErrorQuadraticRateExists` is proved CONDITIONALLY on the
+still-open `SelectedArchWeightedInterpolationEstimate` (theorem
+`selectedArchErrorQuadraticRateExists_of_weightedInterpolationEstimate`);
+the downstream convergence
+`selectedArchError_tendsto_zero_of_rateExists` is proved
+unconditionally from the $\exists C$ form
+(`RH/SelectedArchErrorQuadraticRateClassical.lean`).  Witness:
+$0.119793278323$ at $k=5$ ($\mathrm{err}/\Delta^2=3.9893$) and
+$0.028876619985$ at $k=9$ ($3.8466$).  Sorry census stays **5**.
+No infinitely-many-$k$ positivity.
 Experiments-side, NO ledger row, NO L\* claim, NO RH CLAIM.
 
 **Crossterm sharpening (r476,
@@ -7727,14 +7737,19 @@ inputs.  Current brick status:
   **RELAY\_UNIVERSAL** --- prime powers $q\le 32$ (18 events),
   entry $L_j=\tfrac12\log q$; every ancestor $Q_{j-1}$ fails
   a finite lead after entry $\Delta_j=0.011$--$0.028$ (nearly
-  constant; greedy consumption, $\Delta L\approx 0.015$);
+  constant at $N=80$; greedy $\Delta\approx 0.015$
+  WITHDRAWN by r635 --- $N=80$ double-precision artefact;
+  converged $\Delta_2=0.0253$, $\Delta_3=0.0083$,
+  $\Delta_4=0.0064$ ($0.00606$ at $N=160$),
+  $\Delta_5=0.0034$ ($0.00275$ at $N=160$); $q\ge 7$
+  UNMEASURABLE at the $40$-digit floor);
   failing mode always odd, $g<0$, newest weight restores
   positivity (all 18).  $\lambda^*$ slopes $-50/-77/-79$
   at fixed $N=80$ (global $-68.6$; Slepian $-28.3$; r615
   $-44.8$) --- the $-77/-79$ values at $L=0.9$--$1.4$ are
   $N$-artifacts, corrected by r630b to $-50.6$ ($0.3$--$0.6$)
-  and $-116$ ($0.6$--$1.0$); RELAY\_UNIVERSAL, leads
-  $\Delta\approx 0.015$, and $L_{\mathrm{det}}$ unaffected ---
+  and $-116$ ($0.6$--$1.0$); RELAY\_UNIVERSAL, entry census,
+  odd/edge mode, and $L_{\mathrm{det}}$ unaffected ---
   super-exponential (Landau--Widom plunge).  Controls break
   at entry+lead (SCRAMBLE $0.376$, WPERM $0.402$, EPSTEIN
   $0.564$).  $L_{\mathrm{det}}(\beta=0.6,\gamma=20)=0.55$,
@@ -7908,11 +7923,75 @@ inputs.  Current brick status:
   **F2 FORWARD\_INCREASES\_MARGIN** --- HF $=$ Loewner
   $10^{-15}$; $c(L)=+0.315/+0.582/+0.764$; detector, no lever.
   **F3 RANDOM\_EULER\_REFUTED** --- Haar MC $99.5\%$ negative
-  vs $\lambda^*=5.70\cdot 10^{-8}$; Baker $7.3$ decades;
-  magnitude/Diophantine dead as a class (promotion candidate
-  with r615/r619).
-  **F4 LEAD\_LAW\_INVARIANT** --- $\alpha=8.18$ vs $2p+1=7$;
-  $\Delta\approx 0.015$ is not a corollary of the fitted laws.
+  stands; Baker $7.3$ decades; magnitude/Diophantine dead.
+  $C(L)=1$ is NOT the mechanism (generic for minimizers,
+  including negative Haar draws; r637).
+  **F4 LEAD\_LAW\_INVARIANT** --- VOID (r635/r636); based on
+  withdrawn $N=80$ $\Delta\approx 0.015$ values.
+  **r635 sealed probe (experiments only; no RH claim).**
+  r635 `relay_lead_precision_probe.py` (SHA `36c06826\ldots`,
+  SPEC `28db9bef\ldots`, RESULT `3457e907\ldots`, $11/11$,
+  $1260$ s): **LEAD\_PARTIAL**.  Converged leads
+  $0.0253/0.0083/0.0064/0.0034$; $q\ge 7$ UNMEASURABLE
+  (probe: later events already indefinite at entry;
+  $q=7$ $\lambda_{\min}=-6.99\cdot 10^{-11}$).  Greedy
+  $\Delta\approx 0.015$ WITHDRAWN.
+  **r636 sealed probe (experiments only; no RH claim).**
+  r636 `relay_lead_law_probe.py` (SHA `ee2deb46\ldots`,
+  SPEC `6bf7a7ee\ldots`, RESULT `2a6bd720\ldots`, $6/6$,
+  $0.5$ s): **LEAD\_LAW\_PARTIAL** --- no model $<20\%$ on
+  all four; lead law dissolved; r633-F4 void.
+  **r637 sealed probe (experiments only; no RH claim).**
+  r637 `relay_vote_map_probe.py` (SHA `fc5c1426\ldots`,
+  SPEC `44bf67f8\ldots`, RESULT `540557ad\ldots`, $14/14$):
+  **VOTE\_MODE\_SPECIFIC** ($k_{\mathrm{thr}}=3$) +
+  **FLIP\_COUNTEREXAMPLE**.  Unanimity GENERIC (SCRAMBLE
+  $C=1$ at every $L$); $C$ not a positivity predictor.
+  Decoding programme (r635--r637): constant lead, unanimity,
+  and odd-edge defect type reduce to margin collapse and
+  edge geometry; no side channel measured.
+  **r638 sealed probe (experiments only; no RH claim).**
+  r638 `gabor_first_contact_selberg_probe.py` (SHA `2ab532bc\ldots`,
+  SPEC `22a92842\ldots`, RESULT `58a36aff\ldots`, $14/14$,
+  $338$ s dual): **KILLED(STRUCTURAL: selberg-convolution-is-hankel)**.
+  First-contact + Selberg square completion on the pure-Gabor
+  zero side $G=\mathrm{POLE}-\mathrm{PRIME}+\mathrm{ARCH}$.
+  Pre-registered Toeplitz gate: the Selberg term
+  $\sum_N(\Lambda*\Lambda)(N)\psi(\log N)$ is a Hankel form in
+  $(\log m,\log n)$; PSD completion over 15 operator-generated
+  $\psi$ fails in $15/15$ cells (best $\lambda_{\min}=-0.0097$,
+  tolerance $-10^{-9}$; $2\times 2$ minor violation $1.0$).
+  Euler-local squares (the only ones compatible with the
+  frequency support $\{\log n\}$) cost DC $\ge 3.28\times$ the
+  POLE$+$ARCH budget at $a\le 0.3$, $\omega\ge 30$.
+  Contact geometry (synthetic $\sigma=0.4/0.25/0.1$ at
+  $\gamma_0=100$, $0.4$ at $250$): $a^*=0.142/0.088/0.037/0.113$,
+  $\omega^*-\gamma_0\approx 0.55$--$0.66$, off/on block ratio
+  $1.0000$; $\partial_aZ=\tfrac12\partial_\omega^2Z$ to
+  $1.6\cdot10^{-16}$ --- the two contact conditions are one;
+  negativity is a down-set in $a$.  True $\zeta$ ($a=1/0.5/0.3$,
+  $\omega\in[10,50]$): $G\ge 0$ (min $2.2\cdot10^{-12}$ at $a=0.3$);
+  helpful-sign fraction of the Selberg part at the local minima
+  $0.25/0.22/0.33$ (MAIN) vs $0.22/0.31/0.22$ (SCRAMBLE) vs
+  $0.29/0.20/0.20$ (WPERM): SELBERG\_SIGN\_INDEFINITE, WORLD\_BLIND;
+  median $|\mathrm{Selberg}_1|/|\Lambda_{2,1}|=0.74$--$1.33$
+  (cancellation relocated, cf.\ CCCXXXI).  Lane
+  GABOR.CONTACT.SELBERG.01 STOP.
+  **r639 sealed probe (experiments only; no RH claim).**
+  r639 `lamzouri_hilbert_adjudication_probe.py` (SHA `61fbb4b9\ldots`,
+  SPEC `4bc44422\ldots`, $23/23$):
+  **SAME\_CLASS** + **CONSTANTS\_IDENTICAL** + **WALL\_LOCATION\_CONFIRMED**
+  --- arXiv:2609.02882 (Lamzouri, 2026-09-02) re-proves the
+  Alpöge--Furman theorem by a Hilbert-space (Bessel) inequality plus
+  BGSTB unconditional pair correlation (support $[-1,1]$); the key
+  proposition is rebuilt exactly on $921$ synthetic conjugation-invariant
+  multisets; $C_\eta \equiv R(\eta^2)$ (r267 functional) to
+  $1.7\cdot 10^{-15}$, bound $2N - \lVert\cdot\rVert_{\mathrm{HS}}^2$
+  $=$ A--F chain; $C_0 = 0.672500703679 = p^*$ (r627), $C_1 = 0.83625$;
+  $Q = \eta^2 * \eta^2$ vanishes for $|\alpha| \ge 1$; under the PCC form
+  factor $p(\lambda) = 0.6725 \to 0.996$ ($\lambda = \tfrac12 \to 3$).
+  NO\_IMPORT unchanged.  AxiomProver Lean certificates: proposition
+  unconditional, theorem modulo BGSTB Lemma 5 + RvM hypotheses.
   **r631L Lean-only (no probe).**
   Classification of the $7$ tracked `sorry`s (no closure):
   | Class | Location | Name |
@@ -7938,6 +8017,30 @@ inputs.  Current brick status:
   `propext` / `Classical.choice` / `Quot.sound`.
   Remaining EF brick: `GaborHatQuarticExplicitRemainder`
   (non-pure quartics only).  Census stays **7**.
+  **r638L Lean-only (no probe).**
+  `lake build RH` 3578/3578, 0 errors.  Sorry census
+  **7 → 5**.  Retired two wrong-type asserting theorems
+  to unasserted Props: `arch_gauss_mellin_digamma_identity`
+  (overstrong exact quadrature quantifier) and
+  `standard_explicit_formula_identification` ($2\Lambda/\sqrt{n}$
+  vs $\Lambda(1+1/n)$ gauge mismatch).  Honest-contour
+  identification stays proved.  Seven affected probes
+  passed twice byte-identically.  No RH claim/status
+  upgrade.  NO RH CLAIM.
+  **r475-repair Lean-only (no probe).**
+  Additive repair in
+  `RH/SelectedArchErrorQuadraticRateClassical.lean`
+  (238 lines; catalog `part_18`).
+  `SelectedArchErrorQuadraticRate` (fixed
+  `archRateConst` $=4.1259765625$) FALSIFIED in the
+  small-support regime (`err`/`\Delta^2` $=8.0283458222$).
+  Endpoint-kink defect proved exactly.
+  `SelectedArchErrorQuadraticRateExists` ($\exists C(f)$)
+  is the correct interface; tendsto consumer proved;
+  `SelectedArchWeightedInterpolationEstimate` OPEN.
+  $O(\Delta^2)$ rate itself not refuted (ratios $3.85$--$3.99$).
+  `lake build RH` 3578/3578; five protected sorries
+  unchanged.  NO RH CLAIM.
 
 r544 scout and Path-A/B notes stand.  `GaborSeparationForAllZeros`
 stays an unasserted Prop **[O]** (r612: asserting theorem
@@ -7945,7 +8048,8 @@ retired).  Tracked sorry census **9 → 8** at r581
 (Source 1, Elementwise 1, Canonical 3, ExternalBridges 2,
 GaborSeparation 1; GaborExplicitFormula 0); stayed **8**
 through r605 (2026-09-02); **8 → 7** at r612
-(GaborSeparation 0).  Conditional reduction only.  Separation
+(GaborSeparation 0); **7 → 5** at r638L (two asserting
+theorems retired, not proved).  Conditional reduction only.  Separation
 stays **[O]**.  NO RH CLAIM.
 
 ## Folder guide
@@ -8055,8 +8159,13 @@ rh/
 │       │                    r473 poly-class bridge proved
 │       │                    (selectedACapPsdImpliesPolynomialReads)
 │       │                    plus named approx and arch-gap identity.
-│       │                    Zero sorry; live sorry census 7
-│       │                    after r612.  NO RH CLAIM
+│       │                    Zero sorry; live sorry census 5
+│       │                    after r638L.  NO RH CLAIM
+│       ├── SelectedArchErrorQuadraticRateClassical.lean —
+│       │                    r475-repair: fixed archRateConst
+│       │                    FALSIFIED (8.0283>4.126);
+│       │                    Exists-rate OPEN; tendsto
+│       │                    consumer proved.  NO RH CLAIM
 │       ├── FrequentlySelected.lean — r430/r434/r463: semidefinite + FREQ
 │       │                    (Rdagger_ge_half_iff_augmented_posSemidef;
 │       │                    internal_weil_nonneg_of_frequently_selected;
@@ -8068,8 +8177,8 @@ rh/
 │       │                    of SelectedACapPsdImpliesPlainReads;
 │       │                    terminal_q_canonical OFF PATH; r463: uses
 │       │                    FaithfulFold for the comb object).
-│       │                    Zero sorry in-file; live sorry census 7
-│       │                    after r612 (ExternalBridges 2).  NO RH CLAIM
+│       │                    Zero sorry in-file; live sorry census 5
+│       │                    after r638L (ExternalBridges 1).  NO RH CLAIM
 │       ├── FaithfulFold.lean — r463: production-faithful comb fold
 │       │                    (tent lags, L=2(m+1)-2, circulant spectral
 │       │                    density, grid fold, sign split; k=5/9/10
@@ -8092,16 +8201,18 @@ rh/
 │       │                    (honest identification CLOSED, sorry-free,
 │       │                    conditional wrapper
 │       │                    honest_weil_criterion_to_mathlib_rh).
-│       │                    Remaining external sorrys [O]:
-│       │                    standard_explicit_formula_identification
-│       │                    (old corpus $2\Lambda/\sqrt{n}$;
-│       │                    documented-blocked),
+│       │                    Remaining external sorry [O]:
 │       │                    fullWeil_separates_offCritical_zeros
 │       │                    (r541 Gabor GO precheck; certified
 │       │                    numerical precheck, Lean campaign
 │       │                    licensed, no claim).
-│       │                    Compact-carrier census 7 (external 2)
-│       │                    through r538; Gabor lane is a
+│       │                    Historical unasserted Prop (r638L:
+│       │                    asserting theorem retired, not
+│       │                    proved; $2\Lambda/\sqrt{n}$ vs
+│       │                    $\Lambda(1+1/n)$ gauge mismatch):
+│       │                    standard_explicit_formula_identification.
+│       │                    Compact-carrier census 5 (external 1)
+│       │                    after r638L; Gabor lane is a
 │       │                    separate module.  NO RH CLAIM
 │       ├── ZeroIncrement.lean — r546: zeta_unit_increment +
 │       │                    gaborIncrementBound_holds sorry-free
@@ -8571,9 +8682,11 @@ rh/
 │   │                     at k=5; poly-class A_cap bridge.
 │   │                     No RH claim
 │   ├── arch_rate.tex(+pdf) — r475: IDENTITY_ISOLATED +
-│   │                     RATE_O_DELTA2; Gauss named;
-│   │                     err O(Delta^2) at fixed f.
-│   │                     No RH claim
+│   │                     RATE_O_DELTA2 (numeric
+│   │                     large-support); fixed
+│   │                     archRateConst FALSIFIED
+│   │                     (8.0283>4.126, r475-repair);
+│   │                     Exists C(f) OPEN.  No RH claim
 │   ├── crossterm.tex(+pdf) — r476: UNCONDITIONAL
 │   │                     (L_max=2.7726) on the first
 │   │                     Dirichlet H^2 ball; YB gate PASS.
@@ -9238,7 +9351,7 @@ The suite runs, in order:
 
 1. **Integrity** — SHA-256 of every pinned `INVENTORY.json` entry
    (drift in a pinned file = FAIL; unpinned living documents = INFO),
-2. **Sealed probes** — the campaign probes r250–r496 + r535–r537 + r539–r541 + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565 + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 + r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 + r619 + r620 + r621 + r622 + r623 + r625 + r626 + r627 + r628 + r629 + r630 + r632 + r633 from
+2. **Sealed probes** — the campaign probes r250–r496 + r535–r537 + r539–r541 + r544 + r548 + r549 + r551 + r553 + r560 + r561 + r563 + r565 + r567 + r591 + r592 + r601 + r603 + r604 + r605N + r606 + r607 + r608 + r609 + r611 + r613 + r615 + r616 + r617 + r618 + r619 + r620 + r621 + r622 + r623 + r625 + r626 + r627 + r628 + r629 + r630 + r632 + r633 + r635 + r636 + r637 + r638 + r639 from
    `experiments/tfpt-discovery/` in `--smoke` mode (fast, seconds each),
 3. **The fifteen v9xx RH modules** — `v955`, `v956`, `v958`, `v959`,
    `v960`, `v961`, `v962`, `v963`, `v964`, `v965`, `v966`, `v967`,
@@ -9688,7 +9801,8 @@ beyond $\langle 1,0,0\rangle$ without `hline`.  Scramble-gate
 passed (r565).  Endpoint remains a conditional reduction
 on `gaborZeroSide` / unasserted `GaborSeparationForAllZeros`.  Tracked sorry census
 **9 → 8** at r581; stayed **8** through r605 (2026-09-02);
-**8 → 7** at r612 (GaborSeparation 0).
+**8 → 7** at r612 (GaborSeparation 0);
+**7 → 5** at r638L by retiring two wrong-type assertions to unasserted Props.
 r601 **DOMINANCE\_FAILS** (fixed-$a$ subfamily, not hpos*).
 r603 two-key GP discriminatively empty.
 r604 TFPT/zero cross-corr **ARTIFACT**.
@@ -9715,7 +9829,7 @@ r616 higher-moment inertia **C\_CAPPED** ($16/16$); $p_3^{\mathrm{uncond}}=p_2=0
 r617 Coxeter Euler completion **COMPLETION\_EXACT** ($45/45$); no-go **E8.COXETER.REGULARIZED\_SPLIT.NO\_GO.01**; promotion in progress.
 r617L Lean `CoxeterCompletion` + `PrimeLogIndependence`; census **7**; modules $54\to 56$.
 r618 Jensen-compiler rigidity **COMPILERS\_STRUCTURALLY\_RIGID** ($43/43$); E8 RH-neutral.
-r619 support-relay census **RELAY\_UNIVERSAL** ($12/12$); constant leads $\Delta L\approx 0.015$; $L_{\mathrm{det}}$; RH-in-a-box beyond $L\approx 0.5$.
+r619 support-relay census **RELAY\_UNIVERSAL** ($12/12$); greedy $\Delta\approx 0.015$ WITHDRAWN by r635; $L_{\mathrm{det}}$; RH-in-a-box beyond $L\approx 0.5$.
 r620 P2 reflection factor **MIXED\_SECTOR** ($73/73$); ODDSECTOR lemma retyped oriented.
 r621 P2 digamma duplication **DUPLICATION\_CONSTANT\_ONLY** ($37/37$); prime-2 is not a duplication factor.
 r622 support Darboux **TRANSPORT\_FEASIBLE\_NORULE** ($64/64$); no source-side rule.
@@ -9727,11 +9841,19 @@ r628 window-box verifier **COMPRESSION\_CERTIFIED\_BOX\_NUMERICAL** ($12/12$); r
 r629 certificate-class atlas **ATLAS\_NO\_NEW\_UNCONDITIONAL\_GAIN** ($15/15$); only support $>1$ correlation buys proportion.
 r632 jet deflation **JET\_GAIN\_SMALL** ($14/14$); coverage collapse above Nyquist.
 r630/r630b margin-law symreg **MARGIN\_LAW\_UNRESOLVED** / **N\_LIMITED\_ARTIFACT** ($19/19$); slopes $-50.6/-116$; density-driven RH-neutral; no universal dBN gap barrier.
-r633 frontier follow-ups **RANDOM\_EULER\_REFUTED** / cosmetic $a$-compactification ($16/16$); class no-go on magnitude/Diophantine; $\Delta\approx 0.015$ not a law corollary.
+r633 frontier follow-ups **RANDOM\_EULER\_REFUTED** stands ($16/16$); $C=1$ not the mechanism (r637); F4 VOID.
+r635 lead precision **LEAD\_PARTIAL** ($11/11$); greedy law WITHDRAWN; four leads $0.0253/0.0083/0.0064/0.0034$; $q\ge 7$ UNMEASURABLE.
+r636 lead law **LEAD\_LAW\_PARTIAL** ($6/6$); no model on four points; message dissolved.
+r637 vote map **VOTE\_MODE\_SPECIFIC** + **FLIP\_COUNTEREXAMPLE** ($14/14$); unanimity GENERIC; $C$ not a positivity predictor.
+r639 Lamzouri Hilbert variant **SAME\_CLASS** + **CONSTANTS\_IDENTICAL** + **WALL\_LOCATION\_CONFIRMED** ($23/23$); two-moment class A1 unchanged; $C_0 = p^*$ (r627); sole arithmetic input pair correlation $|\alpha| \le 1$; NO\_IMPORT unchanged.
+Decoding r635--r637: no side channel beyond the explicit formula (margin collapse + edge geometry).
+r638 first-contact/Selberg **KILLED(STRUCTURAL)** ($14/14$); Selberg convolution is Hankel, no Toeplitz square; Euler-local squares cost $\ge 3.28\times$ budget; contact conditions collapse to one; sign world-blind.
 r606b prolate residual-gap **INCONCLUSIVE** (evals/disc); lane CLOSED (superseded by r611 + KILLED(FACTORIZATION)).
 r631L sorry classification R/T/A (census **7**, no closure); `GaborContourLimitRemainder` PROVED.
 r634L pure-class EF **unconditional**; prime-side rational criterion `gabor_primeSide_rational_criterion_iff_rh` (axioms propext/choice/Quot.sound); census stays **7**.
-Second cut (r623/r625/r626) closed negative; r627/r628/r629/r630/r632/r633 do not reopen a positivity lane.
+r638L overstrong arch equality and gauge-mismatched corpus EF assertion retired; Lean 3578/3578; census **5**; honest contour retained; no RH claim.
+r475-repair fixed `archRateConst` FALSIFIED ($8.0283>4.126$); $\exists C$ form OPEN (`SelectedArchWeightedInterpolationEstimate`); tendsto consumer proved; Lean 3578/3578; census **5**; catalog `part_18` KILLED/LOSSY_CONSTANT; no RH claim.
+Second cut (r623/r625/r626) closed negative; r627/r628/r629/r630/r632/r633/r635/r636/r637/r638/r639 do not reopen a positivity lane.
 Separation stays **[O]**.  NO RH CLAIM.
 **r431 coexistence.** Round 431 (`source_potapov.tex`) is
 additive on the reviewer Potapov discovery lane after
@@ -9987,11 +10109,23 @@ status lines.  It does not touch `experiments/next.txt`.
 Census stays 8.  Suite surface: integrity + probes + Lean
 (`run_rh.py --fast`).
 **r475 coexistence.** Round 475 (`arch_rate_probe.py`) isolates
-F1(ii) and seals the $O(\Delta^2)$ tent rate at fixed $f$.
+F1(ii) and names the $O(\Delta^2)$ tent rate at fixed $f$
+(numeric large-support ratios $3.85$--$3.99$).  The fixed
+`archRateConst` is FALSIFIED at r475-repair (see that entry).
 File domain is Elementwise.lean, InnerBridges.lean, Open.lean,
 Audit.lean, the probe, the problem note, INVENTORY, and these
 status lines.  It does not touch `experiments/next.txt`.
 Census stays 8.  Suite surface: integrity + probes + Lean
+(`run_rh.py --fast`).
+**r475-repair coexistence.** Lean repair round
+(`RH/SelectedArchErrorQuadraticRateClassical.lean`, catalog
+`part_18`): falsifies the fixed `archRateConst`, adds the
+$\exists C(f)$ interface, proves the tendsto consumer, leaves
+`SelectedArchWeightedInterpolationEstimate` OPEN.  File domain
+is InnerBridges.lean, SelectedArchErrorQuadraticRateClassical.lean,
+Audit.lean, Lean README, INVENTORY, catalog `part_18`, and these
+status lines.  It does not touch `experiments/next.txt`.
+Census stays **5**.  Suite surface: integrity + probes + Lean
 (`run_rh.py --fast`).
 **r476 coexistence.** Round 476 (`crossterm_probe.py`) seals
 the first-mode Rayleigh as UNCONDITIONAL(L_max=2.7726) on

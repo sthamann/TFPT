@@ -12,9 +12,10 @@ A GridElement is the even piecewise-linear autocorrelation of arbitrary
 real step data on a dyadic mesh.  Hence its Fourier transform is
 nonnegative in the classical autocorrelation sense.  The route does NOT
 formalize the spectral/zero side or the density/continuity extension to
-the standard C_c-infinity Weil criterion.  It consumes one existing
-`sorry` (`arch_elementwise_stabilization`) and the named, unproved
-`SelectedACapPsdImpliesPlainReads` bridge.
+the standard C_c-infinity Weil criterion.  Since r638L it consumes the
+unasserted `ArchGaussMellinDigammaIdentity` contract explicitly and the
+named, unproved `SelectedACapPsdImpliesPlainReads` bridge; no arch
+`sorryAx` is asserted.
 
 Q2.  In the r459 builder normalization,
   Delta_k = 2^(-floor(sqrt(k))) log 2,
@@ -128,8 +129,9 @@ def lean_map() -> dict[str, bool]:
         "full_read": all(token in elementwise for token in (
             "archRead a m f - combRead a f + poleRead a m f",
             "∑ n ∈ windowAtoms a, combMass n * f.toFun (Real.log n)")),
-        "arch_sorry": "theorem arch_elementwise_stabilization" in elementwise
-        and "sorry" in elementwise,
+        "arch_contract": "def ArchGaussMellinDigammaIdentity" in elementwise
+        and "theorem arch_gauss_mellin_digamma_identity" not in elementwise
+        and "(hArch : ArchGaussMellinDigammaIdentity)" in elementwise,
         "density_absent": "deliberately NOT formalized here" in elementwise,
         "spectral_absent": "spectral/zero side of the" in elementwise
         and "NOT part of this definition" in elementwise,
@@ -141,7 +143,8 @@ def lean_map() -> dict[str, bool]:
         "named_bridge": "def SelectedACapPsdImpliesPlainReads" in frequent,
         "endpoint": "theorem rh_of_frequently_selected" in frequent
         and "∀ f : GridElement, 0 ≤ weilForm f" in frequent,
-        "sorry_on_path": "ON PATH, sorry: `arch_elementwise_stabilization`"
+        "contract_on_path":
+        "ON PATH, named hypothesis: `ArchGaussMellinDigammaIdentity`"
         in audit,
     }
 
@@ -185,9 +188,9 @@ def part_q1() -> None:
           and facts["spectral_absent"],
           "endpoint is GridElement positivity; density/zero side absent")
     check("G14-open-path-inputs",
-          facts["arch_sorry"] and facts["named_bridge"]
-          and facts["sorry_on_path"],
-          "arch sorryAx + named A_cap-to-fullRead bridge")
+          facts["arch_contract"] and facts["named_bridge"]
+          and facts["contract_on_path"],
+          "explicit arch contract + named A_cap-to-fullRead bridge")
 
 
 def part_q2() -> None:

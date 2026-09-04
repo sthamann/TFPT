@@ -57,6 +57,12 @@ r612C: `gaborZeroSideContinuous_holds` proves
 `gabor_zeroSide_rational_criterion_iff_rh_unconditional`
 is unconditional. Named-open list shrinks by one;
 census stays 7; no new `sorry`.
+r638L claim-boundary repair: the overstrong
+`arch_gauss_mellin_digamma_identity` and gauge-mismatched
+`standard_explicit_formula_identification` asserting theorems are
+retired to unasserted Props.  Historical arch extraction APIs take
+the former explicitly; the honest-contour identification stays
+proved.  Project census 7 -> 5.  This is not an RH closure.
 r607 experiments-only KILLED(RECOORDINATIZATION).
 r610 rung (b): one named hypothesis `GaborLowHeightZeroFree 4`
 (classically true, first zero at 14.1347, not in Mathlib);
