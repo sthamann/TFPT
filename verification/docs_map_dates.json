@@ -32,7 +32,7 @@
   "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "9d5c10b91c95",
+  "hash": "351a53ccc635",
   "date": "2026-09-05"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
@@ -624,7 +624,7 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "82acb7e89494",
+  "hash": "54655902efe6",
   "date": "2026-09-05"
  },
  "tfpt_4_frontier::section::Summary::1": {
@@ -820,11 +820,11 @@
   "date": "2026-09-04"
  },
  "tfpt_research_contracts::subsection::TEL-B reduction (2026-09-04)::1": {
-  "hash": "e339a60ee49f",
+  "hash": "d4bb427b9dd3",
   "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
-  "hash": "0569060ec4d3",
+  "hash": "93f11c6da866",
   "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)::1": {
@@ -904,7 +904,7 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "3f6478af46c4",
+  "hash": "9e36df13f015",
   "date": "2026-09-05"
  },
  "origin_theory::section::Appendix: computational verification::1": {

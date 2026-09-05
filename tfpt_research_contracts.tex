@@ -13939,16 +13939,19 @@ dyadic increment $\lvert\lVert R_{2N}\rVert-\lVert R_N\rVert\rvert\le A_R/N$ wit
 $A_R<43$ sufficient for $C_R<3$ is superseded --- $A_R$ was measured $0.1238$ (r645)
 but is no longer the route.  Numerically closed
 ($1.7833+0.7863=2.57<3$; conditional analytic $2.9495<3$ with $c_E=0.30$);
-the 2026-09-05 integration below closes C1, C2a and the interval-TV input and
-reduces C2b to two operator-valued estimates, CF and DG.  Full TEL-B remains open.
+round 3 closed C1, C2a and the interval-TV input. Round 4 below now closes
+CF, DG and the relaxed uniform TEL-B norm, including the finite-grid aliases:
+$\|R_N\|_{\rm HS}<2.995906<3$ for all even $N\ge16$.
+ALG-EXH and the charged MMST identification remain open.
 Not a marker move; display stays \mO.
 Evidence (experiments, not \texttt{veri}-citable):
 \texttt{experiments/tfpt-discovery/mmst\_\allowbreak telb\_\allowbreak trace\_\allowbreak decomposition\_\allowbreak probe.py},
 \texttt{mmst\_\allowbreak telb\_\allowbreak cover\_\allowbreak split\_\allowbreak probe.py},
 \texttt{mmst\_\allowbreak telb\_\allowbreak bound\_\allowbreak a\_\allowbreak probe.py} ($9/9$),
 \texttt{mmst\_\allowbreak telb\_\allowbreak bound\_\allowbreak b\_\allowbreak probe.py} ($17/20$, G18--G20 open by design).
-Load-bearing citations already in this section (v1016, v1006, v998 bound $2.11$)
-are unchanged.
+The historical v998 $2.11$ value is not promoted to an all-volume theorem;
+the new load-bearing certificate is
+\veri{v1026\_\allowbreak telb\_\allowbreak round4\_\allowbreak closure.py}.
 
 \par\smallskip\noindent\textbf{Cover identity and sawtooth split.}
 Corpus convention $e^{-ipx}$, $\alpha=\tfrac14$, $M=4N$, $d=x-y$.  The four-fold
@@ -13980,11 +13983,13 @@ $256$-bit Arb/Acb arithmetic on $5812$ rational cells gives
 \]
 The cut contribution has exact Hilbert--Schmidt norm $2$; the remaining cells use
 validated eigensystems, Taylor enclosures and an analytic ninth-derivative majorant.
-Thus the former float64/Richardson constant is retired.  Together with the existing
-all-mode assembly, $U_\infty=3.180007442<3.4225$ and
-$\lVert R_N^{\mathrm{sm}}\rVert\le1.7833$ for all $N$ retain their stated scope.
+Thus the former float64/Richardson constant is retired. Round 4 additionally
+certifies the infinite Fourier core below $1.783260551$ and the finite-grid
+alias contribution below $0.017333$. The actual uniform smooth remainder
+bound is $\|R_N^{\rm sm}\|_{\rm HS}<1.800594$; the older finite $1.7833$
+claim was not justified by the limiting core and is withdrawn.
 
-\par\smallskip\noindent\textbf{Bound (B) --- reduced, one inequality open.}
+\par\smallskip\noindent\textbf{Bound (B) --- historical reduction; closed in round 4 below.}
 Relaxed target $\lVert S_N+H_N\rVert^2\le1.2167^2/2=0.740179$ (measured limit
 $0.5913$).  Write $S_N+H_N=A_\infty+\mathrm{Res}_N$ with
 $\lVert A_\infty\rVert^2=\tfrac54-8/\pi^2$ exact.  Lemma~6 cross term
@@ -14048,7 +14053,7 @@ constant comparisons in v1025:
  \qquad(N\ge16\text{ even}).
 \]
 
-\par\smallskip\noindent\textbf{C2b scalar reduction and exact remaining target
+\par\smallskip\noindent\textbf{C2b scalar reduction and the former remaining target
 (\veri{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py}).}
 The analytic one-dimensional reduction, with its final arithmetic enclosed by Arb,
 gives
@@ -14062,14 +14067,17 @@ gives
 The executable encloses $1\le n\le15$ and checks positive-coefficient rational
 tail comparisons for $n\ge16$.  The sign-controlled digamma and midpoint
 inequalities which justify those tails are analytic lemmas of this proof, not an
-independent formalization inside the executable.  Full C2b is now open exactly at
+independent formalization inside the executable. The former CF/DG targets were
 \[
  \sqrt N\,\lVert(K'_N-K_N)_{\rm offdiag}\rVert_{\mathrm{HS}}\le0.139,
  \qquad
  \sqrt N\,\lVert(\mathrm{Res}_N-K_N)_{\rm diag}\rVert_{\mathrm{HS}}\le0.060.
 \]
 The diagonal is Hilbert--Schmidt orthogonal to the off-diagonal, and these two
-bounds would close the stated $c_E\le0.542702$ budget.  Neither estimate is claimed.
+bounds suffice for the stated $c_E\le0.542702$ budget. Round 4 proves the
+stronger constants $0.065697$ and $0.042959$, respectively, and gives
+$c_E<0.466902$. The proof and interval arithmetic are in the round-4
+supplement below and v1026; these are no longer open inputs.
 
 \par\smallskip\noindent\textbf{ALG2 correction (binding).}
 The former Vandermonde-to-generated-algebra implication is withdrawn.  The exact
@@ -14079,8 +14087,10 @@ Fourier/Vandermonde inversion therefore supplies only full-CAR compression, not 
 microscopic generated algebra.  ALG2 requires an independent FE-GEN
 compression-surjectivity theorem or a precise gauge/code-projected microscopic
 algebra argument.  The positive ALG1 estimate is likewise conditional on the
-generated projection containing the microscopic low-energy sectors.  Full C2b,
-ALG-EXH and \texttt{SEAM.MMST.TYPEIII.CHARGED.01} remain \mO.
+generated projection containing the microscopic low-energy sectors.
+The round-4 sector/frame lemma gives a sufficient conditional interface, not
+a microscopic FE-GEN proof. ALG-EXH and
+\texttt{SEAM.MMST.TYPEIII.CHARGED.01} remain \mO.
 
 \par\smallskip\noindent\textbf{Retired routes (do not retry).}
 Absolute-value majorants ($3\sqrt N$); global BV
@@ -14168,36 +14178,47 @@ Third-route volume theorem cited-verified for finite-group DET chains.  The old 
 lane was reduced to MMST plus the $4$D functional; the independent T3--T8 mechanisms were
 not thereby classified.  Display marker stays \mO.
 
-\par\smallskip\noindent\textbf{Executed update (2026-09-05, T1--T8 round-3 integration;
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, T1--T8 integration; upstream round-3 inputs
 \veri{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py},
 \veri{v1023\_\allowbreak derivative\_\allowbreak filtered\_\allowbreak wall.py},
 \veri{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py},
 \veri{v1025\_\allowbreak telb\_\allowbreak c1\_\allowbreak c2a\_\allowbreak certificates.py}).}
-The current gate matrix is:
+With the round-4 modules and complete proof supplement below, the current
+gate matrix is:
 \begin{itemize}
 \item \textbf{T1:} the finite axiom-core/W-bridge premises have executable
   support, but their unconditional structure-postulate provenance and the
   dimension selector remain open.
-\item \textbf{T2:} C1, C2a and the interval-TV input are closed; the analytic
-  C2b scalar contribution is below $0.400$.  CF, DG, FE-GEN/ALG-EXH and the
-  MMST identification remain open; the old ALG2 Vandermonde implication is refuted.
+\item \textbf{T2:} the relaxed uniform TEL-B norm is closed below $2.995906<3$
+  at fixed $M=1$, $N_y=8$ for all even $N\ge16$, including C2b and finite-grid aliases. Microscopic
+  one-edge generation, FE-GEN/ALG-EXH and MMST remain open; the sector/frame
+  bridge is conditional and the old Vandermonde implication remains refuted.
 \item \textbf{T3:} dynamics exists only at Hamiltonian-class level.  No shared
   complete $3{+}1$D parent or continuum theorem is constructed.
-\item \textbf{T4:} v1023 proves only the finite derivative-filtered quasi-free
-  block.  It has no invariant bare-mirror response gap, no Weyl cone, no DET
-  many-body realization, measure or $4$D theorem.
+\item \textbf{T4:} exact canonical DET excitations and a signed $z=1$ wall
+  exist under the stated singlet and fixed-classical-background premises.
+  No hard bare-mirror gap, chiral quantum-link realization, measure or
+  $4$D continuum theorem follows.
 \item \textbf{T5:} finite IR witnesses and the v1020 spectator obstruction make
   prime completion binding, but OS reconstruction, confinement, clustering and
   nontrivial scattering remain open.
-\item \textbf{T6:} v1024 constructs a parent-internal intertwiner, but its
-  full-Fock lift is projective and it supplies no neutrino mass texture.
-\item \textbf{T7:} v1024 proves the uniform-gap and direct-TT locality
-  obstructions; it does not construct a massless universally coupled spin-2 mode.
-\item \textbf{T8:} v1024 constructs an internal $12$D cap, but its arbitrary
-  $D_4$-breaking selector is not a global $\rho_0$ and gives no unique SK functional.
+\item \textbf{T6:} full Gauss counts remove the blanket projected-dimension
+  obstruction (one site $3\bmod5$, cube $0\bmod5$ with the specified nine-irrep
+  link truncation and full $192$-mode site character), but give no canonical
+  compatible clock family or neutrino mass texture. The symmetric candidate
+  forbids every Majorana bilinear.
+\item \textbf{T7:} a local first-class constraint target has two positive
+  $z=1$ tensor modes at nonzero momentum, but its periodic zero mode is
+  unstable and must be removed globally. No common-parent embedding or
+  universal spin-2 coupling is constructed.
+\item \textbf{T8:} a symmetric cap on the selected internal $12$D pair space has gap one, but the
+  invariant space is two-dimensional; symmetry does not select its ray,
+  and its vacuum-preserving extension selects no global $\rho_0$ or SK functional.
 \end{itemize}
 All T1--T8 gates and \texttt{TFPT.TOE.COMPLETE.01} remain \mO; no marker moves.
 A single shared $3{+}1$D parent satisfying T3--T8 is still missing.
+
+\input{tex-artefacts/toe_round4_proofs.tex}
 
 % =====================================================================
 \section*{Research Contract --- \texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)}

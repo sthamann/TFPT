@@ -72,9 +72,12 @@ License: documents CC-BY; code MPL-2.0
   do not apply.
 - No certified strict Theory of Everything; no dimensionful constant is claimed
   as a derivation from pure numbers (one metrology unit, v_geo, stays open).
-- Round 3 (v1022-v1025) certifies or obstructs only narrow T2/T4/T6-T8 subgates.
-  Every T1-T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and no shared 3+1D
-  parent has been constructed. v1022 and v1025 require native python-flint/Arb.
+- Round 4 (v1026-v1030) closes the relaxed TEL-B norm at fixed M=1, Ny=8:
+  ||R_N||HS < 2.995906 < 3 for every even N>=16. Native v1026 uses v1022/v1025
+  to discharge the former CF/DG estimates for this bound. The remaining modules
+  add narrow T3/T4/T6-T8 identities and counterbounds. FE-GEN/ALG-EXH, every
+  T1-T8 gate, TFPT.TOE.COMPLETE.01 and the shared 3+1D parent remain [O]. The
+  v1029 tensor target requires global zero-mode removal and is not a TFPT embedding.
 
 ## Key pages
 - Overview: ${SITE_URL}

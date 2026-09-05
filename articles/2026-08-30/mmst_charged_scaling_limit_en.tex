@@ -1066,7 +1066,11 @@ certificate over $3888$ analytic rectangles proves
 $C_\star<0.1525$, and the Peano/Euler argument proves
 $\sup_k|\varphi_N(k)|<0.509/N$ for every even $N\ge16$
 (\texttt{v1025\_telb\_c1\_c2a\_certificates.py}).  These close the TV, C1 and
-C2a inputs, not all of TEL-b; the exact current CF/DG residue is stated below.
+C2a inputs. Round 4 additionally proves CF $<0.065697$, DG $<0.042959$,
+and the complete relaxed norm $\norm{R_N}_{\HS}<2.995906<3$ for every even
+$N\ge16$, including the finite-grid aliases
+(\texttt{v1026\_telb\_round4\_closure.py}). The remaining microscopic
+algebra identification is not a consequence of this norm theorem.
 \end{remark}
 
 \subsection{Third angle: certified finite part plus a dyadic tail}
@@ -1751,10 +1755,11 @@ TEL-a & Dyadic edge-mode isometries and charged graph defect &
 Theorem~\ref{thm:TELa}: explicit second-quantized Shannon embeddings,
 $p=3$, $\epsilon=1$, and rate $N^{-2}$ for fields and adjoints.\\
 TEL-b & Full-CAR two-edge remainder has an all-$N$ bound &
-\mG &
-TV, C1 and C2a are proved by native interval/analytic certificates
-(v1022/v1025); the analytic scalar C2b contribution is $<0.400$.
-The full-CAR collar bound remains open exactly at CF and DG below.\\
+\mP &
+v1022/v1025 inputs plus v1026 CF/DG, one-sided CROSS, validated Fourier
+core and full aliases prove $\norm{R_N}_{\HS}<2.995906<3$ for all even
+$N\ge16$. Norm only; no one-edge algebra identification or historical
+$2.11$ theorem is claimed.\\
 L2a & Edge-projected strong convergence on the finite-energy core &
 \mP &
 The dyadic telescoping series converges by Theorem~\ref{thm:TELa}.\\
@@ -1817,18 +1822,26 @@ identify the edge-mode system with the sharply localized scaling algebra
 of the sixteen-Majorana $M=1$, $N_y=8$ microscopic collar.
 
 \smallskip\noindent
-\textbf{(TEL-B-EXTERNAL) Exact remaining C2b estimates.}
-For every even $N\ge16$, prove
+\textbf{(TEL-B) Relaxed norm obligation closed in round 4.}
+For every even $N\ge16$, the now-proved estimates are
 \[
- \sqrt N\,\norm{(K'_N-K_N)_{\rm offdiag}}_{\HS}\le0.139,
+ \sqrt N\,\norm{(K'_N-K_N)_{\rm offdiag}}_{\HS}<0.065697,
  \qquad
- \sqrt N\,\norm{(\mathrm{Res}_N-K_N)_{\rm diag}}_{\HS}\le0.060.
+ \sqrt N\,\norm{(\mathrm{Res}_N-K_N)_{\rm diag}}_{\HS}<0.042959.
 \]
 The two components are Hilbert--Schmidt orthogonal.  Combined with the
-certified scalar contribution, these bounds close the stated
-$c_E\le0.542702$ budget.  Finite observations are smaller, but neither
-all-$N$ estimate is presently proved.  The old scalar dyadic-increment
-route is retired and is not an alternative premise.
+certified scalar contribution, these give $c_E<0.466902<0.542702$.
+The one-sided CROSS bound is $0.282637/N$, giving Bound-B squared
+$<0.714386$. A 512-node Acb certificate with infinite alias control
+proves the weighted Fourier core $<1.783260551$; the actual finite-grid
+smooth remainder additionally costs $<0.017333$ in aliases and is
+$<1.800594$, not the former unsupported $1.7833$. With the exact jump
+norm $\sqrt2$, the unrounded assembly gives $\norm{R_N}_{\HS}<2.995906<3$.
+The complete all-$N$ proof is the round-4 supplement in
+\texttt{tfpt\_research\_contracts.tex}, executed by
+\texttt{v1026\_telb\_round4\_closure.py}. Neither the historical sharper
+$2.11$ target nor the absolute-CROSS $0.283/N$ mutant is proved.
+The dyadic-increment route is retired, not an alternative premise.
 
 \smallskip\noindent
 \textbf{(ALG-EXH) Buchholz--Verch upper inclusion.}
@@ -1854,8 +1867,11 @@ gauge/code-projected microscopic-algebra theorem is independently required.
 
 \smallskip
 For the edge-projected theorem, \textup{(ALG-EXH)} remains the sole hypothesis.
-For the original microscopic-collar formulation, CF and DG are additional
-analytic inputs to that exhaustion.
+For the original microscopic-collar formulation, the CF/DG norm inputs are
+now proved by the Round-4 certificate (v1026), for the fixed-width
+$M=1$, $N_y=8$ model and every even $N\ge16$.
+This does not supply the microscopic-algebra identification required by
+FE-GEN or prove \textup{(ALG-EXH)}.
 Once \eqref{eq:EXHsharp} holds, L1/L2 are complete and L3 plus the cited
 L4 chain finish the theorem.
 \end{minipage}}
@@ -1874,12 +1890,15 @@ crossed-product/expectation limit is proved, and the holomorphic $c=8$
 endpoint is rigid once a local conformal limit with the charged field
 exists.  The unresolved point is the support-preserving identification
 of this edge-mode limit with the full microscopic CAR local scaling
-algebra.  For the original microscopic collar, TEL-b has been reduced
-past TV/C1/C2a and the scalar C2b budget to the two all-$N$ estimates CF
-and DG; neither is replaced by a finite plateau.  Relative locality and
+algebra. For the original microscopic collar, v1026 now proves the
+relaxed uniform TEL-b norm below $2.995906<3$, including CF, DG and
+finite-grid aliases, without a finite-plateau inference. Relative locality and
 outerness are proved.  The remaining in-house algebraic obligation is
 the Buchholz--Verch upper inclusion with the binding FE-GEN/gauge-code
-qualification; the original collar additionally needs CF and DG.
+qualification. The conditional sector/actual-word frame theorem in v1030
+is a concrete sufficient interface, not a proof that the microscopic
+one-edge algebra satisfies it. Joint-adjoint control and high-output tails
+remain indispensable.
 
 \begin{thebibliography}{99}
 

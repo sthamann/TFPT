@@ -9,6 +9,16 @@ reproduces the same headline numbers, so a reviewer can cross-check the
 
 ## Run
 
+Round 4 (2026-09-05) adds **11 representative exact checks** in
+`tfpt_round4.wl`, loaded by the base runner before its summary. They cover
+the signed wall, the full one-site mod-five Gauss character, the selected
+D4 cap, local tensor identities and sector connectivity. These new checks
+are **not execution-verified here**: `wolframscript` exits 255 because a
+WolframKernel location cannot be determined. The last verified base count
+remains **116/116**; no successful engine run or increase is claimed.
+The v1026 native Arb/Acb proof and the Python-only regressions/cube contraction
+are not represented as independently validated Wolfram certificates.
+
 ```bash
 wolframscript -file tfpt_readouts.wl
 ```

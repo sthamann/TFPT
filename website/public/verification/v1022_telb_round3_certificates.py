@@ -36,8 +36,8 @@ norm recurrence
 Here ||H^(k)||=1.  We use g>=sin(p) on (0,pi/2), and g>=1 on
 (pi/2,pi), the latter from sigma_min(bI-S)>=b-1=-cos(p).
 
-Contract boundary: the TV residual is closed, but C2b still needs the two
-all-N estimates CF <= 0.139 and DG <= 0.060.  ALG2 remains conditional on
+Contract boundary: this module closes the TV and potential inputs. The former
+all-N CF/DG residual and relaxed TEL-B norm are supplied by v1026. ALG2 remains conditional on
 FE-GEN or a precisely gauge/code-projected microscopic algebra.  Therefore
 SEAM.MMST.TYPEIII.CHARGED.01 and TFPT.TOE.COMPLETE.01 remain [O].  The
 certificate requires native python-flint 0.9.0; it is not a Pyodide/WASM
@@ -404,7 +404,7 @@ def tv_certificate() -> dict[str, object]:
     }
 
 def c2b_scalar_certificate() -> dict[str, object]:
-    """Certify the scalar C2b terms; CF and DG remain explicit open lemmas."""
+    """Certify the scalar C2b terms; CF and DG are independently supplied by v1026."""
     # The all-n rational tail inequalities quoted in the analytic proof
     # reduce, after n=x+16, to positive-coefficient polynomials divided by
     # positive denominators.  This closes the only symbolic tail arithmetic
@@ -562,10 +562,11 @@ def c2b_scalar_certificate() -> dict[str, object]:
     assert_lt(c_zeta, q("0.111"), "complete zeta multiplier term")
     
     c_potential = c_eps + c_zeta
-    assert_lt(c_potential, q("0.400"), "all one-dimensional potential terms")
+    assert_lt(c_potential, q("0.399224424139108"),
+              "all one-dimensional potential terms: explicit v1026 input cap")
     
-    # With an orthogonal diagonal bound c_diag<=.06, the still-unproved
-    # coefficient-freezing term may be as large as the following number and
+    # With an orthogonal diagonal bound c_diag<=.06, the historical
+    # coefficient-freezing budget may be as large as the following number and
     # C2b would nevertheless close at .542702.
     target = q("0.542702")
     diag_budget = q("0.06")
@@ -584,10 +585,9 @@ def c2b_scalar_certificate() -> dict[str, object]:
     print(f"c_zeta_total              = {c_zeta}")
     print(f"c_potential_total         = {c_potential}")
     print(f"coefficient_budget_if_diag_0.06 = {coefficient_budget}")
-    print("FULL_C2B_NOT_CLAIMED: coefficient-freezing and diagonal lemmas remain")
+    print("FULL_C2B_NOT_PROVED_BY_THIS_MODULE: CF/DG are supplied by v1026")
     
-    print("CLAIM_FENCE: CF<=0.139/sqrt(N) remains open")
-    print("CLAIM_FENCE: DG<=0.060/sqrt(N) remains open")
+    print("CLAIM_FENCE: the former CF/DG residual is closed by v1026, not here")
     return {
         "c_epsilon": c_eps,
         "c_zeta": c_zeta,
@@ -642,9 +642,9 @@ def run() -> int:
         c2b_result = c2b_scalar_certificate()
         alg2_countermodel()
         suite_check("TV verdict is proved", bool(tv_result["passed"]))
-        print("CLAIM_FENCE: full C2b is not closed")
+        print("CLAIM_FENCE: full C2b is not proved in v1022; supplied by v1026")
         print("CLAIM_FENCE: ALG2 remains conditional on FE-GEN/code projection")
-        print("VERDICT: TV_FPP_PROVED; C2B_CF_DG_OPEN; "
+        print("VERDICT: TV_FPP_PROVED; C2B_CF_DG_SUPPLIED_BY_V1026; "
               "ALG2_VANDERMONDE_IMPLICATION_REFUTED")
         return summary("v1022 TEL-B round-3 certificates")
     finally:

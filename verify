@@ -2,7 +2,7 @@
 # TFPT one-command verifier.  Three levels of depth:
 #
 #   ./verify              # ~1s : re-derive the headline claims from the axioms
-#   ./verify --full       # ~4-5h: the entire Python suite, 1018 modules (verification/run_all.py)
+#   ./verify --full       # ~4-5h: the entire Python suite (verification/run_all.py)
 #   ./verify --release    #  full pipeline: docs + suite + website + sync audit
 #
 # Independent engines (optional, needs the toolchain installed):

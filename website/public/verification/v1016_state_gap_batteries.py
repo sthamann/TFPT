@@ -20,10 +20,11 @@ THE POINT.  Four directional batteries on already-named open legs.
         factor -- finite proxy.  Stays [O].
   SEAM.MMST.TYPEIII.CHARGED.01 [O]: the certified-tail (third) TEL-B
         route is BLOCKED -- N^2 D_N grows 530 -> 19032, remainder
-        UV-supported.  Strictly smaller external target: the scalar
-        dyadic increment |‖R_2N‖ - ‖R_N‖| <= A_R/N with A_R < 43
-        sufficient for C_R < 3 (measured N*increments 0.120-0.123,
-        factor ~350 headroom).  N-uniform CAR nuclearity PROVED
+        UV-supported.  The scalar dyadic-increment proposal and its
+        measured 0.120--0.123 products remain historical diagnostics.
+        Native v1026 instead proves ||R_N||_HS < 2.995906 < 3 for fixed
+        M=1, Ny=8 and every even N>=16.  FE-GEN/ALG-EXH and the MMST
+        identification remain open.  N-uniform CAR nuclearity PROVED
         (nu_N <= exp(16 C_beta); C_beta = (67.97, 29.73, 12.15)
         for beta = (0.5, 1, 2)); ALG-EXH projector-identification
         line UNCHANGED.
@@ -61,6 +62,17 @@ HANDOFF_HTML = (
     ROOT / "articles" / "2026-08-30" / "externalization_mmst_handoff_v2_en.html"
 )
 
+ROUND4_TELB_DOCUMENT_SNIPPETS = (
+    r"\textbf{(TEL-B) Relaxed norm obligation closed in round 4.}",
+    r"$M=1$, $N_y=8$ model and every even $N\ge16$.",
+    r"$\norm{R_N}_{\HS}<2.995906<3$",
+    "A 512-node Acb certificate with infinite alias control",
+    r"\texttt{v1026\_telb\_round4\_closure.py}",
+    "does not supply the microscopic-algebra identification required by FE-GEN",
+    r"or prove \textup{(ALG-EXH)}.",
+    r"this memorandum does not close \texttt{SEAM.MMST.TYPEIII.CHARGED.01}.",
+)
+
 DISTANCE_R4 = 1.434059500e-01
 RESPONSE_RMS = 3.038094542e-3
 C_BETA_PIN = {0.5: 67.968994250095, 1.0: 29.728144327927, 2.0: 12.148981866173}
@@ -93,6 +105,12 @@ def load_probe(name: str):
 def source_contains(path: Path, *needles: str) -> bool:
     source = path.read_text(encoding="utf-8")
     return all(needle in source for needle in needles)
+
+
+def telb_round4_document_guard(text: str) -> bool:
+    """Require the proved native norm and every still-open algebra boundary."""
+    normalized = " ".join(text.split())
+    return all(snippet in normalized for snippet in ROUND4_TELB_DOCUMENT_SNIPPETS)
 
 
 def claim_euclidean(cap) -> None:
@@ -135,7 +153,7 @@ def claim_euclidean(cap) -> None:
 
 
 def claim_telb(telb) -> None:
-    print("\nTEL-B -- CERTIFIED TAIL BLOCKED; SCALAR INCREMENT TARGET")
+    print("\nTEL-B -- HISTORICAL TAIL ROUTE BLOCKED; ROUND-4 NORM PROVED")
     check("TEL-B tail probe ALL PASS", telb.all_ok)
     scaled = [entry[2] for entry in telb.dyadic_defects]
     products = [
@@ -166,15 +184,9 @@ def claim_telb(telb) -> None:
         not telb.tail_rate_holds,
     )
     check(
-        "memorandum records the A_R/N increment formulation",
-        source_contains(
-            MMST_TEX,
-            r"\le\frac{A_R}{N}",
-            r"A_R<48(3-R_{96}^{+})\simeq42.956",
-            "0.120",
-            "0.123",
-            "TAIL-TELESCOPING-FAILS",
-        ),
+        "memorandum records native v1026 all-even-N norm with "
+        "FE-GEN/ALG-EXH/MMST boundary",
+        telb_round4_document_guard(MMST_TEX.read_text(encoding="utf-8")),
     )
 
 
@@ -264,7 +276,7 @@ def claim_dfp(dfp) -> None:
 def run():
     reset()
     print(
-        "v1016 -- state/gap batteries (R4 selector + TEL-B narrowing + "
+        "v1016 -- state/gap batteries (R4 selector + TEL-B Round-4 norm + "
         "CAR nuclearity + DFP volume gap; no marker move)"
     )
     cap = load_probe("rho0_euclidean_cap_probe")
@@ -285,7 +297,7 @@ def run():
         ),
     )
     return summary(
-        "v1016 R4 selector + TEL-B A_R/N target + CAR nuclearity + "
+        "v1016 R4 selector + TEL-B Round-4 norm + CAR nuclearity + "
         "DFP finite-group volume gap; contracts unmoved"
     )
 

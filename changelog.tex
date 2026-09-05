@@ -61,6 +61,49 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-09-05 (CLVIII): non-RH round 4 --- uniform TEL-B norm and explicit T1--T8 boundaries}
+Five modules graduate as \texttt{v1026}--\texttt{v1030}; the suite grows
+from 1018 to 1023 modules. Their standalone checks pass $353/353$.
+\texttt{v1026\_\allowbreak telb\_\allowbreak round4\_\allowbreak closure.py}
+($199/199$, native python-flint 0.9.0) executes CF, DG, one-sided CROSS,
+512 validated Acb eigensystems, sixteen Fourier modes, all infinite aliases
+and 154 numerical regressions. With v1022/v1025 inputs it proves
+$\|R_N\|_{\rm HS}<2.995906<3$ at fixed $M=1$, $N_y=8$ for all even $N\ge16$. The former finite
+$1.7833$ smooth bound is withdrawn; the valid finite bound is $1.800594$.
+The historical $2.11$ and sharp Bound-B $0.62$ targets are not proved.
+\texttt{v1027\_\allowbreak signed\_\allowbreak det\_\allowbreak car\_\allowbreak wall.py}
+($47/47$) constructs canonical DET excitations and a signed $z=1$ wall
+for fixed classical gauge backgrounds, changing the flat local parent
+to an additive one; there is no hard bare-mirror gap or chiral continuum claim.
+\texttt{v1028\_\allowbreak gauss\_\allowbreak d4\_\allowbreak cap.py}
+($36/36$) counts full $192$-mode site Gauss characters modulo five
+(one site 3; cube 0 on the specified nine-irrep link truncation),
+constructs a symmetric internal gap-one cap, and retains the symmetry
+and Majorana selection-rule obstructions.
+\texttt{v1029\_\allowbreak local\_\allowbreak tensor\_\allowbreak constraints.py}
+($44/44$) gives a local two-mode radiative target only after explicit
+global zero-mode removal; the unmodified periodic target is unstable.
+\texttt{v1030\_\allowbreak alg2\_\allowbreak sector\_\allowbreak frame.py}
+($27/27$) proves the conditional sector-connectivity/actual-word frame
+bridge, with joint-adjoint and high-output tails still required.
+The complete proof supplement is included in the contracts paper, with
+intro/frontier/MMST, ledger, website and reproducibility surfaces synchronized.
+An independent-engine representative Wolfram mirror is supplied but its
+execution is unavailable locally (no kernel found); no verified Wolfram
+count is increased. The static discipline census (v649) now recognizes
+genuine renamed imports of the shared check function; seven regression tests
+reject comment/string-only and unrelated-import false positives. Its
+18-check audit and twelve deterministic replays pass without exemptions.
+The 68-check v1006 battery now requires the native norm certificate together
+with the explicitly open FE-GEN/ALG-EXH/MMST boundaries in the memorandum;
+three document-guard regression tests reject a missing premise or the old
+external-box text alone. The 31-check v1016 battery likewise replaces its
+historical scalar-increment document guard by the current norm certificate
+and open-boundary guard, with three negative regression tests; its numerical
+thresholds are unchanged. All three regression sets run in CI. The atlas
+generator removes trailing whitespace introduced by one-line truncation.
+All T1--T8 and the TOE contract remain open. No RH claim.
+
 \subsection*{\interlinepenalty=150\relax 2026-09-05 (CLVII) (non-RH T1--T8 Round 3 graduates as \texttt{v1022}--\texttt{v1025}; suite $1014\to1018$, ledger rows $1178\to1184$ through six narrow subcontracts; $156/156$ module checks; NO marker move; \texttt{TFPT.TOE.COMPLETE.01} and every T1--T8 gate remain~\mO).  \texttt{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py} ($83/83$; native \texttt{python-flint==0.9.0}, 256-bit Arb/Acb) replaces the float/Richardson TEL-B input by 5812 rational cells and the exact cut jump, proving $\operatorname{TV}_p(F'')\le15.817695962988924\ldots<15.928674$ and $K_3^{\rm TV}<2.517464500835$.  Together with the stated analytic digamma/midpoint lemmas, its executable Arb arithmetic gives $c_\varepsilon=0.288547359238391\ldots$, $c_\zeta=0.110677064900715\ldots$ and $c_{\rm potential}=0.399224424139106\ldots<0.400$; full C2b remains open exactly at CF $\le0.139/\sqrt N$ and DG $\le0.060/\sqrt N$.  Its exact one-mode $M_2$ countermodel refutes the former ALG2 Vandermonde-to-generated-algebra implication: FE-GEN or an exact gauge/code-projected microscopic-algebra theorem is still required, and ALG1 remains conditional on the generated projection.  \texttt{v1025\_\allowbreak telb\_\allowbreak c1\_\allowbreak c2a\_\allowbreak certificates.py} ($8/8$; native 100-bit Arb/Acb) executes the existing analytic C1/C2a proofs: $C_\star\le0.1520453048\ldots<0.1525$ and $N\sup_k|\phi_N(k)|\le0.508228779140631\ldots<0.509$ for every even $N\ge16$.  \texttt{v1023\_\allowbreak derivative\_\allowbreak filtered\_\allowbreak wall.py} ($16/16$) proves only the finite quasi-free singular-value block: the high continuation branch is separated, but the bare $b$ subspace is not invariant, the low branch has $z=2$ rather than a Weyl cone, and no DET16/DET32, interacting-parent, measure/anomaly/index or $3{+}1$D theorem follows.  \texttt{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py} ($49/49$) supplies finite parent-internal T6--T8 witnesses and no-gos: a positive seam/neutrino-pair intertwiner with projective full-Fock $D_4$ lift but no mass texture; the uniform-gap and direct-TT locality obstructions but no graviton; and a gapped internal $Z_5$ cap that is chosen, $D_4$-breaking and complement-trivial, hence no global $\rho_0$.  T1 retains only finite axiom-core/W-bridge support while unconditional provenance and the dimension selector remain open; T3 remains at Hamiltonian-class level; T5 retains finite IR witnesses and the v1020 spectator obstruction while prime completion, OS reconstruction, confinement and scattering remain open.  The common missing object is still one shared $3{+}1$D parent satisfying T3--T8.  Native-only handling is explicit in the website reproducer; v1022/v1025 are not represented as Pyodide certificates.  NO RH CLAIM.  Surfaces: \texttt{tfpt\_research\_contracts}, \texttt{tfpt\_4\_frontier}, \texttt{introduction}, \texttt{tfpt\_2\_standard\_model}, the MMST article/PDF, ledger, generated verification maps/index, website paper/DAG/gap/FAQ mirrors and changelog.}
 \subsection*{\interlinepenalty=150\relax 2026-09-05 (CLVI) (all-place Tate / finite-carrier / Rankin audit graduates as \texttt{v1021}; isolated suite delta $1013\to1014$, isolated ledger-record delta $1177\to1178$, one new row \texttt{PRIME.ALLPLACE.TATE.INTERSECTION.01}~\mO; NO marker move; Python-only / Wolfram mirror deferred).  \texttt{v1021\_\allowbreak all\_\allowbreak place\_\allowbreak tate\_\allowbreak rank\_\allowbreak audit.py} ($23/23$): exact scalar Tate projector and good-place tensor/End splittings; the Tate identity remains inertia-fixed at $p=2$; completed zeta is $2\xi(u)/(u(u-1))$, not $\xi(u)$; the symmetric-square prime coefficient is $a_p^2-p^3$, not $a_p^2-2p^3$.  Conditional on the cited external strict-floor premise, rank--nullity excludes representing the complete window form as one exact linear pullback through a fixed finite carrier; nonlinear methods, growing finite discretizations and direct limits are not excluded.  An exact sparse counterexample corrects the historical Rankin inference: $A(X)=O(X^q)$ with nonnegative coefficients does not imply $b_n=O(n^{q-1+\varepsilon})$, and a maximum fitted on a finite window makes its same-window inequality tautological.  Rankin's actual 1939 argument uses a quantitative summatory error term, not a pole and positivity alone.  The correction of record is placed outside the preserved historical docstrings of \texttt{rankin\_\allowbreak positivity\_\allowbreak miniature\_\allowbreak probe.py} and \texttt{hecke\_\allowbreak orbit\_\allowbreak transfer\_\allowbreak probe.py}; their valid Jacobi, Hecke and Rankin--Selberg identities remain, while T52 is narrowed to a path-space vacuum resolvent plus classical local Satake determinants, not a path-space Fredholm determinant.  The global all-place intersection form and its independent positivity remain OPEN.  NO RH CLAIM.  Surfaces: \texttt{note\_hilbert\_polya\_truncations}; \texttt{tfpt\_prime\_front}; catalog part 19; concept map; dated RH balance; website T49 erratum; ScriptIndex and website changelog regenerated.}
 \subsection*{\interlinepenalty=150\relax 2026-09-04 (CLV) (r475-repair Lean audit of the selected-path arch tent rate; NO ledger row, NO marker move: \texttt{PRIME.RDAGGER.ARCH\_IDENTITY\_AND\_RATE.01} is experiments-side).  The named Prop \texttt{SelectedArchErrorQuadraticRate} with fixed constant $\mathrm{archRateConst}=4(1+1/64)^2=4.1259765625$ is FALSIFIED in the small-support regime ($\mathrm{steps}=1$, $\mathrm{meshExp}=6$, $x_0=1$: $\mathrm{err}_{\mathrm{arch}}/\Delta^2=8.0283458222>4.1259765625$; also $4.4488$, $7.13$--$7.24$); the endpoint-kink defect $-\theta(1-\theta)/2$ is proved exactly.  The $O(\Delta^2)$ rate itself is not refuted --- large-support ratios $3.9893$ ($k=5$--$8$) and $3.8466$ ($k=9$--$12$) from \texttt{arch\_rate\_probe.py} ($9/9$) and \texttt{verify\_arch\_rate.py} ($6/6$).  Additive Lean repair \texttt{rh/\allowbreak lean/\allowbreak RH/\allowbreak Selected\allowbreak Arch\allowbreak Error\allowbreak Quadratic\allowbreak Rate\allowbreak Classical.lean}: \texttt{SelectedArchErrorQuadraticRateExists} ($\exists C(f)$) is the correct interface; \texttt{selectedArchError\_tendsto\_zero\_of\_rateExists} proved; \texttt{SelectedArchWeightedInterpolationEstimate} OPEN.  Lean build $3578$ jobs green; five protected sorries unchanged.  Catalog \texttt{part\_18} KILLED/\texttt{LOSSY\_CONSTANT}.  NO RH CLAIM.  Surfaces: \texttt{rh/README.md}, \texttt{rh/INVENTORY.json}, \texttt{rh/lean/README.md}, website \texttt{changelog.ts} regenerated.}

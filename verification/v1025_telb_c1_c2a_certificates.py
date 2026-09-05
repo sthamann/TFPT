@@ -24,9 +24,9 @@ tfpt_research_contracts.tex; this module rigorously certifies the sole
 numerical integral in C1 and every final constant comparison in C1/C2a.
 It requires native python-flint 0.9.0 and is not a Pyodide/WASM check.
 
-This closes C1 and C2a only.  C2b still requires the coefficient-freezing
-and diagonal estimates recorded by v1022; ALG-EXH and the MMST scaling limit
-also remain open.  No marker move.  NO RH CLAIM.
+This module closes C1 and C2a only. The former coefficient-freezing and
+diagonal residual is supplied by v1026, which assembles the relaxed TEL-B
+norm theorem. ALG-EXH and the MMST scaling limit remain open. NO RH CLAIM.
 """
 
 from __future__ import annotations
@@ -343,8 +343,8 @@ def run() -> int:
         HALF = acb(1) / 2
         c1_certificate()
         c2a_certificate()
-        print("CLAIM_FENCE: C2b CF and DG remain open")
-        print("CLAIM_FENCE: ALG-EXH and MMST scaling remain open")
+        print("CLAIM_FENCE: CF/DG are not proved in v1025; supplied by v1026 for the relaxed norm")
+        print("CLAIM_FENCE: ALG-EXH, FE-GEN, MMST scaling, and T2 remain open")
         print("VERDICT: C1_PROVED; C2A_PROVED; T2_AND_TOE_OPEN")
         return summary("v1025 TEL-B C1/C2a certificates")
     finally:

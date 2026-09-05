@@ -82,7 +82,7 @@ const LEXICON: { term: string; reading: string }[] = [
   {
     term: "Rest_TOE / T1–T8",
     reading:
-      "The strict physical-completeness matrix, not another name for the finite seam/compiler residual. Round 3 (v1022–v1025) adds narrow T2/T4/T6–T8 certificates and no-gos only; all T1–T8 gates and TFPT.TOE.COMPLETE.01 remain [O], and no shared 3+1D parent exists. The ‘one irreducible postulate’ analogy above is scoped to the historical finite seam/MMST lane.",
+      "The strict physical-completeness matrix, not another name for the finite seam/compiler residual. Round 4 (v1026–v1030) closes only the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 identities/counterbounds. FE-GEN/ALG-EXH, all T1–T8 gates and TFPT.TOE.COMPLETE.01 remain [O], and no shared 3+1D parent exists; v1029 is not a TFPT embedding. The ‘one irreducible postulate’ analogy above is scoped to the historical finite seam/MMST lane.",
   },
 ];
 

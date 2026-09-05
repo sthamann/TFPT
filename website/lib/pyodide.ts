@@ -17,6 +17,8 @@ const NATIVE_ONLY_SCRIPTS: Record<string, string> = {
     "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
   "v1025_telb_c1_c2a_certificates.py":
     "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
+  "v1026_telb_round4_closure.py":
+    "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

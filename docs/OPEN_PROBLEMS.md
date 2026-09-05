@@ -4,8 +4,11 @@
 > of the [README](../README.md#try-to-break-tfpt) and open a claim challenge.
 
 > **Strict TOE status (2026-09-05).** `TFPT.TOE.COMPLETE.01` and every physical gate T1–T8
-> remain open (`[O]`). Round 3 (`v1022`–`v1025`) closes only narrow subgates and records finite
-> obstructions; it moves no parent marker. A single shared 3+1D parent satisfying T3–T8 is still
+> remain open (`[O]`). Round 4 (`v1026`–`v1030`) proves the relaxed uniform TEL-B norm
+> below 2.995906 for all even N≥16 and adds scoped algebraic/constraint results.
+> Microscopic one-edge FE-GEN/ALG-EXH, the chiral dynamical-gauge construction,
+> physical mass generation, the collective spin-2 embedding and global state selection
+> remain unproved; no parent marker moves. A single shared 3+1D parent satisfying T3–T8 is still
 > missing.
 
 **Compiler residual (historical v5.4 view, scope-corrected 2026-09-05).** The

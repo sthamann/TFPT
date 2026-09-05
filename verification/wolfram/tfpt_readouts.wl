@@ -729,6 +729,9 @@ Module[{basis, i, j, h, p, omega, theta, inner, act, proj, kinds, Ps, eye10, zer
     MatrixRank[Ps["0s"]] === 1 && MatrixRank[Ps["0w"]] === 1];
 ];
 
+(* ---- round-4 representative exact mirrors; native Arb remains Python-only ---- *)
+Get[FileNameJoin[{DirectoryName[$InputFileName], "tfpt_round4.wl"}]];
+
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];
 If[$fail == 0, Print["ALL WOLFRAM CHECKS PASSED"]];

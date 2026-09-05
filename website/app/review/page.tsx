@@ -170,9 +170,13 @@ const BLOCKS: Block[] = [
         theorems, leaving [O] = the cited continuum scaling-limit existence only
         (v336; extension leg on the peer-reviewed crossed-product package,
         realisation at invariant level, v469; stays [O]); its conformal-deck
-        face QGEO.SYM.01 is a corollary. Round 3 (v1022–v1025) adds only narrow
-        T2/T4/T6–T8 certificates and no-gos; v1022 and v1025 require native
-        python-flint/Arb and are not browser certificates. The
+        face QGEO.SYM.01 is a corollary. Round 4 (v1026–v1030) closes the fixed-M=1,
+        Ny=8 relaxed TEL-B norm ||R_N||HS &lt; 2.995906 &lt; 3 for every even N≥16;
+        native v1026 uses v1022/v1025 for the former CF/DG estimates. The other
+        modules add narrow T3/T4/T6–T8 identities and counterbounds. FE-GEN/ALG-EXH,
+        every T1–T8 gate and the shared 3+1D parent remain [O]; v1029 requires global
+        zero-mode removal and is not a TFPT embedding. These native certificates are
+        not browser certificates. The
         step-by-step reduction lives on the{" "}
         <Link href="/changelog" className="font-semibold text-blue-300 hover:text-blue-200">
           changelog

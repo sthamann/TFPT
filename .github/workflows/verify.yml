@@ -1,6 +1,6 @@
 name: Core Verification
 
-# The Python suite (verification/run_all.py, 1012 modules) on a hosted runner.
+# The Python suite (verification/run_all.py) on a hosted runner.
 #
 # Sharding: a hosted runner is ~2.3x slower than the reference machine and the
 # whole suite takes ~3 h there, so one job would hit GitHub's 6-hour limit.
@@ -46,6 +46,9 @@ jobs:
 
       - name: Headline check — ./verify (re-derive the core claims)
         run: ./verify
+
+      - name: Round-4 integration guard regressions
+        run: python -m unittest -v verification/test_discipline_check_sites.py verification/test_v1006_round4_document_guard.py verification/test_v1016_round4_document_guard.py
 
   python-suite:
     name: Python suite (${{ matrix.python-version }}, shard ${{ matrix.shard }}/4)

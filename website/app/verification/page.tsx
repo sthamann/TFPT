@@ -461,7 +461,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="The journey & what remains"
             title="From two axioms to one geometric premise"
-            description={`The verification suite grew in phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the reductions and external cross-checks, the AQFT closure, the icosahedral capstone, the seam-equivalence arc and the certification round (${SCRIPT_TOTAL} scripts today). The historical closure arc narrows the finite seam/compiler lane; it does not close the physical TOE gates. Round 3 (v1022–v1025) adds narrow certificates and no-gos, while every T1–T8 gate and the shared 3+1D parent remain open. Both views below are live HTML, not images: browser-compatible script chips run in Pyodide, and native-only certificates provide their local command.`}
+            description={`The verification suite grew in phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the reductions and external cross-checks, the AQFT closure, the icosahedral capstone, the seam-equivalence arc and the certification round (${SCRIPT_TOTAL} scripts today). The historical closure arc narrows the finite seam/compiler lane; it does not close the physical TOE gates. Round 4 (v1026–v1030) closes the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 identities and counterbounds. FE-GEN/ALG-EXH, every T1–T8 gate and the shared 3+1D parent remain open. Both views below are live HTML, not images: browser-compatible script chips run in Pyodide, and native-only certificates provide their local command.`}
           />
           <div className="mt-8">
             <SuiteTimeline />
@@ -483,8 +483,12 @@ export default function VerificationPage() {
             the Modular Spectral Closure) collapses onto this <em>same</em> bedrock — the boundary QFT is
             one relative object in that scoped lane — and{" "}
             <span className="font-mono">v_geo</span> stays the one no-unit primitive.
-            The strict TOE accounting is separate: v1022–v1025 close only narrow T2/T4/T6–T8
-            subgates; CF, DG, ALG-EXH, every T1–T8 gate and the shared 3+1D parent remain open.
+            The strict TOE accounting is separate: native v1026, using v1022/v1025,
+            discharges the former CF/DG estimates needed for the fixed-M=1, Ny=8 relaxed
+            TEL-B norm ||R_N||HS &lt; 2.995906 &lt; 3 for every even N≥16. Round 4&apos;s
+            other modules add narrow T3/T4/T6–T8 results only. FE-GEN/ALG-EXH, every
+            T1–T8 gate and the shared 3+1D parent remain open; v1029 requires global
+            zero-mode removal and is not a TFPT embedding.
           </p>
           <GravityEmergence />
           <ThermalSeamLegs />

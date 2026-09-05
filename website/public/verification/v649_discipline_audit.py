@@ -83,12 +83,14 @@ REPLAY-BROKEN, CENSUS-REGRESSED.
 PROVENANCE: discovery probe discipline_audit_probe.py (2026-08-02,
 17/17, verdict DISCIPLINE-MEASURED).
 """
+import ast
 import csv
 import os
 import re
 import subprocess
 import sys
 import time
+import warnings
 
 T0 = time.time()
 FAILS = []
@@ -215,6 +217,43 @@ def module_files():
                   if re.match(r"v\d+_.+\.py$", f))
 
 
+def check_site_count(src):
+    """Count legacy check() sites plus real renamed tfpt_constants checks.
+
+    The historical regex census deliberately sees check calls inside the
+    byte-exact embedded probe sources executed by later verifier modules, so
+    replacing it wholesale with an outer-module AST census would regress the
+    frozen meaning.  AST is used for the missing case: a verifier may import
+    ``tfpt_constants.check`` under a different local name.  Counting Call
+    nodes (rather than text) prevents comments or string literals containing
+    the alias from satisfying D2.1.
+    """
+    legacy = (len(re.findall(r"\bcheck\(", src))
+              - len(re.findall(r"def\s+check\(", src)))
+    try:
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore", SyntaxWarning)
+            tree = ast.parse(src)
+    except SyntaxError:
+        # The legacy census remains defined even for an embedded-source
+        # container that the outer Python parser cannot read.
+        return legacy
+    aliases = set()
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ImportFrom) and node.module == "tfpt_constants":
+            aliases.update(
+                item.asname for item in node.names
+                if item.name == "check" and item.asname not in (None, "check")
+            )
+    renamed = sum(
+        1 for node in ast.walk(tree)
+        if isinstance(node, ast.Call)
+        and isinstance(node.func, ast.Name)
+        and node.func.id in aliases
+    )
+    return legacy + renamed
+
+
 def suite_census():
     files = module_files()
     out = dict(modules=len(files), sites=0, no_check=[], mf_occ=0,
@@ -224,8 +263,7 @@ def suite_census():
         with open(os.path.join(VERIF, f), encoding="utf-8",
                   errors="replace") as fh:
             src = fh.read()
-        sites = (len(re.findall(r"\bcheck\(", src))
-                 - len(re.findall(r"def\s+check\(", src)))
+        sites = check_site_count(src)
         out["sites"] += sites
         if sites == 0:
             out["no_check"].append(f)

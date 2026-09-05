@@ -205,11 +205,14 @@ function ClosingCondition() {
             .
           </p>
           <p>
-            <span className="font-semibold text-amber-200">Strict TOE scope.</span> Round 3
-            (v1022–v1025) certifies or obstructs only narrow T2/T4/T6–T8 subgates.
-            Every T1–T8 gate and TFPT.TOE.COMPLETE.01 remain [O], and a shared 3+1D
-            parent is still absent. v1022 and v1025 require native python-flint/Arb;
-            they are not browser certificates.
+            <span className="font-semibold text-amber-200">Strict TOE scope.</span> Round 4
+            (v1026–v1030) closes the relaxed TEL-B norm at fixed M=1, Ny=8:
+            ||R_N||HS &lt; 2.995906 &lt; 3 for every even N≥16. Native v1026 uses
+            v1022/v1025 to discharge the former CF/DG estimates for this bound; the
+            other modules add only narrow T3/T4/T6–T8 identities and counterbounds.
+            FE-GEN/ALG-EXH, every T1–T8 gate and TFPT.TOE.COMPLETE.01 remain [O],
+            and a shared 3+1D parent is still absent. The v1029 tensor target requires
+            global zero-mode removal and is not a TFPT embedding.
           </p>
         </div>
       </details>
@@ -233,7 +236,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live compiler residual is Rest = v_geo ⊕ G_net ⊕ F_transfer. Beside it sits the strict-physical-TOE accounting Rest_TOE: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. The one-condition/E₈ reduction applies only to the historical finite seam/compiler and boundary-net/MMST lane. Round 3 (v1022–v1025) adds narrow T2/T4/T6–T8 certificates and no-gos, not a TOE closure."
+          description="After the compiler closure the live compiler residual is Rest = v_geo ⊕ G_net ⊕ F_transfer. Beside it sits the strict-physical-TOE accounting Rest_TOE: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. The one-condition/E₈ reduction applies only to the historical finite seam/compiler and boundary-net/MMST lane. Round 4 (v1026–v1030) closes the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 results; FE-GEN/ALG-EXH and all full gates stay open. The v1029 T7 target is not a TFPT embedding."
         />
 
         <ClosingCondition />

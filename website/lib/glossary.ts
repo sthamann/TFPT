@@ -116,7 +116,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "G_net",
     alias: ["G_net", "(G_metric)", "G_metric", "seam-net inclusion", "continuum realisation"],
     short:
-      "The historical seam/metric interface. Its finite target and index arithmetic are machine-backed, while SEAM.EQUIV.MMST.01 is only [C], closed modulo named scaling-limit theorems; the unconditional parent and twistor route remain [O]. This lane is not the strict TOE: Round 3 narrows only T2/T4/T6–T8, all T1–T8 stay [O], and no shared 3+1D parent exists.",
+      "The historical seam/metric interface. Its finite target and index arithmetic are machine-backed, while SEAM.EQUIV.MMST.01 is only [C], closed modulo named scaling-limit theorems; the unconditional parent and twistor route remain [O]. This lane is not the strict TOE: Round 4 (v1026–v1030) closes only the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 results; FE-GEN/ALG-EXH, all T1–T8 and the shared 3+1D parent remain [O].",
   },
   {
     term: "F_transfer",
@@ -134,7 +134,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: "Rest_TOE",
     alias: ["T1–T8", "T1-T8", "TFPT.TOE.COMPLETE.01", "strict physical TOE"],
     short:
-      "The strict physical-completeness matrix, separate from the historical finite seam/compiler residual. Round 3 (v1022–v1025) narrows only T2/T4/T6–T8 subgates; every T1–T8 gate and TFPT.TOE.COMPLETE.01 stays [O], and no shared 3+1D parent exists. Any ‘one keystone/postulate’ wording applies only to the finite seam/MMST lane.",
+      "The strict physical-completeness matrix, separate from the historical finite seam/compiler residual. Round 4 (v1026–v1030) closes only the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow identities/counterbounds; native v1026 uses v1022/v1025 for the former CF/DG estimates. FE-GEN/ALG-EXH, every T1–T8 gate and TFPT.TOE.COMPLETE.01 stay [O], and no shared 3+1D parent exists. The v1029 T7 target is not a TFPT embedding. Any ‘one keystone/postulate’ wording applies only to the finite seam/MMST lane.",
   },
   {
     term: "Woit bridge",

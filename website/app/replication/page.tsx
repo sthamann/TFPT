@@ -143,8 +143,8 @@ export default function ReplicationPage() {
                 If you reproduce a result (or fail to), we will record it here as
                 confirmed, partial, or disputed, with a link to your write-up.
                 Start with a browser-compatible check here, or use a local clone for
-                the full suite. v1022 and v1025 require native python-flint/Arb and
-                are not Pyodide certificates.
+                the full suite. v1022, v1025 and the Round 4 norm closure v1026
+                require native python-flint/Arb and are not Pyodide certificates.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Link

@@ -67,7 +67,7 @@ git clone https://github.com/sthamann/tfpt && cd tfpt
 pip install -r requirements.txt
 
 ./verify            # ~1s    : the core claim, re-derived from the axioms
-./verify --full     # ~4-5h  : the entire Python suite, 1018 modules (ALL CHECKS PASSED)
+./verify --full     # ~4-5h  : the entire Python suite, 1023 modules (ALL CHECKS PASSED)
 ./verify --release  #         : documents + suite + website + sync audit
 ```
 
@@ -75,8 +75,15 @@ No local toolchain? `docker run --rm ghcr.io/sthamann/tfpt:latest`. The three in
 are one flag away: `./verify --wolfram`, `./verify --lean`, `./verify --audit`. Full detail in
 [`docs/VERIFICATION.md`](docs/VERIFICATION.md).
 
-Strict TOE status (2026-09-05): v1022–v1025 narrow only T2, T4 and T6–T8
-subgates. Every T1–T8 gate remains `[O]`, and a shared 3+1D parent is still missing.
+Strict TOE status (2026-09-05): v1026–v1030 narrow only TEL-B/T2, T4 and T6–T8
+subgates. The relaxed TEL-B norm theorem is uniform for even N≥16, but every T1–T8
+gate remains `[O]`, and a shared 3+1D parent is still missing.
+
+For the full native certificate chain (including the interval inputs), run
+`v1022_telb_round3_certificates.py`, `v1025_telb_c1_c2a_certificates.py` and
+`v1026_telb_round4_closure.py` from `verification/` in the environment installed
+from `requirements.txt` (`python-flint==0.9.0`). The browser reproducer explicitly
+excludes these three modules; it does not replace their native certificates.
 
 ---
 
@@ -115,8 +122,9 @@ residual is **three named interface problems** (the seam interface carries two r
 previously attached to "`SEAM.EQUIV.01` closed modulo a cited theorem" now live on the MMST route ID.)
 
 This compiler accounting is not the physical TOE accounting. `TFPT.TOE.COMPLETE.01` is the AND of
-eight independent gates T1–T8; all eight remain `[O]`. Round 3 adds certified finite subgates and
-obstructions, but no marker moves, and no single shared 3+1D parent currently satisfies T3–T8.
+eight independent gates T1–T8; all eight remain `[O]`. Round 4 proves the relaxed uniform TEL-B
+norm and adds scoped algebraic/constraint results, but makes no aggregate marker move.
+No single shared 3+1D parent currently satisfies T3–T8.
 The complete gate matrix and remaining obligations are in
 [`tfpt_research_contracts.tex`](tfpt_research_contracts.tex) and
 [`docs/OPEN_PROBLEMS.md`](docs/OPEN_PROBLEMS.md).
@@ -169,7 +177,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 1018 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 1023 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,

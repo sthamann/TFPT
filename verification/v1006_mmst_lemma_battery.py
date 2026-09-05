@@ -29,17 +29,19 @@ THE POINT.  Five lemmas are in-house; the contract stays Open.
         a witness (every matrix-algebra automorphism is inner; explicit
         256-dim gauge unitary is charge-zero).
   [N] TEL-B HS plateau (two-edge remainder): measured max 2.105079358,
-        fitted 2.107565497, safe grid 2.11 on N<=96 (v998).  BOXED
-        TEL-B-EXTERNAL: all-N matrix-Hankel C_R; two in-house Hankel
-        angles fail (TB1/TB2).
-  [O boxed] ALG-EXH: two Buchholz-Verch estimates remain external.
+        fitted 2.107565497, safe grid 2.11 on N<=96 (v998).  These
+        historical finite data are not the proof.  Native v1026 proves
+        ||R_N||_HS < 2.995906 < 3 for fixed M=1, Ny=8 and every even N>=16.
+  [O boxed] FE-GEN/ALG-EXH: the microscopic one-edge identification and
+        two Buchholz-Verch estimates remain open; the MMST contract stays [O].
 
 MUST-FAIL: gapless transverse mutant violates K_G; false omega>=m;
 wrong-rate r_N=1+1/N; non-isometry sqrt(2) j; nonintegral A3 pairing;
 duplicate-vacuum Q-system.
 
 HONEST SCOPE (firewall): frozen QWZ/CAR collar + finite mu4 clock;
-no all-N Hankel C_R; no Buchholz-Verch exhaustion; contract stays [O].
+the relaxed all-N TEL-B norm is proved, but FE-GEN/ALG-EXH and the MMST
+identification are not; the contract stays [O].
 Python-only / Wolfram mirror deferred.
 """
 from __future__ import annotations
@@ -61,6 +63,17 @@ HANDOFF_HTML = os.path.join(
     ROOT, "articles", "2026-08-30", "externalization_mmst_handoff_v2_en.html"
 )
 V998 = os.path.join(HERE, "v998_seam_modular_closure.py")
+
+ROUND4_TELB_DOCUMENT_SNIPPETS = (
+    r"\textbf{(TEL-B) Relaxed norm obligation closed in round 4.}",
+    r"$M=1$, $N_y=8$ model and every even $N\ge16$.",
+    r"$\norm{R_N}_{\HS}<2.995906<3$",
+    "A 512-node Acb certificate with infinite alias control",
+    r"\texttt{v1026\_telb\_round4\_closure.py}",
+    "does not supply the microscopic-algebra identification required by FE-GEN",
+    r"or prove \textup{(ALG-EXH)}.",
+    r"this memorandum does not close \texttt{SEAM.MMST.TYPEIII.CHARGED.01}.",
+)
 
 MASS = 1.0
 NY = 8
@@ -86,6 +99,12 @@ TY = SY / (2j) - SZ / 2
 def tex_has(path: str, snippet: str) -> bool:
     with open(path, encoding="utf-8") as handle:
         return snippet in handle.read()
+
+
+def telb_round4_document_guard(text: str) -> bool:
+    """Require the proved native norm and every still-open algebra boundary."""
+    normalized = " ".join(text.split())
+    return all(snippet in normalized for snippet in ROUND4_TELB_DOCUMENT_SNIPPETS)
 
 
 def report(name, ok, extra=""):
@@ -248,7 +267,7 @@ def nonequivariant_breaks(dimension: int) -> bool:
 def run():
     reset()
     print("v1006  SEAM.MMST.TYPEIII.CHARGED.01: five lemmas in-house; "
-          "TEL-B-EXTERNAL + ALG-EXH boxed")
+          "native TEL-B norm proved; FE-GEN/ALG-EXH/MMST remain open")
 
     print("\n== L3 CROSSED-PRODUCT / LIMIT EXCHANGE ==")
     report(
@@ -478,7 +497,7 @@ def run():
         "|conj(dr_m)|=|dr_m|",
     )
 
-    print("\n== TEL-B-EXTERNAL (two in-house Hankel angles fail) ==")
+    print("\n== TEL-B ROUND-4 NORM CLOSURE (historical Hankel angles still fail) ==")
     top_zero = top_edge_vector(1.0e-9)[1]
     bottom_zero = bottom_edge_vector(1.0e-9)
     top_projection = np.outer(top_zero, top_zero.conj())
@@ -536,10 +555,12 @@ def run():
         "pinned max=%.9f fit=%.9f bound=%.2f"
         % (HS_MAX_PIN, HS_FIT_PIN, HS_SAFE_GRID),
     )
+    with open(MMST_TEX, encoding="utf-8") as handle:
+        mmst_text = handle.read()
     report(
-        "TEL-B-EXTERNAL boxed in the memorandum",
-        tex_has(MMST_TEX, "TEL-B-EXTERNAL")
-        and tex_has(MMST_TEX, "Matrix-valued two-edge estimate"),
+        "TEL-B [E]: native v1026 all-even-N norm is documented with "
+        "FE-GEN/ALG-EXH/MMST boundary",
+        telb_round4_document_guard(mmst_text),
     )
 
     wrong_rate_scaled = [
@@ -644,21 +665,22 @@ def run():
         and tex_has(MMST_TEX, "eq:EXHsharp"),
     )
     report(
-        "externalization v2 handoff is send-ready",
+        "historical externalization v2 handoff is retained; current memorandum "
+        "is authoritative for TEL-B",
         os.path.isfile(HANDOFF_HTML)
-        and tex_has(HANDOFF_HTML, "TEL-B-EXTERNAL")
-        and tex_has(HANDOFF_HTML, "ALG-EXH"),
+        and tex_has(HANDOFF_HTML, "ALG-EXH")
+        and telb_round4_document_guard(mmst_text),
         HANDOFF_HTML,
     )
     report(
         "FIREWALL: SEAM.MMST.TYPEIII.CHARGED.01 stays [O]; residual = "
-        "TEL-B-EXTERNAL + ALG-EXH",
-        True,
-        "five lemmas proved in-house; contract unmoved",
+        "FE-GEN/ALG-EXH microscopic identification",
+        telb_round4_document_guard(mmst_text),
+        "native TEL-B norm proved; MMST contract unmoved",
     )
     return summary(
         "v1006 MMST lemma battery: L3/UGF/TEL-a/locality/outerness in-house; "
-        "TEL-B-EXTERNAL + ALG-EXH boxed; contract stays [O]"
+        "native TEL-B norm proved; FE-GEN/ALG-EXH/MMST stay [O]"
     )
 
 

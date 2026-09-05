@@ -43,6 +43,17 @@ export const CHANGELOG_MACROS: Record<string, string> =
 export const CHANGELOG: ChangelogEntry[] = [
   {
     "date": "2026-09-05",
+    "dateLabel": "2026-09-05",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(CLVIII): non-RH round 4 — uniform TEL-B norm and explicit T1–T8 boundaries"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-05",
     "dateLabel": "2026-09-05 · CLVII",
     "heading": [
       {
