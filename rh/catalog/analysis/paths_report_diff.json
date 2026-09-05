@@ -9,9 +9,9 @@
   },
   "new": {
     "path": "rh/catalog/rh_semantic_catalog.json",
-    "total_records_seen": 2035,
-    "curated_records_used": 1060,
-    "draft_records_ignored": 975,
+    "total_records_seen": 2039,
+    "curated_records_used": 1065,
+    "draft_records_ignored": 974,
     "filter": "not rec.get(\"draft\")"
   },
   "counts": {
@@ -21,7 +21,7 @@
     ],
     "T2_killed": [
       179,
-      316
+      317
     ],
     "T2_root_clusters": [
       20,
@@ -37,7 +37,7 @@
     ],
     "T4_never_tried": [
       115,
-      102
+      99
     ],
     "T5_conflicts": [
       26,
@@ -53,7 +53,7 @@
       {
         "family": "WEIL_POSITIVITY_WINDOWS",
         "records_old": 157,
-        "records_new": 396,
+        "records_new": 397,
         "outcomes_old": {
           "PROVED": 0,
           "CERTIFIED": 30,
@@ -71,7 +71,7 @@
           "KILLED": 135,
           "INCONCLUSIVE": 36,
           "OPEN": 22,
-          "RESTATED": 27,
+          "RESTATED": 28,
           "SEALED": 9
         }
       },
@@ -128,7 +128,7 @@
       {
         "family": "EXPLICIT_FORMULA_IDENTITY",
         "records_old": 19,
-        "records_new": 27,
+        "records_new": 28,
         "outcomes_old": {
           "PROVED": 9,
           "CERTIFIED": 3,
@@ -140,7 +140,7 @@
           "SEALED": 1
         },
         "outcomes_new": {
-          "PROVED": 4,
+          "PROVED": 5,
           "CERTIFIED": 6,
           "MEASURED": 2,
           "KILLED": 5,
@@ -153,7 +153,7 @@
       {
         "family": "OPERATOR_SPECTRAL",
         "records_old": 63,
-        "records_new": 68,
+        "records_new": 69,
         "outcomes_old": {
           "PROVED": 1,
           "CERTIFIED": 21,
@@ -167,7 +167,7 @@
         "outcomes_new": {
           "PROVED": 0,
           "CERTIFIED": 26,
-          "MEASURED": 2,
+          "MEASURED": 3,
           "KILLED": 16,
           "INCONCLUSIVE": 7,
           "OPEN": 13,
@@ -253,7 +253,7 @@
       {
         "family": "LATTICE_E8_HECKE",
         "records_old": 4,
-        "records_new": 43,
+        "records_new": 44,
         "outcomes_old": {
           "PROVED": 0,
           "CERTIFIED": 1,
@@ -268,7 +268,7 @@
           "PROVED": 8,
           "CERTIFIED": 13,
           "MEASURED": 3,
-          "KILLED": 16,
+          "KILLED": 17,
           "INCONCLUSIVE": 0,
           "OPEN": 0,
           "RESTATED": 2,
@@ -297,6 +297,31 @@
           "INCONCLUSIVE": 1,
           "OPEN": 0,
           "RESTATED": 0,
+          "SEALED": 0
+        }
+      },
+      {
+        "family": "ARAKELOV_HODGE_INTERSECTION",
+        "records_old": 0,
+        "records_new": 1,
+        "outcomes_old": {
+          "PROVED": 0,
+          "CERTIFIED": 0,
+          "MEASURED": 0,
+          "KILLED": 0,
+          "INCONCLUSIVE": 0,
+          "OPEN": 0,
+          "RESTATED": 0,
+          "SEALED": 0
+        },
+        "outcomes_new": {
+          "PROVED": 0,
+          "CERTIFIED": 0,
+          "MEASURED": 0,
+          "KILLED": 0,
+          "INCONCLUSIVE": 0,
+          "OPEN": 0,
+          "RESTATED": 1,
           "SEALED": 0
         }
       },
@@ -495,19 +520,9 @@
         ]
       },
       {
-        "root_phrase": "float64 or precision artifact",
-        "count_old": 7,
-        "count_new": 9,
-        "new_paths": [
-          "experiments/tfpt-discovery/antiphase_sign_law_probe.py",
-          "rh/problem/verify_fullcomb_cleanup.py",
-          "experiments/tfpt-discovery/relay_lead_law_result.json"
-        ]
-      },
-      {
         "root_phrase": "fit, alias, or holdout artifact",
         "count_old": 6,
-        "count_new": 8,
+        "count_new": 9,
         "new_paths": [
           "experiments/tfpt-discovery/evolutionary_certificate_probe.py",
           "experiments/tfpt-discovery/octave_renorm_probe.py",
@@ -515,7 +530,18 @@
           "rh/problem/octave_renorm.tex",
           "rh/problem/verify_octave_renorm.py",
           "verification/v866_source_contractor_formula.py",
-          "verification/v873_pruefer_cotlar_decision.py"
+          "verification/v873_pruefer_cotlar_decision.py",
+          "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py"
+        ]
+      },
+      {
+        "root_phrase": "float64 or precision artifact",
+        "count_old": 7,
+        "count_new": 9,
+        "new_paths": [
+          "experiments/tfpt-discovery/antiphase_sign_law_probe.py",
+          "rh/problem/verify_fullcomb_cleanup.py",
+          "experiments/tfpt-discovery/relay_lead_law_result.json"
         ]
       },
       {
@@ -1660,7 +1686,7 @@
     ],
     "observed_pairs": [
       56,
-      69
+      72
     ]
   },
   "T5": {

@@ -1,6 +1,6 @@
 {
   "workspace": "rh/",
-  "generated": "2026-09-04",
+  "generated": "2026-09-05",
   "claim_boundary": "Research documentation.  NOT evidence for or against the Riemann Hypothesis in either direction.  NO RH CLAIM.  Mincut base 4 / refined 5.  The status ledger wins on any disagreement.",
   "note": "rh/ references these files, it never copies them.  pin=true entries are frozen: a SHA-256 mismatch is a FAIL in rh/verification/run_rh.py.  pin=false entries are living documents: drift is reported as INFO.",
   "entries": [
@@ -4920,8 +4920,8 @@
       ],
       "status": "living document -- drift is expected, reported as INFO",
       "pin": false,
-      "sha256": "f871d100645e61b0762c4abffd3aafe8e8f5c11d6dc7d05ffb68b66ec35e1ec3",
-      "bytes": 3480060
+      "sha256": "f71b61961faf0ed5e921a9117fa4583370aacebd92846578a9e44b8fd8608192",
+      "bytes": 3494641
     },
     {
       "path": "tfpt_prime_front.tex",
@@ -4930,8 +4930,8 @@
       "ledger_ids": [],
       "status": "living document -- the program prose of the prime front",
       "pin": false,
-      "sha256": "c38debd44e87df2783047f1b5477318a0143fca487117395f2a86a9480801b0e",
-      "bytes": 1709587
+      "sha256": "1ecd25f75d5d4fb14671a8456885d100d76b31b799ac1c78fc8e8782a616d957",
+      "bytes": 1711936
     },
     {
       "path": "experiments/next.txt",
@@ -4940,8 +4940,8 @@
       "ledger_ids": [],
       "status": "living document -- German campaign notes (newest at bottom)",
       "pin": false,
-      "sha256": "b6a2623915d37aa158768b46381fa525142d66bbe683e8b161b902df4a1715c5",
-      "bytes": 5803762
+      "sha256": "4df685750bf32a5fa791c4872804c99874bbd217533cbc18affe92527b851491",
+      "bytes": 5805634
     },
     {
       "path": "experiments/tfpt-discovery/local_gap_carleson_probe.py",

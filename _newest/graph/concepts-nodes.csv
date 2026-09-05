@@ -1,8 +1,10 @@
 id,name,type,status,alive,attempt_count
 4d-lattice-contract,Four-dimensional lattice dynamics contract,OBJECT,OPEN,false,0
+absolute-twistor-line,Absolute twistor line,GEOMETRY,CONJECTURAL,false,0
 additive-adeles,Additive adeles,GEOMETRY,CLASSICAL,false,0
 adele-class-space,Adele class space,GEOMETRY,CLASSICAL,false,0
 admissible-os-positive-measure,Admissible OS positive measure,OPERATOR,PROVED_HERE,false,0
+all-place-tate-weil-realization,All-place Tate--Weil realization,OPEN_QUESTION,OPEN,false,0
 analytic-object,Analytic object,CLASS,CLASSICAL,true,1
 arakelov-intersection,Arakelov intersection theory,GEOMETRY,CLASSICAL,false,0
 arch-rate,Archimedean rate identity,THEOREM,PROVED_HERE,true,2
@@ -12,6 +14,7 @@ arithmetic-geometry,Arithmetic geometry,CLASS,CLASSICAL,false,0
 arithmetic-hodge-index,Arithmetic Hodge index theorem,THEOREM,CLASSICAL,true,0
 arithmetic-topology-prime-knots,Arithmetic topology of primes and knots,GEOMETRY,CLASSICAL,false,0
 baez-duarte-criterion,Báez-Duarte criterion,CRITERION,CLASSICAL,true,2
+baez-duarte-rate-conjecture,Báez-Duarte rate conjecture,OPEN_QUESTION,CONJECTURAL,false,0
 barrier-arch-compensation,Archimedean compensation,BARRIER,KILLED_HERE,false,0
 barrier-circularity,Renamed RH-equivalent / circularity,BARRIER,KILLED_HERE,true,10
 barrier-finite-window-ceiling,Finite-window ceiling / Landau–Widom decay,BARRIER,KILLED_HERE,false,0
@@ -35,6 +38,7 @@ bohr-lift,Bohr lift,METHOD,CLASSICAL,false,0
 bost-connes-kms-system,Bost–Connes KMS system,OBJECT,CLASSICAL,false,0
 bost-connes-system,Bost–Connes system,OBJECT,CLASSICAL,false,1
 bruhat-tits-tree,Bruhat–Tits tree of PGL₂(Qₚ),GEOMETRY,CLASSICAL,false,0
+burnol-lower-bound,Burnol lower bound,THEOREM,CLASSICAL,true,0
 canonical-system-hamiltonian,Zeta canonical-system Hamiltonian,OPERATOR,OPEN,false,0
 carlson-theorem,Carlson uniqueness theorem,THEOREM,CLASSICAL,true,0
 causal-spin-network-geometry,Causal-set and spin-network geometry,GEOMETRY,CLASSICAL,false,0
@@ -68,6 +72,7 @@ deninger-foliated-dynamics,Deninger foliated dynamics,METHOD,CONJECTURAL,false,0
 dirichlet-series-polytorus,Dirichlet series on the polytorus,OBJECT,CLASSICAL,false,0
 discrete-spectrum-neutrality,Discrete-spectrum neutrality,BARRIER,PROVED_HERE,false,0
 dual-pair-language,Dual-pair product language,METHOD,PROVED_HERE,false,0
+dyadic-block-capture-eta,Dyadic block capture eta,OPEN_QUESTION,OPEN,true,1
 dyson-fourier-quasicrystal-criterion,Renormalized Dyson Fourier-quasicrystal criterion,THEOREM,CLASSICAL,true,0
 e8-cascade,E8 cascade,TFPT_STRUCTURE,PROVED_HERE,false,0
 e8-positive-lattice-norm,E8 positive lattice norm,OBJECT,PROVED_HERE,false,0
@@ -94,6 +99,7 @@ finite-infinite-place-balance,Finite-infinite place balance,THEOREM,CLASSICAL,tr
 finite-spectral-triple-zero-approximants,Finite spectral-triple zero approximants,OPERATOR,OPEN,false,0
 finite-weil-gns-metric,Finite Weil GNS family metric,OBJECT,OPEN,false,0
 finite-weil-window,Finite Weil window,OBJECT,PROVED_HERE,true,9
+fixed-finite-carrier-rank-obstruction,Fixed finite-carrier rank-nullity lemma,BARRIER,PROVED_HERE,true,1
 fourier-quasicrystal-geometry,Fourier-quasicrystal geometry,GEOMETRY,CLASSICAL,false,0
 fourier-transform,Fourier transform,METHOD,CLASSICAL,false,0
 frequently-selected-aug-dual-resolvent,FREQ cone theorem,OPEN_QUESTION,OPEN,false,0
@@ -104,6 +110,7 @@ gabor-rational-criterion,Rational pure-Gabor criterion,CRITERION,FORMALIZED_LEAN
 gabor-zero-side,Gabor zero side,OBJECT,FORMALIZED_LEAN,true,1
 gate-zero,Gate 0,TFPT_STRUCTURE,OPEN,true,2
 gaussian-e8-module,Gaussian E8 module,TFPT_STRUCTURE,PROVED_HERE,true,9
+gaussian-smoothed-zero-density,Gaussian-smoothed transformed zero density,OBJECT,CLASSICAL,true,1
 gorz-theorem,GORZ Jensen-polynomial theorem,THEOREM,CLASSICAL,true,0
 groupoid,Measured groupoid,GEOMETRY,CLASSICAL,true,7
 groupoid-modular-function,Groupoid modular function,INVARIANT,CLASSICAL,true,1
@@ -162,6 +169,7 @@ mu4-mark,TFPT mu4 mark,TFPT_STRUCTURE,PROVED_HERE,false,0
 multiplicative-composition-law,Multiplicative composition necessity,THEOREM,CLASSICAL,true,0
 murru-salvatori,Murru–Salvatori regulator method,METHOD,OPEN,false,0
 narrowband-weil,Narrowband Weil probe,METHOD,OPEN,true,3
+negative-explosion-criterion-a,Negative-explosion criterion A,CRITERION,PROVED_HERE,true,1
 newman-criterion,Newman heat-flow criterion,CRITERION,CLASSICAL,false,0
 no-archimedean-prime-joint-space,No archimedean-prime joint space,BARRIER,OPEN,false,0
 no-canonical-integer-label,No canonical integer state label,BARRIER,PROVED_HERE,false,0
@@ -171,7 +179,7 @@ nyman-beurling-space,Nyman–Beurling closure space,OBJECT,CLASSICAL,false,0
 obstruction-class,Obstruction class,CLASS,CLASSICAL,false,0
 open-autonomous-prime-generator,Autonomous prime generator,OPEN_QUESTION,OPEN,false,0
 open-gabor-window-positivity,Gabor positivity for the specific window class,OPEN_QUESTION,OPEN,false,0
-open-global-all-place-intersection,Global all-place intersection identity,OPEN_QUESTION,OPEN,false,0
+open-global-all-place-intersection,Global all-place intersection identity,OPEN_QUESTION,OPEN,true,1
 open-half-density-geometry,Half-density from geometry,OPEN_QUESTION,OPEN,true,2
 open-independent-positivity-source,Independent positivity source,OPEN_QUESTION,OPEN,true,3
 open-lambda-star-scale-law,Scale law of λ*(L),OPEN_QUESTION,OPEN,false,0
@@ -182,6 +190,7 @@ outer-bridges,Outer bridges,TFPT_STRUCTURE,OPEN,true,2
 p1-gauss-bonnet-positive-normalization,P1 Gauss–Bonnet positive normalization,THEOREM,PROVED_HERE,false,0
 pair-correlation,Pair correlation of zeta zeros,INVARIANT,CONJECTURAL,true,3
 perron-fixed-point-transport,Perron fixed-point transport,OPERATOR,PROVED_HERE,false,0
+petz-watatani-tate-network,Petz--Watatani--Tate network,OPEN_QUESTION,OPEN,false,0
 pi-numerology-c3,"c3 and L(1,chi_-4) numerology",BARRIER,OPEN,false,0
 pick-function,Pick function,CLASS,CLASSICAL,false,0
 pimsner-popa-entropy,Pimsner-Popa index entropy,THEOREM,CLASSICAL,true,0
@@ -204,6 +213,7 @@ quarter-shift-to-centre,Quarter-shift to centre,BARRIER,PROVED_HERE,false,0
 quasilocal-hamiltonian-dynamics,Quasilocal Hamiltonian dynamics,OPERATOR,PROVED_HERE,false,0
 quillen-bfk-seam-determinants,Quillen/BFK seam determinants,OBJECT,CLASSICAL,true,2
 r-dagger-kernel-loewner-stack,R† kernel–Loewner positivity stack,METHOD,PROVED_HERE,true,11
+rankin-mean-pointwise-exponent-drop,Rankin mean-to-pointwise exponent drop,BARRIER,KILLED_HERE,true,1
 rankin-selberg-norm-square,Rankin–Selberg norm-square,METHOD,CLASSICAL,false,0
 regulator-jump,Regulator jump,INVARIANT,OPEN,false,0
 relative-determinant,Relative determinant,INVARIANT,CLASSICAL,false,0
@@ -243,7 +253,10 @@ spectral-shift,Krein spectral shift function,INVARIANT,CLASSICAL,false,0
 static-prime-event-log,Static prime event log,OBJECT,PROVED_HERE,false,0
 stieltjes-function,Stieltjes function,CLASS,CLASSICAL,false,0
 stochastic-scale-semigroup-on-connes-cokernel,Stochastic scale semigroup on Connes cokernel,OPEN_QUESTION,OPEN,false,0
+strict-weil-window-floor-zhu,Zhu v2 strict Weil-window floor (external),CRITERION,CONJECTURAL,false,0
 suzuki-screw-canonical-systems,Suzuki screw functions / canonical systems,CLASS,CLASSICAL,true,2
+tate-information-loss,Tate projection information loss,BARRIER,PROVED_HERE,true,1
+tate-trace-projector,Scalar Tate trace projector,THEOREM,PROVED_HERE,true,1
 terminal-statement,Terminal cross-ratio statement,OPEN_QUESTION,OPEN,true,14
 tfpt-c3,TFPT axiom c3=1/(8π),TFPT_STRUCTURE,PROVED_HERE,false,0
 tfpt-compiler,TFPT compiler structure,CLASS,CLASSICAL,true,4
@@ -254,6 +267,7 @@ toeplitz-positivity,Toeplitz positivity,CRITERION,CLASSICAL,true,1
 ucp-map,Unital completely positive map,OPERATOR,CLASSICAL,true,1
 unitarity-of-emergent-time,Unitarity of emergent TFPT time,OPEN_QUESTION,OPEN,false,0
 van-dantzig-pair,van Dantzig pair,OBJECT,CLASSICAL,false,0
+vasyunin-gram-matrix,Vasyunin Nyman-Beurling Gram matrix,OBJECT,CLASSICAL,false,0
 verified-zeros-height,Rigorous verified-zero height,INVARIANT,CLASSICAL,false,0
 vitali-montel,Vitali–Montel normal-family principle,THEOREM,CLASSICAL,true,0
 von-mangoldt,von Mangoldt function Λ(n),OBJECT,CLASSICAL,true,16
@@ -267,6 +281,6 @@ weil-conjectures,Weil conjectures over finite fields,THEOREM,CLASSICAL,true,0
 weil-pole-term,Weil pole term,OBJECT,CLASSICAL,true,4
 weil-positivity,Weil positivity criterion,CRITERION,CLASSICAL,true,7
 weil-prime-term,Weil prime term,OBJECT,CLASSICAL,true,1
-weil-quadratic-form,Weil quadratic form Q(f),OBJECT,CLASSICAL,true,8
+weil-quadratic-form,Weil quadratic form Q(f),OBJECT,CLASSICAL,true,9
 xi-fourier-function,Ξ(t),OBJECT,CLASSICAL,false,0
 zero-counting,Zero-counting function N(T),INVARIANT,CLASSICAL,false,0

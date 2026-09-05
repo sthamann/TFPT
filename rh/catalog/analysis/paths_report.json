@@ -2,15 +2,15 @@
   "claim_boundary": "Structured research map only. No claim for or against RH.",
   "catalog": {
     "path": "rh/catalog/rh_semantic_catalog.json",
-    "total_records_seen": 2035,
-    "curated_records_used": 1060,
-    "draft_records_ignored": 975,
+    "total_records_seen": 2039,
+    "curated_records_used": 1065,
+    "draft_records_ignored": 974,
     "filter": "not rec.get(\"draft\")"
   },
   "T1_matrix": [
     {
       "family": "WEIL_POSITIVITY_WINDOWS",
-      "records": 396,
+      "records": 397,
       "outcomes": {
         "PROVED": 33,
         "CERTIFIED": 83,
@@ -18,7 +18,7 @@
         "KILLED": 135,
         "INCONCLUSIVE": 36,
         "OPEN": 22,
-        "RESTATED": 27,
+        "RESTATED": 28,
         "SEALED": 9
       },
       "failure_classes": {
@@ -28,7 +28,7 @@
         "STRUCTURAL_MISMATCH": 40,
         "NUMERIC_ARTIFACT": 6,
         "ORACLE_LEAK": 0,
-        "RESTATEMENT": 3,
+        "RESTATEMENT": 4,
         "NO_BRIDGE": 52,
         "UNCONVERGED": 35,
         "NOT_APPLICABLE": 157
@@ -52,8 +52,8 @@
         "MEASURED": 184,
         "KILLED": 164,
         "INCONCLUSIVE": 40,
-        "OPEN": 120,
-        "RESTATED": 27,
+        "OPEN": 119,
+        "RESTATED": 28,
         "SEALED": 22
       },
       "failure_classes_all": {
@@ -63,10 +63,10 @@
         "STRUCTURAL_MISMATCH": 49,
         "NUMERIC_ARTIFACT": 7,
         "ORACLE_LEAK": 2,
-        "RESTATEMENT": 3,
+        "RESTATEMENT": 4,
         "NO_BRIDGE": 52,
         "UNCONVERGED": 35,
-        "NOT_APPLICABLE": 566
+        "NOT_APPLICABLE": 565
       }
     },
     {
@@ -193,9 +193,9 @@
     },
     {
       "family": "EXPLICIT_FORMULA_IDENTITY",
-      "records": 27,
+      "records": 28,
       "outcomes": {
-        "PROVED": 4,
+        "PROVED": 5,
         "CERTIFIED": 6,
         "MEASURED": 2,
         "KILLED": 5,
@@ -214,7 +214,7 @@
         "RESTATEMENT": 0,
         "NO_BRIDGE": 15,
         "UNCONVERGED": 1,
-        "NOT_APPLICABLE": 6
+        "NOT_APPLICABLE": 7
       },
       "most_load_bearing_open": {
         "round": "r26 contract",
@@ -223,14 +223,14 @@
         "summary": "Can the pair-correlation wall be made a concrete conditional diagonal contract?"
       },
       "strongest_proved_or_certified": {
-        "round": "r475",
-        "path": "rh/problem/arch_rate.tex",
+        "round": "v1021",
+        "path": "verification/v1021_all_place_tate_rank_audit.py",
         "outcome": "PROVED",
-        "summary": "Can the arch identity be isolated and the selected tent error given a rate?"
+        "summary": "What survives after isolating zeta through the rigid Calabi--Yau Tate projector?"
       },
-      "records_all": 57,
+      "records_all": 58,
       "outcomes_all": {
-        "PROVED": 5,
+        "PROVED": 6,
         "CERTIFIED": 14,
         "MEASURED": 10,
         "KILLED": 8,
@@ -249,16 +249,16 @@
         "RESTATEMENT": 0,
         "NO_BRIDGE": 15,
         "UNCONVERGED": 1,
-        "NOT_APPLICABLE": 33
+        "NOT_APPLICABLE": 34
       }
     },
     {
       "family": "OPERATOR_SPECTRAL",
-      "records": 68,
+      "records": 69,
       "outcomes": {
         "PROVED": 0,
         "CERTIFIED": 26,
-        "MEASURED": 2,
+        "MEASURED": 3,
         "KILLED": 16,
         "INCONCLUSIVE": 7,
         "OPEN": 13,
@@ -275,7 +275,7 @@
         "RESTATEMENT": 2,
         "NO_BRIDGE": 3,
         "UNCONVERGED": 17,
-        "NOT_APPLICABLE": 10
+        "NOT_APPLICABLE": 11
       },
       "most_load_bearing_open": {
         "round": "r420 companion",
@@ -289,11 +289,11 @@
         "outcome": "CERTIFIED",
         "summary": "PRIME.SECTIONEDGE.01: S-E, THE CLOSED FORM OF THE"
       },
-      "records_all": 128,
+      "records_all": 129,
       "outcomes_all": {
         "PROVED": 2,
         "CERTIFIED": 37,
-        "MEASURED": 18,
+        "MEASURED": 19,
         "KILLED": 20,
         "INCONCLUSIVE": 7,
         "OPEN": 39,
@@ -310,7 +310,7 @@
         "RESTATEMENT": 2,
         "NO_BRIDGE": 3,
         "UNCONVERGED": 17,
-        "NOT_APPLICABLE": 68
+        "NOT_APPLICABLE": 69
       }
     },
     {
@@ -498,12 +498,12 @@
     },
     {
       "family": "LATTICE_E8_HECKE",
-      "records": 43,
+      "records": 44,
       "outcomes": {
         "PROVED": 8,
         "CERTIFIED": 13,
         "MEASURED": 3,
-        "KILLED": 16,
+        "KILLED": 17,
         "INCONCLUSIVE": 0,
         "OPEN": 0,
         "RESTATED": 2,
@@ -515,7 +515,7 @@
         "LOSSY_CONSTANT": 3,
         "STRUCTURAL_MISMATCH": 4,
         "NUMERIC_ARTIFACT": 0,
-        "ORACLE_LEAK": 0,
+        "ORACLE_LEAK": 1,
         "RESTATEMENT": 1,
         "NO_BRIDGE": 5,
         "UNCONVERGED": 0,
@@ -528,12 +528,12 @@
         "outcome": "PROVED",
         "summary": "HECKE.GEOM.01: Hecke from geometry on the E8 census channels."
       },
-      "records_all": 164,
+      "records_all": 165,
       "outcomes_all": {
         "PROVED": 9,
         "CERTIFIED": 26,
         "MEASURED": 31,
-        "KILLED": 28,
+        "KILLED": 29,
         "INCONCLUSIVE": 1,
         "OPEN": 65,
         "RESTATED": 2,
@@ -545,7 +545,7 @@
         "LOSSY_CONSTANT": 3,
         "STRUCTURAL_MISMATCH": 6,
         "NUMERIC_ARTIFACT": 0,
-        "ORACLE_LEAK": 0,
+        "ORACLE_LEAK": 1,
         "RESTATEMENT": 1,
         "NO_BRIDGE": 5,
         "UNCONVERGED": 0,
@@ -610,7 +610,7 @@
     },
     {
       "family": "ARAKELOV_HODGE_INTERSECTION",
-      "records": 0,
+      "records": 1,
       "outcomes": {
         "PROVED": 0,
         "CERTIFIED": 0,
@@ -618,7 +618,7 @@
         "KILLED": 0,
         "INCONCLUSIVE": 0,
         "OPEN": 0,
-        "RESTATED": 0,
+        "RESTATED": 1,
         "SEALED": 0
       },
       "failure_classes": {
@@ -629,13 +629,13 @@
         "NUMERIC_ARTIFACT": 0,
         "ORACLE_LEAK": 0,
         "RESTATEMENT": 0,
-        "NO_BRIDGE": 0,
+        "NO_BRIDGE": 1,
         "UNCONVERGED": 0,
         "NOT_APPLICABLE": 0
       },
       "most_load_bearing_open": null,
       "strongest_proved_or_certified": null,
-      "records_all": 37,
+      "records_all": 38,
       "outcomes_all": {
         "PROVED": 0,
         "CERTIFIED": 1,
@@ -643,7 +643,7 @@
         "KILLED": 0,
         "INCONCLUSIVE": 0,
         "OPEN": 27,
-        "RESTATED": 0,
+        "RESTATED": 1,
         "SEALED": 0
       },
       "failure_classes_all": {
@@ -654,7 +654,7 @@
         "NUMERIC_ARTIFACT": 0,
         "ORACLE_LEAK": 0,
         "RESTATEMENT": 0,
-        "NO_BRIDGE": 0,
+        "NO_BRIDGE": 1,
         "UNCONVERGED": 0,
         "NOT_APPLICABLE": 37
       }
@@ -1099,7 +1099,7 @@
     }
   ],
   "T2_kill_roots": {
-    "killed_total": 316,
+    "killed_total": 317,
     "by_failure_class": [
       {
         "failure_class": "CIRCULAR",
@@ -2084,6 +2084,16 @@
           {
             "round": "r636",
             "path": "experiments/tfpt-discovery/relay_lead_law_result.json"
+          }
+        ]
+      },
+      {
+        "failure_class": "ORACLE_LEAK",
+        "count": 1,
+        "members": [
+          {
+            "round": "T49-correction-2026-09-05",
+            "path": "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py"
           }
         ]
       },
@@ -3536,6 +3546,49 @@
         ]
       },
       {
+        "root_phrase": "fit, alias, or holdout artifact",
+        "count": 9,
+        "structural_root": "The pattern is explained by fitting, aliasing, or absent held-out data.",
+        "members": [
+          {
+            "round": "r438",
+            "path": "experiments/tfpt-discovery/evolutionary_certificate_probe.py"
+          },
+          {
+            "round": "r468",
+            "path": "experiments/tfpt-discovery/octave_renorm_probe.py"
+          },
+          {
+            "round": "r468 companion",
+            "path": "rh/problem/octave_renorm.pdf"
+          },
+          {
+            "round": "r468 companion",
+            "path": "rh/problem/octave_renorm.tex"
+          },
+          {
+            "round": "r468 companion",
+            "path": "rh/problem/verify_octave_renorm.py"
+          },
+          {
+            "round": "r604",
+            "path": "experiments/tfpt-discovery/tfpt_spectrum_zero_crosscorr_probe.py"
+          },
+          {
+            "round": "ledger:PRIME.SOURCECONTRACTOR.NORM.01",
+            "path": "verification/v866_source_contractor_formula.py"
+          },
+          {
+            "round": "ledger:PRIME.PRUEFER.COMPENSATION.01",
+            "path": "verification/v873_pruefer_cotlar_decision.py"
+          },
+          {
+            "round": "T49-correction-2026-09-05",
+            "path": "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py"
+          }
+        ]
+      },
+      {
         "root_phrase": "float64 or precision artifact",
         "count": 9,
         "structural_root": "The apparent signal disappears under higher precision or stable exact reconstruction.",
@@ -3575,45 +3628,6 @@
           {
             "round": "r636",
             "path": "experiments/tfpt-discovery/relay_lead_law_result.json"
-          }
-        ]
-      },
-      {
-        "root_phrase": "fit, alias, or holdout artifact",
-        "count": 8,
-        "structural_root": "The pattern is explained by fitting, aliasing, or absent held-out data.",
-        "members": [
-          {
-            "round": "r438",
-            "path": "experiments/tfpt-discovery/evolutionary_certificate_probe.py"
-          },
-          {
-            "round": "r468",
-            "path": "experiments/tfpt-discovery/octave_renorm_probe.py"
-          },
-          {
-            "round": "r468 companion",
-            "path": "rh/problem/octave_renorm.pdf"
-          },
-          {
-            "round": "r468 companion",
-            "path": "rh/problem/octave_renorm.tex"
-          },
-          {
-            "round": "r468 companion",
-            "path": "rh/problem/verify_octave_renorm.py"
-          },
-          {
-            "round": "r604",
-            "path": "experiments/tfpt-discovery/tfpt_spectrum_zero_crosscorr_probe.py"
-          },
-          {
-            "round": "ledger:PRIME.SOURCECONTRACTOR.NORM.01",
-            "path": "verification/v866_source_contractor_formula.py"
-          },
-          {
-            "round": "ledger:PRIME.PRUEFER.COMPENSATION.01",
-            "path": "verification/v873_pruefer_cotlar_decision.py"
           }
         ]
       },
@@ -4724,8 +4738,8 @@
   },
   "T4_never_tried": {
     "family_count": 19,
-    "observed_pairs": 69,
-    "never_tried_count": 102,
+    "observed_pairs": 72,
+    "never_tried_count": 99,
     "pairs": [
       [
         "TOEPLITZ_MOMENT_POSITIVITY",
@@ -4808,10 +4822,6 @@
         "LEAN_FORMALIZATION"
       ],
       [
-        "ARAKELOV_HODGE_INTERSECTION",
-        "EXPLICIT_FORMULA_IDENTITY"
-      ],
-      [
         "CM_CURVE_GEOMETRY",
         "EXPLICIT_FORMULA_IDENTITY"
       ],
@@ -4830,10 +4840,6 @@
       [
         "EXPLICIT_FORMULA_IDENTITY",
         "OTHER"
-      ],
-      [
-        "ARAKELOV_HODGE_INTERSECTION",
-        "OPERATOR_SPECTRAL"
       ],
       [
         "CM_CURVE_GEOMETRY",
@@ -4962,10 +4968,6 @@
       [
         "MELLIN_PICK_LEE_YANG",
         "OTHER"
-      ],
-      [
-        "ARAKELOV_HODGE_INTERSECTION",
-        "LATTICE_E8_HECKE"
       ],
       [
         "LATTICE_E8_HECKE",
@@ -5614,13 +5616,13 @@
     "note": "Deterministic extract from curated FORMALIZATION Lean records; not a hand ranking."
   },
   "meta": {
-    "n_records": 2035,
-    "n_curated": 1060,
-    "n_draft": 975,
+    "n_records": 2039,
+    "n_curated": 1065,
+    "n_draft": 974,
     "generated_from": {
       "catalog": "rh/catalog/rh_semantic_catalog.json",
-      "inventory_generated": "2026-09-04",
-      "catalog_generated": "2026-09-04",
+      "inventory_generated": "2026-09-05",
+      "catalog_generated": "2026-09-05",
       "fragments": [
         "rh/catalog/fragments/part_1.json",
         "rh/catalog/fragments/part_10.json",
@@ -5631,6 +5633,7 @@
         "rh/catalog/fragments/part_16.json",
         "rh/catalog/fragments/part_17.json",
         "rh/catalog/fragments/part_18.json",
+        "rh/catalog/fragments/part_19.json",
         "rh/catalog/fragments/part_2.json",
         "rh/catalog/fragments/part_3.json",
         "rh/catalog/fragments/part_4.json",

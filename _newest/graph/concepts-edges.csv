@@ -3,6 +3,8 @@ src,dst,rel,strength
 4d-lattice-contract,analytic-object,INSTANCE_OF,HEURISTIC
 4d-lattice-contract,qca-dilation,REQUIRES,CONDITIONAL
 4d-lattice-contract,event-log-function,WOULD_CLOSE,CONDITIONAL
+absolute-twistor-line,arithmetic-geometry,INSTANCE_OF,HEURISTIC
+absolute-twistor-line,all-place-tate-weil-realization,REQUIRES,HEURISTIC
 additive-adeles,fourier-transform,DUAL_TO,THEOREM
 additive-adeles,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 additive-adeles,explicit-formula,REDUCES_TO,THEOREM
@@ -10,6 +12,12 @@ adele-class-space,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 adele-class-space,additive-adeles,REQUIRES,CONDITIONAL
 admissible-os-positive-measure,no-archimedean-prime-joint-space,BLOCKED_BY,CONDITIONAL
 admissible-os-positive-measure,spectral-framework,INSTANCE_OF,HEURISTIC
+all-place-tate-weil-realization,fixed-finite-carrier-rank-obstruction,BLOCKED_BY,CONDITIONAL
+all-place-tate-weil-realization,research-question,INSTANCE_OF,HEURISTIC
+all-place-tate-weil-realization,arakelov-intersection,REQUIRES,CONDITIONAL
+all-place-tate-weil-realization,arithmetic-hodge-index,REQUIRES,CONDITIONAL
+all-place-tate-weil-realization,open-global-all-place-intersection,REQUIRES,CONDITIONAL
+all-place-tate-weil-realization,weil-quadratic-form,WOULD_CLOSE,CONDITIONAL
 analytic-object,experiments/tfpt-discovery/door_b_lambda_transport_probe.py,USED_BY,HEURISTIC
 arakelov-intersection,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 arakelov-intersection,arithmetic-hodge-index,REQUIRES,THEOREM
@@ -31,6 +39,8 @@ baez-duarte-criterion,positivity-criterion,INSTANCE_OF,HEURISTIC
 baez-duarte-criterion,nyman-beurling-criterion,SPECIAL_CASE_OF,THEOREM
 baez-duarte-criterion,experiments/tfpt-discovery/baez_duarte_probe.py,USED_BY,HEURISTIC
 baez-duarte-criterion,verification/v667_baez_duarte.py,USED_BY,HEURISTIC
+baez-duarte-rate-conjecture,baez-duarte-criterion,IMPLIES,THEOREM
+baez-duarte-rate-conjecture,research-question,INSTANCE_OF,HEURISTIC
 barrier-arch-compensation,obstruction-class,INSTANCE_OF,HEURISTIC
 barrier-circularity,obstruction-class,INSTANCE_OF,HEURISTIC
 barrier-circularity,experiments/tfpt-discovery/signed_border_mean_probe.py,KILLED_BY,HEURISTIC
@@ -86,6 +96,8 @@ bost-connes-system,adele-class-space,REQUIRES,CONDITIONAL
 bost-connes-system,experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py,USED_BY,HEURISTIC
 bruhat-tits-tree,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 bruhat-tits-tree,hecke-correspondence,REALIZES,CONDITIONAL
+burnol-lower-bound,analytic-object,INSTANCE_OF,HEURISTIC
+burnol-lower-bound,baez-duarte-rate-conjecture,REQUIRES,THEOREM
 canonical-system-hamiltonian,spectral-framework,INSTANCE_OF,HEURISTIC
 canonical-system-hamiltonian,screw-function-criterion,REQUIRES,CONDITIONAL
 carlson-theorem,analytic-object,INSTANCE_OF,HEURISTIC
@@ -163,6 +175,11 @@ discrete-spectrum-neutrality,obstruction-class,INSTANCE_OF,HEURISTIC
 dual-pair-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 dual-pair-language,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 dual-pair-language,spectral-framework,INSTANCE_OF,HEURISTIC
+dyadic-block-capture-eta,research-question,INSTANCE_OF,HEURISTIC
+dyadic-block-capture-eta,baez-duarte-rate-conjecture,REQUIRES,CONDITIONAL
+dyadic-block-capture-eta,vasyunin-gram-matrix,REQUIRES,THEOREM
+dyadic-block-capture-eta,experiments/tfpt-discovery/nb_dyadic_capture_probe.py,USED_BY,CONDITIONAL
+dyadic-block-capture-eta,riemann-hypothesis,WOULD_CLOSE,CONDITIONAL
 dyson-fourier-quasicrystal-criterion,weil-positivity,EQUIVALENT_TO,THEOREM
 dyson-fourier-quasicrystal-criterion,analytic-object,INSTANCE_OF,HEURISTIC
 dyson-fourier-quasicrystal-criterion,fourier-quasicrystal-geometry,REQUIRES,CONDITIONAL
@@ -250,6 +267,9 @@ finite-weil-window,experiments/tfpt-discovery/w1_matrix_identity_probe.py,USED_B
 finite-weil-window,experiments/tfpt-discovery/w2_form_density_probe.py,USED_BY,HEURISTIC
 finite-weil-window,notes/arxiv_w1_note/note_w1_suzuki_identification.tex,USED_BY,HEURISTIC
 finite-weil-window,verification/v861_krein_normalform_lean.py,USED_BY,HEURISTIC
+fixed-finite-carrier-rank-obstruction,obstruction-class,INSTANCE_OF,HEURISTIC
+fixed-finite-carrier-rank-obstruction,strict-weil-window-floor-zhu,REQUIRES,CONDITIONAL
+fixed-finite-carrier-rank-obstruction,verification/v1021_all_place_tate_rank_audit.py,USED_BY,THEOREM
 fourier-quasicrystal-geometry,infinite-rank-prime-fourier-module,BLOCKED_BY,THEOREM
 fourier-quasicrystal-geometry,arithmetic-geometry,INSTANCE_OF,HEURISTIC
 fourier-transform,spectral-framework,INSTANCE_OF,HEURISTIC
@@ -295,6 +315,9 @@ gaussian-e8-module,experiments/tfpt-discovery/moonshot_hecke_groupoid_probe.py,U
 gaussian-e8-module,experiments/tfpt-discovery/seam_clifford_modular_s_probe.py,USED_BY,HEURISTIC
 gaussian-e8-module,experiments/tfpt-discovery/two_qubit_clifford_probe.py,USED_BY,HEURISTIC
 gaussian-e8-module,experiments/tfpt-discovery/z1_edge_signature_probe.py,USED_BY,HEURISTIC
+gaussian-smoothed-zero-density,analytic-object,INSTANCE_OF,HEURISTIC
+gaussian-smoothed-zero-density,weil-quadratic-form,TRANSFORM_OF,THEOREM
+gaussian-smoothed-zero-density,experiments/tfpt-discovery/heat_gabor_restatement_probe.py,USED_BY,THEOREM
 gorz-theorem,jensen-polynomials,IMPLIES,THEOREM
 gorz-theorem,analytic-object,INSTANCE_OF,HEURISTIC
 groupoid,arithmetic-geometry,INSTANCE_OF,HEURISTIC
@@ -466,6 +489,10 @@ narrowband-weil,finite-weil-window,SPECIAL_CASE_OF,CONDITIONAL
 narrowband-weil,experiments/tfpt-discovery/narrowband_weil_probe.py,USED_BY,HEURISTIC
 narrowband-weil,rh/problem/narrowband_weil.tex,USED_BY,HEURISTIC
 narrowband-weil,rh/problem/verify_narrowband_weil.py,USED_BY,HEURISTIC
+negative-explosion-criterion-a,weil-positivity,EQUIVALENT_TO,CONDITIONAL
+negative-explosion-criterion-a,positivity-criterion,INSTANCE_OF,HEURISTIC
+negative-explosion-criterion-a,gaussian-smoothed-zero-density,REQUIRES,THEOREM
+negative-explosion-criterion-a,experiments/tfpt-discovery/heat_gabor_restatement_probe.py,USED_BY,CONDITIONAL
 newman-criterion,riemann-hypothesis,EQUIVALENT_TO,THEOREM
 newman-criterion,positivity-criterion,INSTANCE_OF,HEURISTIC
 newman-criterion,debruijn-newman-constant,REQUIRES,THEOREM
@@ -489,6 +516,7 @@ open-gabor-window-positivity,research-question,INSTANCE_OF,HEURISTIC
 open-gabor-window-positivity,gabor-pure-criterion,WOULD_CLOSE,CONDITIONAL
 open-global-all-place-intersection,barrier-arch-compensation,BLOCKED_BY,CONDITIONAL
 open-global-all-place-intersection,research-question,INSTANCE_OF,HEURISTIC
+open-global-all-place-intersection,rh/catalog/analysis/all_place_tate_audit.md,USED_BY,HEURISTIC
 open-global-all-place-intersection,additive-adeles,WOULD_CLOSE,CONDITIONAL
 open-global-all-place-intersection,arakelov-intersection,WOULD_CLOSE,CONDITIONAL
 open-global-all-place-intersection,weil-quadratic-form,WOULD_CLOSE,CONDITIONAL
@@ -534,6 +562,9 @@ pair-correlation,experiments/tfpt-discovery/paircorr_bridge_map_probe.py,USED_BY
 pair-correlation,experiments/tfpt-discovery/paircorr_contract_probe.py,USED_BY,HEURISTIC
 perron-fixed-point-transport,no-archimedean-prime-joint-space,BLOCKED_BY,THEOREM
 perron-fixed-point-transport,spectral-framework,INSTANCE_OF,HEURISTIC
+petz-watatani-tate-network,no-archimedean-prime-joint-space,BLOCKED_BY,CONDITIONAL
+petz-watatani-tate-network,research-question,INSTANCE_OF,HEURISTIC
+petz-watatani-tate-network,all-place-tate-weil-realization,REDUCES_TO,CONDITIONAL
 pi-numerology-c3,class-number-formula-q-i,BLOCKED_BY,HEURISTIC
 pi-numerology-c3,obstruction-class,INSTANCE_OF,HEURISTIC
 pick-function,barrier-pick-sign,BLOCKED_BY,CONDITIONAL
@@ -588,6 +619,8 @@ r-dagger-kernel-loewner-stack,rh/problem/keystone_judgment.pdf,USED_BY,HEURISTIC
 r-dagger-kernel-loewner-stack,rh/problem/keystone_judgment.tex,USED_BY,HEURISTIC
 r-dagger-kernel-loewner-stack,rh/problem/verify_kernel_loewner08.py,USED_BY,HEURISTIC
 r-dagger-kernel-loewner-stack,verification/v1017_kernel_loewner_positivity.py,USED_BY,HEURISTIC
+rankin-mean-pointwise-exponent-drop,obstruction-class,INSTANCE_OF,HEURISTIC
+rankin-mean-pointwise-exponent-drop,experiments/tfpt-discovery/rankin_positivity_miniature_probe.py,KILLED_BY,THEOREM
 rankin-selberg-norm-square,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 rankin-selberg-norm-square,positive-cone-blindness,BLOCKED_BY,CONDITIONAL
 rankin-selberg-norm-square,edge-nonvanishing-method,INSTANCE_OF,THEOREM
@@ -630,6 +663,7 @@ riemann-zeta,analytic-object,INSTANCE_OF,HEURISTIC
 riemann-zeta,riemann-xi,REQUIRES,THEOREM
 rigid-calabi-yau-f8,analytic-object,INSTANCE_OF,HEURISTIC
 rigid-calabi-yau-f8,weight4-gl1-transport,INSTANCE_OF,THEOREM
+rigid-calabi-yau-f8,tate-trace-projector,REQUIRES,THEOREM
 rigid-calabi-yau-f8,experiments/tfpt-discovery/cuspidal_bridge_probe.py,USED_BY,HEURISTIC
 rodgers-tao-theorem,debruijn-newman-constant,IMPLIES,THEOREM
 rodgers-tao-theorem,analytic-object,INSTANCE_OF,HEURISTIC
@@ -711,8 +745,15 @@ stochastic-scale-semigroup-on-connes-cokernel,self-dual-measure,REQUIRES,CONDITI
 stochastic-scale-semigroup-on-connes-cokernel,unitarity-of-emergent-time,REQUIRES,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,hilbert-polya-operator,WOULD_CLOSE,CONDITIONAL
 stochastic-scale-semigroup-on-connes-cokernel,rh-as-reflection-positivity,WOULD_CLOSE,CONDITIONAL
+strict-weil-window-floor-zhu,positivity-criterion,INSTANCE_OF,HEURISTIC
 suzuki-screw-canonical-systems,experiments/tfpt-discovery/w1_theorem_probe.py,USED_BY,HEURISTIC
 suzuki-screw-canonical-systems,notes/arxiv_w1_note/note_w1_suzuki_identification.tex,USED_BY,HEURISTIC
+tate-information-loss,obstruction-class,INSTANCE_OF,HEURISTIC
+tate-information-loss,verification/v1021_all_place_tate_rank_audit.py,USED_BY,THEOREM
+tate-trace-projector,tate-information-loss,BLOCKED_BY,THEOREM
+tate-trace-projector,analytic-object,INSTANCE_OF,HEURISTIC
+tate-trace-projector,riemann-zeta,REALIZES,THEOREM
+tate-trace-projector,verification/v1021_all_place_tate_rank_audit.py,USED_BY,HEURISTIC
 terminal-statement,barrier-lossy-constant,BLOCKED_BY,CONDITIONAL
 terminal-statement,research-question,INSTANCE_OF,HEURISTIC
 terminal-statement,lstar-statement,REQUIRES,CONDITIONAL
@@ -758,6 +799,8 @@ ucp-map,experiments/tfpt-discovery/euler_operator_lift_probe.py,USED_BY,HEURISTI
 unitarity-of-emergent-time,research-question,INSTANCE_OF,HEURISTIC
 unitarity-of-emergent-time,weil-positivity,WOULD_CLOSE,CONDITIONAL
 van-dantzig-pair,analytic-object,INSTANCE_OF,HEURISTIC
+vasyunin-gram-matrix,analytic-object,INSTANCE_OF,HEURISTIC
+vasyunin-gram-matrix,nyman-beurling-space,REALIZES,THEOREM
 verified-zeros-height,compact-window-certificate-mechanism,BLOCKED_BY,THEOREM
 verified-zeros-height,analytic-object,INSTANCE_OF,HEURISTIC
 vitali-montel,analytic-object,INSTANCE_OF,HEURISTIC
@@ -831,6 +874,7 @@ weil-quadratic-form,experiments/tfpt-discovery/relay_test_probe.py,USED_BY,HEURI
 weil-quadratic-form,experiments/tfpt-discovery/stc_sol_convergence_probe.py,USED_BY,HEURISTIC
 weil-quadratic-form,experiments/tfpt-discovery/thin_band_analytic_probe.py,USED_BY,HEURISTIC
 weil-quadratic-form,experiments/tfpt-discovery/weil_window_profile_scout.py,USED_BY,HEURISTIC
+weil-quadratic-form,rh/catalog/analysis/all_place_tate_audit.md,USED_BY,HEURISTIC
 weil-quadratic-form,rh/lean/RH/Elementwise.lean,USED_BY,HEURISTIC
 xi-fourier-function,analytic-object,INSTANCE_OF,HEURISTIC
 xi-fourier-function,laguerre-polya-class,INSTANCE_OF,CONDITIONAL

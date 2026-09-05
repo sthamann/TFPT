@@ -4,6 +4,13 @@
 > result see [`CLAIMS.md`](CLAIMS.md); for what is unresolved see
 > [`OPEN_PROBLEMS.md`](OPEN_PROBLEMS.md).
 
+> **Strict TOE scope (2026-09-05).** This page describes the compiler and its boundary-layer
+> certificates; it does not claim a complete Theory of Everything. Round 3
+> (`v1022`–`v1025`) closes only narrow T2/T4/T6–T8 subgates and moves no parent marker.
+> `TFPT.TOE.COMPLETE.01` and every gate T1–T8 remain `[O]`, and a shared 3+1D parent satisfying
+> T3–T8 is still missing. Historical phrases below such as “single residual”, “QFT-complete” or
+> “no open internal mechanism” apply only to the explicitly named compiler/seam layer.
+
 TFPT models physics as a small deterministic **compiler**: two boundary inputs are fed in, an
 `E8` "audit hull" is built as an intermediate object, and the Standard-Model + cosmology
 read-outs fall out as **projections** — through a chain of exact identities and lattice/Lie

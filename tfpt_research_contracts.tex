@@ -109,9 +109,13 @@ readings exactly intertwined with the base translation), uniflow degeneration on
 translation, relic degenerate); the kill criterion is \emph{not} met, and the residual --- the external
 anchor clocks/jets --- stays fenced by \texttt{CONTRACT.F.01}.
 \smallskip\\
-\noindent\textbf{The residual is certification, not construction (\veri{v384\_residual\_certification.py}).} A
-ledger-CI audit classifies every remaining item into exactly three \emph{external} kinds, with \emph{zero} open
-\emph{internal} TFPT mechanisms: \mE\ (A)~an external math proof --- \texttt{SEAM.EQUIV.01} continuum existence (the
+\noindent\textbf{Historical compiler-residual audit
+(\veri{v384\_residual\_certification.py}; scope corrected 2026-09-05).}  The audit
+classified every item in the \emph{then-listed compiler residual} into three external kinds.  Its
+former phrase ``zero open internal TFPT mechanisms'' does not classify the physical completeness
+gates T1--T8 and must not be read as a TOE statement: \texttt{TFPT.TOE.COMPLETE.01} stays \mO,
+T3--T8 remain open, and no shared $3{+}1$D parent satisfying them has been constructed.  Within
+that historical compiler scope the three classes were: \mE\ (A)~an external math proof --- \texttt{SEAM.EQUIV.01} continuum existence (the
 cited MMST theorem plus the crossed-product extension package, \vref{v336}/\vref{v469}, with AGT/AMT as second
 witness), \texttt{ALPHA.QUILLEN.EXACT.01} (\vref{v382}, its level and normalisation sharpened by \vref{v470}, the
 determinant-line/moduli bridge lemma exhibited at the finite level by \vref{v472} --- the continuum
@@ -119,8 +123,10 @@ $\zeta$-det identification stays the open part) and
 the constructive \texttt{QG.AMB.01} measure (a \mC\ redundancy, \vref{v369}); \mE\ (B)~theorem-forbidden --- $v_{\mathrm{geo}}$, the
 one unit, by the No-Unit theorem (\vref{v153}/\vref{v364}); \mE\ (C)~external physics --- $F_{\mathrm{transfer}}$
 (\vref{v371}--\vref{v374}, firewalled \vref{v187}). The two load-bearing facts are checked (No-Unit
-dimensionlessness; the gap-decoupling margin $1.648>0$), so the only hard things left are theorems and external
-physics, not missing dynamics (\texttt{RESIDUAL.CERTIFICATION.01}). The two kind-(A) external-math
+dimensionlessness; the gap-decoupling margin $1.648>0$), so the only hard items in that
+historical compiler list were theorems and external physics
+(\texttt{RESIDUAL.CERTIFICATION.01}); this says nothing about the independent missing dynamics
+and continuum mechanisms in T1--T8. The two kind-(A) external-math
 targets, \texttt{SEAM.EQUIV.01} and \texttt{ALPHA.QUILLEN.EXACT.01}, are additionally packaged as
 self-contained \emph{externalization contracts} (statement, hypothesis list, runnable finite models,
 Lean axiom surface, must-fail controls, acceptance tests) in their own sections at the end of this
@@ -13055,6 +13061,33 @@ volume-uniform spectral gap $\ge\Delta/2$ in the parametric window $\tau_{\mathr
 ($a=0.0233$, $a/16=0.00146$).  The dynamical-link leg is closed at that finite-group
 level.  Remaining: rotor links, wall mixing, $3{+}1$D placement.  Display marker stays \mC.
 
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, round-3 integration):
+derivative-filtered wall block
+(\texttt{CHIRAL4D.MIRROR.DFILTER.BLOCK.01};
+\veri{v1023\_\allowbreak derivative\_\allowbreak filtered\_\allowbreak wall.py}; no parent
+marker move).}
+For
+\[
+ H_{\rm df}=\Delta b^\dagger b+
+ \lambda\bigl(b+gD_{\rm GW}p\bigr)^\dagger
+              \bigl(b+gD_{\rm GW}p\bigr)
+\]
+each singular-value sector is the exact $2{\times}2$ block with determinant
+$\lambda g^2\Delta s^2$.  It preserves $\ker D_{\rm GW}$ on the physical summand,
+the adiabatically mirror-continuated high branch is at least $\Delta+\lambda$, and
+\(
+ \mu_-(s)=\lambda g^2\Delta(\Delta+\lambda)^{-1}s^2+O(s^4).
+\)
+The finite covariance and SVD-reduction defects are
+$2.408{\times}10^{-15}$ and $1.776{\times}10^{-15}$.  This is only a finite
+quasi-free block lemma.  For $s\ne0$ the bare $b$ subspace is not invariant and has
+low-band weight, so no bare-mirror response gap is proved; the low branch has
+$z=2$, not a Weyl cone.  No canonical DET16/DET32 realization, interacting parent,
+admissibility/quasilocality theorem, measure/anomaly/index control, universality or
+$3{+}1$D continuum limit follows.  The derivative-filtered witness therefore does
+not upgrade \texttt{CHIRAL4D.MIRROR.DET16.01}~\mC,
+\texttt{CHIRAL4D.NOMIRROR.01}~\mO, T4, or TOE.
+
 % =====================================================================
 \section*{Firewall Contract --- \texttt{GRAV.NONCIRCULAR.01} (the Bisognano--Wichmann direction discipline)}
 \addcontentsline{toc}{section}{Firewall Contract: GRAV.NONCIRCULAR.01}
@@ -13771,6 +13804,22 @@ expected for massive generic matter); $Z$ trend $k_1$ suppressed $0.958$ / $k_2$
 free-limit analytic match.  Missing: TFPT content, $k\to0$ volume scaling, Ward identities.
 Display marker stays \mO.
 
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, round-3 integration):
+gapped-parent/TT boundary
+(\texttt{GRAV.PARENT.GAP.NO\_GO.01};
+\veri{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py}; no parent
+marker move).}
+A uniform full-parent gap $\Delta>0$ excludes a massless pole with
+$\omega(k_{\min})\to0$.  Away from $k=0$ the symmetric-traceless target has five
+pointwise components and the transverse-traceless projector has rank two, but its
+direction-dependent $k\to0$ limit prevents an exact strictly finite-range direct TT
+projector.  A viable escape therefore requires a critical physical sequence together
+with local tensor gauge constraints whose Ward identities generate the TT sector only
+in the infrared.  The finite representation count is not a derived TFPT stress
+operator, and no massless pole, universal coupling, diffeomorphism Ward identity or
+gravitational continuum theorem is constructed.  \texttt{GRAV.SPIN2.EMERGENCE.01},
+T7 and TOE remain \mO.
+
 % =====================================================================
 \section*{Research Contract --- \texttt{FTRANSFER.SK.RHO0.01} (Schwinger--Keldysh completion: cosmological transfers need $(S,\rho_0)$)}
 \addcontentsline{toc}{section}{Research Contract: FTRANSFER.SK.RHO0.01}
@@ -13823,6 +13872,23 @@ $\mu_4$-invariant, conditional $3\pi/5$ saddle preserved).  $R_1$ vacuous, $R_2$
 response-dead, orientation-free mutant loses saddles.  Caveat: the difference lives
 in the neutral spectator factor --- finite proxy.  Display marker stays \mO.
 
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, round-3 integration):
+parent-internal cap and enlargement boundaries
+(\texttt{FTRANSFER.PARENT.Z5CAP.01};
+\veri{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py}; no parent
+marker move).}
+The selected internal twelve-dimensional $\mathbb Z_5$ cap has a unique subspace
+ground state and gap $0.197423715893$; its positive vacuum-preserving extension retains
+the checked finite parent gap and a nonzero mixed response.  However, the five-cycle is
+chosen rather than derived, the cap breaks the checked $D_4$ action (residual
+$1.094700$), and the extension vanishes on a large complement.  It therefore does not
+select a global $\rho_0$.  The exact Weyl-pair divisibility obstruction applies only to
+the unprojected parent dimension; the physical Gauss-projected dimension has not been
+counted.  Likewise
+$M_n'\cap M_{nd}\cong I_n\otimes M_d$ is an irreducibility/prime-completion obstruction,
+not a general dynamical-coupling no-go.  \texttt{FTRANSFER.SK.RHO0.01}, T8 and TOE
+remain \mO.
+
 % =====================================================================
 \section*{Research Contract --- \texttt{SEAM.MMST.TYPEIII.CHARGED.01} (one scaling-limit theorem)}
 \addcontentsline{toc}{section}{Research Contract: SEAM.MMST.TYPEIII.CHARGED.01}
@@ -13873,7 +13939,9 @@ dyadic increment $\lvert\lVert R_{2N}\rVert-\lVert R_N\rVert\rvert\le A_R/N$ wit
 $A_R<43$ sufficient for $C_R<3$ is superseded --- $A_R$ was measured $0.1238$ (r645)
 but is no longer the route.  Numerically closed
 ($1.7833+0.7863=2.57<3$; conditional analytic $2.9495<3$ with $c_E=0.30$);
-analytically open at C1/C2a/C2b.  Not a marker move; display stays \mO.
+the 2026-09-05 integration below closes C1, C2a and the interval-TV input and
+reduces C2b to two operator-valued estimates, CF and DG.  Full TEL-B remains open.
+Not a marker move; display stays \mO.
 Evidence (experiments, not \texttt{veri}-citable):
 \texttt{experiments/tfpt-discovery/mmst\_\allowbreak telb\_\allowbreak trace\_\allowbreak decomposition\_\allowbreak probe.py},
 \texttt{mmst\_\allowbreak telb\_\allowbreak cover\_\allowbreak split\_\allowbreak probe.py},
@@ -13897,16 +13965,24 @@ $M_N=-(S_N+H_N)\otimes Q$.  The scalar sawtooth response has the closed form
 \end{equation*}
 Triangle target: $\lVert R_N\rVert\le\lVert R_N^{\mathrm{sm}}\rVert+\lVert M_N\rVert<3$.
 
-\par\smallskip\noindent\textbf{Bound (A) --- certified numerically (all $N$).}
+\par\smallskip\noindent\textbf{Bound (A) --- native interval input closed
+(\texttt{SEAM.MMST.TELB.ROUND3.01};
+\veri{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py}).}
 The continuous family $F=P-\mathrm{saw}\cdot dP$ has vanishing derivative jump
 ($\mathrm{rank}\,dF'=0$, $\lVert dF'\rVert=3.4{\times}10^{-10}$); the first
 discontinuity sits in $F''$ (rank~$4$, norm $2.000000029$).  The $2{\times}2$
-crossing lemma: edge--bulk coupling $4{\times}10^{-16}$.  All-mode BV bound
+crossing lemma supplies the removable crossing chart.  The all-mode BV bound
 $\lvert\hat F(m)\rvert\le\mathrm{TV}(F'')/(2\pi\lvert m\rvert)^3$ with
-$\mathrm{TV}_p\le15.928674$ (grids $15.607948/15.689440/15.730202$,
-Richardson ${+}1\,\%$).  Then $K_3^{\mathrm{TV}}=2.535127\ge K_3^{\mathrm{emp}}=0.319150$
-and $U_\infty=3.180007442<3.4225$, hence
-$\lVert R_N^{\mathrm{sm}}\rVert\le1.7833$ for all $N$.  One float64 constant (TV).
+$256$-bit Arb/Acb arithmetic on $5812$ rational cells gives
+\[
+ \mathrm{TV}_p(F'')\le15.8176959629889243576\ldots<15.928674,
+ \qquad K_3^{\mathrm{TV}}<2.517464500835.
+\]
+The cut contribution has exact Hilbert--Schmidt norm $2$; the remaining cells use
+validated eigensystems, Taylor enclosures and an analytic ninth-derivative majorant.
+Thus the former float64/Richardson constant is retired.  Together with the existing
+all-mode assembly, $U_\infty=3.180007442<3.4225$ and
+$\lVert R_N^{\mathrm{sm}}\rVert\le1.7833$ for all $N$ retain their stated scope.
 
 \par\smallskip\noindent\textbf{Bound (B) --- reduced, one inequality open.}
 Relaxed target $\lVert S_N+H_N\rVert^2\le1.2167^2/2=0.740179$ (measured limit
@@ -13935,23 +14011,79 @@ and
     -\pi u\cot(\pi\alpha).
 \end{align*}
 Closed bounds $\pi^2/3\le\Phi_\star''\le\pi^2-4$.  The kernel $r$ is singular
-only on $u=0$, $v=0$.  Two offset midpoint quadratures give
-$C_\star=\iint\lvert r\rvert^2=0.152044949/0.152045069$.
+only on $u=0$, $v=0$.  The former offset midpoint values were
+$C_\star=0.152044949/0.152045069$; the native certificate below replaces them
+as the load-bearing bound.
 Cell averages $(\mathcal K_N)_{kl}:=N\iint_{Q_{kl}}r$ obey
 $\lVert\mathcal K_N\rVert^2\le C_\star$ exactly (Cauchy--Schwarz on each cell).
 Measured $\sqrt N\,\lVert E_N\rVert=0.1943\ldots0.2013$ ($N=16\ldots512$).
 Required $c_E\le0.542702$, margin $2.70$.  Assembled
 $(\sqrt{0.1525}+0.2013/4)^2=0.1943<0.2769$.
 
-\par\smallskip\noindent\textbf{What remains (new residual \texttt{TEL-B-EXTERNAL}).}
-\textbf{(C1)}~rigorous enclosure $C_\star\le0.1525$.
-\textbf{(C2a)}~$\lvert\varphi_N(k)\rvert\le c_1/N$, $c_1\le0.51$, all even
-$N\ge16$ (one-dimensional Euler--Maclaurin/Poisson on the recentred cotangent
-sum; seam $k=-N/2$).
-\textbf{(C2b)}~cell-oscillation constants for $r$ off the two log lines
-(variable log coefficient, zero row/column control);
-plus interval enclosure of $\mathrm{TV}(F'')$.
-Dead routes (do not retry): absolute-value majorants ($3\sqrt N$); global BV
+\par\smallskip\noindent\textbf{C1 and C2a closed (2026-09-05;
+\texttt{SEAM.MMST.TELB.C1C2A.01};
+\veri{v1025\_\allowbreak telb\_\allowbreak c1\_\allowbreak c2a\_\allowbreak certificates.py}).}
+For C1, the exact simplification of the real kernel is integrated over $3888$
+analytic rectangles at $100$-bit precision.  Logarithmic charts remove the two
+axis singularities, a removable seam chart treats the opposite-sign corner, and
+the omitted axis union is bounded by $3.1570760454{\times}10^{-7}$.  Parseval
+supplies the exact imaginary contribution $1/12$, giving the outward enclosure
+\[
+ C_\star\le0.1520453048\ldots<0.1525.
+\]
+For C2a, exact cotangent reindexing gives the $3/4$-point Peano identity
+\[
+ \varphi_N(k+1)-\varphi_N(k)
+ =h f((k+3/4)h)-\int_{kh}^{(k+1)h}f(u)\,du,
+ \qquad h=N^{-1}.
+\]
+The partial-fraction formula
+$f'(u)=\sum_{m\in\mathbb Z\setminus\{0\}}(u-m)^{-2}$ implies
+$\pi^2/3\le f'\le\pi^2-4$ and makes the increments monotone.  Shifted Euler
+summation with its periodic $B_3$ remainder reduces the two endpoints to outward
+constant comparisons in v1025:
+\[
+ N\sup_k\lvert\varphi_N(k)\rvert
+ \le0.508228779140631\ldots<0.509<0.51
+ \qquad(N\ge16\text{ even}).
+\]
+
+\par\smallskip\noindent\textbf{C2b scalar reduction and exact remaining target
+(\veri{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py}).}
+The analytic one-dimensional reduction, with its final arithmetic enclosed by Arb,
+gives
+\[
+ \begin{aligned}
+ c_\varepsilon&=0.288547359238391\ldots,\\
+ c_\zeta&=0.110677064900715\ldots,\\
+ c_{\rm potential}&=0.399224424139106\ldots<0.400.
+ \end{aligned}
+\]
+The executable encloses $1\le n\le15$ and checks positive-coefficient rational
+tail comparisons for $n\ge16$.  The sign-controlled digamma and midpoint
+inequalities which justify those tails are analytic lemmas of this proof, not an
+independent formalization inside the executable.  Full C2b is now open exactly at
+\[
+ \sqrt N\,\lVert(K'_N-K_N)_{\rm offdiag}\rVert_{\mathrm{HS}}\le0.139,
+ \qquad
+ \sqrt N\,\lVert(\mathrm{Res}_N-K_N)_{\rm diag}\rVert_{\mathrm{HS}}\le0.060.
+\]
+The diagonal is Hilbert--Schmidt orthogonal to the off-diagonal, and these two
+bounds would close the stated $c_E\le0.542702$ budget.  Neither estimate is claimed.
+
+\par\smallskip\noindent\textbf{ALG2 correction (binding).}
+The former Vandermonde-to-generated-algebra implication is withdrawn.  The exact
+one-mode countermodel has full CAR algebra $M_2$, while the even/code-generated
+subalgebra is diagonal; the annihilator stays at distance at least $1$ from it.
+Fourier/Vandermonde inversion therefore supplies only full-CAR compression, not the
+microscopic generated algebra.  ALG2 requires an independent FE-GEN
+compression-surjectivity theorem or a precise gauge/code-projected microscopic
+algebra argument.  The positive ALG1 estimate is likewise conditional on the
+generated projection containing the microscopic low-energy sectors.  Full C2b,
+ALG-EXH and \texttt{SEAM.MMST.TYPEIII.CHARGED.01} remain \mO.
+
+\par\smallskip\noindent\textbf{Retired routes (do not retry).}
+Absolute-value majorants ($3\sqrt N$); global BV
 majorant; per-cell log counterterms at $\pm\tfrac12$ (nothing to counterterm);
 shifted-cell majorisation (ratio $0.73$); Szeg\H{o}/Widom split
 (Fisher--Hartwig $\pi^{-2}\log N$ per summand); trace decomposition (each term
@@ -14018,9 +14150,11 @@ Display marker stays \mO.
 \veri{v1014\_\allowbreak bridge\_\allowbreak refinements.py};
 the contract stays \mO).}
 T3 mandatory-dynamics leg CLOSED at Hamiltonian-class level (Lieb--Robinson $+$ $\tau_t$ $+$
-$\mathcal A^G$ $+$ state existence).  Every remaining axiom-core and continuum gap now runs
-through \emph{one} externalized theorem (MMST/Quillen: TEL-B/ALG-EXH/P1 $+$ the character-blind
-determinant-response map $+$ Bismut--Freed/$A_0$).  Display marker stays \mO.
+$\mathcal A^G$ $+$ state existence).  Within the finite W-bridge/compiler lane considered
+here, the remaining identification was routed through the external MMST/Quillen leg
+(TEL-B/ALG-EXH/P1 $+$ the character-blind determinant-response map $+$
+Bismut--Freed/$A_0$).  This historical statement does not classify or close the
+independent TOE gates T3--T8.  Display marker stays \mO.
 
 \par\smallskip\noindent\textbf{Executed update (2026-08-31, Monday-morning harvest;
 \veri{v1015\_\allowbreak axiom\_\allowbreak core\_\allowbreak closure.py},
@@ -14029,9 +14163,41 @@ the contract stays \mO).}
 T1 structure-postulate route is now fully premise-supported at finite level (both
 W-bridge premises derived; axiom-core remainder $0$ modulo the externalized MMST
 identification).  First viable canonical-state principle ($R_4$ seam-modular cap).
-Third-route volume theorem cited-verified for finite-group DET chains.  Every remaining
-fundamental gap routes through the one externalized MMST theorem or the $4$D functional.
-Display marker stays \mO.
+Third-route volume theorem cited-verified for finite-group DET chains.  The old phrase
+``every remaining fundamental gap'' is scope-corrected: only the finite compiler/W-bridge
+lane was reduced to MMST plus the $4$D functional; the independent T3--T8 mechanisms were
+not thereby classified.  Display marker stays \mO.
+
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, T1--T8 round-3 integration;
+\veri{v1022\_\allowbreak telb\_\allowbreak round3\_\allowbreak certificates.py},
+\veri{v1023\_\allowbreak derivative\_\allowbreak filtered\_\allowbreak wall.py},
+\veri{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py},
+\veri{v1025\_\allowbreak telb\_\allowbreak c1\_\allowbreak c2a\_\allowbreak certificates.py}).}
+The current gate matrix is:
+\begin{itemize}
+\item \textbf{T1:} the finite axiom-core/W-bridge premises have executable
+  support, but their unconditional structure-postulate provenance and the
+  dimension selector remain open.
+\item \textbf{T2:} C1, C2a and the interval-TV input are closed; the analytic
+  C2b scalar contribution is below $0.400$.  CF, DG, FE-GEN/ALG-EXH and the
+  MMST identification remain open; the old ALG2 Vandermonde implication is refuted.
+\item \textbf{T3:} dynamics exists only at Hamiltonian-class level.  No shared
+  complete $3{+}1$D parent or continuum theorem is constructed.
+\item \textbf{T4:} v1023 proves only the finite derivative-filtered quasi-free
+  block.  It has no invariant bare-mirror response gap, no Weyl cone, no DET
+  many-body realization, measure or $4$D theorem.
+\item \textbf{T5:} finite IR witnesses and the v1020 spectator obstruction make
+  prime completion binding, but OS reconstruction, confinement, clustering and
+  nontrivial scattering remain open.
+\item \textbf{T6:} v1024 constructs a parent-internal intertwiner, but its
+  full-Fock lift is projective and it supplies no neutrino mass texture.
+\item \textbf{T7:} v1024 proves the uniform-gap and direct-TT locality
+  obstructions; it does not construct a massless universally coupled spin-2 mode.
+\item \textbf{T8:} v1024 constructs an internal $12$D cap, but its arbitrary
+  $D_4$-breaking selector is not a global $\rho_0$ and gives no unique SK functional.
+\end{itemize}
+All T1--T8 gates and \texttt{TFPT.TOE.COMPLETE.01} remain \mO; no marker moves.
+A single shared $3{+}1$D parent satisfying T3--T8 is still missing.
 
 % =====================================================================
 \section*{Research Contract --- \texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)}
@@ -14078,6 +14244,24 @@ Six pre-declared D4-odd candidates, all parity-checked, all NULL (five at $10^{-
 $K_4=3.55{\times}10^{-3}$ is $18.8{\times}$ too large).  The $1.885{\times}10^{-4}$ cancellation
 scale requires the true $4$D functional --- mechanism scale strictly beyond frozen finite objects.
 Display marker stays \mO.
+
+\par\smallskip\noindent\textbf{Executed update (2026-09-05, round-3 integration):
+parent-internal $A_3$--$D_4$ intertwiner
+(\texttt{FLAV.NU.PARENT.INTERTWINER.01};
+\veri{v1024\_\allowbreak parent\_\allowbreak internal\_\allowbreak boundaries.py}; no parent
+marker move).}
+Using only the existing four-state seam clock and six $\nu^c$ modes, the finite module
+constructs a positive, gauge-neutral, parity-even, non-additive local term.  Its checked
+gap is $0.25$ conditional on the inherited full-parent bound, and the mixed resolvent is
+$0.104712041885$.  The selected pair-operator triplet carries ordinary $D_4$, whereas
+the full fermionic lift is projective:
+\[
+ C_f^8=1,\qquad C_f^4=(-1)^{N_1+N_3}\ne(-1)^F,\qquad
+ J_fC_fJ_f=(-1)^F C_f^{-1}.
+\]
+This supplies neither a neutrino mass matrix nor the required
+$2{\times}10^{-4}$ cancellation and is not a $4$D functional.
+\texttt{FLAV.NU.TEXTURE.MECHANISM.01}, T6 and TOE remain \mO.
 
 % =====================================================================
 \section*{Research Contract --- \texttt{SEAM.MILNOR.LOCALRING.01} (canonical identification of the seam collar with the reduced Milnor algebra)}

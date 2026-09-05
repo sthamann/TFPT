@@ -19,7 +19,12 @@ import {
   X,
   XCircle,
 } from "lucide-react";
-import { runScript, pyodideVersion, type RunResult } from "@/lib/pyodide";
+import {
+  nativeRuntimeNote,
+  runScript,
+  pyodideVersion,
+  type RunResult,
+} from "@/lib/pyodide";
 import { RichText } from "@/lib/richtext";
 import { cn, REPO_URL } from "@/lib/utils";
 
@@ -81,6 +86,7 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
   const id = file.replace(/\.py$/, "").split("_")[0];
   const githubUrl = `${REPO_URL}/blob/main/verification/${file}`;
   const localCmd = `python verification/${file}`;
+  const nativeOnly = nativeRuntimeNote(file);
 
   useEffect(() => setMounted(true), []);
 
@@ -218,8 +224,14 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
               </h2>
             </div>
             <p className="mt-1 text-[11px] leading-snug text-slate-400">
-              Runs entirely in your browser via Pyodide {pyodideVersion()}{" "}
-              (WebAssembly). Nothing is sent to a server.
+              {nativeOnly ? (
+                <>Native Arb/Acb certificate — use the pinned local environment.</>
+              ) : (
+                <>
+                  Runs entirely in your browser via Pyodide {pyodideVersion()}{" "}
+                  (WebAssembly). Nothing is sent to a server.
+                </>
+              )}
             </p>
           </div>
           <button
@@ -273,18 +285,41 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
           )}
 
           {phase === "error" && result && (
-            <div className="rounded-xl border border-rose-400/30 bg-rose-500/5 px-4 py-4">
-              <div className="flex items-center gap-2 text-sm font-semibold text-rose-200">
-                <XCircle size={16} aria-hidden />
-                This script did not complete in the browser sandbox
+            <div
+              className={cn(
+                "rounded-xl border px-4 py-4",
+                nativeOnly
+                  ? "border-amber-400/30 bg-amber-500/5"
+                  : "border-rose-400/30 bg-rose-500/5",
+              )}
+            >
+              <div
+                className={cn(
+                  "flex items-center gap-2 text-sm font-semibold",
+                  nativeOnly ? "text-amber-200" : "text-rose-200",
+                )}
+              >
+                {nativeOnly ? (
+                  <FileCode2 size={16} aria-hidden />
+                ) : (
+                  <XCircle size={16} aria-hidden />
+                )}
+                {nativeOnly
+                  ? "Native runtime required — not a browser failure"
+                  : "This script did not complete in the browser sandbox"}
               </div>
               <p className="mt-2 text-xs leading-relaxed text-slate-300">
-                Some heavier scripts (large SciPy solves) are best run locally.
-                You can still read the source, open it on GitHub, or run it with
-                the command below.
+                {nativeOnly
+                  ? "This certificate deliberately does not run in the browser runtime. You can still read the source, open it on GitHub, or reproduce it with the pinned local dependency and the command below."
+                  : "Some heavier scripts (large SciPy solves) are best run locally. You can still read the source, open it on GitHub, or run it with the command below."}
               </p>
               {result.error && (
-                <pre className="mt-3 max-h-48 overflow-auto whitespace-pre-wrap break-words rounded-md border border-slate-800/60 bg-slate-950/70 p-3 text-[11px] leading-relaxed text-rose-200/90">
+                <pre
+                  className={cn(
+                    "mt-3 max-h-48 overflow-auto whitespace-pre-wrap break-words rounded-md border border-slate-800/60 bg-slate-950/70 p-3 text-[11px] leading-relaxed",
+                    nativeOnly ? "text-amber-100/90" : "text-rose-200/90",
+                  )}
+                >
                   {result.error}
                 </pre>
               )}

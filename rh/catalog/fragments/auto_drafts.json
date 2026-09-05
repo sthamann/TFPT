@@ -21630,41 +21630,6 @@
     "artifacts": {
       "figures": [],
       "lean": [],
-      "probe": "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py",
-      "result_json": null,
-      "tex": null
-    },
-    "confidence": "low",
-    "depends_on": [],
-    "draft": true,
-    "failed_because": "",
-    "failure_class": "NOT_APPLICABLE",
-    "family": "WEIL_POSITIVITY_WINDOWS",
-    "family_secondary": [
-      "DYNAMICS_CLOCKS_PF",
-      "LATTICE_E8_HECKE"
-    ],
-    "kind": "ATTACK",
-    "ledger_ids": [],
-    "mechanism": "POSITIVITY MACHINE IN MINIATURE: the classical Rankin trick (Rankin 1939) — the miniature of the Deligne mechanism that proved the only known RH (function fields) — rebuilt IN-SUITE.",
-    "needs_review": true,
-    "outcome": "OPEN",
-    "path": "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py",
-    "question": "Discovery probe (2026-07-25), part 49 of the zeta/prime investigation.",
-    "readme_lines": "",
-    "result_verdict": "Verdict : MINIATURE-RUNS iff M1 chain closed AND M3 holds; | # ################################################################ VERDICT | print(\"VERDICT\") | f\"VERDICT = {verdict} (M1 chain={m1_chain}, M3={m3_ok})\",",
-    "reusable": "",
-    "rh_related_evidence": "zeta",
-    "rh_relevance": "FINITE_FRAGMENT",
-    "role": "working_probe",
-    "round": "",
-    "solved": "",
-    "status_raw": "Verdict     : MINIATURE-RUNS iff M1 chain closed AND M3 holds;"
-  },
-  {
-    "artifacts": {
-      "figures": [],
-      "lean": [],
       "probe": "experiments/tfpt-discovery/rankin_selberg_functor_probe.py",
       "result_json": null,
       "tex": null
@@ -36497,7 +36462,6 @@
     },
     "confidence": "low",
     "depends_on": [
-      "r473",
       "r475"
     ],
     "draft": true,
@@ -36525,7 +36489,7 @@
     "rh_related_evidence": "path:rh/",
     "rh_relevance": "INFRASTRUCTURE",
     "role": "working_tree",
-    "round": "r473-r475",
+    "round": "r475",
     "solved": "",
     "status_raw": ""
   },

@@ -18,9 +18,9 @@ import { motion } from "motion/react";
  *     IS the first-correction size (v388).
  *  B. The entire-form-factor graviton (v386/v389): the dressed/GR ratio e^{-u}
  *     (u = p²/M²) falls faster than any power — finite, ghost-free, UV-soft.
- *  C. The residual is certification, not construction (v384): every open item
- *     is external (A math proof / B theorem-forbidden / C external physics);
- *     the "internal mechanisms" bin is empty.
+ *  C. Historical compiler-residual classification (v384): the then-listed
+ *     compiler items are external math, theorem-forbidden or external physics.
+ *     This view does not classify the physical TOE gates T1–T8.
  */
 
 type Sector = {
@@ -271,15 +271,15 @@ function FormFactor() {
   );
 }
 
-/** View C: the residual is certification, not construction (v384). */
+/** View C: historical compiler-residual classification (v384). */
 function ResidualCertification() {
   return (
     <div className="rounded-2xl border border-slate-700/40 bg-slate-950/50 p-5">
       <div className="break-words text-[10px] font-semibold uppercase tracking-widest text-slate-300/80">
-        C · the residual is certification, not construction (v384)
+        C · historical compiler-residual audit (v384)
       </div>
       <div className="mt-1 break-words font-serif text-lg text-slate-100">
-        every open item is external — zero open internal mechanisms
+        compiler residual classified; physical TOE gates T1–T8 remain open
       </div>
       <div className="mt-4 grid gap-3 sm:grid-cols-3">
         {(["A", "B", "C"] as const).map((kind) => (
@@ -316,9 +316,9 @@ function ResidualCertification() {
         className="mt-3 flex items-center justify-between rounded-xl border border-dashed border-rose-400/30 bg-rose-500/5 px-4 py-3"
       >
         <span className="text-[11px] font-semibold uppercase tracking-widest text-rose-200/80">
-          Open internal TFPT mechanisms
+          Open physical TOE gates
         </span>
-        <span className="font-serif text-2xl font-semibold text-rose-100">0 — none</span>
+        <span className="font-serif text-2xl font-semibold text-rose-100">T1–T8 · all [O]</span>
       </motion.div>
     </div>
   );

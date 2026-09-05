@@ -4,23 +4,23 @@ GENERATED — do not hand-edit. Built by `rh/catalog/build_catalog.py`.
 
 Research documentation. NOT evidence for or against the Riemann Hypothesis in either direction. NO RH CLAIM.
 
-Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
+Records: **2039** (fragments overlay: 1065; needs_review: 974; violations: 0).
 
 ## Counts by family × outcome
 
 | family | PROVED | CERTIFIED | MEASURED | KILLED | INCONCLUSIVE | OPEN | RESTATED | SEALED |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| WEIL_POSITIVITY_WINDOWS | 41 | 223 | 184 | 164 | 40 | 120 | 27 | 22 |
+| WEIL_POSITIVITY_WINDOWS | 41 | 223 | 184 | 164 | 40 | 119 | 28 | 22 |
 | SCREW_SUBORDINATION_LSTAR | 16 | 45 | 31 | 70 | 49 | 4 | 7 | 6 |
 | LEAN_FORMALIZATION | 32 | 4 | 3 | 6 | 2 | 26 | 2 | 2 |
-| EXPLICIT_FORMULA_IDENTITY | 5 | 14 | 10 | 8 | 3 | 11 | 0 | 6 |
-| OPERATOR_SPECTRAL | 2 | 37 | 18 | 20 | 7 | 39 | 4 | 1 |
+| EXPLICIT_FORMULA_IDENTITY | 6 | 14 | 10 | 8 | 3 | 11 | 0 | 6 |
+| OPERATOR_SPECTRAL | 2 | 37 | 19 | 20 | 7 | 39 | 4 | 1 |
 | RHP_IIKS_TAU | 2 | 25 | 31 | 16 | 9 | 15 | 0 | 8 |
 | TOEPLITZ_MOMENT_POSITIVITY | 5 | 27 | 10 | 9 | 1 | 6 | 2 | 2 |
 | MELLIN_PICK_LEE_YANG | 2 | 10 | 4 | 9 | 0 | 12 | 0 | 0 |
-| LATTICE_E8_HECKE | 9 | 26 | 31 | 28 | 1 | 65 | 2 | 2 |
+| LATTICE_E8_HECKE | 9 | 26 | 31 | 29 | 1 | 65 | 2 | 2 |
 | ADELIC_GROUPOID_CONNES | 0 | 2 | 6 | 10 | 1 | 12 | 0 | 0 |
-| ARAKELOV_HODGE_INTERSECTION | 0 | 1 | 9 | 0 | 0 | 27 | 0 | 0 |
+| ARAKELOV_HODGE_INTERSECTION | 0 | 1 | 9 | 0 | 0 | 27 | 1 | 0 |
 | CM_CURVE_GEOMETRY | 0 | 0 | 0 | 0 | 1 | 3 | 0 | 0 |
 | DYNAMICS_CLOCKS_PF | 0 | 7 | 11 | 11 | 3 | 32 | 0 | 0 |
 | SELBERG_TRACE_CONTACT | 0 | 2 | 3 | 3 | 0 | 6 | 0 | 0 |
@@ -34,13 +34,13 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 
 | kind | n |
 | --- | --- |
-| ATTACK | 1097 |
+| ATTACK | 1099 |
 | CERTIFICATE | 42 |
 | CONTROL | 251 |
-| DOCUMENTATION | 188 |
+| DOCUMENTATION | 189 |
 | EXTERNAL_AUDIT | 11 |
 | FORMALIZATION | 110 |
-| FOUNDATION | 260 |
+| FOUNDATION | 261 |
 | OTHER | 2 |
 | REDUCTION | 52 |
 | TOOLING | 22 |
@@ -51,11 +51,11 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 | --- | --- |
 | CIRCULAR | 28 |
 | LOSSY_CONSTANT | 118 |
-| NOT_APPLICABLE | 1290 |
-| NO_BRIDGE | 153 |
+| NOT_APPLICABLE | 1291 |
+| NO_BRIDGE | 154 |
 | NUMERIC_ARTIFACT | 28 |
-| ORACLE_LEAK | 4 |
-| RESTATEMENT | 36 |
+| ORACLE_LEAK | 5 |
+| RESTATEMENT | 37 |
 | STRUCTURAL_MISMATCH | 189 |
 | UNCONVERGED | 131 |
 | WORLD_BLIND | 58 |
@@ -178,6 +178,7 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 | r623 | WEIL_POSITIVITY_WINDOWS | `experiments/tfpt-discovery/semilocal_p2_dilation_probe.py` | Can the 2-adic Weil channel be a principal-block / rank-one dilation? |
 | r625 | RHP_IIKS_TAU | `experiments/tfpt-discovery/iiks_vanishing_metric_probe.py` | Does Zhou's vanishing-lemma metric apply to the corpus discrete IIKS jump? |
 | r638 | SELBERG_TRACE_CONTACT | `experiments/tfpt-discovery/gabor_first_contact_selberg_probe.py` | Do first-contact conditions plus Selberg square-completion yield a PSD operator L? |
+| 2026-09-05-all-place-audit | ARAKELOV_HODGE_INTERSECTION | `rh/catalog/analysis/all_place_tate_audit.md` | Can the rigid level-8 Calabi--Yau Tate factor carry the complete Weil form? |
 | PRIME.RDAGGER.PROGRAM_EVOLUTION.01 | LEAN_FORMALIZATION | `experiments/tfpt-discovery/evolve/evolve_props.py` | Can evolved programs expose classical formulas for two Lean Props and map the remaining FREQ spectral kernel? |
 | ledger:PRIME.EXCLUSION.BATTERY2.01 | WEIL_POSITIVITY_WINDOWS | `verification/v826_prime_exclusion_battery2.py` | PRIME.EXCLUSION.BATTERY2.01: the preregistered battery v2 and the measurement-range extension -- the exclusion floor of the certified ladder drops from Xi ~ 0.2187 to the uncensored declining Xi_v2 (deepest 0.0816, slope |
 | ledger:PRIME.EXCLUSION.LADDER.01 | WEIL_POSITIVITY_WINDOWS | `verification/v825_prime_exclusion_ladder.py` | PRIME.EXCLUSION.LADDER.01: the certified exclusion ladder of the GL1 prime-comb tower -- verified PSD rungs inverted into rigorous quadruple-exclusion regions -- extended to X = 24.81 with hardened floating-point certificates, and |
@@ -770,6 +771,7 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 | ledger:PRIME.ZEROLAYER.01 | PROVED | WEIL_POSITIVITY_WINDOWS | `verification/v709_chain_zero_layer.py` | Honest [MEASURED, null] layering rejection (best corr 0.042 = scramble level) behind a temporal SHA256 firewall (residual hashed before any zero read); zeros as comparison target only (Python-only per GATE.WOLFRAM.02). |
 | ledger:RTF.GNS.LEDGER.01 | PROVED | WEIL_POSITIVITY_WINDOWS | `verification/v541_matching_lemma_ledger.py` | Identity [E] (exact integer/Fraction/sympy: full-window certificates, structure laws, ledger + kernel identities, character decomposition, duplication bridge, two-route CM carrier; mpmath identities at rel 1e-16..1e-41) + [C] (frontier facts: coherent-chain crossing, lambda-window margin, Robin tail factor -- window constants with declared |
 | port lane | CERTIFIED | TOEPLITZ_MOMENT_POSITIVITY | `verification/v881_carleson_port_geometry.py` | [E] port geometry: rank-2 Jacobi displacement, testing law, port=wall, IIKS-class dressed kernel. [O] one-sidedness. |
+| v1021 | PROVED | EXPLICIT_FORMULA_IDENTITY | `verification/v1021_all_place_tate_rank_audit.py` | Tate factorization, pole normalization, the abstract rank-nullity lemma and the historical Rankin counterexample are exact; applying the lemma to the Weil window is conditional on the external strict-floor preprint. |
 
 ## Reusable assets
 
@@ -1474,6 +1476,9 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 |  | CERTIFICATE_INFRASTRUCTURE | `rh/verification/run_rh.py` | Pinned-inventory integrity plus probe-smoke runner. |
 | - | OTHER | `tfpt_prime_front.tex` | Narrative map of lanes and contracts. |
 | - | CERTIFICATE_INFRASTRUCTURE | `verification/status_ledger.csv` | PRIME.* rows are the status source of truth. |
+| 2026-09-05-all-place-audit | ARAKELOV_HODGE_INTERSECTION | `rh/catalog/analysis/all_place_tate_audit.md` | Seven-gate A1--A7 completion contract with exact local normalization and claim fences. |
+| 2026-09-05-external-heat-A | WEIL_POSITIVITY_WINDOWS | `experiments/tfpt-discovery/heat_gabor_restatement_probe.py` | Exact heat-kernel normalization, inverse transform, and fail-closed prime-tail budget. |
+| 2026-09-05-external-nb-B | OPERATOR_SPECTRAL | `experiments/tfpt-discovery/nb_dyadic_capture_probe.py` | Dyadic block transform, Schur-capture computation, and 80-digit Gram cross-check. |
 | ARCHIMEDEAN.PI.CONFORMITY.01 | WEIL_POSITIVITY_WINDOWS | `experiments/tfpt-discovery/archimedean_pi_conformity_probe.py` | Typed archimedean decomposition, exact log-pi derivative, scramble and digit-null controls. |
 | CENSUS.QSM.NORMFLOW.01 | ADELIC_GROUPOID_CONNES | `experiments/tfpt-discovery/census_qsm_normflow_probe.py` | Exact Gaussian HNF coefficients, norm-flow semigroup action, finite KMS harness, and Hecke homogeneity obstruction. |
 | CHIRAL4D.MIRROR.DET16.01 | OTHER | `experiments/tfpt-discovery/det16_plaquette_twin_probe.py` | Neutral one-particle/one-hole DET16 plaquette builder. |
@@ -1498,6 +1503,7 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 | PRIME.RDAGGER.PROGRAM_EVOLUTION.01 | LEAN_FORMALIZATION | `experiments/tfpt-discovery/evolve/evolve_props.py` | Program log, exact selected-margin evaluator, arch-rate fitness, Jackson type-check, and deterministic budget kill switch. |
 | SPECTATOR.OBSTRUCTION.01 | OTHER | `experiments/tfpt-discovery/spectator_sector_obstruction_probe.py` | Krylov spectator_dim and commutant separator for strip models. |
 | SPECTATOR.OBSTRUCTION.01 | OTHER | `experiments/tfpt-discovery/spectator_sector_obstruction_result.json` | Chern and spectator_dim tables for B versus B⊕C. |
+| T49-correction-2026-09-05 | LATTICE_E8_HECKE | `experiments/tfpt-discovery/rankin_positivity_miniature_probe.py` | Finite f8 and Delta identities plus corrected symmetric-square Euler-factor checks. |
 | TELB.BOUND.A.01 | OTHER | `experiments/tfpt-discovery/mmst_telb_bound_a_probe.py` | All-m TV Fourier tail and four-fold-cover remainder evaluator. |
 | TELB.BOUND.A.01 | OTHER | `experiments/tfpt-discovery/mmst_telb_bound_a_result.json` | Measured K3_TV and jump-removal residuals. |
 | TELB.BOUND.B.01 | OTHER | `experiments/tfpt-discovery/mmst_telb_bound_b_probe.py` | Exact saw/Hardy split and position-space s_N closed form. |
@@ -1834,4 +1840,5 @@ Records: **2035** (fragments overlay: 1060; needs_review: 975; violations: 0).
 | notes DLXXIX-DXCVII | OTHER | `experiments/next.txt` | Newest-at-bottom campaign log. |
 | phase2 | TOEPLITZ_MOMENT_POSITIVITY | `verification/v563_paper2_readouts.py` | von_mangoldt_table, build_window, reference-window polarisation identities. |
 | port lane | TOEPLITZ_MOMENT_POSITIVITY | `verification/v881_carleson_port_geometry.py` | CD Pick scalarization, Carleson testing functional, Haynsworth port Schur, IIKS generators. |
+| v1021 | EXPLICIT_FORMULA_IDENTITY | `verification/v1021_all_place_tate_rank_audit.py` | Exact Tate projector, bad-place scalar factor, pole ward, abstract rank-nullity lemma with an external-premise fence, and sparse mean-to-pointwise counterexample. |
 

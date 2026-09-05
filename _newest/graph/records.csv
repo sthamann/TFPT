@@ -634,11 +634,11 @@ experiments/tfpt-discovery/extraction_joint_probe.py,experiments/tfpt-discovery/
 rh/problem/extraction_joint.pdf,rh/problem/extraction_joint.pdf,r473,DOCUMENTATION,SCREW_SUBORDINATION_LSTAR,SEALED,NO_BRIDGE,IDENTITY_SIDE,false,0.495
 rh/problem/extraction_joint.tex,rh/problem/extraction_joint.tex,r473,REDUCTION,SCREW_SUBORDINATION_LSTAR,SEALED,NO_BRIDGE,IDENTITY_SIDE,false,1.035
 rh/problem/verify_extraction_joint.py,rh/problem/verify_extraction_joint.py,r473 companion/r638L,CONTROL,SCREW_SUBORDINATION_LSTAR,SEALED,NO_BRIDGE,INFRASTRUCTURE,false,0.855
-rh/catalog/map/make_seeds.py,rh/catalog/map/make_seeds.py,r473-r475,TOOLING,WEIL_POSITIVITY_WINDOWS,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,true,0.378
 experiments/tfpt-discovery/modulus_upgrade_probe.py,experiments/tfpt-discovery/modulus_upgrade_probe.py,r474,ATTACK,WEIL_POSITIVITY_WINDOWS,INCONCLUSIVE,UNCONVERGED,LOAD_BEARING_OPEN,false,1.196
 rh/problem/modulus_upgrade.pdf,rh/problem/modulus_upgrade.pdf,r474,DOCUMENTATION,WEIL_POSITIVITY_WINDOWS,INCONCLUSIVE,LOSSY_CONSTANT,FINITE_FRAGMENT,false,0.44
 rh/problem/modulus_upgrade.tex,rh/problem/modulus_upgrade.tex,r474,ATTACK,WEIL_POSITIVITY_WINDOWS,INCONCLUSIVE,LOSSY_CONSTANT,FINITE_FRAGMENT,false,1.04
 rh/problem/verify_modulus_upgrade.py,rh/problem/verify_modulus_upgrade.py,r474 companion,CONTROL,WEIL_POSITIVITY_WINDOWS,INCONCLUSIVE,LOSSY_CONSTANT,INFRASTRUCTURE,false,0.76
+rh/catalog/map/make_seeds.py,rh/catalog/map/make_seeds.py,r475,TOOLING,WEIL_POSITIVITY_WINDOWS,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,true,0.378
 rh/problem/arch_rate.pdf,rh/problem/arch_rate.pdf,r475,DOCUMENTATION,EXPLICIT_FORMULA_IDENTITY,PROVED,NO_BRIDGE,IDENTITY_SIDE,false,1.21
 rh/problem/arch_rate.tex,rh/problem/arch_rate.tex,r475,FOUNDATION,EXPLICIT_FORMULA_IDENTITY,PROVED,NO_BRIDGE,IDENTITY_SIDE,false,2.42
 rh/problem/verify_arch_rate.py,rh/problem/verify_arch_rate.py,r475 companion/r638L,CONTROL,EXPLICIT_FORMULA_IDENTITY,PROVED,NO_BRIDGE,INFRASTRUCTURE,false,2.09
@@ -1429,7 +1429,6 @@ experiments/tfpt-discovery/rank3_lockgram_probe.py,experiments/tfpt-discovery/ra
 experiments/tfpt-discovery/rank3_transverse_deck_probe.py,experiments/tfpt-discovery/rank3_transverse_deck_probe.py,,ATTACK,EXPLICIT_FORMULA_IDENTITY,OPEN,NOT_APPLICABLE,IDENTITY_SIDE,true,0.9828
 experiments/tfpt-discovery/rank3_uniformity_probe.py,experiments/tfpt-discovery/rank3_uniformity_probe.py,,ATTACK,WEIL_POSITIVITY_WINDOWS,OPEN,NOT_APPLICABLE,FINITE_FRAGMENT,true,0.9828
 experiments/tfpt-discovery/rank3_zeroside_probe.py,experiments/tfpt-discovery/rank3_zeroside_probe.py,,ATTACK,EXPLICIT_FORMULA_IDENTITY,MEASURED,NOT_APPLICABLE,IDENTITY_SIDE,true,1.1232
-experiments/tfpt-discovery/rankin_positivity_miniature_probe.py,experiments/tfpt-discovery/rankin_positivity_miniature_probe.py,,ATTACK,WEIL_POSITIVITY_WINDOWS,OPEN,NOT_APPLICABLE,FINITE_FRAGMENT,true,0.9828
 experiments/tfpt-discovery/rankin_selberg_functor_probe.py,experiments/tfpt-discovery/rankin_selberg_functor_probe.py,,ATTACK,SIEVE_FACTORING_GEOMETRY,OPEN,NOT_APPLICABLE,UNRELATED,true,0.9828
 experiments/tfpt-discovery/ratio_certificate_probe.py,experiments/tfpt-discovery/ratio_certificate_probe.py,,ATTACK,WEIL_POSITIVITY_WINDOWS,CERTIFIED,NOT_APPLICABLE,FINITE_FRAGMENT,true,1.872
 experiments/tfpt-discovery/ratio_euler_projection_probe.py,experiments/tfpt-discovery/ratio_euler_projection_probe.py,,ATTACK,WEIL_POSITIVITY_WINDOWS,MEASURED,NOT_APPLICABLE,FINITE_FRAGMENT,true,1.1232
@@ -1673,6 +1672,9 @@ rh/verification/make_inventory.py,rh/verification/make_inventory.py,,TOOLING,CER
 rh/verification/run_rh.py,rh/verification/run_rh.py,,TOOLING,CERTIFICATE_INFRASTRUCTURE,SEALED,NOT_APPLICABLE,INFRASTRUCTURE,false,0.45
 tfpt_prime_front.tex,tfpt_prime_front.tex,-,DOCUMENTATION,OTHER,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,false,0.5775
 verification/status_ledger.csv,verification/status_ledger.csv,-,TOOLING,CERTIFICATE_INFRASTRUCTURE,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,false,0.525
+rh/catalog/analysis/all_place_tate_audit.md,rh/catalog/analysis/all_place_tate_audit.md,2026-09-05-all-place-audit,DOCUMENTATION,ARAKELOV_HODGE_INTERSECTION,RESTATED,NO_BRIDGE,LOAD_BEARING_OPEN,false,0.3479
+experiments/tfpt-discovery/heat_gabor_restatement_probe.py,experiments/tfpt-discovery/heat_gabor_restatement_probe.py,2026-09-05-external-heat-A,ATTACK,WEIL_POSITIVITY_WINDOWS,RESTATED,RESTATEMENT,EQUIVALENCE,false,0.715
+experiments/tfpt-discovery/nb_dyadic_capture_probe.py,experiments/tfpt-discovery/nb_dyadic_capture_probe.py,2026-09-05-external-nb-B,ATTACK,OPERATOR_SPECTRAL,MEASURED,NOT_APPLICABLE,EQUIVALENCE,false,1.56
 experiments/tfpt-discovery/archimedean_pi_conformity_probe.py,experiments/tfpt-discovery/archimedean_pi_conformity_probe.py,ARCHIMEDEAN.PI.CONFORMITY.01,CONTROL,WEIL_POSITIVITY_WINDOWS,MEASURED,NOT_APPLICABLE,FINITE_FRAGMENT,false,1.14
 experiments/tfpt-discovery/census_qsm_normflow_probe.py,experiments/tfpt-discovery/census_qsm_normflow_probe.py,CENSUS.QSM.NORMFLOW.01,ATTACK,ADELIC_GROUPOID_CONNES,CERTIFIED,NOT_APPLICABLE,IDENTITY_SIDE,false,2.6
 experiments/tfpt-discovery/det16_plaquette_twin_probe.py,experiments/tfpt-discovery/det16_plaquette_twin_probe.py,CHIRAL4D.MIRROR.DET16.01,CONTROL,OTHER,MEASURED,NOT_APPLICABLE,UNRELATED,false,1.14
@@ -1698,6 +1700,7 @@ experiments/tfpt-discovery/positive_cone_blindness_probe.py,experiments/tfpt-dis
 experiments/tfpt-discovery/evolve/evolve_props.py,experiments/tfpt-discovery/evolve/evolve_props.py,PRIME.RDAGGER.PROGRAM_EVOLUTION.01,TOOLING,LEAN_FORMALIZATION,INCONCLUSIVE,NO_BRIDGE,LOAD_BEARING_OPEN,false,0.46
 experiments/tfpt-discovery/spectator_sector_obstruction_probe.py,experiments/tfpt-discovery/spectator_sector_obstruction_probe.py,SPECTATOR.OBSTRUCTION.01,CONTROL,OTHER,MEASURED,NOT_APPLICABLE,UNRELATED,false,1.14
 experiments/tfpt-discovery/spectator_sector_obstruction_result.json,experiments/tfpt-discovery/spectator_sector_obstruction_result.json,SPECTATOR.OBSTRUCTION.01,CONTROL,OTHER,MEASURED,NOT_APPLICABLE,UNRELATED,false,1.14
+experiments/tfpt-discovery/rankin_positivity_miniature_probe.py,experiments/tfpt-discovery/rankin_positivity_miniature_probe.py,T49-correction-2026-09-05,ATTACK,LATTICE_E8_HECKE,KILLED,ORACLE_LEAK,FINITE_FRAGMENT,false,2.08
 experiments/tfpt-discovery/mmst_telb_bound_a_probe.py,experiments/tfpt-discovery/mmst_telb_bound_a_probe.py,TELB.BOUND.A.01,CERTIFICATE,OTHER,MEASURED,NUMERIC_ARTIFACT,UNRELATED,false,1.68
 experiments/tfpt-discovery/mmst_telb_bound_a_result.json,experiments/tfpt-discovery/mmst_telb_bound_a_result.json,TELB.BOUND.A.01,CERTIFICATE,OTHER,MEASURED,NUMERIC_ARTIFACT,UNRELATED,false,1.68
 experiments/tfpt-discovery/mmst_telb_bound_b_probe.py,experiments/tfpt-discovery/mmst_telb_bound_b_probe.py,TELB.BOUND.B.01,CERTIFICATE,OTHER,INCONCLUSIVE,LOSSY_CONSTANT,UNRELATED,false,1.12
@@ -2034,3 +2037,4 @@ verification/v818_sector_floor_attack.py,verification/v818_sector_floor_attack.p
 experiments/next.txt,experiments/next.txt,notes DLXXIX-DXCVII,DOCUMENTATION,OTHER,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,false,0.5775
 verification/v563_paper2_readouts.py,verification/v563_paper2_readouts.py,phase2,FOUNDATION,TOEPLITZ_MOMENT_POSITIVITY,OPEN,NOT_APPLICABLE,INFRASTRUCTURE,false,1.155
 verification/v881_carleson_port_geometry.py,verification/v881_carleson_port_geometry.py,port lane,REDUCTION,TOEPLITZ_MOMENT_POSITIVITY,CERTIFIED,STRUCTURAL_MISMATCH,EQUIVALENCE,false,2.3
+verification/v1021_all_place_tate_rank_audit.py,verification/v1021_all_place_tate_rank_audit.py,v1021,FOUNDATION,EXPLICIT_FORMULA_IDENTITY,PROVED,NOT_APPLICABLE,IDENTITY_SIDE,false,2.42

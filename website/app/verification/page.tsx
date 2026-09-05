@@ -236,10 +236,10 @@ export default function VerificationPage() {
             derivation from pure numbers. The graph below shows exactly how each
             result is computed, on which inputs it depends, and which scripts
             check it — including the self-consistency loop that fixes the inputs
-            themselves. Every script is{" "}
+            themselves. Browser-compatible scripts are{" "}
             <span className="font-semibold text-slate-100">runnable live in your browser</span>{" "}
-            — click one to execute the real Python (via Pyodide / WebAssembly)
-            and watch the checks pass, step by step.
+            via Pyodide / WebAssembly. Native interval certificates instead show
+            the pinned local reproduction command.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
@@ -461,7 +461,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="The journey & what remains"
             title="From two axioms to one geometric premise"
-            description={`The verification suite grew in phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the reductions and external cross-checks, the AQFT closure, the icosahedral capstone, the seam-equivalence closing arc and the certification round (${SCRIPT_TOTAL} scripts today). The closure arc drives the whole remaining structural question down, step by machine-checked step, to a target pinned at every computable level — closed modulo a cited published theorem (MMST/Adamo), not solved. Both views below are live HTML, not images: every script chip runs the real Python in your browser.`}
+            description={`The verification suite grew in phases — foundations, the Standard-Model readouts, the seam=horizon geometry, the reductions and external cross-checks, the AQFT closure, the icosahedral capstone, the seam-equivalence arc and the certification round (${SCRIPT_TOTAL} scripts today). The historical closure arc narrows the finite seam/compiler lane; it does not close the physical TOE gates. Round 3 (v1022–v1025) adds narrow certificates and no-gos, while every T1–T8 gate and the shared 3+1D parent remain open. Both views below are live HTML, not images: browser-compatible script chips run in Pyodide, and native-only certificates provide their local command.`}
           />
           <div className="mt-8">
             <SuiteTimeline />
@@ -471,17 +471,20 @@ export default function VerificationPage() {
           </div>
           <WoitBridgeProgress />
           <p className="mt-5 break-words text-sm leading-relaxed text-slate-400">
-            The bedrock is closed modulo cited theorems via the Seam Equivalence Theorem
+            In its historical finite seam/compiler scope, the bedrock is narrowed modulo
+            cited theorems via the Seam Equivalence Theorem
             (<span className="font-mono">SEAM.EQUIV.01</span>) — the raw RP seam IS the holomorphic (E₈)₁
             net at τ=i (its conformal-deck face <span className="font-mono">QGEO.SYM.01</span> is a
             corollary): the target is pinned at every computable level by an explicit lattice model
             (v367/v368) and the S3 closure stack (v376–v379, ground-state witnesses v489/v490), Lean-pinned (FORM.SEAM.MMST.01) to the
-            published MMST/Adamo theorems, leaving [O] = the cited continuum scaling-limit existence only
+            published MMST/Adamo theorems, with the cited continuum scaling-limit existence still [O]
             (v336; extension leg on the peer-reviewed crossed-product package, realisation at invariant
             level, v469; stays [O]). The emergent-QFT layer (<span className="font-mono">v258–v261</span>,
             the Modular Spectral Closure) collapses onto this <em>same</em> bedrock — the boundary QFT is
-            one relative object that adds no new open item — and{" "}
+            one relative object in that scoped lane — and{" "}
             <span className="font-mono">v_geo</span> stays the one no-unit primitive.
+            The strict TOE accounting is separate: v1022–v1025 close only narrow T2/T4/T6–T8
+            subgates; CF, DG, ALG-EXH, every T1–T8 gate and the shared 3+1D parent remain open.
           </p>
           <GravityEmergence />
           <ThermalSeamLegs />
@@ -500,7 +503,7 @@ export default function VerificationPage() {
           <SectionHeader
             eyebrow="The dependency graph"
             title="How each result is computed"
-            description="Two axioms at the source, the E₈ compiler in the middle, the observables as sinks. Click any node to see what it is, its status marker, its inputs and outputs, how it can fail, and the scripts that machine-check it — then click a script to run it live in your browser. The dashed rose edges are the bootstrap: the E₈ closure feeds back and fixes the inputs."
+            description="Two axioms at the source, the E₈ compiler in the middle, the observables as sinks. Click any node to see what it is, its status marker, its inputs and outputs, how it can fail, and the scripts that machine-check it — then click a script for its reproduction path. Browser-compatible scripts run live; native-only certificates show the pinned local command. The dashed rose edges are the bootstrap: the E₈ closure feeds back and fixes the inputs."
           />
           <div className="mt-10">
             <VerificationDag />

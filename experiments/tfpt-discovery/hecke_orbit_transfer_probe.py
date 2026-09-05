@@ -89,6 +89,22 @@ VALUE SENTENCE: this probe realises census L-functions as
 Euler-factorised Fredholm / resolvent data of a compiler-native
 infinite-dimensional path-space operator; it is NOT an RH statement.
 """
+
+# CORRECTION OF RECORD (All-place Tate audit, 2026-09-05)
+# The historical docstring above is retained.  T49 did not establish
+# that a unique zero-side FAMILY role was vacant: its claimed
+# mean-to-pointwise Rankin exponent extraction is false.  The Hecke-word
+# path space below remains a valid infinite-dimensional arithmetic
+# carrier candidate, but it supplies neither a uniquely missing RH
+# family nor an independently positive all-place Weil pairing.
+# A second historical phrase is also narrowed: the path-space vacuum
+# resolvent reproduces Dirichlet coefficients, while the Euler factors
+# come from separate classical one-dimensional Satake determinants.
+# Every raw finite path-space shift determinant checked below is 1; no
+# path-space Fredholm determinant for L(s) is constructed.  A genuine
+# nuclear/Ruelle operator with the desired Fredholm determinant is open.
+# Canonical correction: verification/v1021_all_place_tate_rank_audit.py.
+# NO RH CLAIM.
 from __future__ import annotations
 
 import math
@@ -1072,10 +1088,11 @@ info(f"T2 no-collapse + H: {t2_ok}")
 info(f"T3 FE consistency: {fe_ok and lam_ok}")
 info(f"K1 fired: {k1}; K2 fired: {k2}")
 info(
-    "Family / trace-formula reframe: T49's vacant FAMILY-over-Z cell is "
-    "occupied here as the PATH space of Hecke words (monoid N), not as "
-    "a Frobenius family of varieties.  The transfer / resolvent supplies "
-    "the infinite-dimensional carrier with full prime dependence; L-values "
+    "Family / trace-formula reframe, corrected 2026-09-05: the PATH space "
+    "of Hecke words (monoid N) remains an infinite-dimensional arithmetic "
+    "carrier candidate, but it does not occupy a uniquely missing RH-family "
+    "role and supplies no positive all-place Weil pairing.  Its resolvent "
+    "retains full prime dependence; L-values "
     "sit in the Euler-factorised local determinants (classical Satake), "
     "while the global path-space matrix det is the wrong Fredholm object. "
     "Next lever: a genuine nuclear / Ruelle operator on a Banach completion "

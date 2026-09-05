@@ -52,6 +52,7 @@ export type PrimeFrontVerdict =
   | "SCALE-TORSOR"
   | "FAMILY-AGGREGATED"
   | "MINIATURE-RUNS"
+  | "RANKIN-EXPONENT-DROP-FALSIFIED"
   | "INFINITE-CARRIER"
   | "MARGINAL-WEIGHT"
   | "PACKED"
@@ -304,6 +305,25 @@ export type PrimeFrontUpdate = {
  * Newest first. Future agent runs: prepend here.
  */
 export const PRIME_FRONT_UPDATES: readonly PrimeFrontUpdate[] = [
+  {
+    date: "2026-09-05",
+    part: 49,
+    title:
+      "Correction of record for T49 — the finite Rankin identities survive, but the claimed mean-to-pointwise exponent drop is false",
+    headline:
+      "T49 corrected append-only: finite identities survive; the Rankin exponent extraction and sole-vacant-family story do not.",
+    keyFacts: [
+      "v1021_all_place_tate_rank_audit.py passes 23/23 exact symbolic checks: the Tate projector and local factorization are exact; conditional on the external strict-window premise, one fixed finite carrier cannot encode the full window form as an exact linear pullback",
+      "The exact sparse sequence b_n = 4n^3 + 1_{n=32^m} n^(18/5) keeps partial sums O(X^4) and the simple pole at s=4, yet violates the claimed n^(31/10) pointwise exponent",
+      "The finite Hecke, Jacobi and Rankin–Selberg identities survive; the corrected symmetric-square prime coefficient is a_p^2 - p^3, and sharp coefficient bounds remain external",
+      "The all-place intersection identity and an independent absolute Hodge-index theorem remain open. No RH claim.",
+    ],
+    verdict: "RANKIN-EXPONENT-DROP-FALSIFIED",
+    summary:
+      "Correction of record: T49's finite identities remain useful, but mean growth plus a pole does not imply the claimed pointwise exponent, and a same-window maximum fit cannot repair that gap. The historical 2026-07-25 snapshot remains archived verbatim and is superseded by v1021; no RH bridge is obtained.",
+    badge: "machine-verified",
+    script: "v1021_all_place_tate_rank_audit.py",
+  },
   {
     date: "2026-09-02",
     part: 0,

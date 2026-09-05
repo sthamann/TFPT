@@ -1,6 +1,6 @@
 {
   "claim_boundary": "Typed research documentation only. No claim for or against RH.",
-  "generated_at": "2026-09-04T17:08:27+00:00",
+  "generated_at": "2026-09-05T06:25:33+00:00",
   "nodes": [
     {
       "id": "4d-lattice-contract",
@@ -19,6 +19,29 @@
       "tags": [
         "lattice",
         "dynamics"
+      ],
+      "attempt_count": 0,
+      "alive": false
+    },
+    {
+      "id": "absolute-twistor-line",
+      "type": "GEOMETRY",
+      "name": "Absolute twistor line",
+      "aliases": [
+        "absolute curve with twistor infinity",
+        "compactified Spec Z twistor line"
+      ],
+      "definition": "The Connes--Consani preprint's absolute curve candidate joining finite prime places to an archimedean F_1^2 twistor component; no required global intersection pairing or Hodge-index theorem is supplied.",
+      "status": "CONJECTURAL",
+      "sources": [
+        "arXiv:2609.00299",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "absolute-geometry",
+        "twistor",
+        "preprint",
+        "all-place"
       ],
       "attempt_count": 0,
       "alive": false
@@ -77,6 +100,28 @@
       "tags": [
         "os",
         "measure"
+      ],
+      "attempt_count": 0,
+      "alive": false
+    },
+    {
+      "id": "all-place-tate-weil-realization",
+      "type": "OPEN_QUESTION",
+      "name": "All-place Tate--Weil realization",
+      "aliases": [
+        "Tate-Weil realization theorem",
+        "all-place correspondence compiler"
+      ],
+      "definition": "Construct a zero-independent infinite-dimensional or compatible direct-limit family of arithmetic correspondences whose complete finite, archimedean and pole intersection pairing is exactly the polarized Weil form.",
+      "status": "OPEN",
+      "sources": [
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "all-place",
+        "tate",
+        "arakelov",
+        "open"
       ],
       "attempt_count": 0,
       "alive": false
@@ -145,7 +190,7 @@
       "definition": "Nonnegativity of the full Weil form: the archimedean-plus-pole contribution dominates the prime contribution for every admissible test function; equivalent to RH on the full class.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9",
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
         "rh/paper/rh_program.tex:733-791"
       ],
       "tags": [
@@ -169,7 +214,7 @@
       "status": "CLASSICAL",
       "sources": [
         "Tate, Thesis, 1950",
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "adelic",
@@ -254,6 +299,28 @@
       ],
       "attempt_count": 2,
       "alive": true
+    },
+    {
+      "id": "baez-duarte-rate-conjecture",
+      "type": "OPEN_QUESTION",
+      "name": "Báez-Duarte rate conjecture",
+      "aliases": [
+        "E_N asymptotic",
+        "C_BD over log N"
+      ],
+      "definition": "The expected asymptotic E_N sim C/log N, with C given by the multiplicity-weighted zero sum and by 2+gamma-log(4pi) under RH and simple zeros.",
+      "status": "CONJECTURAL",
+      "sources": [
+        "Bettin-Conrey-Farmer, Proc. Steklov Inst. Math. 280 (2013), S30-S36",
+        "Burnol, Advances in Mathematics 170 (2002)"
+      ],
+      "tags": [
+        "nyman-beurling",
+        "baez-duarte",
+        "rate"
+      ],
+      "attempt_count": 0,
+      "alive": false
     },
     {
       "id": "barrier-arch-compensation",
@@ -685,6 +752,27 @@
       ],
       "attempt_count": 0,
       "alive": false
+    },
+    {
+      "id": "burnol-lower-bound",
+      "type": "THEOREM",
+      "name": "Burnol lower bound",
+      "aliases": [
+        "Burnol NB lower bound",
+        "multiplicity-squared NB bound"
+      ],
+      "definition": "Unconditionally, liminf E_N log N is at least the sum of m(rho)^2/|rho|^2 over distinct zeta zeros on the critical line.",
+      "status": "CLASSICAL",
+      "sources": [
+        "Burnol, Advances in Mathematics 170 (2002), 56-70, DOI:10.1006/aima.2001.2066"
+      ],
+      "tags": [
+        "nyman-beurling",
+        "lower-bound",
+        "zeros"
+      ],
+      "attempt_count": 0,
+      "alive": true
     },
     {
       "id": "canonical-system-hamiltonian",
@@ -1348,6 +1436,29 @@
       "alive": false
     },
     {
+      "id": "dyadic-block-capture-eta",
+      "type": "OPEN_QUESTION",
+      "name": "Dyadic block capture eta",
+      "aliases": [
+        "eta_k capture conjecture",
+        "binary NB block capture"
+      ],
+      "definition": "Whether the residualized span of u_n=2r_2n-r_n for N/2<n<=N captures eta_k at least c/k of the Nyman-Beurling residual for one c>0.",
+      "status": "OPEN",
+      "sources": [
+        "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+        "rh/catalog/analysis/external_proposals_heat_nb.md"
+      ],
+      "tags": [
+        "nyman-beurling",
+        "dyadic",
+        "schur-complement",
+        "positive-geometry"
+      ],
+      "attempt_count": 1,
+      "alive": true
+    },
+    {
       "id": "dyson-fourier-quasicrystal-criterion",
       "type": "THEOREM",
       "name": "Renormalized Dyson Fourier-quasicrystal criterion",
@@ -1696,7 +1807,7 @@
       "definition": "A distributional identity relating sums over zeta zeros to prime-power and archimedean terms.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "rh-core"
@@ -1800,7 +1911,7 @@
       "status": "CLASSICAL",
       "sources": [
         "Guinand, Proc. London Math. Soc. 50 (1948)",
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "explicit-formula",
@@ -1870,6 +1981,29 @@
         "finite"
       ],
       "attempt_count": 9,
+      "alive": true
+    },
+    {
+      "id": "fixed-finite-carrier-rank-obstruction",
+      "type": "BARRIER",
+      "name": "Fixed finite-carrier rank-nullity lemma",
+      "aliases": [
+        "finite carrier no-go",
+        "finite-rank pullback obstruction"
+      ],
+      "definition": "A linear map from a source with dimension larger than one fixed finite carrier has a kernel; the exact pullback of any bilinear carrier form vanishes on that kernel.",
+      "status": "PROVED_HERE",
+      "sources": [
+        "verification/v1021_all_place_tate_rank_audit.py",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "rank",
+        "barrier",
+        "finite",
+        "linear"
+      ],
+      "attempt_count": 1,
       "alive": true
     },
     {
@@ -2069,6 +2203,29 @@
         "tfpt"
       ],
       "attempt_count": 9,
+      "alive": true
+    },
+    {
+      "id": "gaussian-smoothed-zero-density",
+      "type": "OBJECT",
+      "name": "Gaussian-smoothed transformed zero density",
+      "aliases": [
+        "heat-normalized Gabor zero density",
+        "H(a,omega)"
+      ],
+      "definition": "The distribution pi sqrt(2pi) times the heat-kernel convolution of the real part of the transformed zeta-zero measure.",
+      "status": "CLASSICAL",
+      "sources": [
+        "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+        "rh/lean/RH/GaborCountableCriterion.lean"
+      ],
+      "tags": [
+        "weil",
+        "gabor",
+        "heat-kernel",
+        "explicit-formula"
+      ],
+      "attempt_count": 1,
       "alive": true
     },
     {
@@ -3217,6 +3374,29 @@
       "alive": true
     },
     {
+      "id": "negative-explosion-criterion-a",
+      "type": "CRITERION",
+      "name": "Negative-explosion criterion A",
+      "aliases": [
+        "dyadic heat-grid lower bound",
+        "criterion A"
+      ],
+      "definition": "A dyadic-grid lower bound on the heat-normalized Gabor zero side whose violation under an off-line exposed orbit grows like exp(sigma^2/(2a)).",
+      "status": "PROVED_HERE",
+      "sources": [
+        "rh/lean/RH/GaborExposedOrbit.lean",
+        "experiments/tfpt-discovery/heat_gabor_restatement_probe.py"
+      ],
+      "tags": [
+        "weil",
+        "gabor",
+        "equivalent-strength",
+        "restatement"
+      ],
+      "attempt_count": 1,
+      "alive": true
+    },
+    {
       "id": "newman-criterion",
       "type": "CRITERION",
       "name": "Newman heat-flow criterion",
@@ -3405,8 +3585,8 @@
       "tags": [
         "open"
       ],
-      "attempt_count": 0,
-      "alive": false
+      "attempt_count": 1,
+      "alive": true
     },
     {
       "id": "open-half-density-geometry",
@@ -3592,6 +3772,29 @@
       "tags": [
         "perron",
         "transport"
+      ],
+      "attempt_count": 0,
+      "alive": false
+    },
+    {
+      "id": "petz-watatani-tate-network",
+      "type": "OPEN_QUESTION",
+      "name": "Petz--Watatani--Tate network",
+      "aliases": [
+        "all-place UCP Tate network",
+        "compatible conditional-expectation network"
+      ],
+      "definition": "Can compatible Hecke-equivariant conditional expectations converge normally to an infinite all-place carrier whose pullback is the complete signed Weil form rather than a finite positive proxy?",
+      "status": "OPEN",
+      "sources": [
+        "rh/catalog/analysis/all_place_tate_audit.md",
+        "verification/v801_prime_cp_intertwiner.py"
+      ],
+      "tags": [
+        "quantum",
+        "ucp",
+        "all-place",
+        "open"
       ],
       "attempt_count": 0,
       "alive": false
@@ -4044,6 +4247,29 @@
       "alive": true
     },
     {
+      "id": "rankin-mean-pointwise-exponent-drop",
+      "type": "BARRIER",
+      "name": "Rankin mean-to-pointwise exponent drop",
+      "aliases": [
+        "q to q-1+epsilon inference",
+        "T49 exponent drop"
+      ],
+      "definition": "The inference A(X)=O(X^q) with nonnegative coefficients implies b_n=O(n^(q-1+epsilon)) is false; a sparse exact counterexample preserves both the leading mean and pole.",
+      "status": "KILLED_HERE",
+      "sources": [
+        "verification/v1021_all_place_tate_rank_audit.py",
+        "DOI:10.1017/S0305004100021101",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "rankin",
+        "counterexample",
+        "killed"
+      ],
+      "attempt_count": 1,
+      "alive": true
+    },
+    {
       "id": "rankin-selberg-norm-square",
       "type": "METHOD",
       "name": "Rankin–Selberg norm-square",
@@ -4167,7 +4393,7 @@
       "definition": "RH is equivalent to Bochner positivity of the Weil kernel, to OS reflection positivity of the Wick-rotated kernel under the functional-equation reflection, and to Hilbert–Pólya.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9",
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
         "Widder, The Laplace Transform; Bernstein theorem",
         "Osterwalder–Schrader, Comm. Math. Phys. 31 (1973)"
       ],
@@ -4826,6 +5052,29 @@
       "alive": false
     },
     {
+      "id": "strict-weil-window-floor-zhu",
+      "type": "CRITERION",
+      "name": "Zhu v2 strict Weil-window floor (external)",
+      "aliases": [
+        "external strict-window premise",
+        "Zhu compact-window floor"
+      ],
+      "definition": "An external v2 preprint reports a certified positive lower bound for the Weil form on a compact window. The repository does not re-prove or independently certify this premise.",
+      "status": "CONJECTURAL",
+      "sources": [
+        "arXiv:2608.24827v2",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "external",
+        "preprint",
+        "weil",
+        "window"
+      ],
+      "attempt_count": 0,
+      "alive": false
+    },
+    {
       "id": "suzuki-screw-canonical-systems",
       "type": "CLASS",
       "name": "Suzuki screw functions / canonical systems",
@@ -4847,6 +5096,50 @@
         "screw"
       ],
       "attempt_count": 2,
+      "alive": true
+    },
+    {
+      "id": "tate-information-loss",
+      "type": "BARRIER",
+      "name": "Tate projection information loss",
+      "aliases": [
+        "Tate information loss",
+        "universal scalar-line barrier"
+      ],
+      "definition": "The scalar Q(0) image contains no level, Hecke, Calabi-Yau or E8/H8 data. Projective representation data surviving in End(V) lie in Ad0(V), while scalar-twist, sign and realization data may be lost altogether.",
+      "status": "PROVED_HERE",
+      "sources": [
+        "verification/v1021_all_place_tate_rank_audit.py",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "tate",
+        "barrier",
+        "positivity"
+      ],
+      "attempt_count": 1,
+      "alive": true
+    },
+    {
+      "id": "tate-trace-projector",
+      "type": "THEOREM",
+      "name": "Scalar Tate trace projector",
+      "aliases": [
+        "Tate projector",
+        "End(V) scalar projector"
+      ],
+      "definition": "For a two-dimensional representation V, e_T(A)=Tr(A)I/2 is an equivariant self-adjoint idempotent whose image is the scalar Tate line Q(0).",
+      "status": "PROVED_HERE",
+      "sources": [
+        "verification/v1021_all_place_tate_rank_audit.py",
+        "rh/catalog/analysis/all_place_tate_audit.md"
+      ],
+      "tags": [
+        "tate",
+        "calabi-yau",
+        "exact"
+      ],
+      "attempt_count": 1,
       "alive": true
     },
     {
@@ -5043,6 +5336,28 @@
       "alive": false
     },
     {
+      "id": "vasyunin-gram-matrix",
+      "type": "OBJECT",
+      "name": "Vasyunin Nyman-Beurling Gram matrix",
+      "aliases": [
+        "Vasyunin cotangent Gram",
+        "NB Gram matrix"
+      ],
+      "definition": "The explicit Gram matrix of fractional-part dilations, expressible through periodic digamma sums or Vasyunin cotangent sums.",
+      "status": "CLASSICAL",
+      "sources": [
+        "Vasyunin, Algebra i Analiz 7 (1995), 118-135",
+        "Landreau-Richard, Experimental Mathematics 11 (2002), 349-360"
+      ],
+      "tags": [
+        "nyman-beurling",
+        "gram-matrix",
+        "cotangent-sum"
+      ],
+      "attempt_count": 0,
+      "alive": false
+    },
+    {
       "id": "verified-zeros-height",
       "type": "INVARIANT",
       "name": "Rigorous verified-zero height",
@@ -5222,7 +5537,7 @@
       "definition": "The gamma-factor contribution to the Weil explicit-formula quadratic form.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "weil"
@@ -5259,7 +5574,7 @@
       "definition": "The contribution of the pole and trivial normalization terms in the Weil form.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "weil"
@@ -5278,7 +5593,7 @@
       "definition": "Nonnegativity of the Weil quadratic form on the full admissible test class.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "rh-equivalent",
@@ -5298,7 +5613,7 @@
       "definition": "The prime-power contribution, weighted by the von Mangoldt function, in the Weil form.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "weil"
@@ -5318,12 +5633,12 @@
       "definition": "The explicit-formula quadratic functional whose positivity on the admissible test class is equivalent to RH.",
       "status": "CLASSICAL",
       "sources": [
-        "Weil, Acta Math. 76 (1952), pp. 1–9"
+        "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
       ],
       "tags": [
         "weil"
       ],
-      "attempt_count": 8,
+      "attempt_count": 9,
       "alive": true
     },
     {
@@ -5399,6 +5714,22 @@
       "note": ""
     },
     {
+      "src": "absolute-twistor-line",
+      "dst": "arithmetic-geometry",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "arXiv:2609.00299",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "absolute-twistor-line",
+      "dst": "all-place-tate-weil-realization",
+      "rel": "REQUIRES",
+      "strength": "HEURISTIC",
+      "source": "arXiv:2609.00299; rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "To serve as an RH route, this candidate carrier still needs the square, correspondence compiler and intersection theorem."
+    },
+    {
       "src": "additive-adeles",
       "dst": "fourier-transform",
       "rel": "DUAL_TO",
@@ -5453,6 +5784,54 @@
       "strength": "HEURISTIC",
       "source": "origin_theory.tex:1813-1818",
       "note": "Ontology classification."
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "fixed-finite-carrier-rank-obstruction",
+      "rel": "BLOCKED_BY",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "For an exact linear pullback on the full strict window, one fixed finite carrier is excluded; nonlinear methods, growing discretizations and direct limits are not."
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "research-question",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "arakelov-intersection",
+      "rel": "REQUIRES",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": ""
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "arithmetic-hodge-index",
+      "rel": "REQUIRES",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The required absolute-square theorem is not supplied by the existing line-bundle theorem."
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "open-global-all-place-intersection",
+      "rel": "REQUIRES",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": ""
+    },
+    {
+      "src": "all-place-tate-weil-realization",
+      "dst": "weil-quadratic-form",
+      "rel": "WOULD_CLOSE",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Exact pullback plus independent Hodge-index positivity would imply Weil positivity."
     },
     {
       "src": "analytic-object",
@@ -5523,7 +5902,7 @@
       "dst": "positivity-criterion",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -5621,6 +6000,22 @@
       "strength": "HEURISTIC",
       "source": "catalog:verification/v667_baez_duarte.py",
       "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
+      "src": "baez-duarte-rate-conjecture",
+      "dst": "baez-duarte-criterion",
+      "rel": "IMPLIES",
+      "strength": "THEOREM",
+      "source": "Báez-Duarte 2003; E_N sim C/log N",
+      "note": "The conjectured positive rate forces E_N to zero."
+    },
+    {
+      "src": "baez-duarte-rate-conjecture",
+      "dst": "research-question",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "Bettin-Conrey-Farmer, Proc. Steklov Inst. Math. 280 (2013), S30-S36",
+      "note": "Ontology classification."
     },
     {
       "src": "barrier-arch-compensation",
@@ -6061,6 +6456,22 @@
       "strength": "CONDITIONAL",
       "source": "Serre, Trees",
       "note": ""
+    },
+    {
+      "src": "burnol-lower-bound",
+      "dst": "analytic-object",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "Burnol, Advances in Mathematics 170 (2002), 56-70, DOI:10.1006/aima.2001.2066",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "burnol-lower-bound",
+      "dst": "baez-duarte-rate-conjecture",
+      "rel": "REQUIRES",
+      "strength": "THEOREM",
+      "source": "Burnol 2002; Bettin-Conrey-Farmer 2013",
+      "note": "Any proposed asymptotic constant must respect Burnol's multiplicity-squared liminf floor."
     },
     {
       "src": "canonical-system-hamiltonian",
@@ -6679,6 +7090,46 @@
       "note": "Ontology classification."
     },
     {
+      "src": "dyadic-block-capture-eta",
+      "dst": "research-question",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "dyadic-block-capture-eta",
+      "dst": "baez-duarte-rate-conjecture",
+      "rel": "REQUIRES",
+      "strength": "CONDITIONAL",
+      "source": "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+      "note": "The block statement is stronger structural information than the bare rate because it specifies where dyadic improvement lies."
+    },
+    {
+      "src": "dyadic-block-capture-eta",
+      "dst": "vasyunin-gram-matrix",
+      "rel": "REQUIRES",
+      "strength": "THEOREM",
+      "source": "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+      "note": "Eta is a residual Schur-complement projection computed from this Gram structure."
+    },
+    {
+      "src": "dyadic-block-capture-eta",
+      "dst": "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+      "rel": "USED_BY",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/external_proposals_heat_nb.md",
+      "note": "Finite ladder through N=512; eta_k>=c/k remains open."
+    },
+    {
+      "src": "dyadic-block-capture-eta",
+      "dst": "riemann-hypothesis",
+      "rel": "WOULD_CLOSE",
+      "strength": "CONDITIONAL",
+      "source": "E_2N <= (1-eta_k)E_N and Báez-Duarte criterion",
+      "note": "A bound eta_k>=c/k implies E_(2^k)->0. The converse is not known, so this is deliberately not typed EQUIVALENT_TO."
+    },
+    {
       "src": "dyson-fourier-quasicrystal-criterion",
       "dst": "weil-positivity",
       "rel": "EQUIVALENT_TO",
@@ -7051,7 +7502,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -7059,7 +7510,7 @@
       "dst": "riemann-zeta",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -7067,7 +7518,7 @@
       "dst": "von-mangoldt",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -7373,6 +7824,30 @@
       "strength": "HEURISTIC",
       "source": "catalog:verification/v861_krein_normalform_lean.py",
       "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "fixed-finite-carrier-rank-obstruction",
+      "dst": "obstruction-class",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "fixed-finite-carrier-rank-obstruction",
+      "dst": "strict-weil-window-floor-zhu",
+      "rel": "REQUIRES",
+      "strength": "CONDITIONAL",
+      "source": "arXiv:2608.24827v2; rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The abstract rank-nullity lemma is internal; its application to the Weil window is conditional on the external preprint floor."
+    },
+    {
+      "src": "fixed-finite-carrier-rank-obstruction",
+      "dst": "verification/v1021_all_place_tate_rank_audit.py",
+      "rel": "USED_BY",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The rank-nullity lemma is exact; the Weil-window application is separately conditional."
     },
     {
       "src": "fourier-quasicrystal-geometry",
@@ -7734,6 +8209,30 @@
       "strength": "HEURISTIC",
       "source": "catalog:experiments/tfpt-discovery/z1_edge_signature_probe.py",
       "note": "Lexical mention in catalog record; outcome=KILLED."
+    },
+    {
+      "src": "gaussian-smoothed-zero-density",
+      "dst": "analytic-object",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "gaussian-smoothed-zero-density",
+      "dst": "weil-quadratic-form",
+      "rel": "TRANSFORM_OF",
+      "strength": "THEOREM",
+      "source": "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "note": "The cross-term-free heat object is an exact linear transform of the pure Gabor Weil form."
+    },
+    {
+      "src": "gaussian-smoothed-zero-density",
+      "dst": "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "rel": "USED_BY",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/external_proposals_heat_nb.md",
+      "note": "Heat-kernel identity and convolution normalization."
     },
     {
       "src": "gorz-theorem",
@@ -9104,6 +9603,38 @@
       "note": "Lexical mention in catalog record; outcome=OPEN."
     },
     {
+      "src": "negative-explosion-criterion-a",
+      "dst": "weil-positivity",
+      "rel": "EQUIVALENT_TO",
+      "strength": "CONDITIONAL",
+      "source": "rh/lean/RH/GaborExposedOrbit.lean; heat_gabor_restatement_probe.py",
+      "note": "Equivalence uses the exposed-orbit assembly and grid-continuity passage; it is a same-hardness restatement."
+    },
+    {
+      "src": "negative-explosion-criterion-a",
+      "dst": "positivity-criterion",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "rh/lean/RH/GaborExposedOrbit.lean",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "negative-explosion-criterion-a",
+      "dst": "gaussian-smoothed-zero-density",
+      "rel": "REQUIRES",
+      "strength": "THEOREM",
+      "source": "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "note": "Criterion A is stated directly on this heat-normalized object."
+    },
+    {
+      "src": "negative-explosion-criterion-a",
+      "dst": "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "rel": "USED_BY",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/external_proposals_heat_nb.md",
+      "note": "Same-hardness restatement; prime budget e^{1/(8a)} vs slack e^{1/sqrt(a)}."
+    },
+    {
       "src": "newman-criterion",
       "dst": "riemann-hypothesis",
       "rel": "EQUIVALENT_TO",
@@ -9286,6 +9817,14 @@
       "strength": "HEURISTIC",
       "source": "rh/catalog/analysis/paths_report.json",
       "note": "Ontology classification."
+    },
+    {
+      "src": "open-global-all-place-intersection",
+      "dst": "rh/catalog/analysis/all_place_tate_audit.md",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
     },
     {
       "src": "open-global-all-place-intersection",
@@ -9646,6 +10185,30 @@
       "strength": "HEURISTIC",
       "source": "origin_theory.tex:669-767",
       "note": "Ontology classification."
+    },
+    {
+      "src": "petz-watatani-tate-network",
+      "dst": "no-archimedean-prime-joint-space",
+      "rel": "BLOCKED_BY",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": ""
+    },
+    {
+      "src": "petz-watatani-tate-network",
+      "dst": "research-question",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "petz-watatani-tate-network",
+      "dst": "all-place-tate-weil-realization",
+      "rel": "REDUCES_TO",
+      "strength": "CONDITIONAL",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The normal compatible limit and signed Weil identification are the same open all-place bridge."
     },
     {
       "src": "pi-numerology-c3",
@@ -10080,6 +10643,22 @@
       "note": "Lexical mention in catalog record; outcome=CERTIFIED."
     },
     {
+      "src": "rankin-mean-pointwise-exponent-drop",
+      "dst": "obstruction-class",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "rankin-mean-pointwise-exponent-drop",
+      "dst": "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py",
+      "rel": "KILLED_BY",
+      "strength": "THEOREM",
+      "source": "verification/v1021_all_place_tate_rank_audit.py",
+      "note": "The historical finite identities survive; the exponent-extraction route does not."
+    },
+    {
       "src": "rankin-selberg-norm-square",
       "dst": "positive-cone-blindness",
       "rel": "BLOCKED_BY",
@@ -10196,7 +10775,7 @@
       "dst": "riemann-hypothesis",
       "rel": "EQUIVALENT_TO",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -10204,7 +10783,7 @@
       "dst": "weil-positivity",
       "rel": "EQUIVALENT_TO",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Bochner positivity of the Weil kernel is Weil positivity."
     },
     {
@@ -10212,7 +10791,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -10220,7 +10799,7 @@
       "dst": "functional-equation",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "The OS reflection is the functional-equation involution."
     },
     {
@@ -10308,7 +10887,7 @@
       "dst": "weil-positivity",
       "rel": "EQUIVALENT_TO",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -10414,6 +10993,14 @@
       "strength": "THEOREM",
       "source": "LMFDB:8.4.a.a; arXiv:math/0504070",
       "note": "The f8 cusp channel is a weight-4 motivic L-function, not Riemann zeta."
+    },
+    {
+      "src": "rigid-calabi-yau-f8",
+      "dst": "tate-trace-projector",
+      "rel": "REQUIRES",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The endomorphism motive contains a canonical scalar Tate summand."
     },
     {
       "src": "rigid-calabi-yau-f8",
@@ -11064,6 +11651,14 @@
       "note": ""
     },
     {
+      "src": "strict-weil-window-floor-zhu",
+      "dst": "positivity-criterion",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "arXiv:2608.24827v2",
+      "note": "Ontology classification."
+    },
+    {
       "src": "suzuki-screw-canonical-systems",
       "dst": "experiments/tfpt-discovery/w1_theorem_probe.py",
       "rel": "USED_BY",
@@ -11078,6 +11673,54 @@
       "strength": "HEURISTIC",
       "source": "catalog:notes/arxiv_w1_note/note_w1_suzuki_identification.tex",
       "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "tate-information-loss",
+      "dst": "obstruction-class",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "tate-information-loss",
+      "dst": "verification/v1021_all_place_tate_rank_audit.py",
+      "rel": "USED_BY",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Exact correction and claim fence."
+    },
+    {
+      "src": "tate-trace-projector",
+      "dst": "tate-information-loss",
+      "rel": "BLOCKED_BY",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The projector is universal and retains no level-8-specific positivity data."
+    },
+    {
+      "src": "tate-trace-projector",
+      "dst": "analytic-object",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "tate-trace-projector",
+      "dst": "riemann-zeta",
+      "rel": "REALIZES",
+      "strength": "THEOREM",
+      "source": "rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "The scalar line contributes one zeta factor, including the inertia-fixed identity at p=2."
+    },
+    {
+      "src": "tate-trace-projector",
+      "dst": "verification/v1021_all_place_tate_rank_audit.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
     },
     {
       "src": "terminal-statement",
@@ -11440,6 +12083,22 @@
       "note": "Ontology classification."
     },
     {
+      "src": "vasyunin-gram-matrix",
+      "dst": "analytic-object",
+      "rel": "INSTANCE_OF",
+      "strength": "HEURISTIC",
+      "source": "Vasyunin, Algebra i Analiz 7 (1995), 118-135",
+      "note": "Ontology classification."
+    },
+    {
+      "src": "vasyunin-gram-matrix",
+      "dst": "nyman-beurling-space",
+      "rel": "REALIZES",
+      "strength": "THEOREM",
+      "source": "Vasyunin 1995; Landreau-Richard 2002",
+      "note": "The matrix records the Hilbert geometry of the fractional-part dilation family."
+    },
+    {
       "src": "verified-zeros-height",
       "dst": "compact-window-certificate-mechanism",
       "rel": "BLOCKED_BY",
@@ -11748,7 +12407,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -11780,7 +12439,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -11828,7 +12487,7 @@
       "dst": "riemann-hypothesis",
       "rel": "EQUIVALENT_TO",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11836,7 +12495,7 @@
       "dst": "positivity-criterion",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -11844,7 +12503,7 @@
       "dst": "weil-quadratic-form",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11908,7 +12567,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -11916,7 +12575,7 @@
       "dst": "von-mangoldt",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11932,7 +12591,7 @@
       "dst": "analytic-object",
       "rel": "INSTANCE_OF",
       "strength": "HEURISTIC",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": "Ontology classification."
     },
     {
@@ -11940,7 +12599,7 @@
       "dst": "explicit-formula",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11948,7 +12607,7 @@
       "dst": "weil-arch-term",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11956,7 +12615,7 @@
       "dst": "weil-pole-term",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -11964,7 +12623,7 @@
       "dst": "weil-prime-term",
       "rel": "REQUIRES",
       "strength": "THEOREM",
-      "source": "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "source": "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "note": ""
     },
     {
@@ -12022,6 +12681,14 @@
       "strength": "HEURISTIC",
       "source": "catalog:experiments/tfpt-discovery/weil_window_profile_scout.py",
       "note": "Lexical mention in catalog record; outcome=MEASURED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "rh/catalog/analysis/all_place_tate_audit.md",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
     },
     {
       "src": "weil-quadratic-form",

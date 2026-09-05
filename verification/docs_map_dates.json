@@ -32,8 +32,8 @@
   "date": "2026-08-30"
  },
  "introduction::subsection::The hard reduction: the live residual as typed interfaces::1": {
-  "hash": "785d7023ebd3",
-  "date": "2026-09-02"
+  "hash": "9d5c10b91c95",
+  "date": "2026-09-05"
  },
  "introduction::section::The compiler: why $30=2\\cdot3\\cdot5$::1": {
   "hash": "d7ace62c85ab",
@@ -364,8 +364,8 @@
   "date": "2026-06-22"
  },
  "tfpt_2_standard_model::section::Neutrinos::1": {
-  "hash": "8f44af13f922",
-  "date": "2026-08-29"
+  "hash": "d7e61178e21b",
+  "date": "2026-09-05"
  },
  "tfpt_2_standard_model::section::How the legacy layers simplify (bridge map)::1": {
   "hash": "f76d4592f628",
@@ -624,8 +624,8 @@
   "date": "2026-08-04"
  },
  "tfpt_4_frontier::section::Full quantum gravity --- induced from the boundary kernel::1": {
-  "hash": "4f09b4cefcf7",
-  "date": "2026-09-02"
+  "hash": "82acb7e89494",
+  "date": "2026-09-05"
  },
  "tfpt_4_frontier::section::Summary::1": {
   "hash": "e3aaf64f6d07",
@@ -716,8 +716,8 @@
   "date": "2026-06-25"
  },
  "tfpt_research_contracts::front::(front matter)::1": {
-  "hash": "ea6027b34b99",
-  "date": "2026-08-30"
+  "hash": "319234b8bb17",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract 1 --- $(U_{\\mathrm{wall}})$::1": {
   "hash": "1f83e83f3c15",
@@ -764,8 +764,8 @@
   "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{CHIRAL4D.MIRROR.DET16.01} (DET16 rank-one projector, finite cluster)::1": {
-  "hash": "4f387c752d04",
-  "date": "2026-08-31"
+  "hash": "a05ba8c87942",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Firewall Contract --- \\texttt{GRAV.NONCIRCULAR.01} (the Bisognano--Wichmann direction discipline)::1": {
   "hash": "f330002d2689",
@@ -808,32 +808,32 @@
   "date": "2026-08-30"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{GRAV.SPIN2.EMERGENCE.01} (massless transversal spin-2 from the same spectral determinant)::1": {
-  "hash": "0aebf1e0bf62",
-  "date": "2026-08-30"
+  "hash": "4a5e3d3b7e9b",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FTRANSFER.SK.RHO0.01} (Schwinger--Keldysh completion: cosmological transfers need $(S,\\rho_0)$)::1": {
-  "hash": "a20712810f59",
-  "date": "2026-08-31"
+  "hash": "e1d5ad51a75d",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MMST.TYPEIII.CHARGED.01} (one scaling-limit theorem)::1": {
   "hash": "6153fe299111",
   "date": "2026-09-04"
  },
  "tfpt_research_contracts::subsection::TEL-B reduction (2026-09-04)::1": {
-  "hash": "0a3c77bc9cab",
-  "date": "2026-09-04"
+  "hash": "e339a60ee49f",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{TFPT.TOE.COMPLETE.01} (the named AND of eight completeness gates)::1": {
-  "hash": "c6965960063e",
-  "date": "2026-08-31"
+  "hash": "0569060ec4d3",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NUSCALE.06} (pentagon-class misalignment candidate)::1": {
   "hash": "d08015c7ace7",
   "date": "2026-08-29"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{FLAV.NU.TEXTURE.MECHANISM.01} (both structural nulls as binding constraints)::1": {
-  "hash": "72ec4cc2a6ca",
-  "date": "2026-08-30"
+  "hash": "ddb5e56c4695",
+  "date": "2026-09-05"
  },
  "tfpt_research_contracts::section::Research Contract --- \\texttt{SEAM.MILNOR.LOCALRING.01} (canonical identification of the seam collar with the reduced Milnor algebra)::1": {
   "hash": "935e060a1f29",
@@ -904,8 +904,8 @@
   "date": "2026-07-02"
  },
  "origin_theory::section::Honest status::1": {
-  "hash": "828b529943b3",
-  "date": "2026-07-24"
+  "hash": "3f6478af46c4",
+  "date": "2026-09-05"
  },
  "origin_theory::section::Appendix: computational verification::1": {
   "hash": "273bbb10f788",
@@ -1104,7 +1104,7 @@
   "date": "2026-08-05"
  },
  "note_hilbert_polya_truncations::section::Conclusion::1": {
-  "hash": "98fb1ca1572c",
-  "date": "2026-08-05"
+  "hash": "4671521aeff2",
+  "date": "2026-09-05"
  }
 }

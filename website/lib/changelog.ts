@@ -42,6 +42,484 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-09-05",
+    "dateLabel": "2026-09-05 · CLVII",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(non-RH T1–T8 Round 3 graduates as "
+      },
+      {
+        "k": "c",
+        "v": "v1022"
+      },
+      {
+        "k": "t",
+        "v": "–"
+      },
+      {
+        "k": "c",
+        "v": "v1025"
+      },
+      {
+        "k": "t",
+        "v": "; suite "
+      },
+      {
+        "k": "m",
+        "v": "1014\\to1018"
+      },
+      {
+        "k": "t",
+        "v": ", ledger rows "
+      },
+      {
+        "k": "m",
+        "v": "1178\\to1184"
+      },
+      {
+        "k": "t",
+        "v": " through six narrow subcontracts; "
+      },
+      {
+        "k": "m",
+        "v": "156/156"
+      },
+      {
+        "k": "t",
+        "v": " module checks; NO marker move; "
+      },
+      {
+        "k": "c",
+        "v": "TFPT.TOE.COMPLETE.01"
+      },
+      {
+        "k": "t",
+        "v": " and every T1–T8 gate remain "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "). "
+      },
+      {
+        "k": "c",
+        "v": "v1022_ telb_ round3_ certificates.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "83/83"
+      },
+      {
+        "k": "t",
+        "v": "; native "
+      },
+      {
+        "k": "c",
+        "v": "python-flint==0.9.0"
+      },
+      {
+        "k": "t",
+        "v": ", 256-bit Arb/Acb) replaces the float/Richardson TEL-B input by 5812 rational cells and the exact cut jump, proving "
+      },
+      {
+        "k": "m",
+        "v": "\\operatorname{TV}_p(F'')\\le15.817695962988924\\ldots<15.928674"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "K_3^{\\rm TV}<2.517464500835"
+      },
+      {
+        "k": "t",
+        "v": ". Together with the stated analytic digamma/midpoint lemmas, its executable Arb arithmetic gives "
+      },
+      {
+        "k": "m",
+        "v": "c_\\varepsilon=0.288547359238391\\ldots"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "m",
+        "v": "c_\\zeta=0.110677064900715\\ldots"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "c_{\\rm potential}=0.399224424139106\\ldots<0.400"
+      },
+      {
+        "k": "t",
+        "v": "; full C2b remains open exactly at CF "
+      },
+      {
+        "k": "m",
+        "v": "\\le0.139/\\sqrt N"
+      },
+      {
+        "k": "t",
+        "v": " and DG "
+      },
+      {
+        "k": "m",
+        "v": "\\le0.060/\\sqrt N"
+      },
+      {
+        "k": "t",
+        "v": ". Its exact one-mode "
+      },
+      {
+        "k": "m",
+        "v": "M_2"
+      },
+      {
+        "k": "t",
+        "v": " countermodel refutes the former ALG2 Vandermonde-to-generated-algebra implication: FE-GEN or an exact gauge/code-projected microscopic-algebra theorem is still required, and ALG1 remains conditional on the generated projection. "
+      },
+      {
+        "k": "c",
+        "v": "v1025_ telb_ c1_ c2a_ certificates.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "8/8"
+      },
+      {
+        "k": "t",
+        "v": "; native 100-bit Arb/Acb) executes the existing analytic C1/C2a proofs: "
+      },
+      {
+        "k": "m",
+        "v": "C_\\star\\le0.1520453048\\ldots<0.1525"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "m",
+        "v": "N\\sup_k|\\phi_N(k)|\\le0.508228779140631\\ldots<0.509"
+      },
+      {
+        "k": "t",
+        "v": " for every even "
+      },
+      {
+        "k": "m",
+        "v": "N\\ge16"
+      },
+      {
+        "k": "t",
+        "v": ". "
+      },
+      {
+        "k": "c",
+        "v": "v1023_ derivative_ filtered_ wall.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "16/16"
+      },
+      {
+        "k": "t",
+        "v": ") proves only the finite quasi-free singular-value block: the high continuation branch is separated, but the bare "
+      },
+      {
+        "k": "m",
+        "v": "b"
+      },
+      {
+        "k": "t",
+        "v": " subspace is not invariant, the low branch has "
+      },
+      {
+        "k": "m",
+        "v": "z=2"
+      },
+      {
+        "k": "t",
+        "v": " rather than a Weyl cone, and no DET16/DET32, interacting-parent, measure/anomaly/index or "
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D theorem follows. "
+      },
+      {
+        "k": "c",
+        "v": "v1024_ parent_ internal_ boundaries.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "49/49"
+      },
+      {
+        "k": "t",
+        "v": ") supplies finite parent-internal T6–T8 witnesses and no-gos: a positive seam/neutrino-pair intertwiner with projective full-Fock "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": " lift but no mass texture; the uniform-gap and direct-TT locality obstructions but no graviton; and a gapped internal "
+      },
+      {
+        "k": "m",
+        "v": "Z_5"
+      },
+      {
+        "k": "t",
+        "v": " cap that is chosen, "
+      },
+      {
+        "k": "m",
+        "v": "D_4"
+      },
+      {
+        "k": "t",
+        "v": "-breaking and complement-trivial, hence no global "
+      },
+      {
+        "k": "m",
+        "v": "\\rho_0"
+      },
+      {
+        "k": "t",
+        "v": ". T1 retains only finite axiom-core/W-bridge support while unconditional provenance and the dimension selector remain open; T3 remains at Hamiltonian-class level; T5 retains finite IR witnesses and the v1020 spectator obstruction while prime completion, OS reconstruction, confinement and scattering remain open. The common missing object is still one shared "
+      },
+      {
+        "k": "m",
+        "v": "3{+}1"
+      },
+      {
+        "k": "t",
+        "v": "D parent satisfying T3–T8. Native-only handling is explicit in the website reproducer; v1022/v1025 are not represented as Pyodide certificates. NO RH CLAIM. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_research_contracts"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_4_frontier"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "introduction"
+      },
+      {
+        "k": "t",
+        "v": ", "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_2_standard_model"
+      },
+      {
+        "k": "t",
+        "v": ", the MMST article/PDF, ledger, generated verification maps/index, website paper/DAG/gap/FAQ mirrors and changelog."
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-05",
+    "dateLabel": "2026-09-05 · CLVI",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(all-place Tate / finite-carrier / Rankin audit graduates as "
+      },
+      {
+        "k": "c",
+        "v": "v1021"
+      },
+      {
+        "k": "t",
+        "v": "; isolated suite delta "
+      },
+      {
+        "k": "m",
+        "v": "1013\\to1014"
+      },
+      {
+        "k": "t",
+        "v": ", isolated ledger-record delta "
+      },
+      {
+        "k": "m",
+        "v": "1177\\to1178"
+      },
+      {
+        "k": "t",
+        "v": ", one new row "
+      },
+      {
+        "k": "c",
+        "v": "PRIME.ALLPLACE.TATE.INTERSECTION.01"
+      },
+      {
+        "k": "t",
+        "v": " "
+      },
+      {
+        "k": "s",
+        "v": "O"
+      },
+      {
+        "k": "t",
+        "v": "; NO marker move; Python-only / Wolfram mirror deferred). "
+      },
+      {
+        "k": "c",
+        "v": "v1021_ all_ place_ tate_ rank_ audit.py"
+      },
+      {
+        "k": "t",
+        "v": " ("
+      },
+      {
+        "k": "m",
+        "v": "23/23"
+      },
+      {
+        "k": "t",
+        "v": "): exact scalar Tate projector and good-place tensor/End splittings; the Tate identity remains inertia-fixed at "
+      },
+      {
+        "k": "m",
+        "v": "p=2"
+      },
+      {
+        "k": "t",
+        "v": "; completed zeta is "
+      },
+      {
+        "k": "m",
+        "v": "2\\xi(u)/(u(u-1))"
+      },
+      {
+        "k": "t",
+        "v": ", not "
+      },
+      {
+        "k": "m",
+        "v": "\\xi(u)"
+      },
+      {
+        "k": "t",
+        "v": "; the symmetric-square prime coefficient is "
+      },
+      {
+        "k": "m",
+        "v": "a_p^2-p^3"
+      },
+      {
+        "k": "t",
+        "v": ", not "
+      },
+      {
+        "k": "m",
+        "v": "a_p^2-2p^3"
+      },
+      {
+        "k": "t",
+        "v": ". Conditional on the cited external strict-floor premise, rank–nullity excludes representing the complete window form as one exact linear pullback through a fixed finite carrier; nonlinear methods, growing finite discretizations and direct limits are not excluded. An exact sparse counterexample corrects the historical Rankin inference: "
+      },
+      {
+        "k": "m",
+        "v": "A(X)=O(X^q)"
+      },
+      {
+        "k": "t",
+        "v": " with nonnegative coefficients does not imply "
+      },
+      {
+        "k": "m",
+        "v": "b_n=O(n^{q-1+\\varepsilon})"
+      },
+      {
+        "k": "t",
+        "v": ", and a maximum fitted on a finite window makes its same-window inequality tautological. Rankin's actual 1939 argument uses a quantitative summatory error term, not a pole and positivity alone. The correction of record is placed outside the preserved historical docstrings of "
+      },
+      {
+        "k": "c",
+        "v": "rankin_ positivity_ miniature_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": " and "
+      },
+      {
+        "k": "c",
+        "v": "hecke_ orbit_ transfer_ probe.py"
+      },
+      {
+        "k": "t",
+        "v": "; their valid Jacobi, Hecke and Rankin–Selberg identities remain, while T52 is narrowed to a path-space vacuum resolvent plus classical local Satake determinants, not a path-space Fredholm determinant. The global all-place intersection form and its independent positivity remain OPEN. NO RH CLAIM. Surfaces: "
+      },
+      {
+        "k": "c",
+        "v": "note_hilbert_polya_truncations"
+      },
+      {
+        "k": "t",
+        "v": "; "
+      },
+      {
+        "k": "c",
+        "v": "tfpt_prime_front"
+      },
+      {
+        "k": "t",
+        "v": "; catalog part 19; concept map; dated RH balance; website T49 erratum; ScriptIndex and website changelog regenerated."
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-09-04",
     "dateLabel": "2026-09-04 · CLV",
     "heading": [
@@ -227,7 +705,7 @@ export const CHANGELOG: ChangelogEntry[] = [
       },
       {
         "k": "c",
-        "v": "rh/lean/RH/SelectedArchErrorQuadraticRateClassical.lean"
+        "v": "rh/ lean/ RH/ Selected Arch Error Quadratic Rate Classical.lean"
       },
       {
         "k": "t",

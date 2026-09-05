@@ -27,16 +27,16 @@ export interface ReleaseAsset {
 
 const COMMON = {
   version: "TFPT 5.4",
-  releaseDate: "2026-09-04",
+  releaseDate: "2026-09-05",
 };
 
 export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/introduction.pdf": {
     href: "/papers/introduction.pdf",
     ...COMMON,
-    bytes: 5454152,
+    bytes: 5471443,
     sha256:
-      "8e0f403e3ab05b19dcd89e62cb2c87240f468f1b22dad19bf7f5716bd281013b",
+      "0d943193a17eda9ebad97687e7f2c39929e12551fb0c4663c763b96658decab4",
     changelog:
       "Compiler-closure reading guide: two axioms, the dependency DAG, the predictions and the proof ledger.",
   },
@@ -52,9 +52,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_2_standard_model.pdf": {
     href: "/papers/tfpt_2_standard_model.pdf",
     ...COMMON,
-    bytes: 1342139,
+    bytes: 1343289,
     sha256:
-      "57744e7d4f332f39e41552b09f799eaac4ce12a5043b3edf7eed39633a70294e",
+      "fbe1edd14e615d9266f1a1c7936bcef370d9bc6b31c03c03694124345bdc7ca9",
     changelog:
       "The Standard Model in one φ₀-ladder, the flavor residue matrix, and the derived solar angle θ₁₂.",
   },
@@ -70,9 +70,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/tfpt_4_frontier.pdf": {
     href: "/papers/tfpt_4_frontier.pdf",
     ...COMMON,
-    bytes: 849374,
+    bytes: 851025,
     sha256:
-      "713e564ea9eed2d7f617fd7524cc2f9ded5d8b020fbe70f5186c5d43ef1b8b84",
+      "c153fc9239c62b5136730140f31f65f4a130c90e88b81a94710d5e7884d698c2",
     changelog:
       "Honest status of η_B, m_p/m_e, Koide, dark matter and full quantum gravity — not forced onto the ladder.",
   },
@@ -88,20 +88,20 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/origin_theory.pdf": {
     href: "/papers/origin_theory.pdf",
     ...COMMON,
-    bytes: 1146087,
+    bytes: 1146770,
     sha256:
-      "4daf3a41875583668597f415ee894ad74859ac5de39bc88f8b311e71874dafce",
+      "e7b2db2904c442d8c8ce807421290eeae079e371dc9439bc24a5ff41b12bc864",
     changelog:
       "Origin Theory: the (5,3) skeleton, the triply-forced 8, the order-30 Coxeter cycle, and the gapped unique attractor.",
   },
   "/papers/tfpt_research_contracts.pdf": {
     href: "/papers/tfpt_research_contracts.pdf",
     ...COMMON,
-    bytes: 2665820,
+    bytes: 2677318,
     sha256:
-      "9f4b665fd59f82d43db19cc6e56c2e439b7cdb244b03d22737331d368f4ee341",
+      "22b794fad8551f017412feb14298a071f53274c2b20462c9bb21eef62533d390",
     changelog:
-      "Research contracts for the remaining interfaces: compiler Rest = v_geo ⊕ G_net ⊕ F_transfer (v_geo = closed metrology, R₊ torsor), beside Rest_TOE and the named AND TFPT.TOE.COMPLETE.01 [O] (T1–T8; not a closure). Wave 4: v998–v1001 + lattice-fundamental quasilocal-family amendment + ALPHA relative-det note.",
+      "Research contracts separate compiler Rest = v_geo ⊕ G_net ⊕ F_transfer from Rest_TOE. Round 3 (v1022–v1025) adds finite certificates and obstruction results for T2/T4/T6–T8 but closes no T-gate: T1–T8 and TFPT.TOE.COMPLETE.01 remain [O], and no shared complete 3+1D parent is constructed. v1022/v1025 require native python-flint==0.9.0. Wave 4: v998–v1001 + lattice-fundamental quasilocal-family amendment + ALPHA relative-det note.",
   },
   "/papers/tfpt_safeguards.pdf": {
     href: "/papers/tfpt_safeguards.pdf",
@@ -142,9 +142,9 @@ export const RELEASE_ASSETS: Record<string, ReleaseAsset> = {
   "/papers/changelog.pdf": {
     href: "/papers/changelog.pdf",
     ...COMMON,
-    bytes: 3309384,
+    bytes: 3318678,
     sha256:
-      "7eb7caac65cd47e2f3ba58c87cd17579afabcb23f2895493580b012606195e56",
+      "0529060b15d43678ffc2f9b97a2d8435f7422afc4106035373dd3e6f6bd2bcd2",
     changelog:
       "The canonical dated changelog of every change to the theory, the suite, the papers and the website.",
   },

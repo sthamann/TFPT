@@ -80,6 +80,31 @@ paper / website edits; classical theorems (Rankin 1939, Landau,
 Deligne, Jacobi, Weil) named as such — TFPT content is the exact
 in-suite wiring of the mechanism and the typed Z-gap map.
 """
+
+# =====================================================================
+# CORRECTION OF RECORD (All-place Tate audit, 2026-09-05)
+# ---------------------------------------------------------------------
+# The module docstring above is preserved as the historical T49 record.
+# Its M1.d/M1.d' claim is false: from nonnegative partial sums
+# A(X)=sum_{n<=X} b_n=O(X^q) one gets only b_n<=A(n)=O(n^q), not
+# b_n=O(n^(q-1+eps)).  The same invalid exponent drop was repeated for
+# tau in M3.rankin.  The fitted finite-window constants K_need/K_tau
+# make their own same-window inequalities true by construction.
+# Rankin's actual 1939 argument uses a quantitative remainder in the
+# Rankin--Selberg summatory asymptotic and differences that remainder;
+# a pole/main-order statement alone is not that argument and does not
+# give the claimed Deligne-strength exponent.
+#
+# The executable gates below are retyped accordingly.  They now carry
+# an exact sparse counterexample, retain only the elementary exponent-2
+# f8 bound (exponent 6 for tau), and label the sharp prime bounds as
+# finite regressions against Deligne's external theorem.  The Jacobi,
+# Hecke, Rankin--Selberg factorization, growth measurements, and typed
+# zero-location gap are unchanged.  Current load-bearing record:
+# verification/v1021_all_place_tate_rank_audit.py.
+# NO RH CLAIM.
+# =====================================================================
+
 from __future__ import annotations
 
 import math
@@ -91,6 +116,8 @@ import sympy as sp
 PASS = 0
 FAIL = 0
 T0 = time.time()
+
+CORRECTION_STATUS = "RANKIN_EXPONENT_DROP_FALSIFIED"
 
 N_COEFF = 10000          # a_n(f8) / nonnegativity cutoff
 N_DELTA = 2000           # Delta / Jacobi identity order
@@ -205,10 +232,10 @@ print()
 print("=" * 72)
 print("M1 -- Rankin trick miniature (Rankin 1939, classical)")
 print("=" * 72)
-info("Classical chain: nonnegativity of a_n^2 + pole at abscissa s=4")
-info("+ Landau singularity theorem => Ramanujan bound up to eps.")
-info("Goal: machine-verify the CONCLUSION positivity+pole => bound,")
-info("not rediscover Deligne's sharp constant 2.")
+info("CORRECTION ACTIVE: nonnegativity + a pole/mean of order X^4 does")
+info("NOT imply a pointwise n^(3+eps) coefficient bound.")
+info("This run separates finite measurements, the elementary spike bound,")
+info("and finite regressions against Deligne's external theorem.")
 
 # ---- M1.a nonnegativity
 print()
@@ -227,9 +254,9 @@ check(
     nonneg and c2[1] == 1 and n_pos > 0,
 )
 
-# ---- M1.b growth / pole location
+# ---- M1.b finite growth diagnostic; the pole is a separate classical input
 print()
-print("M1.b -- pole location via partial-sum growth (preregistered 4 +/- 0.05)")
+print("M1.b -- finite partial-sum growth diagnostic (preregistered 4 +/- 0.05)")
 A = [0] * (N_GROWTH_F8 + 1)
 running = 0
 for n in range(1, N_GROWTH_F8 + 1):
@@ -242,18 +269,18 @@ info(f"fitted exponent alpha = {alpha_f8:.6f}  (target 4 +/- {GROWTH_TOL})")
 info(f"fitted prefactor C in A ~ C X^alpha : C = {C_f8:.6g}")
 info(f"A({N_GROWTH_F8}) = {A[N_GROWTH_F8]};  "
      f"A/X^4 = {A[N_GROWTH_F8] / (N_GROWTH_F8 ** 4):.6g}")
-# Landau: abscissa = singularity for nonnegative coeffs — pole at s=4 (T38)
-# Consistency: A(X)/X^4 should approach a positive constant (Res/4)
+# The s=4 Rankin--Selberg pole is a separate classical/T38 input.  The
+# following finite fit is a consistency measurement, not a pole proof.
 ratios = [1000, 2000, 4000, 8000, N_GROWTH_F8]
 for x in ratios:
     if x <= N_GROWTH_F8:
         info(f"  A({x})/X^4 = {A[x] / (x ** 4):.8g}")
 growth_ok = abs(alpha_f8 - 4.0) <= GROWTH_TOL
 check(
-    f"M1.b growth/pole: fitted exponent of sum_{{n<=X}} a_n(f8)^2 "
+    f"M1.b [N] growth diagnostic: fitted exponent of sum_{{n<=X}} a_n(f8)^2 "
     f"is {alpha_f8:.4f} in [3.95, 4.05] (preregistered); "
-    f"A(X)/X^4 stays positive — abscissa s=4 is a singularity "
-    f"(Landau, classical; pole from T38 RS)",
+    f"A(X)/X^4 stays positive on the finite ladder.  The s=4 pole is "
+    f"cited separately from the classical T38 Rankin--Selberg identity",
     growth_ok and A[N_GROWTH_F8] > 0,
 )
 
@@ -295,60 +322,79 @@ check(
     crude_ok and spike_ok and C_prime > 0,
 )
 
-# ---- M1.d Landau-style sharpening to 3/2 + eps
+# ---- M1.d correction: the mean-to-pointwise exponent drop is invalid
 print()
-print("M1.d -- Landau coefficient sharpening: a_n^2 = O(n^{3+eps}) "
-      "=> |a_p| = O(p^{3/2+eps})")
-info("Classical: abscissa sigma_c = 4 + nonnegative coeffs =>")
-info(f"  a_n^2 = O(n^{{4-1+eps}}) = O(n^{{3+eps}}) (eps={EPS_SHARP}).")
-info("This is the Rankin conclusion up to eps (not Deligne's constant 2).")
-# Find K such that a_n^2 <= K n^{3+eps} for all n <= N
+print("M1.d -- CORRECTED: partial-sum growth does not lower the pointwise exponent")
+info("For b_n>=0, A(X)=O(X^q) gives only b_n<=A(n)=O(n^q).")
+info("The claimed b_n=O(n^(q-1+eps)) needs additional structure and")
+info("does not follow from Landau's singularity theorem or the measured mean.")
+
+# Strong exact counterexample preserving both advertised inputs.  Let
+# b_n=4n^3 plus n^(18/5) at n=32^m.  The baseline has partial sum
+# X^2(X+1)^2~X^4 and Dirichlet series 4*zeta(s-3), hence its simple pole
+# at s=4.  The spike series is analytic there (ratio 2^(18-5s)=1/4 at
+# s=4) and contributes O(X^(18/5))=o(X^4), but the spike-to-n^(31/10)
+# ratio is n^(1/2), unbounded.
+k_sym = sp.symbols("k_sparse", integer=True, positive=True)
+spike_exp = sp.Rational(18, 5)
+target_exp = sp.Rational(31, 10)
+spike_ratio = sp.Integer(2 ** 18)
+spike_sum_closed = spike_ratio * (spike_ratio ** k_sym - 1) / (spike_ratio - 1)
+spike_partial_limit = sp.limit(spike_sum_closed / (32 ** k_sym) ** 4,
+                               k_sym, sp.oo)
+spike_ratio_limit = sp.limit(32 ** (sp.Rational(1, 2) * k_sym), k_sym, sp.oo)
+rankin_exponent_drop_falsified = (
+    spike_partial_limit == 0
+    and spike_exp < 4
+    and spike_exp - target_exp == sp.Rational(1, 2)
+    and sp.Rational(2 ** 18, 2 ** 20) == sp.Rational(1, 4)
+    and spike_ratio_limit == sp.oo
+)
+check(
+    "M1.d.i exact sparse counterexample preserves A(X)~X^4 and the "
+    "simple s=4 pole but violates b_n=O(n^(3+0.1))",
+    rankin_exponent_drop_falsified,
+)
+
+# This finite-window K is retained only as a regression statistic.  Since it
+# is defined as the maximum over the same window, the following inequality is
+# an identity of the construction and has no asymptotic content.
 K_need = 0.0
 for n in range(1, N_COEFF + 1):
     if c2[n] == 0:
         continue
-    val = c2[n] / (n ** (3.0 + EPS_SHARP))
-    if val > K_need:
-        K_need = val
-info(f"K_eps = max a_n^2 / n^{{3+{EPS_SHARP}}} on n<= {N_COEFF}: {K_need:.6g}")
-sharp_ok = True
-sharp_ratios = []
-for p in sp.primerange(3, 201):
-    p = int(p)
-    if p > N_COEFF:
-        break
-    ap = abs(a_f8[p])
-    bound = math.sqrt(K_need) * (p ** (1.5 + 0.5 * EPS_SHARP))
-    ratio = ap / (p ** 1.5) if p else 0.0
-    sharp_ratios.append(ratio)
-    if ap > bound + 1e-9:
-        sharp_ok = False
-        info(f"SHARP FAIL p={p}: |a_p|={ap} > K^{{1/2}} p^{{3/2+eps/2}}"
-             f"={bound:.6g}")
-info(f"max |a_p|/p^{{3/2}} for odd p<=200: {max(sharp_ratios):.6g} "
-     f"(Deligne constant is 2; Rankin-eps bound is looser)")
-# Also: every a_n^2 <= K n^{3+eps}
-all_sharp = all(
+    K_need = max(K_need, c2[n] / (n ** (3.0 + EPS_SHARP)))
+all_window_fit = all(
     c2[n] <= K_need * (n ** (3.0 + EPS_SHARP)) + 1e-9
     for n in range(1, N_COEFF + 1)
 )
+info(f"finite-window K_eps=max a_n^2/n^{{3+{EPS_SHARP}}} on n<={N_COEFF}: "
+     f"{K_need:.6g} (descriptive only)")
 check(
-    f"M1.d Landau-sharp: a_n(f8)^2 <= K n^{{3+{EPS_SHARP}}} for all "
-    f"n <= {N_COEFF} with K={K_need:.6g}; hence "
-    f"|a_p| <= sqrt(K) p^{{3/2+{0.5*EPS_SHARP}}} for odd p <= 200 "
-    f"(Rankin 1939 conclusion up to eps; classical)",
-    sharp_ok and all_sharp and K_need > 0,
+    "M1.d.ii finite-window max-K inequality is recorded as tautological, "
+    "not as an asymptotic theorem",
+    all_window_fit and K_need > 0,
 )
 
-# Compare exponents: crude 2 vs sharp 1.5+eps/2
-info(f"EXPONENT CHAIN: crude {2.0}  -->  Landau-sharp "
-     f"{1.5 + 0.5 * EPS_SHARP}  -->  Deligne exact 1.5 (constant 2)")
+# The sharp prime bound is Deligne's theorem.  This finite computation is a
+# regression against that external theorem, not a proof or Rankin extraction.
+deligne_f8_ratios = []
+deligne_f8_ok = True
+for p in sp.primerange(3, 201):
+    p = int(p)
+    ratio = abs(a_f8[p]) / (p ** 1.5)
+    deligne_f8_ratios.append(ratio)
+    if ratio > 2.0 + 1e-9:
+        deligne_f8_ok = False
+info(f"max |a_p|/p^{{3/2}} for odd p<=200: {max(deligne_f8_ratios):.6g}")
 check(
-    "M1.d' exponent drop: Landau-sharp exponent 1.55 < crude exponent 2 "
-    "(the classical gain of Rankin's coefficient extraction over the "
-    "naive partial-sum spike bound)",
-    (1.5 + 0.5 * EPS_SHARP) < 2.0 - 1e-12,
+    "M1.d.iii finite regression agrees with Deligne |a_p|<=2p^(3/2) "
+    "for odd p<=200 (external theorem; not proved by this window)",
+    deligne_f8_ok,
 )
+info("HONEST EXPONENT LEDGER: conditional on the global A(X)=O(X^4) "
+     "Rankin--Selberg bound, positivity -> exponent 2; the finite fit "
+     "does not prove that global input.  Deligne externally -> exponent 3/2.")
 
 # ---- M1.e sym^2 positivity (iteration test)
 print()
@@ -356,7 +402,8 @@ print("M1.e -- sym^2 coefficient positivity (iteration of the trick?)")
 info("T38: L(f x f, s) = zeta(s-3) L(sym^2 f, s).")
 info("Classical: for cusp forms L(sym^2) is ENTIRE (no pole at s=4);")
 info("the RS pole of L(f x f) at s=4 is exactly the zeta(s-3) factor.")
-info("Dirichlet coeff at p: A_p(sym^2) = a_p^2 - 2 p^{k-1} = a_p^2 - 2 p^3.")
+info("Dirichlet coeff at p: A_p(sym^2)=alpha^2+alpha*beta+beta^2 "
+     "= a_p^2-p^3.")
 
 sym2_p = {}
 n_neg = 0
@@ -366,7 +413,7 @@ for p in sp.primerange(3, 201):
     p = int(p)
     if p > N_COEFF:
         break
-    Ap = a_f8[p] * a_f8[p] - 2 * (p ** 3)
+    Ap = a_f8[p] * a_f8[p] - p ** 3
     sym2_p[p] = Ap
     if Ap < 0:
         n_neg += 1
@@ -374,7 +421,7 @@ for p in sp.primerange(3, 201):
         n_pos_s += 1
     else:
         n_zero_s += 1
-info(f"A_p(sym^2)=a_p^2-2p^3 for odd p<=200: "
+info(f"A_p(sym^2)=a_p^2-p^3 for odd p<=200: "
      f"{n_pos_s} positive, {n_neg} negative, {n_zero_s} zero")
 info(f"sample: p=3 -> {sym2_p.get(3)}; p=5 -> {sym2_p.get(5)}; "
      f"p=7 -> {sym2_p.get(7)}")
@@ -433,42 +480,45 @@ info(f"L(sym^2) Dirichlet coeffs n<= {len(A_sym)-1}: "
      f"{len(sym_pos_ns)} positive, {len(sym_neg_ns)} negative")
 info(f"first negative n: {sym_neg_ns[:8]}")
 
-# Typed checks: (1) sym^2 NOT nonnegative — iteration does NOT fire
-# (2) L(sym^2) has NO pole at s=4 (entire for cusp forms) — the pole
-#     is only in zeta(s-3); we record this as a structural typing check
-#     via the T38 identity residue source.
+# Typed checks: (1) sym^2 NOT nonnegative — iteration does NOT fire;
+# (2) the local coefficient identity is checked symbolically.  Entireness
+# of L(sym^2) and the global pole attribution remain declared classical
+# external inputs, not executable checks of this finite probe.
 check(
-    "M1.e.i sym2-positivity TYPED: A_p(sym^2)=a_p^2-2p^3 takes BOTH "
+    "M1.e.i sym2-positivity TYPED: A_p(sym^2)=a_p^2-p^3 takes BOTH "
     f"signs on odd p<=200 ({n_neg} negative, {n_pos_s} positive) — "
     "raw sym^2 Dirichlet coefficients are NOT nonnegative; the "
     "ITERATED Rankin positivity trick does NOT fire on L(sym^2)",
     (not sym2_all_nonneg) and n_neg > 0 and len(sym_neg_ns) > 0,
 )
+alpha_sym, beta_sym = sp.symbols("alpha_sym beta_sym")
+sym2_local_identity = sp.expand(
+    alpha_sym**2 + alpha_sym * beta_sym + beta_sym**2
+    - ((alpha_sym + beta_sym)**2 - alpha_sym * beta_sym)
+)
 check(
-    "M1.e.ii pole source TYPED: the RS pole of L(f x f) at s=4 comes "
-    "from zeta(s-3) (Res=1), NOT from L(sym^2) — for cusp forms "
-    "L(sym^2) is entire (Shimura / Gelbart–Jacquet, classical); "
-    "hence there is no second pole for a positivity iteration.  "
-    "The 3/2+eps bound is the SINGLE Landau extraction on D_ff "
-    "(M1.d), not an iterated sym^2 positivity argument",
-    True,  # structural classical fact recorded; T38 already verified the identity
+    "M1.e.ii local identity EXACT: alpha^2+alpha*beta+beta^2 "
+    "=(alpha+beta)^2-alpha*beta.  The global entireness of L(sym^2), "
+    "the s=4 pole attribution and Deligne's sharp bound are classical "
+    "external inputs, not machine-proved by this finite probe",
+    sym2_local_identity == 0,
 )
 
-# ---- M1 chain closure
+# ---- M1 corrected audit closure
 print()
-print("M1 -- chain closure")
-m1_chain = (
-    nonneg and growth_ok and crude_ok and sharp_ok and all_sharp
+print("M1 -- corrected audit closure")
+m1_audit_ok = (
+    nonneg and growth_ok and crude_ok and rankin_exponent_drop_falsified
+    and all_window_fit and deligne_f8_ok
     and (not sym2_all_nonneg) and n_neg > 0
 )
 check(
-    "M1 CHAIN CLOSED: positivity(a_n^2) + growth/pole(alpha=4+/-0.05) "
-    "+ Landau coefficient extraction => |a_p|=O(p^{3/2+eps}); "
-    "crude spike bound gives exponent 2; sym^2 iteration typed as "
-    "NON-FIRING (coeffs not nonnegative; L(sym^2) entire).  "
-    "Conclusion 'positivity + pole => eigenvalue bound' is "
-    "machine-verified in-suite (Rankin 1939 miniature)",
-    m1_chain,
+    "M1 CORRECTED AUDIT: conditional on a global A(X)=O(X^4) bound, "
+    "nonnegativity implies only the crude exponent-2 spike bound; the "
+    "finite fitted growth is a regression, not that proof.  The claimed exponent drop is "
+    "falsified by an exact sparse sequence; finite sharp data agree with "
+    "Deligne externally; sym^2 positivity iteration does not fire",
+    m1_audit_ok,
 )
 
 
@@ -483,7 +533,11 @@ info("  R-POS    : nonnegativity of those aggregated coefficients")
 info("  R-POLE   : pole/singularity structure controlling the TARGET")
 info("For eigenvalue bounds the TARGET is |a_p|; for RH the TARGET")
 info("would be the LOCATION OF ZETA ZEROS — a different target.")
-info("This miniature proves eigenvalue bounds, NOT zero locations.")
+info("Conditional on the classical global Rankin--Selberg summatory "
+     "bound, this corrected audit derives only the elementary "
+     "|a_n|=O(n^2) bound from positivity.  The finite fitted growth is "
+     "diagnostic only; the sharp 3/2 bound is Deligne-external.  It "
+     "proves no zero-location statement.")
 
 # Role occupancy for EIGENVALUE side (occupied in-suite)
 check(
@@ -500,8 +554,8 @@ check(
 )
 check(
     "M2.eig.POLE OCCUPIED: D_ff has abscissa/pole at s=k=4 (T38 RS; "
-    "M1.b growth alpha=4+/-0.05); for Delta the abscissa is s=12 "
-    "(weight).  Landau ties the pole to the eigenvalue magnitude",
+    "M1.b growth alpha=4+/-0.05); for Delta the abscissa is s=12.  "
+    "This controls the mean, not the sharp individual coefficients",
     growth_ok,
 )
 
@@ -513,7 +567,8 @@ info("  explicit-formula quadratic form (Weil 1952; already narrowed")
 info("  in-suite as contract ZETA.WEIL.RECOVERY — T40).")
 info("  Classical analogue of R-FAMILY over function fields: Frobenius")
 info("  conjugacy classes / the tensor powers f^{otimes k} (Deligne).")
-info("  Over Z that family object is MISSING — the classical F1 problem.")
+info("  No corresponding over-Z family is constructed in this corpus;")
+info("  this is an open F1-style realization problem, not a uniqueness claim.")
 
 # What CAN occupy roles in-suite (candidates, not claims)
 check(
@@ -534,23 +589,23 @@ check(
     True,
 )
 check(
-    "M2.zero.FAMILY VACANT (F1): over function fields the controlling "
+    "M2.zero.FAMILY OPEN HERE (F1-style): over function fields the controlling "
     "family is Frobenius / f^{otimes k} (Deligne's proof of RH for "
-    "varieties over finite fields, classical).  Over Z no in-suite "
+    "varieties over finite fields, classical).  Over Z no inspected in-suite "
     "compiler object supplies an analogous family whose aggregated "
     "nonnegative coefficients have singularity structure controlling "
-    "zeta-zero locations.  Role typed DEFINITELY UNOCCUPIED "
-    "(classical F1 problem; named as such — not a TFPT claim)",
+    "zeta-zero locations.  This is a corpus-status statement, not a proof "
+    "that no such mathematical object can exist",
     True,
 )
 
 # Fence: do not sell speculation
 check(
-    "M2.fence: the eigenvalue-side mechanism (M1) is CLOSED in-suite; "
-    "the zero-location-side FAMILY role is VACANT over Z.  No bridge "
-    "from M1 to RH is claimed — the miniature's value is the exact "
-    "role map, not a zero-free region",
-    m1_chain,
+    "M2.fence: the corrected eigenvalue-side audit separates the proved "
+    "mean/crude bound from Deligne's external sharp theorem; the "
+    "no corresponding zero-location family is constructed in this corpus.  No bridge from "
+    "M1 to RH is claimed",
+    m1_audit_ok,
 )
 
 m2_map_ok = True  # all typing checks are structural PASS above
@@ -753,9 +808,9 @@ check(
     deligne_ok and max(r for _, _, r in deligne_ratios) <= 2.0 + 1e-9,
 )
 
-# ---- Rankin trick on tau (family-universal)
+# ---- Rankin mean diagnostic on tau (sharp step corrected)
 print()
-print("M3.rankin -- same Rankin trick on sum tau(n)^2 n^{-s}")
+print("M3.rankin -- corrected mean/pointwise audit for sum tau(n)^2 n^{-s}")
 c2_tau = [tau[n] * tau[n] for n in range(N_GROWTH_TAU + 1)]
 A_tau = [0] * (N_GROWTH_TAU + 1)
 run = 0
@@ -771,7 +826,8 @@ info(f"A_tau({N_GROWTH_TAU})/{N_GROWTH_TAU}^{{12}} = "
 tau_growth_ok = abs(alpha_tau - 12.0) <= GROWTH_TOL
 tau_nonneg = all(c >= 0 for c in c2_tau)
 
-# Landau-sharp for tau: a_n^2 = O(n^{11+eps}) => |tau| = O(n^{11/2+eps/2})
+# Same-window descriptive constant only.  It cannot establish an
+# asymptotic coefficient bound because it is fitted on the tested window.
 K_tau = 0.0
 for n in range(1, N_GROWTH_TAU + 1):
     if c2_tau[n] == 0:
@@ -779,16 +835,39 @@ for n in range(1, N_GROWTH_TAU + 1):
     val = c2_tau[n] / (n ** (11.0 + EPS_SHARP))
     if val > K_tau:
         K_tau = val
-info(f"K_tau = max tau(n)^2 / n^{{11+{EPS_SHARP}}}: {K_tau:.6g}")
-tau_sharp_ok = True
+info(f"finite-window K_tau=max tau(n)^2/n^{{11+{EPS_SHARP}}}: "
+     f"{K_tau:.6g} (descriptive only)")
+tau_window_fit_ok = True
 for p in sp.primerange(2, 51):
     p = int(p)
     if p > N_GROWTH_TAU:
         break
     bound = math.sqrt(K_tau) * (p ** (5.5 + 0.5 * EPS_SHARP))
     if abs(tau[p]) > bound + 1e-9:
-        tau_sharp_ok = False
-        info(f"TAU-SHARP FAIL p={p}")
+        tau_window_fit_ok = False
+        info(f"TAU WINDOW-FIT FAIL p={p}")
+
+# Exact q=12 analogue: baseline 12n^11 plus spikes n^(58/5) at
+# n=32^m.  The baseline carries the s=12 pole/leading X^12 mean; the
+# spike series is analytic there (geometric ratio 1/4) and lower-order,
+# but exceeds n^(11+0.1) by n^(1/2).
+tau_spike_exp = sp.Rational(58, 5)
+tau_target_exp = sp.Rational(111, 10)
+tau_spike_ratio = sp.Integer(2 ** 58)
+tau_spike_sum_closed = (
+    tau_spike_ratio * (tau_spike_ratio ** k_sym - 1) / (tau_spike_ratio - 1)
+)
+tau_spike_partial_limit = sp.limit(
+    tau_spike_sum_closed / (32 ** k_sym) ** 12, k_sym, sp.oo
+)
+tau_ratio_limit = sp.limit(32 ** (sp.Rational(1, 2) * k_sym), k_sym, sp.oo)
+tau_exponent_drop_falsified = (
+    tau_spike_partial_limit == 0
+    and tau_spike_exp < 12
+    and tau_spike_exp - tau_target_exp == sp.Rational(1, 2)
+    and sp.Rational(2 ** 58, 2 ** 60) == sp.Rational(1, 4)
+    and tau_ratio_limit == sp.oo
+)
 
 check(
     f"M3.rankin.i: tau(n)^2 >= 0 for all n <= {N_GROWTH_TAU} "
@@ -796,26 +875,32 @@ check(
     tau_nonneg,
 )
 check(
-    f"M3.rankin.ii: fitted growth exponent of sum tau(n)^2 is "
+    f"M3.rankin.ii [N]: fitted growth exponent of sum tau(n)^2 is "
     f"{alpha_tau:.4f} in [11.95, 12.05] (preregistered; weight-12 "
-    f"abscissa)",
+    f"finite diagnostic; the Rankin--Selberg pole is a separate classical input)",
     tau_growth_ok,
 )
 check(
-    f"M3.rankin.iii: Landau extraction tau(n)^2 = O(n^{{11+{EPS_SHARP}}}) "
-    f"on n<= {N_GROWTH_TAU} yields |tau(p)| = O(p^{{11/2+eps/2}}) "
-    f"for p<=50 — SAME mechanism as M1, family-universal in-suite",
-    tau_sharp_ok and K_tau > 0,
+    f"M3.rankin.iii: finite-window K_tau inequality on n<={N_GROWTH_TAU} "
+    "is a descriptive same-window identity, not an asymptotic theorem",
+    tau_window_fit_ok and K_tau > 0,
+)
+check(
+    "M3.rankin.iv exact sparse counterexample preserves A(X)~X^12 and "
+    "the s=12 pole but violates b_n=O(n^(11+0.1)); Deligne is external",
+    tau_exponent_drop_falsified,
 )
 
 m3_ok = (
     delta_match and jacobi_id and hecke_coprime_ok and hecke_ladder_ok
-    and deligne_ok and tau_nonneg and tau_growth_ok and tau_sharp_ok
+    and deligne_ok and tau_nonneg and tau_growth_ok and tau_window_fit_ok
+    and tau_exponent_drop_falsified
 )
 check(
     "M3 LEVEL-1 GATE OPEN: Delta = (th2 th3 th4 / 2)^8 = eta^{24} "
     "in the compiler theta monoid; Hecke eigenform; Deligne bound "
-    "numerically; Rankin trick reproduces the tau bound mechanically "
+    "numerically as an external-theorem regression; mean growth measured; "
+    "the former Rankin exponent extraction is explicitly falsified "
     "(functor map extended by Level 1 — typed, no promotion)",
     m3_ok,
 )
@@ -827,29 +912,32 @@ print("=" * 72)
 print("VERDICT")
 print("=" * 72)
 
-if m1_chain and m3_ok:
-    verdict = "MINIATURE-RUNS"
-elif m1_chain or m3_ok:
+if m1_audit_ok and m3_ok:
+    verdict = "RANKIN-EXPONENT-DROP-FALSIFIED; FINITE-IDENTITIES-SURVIVE"
+elif m1_audit_ok or m3_ok:
     verdict = "PARTIAL"
 else:
     verdict = "FAIL"
 
-info(f"M1 chain closed: {m1_chain}")
+info(f"M1 corrected audit: {m1_audit_ok}")
 info(f"M3 level-1 gate: {m3_ok}")
 info(f"M2 role map: eig{{FAMILY,POS,POLE}}=OCCUPIED; "
      f"zero{{POS}}=CANDIDATE(Weil/ZETA.WEIL.RECOVERY); "
-     f"zero{{FAMILY}}=VACANT(F1 over Z)")
+     f"zero{{FAMILY}}=NOT-CONSTRUCTED-IN-CORPUS(F1-style open)")
 info(f"f8 growth alpha = {alpha_f8:.6f}; tau growth alpha = {alpha_tau:.6f}")
-info(f"crude C' = {C_prime:.6g}; Landau K_eps(f8) = {K_need:.6g}; "
-     f"K_tau = {K_tau:.6g}")
-info("Next lever: supply an over-Z FAMILY whose nonnegative aggregated")
-info("coefficients have singularity structure controlling zero locations")
-info("(Weil-positivity side already contracted; F1 family still vacant).")
+info(f"crude C' = {C_prime:.6g}; finite K_eps(f8) = {K_need:.6g}; "
+     f"finite K_tau = {K_tau:.6g}")
+info("CORRECTION: partial-sum growth controls the mean; no q->q-1+eps "
+     "pointwise exponent drop follows.  Sharp prime bounds are Deligne-external.")
+info("Open direction: construct an over-Z all-place object whose independently")
+info("positive pairing represents the Weil form; this audit does not claim")
+info("that a single missing family cell is sufficient or unique.")
 info("Not a promotion candidate — role map / mechanism miniature only.")
 
 check(
-    f"VERDICT = {verdict} (M1 chain={m1_chain}, M3={m3_ok})",
-    verdict == "MINIATURE-RUNS",
+    f"VERDICT = {verdict} (M1 corrected={m1_audit_ok}, M3={m3_ok})",
+    verdict == "RANKIN-EXPONENT-DROP-FALSIFIED; FINITE-IDENTITIES-SURVIVE"
+    and CORRECTION_STATUS == "RANKIN_EXPONENT_DROP_FALSIFIED",
 )
 
 elapsed = time.time() - T0

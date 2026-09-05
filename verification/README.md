@@ -1,5 +1,12 @@
 # TFPT computational verification suite
 
+> **Strict scope (2026-09-05).** The suite currently contains 1,018 registered modules. Passing
+> them verifies the stated finite, analytic and regression claims; it does not close the physical
+> TOE contract. Round 3 (`v1022`–`v1025`) closes only narrow subgates, while every T1–T8 gate and
+> `TFPT.TOE.COMPLETE.01` remains `[O]`. A shared 3+1D parent satisfying T3–T8 is still missing.
+> Older “residual gate” language below is scoped to its named compiler/seam layer unless it
+> explicitly cites the TOE contract.
+
 Every load-bearing numerical / arithmetic claim marked **[I]** (exact identity),
 **[L]** (Lie/lattice theorem) or **[N]** (numerical fixed point) in the six TFPT
 documents is re-derived here from the two axioms alone:
@@ -16,13 +23,14 @@ against the value quoted in the papers.
 ```bash
 cd verification
 python3 -m venv .venv && source .venv/bin/activate   # or reuse an existing venv
-pip install mpmath numpy sympy
-python run_all.py            # runs all 1012 modules, exits 0 iff all pass
+pip install -r ../requirements.txt
+python run_all.py            # runs all 1018 modules, exits 0 iff all pass
 python v1_e8_glue.py         # any single module also runs standalone
 ```
 
-Dependencies: `mpmath`, `numpy`, `sympy` for the claim suite (`run_all.py`,
-`v1`..`v13`). The two helper generators need extra packages: `make_figures.py`
+Dependencies: install the pinned top-level `requirements.txt`; v1022 and v1025
+add native `python-flint==0.9.0` Arb/Acb certificates and do not run in Pyodide.
+The two helper generators need extra packages: `make_figures.py`
 also needs `matplotlib` (writes `../figures/*.pdf`); `make_manifest.py` needs
 only the standard library (writes `../manifest.sha256`).
 

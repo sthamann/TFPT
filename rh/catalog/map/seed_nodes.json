@@ -331,7 +331,7 @@
     "definition": "A distributional identity relating sums over zeta zeros to prime-power and archimedean terms.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "rh-core"
@@ -483,7 +483,7 @@
     "definition": "The explicit-formula quadratic functional whose positivity on the admissible test class is equivalent to RH.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "weil"
@@ -503,7 +503,7 @@
     "definition": "The gamma-factor contribution to the Weil explicit-formula quadratic form.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "weil"
@@ -522,7 +522,7 @@
     "definition": "The prime-power contribution, weighted by the von Mangoldt function, in the Weil form.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "weil"
@@ -541,7 +541,7 @@
     "definition": "The contribution of the pole and trivial normalization terms in the Weil form.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "weil"
@@ -560,7 +560,7 @@
     "definition": "Nonnegativity of the Weil quadratic form on the full admissible test class.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "rh-equivalent",
@@ -3814,7 +3814,7 @@
     "status": "CLASSICAL",
     "sources": [
       "Tate, Thesis, 1950",
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "adelic",
@@ -3858,7 +3858,7 @@
     "status": "CLASSICAL",
     "sources": [
       "Guinand, Proc. London Math. Soc. 50 (1948)",
-      "Weil, Acta Math. 76 (1952), pp. 1–9"
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265"
     ],
     "tags": [
       "explicit-formula",
@@ -3879,7 +3879,7 @@
     "definition": "Nonnegativity of the full Weil form: the archimedean-plus-pole contribution dominates the prime contribution for every admissible test function; equivalent to RH on the full class.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "rh/paper/rh_program.tex:733-791"
     ],
     "tags": [
@@ -4505,7 +4505,7 @@
     "definition": "RH is equivalent to Bochner positivity of the Weil kernel, to OS reflection positivity of the Wick-rotated kernel under the functional-equation reflection, and to Hilbert–Pólya.",
     "status": "CLASSICAL",
     "sources": [
-      "Weil, Acta Math. 76 (1952), pp. 1–9",
+      "A. Weil, Commun. Sem. Math. Univ. Lund, Suppl. (1952), pp. 252–265",
       "Widder, The Laplace Transform; Bernstein theorem",
       "Osterwalder–Schrader, Comm. Math. Phys. 31 (1973)"
     ],
@@ -5125,6 +5125,187 @@
     "alive": true
   },
   {
+    "id": "tate-trace-projector",
+    "type": "THEOREM",
+    "name": "Scalar Tate trace projector",
+    "aliases": [
+      "Tate projector",
+      "End(V) scalar projector"
+    ],
+    "definition": "For a two-dimensional representation V, e_T(A)=Tr(A)I/2 is an equivariant self-adjoint idempotent whose image is the scalar Tate line Q(0).",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v1021_all_place_tate_rank_audit.py",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "tate",
+      "calabi-yau",
+      "exact"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "tate-information-loss",
+    "type": "BARRIER",
+    "name": "Tate projection information loss",
+    "aliases": [
+      "Tate information loss",
+      "universal scalar-line barrier"
+    ],
+    "definition": "The scalar Q(0) image contains no level, Hecke, Calabi-Yau or E8/H8 data. Projective representation data surviving in End(V) lie in Ad0(V), while scalar-twist, sign and realization data may be lost altogether.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v1021_all_place_tate_rank_audit.py",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "tate",
+      "barrier",
+      "positivity"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "fixed-finite-carrier-rank-obstruction",
+    "type": "BARRIER",
+    "name": "Fixed finite-carrier rank-nullity lemma",
+    "aliases": [
+      "finite carrier no-go",
+      "finite-rank pullback obstruction"
+    ],
+    "definition": "A linear map from a source with dimension larger than one fixed finite carrier has a kernel; the exact pullback of any bilinear carrier form vanishes on that kernel.",
+    "status": "PROVED_HERE",
+    "sources": [
+      "verification/v1021_all_place_tate_rank_audit.py",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "rank",
+      "barrier",
+      "finite",
+      "linear"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "strict-weil-window-floor-zhu",
+    "type": "CRITERION",
+    "name": "Zhu v2 strict Weil-window floor (external)",
+    "aliases": [
+      "external strict-window premise",
+      "Zhu compact-window floor"
+    ],
+    "definition": "An external v2 preprint reports a certified positive lower bound for the Weil form on a compact window. The repository does not re-prove or independently certify this premise.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "arXiv:2608.24827v2",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "external",
+      "preprint",
+      "weil",
+      "window"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "all-place-tate-weil-realization",
+    "type": "OPEN_QUESTION",
+    "name": "All-place Tate--Weil realization",
+    "aliases": [
+      "Tate-Weil realization theorem",
+      "all-place correspondence compiler"
+    ],
+    "definition": "Construct a zero-independent infinite-dimensional or compatible direct-limit family of arithmetic correspondences whose complete finite, archimedean and pole intersection pairing is exactly the polarized Weil form.",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "all-place",
+      "tate",
+      "arakelov",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "absolute-twistor-line",
+    "type": "GEOMETRY",
+    "name": "Absolute twistor line",
+    "aliases": [
+      "absolute curve with twistor infinity",
+      "compactified Spec Z twistor line"
+    ],
+    "definition": "The Connes--Consani preprint's absolute curve candidate joining finite prime places to an archimedean F_1^2 twistor component; no required global intersection pairing or Hodge-index theorem is supplied.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "arXiv:2609.00299",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "absolute-geometry",
+      "twistor",
+      "preprint",
+      "all-place"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "rankin-mean-pointwise-exponent-drop",
+    "type": "BARRIER",
+    "name": "Rankin mean-to-pointwise exponent drop",
+    "aliases": [
+      "q to q-1+epsilon inference",
+      "T49 exponent drop"
+    ],
+    "definition": "The inference A(X)=O(X^q) with nonnegative coefficients implies b_n=O(n^(q-1+epsilon)) is false; a sparse exact counterexample preserves both the leading mean and pole.",
+    "status": "KILLED_HERE",
+    "sources": [
+      "verification/v1021_all_place_tate_rank_audit.py",
+      "DOI:10.1017/S0305004100021101",
+      "rh/catalog/analysis/all_place_tate_audit.md"
+    ],
+    "tags": [
+      "rankin",
+      "counterexample",
+      "killed"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "petz-watatani-tate-network",
+    "type": "OPEN_QUESTION",
+    "name": "Petz--Watatani--Tate network",
+    "aliases": [
+      "all-place UCP Tate network",
+      "compatible conditional-expectation network"
+    ],
+    "definition": "Can compatible Hecke-equivariant conditional expectations converge normally to an infinite all-place carrier whose pullback is the complete signed Weil form rather than a finite positive proxy?",
+    "status": "OPEN",
+    "sources": [
+      "rh/catalog/analysis/all_place_tate_audit.md",
+      "verification/v801_prime_cp_intertwiner.py"
+    ],
+    "tags": [
+      "quantum",
+      "ucp",
+      "all-place",
+      "open"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
     "id": "arithmetic-topology-prime-knots",
     "type": "GEOMETRY",
     "name": "Arithmetic topology of primes and knots",
@@ -5357,6 +5538,140 @@
     "tags": [
       "quantum-geometry",
       "shape-irrelevant"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "burnol-lower-bound",
+    "type": "THEOREM",
+    "name": "Burnol lower bound",
+    "aliases": [
+      "Burnol NB lower bound",
+      "multiplicity-squared NB bound"
+    ],
+    "definition": "Unconditionally, liminf E_N log N is at least the sum of m(rho)^2/|rho|^2 over distinct zeta zeros on the critical line.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Burnol, Advances in Mathematics 170 (2002), 56-70, DOI:10.1006/aima.2001.2066"
+    ],
+    "tags": [
+      "nyman-beurling",
+      "lower-bound",
+      "zeros"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "baez-duarte-rate-conjecture",
+    "type": "OPEN_QUESTION",
+    "name": "Báez-Duarte rate conjecture",
+    "aliases": [
+      "E_N asymptotic",
+      "C_BD over log N"
+    ],
+    "definition": "The expected asymptotic E_N sim C/log N, with C given by the multiplicity-weighted zero sum and by 2+gamma-log(4pi) under RH and simple zeros.",
+    "status": "CONJECTURAL",
+    "sources": [
+      "Bettin-Conrey-Farmer, Proc. Steklov Inst. Math. 280 (2013), S30-S36",
+      "Burnol, Advances in Mathematics 170 (2002)"
+    ],
+    "tags": [
+      "nyman-beurling",
+      "baez-duarte",
+      "rate"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "dyadic-block-capture-eta",
+    "type": "OPEN_QUESTION",
+    "name": "Dyadic block capture eta",
+    "aliases": [
+      "eta_k capture conjecture",
+      "binary NB block capture"
+    ],
+    "definition": "Whether the residualized span of u_n=2r_2n-r_n for N/2<n<=N captures eta_k at least c/k of the Nyman-Beurling residual for one c>0.",
+    "status": "OPEN",
+    "sources": [
+      "experiments/tfpt-discovery/nb_dyadic_capture_probe.py",
+      "rh/catalog/analysis/external_proposals_heat_nb.md"
+    ],
+    "tags": [
+      "nyman-beurling",
+      "dyadic",
+      "schur-complement",
+      "positive-geometry"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "gaussian-smoothed-zero-density",
+    "type": "OBJECT",
+    "name": "Gaussian-smoothed transformed zero density",
+    "aliases": [
+      "heat-normalized Gabor zero density",
+      "H(a,omega)"
+    ],
+    "definition": "The distribution pi sqrt(2pi) times the heat-kernel convolution of the real part of the transformed zeta-zero measure.",
+    "status": "CLASSICAL",
+    "sources": [
+      "experiments/tfpt-discovery/heat_gabor_restatement_probe.py",
+      "rh/lean/RH/GaborCountableCriterion.lean"
+    ],
+    "tags": [
+      "weil",
+      "gabor",
+      "heat-kernel",
+      "explicit-formula"
+    ],
+    "attempt_count": 0,
+    "alive": true
+  },
+  {
+    "id": "negative-explosion-criterion-a",
+    "type": "CRITERION",
+    "name": "Negative-explosion criterion A",
+    "aliases": [
+      "dyadic heat-grid lower bound",
+      "criterion A"
+    ],
+    "definition": "A dyadic-grid lower bound on the heat-normalized Gabor zero side whose violation under an off-line exposed orbit grows like exp(sigma^2/(2a)).",
+    "status": "PROVED_HERE",
+    "sources": [
+      "rh/lean/RH/GaborExposedOrbit.lean",
+      "experiments/tfpt-discovery/heat_gabor_restatement_probe.py"
+    ],
+    "tags": [
+      "weil",
+      "gabor",
+      "equivalent-strength",
+      "restatement"
+    ],
+    "attempt_count": 0,
+    "alive": false
+  },
+  {
+    "id": "vasyunin-gram-matrix",
+    "type": "OBJECT",
+    "name": "Vasyunin Nyman-Beurling Gram matrix",
+    "aliases": [
+      "Vasyunin cotangent Gram",
+      "NB Gram matrix"
+    ],
+    "definition": "The explicit Gram matrix of fractional-part dilations, expressible through periodic digamma sums or Vasyunin cotangent sums.",
+    "status": "CLASSICAL",
+    "sources": [
+      "Vasyunin, Algebra i Analiz 7 (1995), 118-135",
+      "Landreau-Richard, Experimental Mathematics 11 (2002), 349-360"
+    ],
+    "tags": [
+      "nyman-beurling",
+      "gram-matrix",
+      "cotangent-sum"
     ],
     "attempt_count": 0,
     "alive": true

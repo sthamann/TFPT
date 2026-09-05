@@ -149,16 +149,19 @@ const BLOCKS: Block[] = [
     tone: "border-amber-400/30 bg-amber-500/[0.05]",
     body: (
       <>
-        Exactly three named interfaces, none hidden:{" "}
+        The compiler residual has exactly three named interfaces, none hidden:{" "}
         <span className="font-mono">v_geo</span> (one dimensionful scale anchor,
         the same nature as 1/G, [O]), <span className="font-mono">G_net</span> (the
         seam-net metric inclusion — algebra discharged to [E]; the seam keystone now
         [C], closed modulo cited theorems), and <span className="font-mono">F_transfer</span>{" "}
         (the source→pole/relic/cosmology transport — Koide, η_B, the axion relic,
         m_p/m_e are its four instances, now runnable typed solvers v371–v375 [C]).
-        The whole boundary-QFT layer (Dirac, cutoff, gauging, glue) collapses onto
-        the same <span className="font-mono">G_net</span> premise via the Modular
-        Spectral Closure (v258–v261) — one relative object, no new open item. That
+        Beside that compiler residual sits Rest_TOE: every T1–T8 gate and
+        TFPT.TOE.COMPLETE.01 remains [O], and no shared 3+1D parent has been
+        constructed. Within the historical finite boundary-net/MMST lane, the
+        listed Dirac, cutoff, gauging and glue data reduce to the same{" "}
+        <span className="font-mono">G_net</span> premise via the Modular Spectral
+        Closure (v258–v261); this is not a strict-TOE closure. That
         premise is now closed modulo cited theorems via the Seam Equivalence Theorem{" "}
         <span className="font-mono">SEAM.EQUIV.01</span> (the raw RP seam IS the
         holomorphic (E₈)₁ net at τ=i): the target net is pinned at every computable
@@ -167,7 +170,9 @@ const BLOCKS: Block[] = [
         theorems, leaving [O] = the cited continuum scaling-limit existence only
         (v336; extension leg on the peer-reviewed crossed-product package,
         realisation at invariant level, v469; stays [O]); its conformal-deck
-        face QGEO.SYM.01 is a corollary. The
+        face QGEO.SYM.01 is a corollary. Round 3 (v1022–v1025) adds only narrow
+        T2/T4/T6–T8 certificates and no-gos; v1022 and v1025 require native
+        python-flint/Arb and are not browser certificates. The
         step-by-step reduction lives on the{" "}
         <Link href="/changelog" className="font-semibold text-blue-300 hover:text-blue-200">
           changelog

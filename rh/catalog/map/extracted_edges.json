@@ -1,6 +1,6 @@
 {
   "claim_boundary": "Research map only. No claim for or against RH.",
-  "records_scanned": 2035,
+  "records_scanned": 2039,
   "edges": [
     {
       "src": "hilbert-polya-operator",
@@ -1227,6 +1227,22 @@
       "note": "Lexical mention in catalog record; outcome=RESTATED."
     },
     {
+      "src": "open-global-all-place-intersection",
+      "dst": "rh/catalog/analysis/all_place_tate_audit.md",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
+      "src": "weil-quadratic-form",
+      "dst": "rh/catalog/analysis/all_place_tate_audit.md",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:rh/catalog/analysis/all_place_tate_audit.md",
+      "note": "Lexical mention in catalog record; outcome=RESTATED."
+    },
+    {
       "src": "terminal-statement",
       "dst": "rh/lean/RH/Augmented.lean",
       "rel": "USED_BY",
@@ -1715,6 +1731,14 @@
       "note": "Lexical mention in catalog record; outcome=CERTIFIED."
     },
     {
+      "src": "tate-trace-projector",
+      "dst": "verification/v1021_all_place_tate_rank_audit.py",
+      "rel": "USED_BY",
+      "strength": "HEURISTIC",
+      "source": "catalog:verification/v1021_all_place_tate_rank_audit.py",
+      "note": "Lexical mention in catalog record; outcome=PROVED."
+    },
+    {
       "src": "tfpt-e8-lattice",
       "dst": "verification/v536_eichler_trace_layer.py",
       "rel": "USED_BY",
@@ -1861,7 +1885,7 @@
     }
   ],
   "counts": {
-    "used_by": 214,
+    "used_by": 217,
     "killed_by": 17,
     "llm_used_by": 0,
     "co_occurs": 1

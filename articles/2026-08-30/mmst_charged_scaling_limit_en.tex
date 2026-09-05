@@ -1052,6 +1052,23 @@ in-house attempt; by the stop rule TEL-b is now typed
 \texttt{TEL-B-EXTERNAL}.  No all-$N$ constant is claimed.
 \end{remark}
 
+\begin{remark}[Round-3 supersession, 2026-09-05]
+The preceding verdict records the historical raw-Hankel attempt.  It is not the
+current TEL-b residue.  Native $256$-bit Arb/Acb arithmetic on $5812$ rational
+cells now proves
+\[
+ \mathrm{TV}_p(F'')\le15.8176959629889243576\ldots<15.928674,
+ \qquad K_3^{\mathrm{TV}}<2.517464500835,
+\]
+including the exact Hilbert--Schmidt cut jump $2$
+(\texttt{v1022\_telb\_round3\_certificates.py}).  Separately, a $100$-bit
+certificate over $3888$ analytic rectangles proves
+$C_\star<0.1525$, and the Peano/Euler argument proves
+$\sup_k|\varphi_N(k)|<0.509/N$ for every even $N\ge16$
+(\texttt{v1025\_telb\_c1\_c2a\_certificates.py}).  These close the TV, C1 and
+C2a inputs, not all of TEL-b; the exact current CF/DG residue is stated below.
+\end{remark}
+
 \subsection{Third angle: certified finite part plus a dyadic tail}
 
 There are two natural full-CAR one-particle embeddings from circumference
@@ -1141,6 +1158,13 @@ ordinary double-precision diagnostics.  Arbitrary-precision
 \texttt{mpmath} output alone is not a rigorous interval certificate;
 because the prerequisite tail theorem failed, no floating-point value
 is relabelled as certified.
+\end{remark}
+
+\begin{remark}[The dyadic-increment route is retired]
+Equations~\eqref{eq:Rscalarresidue}--\eqref{eq:Rdyadicbound} are retained as
+an audit trail, not as the current proof route.  The cover/sawtooth reduction
+and the round-3 C1/C2a/TV certificates supersede this proposed scalar
+increment.  No all-$N$ conclusion is imported from the measurements above.
 \end{remark}
 
 \paragraph{Third-angle audit.}
@@ -1325,6 +1349,21 @@ proved is the uniform microscopic phase-space estimate and the second,
 upper-inclusion line of \eqref{eq:EXHsharp}.  These are precisely the
 ``no extra ultraviolet operators'' content; no arithmetic or finite
 sector census can establish them.
+\end{remark}
+
+\begin{remark}[Binding ALG2 correction, 2026-09-05]
+The former claim that Fourier/Vandermonde interpolation automatically proves
+the second line of \eqref{eq:EXHsharp} for
+$\B_N^{\rm gen}(I)$ is withdrawn.  The exact one-mode countermodel in
+\texttt{v1022\_telb\_round3\_certificates.py} has full CAR algebra $M_2$,
+whereas its even/code-generated subalgebra is diagonal; the annihilator is at
+distance at least $1$ from that subalgebra.  Vandermonde inversion reaches a
+full-CAR compression, but does not identify the microscopic generated algebra.
+Consequently the upper inclusion requires an independent FE-GEN
+compression-surjectivity theorem, or a precise gauge/code-projected
+microscopic-algebra argument.  The positive phase-space/ALG1 reading is also
+conditional on the generated projection containing the microscopic
+low-energy sectors.
 \end{remark}
 
 \begin{theorem}[Exact reduction of L2]\label{thm:L2reduction}
@@ -1713,9 +1752,9 @@ Theorem~\ref{thm:TELa}: explicit second-quantized Shannon embeddings,
 $p=3$, $\epsilon=1$, and rate $N^{-2}$ for fields and adjoints.\\
 TEL-b & Full-CAR two-edge remainder has an all-$N$ bound &
 \mG &
-Typed \texttt{TEL-B-EXTERNAL}.  The third embedding-tail attempt has
-defect $\simeq2.07$, not $O(N^{-2})$; only an unproved scalar $O(N^{-1})$
-increment remains.\\
+TV, C1 and C2a are proved by native interval/analytic certificates
+(v1022/v1025); the analytic scalar C2b contribution is $<0.400$.
+The full-CAR collar bound remains open exactly at CF and DG below.\\
 L2a & Edge-projected strong convergence on the finite-energy core &
 \mP &
 The dyadic telescoping series converges by Theorem~\ref{thm:TELa}.\\
@@ -1766,36 +1805,30 @@ separate.\\
 \setlength{\fboxsep}{10pt}
 \fcolorbox{red!65!black}{red!3}{
 \begin{minipage}{0.92\textwidth}
-\textbf{Single remaining gap box:
-  microscopic exhaustion (with one external analytic input).}
+\textbf{Remaining microscopic-exhaustion gaps (status 2026-09-05).}
 
 \smallskip
-The Green-form part and the edge-mode graph part are no longer
-assumptions: Theorems~\ref{thm:UGF} and \ref{thm:TELa} prove them with
-$K_G=\pi^2/4$ and dyadic rate $N^{-2}$.  What remains is to identify
-that edge-mode system with the sharply localized scaling algebra of the
-sixteen-Majorana $M=1$, $N_y=8$ microscopic collar.
+The Green-form and edge-mode graph parts are no longer assumptions:
+Theorems~\ref{thm:UGF} and \ref{thm:TELa} prove them with
+$K_G=\pi^2/4$ and dyadic rate $N^{-2}$.  Round-3 certificates close the
+interval-TV input, C1 and C2a.  The analytic scalar part of C2b is
+$c_{\rm potential}=0.399224424139106\ldots<0.400$.  This does not yet
+identify the edge-mode system with the sharply localized scaling algebra
+of the sixteen-Majorana $M=1$, $N_y=8$ microscopic collar.
 
 \smallskip\noindent
-\textbf{(TEL-B-EXTERNAL) Matrix-valued two-edge estimate.}
-For the cofinal dyadic scaling sequence, an external specialist must
-certify $\norm{R_{96}}_{\HS}$ by rigorous interval arithmetic and prove
+\textbf{(TEL-B-EXTERNAL) Exact remaining C2b estimates.}
+For every even $N\ge16$, prove
 \[
- \left|\norm{R_{2N}}_{\HS}-\norm{R_N}_{\HS}\right|
- \le\frac{A_R}{N}\qquad(N=96\cdot2^k,\ k\ge0)
+ \sqrt N\,\norm{(K'_N-K_N)_{\rm offdiag}}_{\HS}\le0.139,
+ \qquad
+ \sqrt N\,\norm{(\mathrm{Res}_N-K_N)_{\rm diag}}_{\HS}\le0.060.
 \]
-with one explicit $A_R$.  Then
-\[
- C_R^{\rm dyad}
- :=\sup_{k\ge0}\norm{R_{96\cdot2^k}}_{\HS}
- \le R_{96}^{+}+\frac{2A_R}{96}.
-\]
-The target $C_R^{\rm dyad}<3$ requires only
-$A_R<48(3-R_{96}^{+})\simeq42.956$; the measured products
-$N|\norm{R_{2N}}-\norm{R_N}|$ are $0.120$--$0.123$ but are not a proof.
-A supremum over every integer $N$ is stronger than this dyadic scaling
-theorem needs.  Separately, \textup{(ALG-EXH)} must control the
-microscopic charged implementer relative to the edge-mode implementer.
+The two components are Hilbert--Schmidt orthogonal.  Combined with the
+certified scalar contribution, these bounds close the stated
+$c_E\le0.542702$ budget.  Finite observations are smaller, but neither
+all-$N$ estimate is presently proved.  The old scalar dyadic-increment
+route is retired and is not an alternative premise.
 
 \smallskip\noindent
 \textbf{(ALG-EXH) Buchholz--Verch upper inclusion.}
@@ -1814,12 +1847,15 @@ prove, for every interval $I$,
 Equivalently, no bounded local ultraviolet sequence survives outside
 the neutral currents and the four charged grades.  Relative locality
 and outerness are already Theorems~\ref{thm:relativeLocality} and
-\ref{thm:outerness}; they are not part of this residue.
+\ref{thm:outerness}; they are not part of this residue.  The binding
+ALG2 correction above means that full-CAR Vandermonde interpolation does
+not prove this inclusion for $\B_N^{\rm gen}$; FE-GEN or an exact
+gauge/code-projected microscopic-algebra theorem is independently required.
 
 \smallskip
-For the edge-projected theorem, \textup{(ALG-EXH)} is the sole remaining
-hypothesis.  For the original microscopic CAR formulation,
-\textup{(TEL-B-EXTERNAL)} is a named analytic input to that exhaustion.
+For the edge-projected theorem, \textup{(ALG-EXH)} remains the sole hypothesis.
+For the original microscopic-collar formulation, CF and DG are additional
+analytic inputs to that exhaustion.
 Once \eqref{eq:EXHsharp} holds, L1/L2 are complete and L3 plus the cited
 L4 chain finish the theorem.
 \end{minipage}}
@@ -1838,10 +1874,12 @@ crossed-product/expectation limit is proved, and the holomorphic $c=8$
 endpoint is rigid once a local conformal limit with the charged field
 exists.  The unresolved point is the support-preserving identification
 of this edge-mode limit with the full microscopic CAR local scaling
-algebra.  In particular, the all-$N$ TEL-b remainder bound is still
-typed \texttt{TEL-B-EXTERNAL}; replacing it by the $N\le96$ HS plateau
-would be mathematically invalid.  Relative locality and outerness are
-proved, leaving only the Buchholz--Verch upper inclusion in house.
+algebra.  For the original microscopic collar, TEL-b has been reduced
+past TV/C1/C2a and the scalar C2b budget to the two all-$N$ estimates CF
+and DG; neither is replaced by a finite plateau.  Relative locality and
+outerness are proved.  The remaining in-house algebraic obligation is
+the Buchholz--Verch upper inclusion with the binding FE-GEN/gauge-code
+qualification; the original collar additionally needs CF and DG.
 
 \begin{thebibliography}{99}
 

@@ -72,12 +72,15 @@ License: documents CC-BY; code MPL-2.0
   do not apply.
 - No certified strict Theory of Everything; no dimensionful constant is claimed
   as a derivation from pure numbers (one metrology unit, v_geo, stays open).
+- Round 3 (v1022-v1025) certifies or obstructs only narrow T2/T4/T6-T8 subgates.
+  Every T1-T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and no shared 3+1D
+  parent has been constructed. v1022 and v1025 require native python-flint/Arb.
 
 ## Key pages
 - Overview: ${SITE_URL}
 - Reading guide (start here): ${SITE_URL}/orientation
 - How the compiler works: ${SITE_URL}/compiler
-- Interactive verification (reproduce each claim in-browser): ${SITE_URL}/verification
+- Interactive verification (browser-compatible checks plus pinned native reproduction paths): ${SITE_URL}/verification
 - How to falsify TFPT (kill tests): ${SITE_URL}/falsification
 - For reviewers: ${SITE_URL}/review
 - Hostile-referee FAQ: ${SITE_URL}/faq

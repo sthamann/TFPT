@@ -107,16 +107,16 @@ function ResidualTreemap() {
 }
 
 /**
- * The single closing condition (v234/v235): the whole structural residual is one
- * condition with three provably-equivalent faces, all forcing E₈. This states the
- * current end-point only — the sprint-by-sprint reduction history lives on /changelog
- * and in the research contracts, not in this reader-facing block.
+ * The historical finite seam/compiler closing condition (v234/v235) has three
+ * provably-equivalent faces, all forcing E₈. This is not the strict physical TOE
+ * residual: T1–T8 remain separate [O] gates. The sprint-by-sprint reduction
+ * history lives on /changelog and in the research contracts.
  */
 function ClosingCondition() {
   return (
     <figure className="mt-8 rounded-2xl border border-emerald-400/25 bg-emerald-500/[0.04] p-5 sm:p-6">
       <figcaption className="text-sm font-semibold text-emerald-200">
-        The structural residual is{" "}
+        The historical finite seam/compiler residual is{" "}
         <span className="underline decoration-emerald-400/40 underline-offset-4">
           one condition
         </span>{" "}
@@ -150,8 +150,9 @@ function ClosingCondition() {
         </Math>
       </div>
       <p className="mt-4 text-sm leading-relaxed text-slate-300">
-        <span className="font-semibold text-emerald-200">In short.</span> The whole boundary QFT collapses
-        onto this one premise (the Modular Spectral Closure, v258–v261), so{" "}
+        <span className="font-semibold text-emerald-200">In short.</span> Within the historical finite
+        boundary-net/MMST lane, the Modular Spectral Closure (v258–v261) reduces the listed Dirac,
+        cutoff, gauging and glue data to this one premise, so{" "}
         <span className="font-mono text-emerald-200">SEAM.EQUIV.01</span> is{" "}
         <span className="text-emerald-200">closed modulo cited theorems</span>: the explicit lattice model
         (v367/v368) and the S3 stack (v376–v379, ground-state witnesses v489/v490) pin the target at every computable level, Lean-pinned
@@ -181,7 +182,8 @@ function ClosingCondition() {
             <span className="font-semibold text-slate-300">Seam keystone.</span> The keystone&apos;s residual is
             a composition of standard cited theorems (OS/clustering, the Kitaev free-fermion classification,
             the AQFT stack) over established TFPT facts — Lean-pinned to those named steps plus the derived gap
-            Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, no undischarged TFPT-internal assumption. Its two heavy legs are
+            Δ = 6·ln(3/2) ≈ 2.43 &gt; 0, with no further finite MMST/compiler assumption in that lane.
+            The strict physical TOE obligations remain separate. Its two heavy legs are
             literature-anchored (v336): the MMST continuum scaling limit and the Adamo–Moriwaki–Tanimoto OS
             reconstruction, with (E₈)₁ inside their range (c=8, rank 8, 16 Majoranas) — and the 128-spinor
             extension leg is now certified at net level by the peer-reviewed crossed-product package (v469,
@@ -193,14 +195,21 @@ function ClosingCondition() {
             provably does not need the ambient measure.
           </p>
           <p>
-            <span className="font-semibold text-slate-300">4D-QFT fork (v265).</span> Boundary QFT — closed
-            modulo cited theorems; ambient QG — discharged as redundancy [C]; 4D GUT — not claimed (E₈ is the
+            <span className="font-semibold text-slate-300">4D-QFT fork (v265).</span> Finite boundary-net/MMST
+            lane — closed modulo cited theorems; ambient QG — discharged as redundancy [C]; 4D GUT — not claimed (E₈ is the
             audit hull, not a 4D gauge group); optional UV branch — carrier-native Pati–Salam, falsifiable by
             thresholds and proton decay. The sprint-by-sprint reduction (v234 → v302) is on the{" "}
             <Link href="/changelog" className="text-blue-300 underline-offset-2 hover:underline">
               changelog
             </Link>
             .
+          </p>
+          <p>
+            <span className="font-semibold text-amber-200">Strict TOE scope.</span> Round 3
+            (v1022–v1025) certifies or obstructs only narrow T2/T4/T6–T8 subgates.
+            Every T1–T8 gate and TFPT.TOE.COMPLETE.01 remain [O], and a shared 3+1D
+            parent is still absent. v1022 and v1025 require native python-flint/Arb;
+            they are not browser certificates.
           </p>
         </div>
       </details>
@@ -209,9 +218,9 @@ function ClosingCondition() {
 }
 
 /**
- * Trust section: what is still open. The whole structural residual collapses to one
- * condition (no abelian sector ⟹ E₈), plus the one irreducible scale and the typed
- * transfer functor — surfaced near the top as a credibility signal, not a footnote.
+ * Trust section: what is still open. The historical finite seam/compiler residual
+ * has one structural condition (no abelian sector ⟹ E₈), plus the scale and typed
+ * transfer interfaces. Rest_TOE and T1–T8 remain a separate open matrix.
  */
 export function OpenGates() {
   return (
@@ -224,7 +233,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live residual is three named items — Rest = v_geo ⊕ G_net ⊕ F_transfer — plus the strict-physical-TOE accounting Rest_TOE of the 2026-08-27/28 contract wave (ten named [O] summands; nothing claimed closed). Sharper still: the structural part (the metric inclusion and the carrier P2) is one condition that forces E₈ three equivalent ways — and the entire boundary-QFT layer (Dirac, cutoff, gauging, glue) now collapses onto that same condition via the Modular Spectral Closure. Nothing is hidden, nothing is overclaimed."
+          description="After the compiler closure the live compiler residual is Rest = v_geo ⊕ G_net ⊕ F_transfer. Beside it sits the strict-physical-TOE accounting Rest_TOE: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. The one-condition/E₈ reduction applies only to the historical finite seam/compiler and boundary-net/MMST lane. Round 3 (v1022–v1025) adds narrow T2/T4/T6–T8 certificates and no-gos, not a TOE closure."
         />
 
         <ClosingCondition />

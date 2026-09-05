@@ -3,8 +3,14 @@
 > The honest frontier. If you want to *close* one of these, see the "Try to break TFPT" section
 > of the [README](../README.md#try-to-break-tfpt) and open a claim challenge.
 
-**Current status (v5.4).** The discrete/algebraic compiler is closed (`[E]`). The honest residual
-is **three named interface problems** — not a diffuse list:
+> **Strict TOE status (2026-09-05).** `TFPT.TOE.COMPLETE.01` and every physical gate T1–T8
+> remain open (`[O]`). Round 3 (`v1022`–`v1025`) closes only narrow subgates and records finite
+> obstructions; it moves no parent marker. A single shared 3+1D parent satisfying T3–T8 is still
+> missing.
+
+**Compiler residual (historical v5.4 view, scope-corrected 2026-09-05).** The
+discrete/algebraic compiler is closed (`[E]`). Within that compiler accounting, the residual is
+**three named interface problems** — not a diffuse list:
 
 | Interface | Question | Status |
 |---|---|---|
@@ -12,7 +18,8 @@ is **three named interface problems** — not a diffuse list:
 | `G_net` | `SEAM.EQUIV.01`: the raw seam *is* the holomorphic `(E8)₁` net | `[C]` — closed modulo a cited theorem |
 | `F_transfer` | one functor, four typed interfaces (Koide, `η_B`, axion, `m_p/m_e`) | `[C]` |
 
-The remaining distance is therefore not a list but **one metrology unit** (`v_geo`, the No-Unit
+The remaining distance *within this compiler-residual accounting* is therefore not a list but
+**one metrology unit** (`v_geo`, the No-Unit
 Theorem, `v153`/`v364`) plus the **typed `F_transfer` interfaces** (Koide, `η_B`, axion, `m_p/m_e`
 — deliberately `[C]`, never compiler outputs), above the **cited-theorem ceiling** on the seam
 (`SEAM.EQUIV.01` closed modulo MMST + OS reconstruction, Lean `FORM.SEAM.MMST.01`) and with

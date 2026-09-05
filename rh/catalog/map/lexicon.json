@@ -5,18 +5,18 @@
     "analytic_object"
   ],
   "positivity-criterion": [
-    "Positivity criterion",
     "positivity criterion",
+    "Positivity criterion",
     "positivity_criterion"
   ],
   "spectral-framework": [
-    "Spectral framework",
     "spectral framework",
+    "Spectral framework",
     "spectral_framework"
   ],
   "arithmetic-geometry": [
-    "Arithmetic geometry",
     "arithmetic geometry",
+    "Arithmetic geometry",
     "arithmetic_geometry"
   ],
   "tfpt-compiler": [
@@ -25,8 +25,8 @@
     "tfpt_compiler"
   ],
   "obstruction-class": [
-    "Obstruction class",
     "obstruction class",
+    "Obstruction class",
     "obstruction_class"
   ],
   "research-question": [
@@ -42,8 +42,8 @@
   ],
   "riemann-xi": [
     "Riemann xi function ξ(s)",
-    "Riemann xi",
     "riemann xi",
+    "Riemann xi",
     "riemann_xi",
     "ξ(s)"
   ],
@@ -60,14 +60,14 @@
     "Re(s)=1/2"
   ],
   "critical-strip": [
-    "Critical strip",
     "critical strip",
+    "Critical strip",
     "critical_strip"
   ],
   "riemann-kernel": [
     "Riemann kernel Φ(u)",
-    "riemann kernel",
     "Riemann kernel",
+    "riemann kernel",
     "riemann_kernel",
     "Phi(u)",
     "Φ(u)"
@@ -86,8 +86,8 @@
   ],
   "mellin-transform": [
     "Mellin transform M",
-    "Mellin transform",
     "mellin transform",
+    "Mellin transform",
     "mellin_transform"
   ],
   "laplace-transform": [
@@ -108,8 +108,8 @@
   ],
   "von-mangoldt": [
     "von Mangoldt function Λ(n)",
-    "von mangoldt",
     "von Mangoldt",
+    "von mangoldt",
     "von_mangoldt",
     "Lambda(n)",
     "Λ(n)"
@@ -140,8 +140,8 @@
   ],
   "gue-statistics": [
     "Gaussian unitary ensemble",
-    "GUE statistics",
     "gue statistics",
+    "GUE statistics",
     "gue_statistics"
   ],
   "montgomery-conjecture": [
@@ -166,14 +166,14 @@
     "arch term"
   ],
   "weil-prime-term": [
-    "Weil prime term",
     "weil prime term",
+    "Weil prime term",
     "weil_prime_term",
     "prime term"
   ],
   "weil-pole-term": [
-    "Weil pole term",
     "weil pole term",
+    "Weil pole term",
     "weil_pole_term",
     "pole term"
   ],
@@ -185,8 +185,8 @@
     "Weil criterion"
   ],
   "gabor-zero-side": [
-    "Gabor zero side",
     "gabor zero side",
+    "Gabor zero side",
     "Gabor zero-side",
     "gabor_zero_side",
     "gaborZeroSide"
@@ -306,8 +306,8 @@
   "kps-theorem": [
     "KPS van Dantzig theorem",
     "van Dantzig pair",
-    "KPS theorem",
     "kps theorem",
+    "KPS theorem",
     "kps_theorem"
   ],
   "van-dantzig-pair": [
@@ -344,8 +344,8 @@
   ],
   "jensen-hyperbolicity": [
     "Jensen polynomial hyperbolicity",
-    "Jensen hyperbolicity",
     "jensen hyperbolicity",
+    "Jensen hyperbolicity",
     "jensen_hyperbolicity"
   ],
   "gorz-theorem": [
@@ -370,13 +370,13 @@
     "Berry-Keating"
   ],
   "connes-trace-formula": [
-    "Connes trace formula",
     "connes trace formula",
+    "Connes trace formula",
     "connes_trace_formula"
   ],
   "adele-class-space": [
-    "adele class space",
     "Adele class space",
+    "adele class space",
     "adele_class_space"
   ],
   "scaling-site": [
@@ -385,13 +385,13 @@
     "scaling_site"
   ],
   "selberg-trace-formula": [
-    "Selberg trace formula",
     "selberg trace formula",
+    "Selberg trace formula",
     "selberg_trace_formula"
   ],
   "modular-surface": [
-    "Modular surface",
     "modular surface",
+    "Modular surface",
     "modular_surface",
     "PSL2Z quotient"
   ],
@@ -401,22 +401,22 @@
     "eisenstein_series"
   ],
   "eisenstein-constant-term": [
-    "eisenstein constant term",
     "Eisenstein constant term",
+    "eisenstein constant term",
     "eisenstein_constant_term",
     "scattering term",
     "constant term"
   ],
   "epstein-zeta": [
     "Epstein zeta function",
-    "Epstein zeta",
     "epstein zeta",
+    "Epstein zeta",
     "epstein_zeta"
   ],
   "hecke-operator": [
     "Hecke operators",
-    "Hecke operator",
     "hecke operator",
+    "Hecke operator",
     "hecke_operator"
   ],
   "hecke-correspondence": [
@@ -447,8 +447,8 @@
   ],
   "arithmetic-hodge-index": [
     "Arithmetic Hodge index theorem",
-    "arithmetic hodge index",
     "arithmetic Hodge index",
+    "arithmetic hodge index",
     "arithmetic_hodge_index",
     "Yuan-Zhang"
   ],
@@ -460,8 +460,8 @@
   ],
   "weil-conjectures": [
     "Weil conjectures over finite fields",
-    "weil conjectures",
     "Weil conjectures",
+    "weil conjectures",
     "weil_conjectures"
   ],
   "deligne-rh": [
@@ -484,8 +484,8 @@
     "Herglotz"
   ],
   "bernstein-function": [
-    "Bernstein function",
     "bernstein function",
+    "Bernstein function",
     "bernstein_function"
   ],
   "completely-monotone": [
@@ -514,8 +514,8 @@
   ],
   "lambert-w": [
     "Lambert W function",
-    "lambert w",
     "Lambert W",
+    "lambert w",
     "Lambert-W",
     "lambert_w"
   ],
@@ -541,8 +541,8 @@
   ],
   "bohr-lift": [
     "Bohr transform",
-    "Bohr lift",
     "bohr lift",
+    "Bohr lift",
     "bohr_lift"
   ],
   "dirichlet-series-polytorus": [
@@ -569,8 +569,8 @@
   ],
   "cuntz-system": [
     "Cuntz algebra",
-    "cuntz system",
     "Cuntz system",
+    "cuntz system",
     "cuntz_system"
   ],
   "ucp-map": [
@@ -643,8 +643,8 @@
   ],
   "efrat-determinant": [
     "Efrat determinant formula",
-    "Efrat determinant",
     "efrat determinant",
+    "Efrat determinant",
     "efrat_determinant"
   ],
   "regulator-jump": [
@@ -718,14 +718,14 @@
   "cm-seam": [
     "Gaussian seam",
     "CM seam τ=i",
-    "cm seam",
     "CM seam",
+    "cm seam",
     "cm_seam",
     "tau=i"
   ],
   "gaussian-e8-module": [
-    "Gaussian E8 module",
     "gaussian e8 module",
+    "Gaussian E8 module",
     "gaussian_e8_module",
     "Gaussian E8",
     "v714"
@@ -746,8 +746,8 @@
     "scrarith_world"
   ],
   "seam-geodesic": [
-    "seam geodesic",
     "Seam geodesic",
+    "seam geodesic",
     "seam_geodesic"
   ],
   "gate-zero": [
@@ -785,12 +785,12 @@
     "lambda*"
   ],
   "quadrep": [
-    "Quadrep",
-    "quadrep"
+    "quadrep",
+    "Quadrep"
   ],
   "inner-bridges": [
-    "Inner bridges",
     "inner bridges",
+    "Inner bridges",
     "inner_bridges"
   ],
   "outer-bridges": [
@@ -799,14 +799,14 @@
     "outer_bridges"
   ],
   "relay-lead-law": [
-    "Relay lead law",
     "relay lead law",
+    "Relay lead law",
     "relay_lead_law"
   ],
   "narrowband-weil": [
     "Narrowband Weil probe",
-    "narrowband weil",
     "narrowband Weil",
+    "narrowband weil",
     "narrowband_weil"
   ],
   "arch-rate": [
@@ -821,8 +821,8 @@
   ],
   "finite-weil-window": [
     "compact Weil window",
-    "Finite Weil window",
     "finite weil window",
+    "Finite Weil window",
     "finite_weil_window",
     "window form"
   ],
@@ -892,8 +892,8 @@
   "barrier-nonreal-cofactor-zeros": [
     "barrier nonreal cofactor zeros",
     "barrier_nonreal_cofactor_zeros",
-    "Non-real cofactor zeros",
-    "non-real cofactor zeros"
+    "non-real cofactor zeros",
+    "Non-real cofactor zeros"
   ],
   "barrier-world-blind": [
     "barrier world blind",
@@ -911,14 +911,14 @@
   "barrier-structural-mismatch": [
     "barrier structural mismatch",
     "barrier_structural_mismatch",
-    "structural mismatch",
-    "Structural mismatch"
+    "Structural mismatch",
+    "structural mismatch"
   ],
   "barrier-no-bridge": [
     "barrier no bridge",
     "barrier_no_bridge",
-    "no bridge",
     "No bridge",
+    "no bridge",
     "NO_BRIDGE"
   ],
   "open-gabor-window-positivity": [
@@ -958,8 +958,8 @@
     "prime phase control"
   ],
   "open-half-density-geometry": [
-    "half-density from geometry",
     "Half-density from geometry",
+    "half-density from geometry",
     "half-density-from-geometry",
     "open half density geometry",
     "open_half_density_geometry",
@@ -974,8 +974,8 @@
   ],
   "finite-clock-commensurability": [
     "finite clock commensurability",
-    "Finite-clock commensurability",
     "finite-clock commensurability",
+    "Finite-clock commensurability",
     "finite-clock eventlog barrier",
     "finite_clock_commensurability",
     "prime-period no-go"
@@ -1046,8 +1046,8 @@
     "SOS Pontryagin"
   ],
   "kasteleyn-orientation-language": [
-    "kasteleyn orientation language",
     "Kasteleyn orientation language",
+    "kasteleyn orientation language",
     "kasteleyn_orientation_language",
     "value-preserving orientation",
     "Kasteleyn orientation"
@@ -1095,8 +1095,8 @@
     "xp dilation"
   ],
   "deninger-foliated-dynamics": [
-    "Deninger foliated dynamics",
     "deninger foliated dynamics",
+    "Deninger foliated dynamics",
     "deninger_foliated_dynamics",
     "Deninger flow"
   ],
@@ -1125,8 +1125,8 @@
   "edge-l-values": [
     "Euler-region L-values",
     "edge l values",
-    "edge L-values",
     "Edge L-values",
+    "edge L-values",
     "edge_l_values"
   ],
   "edge-nonvanishing-method": [
@@ -1154,8 +1154,8 @@
   ],
   "metric-by-operator-positivity": [
     "metric by operator positivity",
-    "metric-by-operator positivity",
     "Metric-by-operator positivity",
+    "metric-by-operator positivity",
     "metric_by_operator_positivity",
     "operator positivity template"
   ],
@@ -1221,8 +1221,8 @@
   ],
   "modular-clock": [
     "free modular Hamiltonian",
-    "Seam modular clock",
     "seam modular clock",
+    "Seam modular clock",
     "modular clock",
     "modular_clock"
   ],
@@ -1249,8 +1249,8 @@
   "qca-dilation": [
     "collision-band dilation",
     "QCA unitary dilation",
-    "QCA dilation",
     "qca dilation",
+    "QCA dilation",
     "qca_dilation"
   ],
   "no-canonical-integer-label": [
@@ -1310,8 +1310,8 @@
   "census-qsm-normflow": [
     "Gaussian submodule QSM",
     "Census QSM norm flow",
-    "census QSM normflow",
     "census qsm normflow",
+    "census QSM normflow",
     "census_qsm_normflow"
   ],
   "connes-marcolli-gln-system": [
@@ -1336,30 +1336,30 @@
     "P1 Gauss-Bonnet"
   ],
   "e8-positive-lattice-norm": [
-    "e8 positive lattice norm",
     "E8 positive lattice norm",
+    "e8 positive lattice norm",
     "e8_positive_lattice_norm",
     "positive E8 norm",
     "E8 Gram form"
   ],
   "seam-os-positive-transfer": [
-    "Seam OS positive transfer",
     "seam os positive transfer",
+    "Seam OS positive transfer",
     "seam_os_positive_transfer",
     "seam OS transfer",
     "Lambda=e^{-h}"
   ],
   "seam-modular-generator": [
     "seam modular Hamiltonian",
-    "seam modular generator",
     "Seam modular generator",
+    "seam modular generator",
     "seam_modular_generator",
     "K=log((1-C)C^{-1})"
   ],
   "markov-qca-unitary-dilation": [
     "Stinespring collision dilation",
-    "markov qca unitary dilation",
     "Markov QCA unitary dilation",
+    "markov qca unitary dilation",
     "markov_qca_unitary_dilation",
     "Markov QCA dilation"
   ],
@@ -1419,8 +1419,8 @@
     "straddle selector"
   ],
   "admissible-os-positive-measure": [
-    "Admissible OS positive measure",
     "admissible os positive measure",
+    "Admissible OS positive measure",
     "admissible_os_positive_measure",
     "admissible OS measure",
     "H_OS=-log T"
@@ -1470,8 +1470,8 @@
   "hnf-groupoid": [
     "HNF submodule correspondence groupoid",
     "Gaussian HNF groupoid",
-    "HNF groupoid",
     "hnf groupoid",
+    "HNF groupoid",
     "hnf_groupoid"
   ],
   "euler-side-blindness": [
@@ -1482,8 +1482,8 @@
     "euler_side_blindness"
   ],
   "stochastic-scale-semigroup-on-connes-cokernel": [
-    "Stochastic scale semigroup on Connes cokernel",
     "stochastic scale semigroup on connes cokernel",
+    "Stochastic scale semigroup on Connes cokernel",
     "stochastic_scale_semigroup_on_connes_cokernel",
     "Connes-cokernel Markov semigroup",
     "stochastic scale semigroup"
@@ -1531,8 +1531,8 @@
     "cutoff dichotomy"
   ],
   "index-modular-state": [
-    "physical index-modular state",
     "Physical index-modular state",
+    "physical index-modular state",
     "index modular Hamiltonian",
     "index modular state",
     "index_modular_state"
@@ -1681,6 +1681,62 @@
     "rigid_calabi_yau_f8",
     "level-8 rigid CY3"
   ],
+  "tate-trace-projector": [
+    "Scalar Tate trace projector",
+    "End(V) scalar projector",
+    "tate trace projector",
+    "tate_trace_projector",
+    "Tate projector"
+  ],
+  "tate-information-loss": [
+    "Tate projection information loss",
+    "universal scalar-line barrier",
+    "Tate information loss",
+    "tate information loss",
+    "tate_information_loss"
+  ],
+  "fixed-finite-carrier-rank-obstruction": [
+    "Fixed finite-carrier rank-nullity lemma",
+    "fixed finite carrier rank obstruction",
+    "fixed_finite_carrier_rank_obstruction",
+    "finite-rank pullback obstruction",
+    "finite carrier no-go"
+  ],
+  "strict-weil-window-floor-zhu": [
+    "Zhu v2 strict Weil-window floor (external)",
+    "external strict-window premise",
+    "strict weil window floor zhu",
+    "strict_weil_window_floor_zhu",
+    "Zhu compact-window floor"
+  ],
+  "all-place-tate-weil-realization": [
+    "all-place correspondence compiler",
+    "All-place Tate--Weil realization",
+    "all place tate weil realization",
+    "all_place_tate_weil_realization",
+    "Tate-Weil realization theorem"
+  ],
+  "absolute-twistor-line": [
+    "absolute curve with twistor infinity",
+    "compactified Spec Z twistor line",
+    "Absolute twistor line",
+    "absolute twistor line",
+    "absolute_twistor_line"
+  ],
+  "rankin-mean-pointwise-exponent-drop": [
+    "Rankin mean-to-pointwise exponent drop",
+    "rankin mean pointwise exponent drop",
+    "rankin_mean_pointwise_exponent_drop",
+    "q to q-1+epsilon inference",
+    "T49 exponent drop"
+  ],
+  "petz-watatani-tate-network": [
+    "compatible conditional-expectation network",
+    "Petz--Watatani--Tate network",
+    "all-place UCP Tate network",
+    "petz watatani tate network",
+    "petz_watatani_tate_network"
+  ],
   "arithmetic-topology-prime-knots": [
     "Arithmetic topology of primes and knots",
     "arithmetic topology prime knots",
@@ -1755,5 +1811,47 @@
     "loop quantum geometry",
     "spin networks",
     "causal sets"
+  ],
+  "burnol-lower-bound": [
+    "multiplicity-squared NB bound",
+    "Burnol NB lower bound",
+    "burnol lower bound",
+    "Burnol lower bound",
+    "burnol_lower_bound"
+  ],
+  "baez-duarte-rate-conjecture": [
+    "baez duarte rate conjecture",
+    "baez_duarte_rate_conjecture",
+    "Báez-Duarte rate conjecture",
+    "C_BD over log N",
+    "E_N asymptotic"
+  ],
+  "dyadic-block-capture-eta": [
+    "dyadic block capture eta",
+    "Dyadic block capture eta",
+    "dyadic_block_capture_eta",
+    "eta_k capture conjecture",
+    "binary NB block capture"
+  ],
+  "gaussian-smoothed-zero-density": [
+    "Gaussian-smoothed transformed zero density",
+    "heat-normalized Gabor zero density",
+    "gaussian smoothed zero density",
+    "gaussian_smoothed_zero_density",
+    "H(a,omega)"
+  ],
+  "negative-explosion-criterion-a": [
+    "negative explosion criterion a",
+    "Negative-explosion criterion A",
+    "negative_explosion_criterion_a",
+    "dyadic heat-grid lower bound",
+    "criterion A"
+  ],
+  "vasyunin-gram-matrix": [
+    "Vasyunin Nyman-Beurling Gram matrix",
+    "Vasyunin cotangent Gram",
+    "vasyunin gram matrix",
+    "vasyunin_gram_matrix",
+    "NB Gram matrix"
   ]
 }

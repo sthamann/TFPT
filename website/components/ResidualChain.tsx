@@ -11,8 +11,8 @@ import { useReproducer } from "./Reproducer";
  *
  * The step data mirrors verification/make_figures.py::fig_residual_chain
  * (the source of the PDF figure in the research-contracts paper), extended by
- * the certification round (v458–v480). Each step links its key scripts to the
- * in-browser Pyodide reproducer.
+ * the certification round (v458–v480). Each step links its key scripts to its
+ * reproduction path.
  */
 
 type StepTone = "gray" | "green" | "gold";
@@ -128,8 +128,8 @@ const STEPS: Step[] = [
   },
   {
     tag: "BEDROCK",
-    head: "No TFPT-internal assumption left",
-    sub: "the SEAM.EQUIV.01 residual = the cited continuum scaling-limit existence (v336) over established facts; stays [O] (not machine-proved end-to-end)",
+    head: "Finite MMST/compiler lane reduced",
+    sub: "no further finite assumption in this lane; SEAM.EQUIV.01 still has the cited continuum scaling-limit existence (v336) and stays [O]. This does not close T1–T8 or supply a shared 3+1D parent",
     tone: "gold",
     scripts: ["v336_continuum_limit.py"],
   },
@@ -142,11 +142,12 @@ export function ResidualChain() {
     <div className="glass overflow-hidden rounded-2xl ring-1 ring-slate-700/40">
       <div className="border-b border-slate-800/60 px-5 py-3">
         <span className="text-[11px] font-semibold uppercase tracking-widest text-blue-300/80">
-          The structural-residual reduction chain — live
+          The finite seam/compiler reduction chain — live
         </span>
         <p className="mt-1 break-words text-xs leading-relaxed text-slate-400">
-          The whole &ldquo;quantum gravity&rdquo; question collapses, one machine-checked step
-          at a time, to one falsifiable physical statement: is the raw seam (E₈)₁ at τ=i?
+          This historical seam/certification lane narrows, one checked step at a time,
+          to whether the raw seam is (E₈)₁ at τ=i. It is not the full quantum-gravity
+          or strict-TOE problem: T1–T8 remain [O].
         </p>
       </div>
 

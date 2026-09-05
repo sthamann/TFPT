@@ -131,7 +131,7 @@ export default function ReplicationPage() {
             id="ext-heading"
             eyebrow="Tier 2 · open"
             title="Independently reproduced — none yet"
-            description="No third party has yet published an independent reproduction. This is stated as a status, not hidden. The bar to clear is low: every script is public and runnable in the browser."
+            description="No third party has yet published an independent reproduction. This is stated as a status, not hidden. Every script is public: browser-compatible checks run here, while native interval certificates use the pinned local environment."
           />
           <div className="mt-8 flex items-start gap-3 rounded-2xl border border-slate-600/40 bg-slate-950/40 p-5">
             <CircleDashed size={18} className="mt-0.5 flex-none text-slate-400" aria-hidden />
@@ -142,15 +142,16 @@ export default function ReplicationPage() {
               <p className="mt-1 text-sm leading-relaxed text-slate-300">
                 If you reproduce a result (or fail to), we will record it here as
                 confirmed, partial, or disputed, with a link to your write-up.
-                The fastest way to start is the in-browser reproducer or a local
-                clone.
+                Start with a browser-compatible check here, or use a local clone for
+                the full suite. v1022 and v1025 require native python-flint/Arb and
+                are not Pyodide certificates.
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Link
                   href="/verification#dag"
                   className="inline-flex items-center gap-1.5 border border-blue-400/40 bg-blue-500/15 px-4 py-2 text-xs font-semibold text-blue-100 transition-colors hover:bg-blue-500/25"
                 >
-                  Run a check in your browser
+                  Run a browser-compatible check
                 </Link>
                 <Link
                   href={REPO_URL}

@@ -919,6 +919,44 @@ $P(s)=\sum_k\mu(k)/k\cdot\log\zeta(ks)$.
 Like the Eisenstein bridge, the completion is RH-neutral as a finite identity.
 \veri{v1019\_\allowbreak coxeter\_\allowbreak euler\_\allowbreak completion.py}
 
+\noindent\textbf{A third boundary: the Tate factor does not supply the
+global intersection form.}
+For a two-dimensional carrier $V$, the scalar projector
+$T(A)=\tfrac12\operatorname{Tr}(A)I$ on $\operatorname{End}(V)$ is
+idempotent, Hilbert--Schmidt self-adjoint and equivariant.  At good
+places the exact splittings
+$V\otimes V=\operatorname{Sym}^2V\oplus\wedge^2V$ and
+$\operatorname{End}(V)=\mathbb Q(0)\oplus\operatorname{Ad}^0(V)$ isolate
+the determinant and scalar Tate zeta factors; at $p=2$ the identity
+line remains inertia-fixed, although the full ramified adjoint factor
+is not reconstructed here.  The completed scalar factor is
+$\Lambda_{\mathbb Q}(u)=2\xi(u)/(u(u-1))$, not the entire function
+$\xi(u)$ itself.
+
+A fixed finite linear carrier cannot turn this identity-side
+factorization into the full Weil pairing.  Once more independent test
+directions are supplied than the carrier dimension, rank--nullity
+produces a nonzero kernel direction on which every pulled-back positive
+form vanishes.  Conditional on the external strict Weil-window floor
+cited by the audit, this excludes every such fixed finite carrier; it
+does not exclude nonlinear procedures, growing finite discretizations,
+direct limits, or an infinite all-place realization.
+
+The same audit corrects the historical Rankin miniature.  For
+$b_n\ge0$, the bound $A(X)=\sum_{n\le X}b_n=O(X^q)$ gives only
+$b_n=O(n^q)$ without further input.  The exact sequence
+$b_n=4n^3+\mathbf 1_{\{n=32^m\}}n^{18/5}$ retains the $X^4$ leading
+mean and the simple pole at $s=4$, while
+$b_{32^m}/(32^m)^{3+1/10}\to\infty$; hence the claimed
+$q\mapsto q-1+\varepsilon$ extraction is false.  Constants defined as
+maxima on the same finite window are tautological there.  Rankin's
+actual 1939 argument uses a quantitative summatory error term, not a
+pole and nonnegativity alone.  What remains open for this exact-linear
+geometric route is an infinite or compatible direct-limit all-place
+object carrying an independently positive global intersection form
+whose pullback is the complete Weil quadratic form.  No RH claim.
+\veri{v1021\_\allowbreak all\_\allowbreak place\_\allowbreak tate\_\allowbreak rank\_\allowbreak audit.py}
+
 \noindent\textbf{Proposition 2 (Commensurability: finite clocks cannot
 carry the prime orbit spectrum).}
 \textbf{(a)} For any set $\mathcal{P}$ of primes, the real numbers
@@ -23788,10 +23826,10 @@ T45 & \texttt{\scriptsize baruch\_\allowbreak mao\_\allowbreak metaplectic} & ce
 T46 & \texttt{\scriptsize stage4\_\allowbreak prolate\_\allowbreak prototype} & stage-4 prolate prototype & IMPL-OPEN & 16/16\\
 T47 & \texttt{\scriptsize stage4\_\allowbreak prolate\_\allowbreak uv\_\allowbreak dirac} & pointwise UV/Dirac prototype & UV-NO-SIGNAL & 17/17\\
 T48 & \texttt{\scriptsize lambda\_\allowbreak scale\_\allowbreak uniqueness} & does the compiler fix the $\Lambda$ scale? & SCALE-TORSOR (claim killed) & 17/17\\
-T49 & \texttt{\scriptsize rankin\_\allowbreak positivity\_\allowbreak miniature} & the Deligne/Rankin mechanism runs in-suite & MINIATURE-RUNS & 28/28\\
+T49 & \texttt{\scriptsize rankin\_\allowbreak positivity\_\allowbreak miniature} & finite Hecke/Jacobi/Rankin--Selberg identities survive; mean-to-pointwise exponent drop corrected & RANKIN-EXPONENT-DROP-FALSIFIED $\to$ \vref{v1021} & 30/30\\
 T50 & \texttt{\scriptsize half\_\allowbreak integral\_\allowbreak selfconvolution} & the central-value family aggregates exactly & FAMILY-AGGREGATED & 17/17\\
 T51 & \texttt{\scriptsize waldspurger\_\allowbreak family\_\allowbreak kernel} & first non-collapsing infinite carrier candidate & INFINITE-CARRIER-CANDIDATE & 22/22\\
-T52 & \texttt{\scriptsize hecke\_\allowbreak orbit\_\allowbreak transfer} & path space of Hecke words; fibre determinants & TRANSFER-REALIZED & 16/16\\
+T52 & \texttt{\scriptsize hecke\_\allowbreak orbit\_\allowbreak transfer} & path-space vacuum resolvent $+$ classical local Satake determinants; no path-space Fredholm determinant & TRANSFER-REALIZED (narrowed) & 16/16\\
 T53 & \texttt{\scriptsize relative\_\allowbreak trace\_\allowbreak compiler} & \vref{v535}/\vref{v536}/\vref{v537} are three projections of one RTF identity & ONE-FORMULA $\to$ \vref{v538} & 16/16\\
 T54 & \texttt{\scriptsize waldspurger\_\allowbreak canonical\_\allowbreak measure} & the ``canonical discriminant measure'' claim & MARGINAL-WEIGHT (killed) & 26/26\\
 T55 & \texttt{\scriptsize rtf\_\allowbreak period\_\allowbreak pairing} & canonical distributional limit of the finite RTF & DISTRIBUTIONAL-RTF-TYPED $\to$ \vref{v539} & 36/36\\

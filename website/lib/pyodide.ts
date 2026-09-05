@@ -1,15 +1,23 @@
 /**
  * In-browser Python runtime for the live reproducer.
  *
- * Every verification script is the project's own deterministic code; it is run
- * client-side inside the Pyodide WebAssembly sandbox (no server, no machine
- * access, no user input is executed). This keeps the site fully static — it
- * works on Vercel exactly because nothing runs server-side.
+ * Browser-compatible verification scripts are the project's own deterministic
+ * code and run client-side inside the Pyodide WebAssembly sandbox (no server,
+ * no machine access, no user input is executed). A small, explicit native-only
+ * set uses libraries that Pyodide does not provide and is routed to the local
+ * reproduction command instead of being presented as a browser certificate.
  */
 
 const PYODIDE_VERSION = "0.29.4";
 const INDEX_URL = `https://cdn.jsdelivr.net/pyodide/v${PYODIDE_VERSION}/full/`;
 const WORK_DIR = "/home/pyodide";
+
+const NATIVE_ONLY_SCRIPTS: Record<string, string> = {
+  "v1022_telb_round3_certificates.py":
+    "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
+  "v1025_telb_c1_c2a_certificates.py":
+    "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
+};
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Pyodide = any;
@@ -88,6 +96,10 @@ export interface RunResult {
   error?: string;
 }
 
+export function nativeRuntimeNote(file: string): string | null {
+  return NATIVE_ONLY_SCRIPTS[file] ?? null;
+}
+
 function parseOutput(raw: string): Omit<RunResult, "raw" | "error"> {
   const lines = raw.split("\n");
   const checks: CheckRow[] = [];
@@ -116,8 +128,9 @@ function parseOutput(raw: string): Omit<RunResult, "raw" | "error"> {
 }
 
 /**
- * Run one verification script (e.g. "v3_em_alpha.py") in the browser and
- * return its parsed [PASS]/[FAIL] output. Throws only on unexpected I/O.
+ * Run a browser-compatible verification script and return its parsed output.
+ * Native-only certificates return an explicit local-runtime result before
+ * Pyodide is loaded; they never produce a synthetic browser PASS.
  */
 /** Extra data files a script reads from its own directory at runtime. */
 const SCRIPT_ASSETS: Record<string, string[]> = {
@@ -138,6 +151,19 @@ export async function runScript(
   file: string,
   onStatus?: StatusFn,
 ): Promise<RunResult> {
+  const nativeOnly = nativeRuntimeNote(file);
+  if (nativeOnly) {
+    return {
+      header: "Native-only interval certificate",
+      checks: [],
+      passed: 0,
+      failed: 0,
+      ok: false,
+      raw: "",
+      error: nativeOnly,
+    };
+  }
+
   const py = await getPyodide(onStatus);
   onStatus?.(`Fetching ${file}…`);
   const src = await fetchText(`/verification/${file}`);

@@ -5,6 +5,10 @@
       "type": "OBJECT"
     },
     {
+      "id": "absolute-twistor-line",
+      "type": "GEOMETRY"
+    },
+    {
       "id": "additive-adeles",
       "type": "GEOMETRY"
     },
@@ -15,6 +19,10 @@
     {
       "id": "admissible-os-positive-measure",
       "type": "OPERATOR"
+    },
+    {
+      "id": "all-place-tate-weil-realization",
+      "type": "OPEN_QUESTION"
     },
     {
       "id": "arakelov-intersection",
@@ -35,6 +43,10 @@
     {
       "id": "arithmetic-topology-prime-knots",
       "type": "GEOMETRY"
+    },
+    {
+      "id": "baez-duarte-rate-conjecture",
+      "type": "OPEN_QUESTION"
     },
     {
       "id": "barrier-arch-compensation",
@@ -107,6 +119,10 @@
     {
       "id": "bruhat-tits-tree",
       "type": "GEOMETRY"
+    },
+    {
+      "id": "burnol-lower-bound",
+      "type": "THEOREM"
     },
     {
       "id": "canonical-system-hamiltonian",
@@ -533,10 +549,6 @@
       "type": "OPEN_QUESTION"
     },
     {
-      "id": "open-global-all-place-intersection",
-      "type": "OPEN_QUESTION"
-    },
-    {
       "id": "open-lambda-star-scale-law",
       "type": "OPEN_QUESTION"
     },
@@ -559,6 +571,10 @@
     {
       "id": "perron-fixed-point-transport",
       "type": "OPERATOR"
+    },
+    {
+      "id": "petz-watatani-tate-network",
+      "type": "OPEN_QUESTION"
     },
     {
       "id": "pi-numerology-c3",
@@ -745,6 +761,10 @@
       "type": "OPEN_QUESTION"
     },
     {
+      "id": "strict-weil-window-floor-zhu",
+      "type": "CRITERION"
+    },
+    {
       "id": "tfpt-c3",
       "type": "TFPT_STRUCTURE"
     },
@@ -754,6 +774,10 @@
     },
     {
       "id": "van-dantzig-pair",
+      "type": "OBJECT"
+    },
+    {
+      "id": "vasyunin-gram-matrix",
       "type": "OBJECT"
     },
     {
@@ -829,6 +853,10 @@
     {
       "id": "screw-function-criterion",
       "status": "CLASSICAL"
+    },
+    {
+      "id": "strict-weil-window-floor-zhu",
+      "status": "CONJECTURAL"
     }
   ],
   "G3": [
@@ -837,7 +865,7 @@
         "von-mangoldt",
         "weil-quadratic-form"
       ],
-      "attempt_score": 24
+      "attempt_score": 25
     },
     {
       "pair": [
@@ -858,7 +886,14 @@
         "terminal-statement",
         "weil-quadratic-form"
       ],
-      "attempt_score": 22
+      "attempt_score": 23
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 18
     },
     {
       "pair": [
@@ -878,13 +913,6 @@
       "pair": [
         "chuk-window-certificate",
         "terminal-statement"
-      ],
-      "attempt_score": 17
-    },
-    {
-      "pair": [
-        "finite-weil-window",
-        "weil-quadratic-form"
       ],
       "attempt_score": 17
     },
@@ -932,6 +960,13 @@
     },
     {
       "pair": [
+        "explicit-formula",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 16
+    },
+    {
+      "pair": [
         "finite-weil-window",
         "weil-positivity"
       ],
@@ -953,17 +988,10 @@
     },
     {
       "pair": [
-        "explicit-formula",
-        "weil-quadratic-form"
-      ],
-      "attempt_score": 15
-    },
-    {
-      "pair": [
         "weil-positivity",
         "weil-quadratic-form"
       ],
-      "attempt_score": 15
+      "attempt_score": 16
     },
     {
       "pair": [
@@ -1009,6 +1037,20 @@
     },
     {
       "pair": [
+        "lambda-star-ladder",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
+        "weil-pole-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 13
+    },
+    {
+      "pair": [
         "barrier-circularity",
         "lstar-statement"
       ],
@@ -1023,8 +1065,22 @@
     },
     {
       "pair": [
+        "chuk-window-certificate",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
         "extraction-joint",
         "finite-weil-window"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "weil-quadratic-form"
       ],
       "attempt_score": 12
     },
@@ -1058,21 +1114,28 @@
     },
     {
       "pair": [
-        "lambda-star-ladder",
+        "narrowband-weil",
         "weil-quadratic-form"
       ],
       "attempt_score": 12
     },
     {
       "pair": [
-        "weil-pole-term",
+        "open-independent-positivity-source",
         "weil-quadratic-form"
       ],
       "attempt_score": 12
     },
     {
       "pair": [
-        "chuk-window-certificate",
+        "selected-polynomial-approximates-grid",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 12
+    },
+    {
+      "pair": [
+        "arch-rate",
         "weil-quadratic-form"
       ],
       "attempt_score": 11
@@ -1093,13 +1156,6 @@
     },
     {
       "pair": [
-        "extraction-joint",
-        "weil-quadratic-form"
-      ],
-      "attempt_score": 11
-    },
-    {
-      "pair": [
         "finite-weil-window",
         "lstar-statement"
       ],
@@ -1114,21 +1170,14 @@
     },
     {
       "pair": [
-        "narrowband-weil",
+        "i5-transport-ledger-criterion",
         "weil-quadratic-form"
       ],
       "attempt_score": 11
     },
     {
       "pair": [
-        "open-independent-positivity-source",
-        "weil-quadratic-form"
-      ],
-      "attempt_score": 11
-    },
-    {
-      "pair": [
-        "selected-polynomial-approximates-grid",
+        "lstar-statement",
         "weil-quadratic-form"
       ],
       "attempt_score": 11
@@ -1142,13 +1191,6 @@
     },
     {
       "pair": [
-        "arch-rate",
-        "weil-quadratic-form"
-      ],
-      "attempt_score": 10
-    },
-    {
-      "pair": [
         "chuk-window-certificate",
         "weil-positivity"
       ],
@@ -1158,6 +1200,20 @@
       "pair": [
         "extraction-joint",
         "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "gaussian-smoothed-zero-density"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "finite-weil-window",
+        "open-global-all-place-intersection"
       ],
       "attempt_score": 10
     },
@@ -1177,6 +1233,20 @@
     },
     {
       "pair": [
+        "fixed-finite-carrier-rank-obstruction",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "gabor-prime-side-criterion",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
         "gaussian-e8-module",
         "hecke-operator"
       ],
@@ -1184,14 +1254,14 @@
     },
     {
       "pair": [
-        "i5-transport-ledger-criterion",
+        "gaussian-smoothed-zero-density",
         "weil-quadratic-form"
       ],
       "attempt_score": 10
     },
     {
       "pair": [
-        "lstar-statement",
+        "negative-explosion-criterion-a",
         "weil-quadratic-form"
       ],
       "attempt_score": 10
@@ -1200,6 +1270,13 @@
       "pair": [
         "nyman-beurling-criterion",
         "weil-positivity"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "open-global-all-place-intersection",
+        "weil-quadratic-form"
       ],
       "attempt_score": 10
     },
@@ -1219,8 +1296,36 @@
     },
     {
       "pair": [
+        "weil-arch-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "weil-prime-term",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 10
+    },
+    {
+      "pair": [
+        "arithmetic-hodge-index",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
         "baez-duarte-criterion",
         "weil-positivity"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
+        "dyson-fourier-quasicrystal-criterion",
+        "weil-quadratic-form"
       ],
       "attempt_score": 9
     },
@@ -1233,7 +1338,7 @@
     },
     {
       "pair": [
-        "gabor-prime-side-criterion",
+        "finite-infinite-place-balance",
         "weil-quadratic-form"
       ],
       "attempt_score": 9
@@ -1275,6 +1380,13 @@
     },
     {
       "pair": [
+        "lapidus-maier-fractal-string-criterion",
+        "weil-quadratic-form"
+      ],
+      "attempt_score": 9
+    },
+    {
+      "pair": [
         "lstar-statement",
         "weil-positivity"
       ],
@@ -1282,14 +1394,7 @@
     },
     {
       "pair": [
-        "weil-arch-term",
-        "weil-quadratic-form"
-      ],
-      "attempt_score": 9
-    },
-    {
-      "pair": [
-        "weil-prime-term",
+        "rh-as-reflection-positivity",
         "weil-quadratic-form"
       ],
       "attempt_score": 9
@@ -1310,8 +1415,8 @@
     },
     {
       "pair": [
-        "dyson-fourier-quasicrystal-criterion",
-        "weil-quadratic-form"
+        "dyadic-block-capture-eta",
+        "weil-positivity"
       ],
       "attempt_score": 8
     },
@@ -1332,6 +1437,27 @@
     {
       "pair": [
         "explicit-formula",
+        "gaussian-smoothed-zero-density"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "open-global-all-place-intersection"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
+        "tate-trace-projector"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "explicit-formula",
         "weil-arch-term"
       ],
       "attempt_score": 8
@@ -1340,13 +1466,6 @@
       "pair": [
         "explicit-formula",
         "weil-prime-term"
-      ],
-      "attempt_score": 8
-    },
-    {
-      "pair": [
-        "finite-infinite-place-balance",
-        "weil-quadratic-form"
       ],
       "attempt_score": 8
     },
@@ -1374,6 +1493,13 @@
     {
       "pair": [
         "gabor-rational-criterion",
+        "weil-positivity"
+      ],
+      "attempt_score": 8
+    },
+    {
+      "pair": [
+        "gaussian-smoothed-zero-density",
         "weil-positivity"
       ],
       "attempt_score": 8
@@ -1408,15 +1534,15 @@
     },
     {
       "pair": [
-        "lapidus-maier-fractal-string-criterion",
-        "weil-quadratic-form"
+        "negative-explosion-criterion-a",
+        "weil-positivity"
       ],
       "attempt_score": 8
     },
     {
       "pair": [
-        "rh-as-reflection-positivity",
-        "weil-quadratic-form"
+        "open-global-all-place-intersection",
+        "weil-positivity"
       ],
       "attempt_score": 8
     },
@@ -1445,6 +1571,13 @@
       "pair": [
         "chuk-window-certificate",
         "lambda-star-ladder"
+      ],
+      "attempt_score": 7
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "hilbert-polya-operator"
       ],
       "attempt_score": 7
     },
@@ -1688,6 +1821,13 @@
     },
     {
       "pair": [
+        "gaussian-smoothed-zero-density",
+        "weil-pole-term"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
         "i5-transport-ledger-criterion",
         "open-independent-positivity-source"
       ],
@@ -1730,6 +1870,13 @@
     },
     {
       "pair": [
+        "open-global-all-place-intersection",
+        "weil-pole-term"
+      ],
+      "attempt_score": 5
+    },
+    {
+      "pair": [
         "tfpt-e8-lattice",
         "tfpt-gcar"
       ],
@@ -1760,6 +1907,27 @@
       "pair": [
         "beurling-deny-criterion",
         "open-independent-positivity-source"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "chuk-window-certificate",
+        "negative-explosion-criterion-a"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "nyman-beurling-criterion"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "extraction-joint",
+        "negative-explosion-criterion-a"
       ],
       "attempt_score": 4
     },
@@ -1814,6 +1982,20 @@
     },
     {
       "pair": [
+        "negative-explosion-criterion-a",
+        "open-independent-positivity-source"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
+        "negative-explosion-criterion-a",
+        "selected-polynomial-approximates-grid"
+      ],
+      "attempt_score": 4
+    },
+    {
+      "pair": [
         "outer-bridges",
         "quadrep"
       ],
@@ -1823,6 +2005,13 @@
       "pair": [
         "arch-rate",
         "weil-arch-term"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
+        "dyadic-block-capture-eta"
       ],
       "attempt_score": 3
     },
@@ -1933,6 +2122,13 @@
     },
     {
       "pair": [
+        "e8-theta-series",
+        "tate-trace-projector"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
         "equality-hunt",
         "lstar-statement"
       ],
@@ -1984,6 +2180,13 @@
       "pair": [
         "gate-zero",
         "ucp-map"
+      ],
+      "attempt_score": 3
+    },
+    {
+      "pair": [
+        "i5-transport-ledger-criterion",
+        "negative-explosion-criterion-a"
       ],
       "attempt_score": 3
     },
@@ -2046,6 +2249,13 @@
     {
       "pair": [
         "baez-duarte-criterion",
+        "burnol-lower-bound"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "baez-duarte-criterion",
         "rh-as-reflection-positivity"
       ],
       "attempt_score": 2
@@ -2054,6 +2264,27 @@
       "pair": [
         "baez-duarte-criterion",
         "weil-conjectures"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "gabor-prime-side-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "gabor-pure-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "gabor-rational-criterion"
       ],
       "attempt_score": 2
     },
@@ -2068,6 +2299,13 @@
       "pair": [
         "finite-infinite-place-balance",
         "i5-transport-ledger-criterion"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "fixed-finite-carrier-rank-obstruction",
+        "open-global-all-place-intersection"
       ],
       "attempt_score": 2
     },
@@ -2115,6 +2353,34 @@
     },
     {
       "pair": [
+        "gaussian-smoothed-zero-density",
+        "negative-explosion-criterion-a"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gaussian-smoothed-zero-density",
+        "open-global-all-place-intersection"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gaussian-smoothed-zero-density",
+        "weil-arch-term"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "gaussian-smoothed-zero-density",
+        "weil-prime-term"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
         "groupoid-modular-function",
         "ucp-map"
       ],
@@ -2157,8 +2423,43 @@
     },
     {
       "pair": [
+        "open-global-all-place-intersection",
+        "weil-arch-term"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "open-global-all-place-intersection",
+        "weil-prime-term"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "rigid-calabi-yau-f8",
+        "tate-information-loss"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "rigid-calabi-yau-f8",
+        "tate-trace-projector"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
         "selected-arch-error-quadratic-rate",
         "selected-arch-weighted-interpolation-estimate"
+      ],
+      "attempt_score": 2
+    },
+    {
+      "pair": [
+        "tate-information-loss",
+        "tate-trace-projector"
       ],
       "attempt_score": 2
     },
@@ -2173,6 +2474,55 @@
       "pair": [
         "archimedean-place",
         "finite-infinite-place-balance"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "arithmetic-hodge-index",
+        "fixed-finite-carrier-rank-obstruction"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "arithmetic-hodge-index",
+        "open-global-all-place-intersection"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "burnol-lower-bound",
+        "dyadic-block-capture-eta"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "rh-as-reflection-positivity"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "dyadic-block-capture-eta",
+        "weil-conjectures"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "dyson-fourier-quasicrystal-criterion",
+        "negative-explosion-criterion-a"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "finite-infinite-place-balance",
+        "negative-explosion-criterion-a"
       ],
       "attempt_score": 1
     },
@@ -2243,6 +2593,20 @@
       "pair": [
         "kps-theorem",
         "laguerre-polya-class"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "lapidus-maier-fractal-string-criterion",
+        "negative-explosion-criterion-a"
+      ],
+      "attempt_score": 1
+    },
+    {
+      "pair": [
+        "negative-explosion-criterion-a",
+        "rh-as-reflection-positivity"
       ],
       "attempt_score": 1
     },
@@ -2341,6 +2705,10 @@
       "killed_by": 1
     },
     {
+      "id": "rankin-mean-pointwise-exponent-drop",
+      "killed_by": 1
+    },
+    {
       "id": "barrier-arch-compensation",
       "killed_by": 0
     },
@@ -2417,6 +2785,10 @@
       "killed_by": 0
     },
     {
+      "id": "fixed-finite-carrier-rank-obstruction",
+      "killed_by": 0
+    },
+    {
       "id": "no-archimedean-prime-joint-space",
       "killed_by": 0
     },
@@ -2438,6 +2810,10 @@
     },
     {
       "id": "quarter-shift-to-centre",
+      "killed_by": 0
+    },
+    {
+      "id": "tate-information-loss",
       "killed_by": 0
     }
   ],
@@ -2571,6 +2947,28 @@
   ],
   "G6": [
     {
+      "id": "all-place-tate-weil-realization",
+      "targets": [
+        "weil-quadratic-form"
+      ],
+      "alive_targets": 1,
+      "target_count": 1
+    },
+    {
+      "id": "baez-duarte-rate-conjecture",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
+    },
+    {
+      "id": "dyadic-block-capture-eta",
+      "targets": [
+        "riemann-hypothesis"
+      ],
+      "alive_targets": 0,
+      "target_count": 1
+    },
+    {
       "id": "equality-hunt",
       "targets": [],
       "alive_targets": 0,
@@ -2690,6 +3088,12 @@
       ],
       "alive_targets": 1,
       "target_count": 2
+    },
+    {
+      "id": "petz-watatani-tate-network",
+      "targets": [],
+      "alive_targets": 0,
+      "target_count": 0
     },
     {
       "id": "riemann-hypothesis",

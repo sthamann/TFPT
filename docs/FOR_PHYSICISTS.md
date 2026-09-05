@@ -3,6 +3,12 @@
 > A 10-minute orientation: the assumptions, what is derived vs. identified, and where the theory
 > is honestly incomplete.
 
+> **Strict TOE scope (2026-09-05).** The strongest closed statements below belong to the
+> dimensionless compiler or to finite subgates. Round 3 (`v1022`–`v1025`) does not close a TOE
+> gate: T1–T8 and `TFPT.TOE.COMPLETE.01` all remain `[O]`, and one shared 3+1D parent satisfying
+> T3–T8 is still absent. In particular, the gravity route is conditional on the missing 4D QFT
+> package; it is not a construction of that package.
+
 ## The two assumptions
 
 TFPT starts from exactly two dimensionless inputs, and claims both are *not* free:
@@ -31,7 +37,8 @@ Read [`tfpt_1_architecture_e8.tex`](../tfpt_1_architecture_e8.tex) (core) and
 - **Flavor**: an integer operator ladder (`det(Q,K,R,L) = (3,4,8,20)`, `∏ = 1920 = |W(D5)|`);
   charged-lepton coefficients `(16/7, 4/3, 7/6)` exactly; quark mass *ratios* as integer Plücker
   readouts. Absolute amplitudes need one declared normalisation (`U_point`).
-- **Gravity**: the entanglement first law with TFPT's atoms gives the full covariant
+- **Gravity (conditional route)**: assuming the required local 4D QFT and
+  entanglement-equilibrium hypotheses, the entanglement first law with TFPT's atoms gives
   `G_ab + Λ g_ab = c₃⁻¹ T_ab`, both coefficients fixed, `Λ` from `α` (`v60`, `v358`/`v359`).
 - **Cosmology**: `Ω_b`, the Starobinsky scalaron mass, `Λ ~ e^(−2α⁻¹)`, cosmic birefringence
   `β = φ₀/(4π) ≈ 0.2424°`.
@@ -47,6 +54,9 @@ TFPT is scrupulous about this line. The **physical identification** of the bound
 Read [`tfpt_4_frontier.tex`](../tfpt_4_frontier.tex). These are deliberately typed as **interfaces**,
 never quoted as compiler outputs:
 
+- The strict physical completeness contract `TFPT.TOE.COMPLETE.01`: all gates T1–T8 remain
+  `[O]`; the shared 3+1D parent, chiral measure/mirror continuum, IR reconstruction, physical
+  flavor texture, massless spin-2 sector and unique global initial state are not constructed.
 - `m_p/m_e` (QCD scale), `η_B` (leptogenesis), Koide `Q`, the axion relic abundance — one transfer
   functor `F_transfer` with typed runnable solvers and kill tests (`v371`–`v374`, guarded by `v187`).
 - The full non-perturbative ambient quantum-gravity measure (`QG.AMB.01`) — a `[C]` redundancy,

@@ -104,7 +104,7 @@ const LAYERS: Layer[] = [
       "F_transfer — typed runnable solver suite (v371–v375), each with a kill test [C]",
       "Rest_TOE / T1–T8 — named AND TFPT.TOE.COMPLETE.01 [O] (ten-component rest; not a closure)",
     ],
-    kill: "Declared honestly, not hidden — v_geo is the one genuine [O] unit; G_net and F_transfer are [C], written up as numbered research contracts.",
+    kill: "Compiler scope: v_geo is the [O] unit while G_net and F_transfer are status-typed contracts. Strict scope: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], with no shared 3+1D parent; Round 3 adds only narrow certificates and no-gos.",
     link: { href: "/verification#open-gates", label: "The research contracts" },
     tone: "border-rose-400/30 bg-rose-500/[0.06]",
     markerTone: "bg-rose-500/15 text-rose-200 ring-rose-400/30",

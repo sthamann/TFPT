@@ -74,3 +74,11 @@ Verdikte gegen die fixierte Brücke-2-Gestalt (I1–I5):
 - Zentrale Anforderung: Produkt über alle Stellen — nur so sind Primorbit p, Wiederholungen p^k, archimedischer Faktor und Skalenreflexion dasselbe Objekt.
 
 Nachbarn von `no-composite-orbits`: quantum-metric-graph / hyperbolic-ruelle-dynamics BLOCKED_BY; decoupling-lemma REDUCES_TO; adele-class-space und stochastische Skalen-Halbgruppe REQUIRES. G1=199, G2=8, G4 enthält die neue Barriere (killed_by=0).
+
+## Nachtrag 5. Sep – externe Vorschläge (Wärme-Gabor, dyadisches Nyman–Beurling)
+
+A **RESTATED.** \(\mathcal H\) ist die Gauß-geglättete reelle Nullstellendichte (\(\pi\sqrt{2\pi}\,K_a*\operatorname{Re}\mu_\zeta\)). Budget \(a=1/32\): Primseite 429 exakt / 774 PNT gegen Spielraum 286; Härte unverändert (\(e^{1/(8a)}\) gegen \(e^{1/\sqrt a}\)).
+
+B **MEASURED.** Tabelle bis \(N=512\) auf 12 Stellen reproduziert. \(k\cdot\eta_k\): 0.19, 0.40, 0.60, 0.69, 0.88, 0.73, 0.99 — nicht monoton. Fit \(C=0.046249\) gegen Báez-Duarte \(2+\gamma-\log 4\pi=0.046191\). Burnol-Bound nur Linien-Nullstellen. \(\eta_k\ge c/k\) stärker als die Ratenvermutung; kein Rechenkontrakt; offene Frage in der Karte.
+
+Kein RH-Claim. Artefakte: `heat_gabor_restatement_probe.py`, `nb_dyadic_capture_probe.py`, `external_proposals_heat_nb.md`.

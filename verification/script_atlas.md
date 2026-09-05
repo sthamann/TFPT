@@ -2,13 +2,13 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`1013` registered scripts · `1177` ledger claims · `10` clusters.
+`1018` registered scripts · `1184` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
 ## Clusters (themes / branches)
 
-### `core` — Compiler core & the E₈ glue  (493 scripts)
+### `core` — Compiler core & the E₈ glue  (494 scripts)
 _Why the two axioms build E₈, why the carrier rank is forced, and the integer skeleton that follows._
 
 - **v1_e8_glue** [E] `E8.GLU.01, E8.NUM.01` — E₈ glue: disc ℤ₄, q(D₅)+q(A₃)=2, 240=16·5·3, 248
@@ -980,7 +980,7 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
 - **v974_alpha_faces_computed** [E/C/O] `ALPHA.QUILLEN.FACES.01` — drei Probes byte-exakt eingebettet, sha256-gepinnt und wörtlich ausgeführt (21/21 MATCH_MODULO_LOCAL_FACTOR + 20/20 PUMP_QUANTIZED_MATCHES_CHERN + 18/18 CHAIN_SHADOW_OK) plus die m
   - deps: v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, v484_seam_contact_unit, v485_contact_diagonal_closed, v48_em_ward, v470_alpha_inflow_level, v972_seam_interaction_front.py; v995_kms_subnet_rigidity · cited: origin theory, 1 architecture e8, research contracts, safeguards
 - **v975_dimension_selector_4d** [C/O] `DIMENSION.SELECTOR.4D.01` — 16/16 sympy-exakt. Unter dem benannten TFPT-kompatiblen Axiomensatz A1 (d > 2: propagierende lokale Eichfelder), A2 (dimensionslose Yang-Mills-Kopplung), A3 (reelle selbstduale/ant
-  - deps: DIMENSION.UPLIFT.FIREWALL.01, SEAM.BULK4D.RECON.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector · cited: research contracts
+  - deps: DIMENSION.UPLIFT.FIREWALL.01, SEAM.BULK4D.RECON.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector.py; v1023_derivative_filtered_wall · cited: research contracts
 - **v978_terminal_density_martingale** [E] `PRIME.TERMINAL.DENSITY_MARTINGALE.01` — die Dichte pro verbleibendem Nachkommen X(v) = d(v)/d(root) ist ein nichtnegatives Martingal ALLEIN aus Massenerhaltung (symbolisch am generischen Knoten + bit-exakt in Fractions a
   - deps: PRIME.L2.RENYI3.MEASURED_COMPOSITION.01 (the r324 end state the layer reformulates), v968_architecture_adjudication.py;v969_forks_and_redteam.py;v970_extraction_and_composition, PRIME.L2.COVER_GROWTH_K2.01 (the census-side successor), v978 · cited: research contracts
 - **v979_cover_growth_k2** [E/O/X] `PRIME.L2.COVER_GROWTH_K2.01` — EXAKT: die FAB-Identität F_A·B == m·q_max/log m (Konstruktionsalgebra, Gauge-Mutant gefangen); die r321-Konzentrationsklammer q_max·ΦH1 ≤ ρ₂ ≤ ΦH1; die datenfreie K1-FORMEL R_ALG =
@@ -997,6 +997,8 @@ _Why the two axioms build E₈, why the carrier rank is forced, and the integer 
   - deps: v1018 · cited: introduction, note e8 gaussian code, 4 frontier
 - **v1019_coxeter_euler_completion** [E] `E8.COXETER.EULER.COMPLETION.01` — E8.COXETER.EULER.COMPLETION.01 [E]+Numerical (2026-09-02, Runde r617): Coxeter-Euler-Vervollstaendigung -- neu abgeleitet. Exakt: det(I-xC)=Phi_30, Tr C=-1; Moebius Phi_30=(1-x^2)(
   - deps: v1019 · cited: introduction, 4 frontier
+- **v1021_all_place_tate_rank_audit** [E/C/O] `PRIME.ALLPLACE.TATE.INTERSECTION.01` — All-Place-Tate-/Finite-Carrier-/Rankin-Audit (2026-09-05): Tate-Projektor und lokale Tensor-/End-Splittings exakt; p=2-Tate-Linie inertiafest; vervollstaendigte Zeta von xi getrenn
+  - deps: v1019_coxeter_euler_completion, PRIME.WEIL.OPERATOR.01 · cited: note hilbert polya truncations
 
 ### `em` — Electromagnetic fixed point  (9 scripts)
 _The fine-structure constant as the unique root of the boundary U(1) Ward identity._
@@ -1224,7 +1226,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (237 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (241 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -1423,8 +1425,8 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: QG.AMB.01, v259, v304, v370, v334 · cited: 5 redteam
 - **v383_dynamics_universal** [E/C] `DYNAMICS.UNIVERSAL.01` — DYNAMICS.UNIVERSAL.01: the UNIVERSAL spectral-gap / Perron-Frobenius principle -- every TFPT sector is the SAME object (a gapped operator with a UNIQUE leading attractor = the phys
   - deps: v56, v82, v303, v312, v313, v314, v337, v358 · cited: origin theory
-- **v384_residual_certification** [E/C/O] `RESIDUAL.CERTIFICATION.01` — RESIDUAL.CERTIFICATION.01: the residual matrix is CERTIFICATION, not CONSTRUCTION -- after v369/v381/v382 there is NO open TFPT physics MECHANISM left; every residual is an externa
-  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v153, v336, v369 · cited: research contracts, safeguards
+- **v384_residual_certification** [E/O] `RESIDUAL.CERTIFICATION.01` — RESIDUAL.CERTIFICATION.01 (historical compiler scope; corrected 2026-09-05): the then-listed compiler residual is CERTIFICATION, not CONSTRUCTION -- after v369/v381/v382 there is N
+  - deps: v286_seam_equivalence_contract, v382_alpha_quillen_exact.py; v985_quillen_channel_swap.py; v995_kms_subnet_rigidity.py; v996_gauge_grammar_kill.py; v1014_bridge_refinements, QG.AMB.01, v78_vgeo_floor, v371_ftransfer_pole, v1012_toe_gate_witnesses.py; v1013_thermodynamic_dynamics.py; v1014_bridge_refinements.py; v1015_axiom_core_closure.py; v1022_telb_round3_certificates.py; v1023_derivative_filtered_wall.py; v1024_parent_internal_boundaries.py; v1025_telb_c1_c2a_certificates, v153, v336 · cited: research contracts, safeguards
 - **v386_grav_amplitude** [E/C] `GRAV.AMPLITUDE.01` — GRAV.AMPLITUDE.01: the entire-form-factor graviton-exchange AMPLITUDE is finite, UV-softened and tree-unitary -- perturbative gravity as an explicit scattering problem, extending v
   - deps: v259, v304, v370, v380, v253, v369 · cited: 4 frontier
 - **v387_corrections_gap** [E/C] `CORRECTIONS.GAP.01` — CORRECTIONS.GAP.01: the practical harvest of v383 -- the same spectral gap that makes each sector parameter-free ALSO sets the SIZE of its first correction (correction_n ~ (lambda_
@@ -1644,7 +1646,7 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
 - **v988_psi_lambda_reduction** [-] `(no ledger claim)` — SEAM.SIMPLECURRENT.GENERATOR.01 [O-Update: S3 exakt + S1/S2-Skelett gemessen + Lemma REDUZIERT, nicht geschlossen] (Promote-Runde 2026-08-28): **S3 gekreuztes Produkt / Turm-Austau
   - cited: research contracts
 - **v989_lattice_gate_battery** [E/O/X] `TFPT4D.LATTICE.ACTION.01` — TFPT4D.LATTICE.ACTION.01 + CHIRAL4D.NOMIRROR.01 [O-Update: T1-T7-Geschirr ausgefuehrt + euklidischer T2-Kill + Hamilton-Route raeumt T2; Kontrakte bleiben offen] (Promote-Runde 202
-  - deps: DIMENSION.UPLIFT.FIREWALL.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector, v984_markov_qca_dilation.py; v987_os_dilation_package.py; v999_weak_collision_hp, v975_dimension_selector_4d, SEAM.BULK4D.RECON.01 · cited: 4 frontier, research contracts
+  - deps: DIMENSION.UPLIFT.FIREWALL.01, QFT4D.OS.RECON.01, v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector.py; v1023_derivative_filtered_wall, v984_markov_qca_dilation.py; v987_os_dilation_package.py; v999_weak_collision_hp, v975_dimension_selector_4d, SEAM.BULK4D.RECON.01 · cited: 4 frontier, research contracts
 - **v990_wj_transduction_mechanism** [E/O] `OBS.TRANSDUCTION.01, FTRANSFER.GENERATING.01` — FTRANSFER.GENERATING.01 + OBS.TRANSDUCTION.01 [O-Update: Inhalts-Schatten + endliches W[J] + Transduktions-Schatten; Kontrakte bleiben offen] (Promote-Runde 2026-08-28): **Z6-Zentr
   - deps: v221 (kernel), FO.01 (exploration minimal model), FRB/GW scorecard rows (readout typing), v187_ftransfer_laws, v989_lattice_gate_battery, QFT4D.OS.RECON.01 · cited: research contracts
 - **v991_detline_bulk_edge** [-] `(no ledger claim)` — SEAM.DETLINE.UNIFICATION.01 [O-Update: endlicher Bulk-Kante-Schatten [E]; Kontinuum Bismut-Freed bleibt offen] (Promote-Runde 2026-08-28): **Bulk-Twist-Torus-Kruemmung 2 pi * (+1) 
@@ -1701,6 +1703,14 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - cited: introduction, 4 frontier, research contracts
 - **v1020_spectator_sector_obstruction** [O] `BULK.PRIME_COMPLETION.01` — Spectator-Sektor-Hindernis (r644-Audit-Ernte 2026-09-04): endlicher freier-Fermion-Zeuge, neu abgeleitet (keine Proben-Importe). Aufschichten eines entkoppelten trivialen Gap-Sekto
   - deps: SEAM.BULK4D.RECON.01, DIMENSION.UPLIFT.FIREWALL.01 · cited: research contracts
+- **v1022_telb_round3_certificates** [E/O/X] `SEAM.MMST.TELB.ROUND3.01` — TEL-B-Runde-3-Zertifikate (2026-09-05): natives Arb/Acb, 256 Bit, 5812 rationale Zellen; TV_p(F'') <=15.817695962988924...<15.928674 und K3_TV<2.517464500835. Die analytische C2b-S
+  - deps: v1025_telb_c1_c2a_certificates, v1006_mmst_lemma_battery.py; v1016_state_gap_batteries.py; v1022_telb_round3_certificates.py; v1025_telb_c1_c2a_certificates, v1012_toe_gate_witnesses.py; v1013_thermodynamic_dynamics.py; v1014_bridge_refinements.py; v1015_axiom_core_closure.py; v1022_telb_round3_certificates.py; v1023_derivative_filtered_wall.py; v1024_parent_internal_boundaries.py; v1025_telb_c1_c2a_certificates · cited: introduction, origin theory, 4 frontier, research contracts
+- **v1023_derivative_filtered_wall** [E/C/O] `CHIRAL4D.MIRROR.DFILTER.BLOCK.01` — Ableitungsgefilterter Wall-Block (2026-09-05): H_df erhaelt ker(D_GW) exakt; det Block=lambda g^2 Delta s^2; das adiabatisch spiegel-kontinuierte hohe Band liegt >=Delta+lambda; de
+  - deps: v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector.py; v1023_derivative_filtered_wall, v1002_spin10_mirror_projector.py; v1007_det16_stability_battery.py; v1016_state_gap_batteries.py; v1023_derivative_filtered_wall, v1012_toe_gate_witnesses.py; v1013_thermodynamic_dynamics.py; v1014_bridge_refinements.py; v1015_axiom_core_closure.py; v1022_telb_round3_certificates.py; v1023_derivative_filtered_wall.py; v1024_parent_internal_boundaries.py; v1025_telb_c1_c2a_certificates · cited: introduction, 4 frontier, research contracts
+- **v1024_parent_internal_boundaries** [E/C/O] `FLAV.NU.PARENT.INTERTWINER.01, GRAV.PARENT.GAP.NO_GO.01, FTRANSFER.PARENT.Z5CAP.01` — Parent-interne T6--T8-Grenzen (2026-09-05): endlicher A3--D4 Seam/Neutrinopaar-Intertwiner ohne neuen Faktor; positiv, gerade, gauge-kompatibel, nichtadditiv, lokaler Gap 0.25 kond
+  - deps: v1003_nu_structural_nulls.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries, v1012_toe_gate_witnesses.py; v1013_thermodynamic_dynamics.py; v1014_bridge_refinements.py; v1015_axiom_core_closure.py; v1022_telb_round3_certificates.py; v1023_derivative_filtered_wall.py; v1024_parent_internal_boundaries.py; v1025_telb_c1_c2a_certificates, v997_spin2_smg_witnesses.py; v1000_spin2_sk_witnesses.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries, GRAV.WEINBERG.WITTEN.01, v1000_spin2_sk_witnesses.py; v1009_rho0_minimizer.py; v1012_toe_gate_witnesses.py; v1016_state_gap_batteries.py; v1024_parent_internal_boundaries, v1020_spectator_sector_obstruction · cited: introduction, 2 standard model, 4 frontier, research contracts
+- **v1025_telb_c1_c2a_certificates** [E/O] `SEAM.MMST.TELB.C1C2A.01` — TEL-B C1/C2a-Zertifikate (2026-09-05): natives python-flint==0.9.0. C1: 100-Bit Arb/Acb ueber 3888 analytische Rechtecke plus geschlossene Achsenstreifen-Majorante und exakter Imag
+  - deps: v1006_mmst_lemma_battery.py; v1016_state_gap_batteries.py; v1022_telb_round3_certificates.py; v1025_telb_c1_c2a_certificates, v1012_toe_gate_witnesses.py; v1013_thermodynamic_dynamics.py; v1014_bridge_refinements.py; v1015_axiom_core_closure.py; v1022_telb_round3_certificates.py; v1023_derivative_filtered_wall.py; v1024_parent_internal_boundaries.py; v1025_telb_c1_c2a_certificates · cited: introduction, origin theory, 4 frontier, research contracts
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (184 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -2097,11 +2107,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v1009_rho0_minimizer** — `(no claim)`
-- **v1010_simplicity_bridge_census** — `(no claim)`
-- **v1011_3p1d_ladder_battery** — `(no claim)`
-- **v1012_toe_gate_witnesses** — `(no claim)`
-- **v1013_thermodynamic_dynamics** — `(no claim)`
 - **v1014_bridge_refinements** — `(no claim)`
 - **v1015_axiom_core_closure** — `(no claim)`
 - **v1016_state_gap_batteries** — `(no claim)`
@@ -2109,4 +2114,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v1018_e8_directed_readout** — `E8.DIRECTED.READOUT.01`
 - **v1019_coxeter_euler_completion** — `E8.COXETER.EULER.COMPLETION.01`
 - **v1020_spectator_sector_obstruction** — `BULK.PRIME_COMPLETION.01`
+- **v1021_all_place_tate_rank_audit** — `PRIME.ALLPLACE.TATE.INTERSECTION.01`
+- **v1022_telb_round3_certificates** — `SEAM.MMST.TELB.ROUND3.01`
+- **v1023_derivative_filtered_wall** — `CHIRAL4D.MIRROR.DFILTER.BLOCK.01`
+- **v1024_parent_internal_boundaries** — `FLAV.NU.PARENT.INTERTWINER.01, GRAV.PARENT.GAP.NO_GO.01, FTRANSFER.PARENT.Z5CAP.01`
+- **v1025_telb_c1_c2a_certificates** — `SEAM.MMST.TELB.C1C2A.01`
 

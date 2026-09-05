@@ -187,13 +187,13 @@ const TRUNK_AFTER: StepNode[] = [
   {
     id: "residual",
     step: 8,
-    label: "The residual: two gates + interfaces",
+    label: "Compiler interfaces beside the strict TOE gates",
     formula:
-      "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}})",
+      "\\text{Rest} = (U_{\\mathrm{wall}}) \\oplus (G_{\\mathrm{metric}}) \\oplus (F_{\\mathrm{frontier}}),\\quad \\text{beside }\\mathrm{Rest}_{\\mathrm{TOE}}",
     input: "The compiler closure",
     fixed:
-      "One flavor wall-selection (v_geo, [O]); the ambient quantum-gravity measure now discharged as a redundancy [C] (v369+v379; the classical covariant field equation carries no free dimensionless Newton coupling under the named QFT/entanglement premises [C], v358/v359); and a set of typed runnable frontier solvers (F_transfer, v371–v375) — the whole boundary-QFT layer collapses onto the G_metric keystone (step 7), closed modulo cited theorems, adding no new open item",
-    notClaimed: "No strict physical TOE certified end-to-end (the keystone SEAM.EQUIV.01 is closed only on its MMST route SEAM.EQUIV.MMST.01, modulo a cited published theorem, v336 — extension leg crossed-product certified, v469; stays [O] — and v_geo stays the one unit). The ambient measure G6 is not an open hole — it is discharged as a redundancy [C]",
+      "One flavor wall-selection (v_geo, [O]); the ambient quantum-gravity measure discharged as a redundancy [C] within the historical seam/compiler DAG (v369+v379; the classical covariant field equation is conditional on named QFT/entanglement premises [C], v358/v359); and typed frontier solvers (F_transfer, v371–v375). Only the finite boundary-net/MMST lane reduces to the G_metric keystone (step 7), closed modulo cited theorems",
+    notClaimed: "No strict physical TOE is certified end-to-end. Every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. Round 3 (v1022–v1025) supplies only narrow T2/T4/T6–T8 certificates and no-gos. SEAM.EQUIV.01 is closed only on its MMST route modulo a cited theorem (v336; extension leg v469) and stays [O]; v_geo stays the one unit. The G6 redundancy statement is scoped to the historical seam/compiler DAG, not Rest_TOE",
     fail: "A gate's closing theorem asserted before its lemma chain completes",
     status: "conditional",
   },

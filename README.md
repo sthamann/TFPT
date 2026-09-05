@@ -28,7 +28,8 @@ parameter-free compiler for the dimensionless skeleton of fundamental physics.
 
 </div>
 
-This repository contains the complete theory, **27 status-graded, falsifiable test surfaces**
+This repository contains the complete TFPT compiler-closure document set, **27 status-graded,
+falsifiable test surfaces**
 (the 16-entry core registry frozen before the data), three independent
 verification engines (Python + Wolfram + Lean), and a versioned status ledger that types every
 claim — including its **explicit open problems and falsification criteria**.
@@ -66,13 +67,16 @@ git clone https://github.com/sthamann/tfpt && cd tfpt
 pip install -r requirements.txt
 
 ./verify            # ~1s    : the core claim, re-derived from the axioms
-./verify --full     # ~4-5h  : the entire Python suite, 1012 modules (ALL CHECKS PASSED)
+./verify --full     # ~4-5h  : the entire Python suite, 1018 modules (ALL CHECKS PASSED)
 ./verify --release  #         : documents + suite + website + sync audit
 ```
 
 No local toolchain? `docker run --rm ghcr.io/sthamann/tfpt:latest`. The three independent engines
 are one flag away: `./verify --wolfram`, `./verify --lean`, `./verify --audit`. Full detail in
 [`docs/VERIFICATION.md`](docs/VERIFICATION.md).
+
+Strict TOE status (2026-09-05): v1022–v1025 narrow only T2, T4 and T6–T8
+subgates. Every T1–T8 gate remains `[O]`, and a shared 3+1D parent is still missing.
 
 ---
 
@@ -96,8 +100,8 @@ authoritative per-claim status is [`verification/status_ledger.csv`](verificatio
 
 ## What is genuinely open
 
-The discrete/algebraic compiler is closed (`[E]`). The honest residual is **three named interface
-problems** (the seam interface carries two routes), not a diffuse list:
+The discrete/algebraic compiler is closed (`[E]`). Within that compiler lane, the historical
+residual is **three named interface problems** (the seam interface carries two routes):
 
 | Interface | Question | Status |
 |---|---|---|
@@ -110,8 +114,11 @@ problems** (the seam interface carries two routes), not a diffuse list:
 (Route split 2026-07-22 — an ID restructuring, no status change in substance: the statements
 previously attached to "`SEAM.EQUIV.01` closed modulo a cited theorem" now live on the MMST route ID.)
 
-TFPT does **not** claim a certified Theory of Everything — the full treatment (parameter-free
-gravity, the all-orders perturbative leg, the `SEAM.EQUIV.01` status) is in
+This compiler accounting is not the physical TOE accounting. `TFPT.TOE.COMPLETE.01` is the AND of
+eight independent gates T1–T8; all eight remain `[O]`. Round 3 adds certified finite subgates and
+obstructions, but no marker moves, and no single shared 3+1D parent currently satisfies T3–T8.
+The complete gate matrix and remaining obligations are in
+[`tfpt_research_contracts.tex`](tfpt_research_contracts.tex) and
 [`docs/OPEN_PROBLEMS.md`](docs/OPEN_PROBLEMS.md).
 
 ---
@@ -146,7 +153,7 @@ contributions, in order of impact:
 2. **Find a circular dependency** — a "derived" quantity that used its own target.
 3. **Identify an unstated physical assumption** doing load-bearing work.
 4. **Challenge a claimed uniqueness result** (the `E8` glue, the `α⁻¹` root).
-5. **Close or kill one of the three open interfaces.**
+5. **Close or kill one compiler interface or one T1–T8 completeness gate.**
 
 Ready-made [issue templates](.github/ISSUE_TEMPLATE) exist for exactly these: *claim challenge*,
 *reproduction failure*, *mathematical counterexample*, *physical interpretation*, *prediction
@@ -162,7 +169,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 1012 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 1018 machine-checked modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,

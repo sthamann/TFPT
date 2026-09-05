@@ -1,8 +1,10 @@
 digraph concepts {
   "4d-lattice-contract" [label="Four-dimensional lattice dynamics contract"];
+  "absolute-twistor-line" [label="Absolute twistor line"];
   "additive-adeles" [label="Additive adeles"];
   "adele-class-space" [label="Adele class space"];
   "admissible-os-positive-measure" [label="Admissible OS positive measure"];
+  "all-place-tate-weil-realization" [label="All-place Tate--Weil realization"];
   "analytic-object" [label="Analytic object"];
   "arakelov-intersection" [label="Arakelov intersection theory"];
   "arch-rate" [label="Archimedean rate identity"];
@@ -12,6 +14,7 @@ digraph concepts {
   "arithmetic-hodge-index" [label="Arithmetic Hodge index theorem"];
   "arithmetic-topology-prime-knots" [label="Arithmetic topology of primes and knots"];
   "baez-duarte-criterion" [label="Báez-Duarte criterion"];
+  "baez-duarte-rate-conjecture" [label="Báez-Duarte rate conjecture"];
   "barrier-arch-compensation" [label="Archimedean compensation"];
   "barrier-circularity" [label="Renamed RH-equivalent / circularity"];
   "barrier-finite-window-ceiling" [label="Finite-window ceiling / Landau–Widom decay"];
@@ -35,6 +38,7 @@ digraph concepts {
   "bost-connes-kms-system" [label="Bost–Connes KMS system"];
   "bost-connes-system" [label="Bost–Connes system"];
   "bruhat-tits-tree" [label="Bruhat–Tits tree of PGL₂(Qₚ)"];
+  "burnol-lower-bound" [label="Burnol lower bound"];
   "canonical-system-hamiltonian" [label="Zeta canonical-system Hamiltonian"];
   "carlson-theorem" [label="Carlson uniqueness theorem"];
   "causal-spin-network-geometry" [label="Causal-set and spin-network geometry"];
@@ -68,6 +72,7 @@ digraph concepts {
   "dirichlet-series-polytorus" [label="Dirichlet series on the polytorus"];
   "discrete-spectrum-neutrality" [label="Discrete-spectrum neutrality"];
   "dual-pair-language" [label="Dual-pair product language"];
+  "dyadic-block-capture-eta" [label="Dyadic block capture eta"];
   "dyson-fourier-quasicrystal-criterion" [label="Renormalized Dyson Fourier-quasicrystal criterion"];
   "e8-cascade" [label="E8 cascade"];
   "e8-positive-lattice-norm" [label="E8 positive lattice norm"];
@@ -94,6 +99,7 @@ digraph concepts {
   "finite-spectral-triple-zero-approximants" [label="Finite spectral-triple zero approximants"];
   "finite-weil-gns-metric" [label="Finite Weil GNS family metric"];
   "finite-weil-window" [label="Finite Weil window"];
+  "fixed-finite-carrier-rank-obstruction" [label="Fixed finite-carrier rank-nullity lemma"];
   "fourier-quasicrystal-geometry" [label="Fourier-quasicrystal geometry"];
   "fourier-transform" [label="Fourier transform"];
   "frequently-selected-aug-dual-resolvent" [label="FREQ cone theorem"];
@@ -104,6 +110,7 @@ digraph concepts {
   "gabor-zero-side" [label="Gabor zero side"];
   "gate-zero" [label="Gate 0"];
   "gaussian-e8-module" [label="Gaussian E8 module"];
+  "gaussian-smoothed-zero-density" [label="Gaussian-smoothed transformed zero density"];
   "gorz-theorem" [label="GORZ Jensen-polynomial theorem"];
   "groupoid" [label="Measured groupoid"];
   "groupoid-modular-function" [label="Groupoid modular function"];
@@ -162,6 +169,7 @@ digraph concepts {
   "multiplicative-composition-law" [label="Multiplicative composition necessity"];
   "murru-salvatori" [label="Murru–Salvatori regulator method"];
   "narrowband-weil" [label="Narrowband Weil probe"];
+  "negative-explosion-criterion-a" [label="Negative-explosion criterion A"];
   "newman-criterion" [label="Newman heat-flow criterion"];
   "no-archimedean-prime-joint-space" [label="No archimedean-prime joint space"];
   "no-canonical-integer-label" [label="No canonical integer state label"];
@@ -182,6 +190,7 @@ digraph concepts {
   "p1-gauss-bonnet-positive-normalization" [label="P1 Gauss–Bonnet positive normalization"];
   "pair-correlation" [label="Pair correlation of zeta zeros"];
   "perron-fixed-point-transport" [label="Perron fixed-point transport"];
+  "petz-watatani-tate-network" [label="Petz--Watatani--Tate network"];
   "pi-numerology-c3" [label="c3 and L(1,chi_-4) numerology"];
   "pick-function" [label="Pick function"];
   "pimsner-popa-entropy" [label="Pimsner-Popa index entropy"];
@@ -204,6 +213,7 @@ digraph concepts {
   "quasilocal-hamiltonian-dynamics" [label="Quasilocal Hamiltonian dynamics"];
   "quillen-bfk-seam-determinants" [label="Quillen/BFK seam determinants"];
   "r-dagger-kernel-loewner-stack" [label="R† kernel–Loewner positivity stack"];
+  "rankin-mean-pointwise-exponent-drop" [label="Rankin mean-to-pointwise exponent drop"];
   "rankin-selberg-norm-square" [label="Rankin–Selberg norm-square"];
   "regulator-jump" [label="Regulator jump"];
   "relative-determinant" [label="Relative determinant"];
@@ -243,7 +253,10 @@ digraph concepts {
   "static-prime-event-log" [label="Static prime event log"];
   "stieltjes-function" [label="Stieltjes function"];
   "stochastic-scale-semigroup-on-connes-cokernel" [label="Stochastic scale semigroup on Connes cokernel"];
+  "strict-weil-window-floor-zhu" [label="Zhu v2 strict Weil-window floor (external)"];
   "suzuki-screw-canonical-systems" [label="Suzuki screw functions / canonical systems"];
+  "tate-information-loss" [label="Tate projection information loss"];
+  "tate-trace-projector" [label="Scalar Tate trace projector"];
   "terminal-statement" [label="Terminal cross-ratio statement"];
   "tfpt-c3" [label="TFPT axiom c3=1/(8π)"];
   "tfpt-compiler" [label="TFPT compiler structure"];
@@ -254,6 +267,7 @@ digraph concepts {
   "ucp-map" [label="Unital completely positive map"];
   "unitarity-of-emergent-time" [label="Unitarity of emergent TFPT time"];
   "van-dantzig-pair" [label="van Dantzig pair"];
+  "vasyunin-gram-matrix" [label="Vasyunin Nyman-Beurling Gram matrix"];
   "verified-zeros-height" [label="Rigorous verified-zero height"];
   "vitali-montel" [label="Vitali–Montel normal-family principle"];
   "von-mangoldt" [label="von Mangoldt function Λ(n)"];
@@ -274,6 +288,8 @@ digraph concepts {
   "4d-lattice-contract" -> "analytic-object" [label="INSTANCE_OF"];
   "4d-lattice-contract" -> "qca-dilation" [label="REQUIRES"];
   "4d-lattice-contract" -> "event-log-function" [label="WOULD_CLOSE"];
+  "absolute-twistor-line" -> "arithmetic-geometry" [label="INSTANCE_OF"];
+  "absolute-twistor-line" -> "all-place-tate-weil-realization" [label="REQUIRES"];
   "additive-adeles" -> "fourier-transform" [label="DUAL_TO"];
   "additive-adeles" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "additive-adeles" -> "explicit-formula" [label="REDUCES_TO"];
@@ -281,6 +297,12 @@ digraph concepts {
   "adele-class-space" -> "additive-adeles" [label="REQUIRES"];
   "admissible-os-positive-measure" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
   "admissible-os-positive-measure" -> "spectral-framework" [label="INSTANCE_OF"];
+  "all-place-tate-weil-realization" -> "fixed-finite-carrier-rank-obstruction" [label="BLOCKED_BY"];
+  "all-place-tate-weil-realization" -> "research-question" [label="INSTANCE_OF"];
+  "all-place-tate-weil-realization" -> "arakelov-intersection" [label="REQUIRES"];
+  "all-place-tate-weil-realization" -> "arithmetic-hodge-index" [label="REQUIRES"];
+  "all-place-tate-weil-realization" -> "open-global-all-place-intersection" [label="REQUIRES"];
+  "all-place-tate-weil-realization" -> "weil-quadratic-form" [label="WOULD_CLOSE"];
   "analytic-object" -> "experiments/tfpt-discovery/door_b_lambda_transport_probe.py" [label="USED_BY"];
   "arakelov-intersection" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "arakelov-intersection" -> "arithmetic-hodge-index" [label="REQUIRES"];
@@ -302,6 +324,8 @@ digraph concepts {
   "baez-duarte-criterion" -> "nyman-beurling-criterion" [label="SPECIAL_CASE_OF"];
   "baez-duarte-criterion" -> "experiments/tfpt-discovery/baez_duarte_probe.py" [label="USED_BY"];
   "baez-duarte-criterion" -> "verification/v667_baez_duarte.py" [label="USED_BY"];
+  "baez-duarte-rate-conjecture" -> "baez-duarte-criterion" [label="IMPLIES"];
+  "baez-duarte-rate-conjecture" -> "research-question" [label="INSTANCE_OF"];
   "barrier-arch-compensation" -> "obstruction-class" [label="INSTANCE_OF"];
   "barrier-circularity" -> "obstruction-class" [label="INSTANCE_OF"];
   "barrier-circularity" -> "experiments/tfpt-discovery/signed_border_mean_probe.py" [label="KILLED_BY"];
@@ -357,6 +381,8 @@ digraph concepts {
   "bost-connes-system" -> "experiments/tfpt-discovery/seam_bc_primon_bridge_probe.py" [label="USED_BY"];
   "bruhat-tits-tree" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "bruhat-tits-tree" -> "hecke-correspondence" [label="REALIZES"];
+  "burnol-lower-bound" -> "analytic-object" [label="INSTANCE_OF"];
+  "burnol-lower-bound" -> "baez-duarte-rate-conjecture" [label="REQUIRES"];
   "canonical-system-hamiltonian" -> "spectral-framework" [label="INSTANCE_OF"];
   "canonical-system-hamiltonian" -> "screw-function-criterion" [label="REQUIRES"];
   "carlson-theorem" -> "analytic-object" [label="INSTANCE_OF"];
@@ -434,6 +460,11 @@ digraph concepts {
   "dual-pair-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "dual-pair-language" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "dual-pair-language" -> "spectral-framework" [label="INSTANCE_OF"];
+  "dyadic-block-capture-eta" -> "research-question" [label="INSTANCE_OF"];
+  "dyadic-block-capture-eta" -> "baez-duarte-rate-conjecture" [label="REQUIRES"];
+  "dyadic-block-capture-eta" -> "vasyunin-gram-matrix" [label="REQUIRES"];
+  "dyadic-block-capture-eta" -> "experiments/tfpt-discovery/nb_dyadic_capture_probe.py" [label="USED_BY"];
+  "dyadic-block-capture-eta" -> "riemann-hypothesis" [label="WOULD_CLOSE"];
   "dyson-fourier-quasicrystal-criterion" -> "weil-positivity" [label="EQUIVALENT_TO"];
   "dyson-fourier-quasicrystal-criterion" -> "analytic-object" [label="INSTANCE_OF"];
   "dyson-fourier-quasicrystal-criterion" -> "fourier-quasicrystal-geometry" [label="REQUIRES"];
@@ -521,6 +552,9 @@ digraph concepts {
   "finite-weil-window" -> "experiments/tfpt-discovery/w2_form_density_probe.py" [label="USED_BY"];
   "finite-weil-window" -> "notes/arxiv_w1_note/note_w1_suzuki_identification.tex" [label="USED_BY"];
   "finite-weil-window" -> "verification/v861_krein_normalform_lean.py" [label="USED_BY"];
+  "fixed-finite-carrier-rank-obstruction" -> "obstruction-class" [label="INSTANCE_OF"];
+  "fixed-finite-carrier-rank-obstruction" -> "strict-weil-window-floor-zhu" [label="REQUIRES"];
+  "fixed-finite-carrier-rank-obstruction" -> "verification/v1021_all_place_tate_rank_audit.py" [label="USED_BY"];
   "fourier-quasicrystal-geometry" -> "infinite-rank-prime-fourier-module" [label="BLOCKED_BY"];
   "fourier-quasicrystal-geometry" -> "arithmetic-geometry" [label="INSTANCE_OF"];
   "fourier-transform" -> "spectral-framework" [label="INSTANCE_OF"];
@@ -566,6 +600,9 @@ digraph concepts {
   "gaussian-e8-module" -> "experiments/tfpt-discovery/seam_clifford_modular_s_probe.py" [label="USED_BY"];
   "gaussian-e8-module" -> "experiments/tfpt-discovery/two_qubit_clifford_probe.py" [label="USED_BY"];
   "gaussian-e8-module" -> "experiments/tfpt-discovery/z1_edge_signature_probe.py" [label="USED_BY"];
+  "gaussian-smoothed-zero-density" -> "analytic-object" [label="INSTANCE_OF"];
+  "gaussian-smoothed-zero-density" -> "weil-quadratic-form" [label="TRANSFORM_OF"];
+  "gaussian-smoothed-zero-density" -> "experiments/tfpt-discovery/heat_gabor_restatement_probe.py" [label="USED_BY"];
   "gorz-theorem" -> "jensen-polynomials" [label="IMPLIES"];
   "gorz-theorem" -> "analytic-object" [label="INSTANCE_OF"];
   "groupoid" -> "arithmetic-geometry" [label="INSTANCE_OF"];
@@ -737,6 +774,10 @@ digraph concepts {
   "narrowband-weil" -> "experiments/tfpt-discovery/narrowband_weil_probe.py" [label="USED_BY"];
   "narrowband-weil" -> "rh/problem/narrowband_weil.tex" [label="USED_BY"];
   "narrowband-weil" -> "rh/problem/verify_narrowband_weil.py" [label="USED_BY"];
+  "negative-explosion-criterion-a" -> "weil-positivity" [label="EQUIVALENT_TO"];
+  "negative-explosion-criterion-a" -> "positivity-criterion" [label="INSTANCE_OF"];
+  "negative-explosion-criterion-a" -> "gaussian-smoothed-zero-density" [label="REQUIRES"];
+  "negative-explosion-criterion-a" -> "experiments/tfpt-discovery/heat_gabor_restatement_probe.py" [label="USED_BY"];
   "newman-criterion" -> "riemann-hypothesis" [label="EQUIVALENT_TO"];
   "newman-criterion" -> "positivity-criterion" [label="INSTANCE_OF"];
   "newman-criterion" -> "debruijn-newman-constant" [label="REQUIRES"];
@@ -760,6 +801,7 @@ digraph concepts {
   "open-gabor-window-positivity" -> "gabor-pure-criterion" [label="WOULD_CLOSE"];
   "open-global-all-place-intersection" -> "barrier-arch-compensation" [label="BLOCKED_BY"];
   "open-global-all-place-intersection" -> "research-question" [label="INSTANCE_OF"];
+  "open-global-all-place-intersection" -> "rh/catalog/analysis/all_place_tate_audit.md" [label="USED_BY"];
   "open-global-all-place-intersection" -> "additive-adeles" [label="WOULD_CLOSE"];
   "open-global-all-place-intersection" -> "arakelov-intersection" [label="WOULD_CLOSE"];
   "open-global-all-place-intersection" -> "weil-quadratic-form" [label="WOULD_CLOSE"];
@@ -805,6 +847,9 @@ digraph concepts {
   "pair-correlation" -> "experiments/tfpt-discovery/paircorr_contract_probe.py" [label="USED_BY"];
   "perron-fixed-point-transport" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
   "perron-fixed-point-transport" -> "spectral-framework" [label="INSTANCE_OF"];
+  "petz-watatani-tate-network" -> "no-archimedean-prime-joint-space" [label="BLOCKED_BY"];
+  "petz-watatani-tate-network" -> "research-question" [label="INSTANCE_OF"];
+  "petz-watatani-tate-network" -> "all-place-tate-weil-realization" [label="REDUCES_TO"];
   "pi-numerology-c3" -> "class-number-formula-q-i" [label="BLOCKED_BY"];
   "pi-numerology-c3" -> "obstruction-class" [label="INSTANCE_OF"];
   "pick-function" -> "barrier-pick-sign" [label="BLOCKED_BY"];
@@ -859,6 +904,8 @@ digraph concepts {
   "r-dagger-kernel-loewner-stack" -> "rh/problem/keystone_judgment.tex" [label="USED_BY"];
   "r-dagger-kernel-loewner-stack" -> "rh/problem/verify_kernel_loewner08.py" [label="USED_BY"];
   "r-dagger-kernel-loewner-stack" -> "verification/v1017_kernel_loewner_positivity.py" [label="USED_BY"];
+  "rankin-mean-pointwise-exponent-drop" -> "obstruction-class" [label="INSTANCE_OF"];
+  "rankin-mean-pointwise-exponent-drop" -> "experiments/tfpt-discovery/rankin_positivity_miniature_probe.py" [label="KILLED_BY"];
   "rankin-selberg-norm-square" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "rankin-selberg-norm-square" -> "positive-cone-blindness" [label="BLOCKED_BY"];
   "rankin-selberg-norm-square" -> "edge-nonvanishing-method" [label="INSTANCE_OF"];
@@ -901,6 +948,7 @@ digraph concepts {
   "riemann-zeta" -> "riemann-xi" [label="REQUIRES"];
   "rigid-calabi-yau-f8" -> "analytic-object" [label="INSTANCE_OF"];
   "rigid-calabi-yau-f8" -> "weight4-gl1-transport" [label="INSTANCE_OF"];
+  "rigid-calabi-yau-f8" -> "tate-trace-projector" [label="REQUIRES"];
   "rigid-calabi-yau-f8" -> "experiments/tfpt-discovery/cuspidal_bridge_probe.py" [label="USED_BY"];
   "rodgers-tao-theorem" -> "debruijn-newman-constant" [label="IMPLIES"];
   "rodgers-tao-theorem" -> "analytic-object" [label="INSTANCE_OF"];
@@ -982,8 +1030,15 @@ digraph concepts {
   "stochastic-scale-semigroup-on-connes-cokernel" -> "unitarity-of-emergent-time" [label="REQUIRES"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "hilbert-polya-operator" [label="WOULD_CLOSE"];
   "stochastic-scale-semigroup-on-connes-cokernel" -> "rh-as-reflection-positivity" [label="WOULD_CLOSE"];
+  "strict-weil-window-floor-zhu" -> "positivity-criterion" [label="INSTANCE_OF"];
   "suzuki-screw-canonical-systems" -> "experiments/tfpt-discovery/w1_theorem_probe.py" [label="USED_BY"];
   "suzuki-screw-canonical-systems" -> "notes/arxiv_w1_note/note_w1_suzuki_identification.tex" [label="USED_BY"];
+  "tate-information-loss" -> "obstruction-class" [label="INSTANCE_OF"];
+  "tate-information-loss" -> "verification/v1021_all_place_tate_rank_audit.py" [label="USED_BY"];
+  "tate-trace-projector" -> "tate-information-loss" [label="BLOCKED_BY"];
+  "tate-trace-projector" -> "analytic-object" [label="INSTANCE_OF"];
+  "tate-trace-projector" -> "riemann-zeta" [label="REALIZES"];
+  "tate-trace-projector" -> "verification/v1021_all_place_tate_rank_audit.py" [label="USED_BY"];
   "terminal-statement" -> "barrier-lossy-constant" [label="BLOCKED_BY"];
   "terminal-statement" -> "research-question" [label="INSTANCE_OF"];
   "terminal-statement" -> "lstar-statement" [label="REQUIRES"];
@@ -1029,6 +1084,8 @@ digraph concepts {
   "unitarity-of-emergent-time" -> "research-question" [label="INSTANCE_OF"];
   "unitarity-of-emergent-time" -> "weil-positivity" [label="WOULD_CLOSE"];
   "van-dantzig-pair" -> "analytic-object" [label="INSTANCE_OF"];
+  "vasyunin-gram-matrix" -> "analytic-object" [label="INSTANCE_OF"];
+  "vasyunin-gram-matrix" -> "nyman-beurling-space" [label="REALIZES"];
   "verified-zeros-height" -> "compact-window-certificate-mechanism" [label="BLOCKED_BY"];
   "verified-zeros-height" -> "analytic-object" [label="INSTANCE_OF"];
   "vitali-montel" -> "analytic-object" [label="INSTANCE_OF"];
@@ -1102,6 +1159,7 @@ digraph concepts {
   "weil-quadratic-form" -> "experiments/tfpt-discovery/stc_sol_convergence_probe.py" [label="USED_BY"];
   "weil-quadratic-form" -> "experiments/tfpt-discovery/thin_band_analytic_probe.py" [label="USED_BY"];
   "weil-quadratic-form" -> "experiments/tfpt-discovery/weil_window_profile_scout.py" [label="USED_BY"];
+  "weil-quadratic-form" -> "rh/catalog/analysis/all_place_tate_audit.md" [label="USED_BY"];
   "weil-quadratic-form" -> "rh/lean/RH/Elementwise.lean" [label="USED_BY"];
   "xi-fourier-function" -> "analytic-object" [label="INSTANCE_OF"];
   "xi-fourier-function" -> "laguerre-polya-class" [label="INSTANCE_OF"];

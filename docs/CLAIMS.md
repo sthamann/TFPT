@@ -5,6 +5,12 @@
 > per-claim status is the versioned ledger [`verification/status_ledger.csv`](../verification/status_ledger.csv);
 > this page is the human-readable summary. When in doubt, **the ledger wins**.
 
+> **Strict TOE status (2026-09-05).** The closed statements summarized here are compiler or
+> finite-subgate statements, not a strict TOE completion. Round 3 (`v1022`–`v1025`) narrows T2,
+> T4 and T6–T8 only; every physical gate T1–T8 and `TFPT.TOE.COMPLETE.01` remains `[O]`, with no
+> marker move. One shared 3+1D parent satisfying T3–T8 remains missing. Historical
+> compiler-residual language must be read within that scope.
+
 ## The headline claims and their epistemic status
 
 Not everything here has the same epistemic status — and saying so is the point. The five strongest
@@ -58,7 +64,8 @@ directly from `status_ledger.csv`. So the papers, the suite, the ledger and the 
 lock-step: a claim cannot appear in a paper without a machine check behind it, and a check cannot
 exist without a ledger row typing its status.
 
-- **472 numbered claim checks** (`v1_*.py … v472_*.py`), one per claim cluster.
+- **1,018 registered Python verification modules**, including the Round-3 certificates
+  `v1022`–`v1025` (module numbers are historical identifiers, not a contiguous count).
 - **Independent Wolfram path** (`116/116` base, `368/368` extension) re-derives the exact
   algebraic/identity/lattice results on a second engine.
 - **Lean 4** machine-formalises the carrier-rigidity core (`[F]`): no `sorry`/`admit`; every
