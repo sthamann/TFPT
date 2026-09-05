@@ -12,6 +12,7 @@ import { createPortal } from "react-dom";
 import {
   Check,
   Copy,
+  FileCode2,
   Github,
   Loader2,
   Play,
