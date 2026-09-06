@@ -213,6 +213,12 @@ function ClosingCondition() {
             FE-GEN/ALG-EXH, every T1–T8 gate and TFPT.TOE.COMPLETE.01 remain [O],
             and a shared 3+1D parent is still absent. The v1029 tensor target requires
             global zero-mode removal and is not a TFPT embedding.
+            Round 7 (v1031–v1035) quantizes this free target and constructs a
+            positive local covariant curvature field with helicities ±2. It also
+            gives auxiliary flux-register charged corners, the factorized onsite
+            mirror bound 1+√3/2, and linear Ward propagation for prescribed sources.
+            The quarter twist has h=1/4, not hλ=1; the mirror bound is not an
+            interacting hopping theorem; universal quantum coupling remains open.
           </p>
         </div>
       </details>
@@ -236,7 +242,7 @@ export function OpenGates() {
         <SectionHeader
           eyebrow="Honest boundaries"
           title="What is still open?"
-          description="After the compiler closure the live compiler residual is Rest = v_geo ⊕ G_net ⊕ F_transfer. Beside it sits the strict-physical-TOE accounting Rest_TOE: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. The one-condition/E₈ reduction applies only to the historical finite seam/compiler and boundary-net/MMST lane. Round 4 (v1026–v1030) closes the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 results; FE-GEN/ALG-EXH and all full gates stay open. The v1029 T7 target is not a TFPT embedding."
+          description="After the compiler closure the live compiler residual is Rest = v_geo ⊕ G_net ⊕ F_transfer. Beside it sits the strict-physical-TOE accounting Rest_TOE: every T1–T8 gate and TFPT.TOE.COMPLETE.01 remains [O], and the shared 3+1D parent is absent. The one-condition/E₈ reduction applies only to the historical finite seam/compiler and boundary-net/MMST lane. Round 4 (v1026–v1030) closes the fixed-M=1, Ny=8 relaxed TEL-B norm below 2.995906 and adds narrow T3/T4/T6–T8 results; FE-GEN/ALG-EXH and all full gates stay open. Round 7 (v1031–v1035) quantizes the zero-mean target and constructs a free covariant helicity-±2 curvature field, auxiliary charged corners, a factorized mirror bound and prescribed-source Ward propagation. This is not a microscopic TFPT embedding or universal nonlinear coupling."
         />
 
         <ClosingCondition />

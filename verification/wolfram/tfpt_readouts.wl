@@ -731,6 +731,8 @@ Module[{basis, i, j, h, p, omega, theta, inner, act, proj, kinds, Ps, eye10, zer
 
 (* ---- round-4 representative exact mirrors; native Arb remains Python-only ---- *)
 Get[FileNameJoin[{DirectoryName[$InputFileName], "tfpt_round4.wl"}]];
+(* Round 7: bounded exact free-field/twist/mirror/Ward representatives. *)
+Get[FileNameJoin[{DirectoryName[$InputFileName], "tfpt_round7.wl"}]];
 
 (* ---- summary ---- *)
 Print["--- Wolfram readouts: ", $pass, " passed, ", $fail, " failed ---"];

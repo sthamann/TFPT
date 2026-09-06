@@ -226,7 +226,7 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
             </div>
             <p className="mt-1 text-[11px] leading-snug text-slate-400">
               {nativeOnly ? (
-                <>Native Arb/Acb certificate — use the pinned local environment.</>
+                <>Native verification — use the full local repository environment.</>
               ) : (
                 <>
                   Runs entirely in your browser via Pyodide {pyodideVersion()}{" "}
@@ -311,7 +311,7 @@ function ReproducerModal({ file, onClose }: { file: string; onClose: () => void 
               </div>
               <p className="mt-2 text-xs leading-relaxed text-slate-300">
                 {nativeOnly
-                  ? "This certificate deliberately does not run in the browser runtime. You can still read the source, open it on GitHub, or reproduce it with the pinned local dependency and the command below."
+                  ? "This check deliberately does not run in the browser runtime. You can still read the source, open it on GitHub, or reproduce it in the full local repository environment with the command below."
                   : "Some heavier scripts (large SciPy solves) are best run locally. You can still read the source, open it on GitHub, or run it with the command below."}
               </p>
               {result.error && (

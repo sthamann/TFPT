@@ -9,6 +9,16 @@ reproduces the same headline numbers, so a reviewer can cross-check the
 
 ## Run
 
+Round 7 (2026-09-05) adds **14 representative exact checks** in
+`tfpt_round7.wl`, loaded before the base summary: free curvature projector and
+null-cone positivity, the quarter-twist weight mismatch, the factorized mirror
+minimum and physical-Fourier Ward identities. These are **not engine-verified**.
+The local executable could not auto-locate its kernel; selecting the installed
+kernel explicitly reached a license-activation error. No credentials were changed.
+The verified base count remains **116/116**, not 130 or a count of authored blocks.
+The full Fock/distribution proofs and Python numerical/source regressions are not
+claimed to be independently verified by this representative Wolfram file.
+
 Round 4 (2026-09-05) adds **11 representative exact checks** in
 `tfpt_round4.wl`, loaded by the base runner before its summary. They cover
 the signed wall, the full one-site mod-five Gauss character, the selected

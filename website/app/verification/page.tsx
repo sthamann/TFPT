@@ -489,6 +489,11 @@ export default function VerificationPage() {
             other modules add narrow T3/T4/T6–T8 results only. FE-GEN/ALG-EXH, every
             T1–T8 gate and the shared 3+1D parent remain open; v1029 requires global
             zero-mode removal and is not a TFPT embedding.
+            Round 7 (v1031–v1035; 233 typed checks including the quantum prerequisite)
+            adds a free positive covariant helicity-±2 curvature field, auxiliary
+            charged corners, a factorized mirror bound and prescribed-source Ward
+            propagation. No common-parent or nonlinear-coupling theorem follows.
+            Source-auditing v1033/v1034 require the full local repository.
           </p>
           <GravityEmergence />
           <ThermalSeamLegs />

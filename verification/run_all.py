@@ -1411,6 +1411,16 @@ MODULES = [
      "v1029_local_tensor_constraints -- round-4 integration 2026-09-05: Local tensor constraints give two z=1 radiative modes after explicit global zero-mode removal; no TFPT embedding. All aggregate T1-T8 gates remain OPEN. NO RH CLAIM."),
     ("v1030_alg2_sector_frame",
      "v1030_alg2_sector_frame -- round-4 integration 2026-09-05: Sector connectivity and quantitative uniform word-frame bridge conditional on actual microscopic generation and joint-adjoint tails. All aggregate T1-T8 gates remain OPEN. NO RH CLAIM."),
+    ("v1031_quantum_tensor_curvature",
+     "Free zero-mean tensor Weyl/Fock target and distribution limit; 69 checks, not a microscopic TFPT derivation. T7 remains OPEN."),
+    ("v1032_covariant_curvature",
+     "Covariant positive local free curvature field with helicities +/-2; 34 exact identities supporting the written proof. No common parent or nonlinear gravity closure."),
+    ("v1033_charged_disorder",
+     "Auxiliary Z4 flux-register charged corners, exact twist-weight/parity mismatch and QWZ regressions; 35 typed checks. FE-GEN/MMST remain OPEN; repository-source runtime required."),
+    ("v1034_parent_mirror",
+     "Factorized onsite gap >=1+sqrt(3)/2 and failure of a bare-hopping relative form bound; 36 typed checks. No interacting mirror-gap no-go or closure; repository-source runtime required."),
+    ("v1035_matter_coupling",
+     "Physical Fourier Ward propagation and prescribed-source response, with dynamical/source/zero-mode boundaries; 59 typed checks. Universal quantum coupling and T7 remain OPEN."),
 ]
 
 

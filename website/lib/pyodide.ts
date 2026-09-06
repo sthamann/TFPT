@@ -19,6 +19,10 @@ const NATIVE_ONLY_SCRIPTS: Record<string, string> = {
     "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
   "v1026_telb_round4_closure.py":
     "This interval certificate requires native python-flint==0.9.0 (Arb/Acb) and is not reproducible in Pyodide. Run the local command below in the repository environment.",
+  "v1033_charged_disorder.py":
+    "This checker reads the original QWZ builder and MMST article from the complete repository. Those source inputs are not mounted in the browser sandbox. Run the local command below from a full checkout.",
+  "v1034_parent_mirror.py":
+    "This checker audits the original parent and mirror source files from the complete repository. Those source inputs are not mounted in the browser sandbox. Run the local command below from a full checkout.",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

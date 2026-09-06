@@ -56,7 +56,10 @@ never quoted as compiler outputs:
 
 - The strict physical completeness contract `TFPT.TOE.COMPLETE.01`: all gates T1–T8 remain
   `[O]`; the shared 3+1D parent, chiral measure/mirror continuum, IR reconstruction, physical
-  flavor texture, massless spin-2 sector and unique global initial state are not constructed.
+  flavor texture, microscopic TFPT massless spin-2 embedding and unique global initial state
+  are not constructed. Round 7 constructs a separate positive local covariant free curvature
+  field with helicities ±2 (`v1031`/`v1032`); this does not derive the shared parent or universal
+  nonlinear coupling. Prescribed-source Ward propagation (`v1035`) is only a linear target result.
 - `m_p/m_e` (QCD scale), `η_B` (leptogenesis), Koide `Q`, the axion relic abundance — one transfer
   functor `F_transfer` with typed runnable solvers and kill tests (`v371`–`v374`, guarded by `v187`).
 - The full non-perturbative ambient quantum-gravity measure (`QG.AMB.01`) — a `[C]` redundancy,

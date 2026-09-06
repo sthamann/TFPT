@@ -10,6 +10,13 @@
 > physical mass generation, the collective spin-2 embedding and global state selection
 > remain unproved; no parent marker moves. A single shared 3+1D parent satisfying T3–T8 is still
 > missing.
+>
+> Round 7 (`v1031`–`v1035`) adds a positive local covariant **free** curvature
+> field of helicities ±2, not its microscopic TFPT embedding. Auxiliary charged
+> corners still have the quarter-twist mismatch `h=1/4 != h_lambda=1`;
+> the onsite mirror gap `1+sqrt(3)/2` is factorized, not an interacting gap theorem.
+> Prescribed-source linear Ward propagation does not settle dynamical quantum
+> matter, universal nonlinear coupling or the removed homogeneous block.
 
 **Compiler residual (historical v5.4 view, scope-corrected 2026-09-05).** The
 discrete/algebraic compiler is closed (`[E]`). Within that compiler accounting, the residual is
@@ -117,7 +124,8 @@ multiplier — not one physical clock (`v723`/`v724`/`v777`). The `v384` residua
 *compiler-internal* residual matrix as scoped in `v384` — it does **not** mean the physics
 construction is done. The contract scope fence in `tfpt_research_contracts` (ledger wins) honestly
 lists as open: the interacting reflection positivity, mirror decoupling, the internal `SU(2)` as a
-genuine gauge action, both helicities, local 4D matter fields, EWSB, confinement — now registered as
+genuine gauge action, both helicities in the shared microscopic parent (the independent free
+curvature target now has helicities ±2), local 4D matter fields, EWSB, confinement — now registered as
 the named contracts `SEAM.BULK4D.RECON.01`, `QFT4D.OS.RECON.01`, `CHIRAL4D.NOMIRROR.01`,
 `DYN.UNITARY.DILATION.01` under the top-level rule `DIMENSION.UPLIFT.FIREWALL.01` (no 1+1D theorem
 closes a 3+1D claim).

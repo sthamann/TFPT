@@ -921,6 +921,11 @@ const CLUSTERS: Cluster[] = [
       { file: "v1028_gauss_d4_cap.py", what: "Gauss residues with full 192-mode site characters and specified nine-irrep cube links; symmetric selected-pair-space D4 cap; no canonical clock family, mass texture or global state" },
       { file: "v1029_local_tensor_constraints.py", what: "Local tensor constraints give two z=1 radiative modes after explicit global zero-mode removal; no TFPT embedding" },
       { file: "v1030_alg2_sector_frame.py", what: "Sector connectivity and quantitative uniform word-frame bridge conditional on actual microscopic generation and joint-adjoint tails" },
+      { file: "v1031_quantum_tensor_curvature.py", what: "Free zero-mean curvature Weyl/Fock target and distribution limit; no TFPT parent" },
+      { file: "v1032_covariant_curvature.py", what: "Positive covariant local free curvature field with helicities plus/minus two; nonlinear gravity open" },
+      { file: "v1033_charged_disorder.py", what: "Auxiliary Z4 flux corners and twist weight/parity obstruction; MMST open; full repository required" },
+      { file: "v1034_parent_mirror.py", what: "Factorized mirror gap and bare-hopping relative-bound obstruction; no interacting gap theorem; full repository required" },
+      { file: "v1035_matter_coupling.py", what: "Physical Fourier Ward propagation for prescribed sources and dynamical-source obstructions; universal quantum coupling open" },
     ],
   },
   {

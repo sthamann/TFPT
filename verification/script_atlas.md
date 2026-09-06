@@ -2,7 +2,7 @@
 
 > **Generated** by `make_script_atlas.py` (`bash build.sh gen`) from the ledger + registry + clusters + docs map. Do not edit by hand.
 
-`1023` registered scripts · `1189` ledger claims · `10` clusters.
+`1028` registered scripts · `1194` ledger claims · `10` clusters.
 
 **How to read:** each script line is `vN_name  [markers]  CLAIM.IDs  — one-liner`; the sub-line shows `deps` (resolved to the scripts they come from), `supersedes`, and the papers that cite it. The four-class markers are `[E]` exact/proven, `[C]` conditional, `[O]` open/axiom, `[X]` kill-test.
 
@@ -1226,7 +1226,7 @@ _The parabolic wall-selection contract: the quark ratios are closed; only the ab
 - **v407_dn_pairings_omega** [E/C/O] `FLAV.SELECTOR.CLOSE.01` — FLAV.SELECTOR.CLOSE.01: the R4' residue folds into the tau=omega keystone (v405) -- the three (d,n) selector pairings ARE the tau=omega family-slice atoms. [E] the frame (1,a,sigma
   - deps: v405_seam_equiv_omega, v49_readout_rigidity, v405, v139, v136, v42 · cited: origin theory, 1 architecture e8
 
-### `frontier` — Open gate (G_metric) & the frontier  (246 scripts)
+### `frontier` — Open gate (G_metric) & the frontier  (251 scripts)
 _The quantum-gravity measure contract, the audit ledger, the data scorecard, and the honestly-typed frontier items._
 
 - **v5_e8_cascade** [E] `CAS.01` — cascade D = 60 − 2n: endpoints, exponent rungs → 240
@@ -1721,6 +1721,16 @@ _The quantum-gravity measure contract, the audit ledger, the data scorecard, and
   - deps: v997_spin2_smg_witnesses.py; v1000_spin2_sk_witnesses.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries · cited: introduction, 4 frontier
 - **v1030_alg2_sector_frame** [E/C/O] `SEAM.MMST.ALG2.FRAME.01` — Sector connectivity and quantitative uniform word-frame bridge conditional on actual microscopic generation and joint-adjoint tails
   - deps: v1006_mmst_lemma_battery.py; v1016_state_gap_batteries.py; v1022_telb_round3_certificates.py; v1025_telb_c1_c2a_certificates, v1022_telb_round3_certificates · cited: introduction, origin theory, 4 frontier
+- **v1031_quantum_tensor_curvature** [E/O] `GRAV.FREE.CURVATURE.FOCK.01` — Free zero-mean curvature Weyl/Fock target and distribution limit; no TFPT parent
+  - deps: v1029_local_tensor_constraints, v997_spin2_smg_witnesses.py; v1000_spin2_sk_witnesses.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries · cited: introduction, origin theory, 4 frontier
+- **v1032_covariant_curvature** [E/O] `GRAV.FREE.CURVATURE.COVARIANT.01` — Positive covariant local free curvature field with helicities plus/minus two; nonlinear gravity open
+  - deps: v1031_quantum_tensor_curvature, v997_spin2_smg_witnesses.py; v1000_spin2_sk_witnesses.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries · cited: introduction, origin theory, 4 frontier
+- **v1033_charged_disorder** [E/O] `SEAM.MMST.DISORDER.REGISTER.01` — Auxiliary Z4 flux corners and twist weight/parity obstruction; MMST open; full repository required
+  - deps: v1006_mmst_lemma_battery.py; v1016_state_gap_batteries.py; v1022_telb_round3_certificates.py; v1025_telb_c1_c2a_certificates, v1030_alg2_sector_frame · cited: introduction, origin theory, 4 frontier
+- **v1034_parent_mirror** [E/O] `CHIRAL4D.MIRROR.FACTORIZED.BOUND.01` — Factorized mirror gap and bare-hopping relative-bound obstruction; no interacting gap theorem; full repository required
+  - deps: v989_lattice_gate_battery.py; v997_spin2_smg_witnesses.py; v1002_spin10_mirror_projector.py; v1023_derivative_filtered_wall, v1027_signed_det_car_wall · cited: introduction, origin theory, 4 frontier
+- **v1035_matter_coupling** [E/O] `GRAV.LINEAR.SOURCE.WARD.01` — Physical Fourier Ward propagation for prescribed sources and dynamical-source obstructions; universal quantum coupling open
+  - deps: v1031_quantum_tensor_curvature, v1032_covariant_curvature, v997_spin2_smg_witnesses.py; v1000_spin2_sk_witnesses.py; v1012_toe_gate_witnesses.py; v1024_parent_internal_boundaries · cited: introduction, origin theory, 4 frontier
 
 ### `registry` — Blind registry & red-team follow-ups (v84–v175)  (184 scripts)
 _The frozen prediction registry and the follow-up rounds: Target A merged to one residual, the CP residual quantified, N★ from reheating, the F_transfer gauge inputs cross-checked with an external RGE tool, and the AQFT closure round — net existence and full-cone reflection positivity discharged to [E], leaving the seam realisation as the single open premise. Every freeze machine-enforced._
@@ -2117,11 +2127,6 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 
 ## Current frontier (highest-id scripts)
 
-- **v1019_coxeter_euler_completion** — `E8.COXETER.EULER.COMPLETION.01`
-- **v1020_spectator_sector_obstruction** — `BULK.PRIME_COMPLETION.01`
-- **v1021_all_place_tate_rank_audit** — `PRIME.ALLPLACE.TATE.INTERSECTION.01`
-- **v1022_telb_round3_certificates** — `SEAM.MMST.TELB.ROUND3.01`
-- **v1023_derivative_filtered_wall** — `CHIRAL4D.MIRROR.DFILTER.BLOCK.01`
 - **v1024_parent_internal_boundaries** — `FLAV.NU.PARENT.INTERTWINER.01, GRAV.PARENT.GAP.NO_GO.01, FTRANSFER.PARENT.Z5CAP.01`
 - **v1025_telb_c1_c2a_certificates** — `SEAM.MMST.TELB.C1C2A.01`
 - **v1026_telb_round4_closure** — `SEAM.MMST.TELB.NORM.01`
@@ -2129,4 +2134,9 @@ _The frozen prediction registry and the follow-up rounds: Target A merged to one
 - **v1028_gauss_d4_cap** — `PARENT.GAUSS.D4.ROUND4.01`
 - **v1029_local_tensor_constraints** — `GRAV.SPIN2.LOCAL.CONSTRAINT.01`
 - **v1030_alg2_sector_frame** — `SEAM.MMST.ALG2.FRAME.01`
+- **v1031_quantum_tensor_curvature** — `GRAV.FREE.CURVATURE.FOCK.01`
+- **v1032_covariant_curvature** — `GRAV.FREE.CURVATURE.COVARIANT.01`
+- **v1033_charged_disorder** — `SEAM.MMST.DISORDER.REGISTER.01`
+- **v1034_parent_mirror** — `CHIRAL4D.MIRROR.FACTORIZED.BOUND.01`
+- **v1035_matter_coupling** — `GRAV.LINEAR.SOURCE.WARD.01`
 

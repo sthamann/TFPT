@@ -67,7 +67,7 @@ git clone https://github.com/sthamann/tfpt && cd tfpt
 pip install -r requirements.txt
 
 ./verify            # ~1s    : the core claim, re-derived from the axioms
-./verify --full     # ~4-5h  : the entire Python suite, 1023 modules (ALL CHECKS PASSED)
+./verify --full     # ~4-5h  : the entire Python suite, 1028 modules (ALL CHECKS PASSED)
 ./verify --release  #         : documents + suite + website + sync audit
 ```
 
@@ -78,6 +78,16 @@ are one flag away: `./verify --wolfram`, `./verify --lean`, `./verify --audit`. 
 Strict TOE status (2026-09-05): v1026–v1030 narrow only TEL-B/T2, T4 and T6–T8
 subgates. The relaxed TEL-B norm theorem is uniform for even N≥16, but every T1–T8
 gate remains `[O]`, and a shared 3+1D parent is still missing.
+
+Round 7 (`v1031`–`v1035`, including the round-6 quantum prerequisite) adds
+233 typed checks and full proofs in the contracts paper: a zero-mean free
+Weyl/Fock curvature field with helicities ±2; auxiliary Z4 flux-register corners
+with a twist-weight/parity obstruction; the **factorized** mirror lower gap
+`1+sqrt(3)/2`; and physical-Fourier Ward propagation for **prescribed** sources.
+These are not a common-parent derivation, microscopic MMST, an interacting
+mirror-gap theorem or universal nonlinear gravity. Every T1–T8 gate stays `[O]`.
+Run each `verification/v1031_*.py` through `v1035_*.py` locally with the repository
+dependencies. The source-auditing v1033/v1034 require a full checkout, not Pyodide.
 
 For the full native certificate chain (including the interval inputs), run
 `v1022_telb_round3_certificates.py`, `v1025_telb_c1_c2a_certificates.py` and
@@ -177,7 +187,7 @@ just an archive.
 ├── README.md              # you are here
 ├── docs/                  # THEORY · CLAIMS · OPEN_PROBLEMS · FALSIFICATION
 │                          # VERIFICATION · FOR_PHYSICISTS · FOR_MATHEMATICIANS
-├── verification/          # 1023 machine-checked modules, run_all.py, the status ledger,
+├── verification/          # 1028 registered modules, run_all.py, the status ledger,
 │                          # the Wolfram second path, the red-team layer
 ├── experiments/           # research explorations + the Lean 4 proofs (not claims until promoted)
 ├── rh/                    # the consolidated RH-program workspace (inventory, Lean pilot, paper,

@@ -47,6 +47,17 @@ export const CHANGELOG: ChangelogEntry[] = [
     "heading": [
       {
         "k": "t",
+        "v": "(CLIX): non-RH round 7 — free quantum curvature, charged twists and interaction boundaries"
+      }
+    ],
+    "items": []
+  },
+  {
+    "date": "2026-09-05",
+    "dateLabel": "2026-09-05",
+    "heading": [
+      {
+        "k": "t",
         "v": "(CLVIII): non-RH round 4 — uniform TEL-B norm and explicit T1–T8 boundaries"
       }
     ],
