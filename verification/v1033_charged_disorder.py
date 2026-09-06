@@ -13,8 +13,10 @@ scaling checks below are diagnostics, not tail theorems.  NO RH CLAIM.
 Port provenance: native verification port of
 `toe_round7_charged_disorder/charged_disorder_probe.py`
 (source SHA-256 7b53a74ea58629a6925c854290feb507932b1f2a174e80ba7cefe3a82e5dc951).
-The port changes only harness integration, repository lookup, and execution
-lifecycle.
+The initial port changed only harness integration, repository lookup, and
+execution lifecycle.  The 2026-09-06 amendment replaces an eigensolver-selected
+zero-mode vacuum by its basis-independent fixed-particle ground-space mixture
+and reports the full one-body energy interval over pure ground-state fillings.
 """
 from __future__ import annotations
 
@@ -416,11 +418,56 @@ def finite_qwz_checks() -> None:
     )
 
 
-def half_filled_data(h: np.ndarray) -> tuple[float, np.ndarray]:
+def half_filled_ground_space(
+    h: np.ndarray,
+) -> tuple[float, np.ndarray, np.ndarray, int]:
+    """Particle-hole-symmetric half filling, including an unresolved zero space.
+
+    C=P_-+(m/d)P_0 is the one-body covariance of the uniform mixture over
+    rank-m fillings of the d-dimensional zero eigenspace.  It is not renamed
+    a pure Slater vacuum.  The numerical cluster threshold must be separated
+    from every nonzero level; this is a finite diagnostic, not an interval proof.
+    """
     vals, vecs = np.linalg.eigh(h)
     nocc = h.shape[0] // 2
-    covariance = vecs[:, :nocc] @ vecs[:, :nocc].conj().T
-    return float(vals[:nocc].sum()), covariance
+    tolerance = 64 * h.shape[0] * np.finfo(float).eps * max(1.0, np.linalg.norm(h, np.inf))
+    negative = vals < -tolerance
+    zero = np.abs(vals) <= tolerance
+    zero_vectors = vecs[:, zero]
+    dimension = zero_vectors.shape[1]
+    remaining = nocc - int(np.count_nonzero(negative))
+    if not 0 <= remaining <= dimension:
+        raise ValueError("Half filling is not supported by the zero-energy cluster")
+    outside = np.abs(vals[~zero])
+    if outside.size and float(np.min(outside)) <= 100 * tolerance:
+        raise ValueError("Zero-energy cluster is not numerically isolated")
+    occupied = vecs[:, negative]
+    covariance = occupied @ occupied.conj().T
+    if dimension:
+        covariance += (remaining / dimension) * zero_vectors @ zero_vectors.conj().T
+    return float(vals[:nocc].sum()), covariance, zero_vectors, remaining
+
+
+def half_filled_data(h: np.ndarray) -> tuple[float, np.ndarray]:
+    energy, covariance, _zero_vectors, _remaining = half_filled_ground_space(h)
+    return energy, covariance
+
+
+def ground_space_excess_bounds(
+    covariance: np.ndarray, zero_vectors: np.ndarray, remaining: int,
+    transformed_target: np.ndarray, target_ground_energy: float,
+) -> tuple[float, float]:
+    """Extrema over ALL rank-m zero-space fillings (Ky Fan variational bound)."""
+    mean = float(np.trace(covariance @ transformed_target).real - target_ground_energy)
+    dimension = zero_vectors.shape[1]
+    if not dimension:
+        return mean, mean
+    compressed = zero_vectors.conj().T @ transformed_target @ zero_vectors
+    values = np.linalg.eigvalsh((compressed + compressed.conj().T) / 2)
+    fixed = mean - (remaining / dimension) * float(values.sum())
+    low = float(values[:remaining].sum())
+    high = float(values[-remaining:].sum()) if remaining else 0.0
+    return fixed + low, fixed + high
 
 
 def strip_at_momentum(k: float, ny: int = 8) -> np.ndarray:
@@ -469,20 +516,27 @@ def momentum_ground_energy(nx: int, sector: int, ny: int = 8) -> float:
 def scaling_diagnostics() -> None:
     nxs = (16, 24, 32, 48, 64)
     sharp_excess = []
+    sharp_intervals = []
     smooth_excess_scaled = []
+    smooth_intervals_scaled = []
     smooth_comm_scaled = []
     for nx in nxs:
         h0 = qwz_cylinder(nx, 8, 1.0, 0)
         h1 = qwz_cylinder(nx, 8, 1.0, 1)
-        e0, c0 = half_filled_data(h0)
+        e0, c0, zero_vectors, remaining = half_filled_ground_space(h0)
         e1, _ = half_filled_data(h1)
         sharp = sharp_arc_phase(nx, 8, nx // 2 - 1)
         sharp_state = sharp @ c0 @ sharp.conj().T
         sharp_excess.append(float(np.trace(sharp_state @ h1).real - e1))
+        sharp_intervals.append(ground_space_excess_bounds(
+            c0, zero_vectors, remaining, sharp.conj().T @ h1 @ sharp, e1))
         smooth = smooth_phase(nx, 8)
         smooth_state = smooth @ c0 @ smooth.conj().T
         smooth_excess = float(np.trace(smooth_state @ h1).real - e1)
         smooth_excess_scaled.append(nx * smooth_excess)
+        bounds = ground_space_excess_bounds(
+            c0, zero_vectors, remaining, smooth.conj().T @ h1 @ smooth, e1)
+        smooth_intervals_scaled.append(tuple(nx * value for value in bounds))
         residual = h1 @ smooth - smooth @ h0
         smooth_comm_scaled.append(nx * np.linalg.norm(residual, 2))
         BOOK.check(
@@ -492,8 +546,8 @@ def scaling_diagnostics() -> None:
         )
     BOOK.check(
         "scaling_diagnostic",
-        "sharp endpoint insertion has measured O(1) energy cost",
-        min(sharp_excess) > 4.0 and max(sharp_excess) < 5.0
+        "sharp endpoint energy is bounded across the complete half-filled ground space on the sampled sizes",
+        all(4.0 < low <= high < 5.0 for low, high in sharp_intervals)
         and abs(sharp_excess[-1] - sharp_excess[-2]) < 0.03,
     )
     BOOK.check(
@@ -503,9 +557,11 @@ def scaling_diagnostics() -> None:
     )
     BOOK.check(
         "scaling_diagnostic",
-        "smooth dressing has measured O(1/N) many-body excess",
+        "smooth ground-space mixture and all pure fillings have measured O(1/N) excess",
         max(smooth_excess_scaled) - min(smooth_excess_scaled) < 0.02
-        and 8.45 < smooth_excess_scaled[-1] < 8.50,
+        and 6.88 < smooth_excess_scaled[-1] < 6.93
+        and all(5.2 < low <= mean <= high < 8.6
+                for (low, high), mean in zip(smooth_intervals_scaled, smooth_excess_scaled)),
     )
     casimir = []
     for nx in (32, 64, 128, 256):
@@ -520,8 +576,10 @@ def scaling_diagnostics() -> None:
                 for j in range(len(casimir) - 1)),
     )
     print("DIAGNOSTIC sharp_excess", [f"{x:.12f}" for x in sharp_excess])
+    print("DIAGNOSTIC sharp_ground_space_intervals", sharp_intervals)
     print("DIAGNOSTIC N_times_smooth_excess",
           [f"{x:.12f}" for x in smooth_excess_scaled])
+    print("DIAGNOSTIC N_times_smooth_ground_space_intervals", smooth_intervals_scaled)
     print("DIAGNOSTIC N_times_smooth_comm_norm",
           [f"{x:.12f}" for x in smooth_comm_scaled])
     print("DIAGNOSTIC N_deltaE_over_2pi", [f"{x:.12f}" for x in casimir])

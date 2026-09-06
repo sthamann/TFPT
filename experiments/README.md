@@ -1,5 +1,12 @@
 # TFPT Experiments
 
+Neu (2026-09-06), **reiner Theorie-Contract, nicht in der empirischen Scorecard**:
+[Freier 3D-Skalar auf dem gestaggerten Gitter](theory-contracts/free-scalar-3d/README.md)
+mit vollständiger lokaler Herleitung, symmetrischem Spannungstensor bei
+unveränderter Energiedichte und unverändertem Strom, 68 exakten Checks,
+Bloch-Übergängen und endlicher Weyl-Operatorfassung. Unpromotiert;
+wechselwirkende Materie und nichtlineare Gravitation bleiben offen.
+
 Reproduzierbare Build-Targets, die Aspekte der TFPT-Theorie beweisen, simulieren oder
 **empirisch gegen echte, öffentliche Daten** testen. Jedes Unterprojekt ist
 eigenständig (eigene Abhängigkeiten, eigener Build, eigene CLI als Audit-Surface) und

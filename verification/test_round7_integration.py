@@ -18,6 +18,7 @@ import subprocess
 import sys
 import tempfile
 import unittest
+from unittest.mock import patch
 
 
 VERIFICATION_DIR = Path(__file__).resolve().parent
@@ -194,10 +195,13 @@ raise SystemExit(1 if any(returns.values()) else 0)
                 env=subprocess_environment(),
                 capture_output=True,
                 text=True,
-                timeout=80,
+                timeout=180,
                 check=False,
             )
-        self.assertEqual(completed.returncode, 0, completed.stderr)
+        self.assertEqual(
+            completed.returncode, 0,
+            completed.stdout + "\nSTDERR:\n" + completed.stderr,
+        )
         self.assertEqual(sum(count for _, count in EXPECTED.values()), 233)
         for title, count in EXPECTED.values():
             self.assertIn(
@@ -235,6 +239,36 @@ raise SystemExit(1 if any(returns.values()) else 0)
                     [output.strip().splitlines()[-1] for output in outputs],
                     [expected_summary, expected_summary],
                 )
+
+    def test_degenerate_half_filling_is_basis_independent(self) -> None:
+        module = importlib.import_module("v1033_charged_disorder")
+        np = module.np
+        h = np.diag([-2.0, 0.0, 0.0, 2.0])
+        values, vectors = np.linalg.eigh(h)
+        expected = np.diag([1.0, 0.5, 0.5, 0.0])
+        for angle in (0.0, 0.37, 1.2):
+            rotated = vectors.copy()
+            c, s = np.cos(angle), np.sin(angle)
+            rotated[:, 1:3] = vectors[:, 1:3] @ np.array([[c, -s], [s, c]])
+            with patch.object(module.np.linalg, "eigh", return_value=(values, rotated)):
+                energy, covariance = module.half_filled_data(h)
+                _, _, zero_vectors, remaining = module.half_filled_ground_space(h)
+            with self.subTest(angle=angle):
+                self.assertAlmostEqual(energy, -2.0)
+                np.testing.assert_allclose(covariance, expected, atol=1e-14)
+                self.assertAlmostEqual(float(np.trace(covariance)), 2.0)
+                bounds = module.ground_space_excess_bounds(
+                    covariance, zero_vectors, remaining,
+                    np.diag([0.0, -1.0, 3.0, 0.0]), 0.0,
+                )
+                np.testing.assert_allclose(bounds, (-1.0, 3.0), atol=1e-14)
+        for filling, expected_bound in ((0, 0.0), (2, 2.0)):
+            zero_vectors = np.eye(2)
+            covariance = (filling / 2) * np.eye(2)
+            bounds = module.ground_space_excess_bounds(
+                covariance, zero_vectors, filling, np.diag([-1.0, 3.0]), 0.0,
+            )
+            np.testing.assert_allclose(bounds, (expected_bound, expected_bound), atol=1e-14)
 
     def test_invalid_repo_override_fails_closed(self) -> None:
         green_markers = (

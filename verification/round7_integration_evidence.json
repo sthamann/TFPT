@@ -1,5 +1,6 @@
 {
   "schema_version": 1,
+  "record_scope": "Historical validation of integration commit 02242c6a; the subsequent QWZ zero-space portability amendment is recorded separately in round7_portability_amendment.json. These original transcript/source hashes are intentionally preserved.",
   "integration": "Non-RH round 7 with round-6 quantum prerequisite",
   "validation_record_date": "2026-09-06",
   "source_base_commit": "4417f1ba8da3d5dc622c942efcbfc46ebaae546d",

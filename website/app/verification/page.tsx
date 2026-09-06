@@ -494,6 +494,10 @@ export default function VerificationPage() {
             charged corners, a factorized mirror bound and prescribed-source Ward
             propagation. No common-parent or nonlinear-coupling theorem follows.
             Source-auditing v1033/v1034 require the full local repository.
+            The 2026-09-06 v1033 amendment removes an eigensolver-dependent zero-mode
+            vacuum choice: it declares a ground-space mixture and reports energy
+            bounds across all pure zero-mode fillings. This finite-grid diagnostic
+            is not a conformal-weight or all-size scaling theorem.
           </p>
           <GravityEmergence />
           <ThermalSeamLegs />

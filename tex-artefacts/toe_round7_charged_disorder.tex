@@ -267,13 +267,27 @@ embedding/isometry is part of the missing microscopic datum.
 \paragraph{Energy and support diagnostics.}
 
 There is a finite-lattice tradeoff that prevents another overclaim.
-Applying the sharp $D_A$ to the half-filled $r=0$ ground state and measuring
-above the $r=1$ ground energy gives, for $N=16,24,32,48,64$,
+\emph{Portability amendment, 2026-09-06.}  The $r=0$ one-particle operator
+has an exactly degenerate zero-energy space.  Filling the first half of a
+numerical eigenbasis silently selects a platform-dependent pure vacuum.
+Let $P_-$ and $P_0$ denote its negative and zero spectral projectors, let
+$d=\operatorname{rank}P_0$, and let $m=N N_y-\operatorname{rank}P_-$.
+We instead declare the basis-independent one-body covariance
 \[
- 4.774031,\quad4.730808,\quad4.708887,\quad4.686751,\quad4.675602.
+ \overline C=P_-+\frac md P_0
+ \quad(d>0),\qquad \overline C=P_-\quad(d=0).
+\]
+It is the one-body covariance of the uniform fixed-particle mixture over
+rank-$m$ zero-space fillings, not a uniquely selected pure Slater vacuum.
+The numerical zero cluster is required to be separated from all nonzero
+levels; this finite floating-point diagnostic is not an interval certificate.
+Applying the sharp $D_A$ to that mixture and measuring above the $r=1$
+ground energy gives, for $N=16,24,32,48,64$,
+\[
+ 4.711531,\quad4.689142,\quad4.677637,\quad4.665918,\quad4.659977.
 \tag{4.1}
 \]
-The cost is $O(1)$ at fixed $N_y=8$, consistent with the sharp endpoint
+The measured cost is consistent with $O(1)$ at fixed $N_y=8$ and the sharp endpoint
 commutator.  This bare operator is not a low-energy weight-one state.
 
 One can distribute the string by taking
@@ -285,10 +299,31 @@ One can distribute the string by taking
 Then the actual one-particle matrices give
 \[
  N\norm{h_1u_N-u_Nh_0}\longrightarrow\frac\pi2,\qquad
- N\left(\langle D_N^{\rm sm}\Omega_0,H_1D_N^{\rm sm}\Omega_0\rangle
- -E_0(H_1)\right)\approx8.475.
+ N\left(\operatorname{tr}\!\left[h_1u_N\overline C u_N^*\right]
+ -E_0(H_1)\right)\approx6.904.
 \tag{4.3}
 \]
+This does not discard other zero-space vacua.  For either dressing $u$, set
+$A=P_0u^*h_1uP_0|_{\operatorname{ran}P_0}$, with eigenvalues
+$\alpha_1\leq\cdots\leq\alpha_d$.  Over every rank-$m$ zero-space filling,
+the exact variational extrema of the one-body excess are
+\[
+ \operatorname{tr}(P_-u^*h_1u)-E_0(H_1)
+ +\sum_{j=1}^{m}\alpha_j,
+ \qquad
+ \operatorname{tr}(P_-u^*h_1u)-E_0(H_1)
+ +\sum_{j=d-m+1}^{d}\alpha_j.
+\]
+Indeed, in an eigenbasis of $A$, the diagonal entries of a rank-$m$
+orthogonal projector lie in $[0,1]$ and sum to $m$; the minimum and maximum
+select the $m$ smallest and largest eigenvalues.  Both bounds are attained.
+At $N=64$ the sharp interval is approximately
+$[4.644352,4.675602]$, and the smooth $N$-scaled interval is
+$[5.333652,8.474929]$.  The previous $8.475$ coefficient corresponds to
+one endpoint of this filling-dependent range; it was not a unique vacuum
+value.  On all five sampled sizes, the sharp intervals lie in $(4,5)$ and
+the smooth $N$-scaled intervals in $(5.2,8.6)$.  These are finite-grid
+diagnostics, not all-$N$ asymptotic bounds.
 This is measured $O(N^{-1})$ energy, but $u_N$ occupies the whole
 circumference and the coefficient contains full-band polarization.  It is
 not a proof of conformal weight.  Conversely, the sharp string has exact

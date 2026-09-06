@@ -61,6 +61,31 @@ refer to \texttt{verification/vN\_*.py}; claim IDs refer to rows of
 compiled standalone). Module numbers \texttt{vN} refer to \texttt{verification/vN\_*.py}.
 \fi
 
+\subsection*{2026-09-06 (CLX): QWZ zero-mode portability correction and a free 3D matter contract}
+Linux reproduction exposed an eigensolver-dependent choice of a pure
+zero-mode vacuum in \texttt{v1033\_charged\_disorder.py}. The numerical
+diagnostic now uses the basis-independent fixed-particle ground-space mixture
+and computes variational energy bounds over every pure zero-space filling.
+At $N=64$ the smooth $N$-scaled mixture excess is $6.904290$, with full
+ground-space interval $[5.333652,8.474929]$; the former $8.475$ value was
+filling-dependent, not a unique vacuum coefficient. The charged-disorder
+proof is amended explicitly. The same $35/35$ typed checks pass without
+weakening an exact identity; the integration guards now report subprocess
+output on failure and include a degenerate-basis regression. All $20/20$
+integration tests pass in isolated Linux Python 3.11 and 3.12 environments.
+The registered suite remains 1028 modules, with 233 Round-7 checks.
+
+A separate, unpromoted theory contract in
+\texttt{experiments/theory-contracts/free-scalar-3d/} supplies a finite-range
+symmetric free-scalar stress on the original staggered sites, links and
+plaquettes without changing the energy density or current. Its complete
+real-space derivation and $68/68$ exact checks include all three momentum
+Ward identities, genuine negative controls, bilinear Bloch transitions,
+periodic conserved charges and the quadratic Weyl operator lift. This is
+not yet a new registered verification module or a TFPT parent construction.
+Interacting matter, nonlinear gravity feedback and the missing homogeneous
+gravity receiver remain open. No T1--T8, TOE or RH marker moves.
+
 \subsection*{2026-09-05 (CLIX): non-RH round 7 --- free quantum curvature, charged twists and interaction boundaries}
 Five modules \texttt{v1031}--\texttt{v1035} add $233/233$ typed checks
 (183 exact, 13 source-contract, 37 floating) to the registered suite

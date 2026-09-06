@@ -89,6 +89,15 @@ mirror-gap theorem or universal nonlinear gravity. Every T1–T8 gate stays `[O]
 Run each `verification/v1031_*.py` through `v1035_*.py` locally with the repository
 dependencies. The source-auditing v1033/v1034 require a full checkout, not Pyodide.
 
+Portability amendment (2026-09-06): v1033 now treats the degenerate QWZ zero
+space without an eigensolver-selected vacuum. It reports a fixed-particle
+ground-space mixture and bounds over all pure fillings; the corrected numeric
+interpretation is explicit in the contracts paper. The 233-check count and
+open gates do not change. A separate [free 3D scalar theory contract](experiments/theory-contracts/free-scalar-3d/README.md)
+gives the complete local symmetric-stress derivation and 68 exact checks,
+including its finite-volume Weyl operator lift. It is unpromoted and does not
+solve interacting matter or nonlinear gravity.
+
 For the full native certificate chain (including the interval inputs), run
 `v1022_telb_round3_certificates.py`, `v1025_telb_c1_c2a_certificates.py` and
 `v1026_telb_round4_closure.py` from `verification/` in the environment installed

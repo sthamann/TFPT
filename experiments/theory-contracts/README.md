@@ -1,5 +1,13 @@
 # theory-contracts — pure-math contracts (NOT empirical scorecard rows)
 
+## Free scalar in three dimensions (2026-09-06)
+
+[free-scalar-3d/README.md](free-scalar-3d/README.md) contains a complete finite-range
+symmetric-stress construction for the fixed staggered scalar density/current.
+The standalone checker passes 68 exact checks: local Ward identities, negative
+controls, true bilinear Fourier gluing, periodic charges and the quadratic Weyl
+operator lift. It is an unpromoted theory contract, not a TOE-gate closure.
+
 These are **theory contracts**: computational verifications of internal mathematical claims.
 They are deliberately kept **out of `evidence_scorecard.json`** (which is for empirical
 confrontations only) — passing a theory contract is not external evidence, it is internal

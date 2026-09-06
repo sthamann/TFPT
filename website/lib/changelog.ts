@@ -42,6 +42,17 @@ export const CHANGELOG_MACROS: Record<string, string> =
 
 export const CHANGELOG: ChangelogEntry[] = [
   {
+    "date": "2026-09-06",
+    "dateLabel": "2026-09-06",
+    "heading": [
+      {
+        "k": "t",
+        "v": "(CLX): QWZ zero-mode portability correction and a free 3D matter contract"
+      }
+    ],
+    "items": []
+  },
+  {
     "date": "2026-09-05",
     "dateLabel": "2026-09-05",
     "heading": [
